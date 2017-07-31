@@ -1,0 +1,8 @@
+# Virtualenv
+.Python
+bin
+lib
+include
+*.py[cod]
+
+# Mac OS X custom attribute files
