@@ -37,7 +37,7 @@ end square_wave;
 
 architecture Behavioral of square_wave is
 
-constant CLOCK_DIVIDER : integer := 250000;
+constant CLOCK_DIVIDER : integer := 764468;
 signal clock_divide_counter : integer range 0 to CLOCK_DIVIDER-1 := 0;
 signal pulse: std_logic := '1';
 

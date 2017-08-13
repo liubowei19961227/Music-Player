@@ -1,0 +1,391 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: square_wave.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "square_wave.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "square_wave"
+Output Format                      : NGC
+Target Device                      : xc3s400-4-ft256
+
+---- Source Options
+Top Module Name                    : square_wave
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/square_wave_notes/square_wave.vhd" in Library work.
+Entity <square_wave> compiled.
+Entity <square_wave> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <square_wave> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <square_wave> in library <work> (Architecture <behavioral>).
+Entity <square_wave> analyzed. Unit <square_wave> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <square_wave>.
+    Related source file is "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/square_wave_notes/square_wave.vhd".
+    Found 14x18-bit ROM for signal <note_cc$mux0000> created at line 51.
+    Found 18-bit register for signal <note_cc>.
+    Found 18-bit up counter for signal <note_partial>.
+    Found 19-bit subtractor for signal <note_partial$addsub0000> created at line 55.
+    Found 19-bit comparator equal for signal <note_partial$cmp_eq0000> created at line 55.
+    Found 1-bit register for signal <pulse>.
+    Found 4-bit up counter for signal <second_count>.
+    Found 27-bit up counter for signal <second_partial>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   3 Counter(s).
+	inferred  19 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <square_wave> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 14x18-bit ROM                                         : 1
+# Adders/Subtractors                                   : 1
+ 19-bit subtractor                                     : 1
+# Counters                                             : 3
+ 18-bit up counter                                     : 1
+ 27-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 2
+ 1-bit register                                        : 1
+ 18-bit register                                       : 1
+# Comparators                                          : 1
+ 19-bit comparator equal                               : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <square_wave>.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_cc_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+Unit <square_wave> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 14x18-bit ROM                                         : 1
+# Adders/Subtractors                                   : 1
+ 19-bit subtractor                                     : 1
+# Counters                                             : 3
+ 18-bit up counter                                     : 1
+ 27-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 19
+ Flip-Flops                                            : 19
+# Comparators                                          : 1
+ 19-bit comparator equal                               : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <note_cc_5> in Unit <square_wave> is equivalent to the following FF/Latch, which will be removed : <note_cc_16> 
+
+Optimizing unit <square_wave> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block square_wave, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 67
+ Flip-Flops                                            : 67
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : square_wave.ngr
+Top Level Output File Name         : square_wave
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 2
+
+Cell Usage :
+# BELS                             : 246
+#      GND                         : 1
+#      INV                         : 22
+#      LUT1                        : 44
+#      LUT2                        : 1
+#      LUT3                        : 2
+#      LUT4                        : 33
+#      MUXCY                       : 78
+#      VCC                         : 1
+#      XORCY                       : 64
+# FlipFlops/Latches                : 67
+#      FDE                         : 22
+#      FDR                         : 45
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 1
+#      OBUF                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400ft256-4 
+
+ Number of Slices:                       60  out of   3584     1%  
+ Number of Slice Flip Flops:             67  out of   7168     0%  
+ Number of 4 input LUTs:                102  out of   7168     1%  
+ Number of IOs:                           2
+ Number of bonded IOBs:                   2  out of    173     1%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 67    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 9.474ns (Maximum Frequency: 105.552MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 7.241ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 9.474ns (frequency: 105.552MHz)
+  Total number of paths / destination ports: 5857 / 134
+-------------------------------------------------------------------------
+Delay:               9.474ns (Levels of Logic = 22)
+  Source:            note_cc_0 (FF)
+  Destination:       note_partial_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: note_cc_0 to note_partial_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.720   1.140  note_cc_0 (note_cc_0)
+     LUT1:I0->O            1   0.551   0.000  Msub_note_partial_addsub0000_cy<0>_rt (Msub_note_partial_addsub0000_cy<0>_rt)
+     MUXCY:S->O            1   0.500   0.000  Msub_note_partial_addsub0000_cy<0> (Msub_note_partial_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_note_partial_addsub0000_cy<1> (Msub_note_partial_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_note_partial_addsub0000_cy<2> (Msub_note_partial_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_note_partial_addsub0000_cy<3> (Msub_note_partial_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_note_partial_addsub0000_cy<4> (Msub_note_partial_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_note_partial_addsub0000_cy<5> (Msub_note_partial_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_note_partial_addsub0000_cy<6> (Msub_note_partial_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_note_partial_addsub0000_cy<7> (Msub_note_partial_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_note_partial_addsub0000_cy<8> (Msub_note_partial_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_note_partial_addsub0000_cy<9> (Msub_note_partial_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_note_partial_addsub0000_cy<10> (Msub_note_partial_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_note_partial_addsub0000_cy<11> (Msub_note_partial_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_note_partial_addsub0000_cy<12> (Msub_note_partial_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_note_partial_addsub0000_cy<13> (Msub_note_partial_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_note_partial_addsub0000_cy<14> (Msub_note_partial_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_note_partial_addsub0000_cy<15> (Msub_note_partial_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_note_partial_addsub0000_cy<16> (Msub_note_partial_addsub0000_cy<16>)
+     XORCY:CI->O           1   0.904   0.827  Msub_note_partial_addsub0000_xor<17> (note_partial_addsub0000<17>)
+     LUT4:I3->O            1   0.551   0.000  Mcompar_note_partial_cmp_eq0000_lut<8> (Mcompar_note_partial_cmp_eq0000_lut<8>)
+     MUXCY:S->O            1   0.500   0.000  Mcompar_note_partial_cmp_eq0000_cy<8> (Mcompar_note_partial_cmp_eq0000_cy<8>)
+     MUXCY:CI->O          19   0.281   1.450  Mcompar_note_partial_cmp_eq0000_cy<9> (Mcompar_note_partial_cmp_eq0000_cy<9>)
+     FDR:R                     1.026          note_partial_0
+    ----------------------------------------
+    Total                      9.474ns (6.057ns logic, 3.417ns route)
+                                       (63.9% logic, 36.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              7.241ns (Levels of Logic = 1)
+  Source:            pulse (FF)
+  Destination:       s (PAD)
+  Source Clock:      clk rising
+
+  Data Path: pulse to s
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.720   0.877  pulse (pulse)
+     OBUF:I->O                 5.644          s_OBUF (s)
+    ----------------------------------------
+    Total                      7.241ns (6.364ns logic, 0.877ns route)
+                                       (87.9% logic, 12.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.32 secs
+ 
+--> 
+
+Total memory usage is 309252 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

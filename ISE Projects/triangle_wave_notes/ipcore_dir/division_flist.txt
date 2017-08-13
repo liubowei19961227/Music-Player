@@ -1,0 +1,13 @@
+# Output products list for <division>
+_xmsgs\pn_parser.xmsgs
+division.asy
+division.gise
+division.ngc
+division.sym
+division.vhd
+division.vho
+division.xco
+division.xise
+division_flist.txt
+division_readme.txt
+division_xmdf.tcl
