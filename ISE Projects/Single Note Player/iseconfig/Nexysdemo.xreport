@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-08-13T20:26:26</DateModified>
+  <DateModified>2017-08-13T20:35:25</DateModified>
   <ModuleName>Nexysdemo</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/LCD Panel/iseconfig/Nexysdemo.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/LCD Panel\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/Single Note Player/iseconfig/Nexysdemo.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/Single Note Player\</ImplementationReportsDirectory>
   <DateInitialized>2017-08-11T15:35:44</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

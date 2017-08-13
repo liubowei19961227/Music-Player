@@ -1,0 +1,13 @@
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/dpimref.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/dpimref.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/digilent_nexys/nexysdemo.ucf -p xc3s400-ft256-4 dpimref.ngc dpimref.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-ft256-4 dpimref.ngc dpimref.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o dpimref_map.ncd dpimref.ngd dpimref.pcf 
+par -w -intstyle ise -ol high -t 1 dpimref_map.ncd dpimref.ncd dpimref.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml dpimref.twx dpimref.ncd -o dpimref.twr dpimref.pcf 
+bitgen -intstyle ise -f dpimref.ut dpimref.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_file/pin_assignment.ucf -p xc3s400-ft256-4 dpimref.ngc dpimref.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_file/pin_assignment.ucf -p xc3s400-ft256-4 dpimref.ngc dpimref.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o dpimref_map.ncd dpimref.ngd dpimref.pcf 
+par -w -intstyle ise -ol high -t 1 dpimref_map.ncd dpimref.ncd dpimref.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml dpimref.twx dpimref.ncd -o dpimref.twr dpimref.pcf 
+bitgen -intstyle ise -f dpimref.ut dpimref.ncd 

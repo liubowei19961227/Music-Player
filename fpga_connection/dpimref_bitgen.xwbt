@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=Z:\Desktop\fpga_connection\fpga_connection\dpimref.ncd
-OUTFILE=Z:\Desktop\fpga_connection\fpga_connection\dpimref.bit
-FAMILY=Spartan3
-PART=xc3s400-4ft256
-WORKINGDIR=Z:\Desktop\fpga_connection\fpga_connection
-LICENSE=WebPack
-USER_INFO=211378374_0_0_031

@@ -1,0 +1,18 @@
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Project1/Nexysdemo.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Project1/Nexysdemo.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys.ucf -p xc3s400-ft256-4 "Nexysdemo.ngc" Nexysdemo.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys.ucf -p xc3s400-ft256-4 "Nexysdemo.ngc" Nexysdemo.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o Nexysdemo_map.ncd Nexysdemo.ngd Nexysdemo.pcf 
+par -w -intstyle ise -ol high -t 1 Nexysdemo_map.ncd Nexysdemo.ncd Nexysdemo.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Nexysdemo.twx Nexysdemo.ncd -o Nexysdemo.twr Nexysdemo.pcf -ucf nexys.ucf 
+bitgen -intstyle ise -f Nexysdemo.ut Nexysdemo.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys.ucf -p xc3s400-ft256-4 "Nexysdemo.ngc" Nexysdemo.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o Nexysdemo_map.ncd Nexysdemo.ngd Nexysdemo.pcf 
+par -w -intstyle ise -ol high -t 1 Nexysdemo_map.ncd Nexysdemo.ncd Nexysdemo.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Nexysdemo.twx Nexysdemo.ncd -o Nexysdemo.twr Nexysdemo.pcf -ucf nexys.ucf 
+bitgen -intstyle ise -f Nexysdemo.ut Nexysdemo.ncd 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Project1/Nexysdemo.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Project1/Nexysdemo.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys.ucf -p xc3s400-ft256-4 "Nexysdemo.ngc" Nexysdemo.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o Nexysdemo_map.ncd Nexysdemo.ngd Nexysdemo.pcf 
+par -w -intstyle ise -ol high -t 1 Nexysdemo_map.ncd Nexysdemo.ncd Nexysdemo.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Nexysdemo.twx Nexysdemo.ncd -o Nexysdemo.twr Nexysdemo.pcf -ucf nexys.ucf 
+bitgen -intstyle ise -f Nexysdemo.ut Nexysdemo.ncd 

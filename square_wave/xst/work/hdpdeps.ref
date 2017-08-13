@@ -1,8 +1,0 @@
-V3 3
-FL "//vmware-host/shared folders/Desktop/fpga_sqare_wave/square_wave/square_wave.vhd" 2017/08/11.16:58:54 P.20131013
-EN work/square_wave 1502434729 \
-      FL "//vmware-host/shared folders/Desktop/fpga_sqare_wave/square_wave/square_wave.vhd" \
-      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/square_wave/Behavioral 1502434730 \
-      FL "//vmware-host/shared folders/Desktop/fpga_sqare_wave/square_wave/square_wave.vhd" \
-      EN work/square_wave 1502434729
