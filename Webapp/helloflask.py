@@ -1,5 +1,6 @@
 import subprocess
 from flask import Flask, flash
+from flask import redirect
 from flask import render_template
 from flask import request
 from flask_wtf import FlaskForm
@@ -21,17 +22,12 @@ def index():
     return render_template('try1.html')
 
 
-@app.route("/play_music",methods=['POST'])
-def play_music():
-    return render_template('upload.html')
-
-
 @app.route('/uploader', methods = ['GET', 'POST'])
 def upload_file():
     textform = TextForm()
     if textform.is_submitted():
         subprocess.Popen(["./helloworld", textform.name.data, textform.music.data])
-        return render_template('/try1.html')
+        return redirect('/')
     return render_template('upload.html', form=textform)
     """if request.method == 'POST':
         textform = TextForm()
