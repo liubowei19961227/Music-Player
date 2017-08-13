@@ -1,0 +1,31 @@
+xst -intstyle ise -ifn "Z:/Desktop/fpga_sqare_wave/square_wave/square_wave.xst" -ofn "Z:/Desktop/fpga_sqare_wave/square_wave/square_wave.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_sqare_wave/square_wave/square_wave.xst" -ofn "Z:/Desktop/fpga_sqare_wave/square_wave/square_wave.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_file/pin_assignment.ucf -p xc3s400-ft256-4 square_wave.ngc square_wave.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o square_wave_map.ncd square_wave.ngd square_wave.pcf 
+par -w -intstyle ise -ol high -t 1 square_wave_map.ncd square_wave.ncd square_wave.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml square_wave.twx square_wave.ncd -o square_wave.twr square_wave.pcf 
+bitgen -intstyle ise -f square_wave.ut square_wave.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_file/pin_assignment.ucf -p xc3s400-ft256-4 square_wave.ngc square_wave.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o square_wave_map.ncd square_wave.ngd square_wave.pcf 
+par -w -intstyle ise -ol high -t 1 square_wave_map.ncd square_wave.ncd square_wave.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml square_wave.twx square_wave.ncd -o square_wave.twr square_wave.pcf 
+bitgen -intstyle ise -f square_wave.ut square_wave.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_file/pin_assignment.ucf -p xc3s400-ft256-4 square_wave.ngc square_wave.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o square_wave_map.ncd square_wave.ngd square_wave.pcf 
+par -w -intstyle ise -ol high -t 1 square_wave_map.ncd square_wave.ncd square_wave.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml square_wave.twx square_wave.ncd -o square_wave.twr square_wave.pcf 
+bitgen -intstyle ise -f square_wave.ut square_wave.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_sqare_wave/square_wave/square_wave.xst" -ofn "Z:/Desktop/fpga_sqare_wave/square_wave/square_wave.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_sqare_wave/square_wave/square_wave.xst" -ofn "Z:/Desktop/fpga_sqare_wave/square_wave/square_wave.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_sqare_wave/square_wave/square_wave.xst" -ofn "Z:/Desktop/fpga_sqare_wave/square_wave/square_wave.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_file/pin_assignment.ucf -p xc3s400-ft256-4 square_wave.ngc square_wave.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o square_wave_map.ncd square_wave.ngd square_wave.pcf 
+par -w -intstyle ise -ol high -t 1 square_wave_map.ncd square_wave.ncd square_wave.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml square_wave.twx square_wave.ncd -o square_wave.twr square_wave.pcf 
+bitgen -intstyle ise -f square_wave.ut square_wave.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_sqare_wave/square_wave/square_wave.xst" -ofn "Z:/Desktop/fpga_sqare_wave/square_wave/square_wave.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_file/pin_assignment.ucf -p xc3s400-ft256-4 square_wave.ngc square_wave.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o square_wave_map.ncd square_wave.ngd square_wave.pcf 
+par -w -intstyle ise -ol high -t 1 square_wave_map.ncd square_wave.ncd square_wave.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml square_wave.twx square_wave.ncd -o square_wave.twr square_wave.pcf 
+bitgen -intstyle ise -f square_wave.ut square_wave.ncd 
