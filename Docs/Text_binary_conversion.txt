@@ -1,0 +1,49 @@
+This document is to define the format in which the music file will be stored in memory and the conversion process from the required music file format to our own binary format.
+
+
+THE ASCII FORMAT:
+
+The ascii format writes sequentially each note (including which register it sits in) followed by its length. Sharps and flats are denoted with # and b respectively. Rests are indicated by the word 'rest'.
+
+Note durations are encoded as follows:
+
+Durations 		Length (beats) 	Encoding
+Semiquaver 		1/4 			sq
+Tuplet 			1/3 			t
+Quaver 			1/2 			q
+Dotted Quaver 	3/4 			dq
+Crotchet 		1 				c
+Dotted Crotchet 1 1/2 			dc
+Minim 			2 				m
+Dotted Minim 	3 				dm
+Semibreve 		4 				sb
+Breve 			8 				b 
+
+Therefore some example music might read as follows:
+
+c4 c a5#
+sb rest m g3b
+sq 
+
+This translates to as follows:
+'Play the fourth C for one beat, then the fifth A sharp for 4 beats. Then rest for 2 beats, and finally play the third G flat for a quarter of a beat.'
+
+
+OUR FORMAT:
+
+In order to make the generation of pwm waves as simple as possible we will store each note as the required clockcycles to calculate half the period of the wave and the number of clockcycles each note should be generated for. Note that clockspeed is 100 MHz and we will be generating triangular waveforms.
+
+For example c4 is 261.6 Hz. Therefore the number of clock cycles needed for each half period is:
+
+100*10^6 clockcycles/s / 261.6 Hz = 382,262.9969 clock cycles ~ 382,263 clockcycles.
+
+This number can then be stored in binary.
+
+Say that c4 is played for 3/4 beats and the tempo is 60 bpm. To eliminate fractions from our calculations we will not deal in beats, however, but in twelfths of beats, so 3/4 beats is 9 twelfth-beats and 60 bpm is 720 twelfth-beats per minute.
+
+A simple calculation of the number of clockcyles required is Number of 12beats * Number of clockcycles per 12beats. Number of clockcyles per 12beats will either be controlled by the user via the baton, or a default number (in this case of 720 12bpm it is 100M ckcl per second / twelfthbeats per second = 100M/12 = 8,333,333 clockcycles/12beat). Therefore we will store each note length as its number of twelfth beats.
+
+
+THE CONVERSION:
+
+The conversion from the ASCII format to our format will occur in python in the web backend before it is sent to the c program. Regex will be used to make the conversion process simple. This way the board will only have to deal with the most basic logic.
