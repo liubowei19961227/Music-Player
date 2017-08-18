@@ -5,12 +5,12 @@
 		<form action="http://localhost:5000/uploader" method="POST" class="add-entry">
 			{{ form.csrf_token }}
 			<div class="inputarea">
+				{{ form.name(class_="music_title") }}
 				<p class="font-x1 bold">Title:</p>
-				{{ form.name(class_="music_input") }}
 		        <p class="font-x1 bold">Text:</p>
 		        {{ form.music(class_="music_input") }}
 		     </div>
-	        <button style="color:red; height:70px; width:140px" type="submit">Download Music</button>
+	        <button style="color:#bc2f2f; height:50px; width:140px" type="submit">Download Music</button>
 	    </form>
     </article>
 </div>

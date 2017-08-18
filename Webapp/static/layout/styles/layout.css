@@ -56,10 +56,16 @@ File: Layout CSS
 --------------------------------------------------------------------------------------------------------------- */
 #musicmaker{padding:200px 0;}
 
-#musicmaker article{display:block; max-width:75%; margin:0 auto; text-align:left;}
+#musicmaker article{display:block; max-width:35%; margin:0 auto; text-align:left;}
 #musicmaker article *{word-wrap:break-word;}
 #musicmaker .heading{margin-bottom:10px; font-size:3rem;}
 #musicmaker footer{margin-top:80px;}
+
+#musicmaker .inputarea{margin-bottom:30px;}
+#musicmaker button{float:right;}
+
+#musicmaker .music_title{float:right;}
+#musicmaker .music_input{width:100%;}
 
 /* Footer
 --------------------------------------------------------------------------------------------------------------- */
@@ -79,7 +85,7 @@ File: Layout CSS
 
 #footer input, #footer button{border:1px solid;}
 #footer input{display:block; width:100%; padding:8px;}
-#footer button{padding:8px 18px 10px; text-transform:uppercase; font-weight:700; cursor:pointer;}
+#footer button{padding:8px; text-transform:uppercase; font-weight:700; cursor:pointer;}
 
 
 /* Copyright
@@ -152,7 +158,7 @@ body{color:#FFFFFF; background-color:#000000;}
 a{color:#000000;}
 a:active, a:focus{background:transparent;}/* IE10 + 11 Bugfix - prevents grey background */
 hr, .borderedbox{border-color:#F4F4F4;}
-label span{color:#FF0000; background-color:inherit;}
+label span{color:#BC2F2F; background-color:inherit;}
 input:focus, textarea:focus, *:required:focus{border-color:#000000;}
 
 .overlay{color:#FFFFFF; background-color:inherit;}
@@ -175,6 +181,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#000000;}
 
 /* Music input */
 .music_input{color:#000000;}
+.music_title{color:#000000;}
 
 /* Top Bar */
 #topbar, #topbar ul li{border-color:rgba(255,255,255,.2);}
