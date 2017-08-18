@@ -1,48 +1,7 @@
-<!DOCTYPE html>
-<!--
-Template Name: Natucam
-Author: <a href="http://www.os-templates.com/">OS Templates</a>
-Author URI: http://www.os-templates.com/
-Licence: Free to use under our free template licence terms
-Licence URI: http://www.os-templates.com/template-terms
--->
-<html lang="">
-<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
-<head>
-<title>Natucam</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link href="{{ url_for('static', filename='../static/layout/styles/layout.css') }}" rel="stylesheet" type="text/css" media="all">
-</head>
-<body id="top">
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row0">
-  <div id="topbar" class="hoc clear"> 
-    <!-- ################################################################################################ -->
-    <ul>
-      <li><i class="fa fa-clock-o"></i> Mon. - Fri. 8am - 5pm</li>
-      <li><i class="fa fa-phone"></i> +00 (123) 456 7890</li>
-      <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
-      <li><a href="#"><i class="fa fa-lg fa-home"></i></a></li>
-      <li><a href="#" title="Login"><i class="fa fa-lg fa-sign-in"></i></a></li>
-      <li><a href="#" title="Sign Up"><i class="fa fa-lg fa-edit"></i></a></li>
-    </ul>
-    <!-- ################################################################################################ -->
-  </div>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- Top Background Image Wrapper -->
-<div class="bgded overlay" style="background-image:url('../static/images/demo/backgrounds/01.png');"> 
-  <!-- ################################################################################################ -->
+{% extends "master_template.html" %}
 
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <div id="pageintro" class="hoc clear">
+{% block mainpage %}
+<div id="pageintro" class="hoc clear">
     <article> 
       <!-- ################################################################################################ -->
       <h3 class="heading">Mollis feugiat hendrerit</h3>
@@ -50,18 +9,17 @@ Licence URI: http://www.os-templates.com/template-terms
       <p class="font-x1 uppercase bold">Consectetur iaculis vitae dolor</p>
       <footer>
         <ul class="nospace inline pushright">
-          <!-- <li><a class="btn" href="#">play music</a></li>
-          <li><a class="btn inverse" href="#">download music</a></li> -->
-          <!--first button-->
-          <form action="/play_music" method="post">
-          <li><a class="btn" href="#">play music</a></li>
+          
+          <!--this are two buttons-->
+          <!-- <li><a class="btn" href="play_music.html">play music</a></li>
+          <li><a class="btn inverse" href="#">download music</a></li>  -->
+
+
+
+          <form action="/uploader" method="get">
+          <button style="color:red; height:70px; width:140px" type="submit">play music</button>
           </form>
-
-
-          <form action="/download_music" method="post">
-          <li><a class="btn inverse" href="#">download music</a></li>
-          </form>
-
+        
 
         </ul>
       </footer>
@@ -70,69 +28,4 @@ Licence URI: http://www.os-templates.com/template-terms
   </div>
   <!-- ################################################################################################ -->
 </div>
-<!-- End Top Background Image Wrapper -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row3">
-  <main class="hoc container clear"> 
-    <!-- main body -->
-    <!-- ################################################################################################ -->
-    <div class="sectiontitle">
-      <h6 class="heading">Praesent in nibh vel</h6>
-      <p>Dui placerat feugiat at vitae tellus quisque</p>
-    </div>
-    <div class="group">
-      <div class="two_third first">
-        <p><strong>Purus nulla gravida ac ullamcorper</strong></p>
-        <p>Ut lacinia nec dolor aliquam dapibus est vitae maximus faucibus justo elit euismod lorem sit amet faucibus dui justo a ante vivamus eget lorem sapien interdum et malesuada fames ac ante ipsum primis in faucibus fusce eu.</p>
-        <p class="btmspace-30">Turpis quis lorem volutpat faucibus aliquam a est eget tellus tincidunt tincidunt fusce tincidunt nibh justo [&hellip;]</p>
-        <footer><a class="btn" href="#">Read More &raquo;</a></footer>
-      </div>
-      <div class="one_third">
-        <p><strong>Sit amet lobortis ipsum</strong></p>
-        <figure class="videocontainer"> 
-          <!-- Important: Any type of video called via "iframe" must be in a container using class="videocontainer" -->
-          <iframe src="https://www.youtube-nocookie.com/embed/8Z9089048wk?modestbranding=1&amp;showinfo=0&amp;vq=hd1080&amp;rel=0&amp;wmode=transparent" allowfullscreen></iframe>
-          <figcaption>Pretium vitae nullam varius velit eu fringilla scelerisque morbi.</figcaption>
-        </figure>
-      </div>
-    </div>
-    <!-- ################################################################################################ -->
-    <!-- / main body -->
-    <div class="clear"></div>
-  </main>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-
-
-<!-- ################################################################################################ -->
-
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row5">
-  <div id="copyright" class="hoc clear"> 
-    <!-- ################################################################################################ -->
-    <p class="fl_left">Copyright &copy; 2017 - All Rights Reserved - <a href="#">Domain Name</a></p>
-    <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
-    <!-- ################################################################################################ -->
-  </div>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
-<!-- JAVASCRIPTS -->
-<script src="../static/layout/scripts/jquery.min.js"></script>
-<script src="../static/layout/scripts/jquery.backtotop.js"></script>
-<script src="../static/layout/scripts/jquery.mobilemenu.js"></script>
-<script src="../static/layout/scripts/jquery.fitvids.js"></script>
-</body>
-</html>
+{% endblock %}
