@@ -1,0 +1,6 @@
+AR test_seven_seg behavioral "//vmware-host/shared folders/Desktop/seven_segment_display/seven_seg_display/test_seven_seg.vhd" sub00/vhpl05 1502874705
+AR bin_to_dec behavioral "//vmware-host/shared folders/Desktop/seven_segment_display/seven_seg_display/bin_to_dec.vhd" sub00/vhpl01 1502874701
+EN seven_seg_display NULL "//vmware-host/shared folders/Desktop/seven_segment_display/seven_seg_display/seven_seg_display.vhd" sub00/vhpl02 1502874702
+EN test_seven_seg NULL "//vmware-host/shared folders/Desktop/seven_segment_display/seven_seg_display/test_seven_seg.vhd" sub00/vhpl04 1502874704
+AR seven_seg_display behavioral "//vmware-host/shared folders/Desktop/seven_segment_display/seven_seg_display/seven_seg_display.vhd" sub00/vhpl03 1502874703
+EN bin_to_dec NULL "//vmware-host/shared folders/Desktop/seven_segment_display/seven_seg_display/bin_to_dec.vhd" sub00/vhpl00 1502874700

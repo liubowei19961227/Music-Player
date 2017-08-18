@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=Z:\Desktop\seven_segment_display\seven_seg_display\test_seven_seg.ncd
+OUTFILE=Z:\Desktop\seven_segment_display\seven_seg_display\test_seven_seg.bit
+FAMILY=Spartan3
+PART=xc3s400-4ft256
+WORKINGDIR=Z:\Desktop\seven_segment_display\seven_seg_display
+LICENSE=WebPack
+USER_INFO=211378374_0_0_031
