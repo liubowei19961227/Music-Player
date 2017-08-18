@@ -1,16 +1,18 @@
 {% extends "master_template.html" %}
 {% block uploader %}
-<div id="musicuploader">
-	<form action="http://localhost:5000/uploader" method="POST" class="add-entry">
-		<dl>
+<div id="musicmaker" class="hoc clear">
+    <article> 
+		<form action="http://localhost:5000/uploader" method="POST" class="add-entry">
 			{{ form.csrf_token }}
-			<dt>Title:
-			{{ form.name }}
-	        <dt>Text:
-	        {{ form.music }}
-	        <dd><input type="submit" value="Submit">
-      	</dl>
-    </form>
+			<div class="inputarea">
+				{{ form.name(class_="music_title") }}
+				<p class="font-x1 bold">Title:</p>
+		        <p class="font-x1 bold">Text:</p>
+		        {{ form.music(class_="music_input") }}
+		     </div>
+	        <button style="color:#bc2f2f; height:50px; width:140px" type="submit">Download Music</button>
+	    </form>
+    </article>
 </div>
 <!-- CODE NOT YET WORKING
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>

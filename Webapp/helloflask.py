@@ -19,7 +19,7 @@ app.secret_key = 'development key'
 
 @app.route("/")
 def index():
-    return render_template('try1.html')
+    return render_template('home_page.html')
 
 
 @app.route('/uploader', methods = ['GET', 'POST'])
