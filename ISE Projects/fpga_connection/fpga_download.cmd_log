@@ -1,0 +1,25 @@
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/fpga_download.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/fpga_download.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/fpga_download.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/fpga_download.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/fpga_download.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/fpga_download.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/fpga_download.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/fpga_download.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/fpga_download.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/fpga_download.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/fpga_download.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/fpga_download.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/fpga_download.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/fpga_download.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/fpga_download.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/fpga_download.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/fpga_download.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/fpga_download.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/fpga_download.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/fpga_download.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/fpga_download.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/fpga_download.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection_pin_assignment.ucf -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 fpga_download.ngc fpga_download.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection_pin_assignment.ucf -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 fpga_download.ngc fpga_download.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection_pin_assignment.ucf -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 fpga_download.ngc fpga_download.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 fpga_download.ngc fpga_download.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o fpga_download_map.ncd fpga_download.ngd fpga_download.pcf 
+par -w -intstyle ise -ol high -t 1 fpga_download_map.ncd fpga_download.ncd fpga_download.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml fpga_download.twx fpga_download.ncd -o fpga_download.twr fpga_download.pcf 
+bitgen -intstyle ise -f fpga_download.ut fpga_download.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/fpga_download.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/fpga_download.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 fpga_download.ngc fpga_download.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o fpga_download_map.ncd fpga_download.ngd fpga_download.pcf 
+par -w -intstyle ise -ol high -t 1 fpga_download_map.ncd fpga_download.ncd fpga_download.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml fpga_download.twx fpga_download.ncd -o fpga_download.twr fpga_download.pcf 
+bitgen -intstyle ise -f fpga_download.ut fpga_download.ncd 

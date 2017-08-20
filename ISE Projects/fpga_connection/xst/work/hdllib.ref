@@ -1,2 +1,6 @@
-EN dpimref NULL "//vmware-host/shared folders/Desktop/Adept/samples/depp/DeppDemo/logic/dpimref.vhd" sub00/vhpl00 1502278022
-AR dpimref behavioral "//vmware-host/shared folders/Desktop/Adept/samples/depp/DeppDemo/logic/dpimref.vhd" sub00/vhpl01 1502278023
+AR eight_bit_register behavioral "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/eight_bit_register.vhd" sub00/vhpl03 1503236064
+EN fpga_download NULL "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/fpga_download.vhd" sub00/vhpl04 1503236065
+AR fpga_download behavioral "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/fpga_download.vhd" sub00/vhpl05 1503236066
+EN dpimref NULL "//vmware-host/shared folders/Desktop/Adept/samples/depp/DeppDemo/logic/dpimref.vhd" sub00/vhpl00 1503236061
+AR dpimref behavioral "//vmware-host/shared folders/Desktop/Adept/samples/depp/DeppDemo/logic/dpimref.vhd" sub00/vhpl01 1503236062
+EN eight_bit_register NULL "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/eight_bit_register.vhd" sub00/vhpl02 1503236063

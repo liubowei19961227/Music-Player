@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-08-09T19:57:12</DateModified>
+  <DateModified>2017-08-18T12:11:09</DateModified>
   <ModuleName>dpimref</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2017-08-13T17:11:23</SummaryTimeStamp>
   <SavedFilePath>Z:/Desktop/fpga_connection/fpga_connection/iseconfig/dpimref.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>Z:/Desktop/fpga_connection/fpga_connection</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>Z:/Desktop/fpga_connection/fpga_connection\</ImplementationReportsDirectory>
   <DateInitialized>2017-08-09T19:45:53</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

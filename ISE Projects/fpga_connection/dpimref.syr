@@ -106,18 +106,18 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 Compiling vhdl file "//vmware-host/shared folders/Desktop/Adept/samples/depp/DeppDemo/logic/dpimref.vhd" in Library work.
 Entity <dpimref> compiled.
-Entity <dpimref> (Architecture <Behavioral>) compiled.
+Entity <dpimref> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <dpimref> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <dpimref> in library <work> (architecture <behavioral>).
 
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <dpimref> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <dpimref> in library <work> (Architecture <behavioral>).
 Entity <dpimref> analyzed. Unit <dpimref> generated.
 
 
@@ -141,6 +141,8 @@ Synthesizing Unit <dpimref>.
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
     Found 8-bit tristate buffer for signal <DB>.
+    Found 1-bit register for signal <ready>.
+    Found 8-bit up counter for signal <addr_counter>.
     Found 8-bit register for signal <regData0>.
     Found 8-bit register for signal <regData1>.
     Found 8-bit register for signal <regData2>.
@@ -150,10 +152,10 @@ Synthesizing Unit <dpimref>.
     Found 8-bit register for signal <regData6>.
     Found 8-bit register for signal <regData7>.
     Found 4-bit register for signal <regEppAdr>.
-    Found 8-bit register for signal <regLed>.
     Summary:
 	inferred   1 Finite State Machine(s).
-	inferred  76 D-type flip-flop(s).
+	inferred   1 Counter(s).
+	inferred  69 D-type flip-flop(s).
 	inferred   8 Tristate(s).
 Unit <dpimref> synthesized.
 
@@ -162,9 +164,12 @@ Unit <dpimref> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
+# Counters                                             : 1
+ 8-bit up counter                                      : 1
 # Registers                                            : 10
+ 1-bit register                                        : 1
  4-bit register                                        : 1
- 8-bit register                                        : 9
+ 8-bit register                                        : 8
 # Tristates                                            : 1
  8-bit tristate buffer                                 : 1
 
@@ -195,8 +200,10 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # FSMs                                                 : 1
-# Registers                                            : 76
- Flip-Flops                                            : 76
+# Counters                                             : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 69
+ Flip-Flops                                            : 69
 
 =========================================================================
 
@@ -209,8 +216,8 @@ Optimizing unit <dpimref> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block dpimref, actual ratio is 1.
-FlipFlop regEppAdr_0 has been replicated 1 time(s)
 FlipFlop regEppAdr_1 has been replicated 1 time(s)
+FlipFlop regEppAdr_2 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -218,8 +225,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 82
- Flip-Flops                                            : 82
+# Registers                                            : 83
+ Flip-Flops                                            : 83
 
 =========================================================================
 
@@ -245,27 +252,34 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 33
+# IOs                              : 30
 
 Cell Usage :
-# BELS                             : 101
-#      LUT2                        : 2
+# BELS                             : 110
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 7
+#      LUT2                        : 1
 #      LUT2_L                      : 1
-#      LUT3                        : 9
-#      LUT4                        : 66
-#      LUT4_D                      : 4
-#      LUT4_L                      : 7
-#      MUXF5                       : 12
-# FlipFlops/Latches                : 82
+#      LUT3                        : 14
+#      LUT4                        : 60
+#      LUT4_D                      : 2
+#      LUT4_L                      : 2
+#      MUXCY                       : 7
+#      MUXF5                       : 5
+#      VCC                         : 1
+#      XORCY                       : 8
+# FlipFlops/Latches                : 83
 #      FD                          : 3
 #      FDE                         : 78
+#      FDR                         : 1
 #      FDS                         : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 32
-#      IBUF                        : 15
+# IO Buffers                       : 29
+#      IBUF                        : 3
 #      IOBUF                       : 8
-#      OBUF                        : 9
+#      OBUF                        : 18
 =========================================================================
 
 Device utilization summary:
@@ -273,11 +287,11 @@ Device utilization summary:
 
 Selected Device : 3s400ft256-4 
 
- Number of Slices:                       70  out of   3584     1%  
- Number of Slice Flip Flops:             82  out of   7168     1%  
- Number of 4 input LUTs:                 89  out of   7168     1%  
- Number of IOs:                          33
- Number of bonded IOBs:                  33  out of    173    19%  
+ Number of Slices:                       58  out of   3584     1%  
+ Number of Slice Flip Flops:             83  out of   7168     1%  
+ Number of 4 input LUTs:                 88  out of   7168     1%  
+ Number of IOs:                          30
+ Number of bonded IOBs:                  30  out of    173    17%  
  Number of GCLKs:                         1  out of      8    12%  
 
 ---------------------------
@@ -301,7 +315,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 82    |
+clk                                | BUFGP                  | 83    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -312,10 +326,10 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 5.096ns (Maximum Frequency: 196.232MHz)
-   Minimum input arrival time before clock: 4.708ns
-   Maximum output required time after clock: 16.053ns
-   Maximum combinational path delay: 13.175ns
+   Minimum period: 5.897ns (Maximum Frequency: 169.578MHz)
+   Minimum input arrival time before clock: 5.256ns
+   Maximum output required time after clock: 14.830ns
+   Maximum combinational path delay: 9.687ns
 
 Timing Detail:
 --------------
@@ -323,32 +337,32 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 5.096ns (frequency: 196.232MHz)
-  Total number of paths / destination ports: 539 / 83
+  Clock period: 5.897ns (frequency: 169.578MHz)
+  Total number of paths / destination ports: 585 / 92
 -------------------------------------------------------------------------
-Delay:               5.096ns (Levels of Logic = 2)
-  Source:            regEppAdr_1_1 (FF)
-  Destination:       regLed_0 (FF)
+Delay:               5.897ns (Levels of Logic = 2)
+  Source:            stEppCur_FSM_FFd3 (FF)
+  Destination:       regData2_0 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: regEppAdr_1_1 to regLed_0
+  Data Path: stEppCur_FSM_FFd3 to regData2_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              9   0.720   1.463  regEppAdr_1_1 (regEppAdr_1_1)
-     LUT4_D:I0->LO         1   0.551   0.126  busEppData_cmp_eq00071 (N84)
-     LUT4:I3->O            8   0.551   1.083  regData7_and00001 (regData7_and0000)
-     FDE:CE                    0.602          regData7_0
+     FD:C->Q              12   0.720   1.457  stEppCur_FSM_FFd3 (stEppCur_FSM_FFd3)
+     LUT4_D:I0->O          3   0.551   0.933  regData5_and00001_SW0 (N64)
+     LUT4:I3->O            8   0.551   1.083  regData5_and00001 (regData5_and0000)
+     FDE:CE                    0.602          regData5_0
     ----------------------------------------
-    Total                      5.096ns (2.424ns logic, 2.672ns route)
-                                       (47.6% logic, 52.4% route)
+    Total                      5.897ns (2.424ns logic, 3.473ns route)
+                                       (41.1% logic, 58.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 88 / 83
+  Total number of paths / destination ports: 79 / 75
 -------------------------------------------------------------------------
-Offset:              4.708ns (Levels of Logic = 2)
+Offset:              5.256ns (Levels of Logic = 4)
   Source:            EppASTB (PAD)
   Destination:       stEppCur_FSM_FFd2 (FF)
   Destination Clock: clk rising
@@ -357,68 +371,67 @@ Offset:              4.708ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            13   0.821   1.509  EppASTB_IBUF (EppASTB_IBUF)
-     LUT4:I0->O            1   0.551   0.801  stEppCur_FSM_FFd2-In15 (stEppCur_FSM_FFd2-In15)
-     FDS:S                     1.026          stEppCur_FSM_FFd2
+     IBUF:I->O            12   0.821   1.313  EppASTB_IBUF (EppASTB_IBUF)
+     LUT2:I1->O            1   0.551   1.140  stEppCur_FSM_FFd2-In19 (stEppCur_FSM_FFd2-In19)
+     LUT4_L:I0->LO         1   0.551   0.126  stEppCur_FSM_FFd2-In29 (stEppCur_FSM_FFd2-In29)
+     LUT4:I3->O            1   0.551   0.000  stEppCur_FSM_FFd2-In451 (stEppCur_FSM_FFd2-In45)
+     FDS:D                     0.203          stEppCur_FSM_FFd2
     ----------------------------------------
-    Total                      4.708ns (2.398ns logic, 2.310ns route)
+    Total                      5.256ns (2.677ns logic, 2.579ns route)
                                        (50.9% logic, 49.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 388 / 17
+  Total number of paths / destination ports: 316 / 26
 -------------------------------------------------------------------------
-Offset:              16.053ns (Levels of Logic = 6)
-  Source:            regEppAdr_3 (FF)
-  Destination:       DB<0> (PAD)
+Offset:              14.830ns (Levels of Logic = 5)
+  Source:            regEppAdr_2 (FF)
+  Destination:       DB<7> (PAD)
   Source Clock:      clk rising
 
-  Data Path: regEppAdr_3 to DB<0>
+  Data Path: regEppAdr_2 to DB<7>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             15   0.720   1.527  regEppAdr_3 (regEppAdr_3)
-     LUT3:I0->O           12   0.551   1.457  busEppData_cmp_eq000211 (N17)
-     LUT4:I0->O            1   0.551   1.140  busEppOut<0>26 (busEppOut<0>26)
-     LUT3:I0->O            1   0.551   1.140  busEppOut<0>35 (busEppOut<0>35)
-     LUT3:I0->O            1   0.551   0.869  busEppOut<0>85_SW0 (N66)
-     LUT4:I2->O            1   0.551   0.801  busEppOut<0>85 (busEppOut<0>)
-     IOBUF:I->IO               5.644          DB_0_IOBUF (DB<0>)
+     FDE:C->Q             25   0.720   2.152  regEppAdr_2 (regEppAdr_2)
+     LUT3:I0->O            6   0.551   1.342  busEppData_cmp_eq00051 (busEppData_cmp_eq0005)
+     LUT4:I0->O            1   0.551   1.140  busEppOut<7>26 (busEppOut<7>26)
+     LUT3:I0->O            1   0.551   0.827  busEppOut<7>47_SW0 (N88)
+     LUT4:I3->O            1   0.551   0.801  busEppOut<7>47 (busEppOut<7>)
+     IOBUF:I->IO               5.644          DB_7_IOBUF (DB<7>)
     ----------------------------------------
-    Total                     16.053ns (9.119ns logic, 6.934ns route)
-                                       (56.8% logic, 43.2% route)
+    Total                     14.830ns (8.568ns logic, 6.262ns route)
+                                       (57.8% logic, 42.2% route)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 40 / 8
+  Total number of paths / destination ports: 24 / 8
 -------------------------------------------------------------------------
-Delay:               13.175ns (Levels of Logic = 6)
-  Source:            sw<0> (PAD)
-  Destination:       DB<0> (PAD)
+Delay:               9.687ns (Levels of Logic = 4)
+  Source:            EppWRITE (PAD)
+  Destination:       DB<7> (PAD)
 
-  Data Path: sw<0> to DB<0>
+  Data Path: EppWRITE to DB<7>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   0.821   0.827  sw_0_IBUF (sw_0_IBUF)
-     LUT4:I3->O            1   0.551   0.869  busEppOut<0>21 (busEppOut<0>21)
-     LUT3:I2->O            1   0.551   1.140  busEppOut<0>35 (busEppOut<0>35)
-     LUT3:I0->O            1   0.551   0.869  busEppOut<0>85_SW0 (N66)
-     LUT4:I2->O            1   0.551   0.801  busEppOut<0>85 (busEppOut<0>)
-     IOBUF:I->IO               5.644          DB_0_IOBUF (DB<0>)
+     IBUF:I->O             4   0.821   0.985  EppWRITE_IBUF (EppWRITE_IBUF)
+     LUT4:I2->O            1   0.551   0.000  DB_and0000_inv2 (DB_and0000_inv2)
+     MUXF5:I0->O           8   0.360   1.083  DB_and0000_inv_f5 (DB_and0000_inv)
+     IOBUF:T->IO               5.887          DB_7_IOBUF (DB<7>)
     ----------------------------------------
-    Total                     13.175ns (8.669ns logic, 4.506ns route)
-                                       (65.8% logic, 34.2% route)
+    Total                      9.687ns (7.619ns logic, 2.068ns route)
+                                       (78.7% logic, 21.3% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.95 secs
+Total CPU time to Xst completion: 3.87 secs
  
 --> 
 
-Total memory usage is 204756 kilobytes
+Total memory usage is 204180 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
