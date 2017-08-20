@@ -8,15 +8,16 @@
 
 char device[cchDevNameMax];
 
-unsigned char buffer[16 * 1024 * 1024];
 
 HANDLE hif;
 
+int data_amount = 3;
 
 
-unsigned char output_reg = 5;
-unsigned char input_reg = 5;
-unsigned char data_in = 1;
+
+unsigned char output_reg = 1;
+unsigned char input_reg = 1;
+unsigned char data_in = 6;
 
 static int GetReg(unsigned char r) {
 	unsigned char b;
@@ -60,8 +61,10 @@ int main(int argc, char *argv[]) {
 	int erc = 0;
 	int id;
 	int name;
-	int value;
+	//int value;
+	int i;
 
+	printf("debug storage\n");
 	printf("start connection\n");
 	//initialise DLL
 	if (!DpcInit(&erc)) {
@@ -92,23 +95,16 @@ int main(int argc, char *argv[]) {
 		printf("data open failed\n");
 		return -1;
 	}
+	 
+	//printf("put %i into register %i\n",data_in,output_reg);
+	printf("start to push %i numbers into the block ram\n", data_amount);
 
-	printf("put %i into register %i\n",data_in,output_reg);
-
-	if (PutReg(output_reg, data_in) < 0) {
-		printf("put register failed\n");
+	for (i = 0; i < data_amount; i++) {
+		if (PutReg(output_reg, data_in) < 0) {
+			printf("put register failed\n");
+		}
 	}
 
-	//read the data?
-	value = GetReg(input_reg);
-	if (value < 0) {
-		printf("Get Register Failed\n");
-	}
-	else {
-		printf("Register %i returns %i\n",input_reg,value);
-	}
-
-	
 
 
 
