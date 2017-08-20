@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: triangle_wave_notes.prj
 
@@ -107,6 +107,7 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
+WARNING:HDLParsers:3498 - No primary, secondary unit in the file "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/triangle_wave_notes/ipcore_dir/division.vhd. Ignore this file from project file "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/triangle_wave_notes/triangle_wave_notes_vhdl.prj".
 Compiling vhdl file "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/triangle_wave_notes/triangle_wave_notes.vhd" in Library work.
 Entity <triangle_wave_notes> compiled.
 Entity <triangle_wave_notes> (Architecture <behavioral>) compiled.
@@ -121,6 +122,7 @@ Analyzing hierarchy for entity <triangle_wave_notes> in library <work> (architec
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <triangle_wave_notes> in library <work> (Architecture <behavioral>).
+WARNING:Xst:2211 - "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/triangle_wave_notes/triangle_wave_notes.vhd" line 67: Instantiating black box module <division>.
 Entity <triangle_wave_notes> analyzed. Unit <triangle_wave_notes> generated.
 
 
@@ -132,24 +134,29 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <triangle_wave_notes>.
     Related source file is "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/triangle_wave_notes/triangle_wave_notes.vhd".
-    Found 32-bit register for signal <note_cc>.
-    Found 18-bit up counter for signal <note_partial>.
+WARNING:Xst:646 - Signal <rfd> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <quotient<31:17>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <fractional> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:643 - "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/triangle_wave_notes/triangle_wave_notes.vhd" line 76: The result of a 18x17-bit multiplication is partially used. Only the 32 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 14x18-bit ROM for signal <note_cc$mux0000> created at line 85.
+    Found 18x17-bit multiplier for signal <dividend$mult0001> created at line 76.
+    Found 18-bit register for signal <note_cc>.
+    Found 18-bit updown counter for signal <note_partial>.
     Found 1-bit register for signal <pulse>.
-    Found 10-bit comparator equal for signal <pulse$cmp_eq0000> created at line 74.
-    Found 10-bit up counter for signal <pwm_block_partial>.
-    Found 10-bit register for signal <pwm_cc>.
-    Found 32-bit adder for signal <pwm_cc$add0000>.
-    Found 10-bit adder for signal <pwm_cc$addsub0000>.
+    Found 17-bit comparator equal for signal <pulse$cmp_eq0000> created at line 106.
+    Found 17-bit up counter for signal <pwm_block_partial>.
+    Found 17-bit register for signal <pwm_cc>.
     Found 4-bit up counter for signal <second_count>.
     Found 27-bit up counter for signal <second_partial>.
-    Found 2-bit register for signal <square_wave>.
-    Found 32-bit subtractor for signal <square_wave$addsub0000> created at line 61.
-    Found 32-bit comparator equal for signal <square_wave$cmp_eq0000> created at line 61.
-    Found 2-bit adder for signal <square_wave$sub0000> created at line 63.
+    Found 1-bit register for signal <square_wave<0>>.
+    Found 19-bit subtractor for signal <square_wave_0$addsub0000> created at line 90.
+    Found 19-bit comparator equal for signal <square_wave_0$cmp_eq0000> created at line 90.
     Summary:
+	inferred   1 ROM(s).
 	inferred   4 Counter(s).
-	inferred  45 D-type flip-flop(s).
-	inferred   4 Adder/Subtractor(s).
+	inferred  37 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
 	inferred   2 Comparator(s).
 Unit <triangle_wave_notes> synthesized.
 
@@ -158,21 +165,24 @@ Unit <triangle_wave_notes> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 3
- 10-bit adder                                          : 1
- 32-bit adder                                          : 1
- 32-bit subtractor                                     : 1
+# ROMs                                                 : 1
+ 14x18-bit ROM                                         : 1
+# Multipliers                                          : 1
+ 18x17-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 1
+ 19-bit subtractor                                     : 1
 # Counters                                             : 4
- 10-bit up counter                                     : 1
- 18-bit up counter                                     : 1
+ 17-bit up counter                                     : 1
+ 18-bit updown counter                                 : 1
  27-bit up counter                                     : 1
  4-bit up counter                                      : 1
-# Registers                                            : 34
- 1-bit register                                        : 33
- 10-bit register                                       : 1
+# Registers                                            : 4
+ 1-bit register                                        : 2
+ 17-bit register                                       : 1
+ 18-bit register                                       : 1
 # Comparators                                          : 2
- 10-bit comparator equal                               : 1
- 32-bit comparator equal                               : 1
+ 17-bit comparator equal                               : 1
+ 19-bit comparator equal                               : 1
 
 =========================================================================
 
@@ -180,75 +190,48 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1293 - FF/Latch <note_cc_29> has a constant value of 0 in block <triangle_wave_notes>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <note_cc_31> has a constant value of 0 in block <triangle_wave_notes>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <note_cc_30> has a constant value of 0 in block <triangle_wave_notes>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <note_cc_28> has a constant value of 0 in block <triangle_wave_notes>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <note_cc_27> has a constant value of 0 in block <triangle_wave_notes>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <note_cc_24> has a constant value of 0 in block <triangle_wave_notes>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <note_cc_26> has a constant value of 0 in block <triangle_wave_notes>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <note_cc_25> has a constant value of 0 in block <triangle_wave_notes>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <note_cc_23> has a constant value of 0 in block <triangle_wave_notes>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <note_cc_22> has a constant value of 0 in block <triangle_wave_notes>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <note_cc_19> has a constant value of 0 in block <triangle_wave_notes>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <note_cc_21> has a constant value of 0 in block <triangle_wave_notes>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <note_cc_20> has a constant value of 0 in block <triangle_wave_notes>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <note_cc_18> has a constant value of 0 in block <triangle_wave_notes>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pwm_cc_8> has a constant value of 0 in block <triangle_wave_notes>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pwm_cc_9> has a constant value of 0 in block <triangle_wave_notes>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <note_cc_0> is unconnected in block <triangle_wave_notes>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <note_cc_1> is unconnected in block <triangle_wave_notes>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <note_cc_2> is unconnected in block <triangle_wave_notes>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <note_cc_3> is unconnected in block <triangle_wave_notes>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <note_cc_4> is unconnected in block <triangle_wave_notes>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <note_cc_5> is unconnected in block <triangle_wave_notes>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <note_cc_6> is unconnected in block <triangle_wave_notes>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <note_cc_7> is unconnected in block <triangle_wave_notes>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <note_cc_8> is unconnected in block <triangle_wave_notes>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <note_cc_9> is unconnected in block <triangle_wave_notes>.
+Reading core <ipcore_dir/division.ngc>.
+Loading core <division> for timing and area information for instance <divider>.
+
+Synthesizing (advanced) Unit <triangle_wave_notes>.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_note_cc_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+Unit <triangle_wave_notes> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 2
- 10-bit adder                                          : 1
- 20-bit adder                                          : 1
-# Counters                                             : 3
- 10-bit up counter                                     : 1
+# ROMs                                                 : 1
+ 14x18-bit ROM                                         : 1
+# Multipliers                                          : 1
+ 18x17-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 1
+ 19-bit subtractor                                     : 1
+# Counters                                             : 4
+ 17-bit up counter                                     : 1
+ 18-bit updown counter                                 : 1
  27-bit up counter                                     : 1
  4-bit up counter                                      : 1
-# Registers                                            : 32
- Flip-Flops                                            : 32
-# Comparators                                          : 1
- 10-bit comparator equal                               : 1
+# Registers                                            : 37
+ Flip-Flops                                            : 37
+# Comparators                                          : 2
+ 17-bit comparator equal                               : 1
+ 19-bit comparator equal                               : 1
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1293 - FF/Latch <note_cc_31> has a constant value of 0 in block <triangle_wave_notes>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <note_cc_19> has a constant value of 0 in block <triangle_wave_notes>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <note_cc_18> has a constant value of 0 in block <triangle_wave_notes>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pwm_cc_8> has a constant value of 0 in block <triangle_wave_notes>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pwm_cc_9> has a constant value of 0 in block <triangle_wave_notes>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <note_cc_0> is unconnected in block <triangle_wave_notes>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <note_cc_1> is unconnected in block <triangle_wave_notes>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <note_cc_2> is unconnected in block <triangle_wave_notes>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <note_cc_3> is unconnected in block <triangle_wave_notes>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <note_cc_4> is unconnected in block <triangle_wave_notes>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <note_cc_5> is unconnected in block <triangle_wave_notes>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <note_cc_6> is unconnected in block <triangle_wave_notes>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <note_cc_7> is unconnected in block <triangle_wave_notes>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <note_cc_8> is unconnected in block <triangle_wave_notes>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <note_cc_9> is unconnected in block <triangle_wave_notes>.
+INFO:Xst:2261 - The FF/Latch <note_cc_5> in Unit <triangle_wave_notes> is equivalent to the following FF/Latch, which will be removed : <note_cc_16> 
 
 Optimizing unit <triangle_wave_notes> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block triangle_wave_notes, actual ratio is 1.
+Found area constraint ratio of 100 (+ 5) on block triangle_wave_notes, actual ratio is 53.
+INFO:Xst:2260 - The FF/Latch <blk0000008a> in Unit <blk00000003> is equivalent to the following 2 FFs/Latches : <blk00001af1> <blk00001af2> 
+INFO:Xst:2260 - The FF/Latch <blk0000008a> in Unit <blk00000003> is equivalent to the following 2 FFs/Latches : <blk00001af1> <blk00001af2> 
 
 Final Macro Processing ...
 
@@ -256,8 +239,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 58
- Flip-Flops                                            : 58
+# Registers                                            : 102
+ Flip-Flops                                            : 102
 
 =========================================================================
 
@@ -286,25 +269,31 @@ Design Statistics
 # IOs                              : 2
 
 Cell Usage :
-# BELS                             : 150
-#      GND                         : 1
-#      INV                         : 3
-#      LUT1                        : 35
-#      LUT2                        : 2
-#      LUT3                        : 2
-#      LUT4                        : 21
-#      LUT4_L                      : 1
-#      MUXCY                       : 47
-#      VCC                         : 1
-#      XORCY                       : 37
-# FlipFlops/Latches                : 58
-#      FDE                         : 20
-#      FDR                         : 37
-#      FDRE                        : 1
+# BELS                             : 4106
+#      GND                         : 2
+#      INV                         : 114
+#      LUT1                        : 50
+#      LUT2                        : 168
+#      LUT3                        : 1044
+#      LUT4                        : 50
+#      MULT_AND                    : 33
+#      MUXCY                       : 1335
+#      VCC                         : 2
+#      XORCY                       : 1308
+# FlipFlops/Latches                : 3380
+#      FD                          : 3296
+#      FDE                         : 38
+#      FDR                         : 44
+#      FDRE                        : 2
+# Shift Registers                  : 68
+#      SRL16                       : 66
+#      SRLC16                      : 2
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 1
 #      OBUF                        : 1
+# MULTs                            : 1
+#      MULT18X18                   : 1
 =========================================================================
 
 Device utilization summary:
@@ -312,11 +301,14 @@ Device utilization summary:
 
 Selected Device : 3s400ft256-4 
 
- Number of Slices:                       40  out of   3584     1%  
- Number of Slice Flip Flops:             58  out of   7168     0%  
- Number of 4 input LUTs:                 64  out of   7168     0%  
+ Number of Slices:                     1929  out of   3584    53%  
+ Number of Slice Flip Flops:           3380  out of   7168    47%  
+ Number of 4 input LUTs:               1494  out of   7168    20%  
+    Number used as logic:              1426
+    Number used as Shift registers:      68
  Number of IOs:                           2
  Number of bonded IOBs:                   2  out of    173     1%  
+ Number of MULT18X18s:                    1  out of     16     6%  
  Number of GCLKs:                         1  out of      8    12%  
 
 ---------------------------
@@ -340,7 +332,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 58    |
+clk                                | BUFGP                  | 3448  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -351,7 +343,7 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 6.507ns (Maximum Frequency: 153.676MHz)
+   Minimum period: 17.427ns (Maximum Frequency: 57.383MHz)
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: 7.165ns
    Maximum combinational path delay: No path found
@@ -362,32 +354,64 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 6.507ns (frequency: 153.676MHz)
-  Total number of paths / destination ports: 1744 / 116
+  Clock period: 17.427ns (frequency: 57.383MHz)
+  Total number of paths / destination ports: 238498 / 3531
 -------------------------------------------------------------------------
-Delay:               6.507ns (Levels of Logic = 8)
-  Source:            second_partial_7 (FF)
-  Destination:       second_partial_0 (FF)
+Delay:               17.427ns (Levels of Logic = 39)
+  Source:            note_partial_16 (FF)
+  Destination:       divider/blk00000003/blk00001b50 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: second_partial_7 to second_partial_0
+  Data Path: note_partial_16 to divider/blk00000003/blk00001b50
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.720   1.216  second_partial_7 (second_partial_7)
-     LUT3:I0->O            1   0.551   0.000  note_cc_31_cmp_eq0000_wg_lut<0> (note_cc_31_cmp_eq0000_wg_lut<0>)
-     MUXCY:S->O            1   0.500   0.000  note_cc_31_cmp_eq0000_wg_cy<0> (note_cc_31_cmp_eq0000_wg_cy<0>)
-     MUXCY:CI->O           1   0.064   0.000  note_cc_31_cmp_eq0000_wg_cy<1> (note_cc_31_cmp_eq0000_wg_cy<1>)
-     MUXCY:CI->O           1   0.064   0.000  note_cc_31_cmp_eq0000_wg_cy<2> (note_cc_31_cmp_eq0000_wg_cy<2>)
-     MUXCY:CI->O           1   0.064   0.000  note_cc_31_cmp_eq0000_wg_cy<3> (note_cc_31_cmp_eq0000_wg_cy<3>)
-     MUXCY:CI->O           1   0.064   0.000  note_cc_31_cmp_eq0000_wg_cy<4> (note_cc_31_cmp_eq0000_wg_cy<4>)
-     MUXCY:CI->O           1   0.064   0.000  note_cc_31_cmp_eq0000_wg_cy<5> (note_cc_31_cmp_eq0000_wg_cy<5>)
-     MUXCY:CI->O          39   0.281   1.893  note_cc_31_cmp_eq0000_wg_cy<6> (note_cc_31_cmp_eq0000)
-     FDR:R                     1.026          second_partial_0
+     FD:C->Q               4   0.720   0.917  note_partial_16 (note_partial_16)
+     MULT18X18:A16->P30    1   4.780   1.140  Mmult_dividend_mult0001_submult_0 (Mmult_dividend_mult0001_submult_0_30)
+     LUT1:I0->O            1   0.551   0.000  Mmult_dividend_mult0001_Madd_cy<30>_rt (Mmult_dividend_mult0001_Madd_cy<30>_rt)
+     MUXCY:S->O            0   0.500   0.000  Mmult_dividend_mult0001_Madd_cy<30> (Mmult_dividend_mult0001_Madd_cy<30>)
+     XORCY:CI->O          33   0.904   2.054  Mmult_dividend_mult0001_Madd_xor<31> (dividend<31>)
+     begin scope: 'divider'
+     begin scope: 'blk00000003'
+     LUT2:I1->O            1   0.551   0.996  blk00001652 (sig000000e6)
+     LUT2:I1->O            1   0.551   0.000  blk00000049 (sig000000e4)
+     MUXCY:S->O            1   0.500   0.000  blk00000048 (sig000000e1)
+     MUXCY:CI->O           1   0.064   0.000  blk00000046 (sig000000de)
+     MUXCY:CI->O           1   0.064   0.000  blk00000044 (sig000000db)
+     MUXCY:CI->O           1   0.064   0.000  blk00000042 (sig000000d8)
+     MUXCY:CI->O           1   0.064   0.000  blk00000040 (sig000000d5)
+     MUXCY:CI->O           1   0.064   0.000  blk0000003e (sig000000d2)
+     MUXCY:CI->O           1   0.064   0.000  blk0000003c (sig000000cf)
+     MUXCY:CI->O           1   0.064   0.000  blk0000003a (sig000000cc)
+     MUXCY:CI->O           1   0.064   0.000  blk00000038 (sig000000c9)
+     MUXCY:CI->O           1   0.064   0.000  blk00000036 (sig000000c6)
+     MUXCY:CI->O           1   0.064   0.000  blk00000034 (sig000000c3)
+     MUXCY:CI->O           1   0.064   0.000  blk00000032 (sig000000c0)
+     MUXCY:CI->O           1   0.064   0.000  blk00000030 (sig000000bd)
+     MUXCY:CI->O           1   0.064   0.000  blk0000002e (sig000000ba)
+     MUXCY:CI->O           1   0.064   0.000  blk0000002c (sig000000b7)
+     MUXCY:CI->O           1   0.064   0.000  blk0000002a (sig000000b4)
+     MUXCY:CI->O           1   0.064   0.000  blk00000028 (sig000000b1)
+     MUXCY:CI->O           1   0.064   0.000  blk00000026 (sig000000ae)
+     MUXCY:CI->O           1   0.064   0.000  blk00000024 (sig000000ab)
+     MUXCY:CI->O           1   0.064   0.000  blk00000022 (sig000000a8)
+     MUXCY:CI->O           1   0.064   0.000  blk00000020 (sig000000a5)
+     MUXCY:CI->O           1   0.064   0.000  blk0000001e (sig000000a2)
+     MUXCY:CI->O           1   0.064   0.000  blk0000001c (sig0000009f)
+     MUXCY:CI->O           1   0.064   0.000  blk0000001a (sig0000009c)
+     MUXCY:CI->O           1   0.064   0.000  blk00000018 (sig00000099)
+     MUXCY:CI->O           1   0.064   0.000  blk00000016 (sig00000096)
+     MUXCY:CI->O           1   0.064   0.000  blk00000014 (sig00000093)
+     MUXCY:CI->O           1   0.064   0.000  blk00000012 (sig00000090)
+     MUXCY:CI->O           1   0.064   0.000  blk00000010 (sig0000008d)
+     MUXCY:CI->O           1   0.064   0.000  blk0000000e (sig0000008a)
+     MUXCY:CI->O           0   0.064   0.000  blk0000000c (sig00000088)
+     XORCY:CI->O           1   0.904   0.000  blk0000000a (sig00000089)
+     SRL16:D                   0.439          blk00001b50
     ----------------------------------------
-    Total                      6.507ns (3.398ns logic, 3.109ns route)
-                                       (52.2% logic, 47.8% route)
+    Total                     17.427ns (12.320ns logic, 5.107ns route)
+                                       (70.7% logic, 29.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -411,14 +435,14 @@ Offset:              7.165ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.06 secs
+Total REAL time to Xst completion: 52.00 secs
+Total CPU time to Xst completion: 51.71 secs
  
 --> 
 
-Total memory usage is 309336 kilobytes
+Total memory usage is 424688 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   41 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
 

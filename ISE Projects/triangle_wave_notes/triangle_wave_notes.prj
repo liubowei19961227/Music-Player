@@ -1,1 +1,2 @@
+vhdl work "ipcore_dir/division.vhd"
 vhdl work "triangle_wave_notes.vhd"

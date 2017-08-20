@@ -1,6 +1,6 @@
 {% extends "master_template.html" %}
 {% block uploader %}
-<div id="musicuploader">
+<div id="musicuploader" style="color:red">
 	<form action="http://localhost:5000/uploader" method="POST" class="add-entry">
 		<dl>
 			{{ form.csrf_token }}
