@@ -1,0 +1,38 @@
+Release 14.7 ngdbuild P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe -intstyle
+ise -dd _ngo -nt timestamp -uc Z:/Desktop/seven_segment_display/test_7_seg.ucf
+-p xc3s400-ft256-4 test_seven_seg.ngc test_seven_seg.ngd
+
+Reading NGO file
+"Z:/Desktop/seven_segment_display/seven_seg_display/test_seven_seg.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file
+"Z:/Desktop/seven_segment_display/test_7_seg.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 118272 kilobytes
+
+Writing NGD file "test_seven_seg.ngd" ...
+Total REAL time to NGDBUILD completion:  2 sec
+Total CPU time to NGDBUILD completion:   2 sec
+
+Writing NGDBUILD log file "test_seven_seg.bld"...

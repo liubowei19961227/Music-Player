@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "Z:/Desktop/seven_segment_display/seven_seg_display/bin_to_dec.xst" -ofn "Z:/Desktop/seven_segment_display/seven_seg_display/bin_to_dec.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/seven_segment_display/seven_seg_display/bin_to_dec.xst" -ofn "Z:/Desktop/seven_segment_display/seven_seg_display/bin_to_dec.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/seven_segment_display/seven_seg_display/bin_to_dec.xst" -ofn "Z:/Desktop/seven_segment_display/seven_seg_display/bin_to_dec.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/seven_segment_display/seven_seg_display/bin_to_dec.xst" -ofn "Z:/Desktop/seven_segment_display/seven_seg_display/bin_to_dec.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-ft256-4 bin_to_dec.ngc bin_to_dec.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o bin_to_dec_map.ncd bin_to_dec.ngd bin_to_dec.pcf 
+par -w -intstyle ise -ol high -t 1 bin_to_dec_map.ncd bin_to_dec.ncd bin_to_dec.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml bin_to_dec.twx bin_to_dec.ncd -o bin_to_dec.twr bin_to_dec.pcf 

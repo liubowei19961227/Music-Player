@@ -1,0 +1,198 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml seven_seg_display.twx seven_seg_display.ncd -o
+seven_seg_display.twr seven_seg_display.pcf
+
+Design file:              seven_seg_display.ncd
+Physical constraint file: seven_seg_display.pcf
+Device,package,speed:     xc3s400,ft256,-4 (PRODUCTION 1.39 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock clk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+anode<0>    |   11.963(R)|clk_BUFGP         |   0.000|
+anode<1>    |   12.706(R)|clk_BUFGP         |   0.000|
+anode<2>    |   12.223(R)|clk_BUFGP         |   0.000|
+anode<3>    |   12.144(R)|clk_BUFGP         |   0.000|
+output<0>   |   14.348(R)|clk_BUFGP         |   0.000|
+output<1>   |   14.015(R)|clk_BUFGP         |   0.000|
+output<2>   |   14.115(R)|clk_BUFGP         |   0.000|
+output<3>   |   14.362(R)|clk_BUFGP         |   0.000|
+output<4>   |   14.720(R)|clk_BUFGP         |   0.000|
+output<5>   |   14.551(R)|clk_BUFGP         |   0.000|
+output<6>   |   14.437(R)|clk_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.067|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+input1<0>      |output<0>      |   11.119|
+input1<0>      |output<1>      |   11.250|
+input1<0>      |output<2>      |   11.216|
+input1<0>      |output<3>      |   11.057|
+input1<0>      |output<4>      |   11.490|
+input1<0>      |output<5>      |   11.665|
+input1<0>      |output<6>      |   11.462|
+input1<1>      |output<0>      |   11.249|
+input1<1>      |output<1>      |   10.940|
+input1<1>      |output<2>      |   10.956|
+input1<1>      |output<3>      |   11.172|
+input1<1>      |output<4>      |   11.230|
+input1<1>      |output<5>      |   11.434|
+input1<1>      |output<6>      |   11.187|
+input1<2>      |output<0>      |   10.947|
+input1<2>      |output<1>      |   10.951|
+input1<2>      |output<2>      |   10.654|
+input1<2>      |output<3>      |   10.955|
+input1<2>      |output<4>      |   10.928|
+input1<2>      |output<5>      |   11.565|
+input1<2>      |output<6>      |   10.970|
+input1<3>      |output<0>      |   10.691|
+input1<3>      |output<1>      |   10.358|
+input1<3>      |output<2>      |   10.458|
+input1<3>      |output<3>      |   10.705|
+input1<3>      |output<4>      |   11.063|
+input1<3>      |output<5>      |   10.894|
+input1<3>      |output<6>      |   10.780|
+input2<0>      |output<0>      |   11.254|
+input2<0>      |output<1>      |   11.385|
+input2<0>      |output<2>      |   11.351|
+input2<0>      |output<3>      |   11.192|
+input2<0>      |output<4>      |   11.625|
+input2<0>      |output<5>      |   11.800|
+input2<0>      |output<6>      |   11.597|
+input2<1>      |output<0>      |   11.350|
+input2<1>      |output<1>      |   11.041|
+input2<1>      |output<2>      |   11.057|
+input2<1>      |output<3>      |   11.273|
+input2<1>      |output<4>      |   11.331|
+input2<1>      |output<5>      |   11.535|
+input2<1>      |output<6>      |   11.288|
+input2<2>      |output<0>      |   10.868|
+input2<2>      |output<1>      |   10.872|
+input2<2>      |output<2>      |   10.575|
+input2<2>      |output<3>      |   10.876|
+input2<2>      |output<4>      |   10.849|
+input2<2>      |output<5>      |   11.486|
+input2<2>      |output<6>      |   10.891|
+input2<3>      |output<0>      |   10.912|
+input2<3>      |output<1>      |   10.579|
+input2<3>      |output<2>      |   10.679|
+input2<3>      |output<3>      |   10.926|
+input2<3>      |output<4>      |   11.284|
+input2<3>      |output<5>      |   11.115|
+input2<3>      |output<6>      |   11.001|
+input3<0>      |output<0>      |   10.566|
+input3<0>      |output<1>      |   10.697|
+input3<0>      |output<2>      |   10.663|
+input3<0>      |output<3>      |   10.504|
+input3<0>      |output<4>      |   10.937|
+input3<0>      |output<5>      |   11.112|
+input3<0>      |output<6>      |   10.909|
+input3<1>      |output<0>      |   10.568|
+input3<1>      |output<1>      |   10.259|
+input3<1>      |output<2>      |   10.275|
+input3<1>      |output<3>      |   10.491|
+input3<1>      |output<4>      |   10.549|
+input3<1>      |output<5>      |   10.753|
+input3<1>      |output<6>      |   10.506|
+input3<2>      |output<0>      |   10.833|
+input3<2>      |output<1>      |   10.837|
+input3<2>      |output<2>      |   10.540|
+input3<2>      |output<3>      |   10.841|
+input3<2>      |output<4>      |   10.814|
+input3<2>      |output<5>      |   11.451|
+input3<2>      |output<6>      |   10.856|
+input3<3>      |output<0>      |   11.058|
+input3<3>      |output<1>      |   10.725|
+input3<3>      |output<2>      |   10.825|
+input3<3>      |output<3>      |   11.072|
+input3<3>      |output<4>      |   11.430|
+input3<3>      |output<5>      |   11.261|
+input3<3>      |output<6>      |   11.147|
+input4<0>      |output<0>      |   10.623|
+input4<0>      |output<1>      |   10.754|
+input4<0>      |output<2>      |   10.720|
+input4<0>      |output<3>      |   10.561|
+input4<0>      |output<4>      |   10.994|
+input4<0>      |output<5>      |   11.169|
+input4<0>      |output<6>      |   10.966|
+input4<1>      |output<0>      |   11.261|
+input4<1>      |output<1>      |   10.952|
+input4<1>      |output<2>      |   10.968|
+input4<1>      |output<3>      |   11.184|
+input4<1>      |output<4>      |   11.242|
+input4<1>      |output<5>      |   11.446|
+input4<1>      |output<6>      |   11.199|
+input4<2>      |output<0>      |   10.480|
+input4<2>      |output<1>      |   10.484|
+input4<2>      |output<2>      |   10.187|
+input4<2>      |output<3>      |   10.488|
+input4<2>      |output<4>      |   10.461|
+input4<2>      |output<5>      |   11.098|
+input4<2>      |output<6>      |   10.503|
+input4<3>      |output<0>      |   10.742|
+input4<3>      |output<1>      |   10.409|
+input4<3>      |output<2>      |   10.509|
+input4<3>      |output<3>      |   10.756|
+input4<3>      |output<4>      |   11.114|
+input4<3>      |output<5>      |   10.945|
+input4<3>      |output<6>      |   10.831|
+---------------+---------------+---------+
+
+
+Analysis completed Wed Aug 16 18:59:35 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 105 MB
+
+
+
