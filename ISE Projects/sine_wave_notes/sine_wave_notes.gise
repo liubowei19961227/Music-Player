@@ -139,7 +139,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="sine_wave_notes.lso"/>
@@ -157,10 +159,15 @@
     <transform xil_pn:end_ts="1503227323" xil_pn:in_ck="159169260450819" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-5692837457719394335" xil_pn:start_ts="1503227323">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
     </transform>
     <transform xil_pn:end_ts="1503231879" xil_pn:in_ck="3017284485946616776" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-3110602565138168186" xil_pn:start_ts="1503231872">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="sine_wave_notes.bld"/>
@@ -170,6 +177,9 @@
     <transform xil_pn:end_ts="1503231883" xil_pn:in_ck="4289088236351824554" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="6918683465102363066" xil_pn:start_ts="1503231879">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="sine_wave_notes.pcf"/>
       <outfile xil_pn:name="sine_wave_notes_map.map"/>
@@ -183,6 +193,9 @@
     <transform xil_pn:end_ts="1503231963" xil_pn:in_ck="2293554180837697468" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="8251173951899154272" xil_pn:start_ts="1503231883">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
       <outfile xil_pn:name="sine_wave_notes.ncd"/>
       <outfile xil_pn:name="sine_wave_notes.pad"/>
@@ -197,6 +210,7 @@
     <transform xil_pn:end_ts="1503231973" xil_pn:in_ck="-6640595504038840737" xil_pn:name="TRANEXT_bitFile_spartan3" xil_pn:prop_ck="-2672950586390118423" xil_pn:start_ts="1503231963">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="sine_wave_notes.bgn"/>
       <outfile xil_pn:name="sine_wave_notes.bit"/>
@@ -209,6 +223,9 @@
     <transform xil_pn:end_ts="1503231963" xil_pn:in_ck="2431689846250362402" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1503231959">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
       <outfile xil_pn:name="sine_wave_notes.twr"/>
       <outfile xil_pn:name="sine_wave_notes.twx"/>

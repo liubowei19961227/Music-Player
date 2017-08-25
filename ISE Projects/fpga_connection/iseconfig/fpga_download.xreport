@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-08-20T23:10:50</DateModified>
+  <DateModified>2017-08-25T16:34:25</DateModified>
   <ModuleName>fpga_download</ModuleName>
-  <SummaryTimeStamp>2017-08-20T17:55:57</SummaryTimeStamp>
+  <SummaryTimeStamp>2017-08-23T20:55:25</SummaryTimeStamp>
   <SavedFilePath>Z:/Desktop/fpga_connection/fpga_connection/iseconfig/fpga_download.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>Z:/Desktop/fpga_connection/fpga_connection</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>Z:/Desktop/fpga_connection/fpga_connection\</ImplementationReportsDirectory>
   <DateInitialized>2017-08-20T17:20:49</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

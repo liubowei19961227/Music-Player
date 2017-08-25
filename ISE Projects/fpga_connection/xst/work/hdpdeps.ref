@@ -1,23 +1,44 @@
-V3 11
-FL "//vmware-host/shared folders/Desktop/Adept/samples/depp/DeppDemo/logic/dpimref.vhd" 2017/08/20.14:17:17 P.20131013
-EN work/dpimref 1503236061 \
+V3 23
+FL "//vmware-host/shared folders/Desktop/Adept/samples/depp/DeppDemo/logic/dpimref.vhd" 2017/08/23.20:55:01 P.20131013
+EN work/dpimref 1503648932 \
       FL "//vmware-host/shared folders/Desktop/Adept/samples/depp/DeppDemo/logic/dpimref.vhd" \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/dpimref/Behavioral 1503236062 \
+AR work/dpimref/Behavioral 1503648933 \
       FL "//vmware-host/shared folders/Desktop/Adept/samples/depp/DeppDemo/logic/dpimref.vhd" \
-      EN work/dpimref 1503236061
+      EN work/dpimref 1503648932
+FL "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/bin_to_dec.vhd" 2017/08/25.16:57:08 P.20131013
+EN work/bin_to_dec 1503648930 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/bin_to_dec.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/bin_to_dec/Behavioral 1503648931 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/bin_to_dec.vhd" \
+      EN work/bin_to_dec 1503648930
 FL "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/eight_bit_register.vhd" 2017/08/18.20:34:27 P.20131013
-EN work/eight_bit_register 1503236063 \
+EN work/eight_bit_register 1503648934 \
       FL "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/eight_bit_register.vhd" \
       PB ieee/std_logic_1164 1381692176
-AR work/eight_bit_register/Behavioral 1503236064 \
+AR work/eight_bit_register/Behavioral 1503648935 \
       FL "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/eight_bit_register.vhd" \
-      EN work/eight_bit_register 1503236063
-FL "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/fpga_download.vhd" 2017/08/20.23:34:09 P.20131013
-EN work/fpga_download 1503236065 \
+      EN work/eight_bit_register 1503648934
+FL "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/EPP_command.vhd" 2017/08/25.18:15:40 P.20131013
+EN work/EPP_command 1503648940 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/EPP_command.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/EPP_command/Behavioral 1503648941 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/EPP_command.vhd" \
+      EN work/EPP_command 1503648940 CP fpga_download CP seven_seg_display
+FL "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/fpga_download.vhd" 2017/08/25.17:46:15 P.20131013
+EN work/fpga_download 1503648936 \
       FL "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/fpga_download.vhd" \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/fpga_download/Behavioral 1503236066 \
+AR work/fpga_download/Behavioral 1503648937 \
       FL "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/fpga_download.vhd" \
-      EN work/fpga_download 1503236065 CP dpimref CP eight_bit_register
+      EN work/fpga_download 1503648936 CP dpimref CP eight_bit_register
+FL "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/seven_seg_display.vhd" 2017/08/25.16:55:44 P.20131013
+EN work/seven_seg_display 1503648938 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/seven_seg_display.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/seven_seg_display/Behavioral 1503648939 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/seven_seg_display.vhd" \
+      EN work/seven_seg_display 1503648938 CP bin_to_dec

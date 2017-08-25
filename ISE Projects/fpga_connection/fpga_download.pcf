@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sun Aug 20 23:34:36 2017
+// Written by: Map P.20131013 on Wed Aug 23 20:28:01 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -23,6 +23,7 @@ COMP "LED<6>" LOCATE = SITE "P14" LEVEL 1;
 COMP "LED<7>" LOCATE = SITE "R16" LEVEL 1;
 COMP "EppWAIT" LOCATE = SITE "N5" LEVEL 1;
 COMP "EppASTB" LOCATE = SITE "N8" LEVEL 1;
+COMP "rst" LOCATE = SITE "J13" LEVEL 1;
 COMP "EppDSTB" LOCATE = SITE "P7" LEVEL 1;
 NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
 SCHEMATIC END;

@@ -5,5 +5,209 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLParsers" num="3530" delta="old" >Time stamp of file &quot;<arg fmt="%s" index="1">//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/EPP_command.vhd</arg>&quot; is newer than current system time.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">zero</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">data_output&lt;7:4&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_ram</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram65</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram68</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram66</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram67</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram69</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram70</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram71</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram72</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram73</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram74</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram77</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram75</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram76</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram78</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram79</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram80</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram81</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram82</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram83</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram86</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram84</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram85</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram87</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram88</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram89</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram90</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram91</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram92</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram95</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram93</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram94</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram96</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram97</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram98</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram99</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram100</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram101</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram104</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram102</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram103</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram105</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram106</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram107</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram108</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram109</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram110</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram113</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram111</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram112</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram114</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram115</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram116</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram117</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram118</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram119</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram122</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram120</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram121</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram123</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram124</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram125</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram126</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram127</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_ram128</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
 </messages>
 

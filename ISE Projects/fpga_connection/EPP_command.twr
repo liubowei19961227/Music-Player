@@ -1,0 +1,194 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml EPP_command.twx EPP_command.ncd -o EPP_command.twr
+EPP_command.pcf
+
+Design file:              EPP_command.ncd
+Physical constraint file: EPP_command.pcf
+Device,package,speed:     xc3s400,ft256,-4 (PRODUCTION 1.39 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+EPPASTB     |    4.510(R)|    0.799(R)|clk_BUFGP         |   0.000|
+EPPWRITE    |    2.687(R)|   -0.035(R)|clk_BUFGP         |   0.000|
+EppDSTB     |    1.862(R)|    0.236(R)|clk_BUFGP         |   0.000|
+PDB<0>      |    2.137(R)|    1.166(R)|clk_BUFGP         |   0.000|
+PDB<1>      |    1.391(R)|    1.232(R)|clk_BUFGP         |   0.000|
+PDB<2>      |    1.834(R)|    1.146(R)|clk_BUFGP         |   0.000|
+PDB<3>      |    2.264(R)|    0.935(R)|clk_BUFGP         |   0.000|
+PDB<4>      |    1.929(R)|    1.168(R)|clk_BUFGP         |   0.000|
+PDB<5>      |    1.893(R)|    1.210(R)|clk_BUFGP         |   0.000|
+PDB<6>      |    2.446(R)|    1.194(R)|clk_BUFGP         |   0.000|
+PDB<7>      |    2.240(R)|    1.201(R)|clk_BUFGP         |   0.000|
+rst         |    5.025(R)|    0.079(R)|clk_BUFGP         |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+AN<0>       |   12.309(R)|clk_BUFGP         |   0.000|
+AN<1>       |   11.940(R)|clk_BUFGP         |   0.000|
+AN<2>       |   11.940(R)|clk_BUFGP         |   0.000|
+AN<3>       |   12.628(R)|clk_BUFGP         |   0.000|
+EppWAIT     |   10.565(R)|clk_BUFGP         |   0.000|
+LED<0>      |    9.725(R)|clk_BUFGP         |   0.000|
+LED<1>      |   10.337(R)|clk_BUFGP         |   0.000|
+LED<2>      |    9.569(R)|clk_BUFGP         |   0.000|
+LED<3>      |   11.042(R)|clk_BUFGP         |   0.000|
+LED<4>      |    9.590(R)|clk_BUFGP         |   0.000|
+LED<5>      |    9.977(R)|clk_BUFGP         |   0.000|
+LED<6>      |    9.338(R)|clk_BUFGP         |   0.000|
+LED<7>      |    9.921(R)|clk_BUFGP         |   0.000|
+PDB<0>      |   14.810(R)|clk_BUFGP         |   0.000|
+PDB<1>      |   14.973(R)|clk_BUFGP         |   0.000|
+PDB<2>      |   13.687(R)|clk_BUFGP         |   0.000|
+PDB<3>      |   14.767(R)|clk_BUFGP         |   0.000|
+PDB<4>      |   14.198(R)|clk_BUFGP         |   0.000|
+PDB<5>      |   15.189(R)|clk_BUFGP         |   0.000|
+PDB<6>      |   14.536(R)|clk_BUFGP         |   0.000|
+PDB<7>      |   14.689(R)|clk_BUFGP         |   0.000|
+hex<0>      |   17.644(R)|clk_BUFGP         |   0.000|
+hex<1>      |   18.096(R)|clk_BUFGP         |   0.000|
+hex<2>      |   16.821(R)|clk_BUFGP         |   0.000|
+hex<3>      |   16.113(R)|clk_BUFGP         |   0.000|
+hex<4>      |   17.271(R)|clk_BUFGP         |   0.000|
+hex<5>      |   17.088(R)|clk_BUFGP         |   0.000|
+hex<6>      |   16.512(R)|clk_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.419|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+EPPASTB        |PDB<0>         |   11.093|
+EPPASTB        |PDB<1>         |   13.196|
+EPPASTB        |PDB<2>         |   11.769|
+EPPASTB        |PDB<3>         |    8.775|
+EPPASTB        |PDB<4>         |    8.602|
+EPPASTB        |PDB<5>         |    9.498|
+EPPASTB        |PDB<6>         |    8.309|
+EPPASTB        |PDB<7>         |    9.215|
+EPPWRITE       |PDB<0>         |   10.030|
+EPPWRITE       |PDB<1>         |   10.353|
+EPPWRITE       |PDB<2>         |    9.679|
+EPPWRITE       |PDB<3>         |   10.353|
+EPPWRITE       |PDB<4>         |    9.318|
+EPPWRITE       |PDB<5>         |    9.651|
+EPPWRITE       |PDB<6>         |    9.664|
+EPPWRITE       |PDB<7>         |    9.229|
+sw<0>          |hex<0>         |   18.284|
+sw<0>          |hex<1>         |   18.822|
+sw<0>          |hex<2>         |   17.547|
+sw<0>          |hex<3>         |   16.753|
+sw<0>          |hex<4>         |   18.364|
+sw<0>          |hex<5>         |   17.814|
+sw<0>          |hex<6>         |   17.238|
+sw<1>          |hex<0>         |   17.970|
+sw<1>          |hex<1>         |   18.556|
+sw<1>          |hex<2>         |   16.807|
+sw<1>          |hex<3>         |   16.175|
+sw<1>          |hex<4>         |   18.208|
+sw<1>          |hex<5>         |   17.201|
+sw<1>          |hex<6>         |   16.842|
+sw<2>          |hex<0>         |   17.615|
+sw<2>          |hex<1>         |   17.992|
+sw<2>          |hex<2>         |   16.503|
+sw<2>          |hex<3>         |   16.084|
+sw<2>          |hex<4>         |   17.239|
+sw<2>          |hex<5>         |   16.984|
+sw<2>          |hex<6>         |   16.194|
+sw<3>          |hex<0>         |   17.507|
+sw<3>          |hex<1>         |   18.220|
+sw<3>          |hex<2>         |   16.945|
+sw<3>          |hex<3>         |   15.962|
+sw<3>          |hex<4>         |   17.607|
+sw<3>          |hex<5>         |   17.212|
+sw<3>          |hex<6>         |   16.636|
+sw<4>          |hex<0>         |   15.912|
+sw<4>          |hex<1>         |   16.625|
+sw<4>          |hex<2>         |   15.350|
+sw<4>          |hex<3>         |   14.040|
+sw<4>          |hex<4>         |   15.464|
+sw<4>          |hex<5>         |   15.617|
+sw<4>          |hex<6>         |   15.041|
+sw<5>          |hex<0>         |   15.910|
+sw<5>          |hex<1>         |   16.623|
+sw<5>          |hex<2>         |   15.348|
+sw<5>          |hex<3>         |   14.038|
+sw<5>          |hex<4>         |   15.462|
+sw<5>          |hex<5>         |   15.615|
+sw<5>          |hex<6>         |   15.039|
+sw<6>          |hex<0>         |   15.403|
+sw<6>          |hex<1>         |   15.870|
+sw<6>          |hex<2>         |   14.595|
+sw<6>          |hex<3>         |   13.872|
+sw<6>          |hex<4>         |   14.938|
+sw<6>          |hex<5>         |   14.862|
+sw<6>          |hex<6>         |   14.286|
+sw<7>          |hex<0>         |   14.935|
+sw<7>          |hex<1>         |   15.648|
+sw<7>          |hex<2>         |   14.373|
+sw<7>          |hex<3>         |   13.063|
+sw<7>          |hex<4>         |   14.536|
+sw<7>          |hex<5>         |   14.640|
+sw<7>          |hex<6>         |   14.064|
+---------------+---------------+---------+
+
+
+Analysis completed Fri Aug 25 18:16:02 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 108 MB
+
+
+

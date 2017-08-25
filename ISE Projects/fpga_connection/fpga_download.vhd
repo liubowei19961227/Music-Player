@@ -33,6 +33,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity fpga_download is
 port(
 		clk: in std_logic;
+		rst: in std_logic;
 		PDB: inout std_logic_vector(7 downto 0);
 		EppASTB: in std_logic;
 		EppDSTB: in std_logic;
@@ -84,29 +85,30 @@ signal data_ready_sig: std_logic;
 signal reset_ready: std_logic;
 signal reset_counter: std_logic;
 
-
+signal data_output_debug_sig: std_logic_vector(7 downto 0);
 
 begin
 
+data_output_debug_sig <= data_output;
 --reset logic
 
 EppWAIT <= EppWaitSig;
 
-reset_counter <= '0'; --ignore reset ram counter
+reset_counter <= rst; 
 
 addr_aval <= data_aval;
 
 enable_ram_counter <= data_aval;
 
-reset_ready <= not EppWaitSig;    
+reset_ready <= not EppWaitSig;
 
 ram_data <= addr_output & data_output;
 
 data_ready <= data_ready_sig;
 
-reset <= '1' when EppWaitSig = '1' and data_ready_sig = '0' else '0';
+reset <= rst;
 
-LED <= ram_addr_counter;
+LED <= data_output_debug_sig;
 
 addr_input <= ram_addr_counter;
 

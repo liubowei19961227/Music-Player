@@ -1,0 +1,645 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Reading design: EPP_command.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "EPP_command.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "EPP_command"
+Output Format                      : NGC
+Target Device                      : xc3s400-4-ft256
+
+---- Source Options
+Top Module Name                    : EPP_command
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/bin_to_dec.vhd" in Library work.
+Architecture behavioral of Entity bin_to_dec is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/Adept/samples/depp/DeppDemo/logic/dpimref.vhd" in Library work.
+Architecture behavioral of Entity dpimref is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/eight_bit_register.vhd" in Library work.
+Architecture behavioral of Entity eight_bit_register is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/fpga_download.vhd" in Library work.
+Architecture behavioral of Entity fpga_download is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/seven_seg_display.vhd" in Library work.
+Architecture behavioral of Entity seven_seg_display is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/EPP_command.vhd" in Library work.
+WARNING:HDLParsers:3530 - Time stamp of file "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/EPP_command.vhd" is newer than current system time.
+Entity <epp_command> compiled.
+Entity <epp_command> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <EPP_command> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fpga_download> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <seven_seg_display> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <dpimref> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <eight_bit_register> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <bin_to_dec> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <EPP_command> in library <work> (Architecture <behavioral>).
+Entity <EPP_command> analyzed. Unit <EPP_command> generated.
+
+Analyzing Entity <fpga_download> in library <work> (Architecture <behavioral>).
+Entity <fpga_download> analyzed. Unit <fpga_download> generated.
+
+Analyzing Entity <dpimref> in library <work> (Architecture <behavioral>).
+Entity <dpimref> analyzed. Unit <dpimref> generated.
+
+Analyzing Entity <eight_bit_register> in library <work> (Architecture <behavioral>).
+Entity <eight_bit_register> analyzed. Unit <eight_bit_register> generated.
+
+Analyzing Entity <seven_seg_display> in library <work> (Architecture <behavioral>).
+Entity <seven_seg_display> analyzed. Unit <seven_seg_display> generated.
+
+Analyzing Entity <bin_to_dec> in library <work> (Architecture <behavioral>).
+Entity <bin_to_dec> analyzed. Unit <bin_to_dec> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <dpimref>.
+    Related source file is "//vmware-host/shared folders/Desktop/Adept/samples/depp/DeppDemo/logic/dpimref.vhd".
+    Register <regData1> equivalent to <data_output> has been removed
+    Found finite state machine <FSM_0> for signal <stEppCur>.
+    -----------------------------------------------------------------------
+    | States             | 9                                              |
+    | Transitions        | 17                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 8                                              |
+    | Clock              | clkMain                   (rising_edge)        |
+    | Power Up State     | 00000000                                       |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit tristate buffer for signal <DB>.
+    Found 1-bit register for signal <ready>.
+    Found 8-bit register for signal <data_output>.
+    Found 8-bit register for signal <regData0>.
+    Found 8-bit register for signal <regData2>.
+    Found 8-bit register for signal <regData3>.
+    Found 8-bit register for signal <regData4>.
+    Found 8-bit register for signal <regData5>.
+    Found 8-bit register for signal <regData6>.
+    Found 8-bit register for signal <regData7>.
+    Found 4-bit register for signal <regEppAdr>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  69 D-type flip-flop(s).
+	inferred   8 Tristate(s).
+Unit <dpimref> synthesized.
+
+
+Synthesizing Unit <eight_bit_register>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/eight_bit_register.vhd".
+    Found 8-bit register for signal <output>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <eight_bit_register> synthesized.
+
+
+Synthesizing Unit <bin_to_dec>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/bin_to_dec.vhd".
+    Found 16x7-bit ROM for signal <inv_outseg>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <bin_to_dec> synthesized.
+
+
+Synthesizing Unit <fpga_download>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/fpga_download.vhd".
+    Found 1-bit register for signal <data_ready_sig>.
+    Found 8-bit up counter for signal <ram_addr_counter>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <fpga_download> synthesized.
+
+
+Synthesizing Unit <seven_seg_display>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/seven_seg_display.vhd".
+    Found 4-bit 4-to-1 multiplexer for signal <binary>.
+    Found 32-bit up counter for signal <counter>.
+    Found 2-bit up counter for signal <digit>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   4 Multiplexer(s).
+Unit <seven_seg_display> synthesized.
+
+
+Synthesizing Unit <EPP_command>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/EPP_command.vhd".
+WARNING:Xst:646 - Signal <zero> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <data_output<7:4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 256x8-bit dual-port RAM <Mram_ram> for signal <ram>.
+    Summary:
+	inferred   1 RAM(s).
+Unit <EPP_command> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 256x8-bit dual-port RAM                               : 1
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Counters                                             : 3
+ 2-bit up counter                                      : 1
+ 32-bit up counter                                     : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 13
+ 1-bit register                                        : 2
+ 4-bit register                                        : 1
+ 8-bit register                                        : 10
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+# Tristates                                            : 1
+ 8-bit tristate buffer                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <download_from_epp/EPP/stEppCur/FSM> on signal <stEppCur[1:4]> with gray encoding.
+----------------------
+ State    | Encoding
+----------------------
+ 00000000 | 0000
+ 00010100 | 0001
+ 00110010 | 0011
+ 01011000 | 0010
+ 01110010 | 0110
+ 00100001 | 0111
+ 01000011 | 0101
+ 01100001 | 0100
+ 10000011 | 1100
+----------------------
+
+Synthesizing (advanced) Unit <EPP_command>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ram> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <data_valid>    | high     |
+    |     addrA          | connected to signal <download_data> |          |
+    |     diA            | connected to signal <download_data> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     addrB          | connected to signal <sw>            |          |
+    |     doB            | connected to signal <data_output>   |          |
+    -----------------------------------------------------------------------
+Unit <EPP_command> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# RAMs                                                 : 1
+ 256x8-bit dual-port distributed RAM                   : 1
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Counters                                             : 3
+ 2-bit up counter                                      : 1
+ 32-bit up counter                                     : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 86
+ Flip-Flops                                            : 86
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <Mram_ram65> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram68> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram66> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram67> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram69> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram70> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram71> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram72> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram73> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram74> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram77> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram75> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram76> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram78> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram79> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram80> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram81> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram82> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram83> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram86> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram84> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram85> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram87> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram88> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram89> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram90> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram91> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram92> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram95> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram93> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram94> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram96> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram97> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram98> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram99> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram100> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram101> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram104> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram102> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram103> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram105> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram106> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram107> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram108> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram109> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram110> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram113> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram111> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram112> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram114> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram115> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram116> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram117> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram118> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram119> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram122> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram120> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram121> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram123> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram124> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram125> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram126> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram127> of sequential type is unconnected in block <EPP_command>.
+WARNING:Xst:2677 - Node <Mram_ram128> of sequential type is unconnected in block <EPP_command>.
+
+Optimizing unit <EPP_command> ...
+
+Optimizing unit <eight_bit_register> ...
+
+Optimizing unit <seven_seg_display> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block EPP_command, actual ratio is 3.
+FlipFlop download_from_epp/EPP/regEppAdr_0 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 133
+ Flip-Flops                                            : 133
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : EPP_command.ngr
+Top Level Output File Name         : EPP_command
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 41
+
+Cell Usage :
+# BELS                             : 336
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 38
+#      LUT2                        : 22
+#      LUT3                        : 44
+#      LUT4                        : 75
+#      LUT4_D                      : 1
+#      LUT4_L                      : 17
+#      MUXCY                       : 46
+#      MUXF5                       : 36
+#      MUXF6                       : 8
+#      MUXF7                       : 4
+#      VCC                         : 1
+#      XORCY                       : 40
+# FlipFlops/Latches                : 133
+#      FD                          : 3
+#      FDE                         : 71
+#      FDR                         : 33
+#      FDRE                        : 25
+#      FDS                         : 1
+# RAMS                             : 64
+#      RAM16X1D                    : 64
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 40
+#      IBUF                        : 12
+#      IOBUF                       : 8
+#      OBUF                        : 20
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400ft256-4 
+
+ Number of Slices:                      132  out of   3584     3%  
+ Number of Slice Flip Flops:            133  out of   7168     1%  
+ Number of 4 input LUTs:                328  out of   7168     4%  
+    Number used as logic:               200
+    Number used as RAMs:                128
+ Number of IOs:                          41
+ Number of bonded IOBs:                  41  out of    173    23%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 197   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.543ns (Maximum Frequency: 152.845MHz)
+   Minimum input arrival time before clock: 5.153ns
+   Maximum output required time after clock: 15.591ns
+   Maximum combinational path delay: 17.215ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.543ns (frequency: 152.845MHz)
+  Total number of paths / destination ports: 2832 / 577
+-------------------------------------------------------------------------
+Delay:               6.543ns (Levels of Logic = 9)
+  Source:            display_data/counter_8 (FF)
+  Destination:       display_data/counter_31 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: display_data/counter_8 to display_data/counter_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.720   1.216  display_data/counter_8 (display_data/counter_8)
+     LUT4:I0->O            1   0.551   0.000  display_data/digit_cmp_eq0000_wg_lut<0> (display_data/digit_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  display_data/digit_cmp_eq0000_wg_cy<0> (display_data/digit_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  display_data/digit_cmp_eq0000_wg_cy<1> (display_data/digit_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  display_data/digit_cmp_eq0000_wg_cy<2> (display_data/digit_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  display_data/digit_cmp_eq0000_wg_cy<3> (display_data/digit_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  display_data/digit_cmp_eq0000_wg_cy<4> (display_data/digit_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  display_data/digit_cmp_eq0000_wg_cy<5> (display_data/digit_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  display_data/digit_cmp_eq0000_wg_cy<6> (display_data/digit_cmp_eq0000_wg_cy<6>)
+     MUXCY:CI->O          34   0.281   1.865  display_data/digit_cmp_eq0000_wg_cy<7> (display_data/digit_cmp_eq0000)
+     FDR:R                     1.026          display_data/counter_0
+    ----------------------------------------
+    Total                      6.543ns (3.462ns logic, 3.081ns route)
+                                       (52.9% logic, 47.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 358 / 354
+-------------------------------------------------------------------------
+Offset:              5.153ns (Levels of Logic = 4)
+  Source:            EPPASTB (PAD)
+  Destination:       download_from_epp/EPP/stEppCur_FSM_FFd2 (FF)
+  Destination Clock: clk rising
+
+  Data Path: EPPASTB to download_from_epp/EPP/stEppCur_FSM_FFd2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            15   0.821   1.527  EPPASTB_IBUF (EPPASTB_IBUF)
+     LUT2:I0->O            1   0.551   1.140  download_from_epp/EPP/stEppCur_FSM_FFd2-In16 (download_from_epp/EPP/stEppCur_FSM_FFd2-In16)
+     LUT4:I0->O            1   0.551   0.000  download_from_epp/EPP/stEppCur_FSM_FFd2-In4711 (download_from_epp/EPP/stEppCur_FSM_FFd2-In471)
+     MUXF5:I0->O           1   0.360   0.000  download_from_epp/EPP/stEppCur_FSM_FFd2-In471_f5 (download_from_epp/EPP/stEppCur_FSM_FFd2-In47)
+     FDS:D                     0.203          download_from_epp/EPP/stEppCur_FSM_FFd2
+    ----------------------------------------
+    Total                      5.153ns (2.486ns logic, 2.667ns route)
+                                       (48.2% logic, 51.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 738 / 28
+-------------------------------------------------------------------------
+Offset:              15.591ns (Levels of Logic = 8)
+  Source:            Mram_ram33 (RAM)
+  Destination:       hex<0> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: Mram_ram33 to hex<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAM16X1D:WCLK->DPO    1   1.784   0.996  Mram_ram33 (N83)
+     LUT3:I1->O            1   0.551   0.000  inst_LPM_MUX2_8 (inst_LPM_MUX2_8)
+     MUXF5:I0->O           1   0.360   0.000  inst_LPM_MUX2_6_f5 (inst_LPM_MUX2_6_f5)
+     MUXF6:I0->O           1   0.342   0.000  inst_LPM_MUX2_4_f6 (inst_LPM_MUX2_4_f6)
+     MUXF7:I0->O           8   0.342   1.422  inst_LPM_MUX2_2_f7 (data_output<2>)
+     LUT3:I0->O            1   0.551   0.827  display_data/display<0>46_SW0 (N1071)
+     LUT4:I3->O            1   0.551   0.869  display_data/display<0>46 (display_data/display<0>46)
+     LUT4:I2->O            1   0.551   0.801  display_data/display<0>69 (hex_0_OBUF)
+     OBUF:I->O                 5.644          hex_0_OBUF (hex<0>)
+    ----------------------------------------
+    Total                     15.591ns (10.676ns logic, 4.915ns route)
+                                       (68.5% logic, 31.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 2550 / 15
+-------------------------------------------------------------------------
+Delay:               17.215ns (Levels of Logic = 10)
+  Source:            sw<3> (PAD)
+  Destination:       hex<0> (PAD)
+
+  Data Path: sw<3> to hex<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.821   2.036  sw_3_IBUF (sw_3_IBUF)
+     RAM16X1D:DPRA3->DPO    1   0.551   0.996  Mram_ram33 (N83)
+     LUT3:I1->O            1   0.551   0.000  inst_LPM_MUX2_8 (inst_LPM_MUX2_8)
+     MUXF5:I0->O           1   0.360   0.000  inst_LPM_MUX2_6_f5 (inst_LPM_MUX2_6_f5)
+     MUXF6:I0->O           1   0.342   0.000  inst_LPM_MUX2_4_f6 (inst_LPM_MUX2_4_f6)
+     MUXF7:I0->O           8   0.342   1.422  inst_LPM_MUX2_2_f7 (data_output<2>)
+     LUT3:I0->O            1   0.551   0.827  display_data/display<0>46_SW0 (N1071)
+     LUT4:I3->O            1   0.551   0.869  display_data/display<0>46 (display_data/display<0>46)
+     LUT4:I2->O            1   0.551   0.801  display_data/display<0>69 (hex_0_OBUF)
+     OBUF:I->O                 5.644          hex_0_OBUF (hex<0>)
+    ----------------------------------------
+    Total                     17.215ns (10.264ns logic, 6.951ns route)
+                                       (59.6% logic, 40.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.93 secs
+ 
+--> 
+
+Total memory usage is 208404 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   67 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
