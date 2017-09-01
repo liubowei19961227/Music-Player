@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/seven_segment_display_bignumber/seven_seg_display.xst" -ofn "Z:/Desktop/fpga_connection/seven_segment_display_bignumber/seven_seg_display.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-ft256-4 seven_seg_display.ngc seven_seg_display.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o seven_seg_display_map.ncd seven_seg_display.ngd seven_seg_display.pcf 
+par -w -intstyle ise -ol high -t 1 seven_seg_display_map.ncd seven_seg_display.ncd seven_seg_display.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml seven_seg_display.twx seven_seg_display.ncd -o seven_seg_display.twr seven_seg_display.pcf 

@@ -1,0 +1,5 @@
+set -tmpdir "Z:/Desktop/fpga_connection/second_counter/xst/projnav.tmp"
+set -xsthdpdir "Z:/Desktop/fpga_connection/second_counter/xst"
+elaborate
+-ifn second_counter.prj
+-ifmt mixed

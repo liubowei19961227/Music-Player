@@ -1,0 +1,451 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: test_second_counter.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "test_second_counter.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "test_second_counter"
+Output Format                      : NGC
+Target Device                      : xc3s400-4-ft256
+
+---- Source Options
+Top Module Name                    : test_second_counter
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//vmware-host/shared folders/Desktop/seven_segment_display/seven_seg_display/bin_to_dec.vhd" in Library work.
+Architecture behavioral of Entity bin_to_dec is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/second_counter/second_counter.vhd" in Library work.
+Entity <second_counter> compiled.
+Entity <second_counter> (Architecture <behavioral>) compiled.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/seven_segment_display/seven_seg_display/seven_seg_display.vhd" in Library work.
+Architecture behavioral of Entity seven_seg_display is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/second_counter/test_second_counter.vhd" in Library work.
+Architecture behavioral of Entity test_second_counter is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <test_second_counter> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <second_counter> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <seven_seg_display> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <bin_to_dec> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <test_second_counter> in library <work> (Architecture <behavioral>).
+Entity <test_second_counter> analyzed. Unit <test_second_counter> generated.
+
+Analyzing Entity <second_counter> in library <work> (Architecture <behavioral>).
+Entity <second_counter> analyzed. Unit <second_counter> generated.
+
+Analyzing Entity <seven_seg_display> in library <work> (Architecture <behavioral>).
+Entity <seven_seg_display> analyzed. Unit <seven_seg_display> generated.
+
+Analyzing Entity <bin_to_dec> in library <work> (Architecture <behavioral>).
+Entity <bin_to_dec> analyzed. Unit <bin_to_dec> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <second_counter>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/second_counter/second_counter.vhd".
+    Found 1-bit register for signal <finish>.
+    Found 4-bit up counter for signal <counter>.
+    Found 4-bit comparator equal for signal <finish$cmp_eq0000> created at line 72.
+    Found 1-bit register for signal <one_sec>.
+    Found 32-bit up counter for signal <one_sec_counter>.
+    Found 32-bit comparator greatequal for signal <one_sec_counter$cmp_ge0000> created at line 52.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <second_counter> synthesized.
+
+
+Synthesizing Unit <bin_to_dec>.
+    Related source file is "//vmware-host/shared folders/Desktop/seven_segment_display/seven_seg_display/bin_to_dec.vhd".
+    Found 16x7-bit ROM for signal <inv_outseg>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <bin_to_dec> synthesized.
+
+
+Synthesizing Unit <seven_seg_display>.
+    Related source file is "//vmware-host/shared folders/Desktop/seven_segment_display/seven_seg_display/seven_seg_display.vhd".
+    Found 4-bit 4-to-1 multiplexer for signal <binary>.
+    Found 32-bit up counter for signal <counter>.
+    Found 2-bit up counter for signal <digit>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   4 Multiplexer(s).
+Unit <seven_seg_display> synthesized.
+
+
+Synthesizing Unit <test_second_counter>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/second_counter/test_second_counter.vhd".
+Unit <test_second_counter> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Counters                                             : 4
+ 2-bit up counter                                      : 1
+ 32-bit up counter                                     : 2
+ 4-bit up counter                                      : 1
+# Registers                                            : 2
+ 1-bit register                                        : 2
+# Comparators                                          : 2
+ 32-bit comparator greatequal                          : 1
+ 4-bit comparator equal                                : 1
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Counters                                             : 4
+ 2-bit up counter                                      : 1
+ 32-bit up counter                                     : 2
+ 4-bit up counter                                      : 1
+# Registers                                            : 2
+ Flip-Flops                                            : 2
+# Comparators                                          : 2
+ 32-bit comparator greatequal                          : 1
+ 4-bit comparator equal                                : 1
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <test_second_counter> ...
+
+Optimizing unit <second_counter> ...
+
+Optimizing unit <seven_seg_display> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block test_second_counter, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 72
+ Flip-Flops                                            : 72
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : test_second_counter.ngr
+Top Level Output File Name         : test_second_counter
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 18
+
+Cell Usage :
+# BELS                             : 261
+#      GND                         : 1
+#      INV                         : 9
+#      LUT1                        : 66
+#      LUT2                        : 7
+#      LUT3                        : 9
+#      LUT4                        : 20
+#      LUT4_D                      : 2
+#      MUXCY                       : 82
+#      VCC                         : 1
+#      XORCY                       : 64
+# FlipFlops/Latches                : 72
+#      FDE                         : 2
+#      FDR                         : 65
+#      FDRE                        : 4
+#      FDRSE                       : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 17
+#      IBUF                        : 5
+#      OBUF                        : 12
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400ft256-4 
+
+ Number of Slices:                       58  out of   3584     1%  
+ Number of Slice Flip Flops:             72  out of   7168     1%  
+ Number of 4 input LUTs:                113  out of   7168     1%  
+ Number of IOs:                          18
+ Number of bonded IOBs:                  18  out of    173    10%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 72    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.145ns (Maximum Frequency: 122.777MHz)
+   Minimum input arrival time before clock: 5.742ns
+   Maximum output required time after clock: 10.609ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.145ns (frequency: 122.777MHz)
+  Total number of paths / destination ports: 2974 / 143
+-------------------------------------------------------------------------
+Delay:               8.145ns (Levels of Logic = 14)
+  Source:            test_counter/one_sec_counter_8 (FF)
+  Destination:       test_counter/one_sec (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: test_counter/one_sec_counter_8 to test_counter/one_sec
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.720   1.216  test_counter/one_sec_counter_8 (test_counter/one_sec_counter_8)
+     LUT1:I0->O            1   0.551   0.000  test_counter/Mcompar_one_sec_counter_cmp_ge0000_cy<0>_rt (test_counter/Mcompar_one_sec_counter_cmp_ge0000_cy<0>_rt)
+     MUXCY:S->O            1   0.500   0.000  test_counter/Mcompar_one_sec_counter_cmp_ge0000_cy<0> (test_counter/Mcompar_one_sec_counter_cmp_ge0000_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  test_counter/Mcompar_one_sec_counter_cmp_ge0000_cy<1> (test_counter/Mcompar_one_sec_counter_cmp_ge0000_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  test_counter/Mcompar_one_sec_counter_cmp_ge0000_cy<2> (test_counter/Mcompar_one_sec_counter_cmp_ge0000_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  test_counter/Mcompar_one_sec_counter_cmp_ge0000_cy<3> (test_counter/Mcompar_one_sec_counter_cmp_ge0000_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  test_counter/Mcompar_one_sec_counter_cmp_ge0000_cy<4> (test_counter/Mcompar_one_sec_counter_cmp_ge0000_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  test_counter/Mcompar_one_sec_counter_cmp_ge0000_cy<5> (test_counter/Mcompar_one_sec_counter_cmp_ge0000_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  test_counter/Mcompar_one_sec_counter_cmp_ge0000_cy<6> (test_counter/Mcompar_one_sec_counter_cmp_ge0000_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  test_counter/Mcompar_one_sec_counter_cmp_ge0000_cy<7> (test_counter/Mcompar_one_sec_counter_cmp_ge0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  test_counter/Mcompar_one_sec_counter_cmp_ge0000_cy<8> (test_counter/Mcompar_one_sec_counter_cmp_ge0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  test_counter/Mcompar_one_sec_counter_cmp_ge0000_cy<9> (test_counter/Mcompar_one_sec_counter_cmp_ge0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  test_counter/Mcompar_one_sec_counter_cmp_ge0000_cy<10> (test_counter/Mcompar_one_sec_counter_cmp_ge0000_cy<10>)
+     MUXCY:CI->O          33   0.281   1.859  test_counter/Mcompar_one_sec_counter_cmp_ge0000_cy<11> (test_counter/one_sec_counter_cmp_ge0000)
+     INV:I->O              1   0.551   0.801  test_counter/one_sec_not00011_INV_0 (test_counter/one_sec_not0001)
+     FDR:R                     1.026          test_counter/one_sec
+    ----------------------------------------
+    Total                      8.145ns (4.269ns logic, 3.876ns route)
+                                       (52.4% logic, 47.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 25 / 10
+-------------------------------------------------------------------------
+Offset:              5.742ns (Levels of Logic = 3)
+  Source:            sw<2> (PAD)
+  Destination:       test_counter/finish (FF)
+  Destination Clock: clk rising
+
+  Data Path: sw<2> to test_counter/finish
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.821   0.996  sw_2_IBUF (sw_2_IBUF)
+     LUT4_D:I1->O          1   0.551   0.996  test_counter/finish_cmp_eq0000453 (test_counter/finish_cmp_eq0000453)
+     LUT2:I1->O            1   0.551   0.801  test_counter/finish_cmp_eq0000454 (test_counter/finish_cmp_eq0000)
+     FDRSE:S                   1.026          test_counter/finish
+    ----------------------------------------
+    Total                      5.742ns (2.949ns logic, 2.793ns route)
+                                       (51.4% logic, 48.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 51 / 12
+-------------------------------------------------------------------------
+Offset:              10.609ns (Levels of Logic = 3)
+  Source:            test_counter/counter_2 (FF)
+  Destination:       hex<4> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: test_counter/counter_2 to hex<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            10   0.720   1.473  test_counter/counter_2 (test_counter/counter_2)
+     LUT4:I0->O            1   0.551   0.869  display/binary_to_decimal/out_seg<4>_SW1 (N16)
+     LUT3:I2->O            1   0.551   0.801  display/binary_to_decimal/out_seg<4> (hex_4_OBUF)
+     OBUF:I->O                 5.644          hex_4_OBUF (hex<4>)
+    ----------------------------------------
+    Total                     10.609ns (7.466ns logic, 3.143ns route)
+                                       (70.4% logic, 29.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.06 secs
+ 
+--> 
+
+Total memory usage is 203092 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
