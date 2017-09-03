@@ -1,0 +1,3 @@
+vhdl work "\\vmware-host\shared folders\Desktop\seven_segment_display\seven_seg_display\bin_to_dec.vhd"
+vhdl work "\\vmware-host\shared folders\Desktop\seven_segment_display\seven_seg_display\seven_seg_display.vhd"
+vhdl work "\\vmware-host\shared folders\Desktop\fpga_connection\seven_segment_display_bignumber\large_number_7seg.vhd"

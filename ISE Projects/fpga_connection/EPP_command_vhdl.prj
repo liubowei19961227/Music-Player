@@ -1,0 +1,6 @@
+vhdl work "\\vmware-host\shared folders\Desktop\fpga_connection\fpga_connection\eight_bit_register.vhd"
+vhdl work "\\vmware-host\shared folders\Desktop\fpga_connection\fpga_connection\bin_to_dec.vhd"
+vhdl work "\\vmware-host\shared folders\Desktop\Adept\samples\depp\DeppDemo\logic\dpimref.vhd"
+vhdl work "\\vmware-host\shared folders\Desktop\fpga_connection\fpga_connection\seven_seg_display.vhd"
+vhdl work "\\vmware-host\shared folders\Desktop\fpga_connection\fpga_connection\fpga_download.vhd"
+vhdl work "\\vmware-host\shared folders\Desktop\fpga_connection\fpga_connection\EPP_command.vhd"

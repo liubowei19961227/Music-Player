@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Reading design: fpga_download.prj
 
@@ -105,7 +105,8 @@ Slice Utilization Ratio Delta      : 5
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "//vmware-host/shared folders/Desktop/Adept/samples/depp/DeppDemo/logic/dpimref.vhd" in Library work.
-Architecture behavioral of Entity dpimref is up to date.
+Entity <dpimref> compiled.
+Entity <dpimref> (Architecture <behavioral>) compiled.
 Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/eight_bit_register.vhd" in Library work.
 Architecture behavioral of Entity eight_bit_register is up to date.
 Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/fpga_download.vhd" in Library work.
@@ -250,7 +251,8 @@ Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block fpga_download, actual ratio is 1.
 FlipFlop EPP/regEppAdr_0 has been replicated 1 time(s)
-FlipFlop EPP/stEppCur_FSM_FFd4 has been replicated 1 time(s)
+FlipFlop EPP/regEppAdr_1 has been replicated 1 time(s)
+FlipFlop EPP/regEppAdr_2 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -258,8 +260,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 100
- Flip-Flops                                            : 100
+# Registers                                            : 101
+ Flip-Flops                                            : 101
 
 =========================================================================
 
@@ -285,32 +287,33 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 38
+# IOs                              : 39
 
 Cell Usage :
-# BELS                             : 113
+# BELS                             : 105
 #      GND                         : 1
 #      INV                         : 1
 #      LUT1                        : 7
 #      LUT2                        : 5
-#      LUT2_D                      : 1
+#      LUT2_L                      : 1
 #      LUT3                        : 6
-#      LUT4                        : 61
-#      LUT4_L                      : 10
+#      LUT4                        : 59
+#      LUT4_D                      : 2
+#      LUT4_L                      : 2
 #      MUXCY                       : 7
 #      MUXF5                       : 5
 #      VCC                         : 1
 #      XORCY                       : 8
-# FlipFlops/Latches                : 100
-#      FD                          : 4
-#      FDE                         : 77
+# FlipFlops/Latches                : 101
+#      FD                          : 3
+#      FDE                         : 71
 #      FDR                         : 1
-#      FDRE                        : 17
+#      FDRE                        : 25
 #      FDS                         : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 37
-#      IBUF                        : 3
+# IO Buffers                       : 38
+#      IBUF                        : 4
 #      IOBUF                       : 8
 #      OBUF                        : 26
 =========================================================================
@@ -320,11 +323,11 @@ Device utilization summary:
 
 Selected Device : 3s400ft256-4 
 
- Number of Slices:                       72  out of   3584     2%  
- Number of Slice Flip Flops:            100  out of   7168     1%  
- Number of 4 input LUTs:                 91  out of   7168     1%  
- Number of IOs:                          38
- Number of bonded IOBs:                  38  out of    173    21%  
+ Number of Slices:                       66  out of   3584     1%  
+ Number of Slice Flip Flops:            101  out of   7168     1%  
+ Number of 4 input LUTs:                 83  out of   7168     1%  
+ Number of IOs:                          39
+ Number of bonded IOBs:                  39  out of    173    22%  
  Number of GCLKs:                         1  out of      8    12%  
 
 ---------------------------
@@ -348,7 +351,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 100   |
+clk                                | BUFGP                  | 101   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -359,9 +362,9 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 5.967ns (Maximum Frequency: 167.588MHz)
+   Minimum period: 5.779ns (Maximum Frequency: 173.040MHz)
    Minimum input arrival time before clock: 5.027ns
-   Maximum output required time after clock: 14.604ns
+   Maximum output required time after clock: 14.562ns
    Maximum combinational path delay: 9.319ns
 
 Timing Detail:
@@ -370,30 +373,30 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 5.967ns (frequency: 167.588MHz)
-  Total number of paths / destination ports: 654 / 142
+  Clock period: 5.779ns (frequency: 173.040MHz)
+  Total number of paths / destination ports: 573 / 126
 -------------------------------------------------------------------------
-Delay:               5.967ns (Levels of Logic = 2)
+Delay:               5.779ns (Levels of Logic = 2)
   Source:            EPP/stEppCur_FSM_FFd3 (FF)
-  Destination:       Address_register/output_7 (FF)
+  Destination:       EPP/data_output_7 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: EPP/stEppCur_FSM_FFd3 to Address_register/output_7
+  Data Path: EPP/stEppCur_FSM_FFd3 to EPP/data_output_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              18   0.720   1.756  EPP/stEppCur_FSM_FFd3 (EPP/stEppCur_FSM_FFd3)
-     LUT2_D:I0->LO         1   0.551   0.126  EPP/ctlEppWait11 (N104)
-     LUT4:I3->O           16   0.551   1.237  reset_and00001 (reset)
-     FDRE:R                    1.026          Address_register/output_0
+     FD:C->Q              11   0.720   1.339  EPP/stEppCur_FSM_FFd3 (EPP/stEppCur_FSM_FFd3)
+     LUT4_D:I1->O          3   0.551   0.933  EPP/regData7_and00001_SW0 (N64)
+     LUT4:I3->O            8   0.551   1.083  EPP/regData5_and00001 (EPP/regData5_and0000)
+     FDE:CE                    0.602          EPP/regData5_0
     ----------------------------------------
-    Total                      5.967ns (2.848ns logic, 3.119ns route)
-                                       (47.7% logic, 52.3% route)
+    Total                      5.779ns (2.424ns logic, 3.355ns route)
+                                       (41.9% logic, 58.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 79 / 75
+  Total number of paths / destination ports: 105 / 101
 -------------------------------------------------------------------------
 Offset:              5.027ns (Levels of Logic = 4)
   Source:            EppASTB (PAD)
@@ -417,24 +420,24 @@ Offset:              5.027ns (Levels of Logic = 4)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 228 / 34
 -------------------------------------------------------------------------
-Offset:              14.604ns (Levels of Logic = 5)
-  Source:            EPP/regEppAdr_2 (FF)
-  Destination:       PDB<2> (PAD)
+Offset:              14.562ns (Levels of Logic = 5)
+  Source:            EPP/regEppAdr_1 (FF)
+  Destination:       PDB<5> (PAD)
   Source Clock:      clk rising
 
-  Data Path: EPP/regEppAdr_2 to PDB<2>
+  Data Path: EPP/regEppAdr_1 to PDB<5>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             20   0.720   1.884  EPP/regEppAdr_2 (EPP/regEppAdr_2)
-     LUT2:I0->O            6   0.551   1.342  EPP/busEppData_cmp_eq000411 (N20)
-     LUT4:I0->O            1   0.551   1.140  EPP/busEppOut<2>21 (EPP/busEppOut<2>21)
-     LUT4:I0->O            1   0.551   0.869  EPP/busEppOut<2>60_SW0 (N84)
-     LUT4:I2->O            1   0.551   0.801  EPP/busEppOut<2>60 (EPP/busEppOut<2>)
-     IOBUF:I->IO               5.644          PDB_2_IOBUF (PDB<2>)
+     FDE:C->Q             20   0.720   1.884  EPP/regEppAdr_1 (EPP/regEppAdr_1)
+     LUT2:I0->O            6   0.551   1.342  EPP/busEppData_cmp_eq000611 (N18)
+     LUT4:I0->O            1   0.551   1.140  EPP/busEppOut<5>26 (EPP/busEppOut<5>26)
+     LUT3:I0->O            1   0.551   0.827  EPP/busEppOut<5>47_SW0 (N92)
+     LUT4:I3->O            1   0.551   0.801  EPP/busEppOut<5>47 (EPP/busEppOut<5>)
+     IOBUF:I->IO               5.644          PDB_5_IOBUF (PDB<5>)
     ----------------------------------------
-    Total                     14.604ns (8.568ns logic, 6.036ns route)
-                                       (58.7% logic, 41.3% route)
+    Total                     14.562ns (8.568ns logic, 5.994ns route)
+                                       (58.8% logic, 41.2% route)
 
 =========================================================================
 Timing constraint: Default path analysis
@@ -459,11 +462,11 @@ Delay:               9.319ns (Levels of Logic = 3)
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.02 secs
+Total CPU time to Xst completion: 4.12 secs
  
 --> 
 
-Total memory usage is 204692 kilobytes
+Total memory usage is 205396 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

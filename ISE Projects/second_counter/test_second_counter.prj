@@ -1,0 +1,4 @@
+vhdl work "../../seven_segment_display/seven_seg_display/bin_to_dec.vhd"
+vhdl work "../../seven_segment_display/seven_seg_display/seven_seg_display.vhd"
+vhdl work "second_counter.vhd"
+vhdl work "test_second_counter.vhd"

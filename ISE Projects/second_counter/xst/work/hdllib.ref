@@ -1,0 +1,8 @@
+AR test_second_counter behavioral "//vmware-host/shared folders/Desktop/fpga_connection/second_counter/test_second_counter.vhd" sub00/vhpl07 1504262024
+EN second_counter NULL "//vmware-host/shared folders/Desktop/fpga_connection/second_counter/second_counter.vhd" sub00/vhpl04 1504262019
+AR bin_to_dec behavioral "//vmware-host/shared folders/Desktop/seven_segment_display/seven_seg_display/bin_to_dec.vhd" sub00/vhpl01 1504262018
+EN seven_seg_display NULL "//vmware-host/shared folders/Desktop/seven_segment_display/seven_seg_display/seven_seg_display.vhd" sub00/vhpl02 1504262021
+EN test_second_counter NULL "//vmware-host/shared folders/Desktop/fpga_connection/second_counter/test_second_counter.vhd" sub00/vhpl06 1504262023
+AR second_counter behavioral "//vmware-host/shared folders/Desktop/fpga_connection/second_counter/second_counter.vhd" sub00/vhpl05 1504262020
+AR seven_seg_display behavioral "//vmware-host/shared folders/Desktop/seven_segment_display/seven_seg_display/seven_seg_display.vhd" sub00/vhpl03 1504262022
+EN bin_to_dec NULL "//vmware-host/shared folders/Desktop/seven_segment_display/seven_seg_display/bin_to_dec.vhd" sub00/vhpl00 1504262017

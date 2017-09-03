@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/seven_segment_display_bignumber/test_largenum_display.xst" -ofn "Z:/Desktop/fpga_connection/seven_segment_display_bignumber/test_largenum_display.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/large_7seg.ucf -p xc3s400-ft256-4 test_largenum_display.ngc test_largenum_display.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/large_7seg.ucf -p xc3s400-ft256-4 test_largenum_display.ngc test_largenum_display.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o test_largenum_display_map.ncd test_largenum_display.ngd test_largenum_display.pcf 
+par -w -intstyle ise -ol high -t 1 test_largenum_display_map.ncd test_largenum_display.ncd test_largenum_display.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml test_largenum_display.twx test_largenum_display.ncd -o test_largenum_display.twr test_largenum_display.pcf 
+bitgen -intstyle ise -f test_largenum_display.ut test_largenum_display.ncd 
