@@ -1,0 +1,777 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml sine_wave_notes.twx sine_wave_notes.ncd -o
+sine_wave_notes.twr sine_wave_notes.pcf -ucf nexys.ucf
+
+Design file:              sine_wave_notes.ncd
+Physical constraint file: sine_wave_notes.pcf
+Device,package,speed:     xc3s400,ft256,-4 (PRODUCTION 1.39 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: ts_clk = PERIOD TIMEGRP "tnm_clk" 25 MHz HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 5524 paths analyzed, 244 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   9.051ns.
+--------------------------------------------------------------------------------
+
+Paths for end point note_player_0/note_pitch_partial_0 (SLICE_X41Y38.SR), 168 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     30.949ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               note_cc_1 (FF)
+  Destination:          note_player_0/note_pitch_partial_0 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      9.051ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: note_cc_1 to note_player_0/note_pitch_partial_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y41.XQ      Tcko                  0.720   note_cc<1>
+                                                       note_cc_1
+    SLICE_X42Y40.G2      net (fanout=1)        0.634   note_cc<1>
+    SLICE_X42Y40.COUT    Topcyg                1.096   note_player_0/note_pitch_partial_sub0000<0>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_lut<1>_INV_0
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<1>
+    SLICE_X42Y41.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<1>
+    SLICE_X42Y41.COUT    Tbyp                  0.120   note_player_0/note_pitch_partial_sub0000<2>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<2>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<3>
+    SLICE_X42Y42.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<3>
+    SLICE_X42Y42.Y       Tciny                 0.923   note_player_0/note_pitch_partial_sub0000<4>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<4>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_xor<5>
+    SLICE_X40Y42.G2      net (fanout=1)        0.610   note_player_0/note_pitch_partial_sub0000<5>
+    SLICE_X40Y42.COUT    Topcyg                1.096   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<5>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_lut<5>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<5>
+    SLICE_X40Y43.CIN     net (fanout=1)        0.000   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<5>
+    SLICE_X40Y43.COUT    Tbyp                  0.120   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<7>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<6>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<7>
+    SLICE_X40Y44.CIN     net (fanout=1)        0.000   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<7>
+    SLICE_X40Y44.COUT    Tbyp                  0.120   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<9>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<8>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<9>
+    SLICE_X40Y45.CIN     net (fanout=1)        0.000   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<9>
+    SLICE_X40Y45.COUT    Tbyp                  0.120   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<11>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<10>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<11>
+    SLICE_X40Y46.CIN     net (fanout=1)        0.000   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<11>
+    SLICE_X40Y46.COUT    Tbyp                  0.120   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<13>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<12>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<13>
+    SLICE_X40Y47.CIN     net (fanout=1)        0.000   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<13>
+    SLICE_X40Y47.COUT    Tbyp                  0.120   note_player_0/square_wave_cmp_ge0000
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<14>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<15>
+    SLICE_X41Y46.G1      net (fanout=2)        0.813   note_player_0/square_wave_cmp_ge0000
+    SLICE_X41Y46.Y       Tilo                  0.551   note_player_0/note_pitch_partial_or0000
+                                                       note_player_0/note_pitch_partial_or00001
+    SLICE_X41Y38.SR      net (fanout=8)        0.862   note_player_0/note_pitch_partial_or0000
+    SLICE_X41Y38.CLK     Tsrck                 1.026   note_player_0/note_pitch_partial<0>
+                                                       note_player_0/note_pitch_partial_0
+    -------------------------------------------------  ---------------------------
+    Total                                      9.051ns (6.132ns logic, 2.919ns route)
+                                                       (67.7% logic, 32.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     30.949ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               note_cc_1 (FF)
+  Destination:          note_player_0/note_pitch_partial_0 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      9.051ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: note_cc_1 to note_player_0/note_pitch_partial_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y41.XQ      Tcko                  0.720   note_cc<1>
+                                                       note_cc_1
+    SLICE_X42Y40.G2      net (fanout=1)        0.634   note_cc<1>
+    SLICE_X42Y40.COUT    Topcyg                1.096   note_player_0/note_pitch_partial_sub0000<0>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_lut<1>_INV_0
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<1>
+    SLICE_X42Y41.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<1>
+    SLICE_X42Y41.COUT    Tbyp                  0.120   note_player_0/note_pitch_partial_sub0000<2>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<2>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<3>
+    SLICE_X42Y42.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<3>
+    SLICE_X42Y42.COUT    Tbyp                  0.120   note_player_0/note_pitch_partial_sub0000<4>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<4>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<5>
+    SLICE_X42Y43.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<5>
+    SLICE_X42Y43.COUT    Tbyp                  0.120   note_player_0/note_pitch_partial_sub0000<6>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<6>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<7>
+    SLICE_X42Y44.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<7>
+    SLICE_X42Y44.Y       Tciny                 0.923   note_player_0/note_pitch_partial_sub0000<8>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<8>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_xor<9>
+    SLICE_X40Y44.G2      net (fanout=1)        0.610   note_player_0/note_pitch_partial_sub0000<9>
+    SLICE_X40Y44.COUT    Topcyg                1.096   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<9>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_lut<9>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<9>
+    SLICE_X40Y45.CIN     net (fanout=1)        0.000   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<9>
+    SLICE_X40Y45.COUT    Tbyp                  0.120   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<11>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<10>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<11>
+    SLICE_X40Y46.CIN     net (fanout=1)        0.000   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<11>
+    SLICE_X40Y46.COUT    Tbyp                  0.120   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<13>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<12>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<13>
+    SLICE_X40Y47.CIN     net (fanout=1)        0.000   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<13>
+    SLICE_X40Y47.COUT    Tbyp                  0.120   note_player_0/square_wave_cmp_ge0000
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<14>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<15>
+    SLICE_X41Y46.G1      net (fanout=2)        0.813   note_player_0/square_wave_cmp_ge0000
+    SLICE_X41Y46.Y       Tilo                  0.551   note_player_0/note_pitch_partial_or0000
+                                                       note_player_0/note_pitch_partial_or00001
+    SLICE_X41Y38.SR      net (fanout=8)        0.862   note_player_0/note_pitch_partial_or0000
+    SLICE_X41Y38.CLK     Tsrck                 1.026   note_player_0/note_pitch_partial<0>
+                                                       note_player_0/note_pitch_partial_0
+    -------------------------------------------------  ---------------------------
+    Total                                      9.051ns (6.132ns logic, 2.919ns route)
+                                                       (67.7% logic, 32.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     30.956ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               note_cc_1 (FF)
+  Destination:          note_player_0/note_pitch_partial_0 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      9.044ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: note_cc_1 to note_player_0/note_pitch_partial_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y41.XQ      Tcko                  0.720   note_cc<1>
+                                                       note_cc_1
+    SLICE_X42Y40.G2      net (fanout=1)        0.634   note_cc<1>
+    SLICE_X42Y40.COUT    Topcyg                1.096   note_player_0/note_pitch_partial_sub0000<0>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_lut<1>_INV_0
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<1>
+    SLICE_X42Y41.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<1>
+    SLICE_X42Y41.COUT    Tbyp                  0.120   note_player_0/note_pitch_partial_sub0000<2>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<2>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<3>
+    SLICE_X42Y42.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<3>
+    SLICE_X42Y42.COUT    Tbyp                  0.120   note_player_0/note_pitch_partial_sub0000<4>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<4>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<5>
+    SLICE_X42Y43.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<5>
+    SLICE_X42Y43.COUT    Tbyp                  0.120   note_player_0/note_pitch_partial_sub0000<6>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<6>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<7>
+    SLICE_X42Y44.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<7>
+    SLICE_X42Y44.COUT    Tbyp                  0.120   note_player_0/note_pitch_partial_sub0000<8>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<8>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<9>
+    SLICE_X42Y45.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<9>
+    SLICE_X42Y45.COUT    Tbyp                  0.120   note_player_0/note_pitch_partial_sub0000<10>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<10>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<11>
+    SLICE_X42Y46.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<11>
+    SLICE_X42Y46.Y       Tciny                 0.923   note_player_0/note_pitch_partial_sub0000<12>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<12>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_xor<13>
+    SLICE_X40Y46.G2      net (fanout=1)        0.603   note_player_0/note_pitch_partial_sub0000<13>
+    SLICE_X40Y46.COUT    Topcyg                1.096   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<13>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_lut<13>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<13>
+    SLICE_X40Y47.CIN     net (fanout=1)        0.000   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<13>
+    SLICE_X40Y47.COUT    Tbyp                  0.120   note_player_0/square_wave_cmp_ge0000
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<14>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<15>
+    SLICE_X41Y46.G1      net (fanout=2)        0.813   note_player_0/square_wave_cmp_ge0000
+    SLICE_X41Y46.Y       Tilo                  0.551   note_player_0/note_pitch_partial_or0000
+                                                       note_player_0/note_pitch_partial_or00001
+    SLICE_X41Y38.SR      net (fanout=8)        0.862   note_player_0/note_pitch_partial_or0000
+    SLICE_X41Y38.CLK     Tsrck                 1.026   note_player_0/note_pitch_partial<0>
+                                                       note_player_0/note_pitch_partial_0
+    -------------------------------------------------  ---------------------------
+    Total                                      9.044ns (6.132ns logic, 2.912ns route)
+                                                       (67.8% logic, 32.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point note_player_0/note_pitch_partial_1 (SLICE_X41Y38.SR), 168 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     30.949ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               note_cc_1 (FF)
+  Destination:          note_player_0/note_pitch_partial_1 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      9.051ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: note_cc_1 to note_player_0/note_pitch_partial_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y41.XQ      Tcko                  0.720   note_cc<1>
+                                                       note_cc_1
+    SLICE_X42Y40.G2      net (fanout=1)        0.634   note_cc<1>
+    SLICE_X42Y40.COUT    Topcyg                1.096   note_player_0/note_pitch_partial_sub0000<0>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_lut<1>_INV_0
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<1>
+    SLICE_X42Y41.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<1>
+    SLICE_X42Y41.COUT    Tbyp                  0.120   note_player_0/note_pitch_partial_sub0000<2>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<2>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<3>
+    SLICE_X42Y42.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<3>
+    SLICE_X42Y42.Y       Tciny                 0.923   note_player_0/note_pitch_partial_sub0000<4>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<4>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_xor<5>
+    SLICE_X40Y42.G2      net (fanout=1)        0.610   note_player_0/note_pitch_partial_sub0000<5>
+    SLICE_X40Y42.COUT    Topcyg                1.096   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<5>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_lut<5>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<5>
+    SLICE_X40Y43.CIN     net (fanout=1)        0.000   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<5>
+    SLICE_X40Y43.COUT    Tbyp                  0.120   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<7>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<6>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<7>
+    SLICE_X40Y44.CIN     net (fanout=1)        0.000   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<7>
+    SLICE_X40Y44.COUT    Tbyp                  0.120   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<9>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<8>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<9>
+    SLICE_X40Y45.CIN     net (fanout=1)        0.000   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<9>
+    SLICE_X40Y45.COUT    Tbyp                  0.120   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<11>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<10>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<11>
+    SLICE_X40Y46.CIN     net (fanout=1)        0.000   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<11>
+    SLICE_X40Y46.COUT    Tbyp                  0.120   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<13>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<12>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<13>
+    SLICE_X40Y47.CIN     net (fanout=1)        0.000   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<13>
+    SLICE_X40Y47.COUT    Tbyp                  0.120   note_player_0/square_wave_cmp_ge0000
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<14>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<15>
+    SLICE_X41Y46.G1      net (fanout=2)        0.813   note_player_0/square_wave_cmp_ge0000
+    SLICE_X41Y46.Y       Tilo                  0.551   note_player_0/note_pitch_partial_or0000
+                                                       note_player_0/note_pitch_partial_or00001
+    SLICE_X41Y38.SR      net (fanout=8)        0.862   note_player_0/note_pitch_partial_or0000
+    SLICE_X41Y38.CLK     Tsrck                 1.026   note_player_0/note_pitch_partial<0>
+                                                       note_player_0/note_pitch_partial_1
+    -------------------------------------------------  ---------------------------
+    Total                                      9.051ns (6.132ns logic, 2.919ns route)
+                                                       (67.7% logic, 32.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     30.949ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               note_cc_1 (FF)
+  Destination:          note_player_0/note_pitch_partial_1 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      9.051ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: note_cc_1 to note_player_0/note_pitch_partial_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y41.XQ      Tcko                  0.720   note_cc<1>
+                                                       note_cc_1
+    SLICE_X42Y40.G2      net (fanout=1)        0.634   note_cc<1>
+    SLICE_X42Y40.COUT    Topcyg                1.096   note_player_0/note_pitch_partial_sub0000<0>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_lut<1>_INV_0
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<1>
+    SLICE_X42Y41.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<1>
+    SLICE_X42Y41.COUT    Tbyp                  0.120   note_player_0/note_pitch_partial_sub0000<2>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<2>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<3>
+    SLICE_X42Y42.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<3>
+    SLICE_X42Y42.COUT    Tbyp                  0.120   note_player_0/note_pitch_partial_sub0000<4>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<4>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<5>
+    SLICE_X42Y43.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<5>
+    SLICE_X42Y43.COUT    Tbyp                  0.120   note_player_0/note_pitch_partial_sub0000<6>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<6>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<7>
+    SLICE_X42Y44.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<7>
+    SLICE_X42Y44.Y       Tciny                 0.923   note_player_0/note_pitch_partial_sub0000<8>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<8>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_xor<9>
+    SLICE_X40Y44.G2      net (fanout=1)        0.610   note_player_0/note_pitch_partial_sub0000<9>
+    SLICE_X40Y44.COUT    Topcyg                1.096   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<9>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_lut<9>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<9>
+    SLICE_X40Y45.CIN     net (fanout=1)        0.000   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<9>
+    SLICE_X40Y45.COUT    Tbyp                  0.120   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<11>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<10>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<11>
+    SLICE_X40Y46.CIN     net (fanout=1)        0.000   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<11>
+    SLICE_X40Y46.COUT    Tbyp                  0.120   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<13>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<12>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<13>
+    SLICE_X40Y47.CIN     net (fanout=1)        0.000   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<13>
+    SLICE_X40Y47.COUT    Tbyp                  0.120   note_player_0/square_wave_cmp_ge0000
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<14>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<15>
+    SLICE_X41Y46.G1      net (fanout=2)        0.813   note_player_0/square_wave_cmp_ge0000
+    SLICE_X41Y46.Y       Tilo                  0.551   note_player_0/note_pitch_partial_or0000
+                                                       note_player_0/note_pitch_partial_or00001
+    SLICE_X41Y38.SR      net (fanout=8)        0.862   note_player_0/note_pitch_partial_or0000
+    SLICE_X41Y38.CLK     Tsrck                 1.026   note_player_0/note_pitch_partial<0>
+                                                       note_player_0/note_pitch_partial_1
+    -------------------------------------------------  ---------------------------
+    Total                                      9.051ns (6.132ns logic, 2.919ns route)
+                                                       (67.7% logic, 32.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     30.956ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               note_cc_1 (FF)
+  Destination:          note_player_0/note_pitch_partial_1 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      9.044ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: note_cc_1 to note_player_0/note_pitch_partial_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y41.XQ      Tcko                  0.720   note_cc<1>
+                                                       note_cc_1
+    SLICE_X42Y40.G2      net (fanout=1)        0.634   note_cc<1>
+    SLICE_X42Y40.COUT    Topcyg                1.096   note_player_0/note_pitch_partial_sub0000<0>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_lut<1>_INV_0
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<1>
+    SLICE_X42Y41.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<1>
+    SLICE_X42Y41.COUT    Tbyp                  0.120   note_player_0/note_pitch_partial_sub0000<2>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<2>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<3>
+    SLICE_X42Y42.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<3>
+    SLICE_X42Y42.COUT    Tbyp                  0.120   note_player_0/note_pitch_partial_sub0000<4>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<4>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<5>
+    SLICE_X42Y43.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<5>
+    SLICE_X42Y43.COUT    Tbyp                  0.120   note_player_0/note_pitch_partial_sub0000<6>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<6>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<7>
+    SLICE_X42Y44.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<7>
+    SLICE_X42Y44.COUT    Tbyp                  0.120   note_player_0/note_pitch_partial_sub0000<8>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<8>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<9>
+    SLICE_X42Y45.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<9>
+    SLICE_X42Y45.COUT    Tbyp                  0.120   note_player_0/note_pitch_partial_sub0000<10>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<10>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<11>
+    SLICE_X42Y46.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<11>
+    SLICE_X42Y46.Y       Tciny                 0.923   note_player_0/note_pitch_partial_sub0000<12>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<12>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_xor<13>
+    SLICE_X40Y46.G2      net (fanout=1)        0.603   note_player_0/note_pitch_partial_sub0000<13>
+    SLICE_X40Y46.COUT    Topcyg                1.096   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<13>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_lut<13>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<13>
+    SLICE_X40Y47.CIN     net (fanout=1)        0.000   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<13>
+    SLICE_X40Y47.COUT    Tbyp                  0.120   note_player_0/square_wave_cmp_ge0000
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<14>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<15>
+    SLICE_X41Y46.G1      net (fanout=2)        0.813   note_player_0/square_wave_cmp_ge0000
+    SLICE_X41Y46.Y       Tilo                  0.551   note_player_0/note_pitch_partial_or0000
+                                                       note_player_0/note_pitch_partial_or00001
+    SLICE_X41Y38.SR      net (fanout=8)        0.862   note_player_0/note_pitch_partial_or0000
+    SLICE_X41Y38.CLK     Tsrck                 1.026   note_player_0/note_pitch_partial<0>
+                                                       note_player_0/note_pitch_partial_1
+    -------------------------------------------------  ---------------------------
+    Total                                      9.044ns (6.132ns logic, 2.912ns route)
+                                                       (67.8% logic, 32.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point note_player_0/note_pitch_partial_2 (SLICE_X41Y39.SR), 168 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     30.949ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               note_cc_1 (FF)
+  Destination:          note_player_0/note_pitch_partial_2 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      9.051ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: note_cc_1 to note_player_0/note_pitch_partial_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y41.XQ      Tcko                  0.720   note_cc<1>
+                                                       note_cc_1
+    SLICE_X42Y40.G2      net (fanout=1)        0.634   note_cc<1>
+    SLICE_X42Y40.COUT    Topcyg                1.096   note_player_0/note_pitch_partial_sub0000<0>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_lut<1>_INV_0
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<1>
+    SLICE_X42Y41.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<1>
+    SLICE_X42Y41.COUT    Tbyp                  0.120   note_player_0/note_pitch_partial_sub0000<2>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<2>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<3>
+    SLICE_X42Y42.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<3>
+    SLICE_X42Y42.Y       Tciny                 0.923   note_player_0/note_pitch_partial_sub0000<4>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<4>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_xor<5>
+    SLICE_X40Y42.G2      net (fanout=1)        0.610   note_player_0/note_pitch_partial_sub0000<5>
+    SLICE_X40Y42.COUT    Topcyg                1.096   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<5>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_lut<5>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<5>
+    SLICE_X40Y43.CIN     net (fanout=1)        0.000   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<5>
+    SLICE_X40Y43.COUT    Tbyp                  0.120   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<7>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<6>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<7>
+    SLICE_X40Y44.CIN     net (fanout=1)        0.000   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<7>
+    SLICE_X40Y44.COUT    Tbyp                  0.120   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<9>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<8>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<9>
+    SLICE_X40Y45.CIN     net (fanout=1)        0.000   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<9>
+    SLICE_X40Y45.COUT    Tbyp                  0.120   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<11>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<10>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<11>
+    SLICE_X40Y46.CIN     net (fanout=1)        0.000   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<11>
+    SLICE_X40Y46.COUT    Tbyp                  0.120   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<13>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<12>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<13>
+    SLICE_X40Y47.CIN     net (fanout=1)        0.000   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<13>
+    SLICE_X40Y47.COUT    Tbyp                  0.120   note_player_0/square_wave_cmp_ge0000
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<14>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<15>
+    SLICE_X41Y46.G1      net (fanout=2)        0.813   note_player_0/square_wave_cmp_ge0000
+    SLICE_X41Y46.Y       Tilo                  0.551   note_player_0/note_pitch_partial_or0000
+                                                       note_player_0/note_pitch_partial_or00001
+    SLICE_X41Y39.SR      net (fanout=8)        0.862   note_player_0/note_pitch_partial_or0000
+    SLICE_X41Y39.CLK     Tsrck                 1.026   note_player_0/note_pitch_partial<2>
+                                                       note_player_0/note_pitch_partial_2
+    -------------------------------------------------  ---------------------------
+    Total                                      9.051ns (6.132ns logic, 2.919ns route)
+                                                       (67.7% logic, 32.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     30.949ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               note_cc_1 (FF)
+  Destination:          note_player_0/note_pitch_partial_2 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      9.051ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: note_cc_1 to note_player_0/note_pitch_partial_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y41.XQ      Tcko                  0.720   note_cc<1>
+                                                       note_cc_1
+    SLICE_X42Y40.G2      net (fanout=1)        0.634   note_cc<1>
+    SLICE_X42Y40.COUT    Topcyg                1.096   note_player_0/note_pitch_partial_sub0000<0>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_lut<1>_INV_0
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<1>
+    SLICE_X42Y41.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<1>
+    SLICE_X42Y41.COUT    Tbyp                  0.120   note_player_0/note_pitch_partial_sub0000<2>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<2>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<3>
+    SLICE_X42Y42.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<3>
+    SLICE_X42Y42.COUT    Tbyp                  0.120   note_player_0/note_pitch_partial_sub0000<4>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<4>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<5>
+    SLICE_X42Y43.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<5>
+    SLICE_X42Y43.COUT    Tbyp                  0.120   note_player_0/note_pitch_partial_sub0000<6>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<6>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<7>
+    SLICE_X42Y44.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<7>
+    SLICE_X42Y44.Y       Tciny                 0.923   note_player_0/note_pitch_partial_sub0000<8>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<8>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_xor<9>
+    SLICE_X40Y44.G2      net (fanout=1)        0.610   note_player_0/note_pitch_partial_sub0000<9>
+    SLICE_X40Y44.COUT    Topcyg                1.096   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<9>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_lut<9>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<9>
+    SLICE_X40Y45.CIN     net (fanout=1)        0.000   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<9>
+    SLICE_X40Y45.COUT    Tbyp                  0.120   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<11>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<10>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<11>
+    SLICE_X40Y46.CIN     net (fanout=1)        0.000   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<11>
+    SLICE_X40Y46.COUT    Tbyp                  0.120   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<13>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<12>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<13>
+    SLICE_X40Y47.CIN     net (fanout=1)        0.000   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<13>
+    SLICE_X40Y47.COUT    Tbyp                  0.120   note_player_0/square_wave_cmp_ge0000
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<14>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<15>
+    SLICE_X41Y46.G1      net (fanout=2)        0.813   note_player_0/square_wave_cmp_ge0000
+    SLICE_X41Y46.Y       Tilo                  0.551   note_player_0/note_pitch_partial_or0000
+                                                       note_player_0/note_pitch_partial_or00001
+    SLICE_X41Y39.SR      net (fanout=8)        0.862   note_player_0/note_pitch_partial_or0000
+    SLICE_X41Y39.CLK     Tsrck                 1.026   note_player_0/note_pitch_partial<2>
+                                                       note_player_0/note_pitch_partial_2
+    -------------------------------------------------  ---------------------------
+    Total                                      9.051ns (6.132ns logic, 2.919ns route)
+                                                       (67.7% logic, 32.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     30.956ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               note_cc_1 (FF)
+  Destination:          note_player_0/note_pitch_partial_2 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      9.044ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: note_cc_1 to note_player_0/note_pitch_partial_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y41.XQ      Tcko                  0.720   note_cc<1>
+                                                       note_cc_1
+    SLICE_X42Y40.G2      net (fanout=1)        0.634   note_cc<1>
+    SLICE_X42Y40.COUT    Topcyg                1.096   note_player_0/note_pitch_partial_sub0000<0>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_lut<1>_INV_0
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<1>
+    SLICE_X42Y41.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<1>
+    SLICE_X42Y41.COUT    Tbyp                  0.120   note_player_0/note_pitch_partial_sub0000<2>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<2>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<3>
+    SLICE_X42Y42.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<3>
+    SLICE_X42Y42.COUT    Tbyp                  0.120   note_player_0/note_pitch_partial_sub0000<4>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<4>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<5>
+    SLICE_X42Y43.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<5>
+    SLICE_X42Y43.COUT    Tbyp                  0.120   note_player_0/note_pitch_partial_sub0000<6>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<6>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<7>
+    SLICE_X42Y44.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<7>
+    SLICE_X42Y44.COUT    Tbyp                  0.120   note_player_0/note_pitch_partial_sub0000<8>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<8>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<9>
+    SLICE_X42Y45.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<9>
+    SLICE_X42Y45.COUT    Tbyp                  0.120   note_player_0/note_pitch_partial_sub0000<10>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<10>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<11>
+    SLICE_X42Y46.CIN     net (fanout=1)        0.000   note_player_0/Msub_note_pitch_partial_sub0000_cy<11>
+    SLICE_X42Y46.Y       Tciny                 0.923   note_player_0/note_pitch_partial_sub0000<12>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_cy<12>
+                                                       note_player_0/Msub_note_pitch_partial_sub0000_xor<13>
+    SLICE_X40Y46.G2      net (fanout=1)        0.603   note_player_0/note_pitch_partial_sub0000<13>
+    SLICE_X40Y46.COUT    Topcyg                1.096   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<13>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_lut<13>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<13>
+    SLICE_X40Y47.CIN     net (fanout=1)        0.000   note_player_0/Mcompar_square_wave_cmp_ge0000_cy<13>
+    SLICE_X40Y47.COUT    Tbyp                  0.120   note_player_0/square_wave_cmp_ge0000
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<14>
+                                                       note_player_0/Mcompar_square_wave_cmp_ge0000_cy<15>
+    SLICE_X41Y46.G1      net (fanout=2)        0.813   note_player_0/square_wave_cmp_ge0000
+    SLICE_X41Y46.Y       Tilo                  0.551   note_player_0/note_pitch_partial_or0000
+                                                       note_player_0/note_pitch_partial_or00001
+    SLICE_X41Y39.SR      net (fanout=8)        0.862   note_player_0/note_pitch_partial_or0000
+    SLICE_X41Y39.CLK     Tsrck                 1.026   note_player_0/note_pitch_partial<2>
+                                                       note_player_0/note_pitch_partial_2
+    -------------------------------------------------  ---------------------------
+    Total                                      9.044ns (6.132ns logic, 2.912ns route)
+                                                       (67.8% logic, 32.2% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: ts_clk = PERIOD TIMEGRP "tnm_clk" 25 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point second_pulse (SLICE_X54Y11.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.891ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               second_pulse (FF)
+  Destination:          second_pulse (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.891ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 40.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: second_pulse to second_pulse
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X54Y11.YQ      Tcko                  0.576   second_pulse
+                                                       second_pulse
+    SLICE_X54Y11.BY      net (fanout=2)        0.552   second_pulse
+    SLICE_X54Y11.CLK     Tckdi       (-Th)     0.237   second_pulse
+                                                       second_pulse
+    -------------------------------------------------  ---------------------------
+    Total                                      0.891ns (0.339ns logic, 0.552ns route)
+                                                       (38.0% logic, 62.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point note_player_0/square_wave (SLICE_X40Y56.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.891ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               note_player_0/square_wave (FF)
+  Destination:          note_player_0/square_wave (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.891ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 40.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: note_player_0/square_wave to note_player_0/square_wave
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X40Y56.YQ      Tcko                  0.576   note_player_0/square_wave
+                                                       note_player_0/square_wave
+    SLICE_X40Y56.BY      net (fanout=2)        0.552   note_player_0/square_wave
+    SLICE_X40Y56.CLK     Tckdi       (-Th)     0.237   note_player_0/square_wave
+                                                       note_player_0/square_wave
+    -------------------------------------------------  ---------------------------
+    Total                                      0.891ns (0.339ns logic, 0.552ns route)
+                                                       (38.0% logic, 62.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point music_index_3 (SLICE_X45Y40.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.954ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               music_index_3 (FF)
+  Destination:          music_index_3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.954ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 40.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: music_index_3 to music_index_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X45Y40.XQ      Tcko                  0.576   music_index<3>
+                                                       music_index_3
+    SLICE_X45Y40.F4      net (fanout=3)        0.317   music_index<3>
+    SLICE_X45Y40.CLK     Tckf        (-Th)    -0.061   music_index<3>
+                                                       music_index_mux0001<3>
+                                                       music_index_3
+    -------------------------------------------------  ---------------------------
+    Total                                      0.954ns (0.637ns logic, 0.317ns route)
+                                                       (66.8% logic, 33.2% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: ts_clk = PERIOD TIMEGRP "tnm_clk" 25 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 38.428ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 40.000ns
+  Low pulse: 20.000ns
+  Low pulse limit: 0.786ns (Tcl)
+  Physical resource: note_length_counter_0/note_length_partial<0>/CLK
+  Logical resource: note_length_counter_0/note_length_partial_0/CK
+  Location pin: SLICE_X54Y16.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 38.428ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 40.000ns
+  High pulse: 20.000ns
+  High pulse limit: 0.786ns (Tch)
+  Physical resource: note_length_counter_0/note_length_partial<0>/CLK
+  Logical resource: note_length_counter_0/note_length_partial_0/CK
+  Location pin: SLICE_X54Y16.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 38.428ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 40.000ns
+  Low pulse: 20.000ns
+  Low pulse limit: 0.786ns (Tcl)
+  Physical resource: note_length_counter_0/note_length_partial<0>/CLK
+  Logical resource: note_length_counter_0/note_length_partial_1/CK
+  Location pin: SLICE_X54Y16.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    9.051|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 5524 paths, 0 nets, and 370 connections
+
+Design statistics:
+   Minimum period:   9.051ns{1}   (Maximum frequency: 110.485MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Fri Sep 01 19:08:33 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 165 MB
+
+
+

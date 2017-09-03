@@ -1,0 +1,499 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: sine_wave_notes.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "sine_wave_notes.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "sine_wave_notes"
+Output Format                      : NGC
+Target Device                      : xc3s400-4-ft256
+
+---- Source Options
+Top Module Name                    : sine_wave_notes
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/sine_wave_notes/constants.vhd" in Library work.
+Compiling vhdl file "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/sine_wave_notes/note_length_counter.vhd" in Library work.
+Architecture behavioral of Entity note_length_counter is up to date.
+Compiling vhdl file "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/sine_wave_notes/note_player.vhd" in Library work.
+Architecture behavioral of Entity note_player is up to date.
+Compiling vhdl file "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/sine_wave_notes/sine_wave_notes.vhd" in Library work.
+Entity <sine_wave_notes> compiled.
+Entity <sine_wave_notes> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <sine_wave_notes> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <note_length_counter> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <note_player> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <sine_wave_notes> in library <work> (Architecture <behavioral>).
+WARNING:Xst:790 - "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/sine_wave_notes/sine_wave_notes.vhd" line 109: Index value(s) does not match array range, simulation mismatch.
+Entity <sine_wave_notes> analyzed. Unit <sine_wave_notes> generated.
+
+Analyzing Entity <note_length_counter> in library <work> (Architecture <behavioral>).
+Entity <note_length_counter> analyzed. Unit <note_length_counter> generated.
+
+Analyzing Entity <note_player> in library <work> (Architecture <behavioral>).
+Entity <note_player> analyzed. Unit <note_player> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <note_length_counter>.
+    Related source file is "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/sine_wave_notes/note_length_counter.vhd".
+    Found 1-bit register for signal <is_new_note>.
+    Found 28-bit comparator less for signal <is_new_note$cmp_lt0000> created at line 33.
+    Found 28-bit subtractor for signal <is_new_note$sub0000> created at line 33.
+    Found 7x21-bit multiplier for signal <note_length_cc>.
+    Found 28-bit up counter for signal <note_length_partial>.
+    Found 28-bit comparator greatequal for signal <note_length_partial$cmp_ge0000> created at line 33.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
+	inferred   2 Comparator(s).
+Unit <note_length_counter> synthesized.
+
+
+Synthesizing Unit <note_player>.
+    Related source file is "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/sine_wave_notes/note_player.vhd".
+    Found 16-bit up counter for signal <note_pitch_partial>.
+    Found 16-bit subtractor for signal <note_pitch_partial$sub0000> created at line 31.
+    Found 1-bit register for signal <square_wave>.
+    Found 16-bit comparator greatequal for signal <square_wave$cmp_ge0000> created at line 31.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <note_player> synthesized.
+
+
+Synthesizing Unit <sine_wave_notes>.
+    Related source file is "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/sine_wave_notes/sine_wave_notes.vhd".
+WARNING:Xst:647 - Input <sw<7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Using one-hot encoding for signal <$mux0000>.
+    Found 14x12-bit ROM for signal <$mux0000> created at line 109.
+    Found 4-bit register for signal <music_index>.
+    Found 4-bit adder for signal <music_index$addsub0000> created at line 103.
+    Found 16-bit register for signal <note_cc>.
+    Found 1-bit register for signal <second_pulse>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  21 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <sine_wave_notes> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 14x12-bit ROM                                         : 1
+# Multipliers                                          : 1
+ 7x21-bit multiplier                                   : 1
+# Adders/Subtractors                                   : 3
+ 16-bit subtractor                                     : 1
+ 28-bit subtractor                                     : 1
+ 4-bit adder                                           : 1
+# Counters                                             : 2
+ 16-bit up counter                                     : 1
+ 28-bit up counter                                     : 1
+# Registers                                            : 5
+ 1-bit register                                        : 3
+ 16-bit register                                       : 1
+ 4-bit register                                        : 1
+# Comparators                                          : 3
+ 16-bit comparator greatequal                          : 1
+ 28-bit comparator greatequal                          : 1
+ 28-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 14x12-bit ROM                                         : 1
+# Multipliers                                          : 1
+ 7x21-bit multiplier                                   : 1
+# Adders/Subtractors                                   : 3
+ 16-bit subtractor                                     : 1
+ 28-bit subtractor                                     : 1
+ 4-bit adder                                           : 1
+# Counters                                             : 2
+ 16-bit up counter                                     : 1
+ 28-bit up counter                                     : 1
+# Registers                                            : 23
+ Flip-Flops                                            : 23
+# Comparators                                          : 3
+ 16-bit comparator greatequal                          : 1
+ 28-bit comparator greatequal                          : 1
+ 28-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <note_cc_4> in Unit <sine_wave_notes> is equivalent to the following FF/Latch, which will be removed : <note_cc_14> 
+
+Optimizing unit <sine_wave_notes> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block sine_wave_notes, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 66
+ Flip-Flops                                            : 66
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : sine_wave_notes.ngr
+Top Level Output File Name         : sine_wave_notes
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 22
+
+Cell Usage :
+# BELS                             : 427
+#      GND                         : 1
+#      INV                         : 47
+#      LUT1                        : 47
+#      LUT2                        : 57
+#      LUT2_D                      : 1
+#      LUT2_L                      : 1
+#      LUT3                        : 6
+#      LUT3_L                      : 1
+#      LUT4                        : 22
+#      LUT4_L                      : 2
+#      MUXCY                       : 138
+#      MUXF5                       : 4
+#      VCC                         : 1
+#      XORCY                       : 99
+# FlipFlops/Latches                : 66
+#      FDE                         : 15
+#      FDR                         : 49
+#      FDRE                        : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 20
+#      IBUF                        : 11
+#      OBUF                        : 9
+# MULTs                            : 2
+#      MULT18X18                   : 2
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400ft256-4 
+
+ Number of Slices:                      108  out of   3584     3%  
+ Number of Slice Flip Flops:             66  out of   7168     0%  
+ Number of 4 input LUTs:                184  out of   7168     2%  
+ Number of IOs:                          22
+ Number of bonded IOBs:                  21  out of    173    12%  
+ Number of MULT18X18s:                    2  out of     16    12%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 66    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 10.861ns (Maximum Frequency: 92.073MHz)
+   Minimum input arrival time before clock: 18.727ns
+   Maximum output required time after clock: 7.241ns
+   Maximum combinational path delay: 7.609ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 10.861ns (frequency: 92.073MHz)
+  Total number of paths / destination ports: 5524 / 112
+-------------------------------------------------------------------------
+Delay:               10.861ns (Levels of Logic = 20)
+  Source:            note_cc_0 (FF)
+  Destination:       note_player_0/note_pitch_partial_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: note_cc_0 to note_player_0/note_pitch_partial_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.720   1.140  note_cc_0 (note_cc_0)
+     LUT1:I0->O            1   0.551   0.000  note_player_0/Msub_note_pitch_partial_sub0000_cy<0>_rt (note_player_0/Msub_note_pitch_partial_sub0000_cy<0>_rt)
+     MUXCY:S->O            1   0.500   0.000  note_player_0/Msub_note_pitch_partial_sub0000_cy<0> (note_player_0/Msub_note_pitch_partial_sub0000_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  note_player_0/Msub_note_pitch_partial_sub0000_cy<1> (note_player_0/Msub_note_pitch_partial_sub0000_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  note_player_0/Msub_note_pitch_partial_sub0000_cy<2> (note_player_0/Msub_note_pitch_partial_sub0000_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  note_player_0/Msub_note_pitch_partial_sub0000_cy<3> (note_player_0/Msub_note_pitch_partial_sub0000_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  note_player_0/Msub_note_pitch_partial_sub0000_cy<4> (note_player_0/Msub_note_pitch_partial_sub0000_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  note_player_0/Msub_note_pitch_partial_sub0000_cy<5> (note_player_0/Msub_note_pitch_partial_sub0000_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  note_player_0/Msub_note_pitch_partial_sub0000_cy<6> (note_player_0/Msub_note_pitch_partial_sub0000_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  note_player_0/Msub_note_pitch_partial_sub0000_cy<7> (note_player_0/Msub_note_pitch_partial_sub0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  note_player_0/Msub_note_pitch_partial_sub0000_cy<8> (note_player_0/Msub_note_pitch_partial_sub0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  note_player_0/Msub_note_pitch_partial_sub0000_cy<9> (note_player_0/Msub_note_pitch_partial_sub0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  note_player_0/Msub_note_pitch_partial_sub0000_cy<10> (note_player_0/Msub_note_pitch_partial_sub0000_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  note_player_0/Msub_note_pitch_partial_sub0000_cy<11> (note_player_0/Msub_note_pitch_partial_sub0000_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  note_player_0/Msub_note_pitch_partial_sub0000_cy<12> (note_player_0/Msub_note_pitch_partial_sub0000_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  note_player_0/Msub_note_pitch_partial_sub0000_cy<13> (note_player_0/Msub_note_pitch_partial_sub0000_cy<13>)
+     MUXCY:CI->O           0   0.064   0.000  note_player_0/Msub_note_pitch_partial_sub0000_cy<14> (note_player_0/Msub_note_pitch_partial_sub0000_cy<14>)
+     XORCY:CI->O           1   0.904   0.996  note_player_0/Msub_note_pitch_partial_sub0000_xor<15> (note_player_0/note_pitch_partial_sub0000<15>)
+     LUT2:I1->O            1   0.551   0.000  note_player_0/Mcompar_square_wave_cmp_ge0000_lut<15> (note_player_0/Mcompar_square_wave_cmp_ge0000_lut<15>)
+     MUXCY:S->O            2   0.717   1.072  note_player_0/Mcompar_square_wave_cmp_ge0000_cy<15> (note_player_0/square_wave_cmp_ge0000)
+     LUT2:I1->O           16   0.551   1.237  note_player_0/note_pitch_partial_or00001 (note_player_0/note_pitch_partial_or0000)
+     FDR:R                     1.026          note_player_0/note_pitch_partial_0
+    ----------------------------------------
+    Total                     10.861ns (6.416ns logic, 4.445ns route)
+                                       (59.1% logic, 40.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 177691 / 66
+-------------------------------------------------------------------------
+Offset:              18.727ns (Levels of Logic = 13)
+  Source:            sw<6> (PAD)
+  Destination:       note_length_counter_0/note_length_partial_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: sw<6> to note_length_counter_0/note_length_partial_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.821   0.877  sw_6_IBUF (sw_6_IBUF)
+     MULT18X18:A6->P23     1   4.285   1.140  note_length_counter_0/Mmult_note_length_cc_submult_0 (note_length_counter_0/Mmult_note_length_cc_submult_0_23)
+     LUT2:I0->O            1   0.551   0.000  note_length_counter_0/Mmult_note_length_cc_Madd_lut<23> (note_length_counter_0/Mmult_note_length_cc_Madd_lut<23>)
+     MUXCY:S->O            1   0.500   0.000  note_length_counter_0/Mmult_note_length_cc_Madd_cy<23> (note_length_counter_0/Mmult_note_length_cc_Madd_cy<23>)
+     MUXCY:CI->O           1   0.064   0.000  note_length_counter_0/Mmult_note_length_cc_Madd_cy<24> (note_length_counter_0/Mmult_note_length_cc_Madd_cy<24>)
+     MUXCY:CI->O           1   0.064   0.000  note_length_counter_0/Mmult_note_length_cc_Madd_cy<25> (note_length_counter_0/Mmult_note_length_cc_Madd_cy<25>)
+     XORCY:CI->O           1   0.904   0.801  note_length_counter_0/Mmult_note_length_cc_Madd_xor<26> (note_length_counter_0/note_length_cc<26>)
+     INV:I->O              1   0.551   0.000  note_length_counter_0/Msub_is_new_note_sub0000_lut<26>_INV_0 (note_length_counter_0/Msub_is_new_note_sub0000_lut<26>)
+     MUXCY:S->O            0   0.500   0.000  note_length_counter_0/Msub_is_new_note_sub0000_cy<26> (note_length_counter_0/Msub_is_new_note_sub0000_cy<26>)
+     XORCY:CI->O           1   0.904   0.996  note_length_counter_0/Msub_is_new_note_sub0000_xor<27> (note_length_counter_0/is_new_note_sub0000<27>)
+     LUT2:I1->O            1   0.551   0.000  note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_lut<27> (note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_lut<27>)
+     MUXCY:S->O            2   0.739   1.072  note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<27> (note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<27>)
+     LUT2:I1->O           28   0.551   1.830  note_length_counter_0/note_length_partial_or00001 (note_length_counter_0/note_length_partial_or0000)
+     FDR:R                     1.026          note_length_counter_0/note_length_partial_0
+    ----------------------------------------
+    Total                     18.727ns (12.011ns logic, 6.716ns route)
+                                       (64.1% logic, 35.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              7.241ns (Levels of Logic = 1)
+  Source:            note_player_0/square_wave (FF)
+  Destination:       s (PAD)
+  Source Clock:      clk rising
+
+  Data Path: note_player_0/square_wave to s
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.720   0.877  note_player_0/square_wave (note_player_0/square_wave)
+     OBUF:I->O                 5.644          s_OBUF (s)
+    ----------------------------------------
+    Total                      7.241ns (6.364ns logic, 0.877ns route)
+                                       (87.9% logic, 12.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Delay:               7.609ns (Levels of Logic = 2)
+  Source:            btn<0> (PAD)
+  Destination:       led<0> (PAD)
+
+  Data Path: btn<0> to led<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            11   0.821   1.144  btn_0_IBUF (led_0_OBUF)
+     OBUF:I->O                 5.644          led_0_OBUF (led<0>)
+    ----------------------------------------
+    Total                      7.609ns (6.465ns logic, 1.144ns route)
+                                       (85.0% logic, 15.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.17 secs
+ 
+--> 
+
+Total memory usage is 309248 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

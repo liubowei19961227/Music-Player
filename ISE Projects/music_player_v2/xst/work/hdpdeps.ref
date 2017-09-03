@@ -1,0 +1,28 @@
+V3 13
+FL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/sine_wave_notes/constants.vhd" 2017/09/01.15:17:14 P.20131013
+PH work/constants 1504256073 \
+      FL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/sine_wave_notes/constants.vhd"
+FL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/sine_wave_notes/note_length_counter.vhd" 2017/09/01.18:30:08 P.20131013
+EN work/note_length_counter 1504256074 \
+      FL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/sine_wave_notes/note_length_counter.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PH work/constants 1504256073
+AR work/note_length_counter/Behavioral 1504256075 \
+      FL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/sine_wave_notes/note_length_counter.vhd" \
+      EN work/note_length_counter 1504256074
+FL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/sine_wave_notes/note_player.vhd" 2017/09/01.18:26:55 P.20131013
+EN work/note_player 1504256076 \
+      FL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/sine_wave_notes/note_player.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PH work/constants 1504256073
+AR work/note_player/Behavioral 1504256077 \
+      FL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/sine_wave_notes/note_player.vhd" \
+      EN work/note_player 1504256076
+FL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/sine_wave_notes/sine_wave_notes.vhd" 2017/09/01.18:54:29 P.20131013
+EN work/sine_wave_notes 1504256078 \
+      FL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/sine_wave_notes/sine_wave_notes.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PH work/constants 1504256073
+AR work/sine_wave_notes/behavioral 1504256079 \
+      FL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/sine_wave_notes/sine_wave_notes.vhd" \
+      EN work/sine_wave_notes 1504256078 CP note_length_counter CP note_player

@@ -52,7 +52,6 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="sine_wave_notes.ut" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="sine_wave_notes.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="sine_wave_notes.xst"/>
-    <file xil_pn:fileType="FILE_HTML" xil_pn:name="sine_wave_notes_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="sine_wave_notes_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="sine_wave_notes_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="sine_wave_notes_map.mrp" xil_pn:subbranch="Map"/>
@@ -63,42 +62,10 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="sine_wave_notes_pad.csv" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="sine_wave_notes_pad.txt" xil_pn:subbranch="Par"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="sine_wave_notes_par.xrpt"/>
-    <file xil_pn:fileType="FILE_HTML" xil_pn:name="sine_wave_notes_summary.html"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="sine_wave_notes_summary.xml"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="sine_wave_notes_usage.xml"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="sine_wave_notes_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="sine_wave_notes_xst.xrpt"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="triangle_wave_notes.bgn" xil_pn:subbranch="FPGAConfiguration"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="triangle_wave_notes.bit" xil_pn:subbranch="FPGAConfiguration"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="triangle_wave_notes.bld"/>
-    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="triangle_wave_notes.cmd_log"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="triangle_wave_notes.drc" xil_pn:subbranch="FPGAConfiguration"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="triangle_wave_notes.lso"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="triangle_wave_notes.ncd" xil_pn:subbranch="Par"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="triangle_wave_notes.ngc"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="triangle_wave_notes.ngd"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="triangle_wave_notes.ngr"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="triangle_wave_notes.par" xil_pn:subbranch="Par"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="triangle_wave_notes.pcf" xil_pn:subbranch="Map"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="triangle_wave_notes.prj"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="triangle_wave_notes.stx"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="triangle_wave_notes.syr"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="triangle_wave_notes.twr" xil_pn:subbranch="Par"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="triangle_wave_notes.twx" xil_pn:subbranch="Par"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="triangle_wave_notes.unroutes" xil_pn:subbranch="Par"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="triangle_wave_notes.ut" xil_pn:subbranch="FPGAConfiguration"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="triangle_wave_notes.xst"/>
-    <file xil_pn:fileType="FILE_HTML" xil_pn:name="triangle_wave_notes_envsettings.html"/>
-    <file xil_pn:fileType="FILE_NCD" xil_pn:name="triangle_wave_notes_guide.ncd" xil_pn:origination="imported"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="triangle_wave_notes_map.map" xil_pn:subbranch="Map"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="triangle_wave_notes_map.mrp" xil_pn:subbranch="Map"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="triangle_wave_notes_map.ncd" xil_pn:subbranch="Map"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="triangle_wave_notes_map.ngm" xil_pn:subbranch="Map"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="triangle_wave_notes_pad.csv" xil_pn:subbranch="Par"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="triangle_wave_notes_pad.txt" xil_pn:subbranch="Par"/>
-    <file xil_pn:fileType="FILE_HTML" xil_pn:name="triangle_wave_notes_summary.html"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="triangle_wave_notes_vhdl.prj"/>
-    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="triangle_wave_notes_xst.xrpt"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
@@ -107,41 +74,43 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1503207880" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1503207880">
+    <transform xil_pn:end_ts="1504252394" xil_pn:name="TRANEXT_compLibraries_FPGA" xil_pn:prop_ck="1321705353062746803" xil_pn:start_ts="1504252394">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1504241919" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1504241919">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1503208899" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-6265835127238177052" xil_pn:start_ts="1503208899">
+    <transform xil_pn:end_ts="1504242314" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-6774498447339366652" xil_pn:start_ts="1504242314">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1503208899" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="895511890624514846" xil_pn:start_ts="1503208899">
+    <transform xil_pn:end_ts="1504242314" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-8700591395140321474" xil_pn:start_ts="1504242314">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1503207881" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1503207880">
+    <transform xil_pn:end_ts="1504241919" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1504241919">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1503208899" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="5438354659749857580" xil_pn:start_ts="1503208899">
+    <transform xil_pn:end_ts="1504242314" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="4929691339648667980" xil_pn:start_ts="1504242314">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1503207881" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-6388418249807140552" xil_pn:start_ts="1503207881">
+    <transform xil_pn:end_ts="1504241919" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-6388418249807140552" xil_pn:start_ts="1504241919">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1503208899" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-6510216869249886232" xil_pn:start_ts="1503208899">
+    <transform xil_pn:end_ts="1504242314" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="2340423918694829064" xil_pn:start_ts="1504242314">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1503231872" xil_pn:in_ck="-6426286026153579015" xil_pn:name="TRANEXT_xstsynthesize_spartan3" xil_pn:prop_ck="6426715762035193192" xil_pn:start_ts="1503231845">
+    <transform xil_pn:end_ts="1504256080" xil_pn:in_ck="6093350374612483614" xil_pn:name="TRANEXT_xstsynthesize_spartan3" xil_pn:prop_ck="-173116130991442552" xil_pn:start_ts="1504256070">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="sine_wave_notes.lso"/>
@@ -156,30 +125,24 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1503227323" xil_pn:in_ck="159169260450819" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-5692837457719394335" xil_pn:start_ts="1503227323">
+    <transform xil_pn:end_ts="1504256895" xil_pn:in_ck="159169260450819" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-5691352290218531839" xil_pn:start_ts="1504256895">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
     </transform>
-    <transform xil_pn:end_ts="1503231879" xil_pn:in_ck="3017284485946616776" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-3110602565138168186" xil_pn:start_ts="1503231872">
+    <transform xil_pn:end_ts="1504256901" xil_pn:in_ck="-4792083000776815886" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-5407204212352979290" xil_pn:start_ts="1504256895">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="sine_wave_notes.bld"/>
       <outfile xil_pn:name="sine_wave_notes.ngd"/>
       <outfile xil_pn:name="sine_wave_notes_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1503231883" xil_pn:in_ck="4289088236351824554" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="6918683465102363066" xil_pn:start_ts="1503231879">
+    <transform xil_pn:end_ts="1504256905" xil_pn:in_ck="-4792083000776815885" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="6918683465102363066" xil_pn:start_ts="1504256901">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="sine_wave_notes.pcf"/>
       <outfile xil_pn:name="sine_wave_notes_map.map"/>
@@ -190,12 +153,10 @@
       <outfile xil_pn:name="sine_wave_notes_summary.xml"/>
       <outfile xil_pn:name="sine_wave_notes_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1503231963" xil_pn:in_ck="2293554180837697468" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="8251173951899154272" xil_pn:start_ts="1503231883">
+    <transform xil_pn:end_ts="1504256914" xil_pn:in_ck="4156378135765031820" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="8251173951899154272" xil_pn:start_ts="1504256905">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
       <outfile xil_pn:name="sine_wave_notes.ncd"/>
       <outfile xil_pn:name="sine_wave_notes.pad"/>
@@ -207,10 +168,9 @@
       <outfile xil_pn:name="sine_wave_notes_pad.txt"/>
       <outfile xil_pn:name="sine_wave_notes_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1503231973" xil_pn:in_ck="-6640595504038840737" xil_pn:name="TRANEXT_bitFile_spartan3" xil_pn:prop_ck="-2672950586390118423" xil_pn:start_ts="1503231963">
+    <transform xil_pn:end_ts="1504256922" xil_pn:in_ck="-6426286026153587892" xil_pn:name="TRANEXT_bitFile_spartan3" xil_pn:prop_ck="-2672950586390118423" xil_pn:start_ts="1504256914">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="sine_wave_notes.bgn"/>
       <outfile xil_pn:name="sine_wave_notes.bit"/>
@@ -220,12 +180,15 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1503231963" xil_pn:in_ck="2431689846250362402" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1503231959">
+    <transform xil_pn:end_ts="1504254149" xil_pn:in_ck="-6426286026153600746" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="-6745644827150672321" xil_pn:start_ts="1504253674">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputChanged"/>
+    </transform>
+    <transform xil_pn:end_ts="1504256914" xil_pn:in_ck="-4792083000776816017" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1504256911">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
       <outfile xil_pn:name="sine_wave_notes.twr"/>
       <outfile xil_pn:name="sine_wave_notes.twx"/>
