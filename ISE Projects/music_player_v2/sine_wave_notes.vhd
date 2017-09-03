@@ -21,9 +21,12 @@ architecture behavioral of sine_wave_notes is
 		port (
 			rst : in std_logic;
 			clk : in std_logic;
-			note_length_in_twelfths : in natural range 1 to 96;
+			is_staccato : in std_logic;
+			is_slurred : in std_logic;
+			note_length_in_twelfths : in natural range min_note_length_in_twelfths to max_note_length_in_twelfths;
 			twelfth_cc : in natural range min_twelfth_cc to max_twelfth_cc;
-			is_new_note : out  std_logic
+			is_mute : out std_logic;
+			is_new_note : out std_logic
 		);
 	end component;
 	
@@ -36,42 +39,26 @@ architecture behavioral of sine_wave_notes is
 		);
 	end component;
 
-	type note_cc_array_type is array (0 to 11) of natural range min_note_cc to max_note_cc;
-	type music_array_type is array (0 to 13) of natural range 0 to 11;
-
-	constant note_c : natural := 0;
-	constant note_cs : natural := 1;
-	constant note_d : natural := 2;
-	constant note_ds : natural := 3;
-	constant note_e : natural := 4;
-	constant note_f : natural := 5;
-	constant note_fs : natural := 6;
-	constant note_g : natural := 7;
-	constant note_gs : natural := 8;
-	constant note_a : natural := 9;
-	constant note_as : natural := 10;
-	constant note_b : natural := 11;
-
-	constant note_cc_array : note_cc_array_type := (47778, 45097, 42566, 40177, 37922, 35788, 33784, 31888, 30098, 28409, 26815, 25310);
-
-	constant music_array : music_array_type := (note_c, note_d, note_e, note_f, note_g, note_a, note_b, note_c, note_b, note_a, note_g, note_f, note_e, note_d);
-	
 	signal note_cc : natural range min_note_cc to max_note_cc;
 	
-	signal sw_value : integer range 1 to 96;
+	signal note_length_in_twelfths : natural range min_note_length_in_twelfths to max_note_length_in_twelfths ;
+	signal twelfth_cc : natural range min_twelfth_cc to max_twelfth_cc;
 	
 	signal rst : std_logic;
 	signal is_new_note : std_logic;
 	signal note_pitch_pulse: std_logic;
 	signal second_pulse : std_logic;
+	signal is_mute : std_logic;
 
 begin
-
 	note_length_counter_0 : note_length_counter port map (
 		rst => rst,
 		clk => clk,
-		note_length_in_twelfths => sw_value,
-		twelfth_cc => max_twelfth_cc,
+		is_staccato => sw(7),
+		is_slurred => sw(6),
+		note_length_in_twelfths => note_length_in_twelfths,
+		twelfth_cc => twelfth_cc,
+		is_mute => is_mute,
 		is_new_note => is_new_note
 	);
 	
@@ -85,14 +72,24 @@ begin
 	led(7) <= second_pulse;
 	led(6 downto 4) <= "111";
 	led(3 downto 0) <= btn;
-	s <= note_pitch_pulse;
-	sw_value <= to_integer(unsigned(sw));
-	
+	s <= note_pitch_pulse;	
 	rst <= btn(0);
+	
+	process (clk)
+		variable sw_value : natural range 1 to 4;
+	begin
+		sw_value := to_integer(unsigned(sw(1 downto 0))) + 1;
+--		if sw_value < 60 then
+--			sw_value := 60;
+--		elsif sw_value > 200 then
+--			sw_value := 200;
+--		end if;
+		twelfth_cc <= min_twelfth_cc * sw_value;
+	end process;
 
 	process (clk)
-		variable music_index : natural range 0 to 13;
-		variable note : natural range 0 to note_b;
+		variable music_index : natural range 0 to music_length - 1;
+		variable note : natural range 0 to num_notes - 1;
 	begin
 		if rising_edge(clk) then
 			if rst = '1' then
@@ -100,14 +97,20 @@ begin
 				second_pulse <= '0';
 			else
 				if is_new_note = '1' then
-					music_index := music_index + 1;
-					if music_index = 14 then
+					if music_index < music_length - 1 then
+						music_index := music_index + 1;
+					else
 						music_index := 0;
 					end if;
 					second_pulse <= not second_pulse;
 				end if;
 				note := music_array(music_index);
-				note_cc <= note_cc_array(note);
+				if is_mute = '1' then
+					note_cc <= 0;
+				else
+					note_cc <= note_cc_array(note) * music_octave_array(music_index);
+				end if;
+				note_length_in_twelfths <= music_length_array(music_index);
 			end if;
 		end if;
 	end process;

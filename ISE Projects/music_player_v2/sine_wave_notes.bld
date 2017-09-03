@@ -7,7 +7,7 @@ sine_wave_notes.ngc sine_wave_notes.ngd
 
 Reading NGO file "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester
 2/COMP3601 - Desgin Project A/Git Repositry/ISE
-Projects/sine_wave_notes/sine_wave_notes.ngc" ...
+Projects/music_player_v2/sine_wave_notes.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
@@ -29,10 +29,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 193000 kilobytes
+Total memory usage is 192968 kilobytes
 
 Writing NGD file "sine_wave_notes.ngd" ...
-Total REAL time to NGDBUILD completion:  3 sec
-Total CPU time to NGDBUILD completion:   3 sec
+Total REAL time to NGDBUILD completion:  4 sec
+Total CPU time to NGDBUILD completion:   4 sec
 
 Writing NGDBUILD log file "sine_wave_notes.bld"...

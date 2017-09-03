@@ -9,7 +9,7 @@ Target Device  : xc3s400
 Target Package : ft256
 Target Speed   : -4
 Mapper Version : spartan3 -- $Revision: 1.55 $
-Mapped Date    : Fri Sep 01 19:08:22 2017
+Mapped Date    : Mon Sep 04 01:20:39 2017
 
 Mapping design into LUTs...
 Running directed packing...
@@ -24,25 +24,25 @@ Design Summary:
 Number of errors:      0
 Number of warnings:    0
 Logic Utilization:
-  Number of Slice Flip Flops:            66 out of   7,168    1%
-  Number of 4 input LUTs:               134 out of   7,168    1%
+  Number of Slice Flip Flops:            76 out of   7,168    1%
+  Number of 4 input LUTs:               312 out of   7,168    4%
 Logic Distribution:
-  Number of occupied Slices:             95 out of   3,584    2%
-    Number of Slices containing only related logic:      95 out of      95 100%
-    Number of Slices containing unrelated logic:          0 out of      95   0%
+  Number of occupied Slices:            188 out of   3,584    5%
+    Number of Slices containing only related logic:     188 out of     188 100%
+    Number of Slices containing unrelated logic:          0 out of     188   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         182 out of   7,168    2%
-    Number used as logic:               134
-    Number used as a route-thru:         48
+  Total Number of 4 input LUTs:         361 out of   7,168    5%
+    Number used as logic:               312
+    Number used as a route-thru:         49
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
   Number of bonded IOBs:                 22 out of     173   12%
-  Number of MULT18X18s:                   2 out of      16   12%
+  Number of MULT18X18s:                   4 out of      16   25%
   Number of BUFGMUXs:                     1 out of       8   12%
 
-Average Fanout of Non-Clock Nets:                1.90
+Average Fanout of Non-Clock Nets:                2.56
 
 Peak Memory Usage:  280 MB
 Total REAL time to MAP completion:  1 secs 
