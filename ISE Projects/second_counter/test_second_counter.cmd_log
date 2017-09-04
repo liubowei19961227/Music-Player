@@ -1,0 +1,37 @@
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.xst" -ofn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.xst" -ofn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.xst" -ofn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.xst" -ofn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.xst" -ofn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.xst" -ofn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.xst" -ofn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/one_sec_test.ucf -p xc3s400-ft256-4 test_second_counter.ngc test_second_counter.ngd  
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.xst" -ofn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.xst" -ofn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/one_sec_test.ucf -p xc3s400-ft256-4 test_second_counter.ngc test_second_counter.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/one_sec_test.ucf -p xc3s400-ft256-4 test_second_counter.ngc test_second_counter.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o test_second_counter_map.ncd test_second_counter.ngd test_second_counter.pcf 
+par -w -intstyle ise -ol high -t 1 test_second_counter_map.ncd test_second_counter.ncd test_second_counter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml test_second_counter.twx test_second_counter.ncd -o test_second_counter.twr test_second_counter.pcf 
+bitgen -intstyle ise -f test_second_counter.ut test_second_counter.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.xst" -ofn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/one_sec_test.ucf -p xc3s400-ft256-4 test_second_counter.ngc test_second_counter.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o test_second_counter_map.ncd test_second_counter.ngd test_second_counter.pcf 
+par -w -intstyle ise -ol high -t 1 test_second_counter_map.ncd test_second_counter.ncd test_second_counter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml test_second_counter.twx test_second_counter.ncd -o test_second_counter.twr test_second_counter.pcf 
+bitgen -intstyle ise -f test_second_counter.ut test_second_counter.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.xst" -ofn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.xst" -ofn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.xst" -ofn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.xst" -ofn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/one_sec_test.ucf -p xc3s400-ft256-4 test_second_counter.ngc test_second_counter.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o test_second_counter_map.ncd test_second_counter.ngd test_second_counter.pcf 
+par -w -intstyle ise -ol high -t 1 test_second_counter_map.ncd test_second_counter.ncd test_second_counter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml test_second_counter.twx test_second_counter.ncd -o test_second_counter.twr test_second_counter.pcf 
+bitgen -intstyle ise -f test_second_counter.ut test_second_counter.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.xst" -ofn "Z:/Desktop/fpga_connection/second_counter/test_second_counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/one_sec_test.ucf -p xc3s400-ft256-4 test_second_counter.ngc test_second_counter.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o test_second_counter_map.ncd test_second_counter.ngd test_second_counter.pcf 
+par -w -intstyle ise -ol high -t 1 test_second_counter_map.ncd test_second_counter.ncd test_second_counter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml test_second_counter.twx test_second_counter.ncd -o test_second_counter.twr test_second_counter.pcf 
+bitgen -intstyle ise -f test_second_counter.ut test_second_counter.ncd 
