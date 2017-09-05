@@ -1,7 +1,7 @@
 Release 14.7 Drc P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sat Sep 02 01:34:03 2017
+Tue Sep 05 16:07:47 2017
 
 drc -z test_largenum_display.ncd test_largenum_display.pcf
 

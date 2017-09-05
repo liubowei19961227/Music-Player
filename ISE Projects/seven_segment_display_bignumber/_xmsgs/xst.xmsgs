@@ -5,6 +5,18 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/seven_seg_display</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">//vmware-host/shared folders/Desktop/seven_segment_display/seven_seg_display/seven_seg_display.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">//vmware-host/shared folders/Desktop/seven_segment_display_bignumber/seven_seg_display.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/seven_seg_display/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">//vmware-host/shared folders/Desktop/seven_segment_display/seven_seg_display/seven_seg_display.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">//vmware-host/shared folders/Desktop/seven_segment_display_bignumber/seven_seg_display.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/bin_to_dec</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">//vmware-host/shared folders/Desktop/seven_segment_display/seven_seg_display/bin_to_dec.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">//vmware-host/shared folders/Desktop/seven_segment_display_bignumber/bin_to_dec.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/bin_to_dec/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">//vmware-host/shared folders/Desktop/seven_segment_display/seven_seg_display/bin_to_dec.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">//vmware-host/shared folders/Desktop/seven_segment_display_bignumber/bin_to_dec.vhd</arg>&quot;.
+</msg>
+
 <msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 </msg>
 

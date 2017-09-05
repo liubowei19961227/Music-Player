@@ -1,8 +1,8 @@
-EN large_number_7seg NULL "//vmware-host/shared folders/Desktop/fpga_connection/seven_segment_display_bignumber/large_number_7seg.vhd" sub00/vhpl00 1504279992
-AR bin_to_dec behavioral "//vmware-host/shared folders/Desktop/seven_segment_display/seven_seg_display/bin_to_dec.vhd" sub00/vhpl03 1504279989
-EN seven_seg_display NULL "//vmware-host/shared folders/Desktop/seven_segment_display/seven_seg_display/seven_seg_display.vhd" sub00/vhpl04 1504279990
-AR test_largenum_display behavioral "//vmware-host/shared folders/Desktop/fpga_connection/seven_segment_display_bignumber/test_largenum_display.vhd" sub00/vhpl07 1504279995
-AR large_number_7seg behavioral "//vmware-host/shared folders/Desktop/fpga_connection/seven_segment_display_bignumber/large_number_7seg.vhd" sub00/vhpl01 1504279993
-EN test_largenum_display NULL "//vmware-host/shared folders/Desktop/fpga_connection/seven_segment_display_bignumber/test_largenum_display.vhd" sub00/vhpl06 1504279994
-AR seven_seg_display behavioral "//vmware-host/shared folders/Desktop/seven_segment_display/seven_seg_display/seven_seg_display.vhd" sub00/vhpl05 1504279991
-EN bin_to_dec NULL "//vmware-host/shared folders/Desktop/seven_segment_display/seven_seg_display/bin_to_dec.vhd" sub00/vhpl02 1504279988
+EN large_number_7seg NULL "//vmware-host/shared folders/Desktop/seven_segment_display_bignumber/large_number_7seg.vhd" sub00/vhpl00 1504591638
+AR bin_to_dec behavioral "//vmware-host/shared folders/Desktop/seven_segment_display_bignumber/bin_to_dec.vhd" sub00/vhpl03 1504591635
+EN seven_seg_display NULL "//vmware-host/shared folders/Desktop/seven_segment_display_bignumber/seven_seg_display.vhd" sub00/vhpl04 1504591636
+AR test_largenum_display behavioral "//vmware-host/shared folders/Desktop/seven_segment_display_bignumber/test_largenum_display.vhd" sub00/vhpl07 1504591641
+AR large_number_7seg behavioral "//vmware-host/shared folders/Desktop/seven_segment_display_bignumber/large_number_7seg.vhd" sub00/vhpl01 1504591639
+EN test_largenum_display NULL "//vmware-host/shared folders/Desktop/seven_segment_display_bignumber/test_largenum_display.vhd" sub00/vhpl06 1504591640
+AR seven_seg_display behavioral "//vmware-host/shared folders/Desktop/seven_segment_display_bignumber/seven_seg_display.vhd" sub00/vhpl05 1504591637
+EN bin_to_dec NULL "//vmware-host/shared folders/Desktop/seven_segment_display_bignumber/bin_to_dec.vhd" sub00/vhpl02 1504591634

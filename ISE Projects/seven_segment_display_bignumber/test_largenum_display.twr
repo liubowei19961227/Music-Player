@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 4 -n
 3 -fastpaths -xml test_largenum_display.twx test_largenum_display.ncd -o
-test_largenum_display.twr test_largenum_display.pcf
+test_largenum_display.twr test_largenum_display.pcf -ucf large_7seg.ucf
 
 Design file:              test_largenum_display.ncd
 Physical constraint file: test_largenum_display.pcf
@@ -129,7 +129,7 @@ sw<7>          |hex<6>         |   33.540|
 ---------------+---------------+---------+
 
 
-Analysis completed Sat Sep 02 01:33:57 2017 
+Analysis completed Tue Sep 05 16:07:44 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:
