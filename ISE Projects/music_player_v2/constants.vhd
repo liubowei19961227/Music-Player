@@ -11,12 +11,12 @@ Package constants is
 	constant max_note_length : natural := max_twelfth_cc * max_note_length_in_twelfths;	
 	
 	constant num_notes : natural := 13;
-	constant music_length : natural := 15;
+	constant music_length : natural := 64;
 	
-	type note_cc_array_type is array (0 to num_notes - 1) of natural range min_note_cc to 11945;
-	type music_array_type is array (0 to music_length - 1) of natural range 0 to num_notes - 1;
-	type music_length_array_type is array (0 to music_length - 1) of natural range min_note_length_in_twelfths to max_note_length_in_twelfths;
-	type music_octave_array_type is array (0 to music_length- 1) of natural range 0 to 8;
+	type note_cc_array_type is array (0 to 15) of natural range min_note_cc to 11945;
+	type music_array_type is array (0 to 63) of natural range 0 to num_notes - 1;
+	type music_length_array_type is array (0 to 63) of natural range min_note_length_in_twelfths to max_note_length_in_twelfths;
+	type music_octave_array_type is array (0 to 63) of natural range 0 to 8;
 
 	constant note_c : natural := 0;
 	constant note_cs : natural := 1;
@@ -33,13 +33,13 @@ Package constants is
 	constant rest : natural := 12;
 
 --  pokemon theme
-	constant note_cc_array : note_cc_array_type := (11945, 11274, 10641, 10044, 9480, 8947, 8446, 7972, 7525, 7102, 6704, 6327, 0);
+	constant note_cc_array : note_cc_array_type := (11945, 11274, 10641, 10044, 9480, 8947, 8446, 7972, 7525, 7102, 6704, 6327, 0, 0, 0, 0);
 
-	constant music_array : music_array_type := (note_e, note_e, note_e, note_e, note_e, note_d, note_b, note_a, note_a, note_e, note_e, note_d, note_c, note_d, rest);
+	constant music_array : music_array_type := (rest, note_e, note_e, note_e, note_e, note_e, note_d, note_b, note_a, note_a, note_e, note_e, note_d, note_c, note_d, rest, rest, note_c, note_f, note_f, note_f, note_e, note_d, note_c, note_c, note_e, note_e, note_d, note_c, note_e, rest, note_e, note_e, note_e, note_e, note_e, note_d, note_b, note_a, note_e, note_e, note_d, note_c, note_d, rest, rest, note_f, note_f, note_f, note_f, note_f, note_e, note_d, note_c, note_c, note_e, note_e, note_e, note_c, note_e, rest, note_e, note_g, note_a);
 	
-	constant music_length_array : music_length_array_type := (6, 6, 6, 18, 6, 12, 6, 24, 6, 12, 12, 6, 6, 12, 96);
+	constant music_length_array : music_length_array_type := (6, 6, 6, 6, 18, 6, 12, 6, 24, 6, 12, 12, 6, 6, 12, 48, 6, 6, 12, 12, 6, 12, 12, 24, 6, 12, 6, 12, 6, 60, 12, 6, 6, 6, 12, 6, 12, 6, 30, 6, 18, 12, 6, 30, 36, 6, 6, 6, 6, 18, 6, 12, 6, 24, 6, 12, 6, 12, 6, 36, 6, 6, 6, 6);
 	
-	constant music_octave_array : music_octave_array_type := (4, 4, 4, 4, 4, 4, 8, 8, 8, 4, 4, 4, 4, 4, 4);
+	constant music_octave_array : music_octave_array_type := (4, 4, 4, 4, 4, 4, 4, 8, 8, 8, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 8, 8, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4);
 	
 -- C major scale
 --	constant note_cc_array : note_cc_array_type := (11945, 11274, 10641, 10044, 9480, 8947, 8446, 7972, 7525, 7102, 6704, 6327);

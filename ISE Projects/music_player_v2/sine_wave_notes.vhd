@@ -17,28 +17,6 @@ end sine_wave_notes;
 
 architecture behavioral of sine_wave_notes is
 
-	component note_length_counter is
-		port (
-			rst : in std_logic;
-			clk : in std_logic;
-			is_staccato : in std_logic;
-			is_slurred : in std_logic;
-			note_length_in_twelfths : in natural range min_note_length_in_twelfths to max_note_length_in_twelfths;
-			twelfth_cc : in natural range min_twelfth_cc to max_twelfth_cc;
-			is_mute : out std_logic;
-			is_new_note : out std_logic
-		);
-	end component;
-	
-	component note_player is
-		port ( 	
-			rst : in std_logic;
-			clk : in std_logic;
-			note_pitch_cc : in natural range min_note_cc to max_note_cc;
-			note_pitch_pulse : out std_logic
-		);
-	end component;
-
 	signal note_cc : natural range min_note_cc to max_note_cc;
 	
 	signal note_length_in_twelfths : natural range min_note_length_in_twelfths to max_note_length_in_twelfths ;
@@ -51,7 +29,7 @@ architecture behavioral of sine_wave_notes is
 	signal is_mute : std_logic;
 
 begin
-	note_length_counter_0 : note_length_counter port map (
+	x_note_length_counter : entity work.note_length_counter port map (
 		rst => rst,
 		clk => clk,
 		is_staccato => sw(7),
@@ -62,7 +40,7 @@ begin
 		is_new_note => is_new_note
 	);
 	
-	note_player_0 : note_player port map ( 	
+	x_note_player : entity work.note_player port map ( 	
 		rst => rst,
 		clk => clk,
 		note_pitch_cc => note_cc,
@@ -70,21 +48,18 @@ begin
 	);
 	
 	led(7) <= second_pulse;
-	led(6 downto 4) <= "111";
-	led(3 downto 0) <= btn;
+	led(6 downto 3) <= sw(5 downto 2);
+	led(2 downto 0) <= btn(3 downto 1);
 	s <= note_pitch_pulse;	
 	rst <= btn(0);
 	
 	process (clk)
 		variable sw_value : natural range 1 to 4;
 	begin
-		sw_value := to_integer(unsigned(sw(1 downto 0))) + 1;
---		if sw_value < 60 then
---			sw_value := 60;
---		elsif sw_value > 200 then
---			sw_value := 200;
---		end if;
-		twelfth_cc <= min_twelfth_cc * sw_value;
+		if rising_edge(clk) then
+			sw_value := to_integer(unsigned(sw(1 downto 0))) + 1;
+			twelfth_cc <= min_twelfth_cc * sw_value;
+		end if;
 	end process;
 
 	process (clk)
@@ -97,10 +72,10 @@ begin
 				second_pulse <= '0';
 			else
 				if is_new_note = '1' then
-					if music_index < music_length - 1 then
-						music_index := music_index + 1;
-					else
+					if music_index = music_length - 1 then
 						music_index := 0;
+					else
+						music_index := music_index + 1;
 					end if;
 					second_pulse <= not second_pulse;
 				end if;
