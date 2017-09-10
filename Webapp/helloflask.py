@@ -26,7 +26,7 @@ def index():
 def upload_file():
     textform = TextForm()
     if textform.is_submitted():
-        subprocess.Popen(["./helloworld", textform.name.data, textform.music.data])
+        subprocess.Popen(["./helloworld.exe", textform.name.data, textform.music.data])
         return redirect('/')
     return render_template('upload.html', form=textform)
 
