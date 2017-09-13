@@ -1,14 +1,8 @@
 {% extends "master_template.html" %}
 {% block uploader %}
-<<<<<<< HEAD
-<div id="musicuploader" style="color:red">
-	<form action="http://localhost:5000/uploader" method="POST" class="add-entry">
-		<dl>
-=======
 <div id="musicmaker" class="hoc clear">
     <article> 
 		<form action="http://localhost:5000/uploader" method="POST" class="add-entry">
->>>>>>> 9bf1cd4e4323dc2b36d81b35e64bf6e1c0956765
 			{{ form.csrf_token }}
 			<div class="inputarea">
 				{{ form.name(class_="music_title") }}
