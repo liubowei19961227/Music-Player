@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Reading design: test_largenum_display.prj
 
@@ -104,10 +104,6 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-WARNING:HDLParsers:3607 - Unit work/seven_seg_display is now defined in a different file.  It was defined in "//vmware-host/shared folders/Desktop/seven_segment_display/seven_seg_display/seven_seg_display.vhd", and is now defined in "//vmware-host/shared folders/Desktop/seven_segment_display_bignumber/seven_seg_display.vhd".
-WARNING:HDLParsers:3607 - Unit work/seven_seg_display/Behavioral is now defined in a different file.  It was defined in "//vmware-host/shared folders/Desktop/seven_segment_display/seven_seg_display/seven_seg_display.vhd", and is now defined in "//vmware-host/shared folders/Desktop/seven_segment_display_bignumber/seven_seg_display.vhd".
-WARNING:HDLParsers:3607 - Unit work/bin_to_dec is now defined in a different file.  It was defined in "//vmware-host/shared folders/Desktop/seven_segment_display/seven_seg_display/bin_to_dec.vhd", and is now defined in "//vmware-host/shared folders/Desktop/seven_segment_display_bignumber/bin_to_dec.vhd".
-WARNING:HDLParsers:3607 - Unit work/bin_to_dec/Behavioral is now defined in a different file.  It was defined in "//vmware-host/shared folders/Desktop/seven_segment_display/seven_seg_display/bin_to_dec.vhd", and is now defined in "//vmware-host/shared folders/Desktop/seven_segment_display_bignumber/bin_to_dec.vhd".
 Compiling vhdl file "//vmware-host/shared folders/Desktop/seven_segment_display_bignumber/bin_to_dec.vhd" in Library work.
 Architecture behavioral of Entity bin_to_dec is up to date.
 Compiling vhdl file "//vmware-host/shared folders/Desktop/seven_segment_display_bignumber/seven_seg_display.vhd" in Library work.
@@ -513,13 +509,13 @@ Delay:               35.429ns (Levels of Logic = 54)
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.37 secs
+Total CPU time to Xst completion: 4.32 secs
  
 --> 
 
-Total memory usage is 207060 kilobytes
+Total memory usage is 207636 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    4 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 
