@@ -1,3 +1,4 @@
+import modify
 import platform
 import subprocess
 from flask import Flask, flash
@@ -8,9 +9,6 @@ from flask_wtf import FlaskForm
 from wtforms import TextAreaField
 from werkzeug import secure_filename
 
-
-lookupChar = {'c' : 1,  'd' : 3, 'e' : 5, 'f' : 6, 'g': 8, 'a' : 10, 'b' : 12}
-lookupLen = {}
 
 class TextForm(FlaskForm):
     name = TextAreaField("Music Title")
@@ -30,6 +28,7 @@ def index():
 def upload_file():
     textform = TextForm()
     if textform.is_submitted():
+        modify.modify_music(textform.music.data)
     	##modified_data = modify_music_file(textform.music.data)
     	if platform.platform() == 'Darwin-16.3.0-x86_64-i386-64bit':
         	subprocess.Popen(["./helloworldmac", textform.name.data, textform.music.data])
