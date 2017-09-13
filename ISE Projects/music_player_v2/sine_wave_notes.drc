@@ -1,7 +1,7 @@
-Release 14.7 Drc P.20131013 (nt64)
+Release 14.7 Drc P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Mon Sep 04 01:20:59 2017
+Fri Sep 08 15:18:04 2017
 
 drc -z sine_wave_notes.ncd sine_wave_notes.pcf
 

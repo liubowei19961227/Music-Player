@@ -2,6 +2,7 @@ set -tmpdir "xst/projnav.tmp"
 set -xsthdpdir "xst"
 run
 -ifn sine_wave_notes.prj
+-use_new_parser yes
 -ifmt mixed
 -ofn sine_wave_notes
 -ofmt NGC

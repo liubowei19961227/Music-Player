@@ -123,7 +123,7 @@
     <property xil_pn:name="Generate Constraints Interaction Report Post Trace" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Generate Datasheet Section" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Generate Datasheet Section Post Trace" xil_pn:value="true" xil_pn:valueState="default"/>
-    <property xil_pn:name="Generate Detailed MAP Report" xil_pn:value="false" xil_pn:valueState="default"/>
+    <property xil_pn:name="Generate Detailed MAP Report" xil_pn:value="true" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Generate Multiple Hierarchical Netlist Files" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Generate Post-Place &amp; Route Power Report" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Generate Post-Place &amp; Route Simulation Model" xil_pn:value="false" xil_pn:valueState="default"/>
@@ -198,7 +198,7 @@
     <property xil_pn:name="Other Simulator Commands Post-Route" xil_pn:value="" xil_pn:valueState="default"/>
     <property xil_pn:name="Other Simulator Commands Post-Translate" xil_pn:value="" xil_pn:valueState="default"/>
     <property xil_pn:name="Other XPWR Command Line Options" xil_pn:value="" xil_pn:valueState="default"/>
-    <property xil_pn:name="Other XST Command Line Options" xil_pn:value="" xil_pn:valueState="default"/>
+    <property xil_pn:name="Other XST Command Line Options" xil_pn:value="-use_new_parser yes" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Output Extended Identifiers" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Output File Name" xil_pn:value="sine_wave_notes" xil_pn:valueState="default"/>
     <property xil_pn:name="Overwrite Compiled Libraries" xil_pn:value="false" xil_pn:valueState="default"/>

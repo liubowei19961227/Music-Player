@@ -1,28 +1,29 @@
 V3 13
-FL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v2/constants.vhd" 2017/09/04.01:20:18 P.20131013
-PH work/constants 1504452022 \
+FL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v2/constants.vhd" 2017/09/08.14:38:34 P.20131013
+PH work/constants 1504846151 \
       FL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v2/constants.vhd"
-FL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v2/note_length_counter.vhd" 2017/09/04.00:57:35 P.20131013
-EN work/note_length_counter 1504452023 \
+FL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v2/note_length_counter.vhd" 2017/09/08.14:43:37 P.20131013
+EN work/note_length_counter 1504846152 \
       FL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v2/note_length_counter.vhd" \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
-      PH work/constants 1504452022
-AR work/note_length_counter/Behavioral 1504452024 \
+      PH work/constants 1504846151
+AR work/note_length_counter/Behavioral 1504846153 \
       FL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v2/note_length_counter.vhd" \
-      EN work/note_length_counter 1504452023
+      EN work/note_length_counter 1504846152
 FL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v2/note_player.vhd" 2017/09/04.00:03:46 P.20131013
-EN work/note_player 1504452025 \
+EN work/note_player 1504846154 \
       FL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v2/note_player.vhd" \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
-      PH work/constants 1504452022
-AR work/note_player/Behavioral 1504452026 \
+      PH work/constants 1504846151
+AR work/note_player/Behavioral 1504846155 \
       FL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v2/note_player.vhd" \
-      EN work/note_player 1504452025
-FL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v2/sine_wave_notes.vhd" 2017/09/04.00:58:30 P.20131013
-EN work/sine_wave_notes 1504452027 \
+      EN work/note_player 1504846154
+FL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v2/sine_wave_notes.vhd" 2017/09/08.14:38:46 P.20131013
+EN work/sine_wave_notes 1504846156 \
       FL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v2/sine_wave_notes.vhd" \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
-      PH work/constants 1504452022
-AR work/sine_wave_notes/behavioral 1504452028 \
+      PH work/constants 1504846151
+AR work/sine_wave_notes/behavioral 1504846157 \
       FL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v2/sine_wave_notes.vhd" \
-      EN work/sine_wave_notes 1504452027 CP note_length_counter CP note_player
+      EN work/sine_wave_notes 1504846156 CP work/note_length_counter \
+      CP work/note_player

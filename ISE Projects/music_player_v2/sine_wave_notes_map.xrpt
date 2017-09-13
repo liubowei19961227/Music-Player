@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<document OS="nt64" product="ISE" version="14.7">
+<document OS="nt" product="ISE" version="14.7">
 
   <!--The data in this file is primarily intended for consumption by Xilinx tools.
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Map" timeStamp="Mon Sep 04 01:20:41 2017">
+  <application stringID="Map" timeStamp="Fri Sep 08 15:17:41 2017">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\\lib\nt64;C:\Xilinx\14.7\ISE_DS\ISE\\bin\nt64;C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64;C:\Xilinx\14.7\ISE_DS\ISE\lib\nt64;C:\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;C:\Xilinx\14.7\ISE_DS\PlanAhead\bin;C:\Xilinx\14.7\ISE_DS\EDK\bin\nt64;C:\Xilinx\14.7\ISE_DS\EDK\lib\nt64;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;C:\Xilinx\14.7\ISE_DS\common\bin\nt64;C:\Xilinx\14.7\ISE_DS\common\lib\nt64;C:\Python27\;C:\Python27\Scripts;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\Ryan\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft VS Code\bin;C:\Users\Ryan\AppData\Local\GitHubDesktop\bin"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\\lib\nt;C:\Xilinx\14.7\ISE_DS\ISE\\bin\nt;C:\Xilinx\14.7\ISE_DS\ISE\bin\nt;C:\Xilinx\14.7\ISE_DS\ISE\lib\nt;C:\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;C:\Xilinx\14.7\ISE_DS\PlanAhead\bin;C:\Xilinx\14.7\ISE_DS\EDK\bin\nt;C:\Xilinx\14.7\ISE_DS\EDK\lib\nt;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt_be\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt_le\bin;C:\Xilinx\14.7\ISE_DS\common\bin\nt;C:\Xilinx\14.7\ISE_DS\common\lib\nt;C:\Python27\;C:\Python27\Scripts;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\Ryan\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft VS Code\bin;C:\Users\Ryan\AppData\Local\GitHubDesktop\bin"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -50,6 +50,7 @@
       </table>
     </section>
     <section stringID="MAP_OPTION_SUMMARY">
+      <item DEFAULT="TRUE" label="-detail" stringID="MAP_DETAILED_REPORT" value="TRUE"/>
       <item DEFAULT="OFF" label="-ir" stringID="MAP_IGNORERLOCS" value="OFF"/>
       <item DEFAULT="area" label="-cm" stringID="MAP_COVER_MODE" value="area"/>
       <item DEFAULT="None" label="-intstyle" stringID="MAP_INTSTYLE" value="ise"/>
@@ -69,16 +70,16 @@
         <item dataType="int" stringID="MAP_NUM_ERRORS" value="0"/>
         <item dataType="int" stringID="MAP_FILTERED_WARNINGS" value="0"/>
         <item dataType="int" stringID="MAP_NUM_WARNINGS" value="0"/>
-        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="286600"/>
-        <item stringID="MAP_TOTAL_REAL_TIME" value="1 secs "/>
-        <item stringID="MAP_TOTAL_CPU_TIME" value="1 secs "/>
+        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="238092"/>
+        <item stringID="MAP_TOTAL_REAL_TIME" value="2 secs "/>
+        <item stringID="MAP_TOTAL_CPU_TIME" value="2 secs "/>
       </section>
       <section stringID="MAP_SLICE_REPORTING">
-        <item AVAILABLE="7168" dataType="int" label="Number of Slice Flip Flops" stringID="MAP_NUM_SLICE_FF" value="76"/>
-        <item AVAILABLE="7168" dataType="int" label="Number of 4 input LUTs" stringID="MAP_NUM_4_INPUT_LUT" value="361">
-          <item dataType="int" label="Number of route-thrus" stringID="MAP_NUM_LUT_RT" value="49"/>
+        <item AVAILABLE="7168" dataType="int" label="Number of Slice Flip Flops" stringID="MAP_NUM_SLICE_FF" value="82"/>
+        <item AVAILABLE="7168" dataType="int" label="Number of 4 input LUTs" stringID="MAP_NUM_4_INPUT_LUT" value="397">
+          <item dataType="int" label="Number of route-thrus" stringID="MAP_NUM_LUT_RT" value="53"/>
         </item>
-        <item AVAILABLE="3584" dataType="int" label="Number of occupied Slices" stringID="MAP_OCCUPIED_SLICES" value="188">
+        <item AVAILABLE="3584" dataType="int" label="Number of occupied Slices" stringID="MAP_OCCUPIED_SLICES" value="215">
           <item dataType="int" label="Number of Slices containing unrelated logic" stringID="MAP_NUM_SLICE_UNRELATED" value="0"/>
         </item>
       </section>
@@ -270,7 +271,7 @@
       </section>
       <section stringID="MAP_RPM_MACROS">
         <section stringID="MAP_SHAPE_SECTION">
-          <item dataType="int" stringID="MAP_NUM_SHAPE" value="9"/>
+          <item dataType="int" stringID="MAP_NUM_SHAPE" value="19"/>
         </section>
       </section>
       <section stringID="MAP_GUIDE_REPORT"/>
@@ -281,6 +282,52 @@
         <item stringID="MAP_DISABLE_ATTR" value="LOW"/>
       </section>
       <section stringID="MAP_CONTROL_SET_INFORMATION"/>
+      <section stringID="MAP_MODULE_UTILIZATION">
+        <tree stringID="MAP_MODULE_HIERARCHY">
+          <property label="Partition" stringID="MAP_PARTITION"/>
+          <property label="Slices" stringID="MAP_SLICES"/>
+          <property label="Slice Reg" stringID="MAP_SLICE_REG"/>
+          <property label="LUTs" stringID="MAP_LUTS"/>
+          <property label="LUTRAM" stringID="MAP_LUTRAM"/>
+          <property label="BRAM" stringID="MAP_BRAM"/>
+          <property stringID="MAP_MULT18X18"/>
+          <property label="BUFG" stringID="MAP_BUFG"/>
+          <property label="DCM" stringID="MAP_DCM"/>
+          <node label="Module Name" stringID="MAP_MODULE" value="sine_wave_notes">
+            <item label="Partition" stringID="MAP_PARTITION" value=""/>
+            <item ACCUMULATED="216" dataType="int" label="Slices" stringID="MAP_SLICES" value="50"/>
+            <item ACCUMULATED="82" dataType="int" label="Slice Reg" stringID="MAP_SLICE_REG" value="34"/>
+            <item ACCUMULATED="393" dataType="int" label="LUTs" stringID="MAP_LUTS" value="76"/>
+            <item ACCUMULATED="0" dataType="int" label="LUTRAM" stringID="MAP_LUTRAM" value="0"/>
+            <item ACCUMULATED="0" dataType="int" label="BRAM" stringID="MAP_BRAM" value="0"/>
+            <item ACCUMULATED="4" dataType="int" stringID="MAP_MULT18X18" value="2"/>
+            <item ACCUMULATED="1" dataType="int" label="BUFG" stringID="MAP_BUFG" value="1"/>
+            <item ACCUMULATED="0" dataType="int" label="DCM" stringID="MAP_DCM" value="0"/>
+            <node label="Module Name" stringID="MAP_MODULE" value="x_note_length_counter">
+              <item label="Partition" stringID="MAP_PARTITION" value=""/>
+              <item ACCUMULATED="137" dataType="int" label="Slices" stringID="MAP_SLICES" value="137"/>
+              <item ACCUMULATED="30" dataType="int" label="Slice Reg" stringID="MAP_SLICE_REG" value="30"/>
+              <item ACCUMULATED="264" dataType="int" label="LUTs" stringID="MAP_LUTS" value="264"/>
+              <item ACCUMULATED="0" dataType="int" label="LUTRAM" stringID="MAP_LUTRAM" value="0"/>
+              <item ACCUMULATED="0" dataType="int" label="BRAM" stringID="MAP_BRAM" value="0"/>
+              <item ACCUMULATED="2" dataType="int" stringID="MAP_MULT18X18" value="2"/>
+              <item ACCUMULATED="0" dataType="int" label="BUFG" stringID="MAP_BUFG" value="0"/>
+              <item ACCUMULATED="0" dataType="int" label="DCM" stringID="MAP_DCM" value="0"/>
+            </node>
+            <node label="Module Name" stringID="MAP_MODULE" value="x_note_player">
+              <item label="Partition" stringID="MAP_PARTITION" value=""/>
+              <item ACCUMULATED="29" dataType="int" label="Slices" stringID="MAP_SLICES" value="29"/>
+              <item ACCUMULATED="18" dataType="int" label="Slice Reg" stringID="MAP_SLICE_REG" value="18"/>
+              <item ACCUMULATED="53" dataType="int" label="LUTs" stringID="MAP_LUTS" value="53"/>
+              <item ACCUMULATED="0" dataType="int" label="LUTRAM" stringID="MAP_LUTRAM" value="0"/>
+              <item ACCUMULATED="0" dataType="int" label="BRAM" stringID="MAP_BRAM" value="0"/>
+              <item ACCUMULATED="0" dataType="int" stringID="MAP_MULT18X18" value="0"/>
+              <item ACCUMULATED="0" dataType="int" label="BUFG" stringID="MAP_BUFG" value="0"/>
+              <item ACCUMULATED="0" dataType="int" label="DCM" stringID="MAP_DCM" value="0"/>
+            </node>
+          </node>
+        </tree>
+      </section>
     </task>
   </application>
 
