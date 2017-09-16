@@ -1,0 +1,567 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> Reading design: ultrasonic_sensor.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ultrasonic_sensor.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ultrasonic_sensor"
+Output Format                      : NGC
+Target Device                      : xc3s400-4-ft256
+
+---- Source Options
+Top Module Name                    : ultrasonic_sensor
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Isabel/Documents/Music-Player/ISE Projects/ultrasonic_sensor/bin_to_dec.vhd" in Library work.
+Architecture behavioral of Entity bin_to_dec is up to date.
+Compiling vhdl file "C:/Users/Isabel/Documents/Music-Player/ISE Projects/ultrasonic_sensor/seven_seg_display.vhd" in Library work.
+Architecture behavioral of Entity seven_seg_display is up to date.
+Compiling vhdl file "C:/Users/Isabel/Documents/Music-Player/ISE Projects/ultrasonic_sensor/large_number_7seg.vhd" in Library work.
+Architecture behavioral of Entity large_number_7seg is up to date.
+Compiling vhdl file "C:/Users/Isabel/Documents/Music-Player/ISE Projects/ultrasonic_sensor/ultrasonic_sensor.vhd" in Library work.
+Entity <ultrasonic_sensor> compiled.
+Entity <ultrasonic_sensor> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <ultrasonic_sensor> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <large_number_7seg> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <seven_seg_display> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <bin_to_dec> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <ultrasonic_sensor> in library <work> (Architecture <behavioral>).
+Entity <ultrasonic_sensor> analyzed. Unit <ultrasonic_sensor> generated.
+
+Analyzing Entity <large_number_7seg> in library <work> (Architecture <behavioral>).
+Entity <large_number_7seg> analyzed. Unit <large_number_7seg> generated.
+
+Analyzing Entity <seven_seg_display> in library <work> (Architecture <behavioral>).
+Entity <seven_seg_display> analyzed. Unit <seven_seg_display> generated.
+
+Analyzing Entity <bin_to_dec> in library <work> (Architecture <behavioral>).
+Entity <bin_to_dec> analyzed. Unit <bin_to_dec> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <bin_to_dec>.
+    Related source file is "C:/Users/Isabel/Documents/Music-Player/ISE Projects/ultrasonic_sensor/bin_to_dec.vhd".
+    Found 16x7-bit ROM for signal <inv_outseg>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <bin_to_dec> synthesized.
+
+
+Synthesizing Unit <seven_seg_display>.
+    Related source file is "C:/Users/Isabel/Documents/Music-Player/ISE Projects/ultrasonic_sensor/seven_seg_display.vhd".
+    Found 4-bit 4-to-1 multiplexer for signal <binary>.
+    Found 32-bit up counter for signal <counter>.
+    Found 2-bit up counter for signal <digit>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   4 Multiplexer(s).
+Unit <seven_seg_display> synthesized.
+
+
+Synthesizing Unit <large_number_7seg>.
+    Related source file is "C:/Users/Isabel/Documents/Music-Player/ISE Projects/ultrasonic_sensor/large_number_7seg.vhd".
+    Found 18-bit comparator greatequal for signal <decimal_part$cmp_ge0000> created at line 150.
+    Found 18-bit comparator greatequal for signal <decimal_part$cmp_ge0001> created at line 152.
+    Found 18-bit comparator greatequal for signal <decimal_part$cmp_ge0002> created at line 155.
+    Found 18-bit comparator greatequal for signal <decimal_part$cmp_ge0003> created at line 158.
+    Found 18-bit comparator greatequal for signal <decimal_part$cmp_ge0004> created at line 161.
+    Found 18-bit comparator greatequal for signal <decimal_part$cmp_ge0005> created at line 164.
+    Found 18-bit comparator greatequal for signal <decimal_part$cmp_ge0006> created at line 167.
+    Found 18-bit comparator greatequal for signal <decimal_part$cmp_ge0007> created at line 170.
+    Found 18-bit comparator greatequal for signal <decimal_part$cmp_ge0008> created at line 173.
+    Found 19-bit subtractor for signal <decimal_part$share0000> created at line 150.
+    Found 17-bit subtractor for signal <hundred_part$share0000> created at line 73.
+    Found 17-bit comparator greatequal for signal <ten_part$cmp_ge0000> created at line 110.
+    Found 17-bit comparator greatequal for signal <ten_part$cmp_ge0001> created at line 112.
+    Found 17-bit comparator greatequal for signal <ten_part$cmp_ge0002> created at line 115.
+    Found 17-bit comparator greatequal for signal <ten_part$cmp_ge0003> created at line 118.
+    Found 17-bit comparator greatequal for signal <ten_part$cmp_ge0004> created at line 121.
+    Found 17-bit comparator greatequal for signal <ten_part$cmp_ge0005> created at line 124.
+    Found 17-bit comparator greatequal for signal <ten_part$cmp_ge0006> created at line 127.
+    Found 17-bit comparator greatequal for signal <ten_part$cmp_ge0007> created at line 130.
+    Found 17-bit comparator greatequal for signal <ten_part$cmp_ge0008> created at line 133.
+    Found 18-bit subtractor for signal <ten_part$share0000> created at line 110.
+    Found 16-bit comparator greatequal for signal <thousand_bit$cmp_ge0000> created at line 73.
+    Found 16-bit comparator greatequal for signal <thousand_bit$cmp_ge0001> created at line 75.
+    Found 16-bit comparator greatequal for signal <thousand_bit$cmp_ge0002> created at line 78.
+    Found 16-bit comparator greatequal for signal <thousand_bit$cmp_ge0003> created at line 81.
+    Found 16-bit comparator greatequal for signal <thousand_bit$cmp_ge0004> created at line 84.
+    Found 16-bit comparator greatequal for signal <thousand_bit$cmp_ge0005> created at line 87.
+    Found 16-bit comparator greatequal for signal <thousand_bit$cmp_ge0006> created at line 90.
+    Found 16-bit comparator greatequal for signal <thousand_bit$cmp_ge0007> created at line 93.
+    Found 16-bit comparator greatequal for signal <thousand_bit$cmp_ge0008> created at line 96.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  27 Comparator(s).
+Unit <large_number_7seg> synthesized.
+
+
+Synthesizing Unit <ultrasonic_sensor>.
+    Related source file is "C:/Users/Isabel/Documents/Music-Player/ISE Projects/ultrasonic_sensor/ultrasonic_sensor.vhd".
+    Found 1-bit register for signal <trigger>.
+    Found 1-bit register for signal <led>.
+    Found 16-bit up counter for signal <centimeters>.
+    Found 17-bit up counter for signal <count>.
+    Found 1-bit register for signal <echo_last>.
+    Found 1-bit register for signal <echo_synced>.
+    Found 1-bit register for signal <echo_unsynced>.
+    Found 16-bit register for signal <number>.
+    Found 1-bit register for signal <waiting>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred  22 D-type flip-flop(s).
+Unit <ultrasonic_sensor> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 3
+ 17-bit subtractor                                     : 1
+ 18-bit subtractor                                     : 1
+ 19-bit subtractor                                     : 1
+# Counters                                             : 4
+ 16-bit up counter                                     : 1
+ 17-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 7
+ 1-bit register                                        : 6
+ 16-bit register                                       : 1
+# Comparators                                          : 27
+ 16-bit comparator greatequal                          : 9
+ 17-bit comparator greatequal                          : 9
+ 18-bit comparator greatequal                          : 9
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 3
+ 17-bit subtractor                                     : 1
+ 18-bit subtractor                                     : 1
+ 19-bit subtractor                                     : 1
+# Counters                                             : 4
+ 16-bit up counter                                     : 1
+ 17-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 22
+ Flip-Flops                                            : 22
+# Comparators                                          : 27
+ 16-bit comparator greatequal                          : 9
+ 17-bit comparator greatequal                          : 9
+ 18-bit comparator greatequal                          : 9
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <echo_unsynced> in Unit <ultrasonic_sensor> is equivalent to the following FF/Latch, which will be removed : <led> 
+
+Optimizing unit <ultrasonic_sensor> ...
+
+Optimizing unit <seven_seg_display> ...
+
+Optimizing unit <large_number_7seg> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ultrasonic_sensor, actual ratio is 6.
+FlipFlop echo_unsynced has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+Processing Unit <ultrasonic_sensor> :
+	Found 2-bit shift register for signal <echo_synced>.
+Unit <ultrasonic_sensor> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 87
+ Flip-Flops                                            : 87
+# Shift Registers                                      : 1
+ 2-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ultrasonic_sensor.ngr
+Top Level Output File Name         : ultrasonic_sensor
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 15
+
+Cell Usage :
+# BELS                             : 877
+#      GND                         : 1
+#      INV                         : 19
+#      LUT1                        : 84
+#      LUT2                        : 50
+#      LUT2_L                      : 1
+#      LUT3                        : 89
+#      LUT4                        : 201
+#      LUT4_D                      : 4
+#      LUT4_L                      : 2
+#      MUXCY                       : 305
+#      MUXF5                       : 7
+#      VCC                         : 1
+#      XORCY                       : 113
+# FlipFlops/Latches                : 88
+#      FD                          : 3
+#      FDE                         : 20
+#      FDR                         : 32
+#      FDRE                        : 33
+# Shift Registers                  : 1
+#      SRL16                       : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 1
+#      OBUF                        : 13
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400ft256-4 
+
+ Number of Slices:                      241  out of   3584     6%  
+ Number of Slice Flip Flops:             87  out of   7168     1%  
+ Number of 4 input LUTs:                451  out of   7168     6%  
+    Number used as logic:               450
+    Number used as Shift registers:       1
+ Number of IOs:                          15
+ Number of bonded IOBs:                  15  out of    173     8%  
+    IOB Flip Flops:                       1
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 89    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.993ns (Maximum Frequency: 111.198MHz)
+   Minimum input arrival time before clock: 2.137ns
+   Maximum output required time after clock: 51.807ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.993ns (frequency: 111.198MHz)
+  Total number of paths / destination ports: 3163 / 205
+-------------------------------------------------------------------------
+Delay:               8.993ns (Levels of Logic = 4)
+  Source:            count_14 (FF)
+  Destination:       count_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: count_14 to count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.720   1.216  count_14 (count_14)
+     LUT2_L:I0->LO         1   0.551   0.126  count_cmp_eq0000115 (count_cmp_eq0000115)
+     LUT4:I3->O            4   0.551   0.985  count_cmp_eq0000125 (count_cmp_eq0000125)
+     LUT4:I2->O           17   0.551   1.371  centimeters_not00011 (centimeters_not0001)
+     LUT4:I3->O           17   0.551   1.345  count_or00001 (count_or0000)
+     FDRE:R                    1.026          count_0
+    ----------------------------------------
+    Total                      8.993ns (3.950ns logic, 5.043ns route)
+                                       (43.9% logic, 56.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              2.137ns (Levels of Logic = 1)
+  Source:            echo (PAD)
+  Destination:       Mshreg_echo_synced (FF)
+  Destination Clock: clk rising
+
+  Data Path: echo to Mshreg_echo_synced
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.821   0.877  echo_IBUF (echo_IBUF)
+     SRL16:D                   0.439          Mshreg_echo_synced
+    ----------------------------------------
+    Total                      2.137ns (1.260ns logic, 0.877ns route)
+                                       (59.0% logic, 41.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 206601947688 / 13
+-------------------------------------------------------------------------
+Offset:              51.807ns (Levels of Logic = 66)
+  Source:            number_6 (FF)
+  Destination:       hex<1> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: number_6 to hex<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             12   0.720   1.457  number_6 (number_6)
+     LUT3:I0->O            1   0.551   0.996  displayvalue/thousand_bit_cmp_ge000112 (displayvalue/thousand_bit_cmp_ge000112)
+     LUT3:I1->O            5   0.551   0.989  displayvalue/thousand_bit_cmp_ge0001115 (displayvalue/thousand_bit_cmp_ge00012)
+     LUT3:I2->O           18   0.551   1.756  displayvalue/thousand_bit_cmp_ge000121 (displayvalue/thousand_bit_cmp_ge0001)
+     LUT4:I0->O            2   0.551   0.945  displayvalue/thousand_bit<0>11 (displayvalue/N22)
+     LUT4:I2->O            1   0.551   0.996  displayvalue/hundred_part_mux0008<13>1 (displayvalue/hundred_part_mux0008<13>)
+     LUT2:I1->O            1   0.551   0.000  displayvalue/Msub_hundred_part_share0000_lut<3> (displayvalue/Msub_hundred_part_share0000_lut<3>)
+     MUXCY:S->O            1   0.500   0.000  displayvalue/Msub_hundred_part_share0000_cy<3> (displayvalue/Msub_hundred_part_share0000_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_hundred_part_share0000_cy<4> (displayvalue/Msub_hundred_part_share0000_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_hundred_part_share0000_cy<5> (displayvalue/Msub_hundred_part_share0000_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_hundred_part_share0000_cy<6> (displayvalue/Msub_hundred_part_share0000_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_hundred_part_share0000_cy<7> (displayvalue/Msub_hundred_part_share0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_hundred_part_share0000_cy<8> (displayvalue/Msub_hundred_part_share0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_hundred_part_share0000_cy<9> (displayvalue/Msub_hundred_part_share0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_hundred_part_share0000_cy<10> (displayvalue/Msub_hundred_part_share0000_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_hundred_part_share0000_cy<11> (displayvalue/Msub_hundred_part_share0000_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_hundred_part_share0000_cy<12> (displayvalue/Msub_hundred_part_share0000_cy<12>)
+     XORCY:CI->O           2   0.904   1.216  displayvalue/Msub_hundred_part_share0000_xor<13> (displayvalue/hundred_part_share0000<13>)
+     LUT4:I0->O           11   0.551   1.339  displayvalue/hundred_part<13>1 (displayvalue/hundred_part<13>)
+     LUT4:I1->O            1   0.551   0.000  displayvalue/Mcompar_ten_part_cmp_ge0000_lut<5>4 (displayvalue/Mcompar_ten_part_cmp_ge0000_lut<5>4)
+     MUXCY:S->O            1   0.500   0.000  displayvalue/Mcompar_ten_part_cmp_ge0000_cy<5>_3 (displayvalue/Mcompar_ten_part_cmp_ge0000_cy<5>2)
+     MUXCY:CI->O           6   0.303   1.342  displayvalue/Mcompar_ten_part_cmp_ge0000_cy<6>_1 (displayvalue/ten_part_cmp_ge0004)
+     LUT2:I0->O            3   0.551   0.933  displayvalue/ten_part<10>121 (displayvalue/N33)
+     LUT4:I3->O            1   0.551   0.869  displayvalue/ten_part_mux0008<10>_SW0 (N26)
+     LUT4:I2->O            1   0.551   0.996  displayvalue/ten_part_mux0008<10> (displayvalue/ten_part_mux0008<10>)
+     LUT2:I1->O            1   0.551   0.000  displayvalue/Msub_ten_part_share0000_lut<7> (displayvalue/Msub_ten_part_share0000_lut<7>)
+     MUXCY:S->O            1   0.500   0.000  displayvalue/Msub_ten_part_share0000_cy<7> (displayvalue/Msub_ten_part_share0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_ten_part_share0000_cy<8> (displayvalue/Msub_ten_part_share0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_ten_part_share0000_cy<9> (displayvalue/Msub_ten_part_share0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_ten_part_share0000_cy<10> (displayvalue/Msub_ten_part_share0000_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_ten_part_share0000_cy<11> (displayvalue/Msub_ten_part_share0000_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_ten_part_share0000_cy<12> (displayvalue/Msub_ten_part_share0000_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_ten_part_share0000_cy<13> (displayvalue/Msub_ten_part_share0000_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_ten_part_share0000_cy<14> (displayvalue/Msub_ten_part_share0000_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_ten_part_share0000_cy<15> (displayvalue/Msub_ten_part_share0000_cy<15>)
+     XORCY:CI->O           3   0.904   1.102  displayvalue/Msub_ten_part_share0000_xor<16> (displayvalue/ten_part_share0000<16>)
+     LUT4:I1->O            9   0.551   1.192  displayvalue/ten_part<16>1 (displayvalue/ten_part<16>)
+     LUT4:I2->O            1   0.551   0.000  displayvalue/Mcompar_decimal_part_cmp_ge0000_lut<7> (displayvalue/Mcompar_decimal_part_cmp_ge0000_lut<7>)
+     MUXCY:S->O            1   0.500   0.000  displayvalue/Mcompar_decimal_part_cmp_ge0000_cy<7> (displayvalue/Mcompar_decimal_part_cmp_ge0000_cy<7>)
+     MUXCY:CI->O           8   0.303   1.422  displayvalue/Mcompar_decimal_part_cmp_ge0000_cy<8> (displayvalue/decimal_part_cmp_ge0000)
+     LUT2:I0->O            3   0.551   1.102  displayvalue/ten_bit<3>1 (displayvalue/ten_bit<3>)
+     LUT4:I1->O            2   0.551   0.945  displayvalue/ten_bit<1> (displayvalue/ten_bit<1>)
+     LUT4:I2->O            1   0.551   0.000  displayvalue/Msub_decimal_part_share0000_lut<2> (displayvalue/Msub_decimal_part_share0000_lut<2>)
+     MUXCY:S->O            1   0.500   0.000  displayvalue/Msub_decimal_part_share0000_cy<2> (displayvalue/Msub_decimal_part_share0000_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_decimal_part_share0000_cy<3> (displayvalue/Msub_decimal_part_share0000_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_decimal_part_share0000_cy<4> (displayvalue/Msub_decimal_part_share0000_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_decimal_part_share0000_cy<5> (displayvalue/Msub_decimal_part_share0000_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_decimal_part_share0000_cy<6> (displayvalue/Msub_decimal_part_share0000_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_decimal_part_share0000_cy<7> (displayvalue/Msub_decimal_part_share0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_decimal_part_share0000_cy<8> (displayvalue/Msub_decimal_part_share0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_decimal_part_share0000_cy<9> (displayvalue/Msub_decimal_part_share0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_decimal_part_share0000_cy<10> (displayvalue/Msub_decimal_part_share0000_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_decimal_part_share0000_cy<11> (displayvalue/Msub_decimal_part_share0000_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_decimal_part_share0000_cy<12> (displayvalue/Msub_decimal_part_share0000_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_decimal_part_share0000_cy<13> (displayvalue/Msub_decimal_part_share0000_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_decimal_part_share0000_cy<14> (displayvalue/Msub_decimal_part_share0000_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_decimal_part_share0000_cy<15> (displayvalue/Msub_decimal_part_share0000_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  displayvalue/Msub_decimal_part_share0000_cy<16> (displayvalue/Msub_decimal_part_share0000_cy<16>)
+     MUXCY:CI->O           0   0.064   0.000  displayvalue/Msub_decimal_part_share0000_cy<17> (displayvalue/Msub_decimal_part_share0000_cy<17>)
+     XORCY:CI->O           1   0.904   0.996  displayvalue/Msub_decimal_part_share0000_xor<18> (displayvalue/decimal_part_share0000<18>)
+     LUT3:I1->O            1   0.551   0.000  displayvalue/digit_bit<0>1_wg_lut<14> (displayvalue/digit_bit<0>1_wg_lut<14>)
+     MUXCY:S->O            4   0.739   1.112  displayvalue/digit_bit<0>1_wg_cy<14> (displayvalue/digit_bit<0>1_wg_cy<14>)
+     LUT4:I1->O            1   0.551   0.996  displayvalue/digit_bit<0> (displayvalue/digit_bit<0>)
+     LUT3:I1->O            1   0.551   0.000  displayvalue/display/Mmux_binary_4 (displayvalue/display/Mmux_binary_4)
+     MUXF5:I0->O           7   0.360   1.405  displayvalue/display/Mmux_binary_2_f5 (displayvalue/display/binary<0>)
+     LUT4:I0->O            1   0.551   0.801  displayvalue/display/binary_to_decimal/out_seg<1>1 (hex_1_OBUF)
+     OBUF:I->O                 5.644          hex_1_OBUF (hex<1>)
+    ----------------------------------------
+    Total                     51.807ns (26.900ns logic, 24.907ns route)
+                                       (51.9% logic, 48.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 10.30 secs
+ 
+--> 
+
+Total memory usage is 228280 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+
