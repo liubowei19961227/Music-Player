@@ -9,14 +9,14 @@ entity note_player is
     port ( 	
 		rst : in std_logic;
 		clk : in std_logic;
-		note_pitch_cc : in natural range min_note_cc to max_note_cc;
+		note_pitch_cc : in natural range 0 to max_note_cc * 8;
 		note_pitch_pulse : out std_logic
 	);
 end note_player;
 
 architecture Behavioral of note_player is
 
-	signal note_pitch_partial : natural range 0 to max_note_cc - 1;
+	signal note_pitch_partial : natural range 0 to max_note_cc * 8 - 1;
 	signal square_wave : std_logic;
 
 begin

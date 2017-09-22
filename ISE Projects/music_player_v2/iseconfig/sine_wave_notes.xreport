@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-09-10T20:06:34</DateModified>
+  <DateModified>2017-09-22T21:48:52</DateModified>
   <ModuleName>sine_wave_notes</ModuleName>
-  <SummaryTimeStamp>2017-09-04T01:10:14</SummaryTimeStamp>
+  <SummaryTimeStamp>2017-09-22T18:16:04</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v2/iseconfig/sine_wave_notes.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v2\</ImplementationReportsDirectory>
   <DateInitialized>2017-08-20T15:57:50</DateInitialized>
@@ -19,7 +19,7 @@
     <toc-item title="Detailed Reports" target="Detailed Reports" />
    </view>
    <view inputState="Unknown" program="implementation" contextTags="FPGA_ONLY" hidden="true" type="HTML" file="sine_wave_notes_envsettings.html" label="System Settings" />
-   <view inputState="Translated" program="map" locator="MAP_IOB_TABLE" contextTags="FPGA_ONLY" type="IOBProperties" file="sine_wave_notes_map.xrpt" label="IOB Properties" />
+   <view inputState="Translated" program="map" locator="MAP_IOB_TABLE" contextTags="FPGA_ONLY" type="IOBProperties" file="sine_wave_notes_map.xrpt" showConstraints="0" label="IOB Properties" />
    <view inputState="Translated" program="map" contextTags="FPGA_ONLY" hidden="true" type="Control_Sets" file="sine_wave_notes_map.xrpt" label="Control Set Information" />
    <view inputState="Translated" program="map" locator="MAP_MODULE_HIERARCHY" contextTags="FPGA_ONLY" type="Module_Utilization" file="sine_wave_notes_map.xrpt" label="Module Level Utilization" />
    <view inputState="Mapped" program="par" locator="CONSTRAINT_TABLE" contextTags="FPGA_ONLY" type="ConstraintsData" file="sine_wave_notes.ptwx" label="Timing Constraints" translator="ptwxToTableXML.xslt" />

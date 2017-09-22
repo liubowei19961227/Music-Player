@@ -147,21 +147,36 @@ Elaborating entity <note_player> (architecture <Behavioral>) from library <work>
 
 Synthesizing Unit <sine_wave_notes>.
     Related source file is "C:\Users\Ryan\OneDrive - UNSW\Documents\2017 Semester 2\COMP3601 - Desgin Project A\Git Repositry\ISE Projects\music_player_v2\sine_wave_notes.vhd".
+WARNING:Xst:37 - Detected unknown constraint/property " package_net". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property " package_net". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property " package_net". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property " package_net". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:2999 - Signal 'music_array', unconnected in block 'sine_wave_notes', is tied to its initial value.
+WARNING:Xst:2999 - Signal 'base_note_cc_array', unconnected in block 'sine_wave_notes', is tied to its initial value.
+WARNING:Xst:2999 - Signal 'music_octave_array', unconnected in block 'sine_wave_notes', is tied to its initial value.
+WARNING:Xst:2999 - Signal 'music_length_array', unconnected in block 'sine_wave_notes', is tied to its initial value.
+    Found 64x4-bit single-port Read Only RAM <Mram_music_array> for signal <music_array>.
+    Found 16x14-bit single-port Read Only RAM <Mram_base_note_cc_array> for signal <base_note_cc_array>.
+    Found 64x4-bit single-port Read Only RAM <Mram_music_octave_array> for signal <music_octave_array>.
+    Found 64x7-bit single-port Read Only RAM <Mram_music_length_array> for signal <music_length_array>.
     Found 6-bit register for signal <music_index>.
     Found 1-bit register for signal <second_pulse>.
+    Found 4-bit register for signal <note>.
     Found 17-bit register for signal <note_cc>.
+    Found 14-bit register for signal <base_note_cc>.
+    Found 4-bit register for signal <octave>.
     Found 7-bit register for signal <note_length_in_twelfths>.
     Found 22-bit register for signal <twelfth_cc>.
-    Found 3-bit adder for signal <n0046> created at line 60.
-    Found 6-bit adder for signal <music_index[5]_GND_5_o_add_6_OUT> created at line 78.
-    Found 20x3-bit multiplier for signal <n0034> created at line 61.
-    Found 64x11-bit Read Only RAM for signal <_n0134>
+    Found 3-bit adder for signal <n0067> created at line 62.
+    Found 6-bit adder for signal <music_index[5]_GND_5_o_add_6_OUT> created at line 79.
+    Found 20x3-bit multiplier for signal <n0047> created at line 63.
+    Found 14x4-bit multiplier for signal <n0055> created at line 89.
     Summary:
-	inferred   1 RAM(s).
-	inferred   1 Multiplier(s).
+	inferred   4 RAM(s).
+	inferred   2 Multiplier(s).
 	inferred   2 Adder/Subtractor(s).
-	inferred  53 D-type flip-flop(s).
-	inferred   3 Multiplexer(s).
+	inferred  75 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
 Unit <sine_wave_notes> synthesized.
 
 Synthesizing Unit <note_length_counter>.
@@ -187,13 +202,13 @@ Unit <note_length_counter> synthesized.
 Synthesizing Unit <note_player>.
     Related source file is "C:\Users\Ryan\OneDrive - UNSW\Documents\2017 Semester 2\COMP3601 - Desgin Project A\Git Repositry\ISE Projects\music_player_v2\note_player.vhd".
     Found 1-bit register for signal <square_wave>.
-    Found 17-bit register for signal <note_pitch_partial>.
-    Found 18-bit subtractor for signal <GND_8_o_GND_8_o_sub_1_OUT> created at line 32.
-    Found 17-bit adder for signal <note_pitch_partial[16]_GND_8_o_add_2_OUT> created at line 36.
-    Found 18-bit comparator greater for signal <n0002> created at line 32
+    Found 20-bit register for signal <note_pitch_partial>.
+    Found 21-bit subtractor for signal <GND_8_o_GND_8_o_sub_1_OUT> created at line 32.
+    Found 20-bit adder for signal <note_pitch_partial[19]_GND_8_o_add_2_OUT> created at line 36.
+    Found 21-bit comparator greater for signal <n0002> created at line 32
     Summary:
 	inferred   2 Adder/Subtractor(s).
-	inferred  18 D-type flip-flop(s).
+	inferred  21 D-type flip-flop(s).
 	inferred   1 Comparator(s).
 Unit <note_player> synthesized.
 
@@ -201,32 +216,37 @@ Unit <note_player> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 1
- 64x11-bit single-port Read Only RAM                   : 1
-# Multipliers                                          : 2
+# RAMs                                                 : 4
+ 16x14-bit single-port Read Only RAM                   : 1
+ 64x4-bit single-port Read Only RAM                    : 2
+ 64x7-bit single-port Read Only RAM                    : 1
+# Multipliers                                          : 3
+ 14x4-bit multiplier                                   : 1
  20x3-bit multiplier                                   : 1
  22x7-bit multiplier                                   : 1
 # Adders/Subtractors                                   : 8
- 17-bit adder                                          : 1
- 18-bit subtractor                                     : 1
+ 20-bit adder                                          : 1
+ 21-bit subtractor                                     : 1
  28-bit adder                                          : 2
  29-bit adder                                          : 1
  29-bit subtractor                                     : 1
  3-bit adder                                           : 1
  6-bit adder                                           : 1
-# Registers                                            : 10
+# Registers                                            : 13
  1-bit register                                        : 4
- 17-bit register                                       : 2
+ 14-bit register                                       : 1
+ 17-bit register                                       : 1
+ 20-bit register                                       : 1
  22-bit register                                       : 1
  28-bit register                                       : 1
+ 4-bit register                                        : 2
  6-bit register                                        : 1
  7-bit register                                        : 1
 # Comparators                                          : 3
- 18-bit comparator greater                             : 1
+ 21-bit comparator greater                             : 1
  28-bit comparator greater                             : 1
  29-bit comparator greater                             : 1
-# Multiplexers                                         : 5
- 17-bit 2-to-1 multiplexer                             : 1
+# Multiplexers                                         : 4
  29-bit 2-to-1 multiplexer                             : 2
  6-bit 2-to-1 multiplexer                              : 2
 
@@ -246,46 +266,88 @@ The following registers are absorbed into counter <note_pitch_partial>: 1 regist
 Unit <note_player> synthesized (advanced).
 
 Synthesizing (advanced) Unit <sine_wave_notes>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0134> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+	Found pipelined multiplier on signal <n0055>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <n0047>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+INFO:Xst:3231 - The small RAM <Mram_base_note_cc_array> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 64-word x 11-bit                    |          |
+    |     aspect ratio   | 16-word x 14-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <note>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_music_array> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 4-bit                     |          |
     |     weA            | connected to signal <GND>           | high     |
     |     addrA          | connected to signal <music_index[5]_music_index[5]_mux_8_OUT> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_music_octave_array> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <music_index[5]_music_index[5]_mux_8_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_music_length_array> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <music_index[5]_music_index[5]_mux_8_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_n0047 by adding 1 register level(s).
 Unit <sine_wave_notes> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 1
- 64x11-bit single-port distributed Read Only RAM       : 1
-# Multipliers                                          : 2
- 20x3-bit multiplier                                   : 1
+# RAMs                                                 : 4
+ 16x14-bit single-port distributed Read Only RAM       : 1
+ 64x4-bit single-port distributed Read Only RAM        : 2
+ 64x7-bit single-port distributed Read Only RAM        : 1
+# Multipliers                                          : 3
+ 14x4-bit registered multiplier                        : 1
+ 20x3-bit registered multiplier                        : 1
  22x7-bit multiplier                                   : 1
 # Adders/Subtractors                                   : 6
- 18-bit subtractor                                     : 1
+ 21-bit subtractor                                     : 1
  28-bit adder                                          : 1
  29-bit adder                                          : 1
  29-bit subtractor                                     : 1
  3-bit adder                                           : 1
  6-bit adder                                           : 1
 # Counters                                             : 2
- 17-bit up counter                                     : 1
+ 20-bit up counter                                     : 1
  28-bit up counter                                     : 1
-# Registers                                            : 56
- Flip-Flops                                            : 56
+# Registers                                            : 39
+ Flip-Flops                                            : 39
 # Comparators                                          : 3
- 18-bit comparator greater                             : 1
+ 21-bit comparator greater                             : 1
  28-bit comparator greater                             : 1
  29-bit comparator greater                             : 1
-# Multiplexers                                         : 5
- 17-bit 2-to-1 multiplexer                             : 1
+# Multiplexers                                         : 4
  29-bit 2-to-1 multiplexer                             : 2
  6-bit 2-to-1 multiplexer                              : 2
 
@@ -294,11 +356,10 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <note_length_in_twelfths_0> (without init value) has a constant value of 0 in block <sine_wave_notes>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <octave_0> (without init value) has a constant value of 0 in block <sine_wave_notes>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <octave_1> (without init value) has a constant value of 0 in block <sine_wave_notes>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_length_in_twelfths_0> (without init value) has a constant value of 0 in block <sine_wave_notes>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_length_in_twelfths_6> (without init value) has a constant value of 0 in block <sine_wave_notes>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_cc_14> (without init value) has a constant value of 0 in block <sine_wave_notes>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_cc_15> (without init value) has a constant value of 0 in block <sine_wave_notes>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_cc_16> (without init value) has a constant value of 0 in block <sine_wave_notes>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <sine_wave_notes> ...
 
@@ -314,8 +375,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 96
- Flip-Flops                                            : 96
+# Registers                                            : 105
+ Flip-Flops                                            : 105
 
 =========================================================================
 
@@ -338,43 +399,44 @@ Top Level Output File Name         : sine_wave_notes.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 816
+# BELS                             : 822
 #      GND                         : 1
-#      INV                         : 50
-#      LUT1                        : 51
-#      LUT2                        : 109
-#      LUT3                        : 34
-#      LUT4                        : 128
+#      INV                         : 53
+#      LUT1                        : 54
+#      LUT2                        : 115
+#      LUT3                        : 35
+#      LUT4                        : 124
 #      LUT4_D                      : 14
-#      MUXCY                       : 229
-#      MUXF5                       : 32
+#      MUXCY                       : 236
+#      MUXF5                       : 18
 #      MUXF6                       : 9
 #      VCC                         : 1
-#      XORCY                       : 158
-# FlipFlops/Latches                : 96
+#      XORCY                       : 162
+# FlipFlops/Latches                : 105
 #      FD                          : 22
-#      FDE                         : 19
-#      FDR                         : 53
+#      FDE                         : 25
+#      FDR                         : 56
 #      FDRE                        : 2
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 21
 #      IBUF                        : 12
 #      OBUF                        : 9
-# MULTs                            : 3
+# MULTs                            : 4
 #      MULT18X18                   : 3
+#      MULT18X18S                  : 1
 
 Device utilization summary:
 ---------------------------
 
 Selected Device : 3s400ft256-4 
 
- Number of Slices:                      228  out of   3584     6%  
- Number of Slice Flip Flops:             96  out of   7168     1%  
- Number of 4 input LUTs:                386  out of   7168     5%  
+ Number of Slices:                      225  out of   3584     6%  
+ Number of Slice Flip Flops:            105  out of   7168     1%  
+ Number of 4 input LUTs:                395  out of   7168     5%  
  Number of IOs:                          22
  Number of bonded IOBs:                  22  out of    173    12%  
- Number of MULT18X18s:                    3  out of     16    18%  
+ Number of MULT18X18s:                    4  out of     16    25%  
  Number of GCLKs:                         1  out of      8    12%  
 
 ---------------------------
@@ -398,7 +460,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 96    |
+clk                                | BUFGP                  | 105   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -410,7 +472,7 @@ Timing Summary:
 Speed Grade: -4
 
    Minimum period: 18.301ns (Maximum Frequency: 54.642MHz)
-   Minimum input arrival time before clock: 9.430ns
+   Minimum input arrival time before clock: 9.372ns
    Maximum output required time after clock: 7.241ns
    Maximum combinational path delay: 7.266ns
 
@@ -421,7 +483,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 18.301ns (frequency: 54.642MHz)
-  Total number of paths / destination ports: 1661881 / 121
+  Total number of paths / destination ports: 1692394 / 149
 -------------------------------------------------------------------------
 Delay:               18.301ns (Levels of Logic = 15)
   Source:            note_length_in_twelfths_5 (FF)
@@ -456,25 +518,25 @@ Delay:               18.301ns (Levels of Logic = 15)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 403 / 97
+  Total number of paths / destination ports: 412 / 106
 -------------------------------------------------------------------------
-Offset:              9.430ns (Levels of Logic = 4)
-  Source:            sw<1> (PAD)
-  Destination:       twelfth_cc_19 (FF)
+Offset:              9.372ns (Levels of Logic = 4)
+  Source:            sw<0> (PAD)
+  Destination:       Mmult_n0047_2 (FF)
   Destination Clock: clk rising
 
-  Data Path: sw<1> to twelfth_cc_19
+  Data Path: sw<0> to Mmult_n0047_2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             4   0.821   1.256  sw_1_IBUF (Madd_n0046_lut<1>)
-     LUT2:I0->O            1   0.551   0.801  Madd_n0046_cy<1>11 (Madd_n0046_cy<1>)
-     MULT18X18:B2->P19     3   4.001   1.246  Mmult_n0034_submult_0 (Mmult_n0034_submult_0_19)
-     LUT2:I0->O            1   0.551   0.000  Mmult_n0034_Madd_lut<19>1 (Mmult_n0034_Madd_lut<19>)
-     FD:D                      0.203          twelfth_cc_19
+     IBUF:I->O             6   0.821   1.342  sw_0_IBUF (Madd_n0067_cy<0>)
+     LUT2:I0->O            1   0.551   0.801  Mmult_n0047_Madd_lut<20>1 (Mmult_n0047_Madd_lut<20>)
+     MULT18X18:B1->P19     3   4.001   1.102  Mmult_n0047_submult_0 (Mmult_n0047_submult_0_19)
+     LUT2:I1->O            1   0.551   0.000  Mmult_n0047_Madd_191 (Mmult_n0047_Madd_19)
+     FD:D                      0.203          Mmult_n0047_2
     ----------------------------------------
-    Total                      9.430ns (6.127ns logic, 3.303ns route)
-                                       (65.0% logic, 35.0% route)
+    Total                      9.372ns (6.127ns logic, 3.245ns route)
+                                       (65.4% logic, 34.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -529,8 +591,8 @@ clk            |   18.301|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.05 secs
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 13.57 secs
  
 WARNING:Xst:3152 - You have chosen to run a version of XST which is not the default solution
    for the specified device family. You are free to use it in order to take
@@ -542,9 +604,9 @@ WARNING:Xst:3152 - You have chosen to run a version of XST which is not the defa
    on the XST command line or in the XST process properties panel.
 --> 
 
-Total memory usage is 221492 kilobytes
+Total memory usage is 219120 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    8 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of warnings :   15 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
 

@@ -11,8 +11,8 @@ entity note_length_counter is
 		clk : in std_logic;
 		is_staccato : in std_logic;
 		is_slurred : in std_logic;
-		note_length_in_twelfths : in natural range min_note_length_in_twelfths to max_note_length_in_twelfths;
-		twelfth_cc : in natural range min_twelfth_cc to max_twelfth_cc;
+		note_length_in_twelfths : in natural range 0 to max_note_length_in_twelfths;
+		twelfth_cc : in natural range 0 to max_twelfth_cc;
 		is_mute : out std_logic;
 		is_new_note : out std_logic
 	);
@@ -20,7 +20,7 @@ end note_length_counter;
 
 architecture Behavioral of note_length_counter is
 
-	signal note_length_cc : natural range min_twelfth_cc to max_twelfth_cc * max_note_length_in_twelfths;
+	signal note_length_cc : natural range 0 to max_twelfth_cc * max_note_length_in_twelfths;
 	signal note_length_partial : natural range 0 to max_twelfth_cc * max_note_length_in_twelfths - 1;
 	
 	signal articulation_cc : natural range 0 to max_twelfth_cc * max_note_length_in_twelfths;
