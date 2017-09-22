@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-USER-PC::  Sat Sep 02 01:33:49 2017
+USER-PC::  Wed Sep 13 19:19:26 2017
 
 par -w -intstyle ise -ol high -t 1 test_largenum_display_map.ncd
 test_largenum_display.ncd test_largenum_display.pcf 
@@ -66,10 +66,10 @@ Phase 5.36  Local Placement Optimization (Checksum:8fa0c45) REAL time: 1 secs
 Phase 6.8  Global Placement
 ..........
 ..
-Phase 6.8  Global Placement (Checksum:e8c8c8fb) REAL time: 2 secs 
+Phase 6.8  Global Placement (Checksum:e8c8c8fb) REAL time: 1 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:e8c8c8fb) REAL time: 2 secs 
+Phase 7.5  Local Placement Optimization (Checksum:e8c8c8fb) REAL time: 1 secs 
 
 Phase 8.18  Placement Optimization
 Phase 8.18  Placement Optimization (Checksum:f6b9e18a) REAL time: 2 secs 
@@ -162,7 +162,7 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 5 secs 
+Total REAL time to PAR completion: 4 secs 
 Total CPU time to PAR completion: 4 secs 
 
 Peak Memory Usage:  205 MB

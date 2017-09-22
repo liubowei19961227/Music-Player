@@ -1,0 +1,8 @@
+EN large_number_7seg NULL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/ultrasonic_sensor/large_number_7seg.vhd" sub00/vhpl04 1505539608
+AR ultrasonic_sensor behavioral "C:/Users/Isabel/Documents/Music-Player/ISE Projects/ultrasonic_sensor/ultrasonic_sensor.vhd" sub00/vhpl07 1505539611
+EN ultrasonic_sensor NULL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/ultrasonic_sensor/ultrasonic_sensor.vhd" sub00/vhpl06 1505539610
+AR bin_to_dec behavioral "C:/Users/Isabel/Documents/Music-Player/ISE Projects/ultrasonic_sensor/bin_to_dec.vhd" sub00/vhpl01 1505539605
+EN seven_seg_display NULL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/ultrasonic_sensor/seven_seg_display.vhd" sub00/vhpl02 1505539606
+AR large_number_7seg behavioral "C:/Users/Isabel/Documents/Music-Player/ISE Projects/ultrasonic_sensor/large_number_7seg.vhd" sub00/vhpl05 1505539609
+AR seven_seg_display behavioral "C:/Users/Isabel/Documents/Music-Player/ISE Projects/ultrasonic_sensor/seven_seg_display.vhd" sub00/vhpl03 1505539607
+EN bin_to_dec NULL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/ultrasonic_sensor/bin_to_dec.vhd" sub00/vhpl00 1505539604

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Isabel\Documents\Music-Player\ISE Projects\ultrasonic_sensor\ultrasonic_sensor.ncd
+OUTFILE=C:\Users\Isabel\Documents\Music-Player\ISE Projects\ultrasonic_sensor\ultrasonic_sensor.bit
+FAMILY=Spartan3
+PART=xc3s400-4ft256
+WORKINGDIR=C:\Users\Isabel\Documents\Music-Player\ISE Projects\ultrasonic_sensor
+LICENSE=WebPack
+USER_INFO=211380564_0_0_537

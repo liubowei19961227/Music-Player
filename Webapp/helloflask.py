@@ -1,3 +1,5 @@
+import modify
+import platform
 import subprocess
 from flask import Flask, flash
 from flask import redirect
@@ -26,7 +28,12 @@ def index():
 def upload_file():
     textform = TextForm()
     if textform.is_submitted():
-        subprocess.Popen(["./helloworld.exe", textform.name.data, textform.music.data])
+        modify.modify_music(textform.music.data)
+    	##modified_data = modify_music_file(textform.music.data)
+    	if platform.platform() == 'Darwin-16.3.0-x86_64-i386-64bit':
+        	subprocess.Popen(["./helloworldmac", textform.name.data, textform.music.data])
+        else :
+        	subprocess.Popen(["./helloworld.exe", textform.name.data, textform.music.data])
         return redirect('/')
     return render_template('upload.html', form=textform)
 
@@ -34,6 +41,22 @@ def upload_file():
 @app.route("/read_input", methods=['POST'])
 def login():
     return request.form['username']
+
+
+def modify_music_file(this_data):
+	new_data = ''
+	i = 0
+	for line in this_data.splitlines():
+		for word in line.split():
+			if word[0] is '%':
+				break
+				## go to next line
+			elif lookupChar[word[0]]:
+				new_data[i] = lookupChar[word[0]]
+				i+=1
+				
+			else:
+				print "Something wrong!"
 
 
 if __name__ == "__main__":
