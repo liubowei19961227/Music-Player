@@ -10,10 +10,69 @@ Target Device  : xc3s400
 Target Package : ft256
 Target Speed   : -4
 Mapper Version : spartan3 -- $Revision: 1.55 $
-Mapped Date    : Fri Sep 22 22:22:04 2017
+Mapped Date    : Sat Sep 23 01:32:02 2017
 
 Mapping design into LUTs...
 Running directed packing...
+WARNING:Pack:266 - The function generator x_note_player/Mmux__n0643_1820 failed
+   to merge with F5 multiplexer
+   x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_17_f5_7.  There is a
+   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator x_note_player/_n1184<102>1 failed to
+   merge with F5 multiplexer
+   x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_17_f5_8.  There is a
+   conflict for the GYMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator x_note_player/_n1184<1622>1 failed to
+   merge with F5 multiplexer
+   x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_18_f5_4.  There is a
+   conflict for the GYMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator x_note_player/n0548<0>_mmx_out1 failed
+   to merge with F5 multiplexer x_note_player/Mmux__n0643_17_f5_3.  There is a
+   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator x_note_player/Mmux__n0643_1238 failed
+   to merge with F5 multiplexer
+   x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_11_f5_31.  There is a
+   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator x_note_player/Mmux__n0643_14127 failed
+   to merge with F5 multiplexer
+   x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_13_f5_70.  There is a
+   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator x_note_player/_n1184<1398>1 failed to
+   merge with F5 multiplexer
+   x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_13_f5_67.  There is a
+   conflict for the GYMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator x_note_player/_n1184<1750>1 failed to
+   merge with F5 multiplexer
+   x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_13_f5_69.  There is a
+   conflict for the GYMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator x_note_player/_n1184<1064>1 failed to
+   merge with F5 multiplexer
+   x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_13_f5_95.  There is a
+   conflict for the GYMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator x_note_player/Mmux__n0643_15118 failed
+   to merge with F5 multiplexer
+   x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_14_f5_48.  There is a
+   conflict for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator x_note_player/_n1184<2820>1 failed to
+   merge with F5 multiplexer
+   x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_14_f5_81.  There is a
+   conflict for the GYMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator x_note_player/_n1184<2819>1 failed to
+   merge with F5 multiplexer
+   x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_14_f5_73.  There is a
+   conflict for the GYMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator x_note_player/_n1184<1216>11 failed to
+   merge with F5 multiplexer
+   x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_14_f5_78.  There is a
+   conflict for the GYMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator x_note_player/_n1184<2530>1 failed to
+   merge with F5 multiplexer
+   x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_17_f5_10.  There is a
+   conflict for the GYMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator x_note_player/_n1184<1215>1 failed to
+   merge with F5 multiplexer
+   x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_17_f5_18.  There is a
+   conflict for the GYMUX.  The design will exhibit suboptimal timing.
 Running delay-based LUT packing...
 Running related packing...
 Updating timing models...
@@ -23,18 +82,18 @@ Design Summary
 
 Design Summary:
 Number of errors:      0
-Number of warnings:    0
+Number of warnings:   15
 Logic Utilization:
-  Number of Slice Flip Flops:           105 out of   7,168    1%
-  Number of 4 input LUTs:               343 out of   7,168    4%
+  Number of Slice Flip Flops:            99 out of   7,168    1%
+  Number of 4 input LUTs:             3,124 out of   7,168   43%
 Logic Distribution:
-  Number of occupied Slices:            218 out of   3,584    6%
-    Number of Slices containing only related logic:     218 out of     218 100%
-    Number of Slices containing unrelated logic:          0 out of     218   0%
+  Number of occupied Slices:          2,054 out of   3,584   57%
+    Number of Slices containing only related logic:   2,054 out of   2,054 100%
+    Number of Slices containing unrelated logic:          0 out of   2,054   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         400 out of   7,168    5%
-    Number used as logic:               343
-    Number used as a route-thru:         57
+  Total Number of 4 input LUTs:       3,219 out of   7,168   44%
+    Number used as logic:             3,124
+    Number used as a route-thru:         95
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
@@ -43,11 +102,11 @@ Logic Distribution:
   Number of MULT18X18s:                   4 out of      16   25%
   Number of BUFGMUXs:                     1 out of       8   12%
 
-Average Fanout of Non-Clock Nets:                2.49
+Average Fanout of Non-Clock Nets:                4.41
 
-Peak Memory Usage:  230 MB
-Total REAL time to MAP completion:  5 secs 
-Total CPU time to MAP completion:   3 secs 
+Peak Memory Usage:  242 MB
+Total REAL time to MAP completion:  6 secs 
+Total CPU time to MAP completion:   6 secs 
 
 NOTES:
 

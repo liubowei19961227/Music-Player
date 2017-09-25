@@ -11,5 +11,50 @@
 <msg type="info" file="LIT" num="244" delta="old" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
 </msg>
 
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">x_note_player/Mmux__n0643_1820</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_17_f5_7</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">x_note_player/_n1184&lt;102&gt;1</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_17_f5_8</arg>.  <arg fmt="%z" index="3">There is a conflict for the GYMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">x_note_player/_n1184&lt;1622&gt;1</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_18_f5_4</arg>.  <arg fmt="%z" index="3">There is a conflict for the GYMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">x_note_player/n0548&lt;0&gt;_mmx_out1</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">x_note_player/Mmux__n0643_17_f5_3</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">x_note_player/Mmux__n0643_1238</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_11_f5_31</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">x_note_player/Mmux__n0643_14127</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_13_f5_70</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">x_note_player/_n1184&lt;1398&gt;1</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_13_f5_67</arg>.  <arg fmt="%z" index="3">There is a conflict for the GYMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">x_note_player/_n1184&lt;1750&gt;1</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_13_f5_69</arg>.  <arg fmt="%z" index="3">There is a conflict for the GYMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">x_note_player/_n1184&lt;1064&gt;1</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_13_f5_95</arg>.  <arg fmt="%z" index="3">There is a conflict for the GYMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">x_note_player/Mmux__n0643_15118</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_14_f5_48</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">x_note_player/_n1184&lt;2820&gt;1</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_14_f5_81</arg>.  <arg fmt="%z" index="3">There is a conflict for the GYMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">x_note_player/_n1184&lt;2819&gt;1</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_14_f5_73</arg>.  <arg fmt="%z" index="3">There is a conflict for the GYMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">x_note_player/_n1184&lt;1216&gt;11</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_14_f5_78</arg>.  <arg fmt="%z" index="3">There is a conflict for the GYMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">x_note_player/_n1184&lt;2530&gt;1</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_17_f5_10</arg>.  <arg fmt="%z" index="3">There is a conflict for the GYMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">x_note_player/_n1184&lt;1215&gt;1</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">x_note_player/Mmux_index[7]_note[3]_wide_mux_257_OUT_17_f5_18</arg>.  <arg fmt="%z" index="3">There is a conflict for the GYMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
 </messages>
 

@@ -17,10 +17,9 @@ end sine_wave_notes;
 
 architecture behavioral of sine_wave_notes is
 
-	signal note : natural range 0 to num_notes - 1;
-	signal base_note_cc : natural range 0 to max_base_note_cc;
-	signal octave : natural range 0 to max_octave;
+	signal note : natural range 0 to num_notes;
 	signal note_cc : natural range 0 to max_note_cc;
+	signal octave : natural range 0 to max_octave;
 	signal note_length_in_twelfths : natural range 0 to max_note_length_in_twelfths ;
 	signal twelfth_cc : natural range 0 to max_twelfth_cc;
 	
@@ -45,8 +44,9 @@ begin
 	x_note_player : entity work.note_player port map ( 	
 		rst => rst,
 		clk => clk,
-		note_pitch_cc => note_cc,
-		note_pitch_pulse => note_pitch_pulse
+		note => note,
+		octave => octave,
+		note_pulse => note_pitch_pulse
 	);
 	
 	led(7) <= second_pulse;
@@ -80,14 +80,12 @@ begin
 					end if;
 					second_pulse <= not second_pulse;
 				end if;
-				note <= music_array(music_index);
 				if is_mute = '1' then
-					note_cc <= 0;
+					note <= rest;
 				else
-					base_note_cc <= base_note_cc_array(note);
-					octave <= music_octave_array(music_index);
-					note_cc <= base_note_cc * octave;
+					note <= music_array(music_index);
 				end if;
+					octave <= music_octave_array(music_index);
 				note_length_in_twelfths <= music_length_array(music_index);
 			end if;
 		end if;
