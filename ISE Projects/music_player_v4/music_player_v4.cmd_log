@@ -1,0 +1,104 @@
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys.ucf -p xc3s400-ft256-4 "music_player_v4.ngc" music_player_v4.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -detail -ir off -pr off -c 100 -o music_player_v4_map.ncd music_player_v4.ngd music_player_v4.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_v4_map.ncd music_player_v4.ncd music_player_v4.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player_v4.twx music_player_v4.ncd -o music_player_v4.twr music_player_v4.pcf -ucf nexys.ucf 
+bitgen -intstyle ise -f music_player_v4.ut music_player_v4.ncd 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys.ucf -p xc3s400-ft256-4 "music_player_v4.ngc" music_player_v4.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -detail -ir off -pr off -c 100 -o music_player_v4_map.ncd music_player_v4.ngd music_player_v4.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_v4_map.ncd music_player_v4.ncd music_player_v4.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player_v4.twx music_player_v4.ncd -o music_player_v4.twr music_player_v4.pcf -ucf nexys.ucf 
+bitgen -intstyle ise -f music_player_v4.ut music_player_v4.ncd 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys.ucf -p xc3s400-ft256-4 "music_player_v4.ngc" music_player_v4.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -detail -ir off -pr off -c 100 -o music_player_v4_map.ncd music_player_v4.ngd music_player_v4.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_v4_map.ncd music_player_v4.ncd music_player_v4.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player_v4.twx music_player_v4.ncd -o music_player_v4.twr music_player_v4.pcf -ucf nexys.ucf 
+bitgen -intstyle ise -f music_player_v4.ut music_player_v4.ncd 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys.ucf -p xc3s400-ft256-4 "music_player_v4.ngc" music_player_v4.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -detail -ir off -pr off -c 100 -o music_player_v4_map.ncd music_player_v4.ngd music_player_v4.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_v4_map.ncd music_player_v4.ncd music_player_v4.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player_v4.twx music_player_v4.ncd -o music_player_v4.twr music_player_v4.pcf -ucf nexys.ucf 
+bitgen -intstyle ise -f music_player_v4.ut music_player_v4.ncd 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys.ucf -p xc3s400-ft256-4 "music_player_v4.ngc" music_player_v4.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -detail -ir off -pr off -c 100 -o music_player_v4_map.ncd music_player_v4.ngd music_player_v4.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_v4_map.ncd music_player_v4.ncd music_player_v4.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player_v4.twx music_player_v4.ncd -o music_player_v4.twr music_player_v4.pcf -ucf nexys.ucf 
+bitgen -intstyle ise -f music_player_v4.ut music_player_v4.ncd 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys.ucf -p xc3s400-ft256-4 "music_player_v4.ngc" music_player_v4.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -detail -ir off -pr off -c 100 -o music_player_v4_map.ncd music_player_v4.ngd music_player_v4.pcf 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys.ucf -p xc3s400-ft256-4 "music_player_v4.ngc" music_player_v4.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -detail -ir off -pr off -c 100 -o music_player_v4_map.ncd music_player_v4.ngd music_player_v4.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_v4_map.ncd music_player_v4.ncd music_player_v4.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player_v4.twx music_player_v4.ncd -o music_player_v4.twr music_player_v4.pcf -ucf nexys.ucf 
+bitgen -intstyle ise -f music_player_v4.ut music_player_v4.ncd 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys.ucf -p xc3s400-ft256-4 "music_player_v4.ngc" music_player_v4.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -detail -ir off -pr off -c 100 -o music_player_v4_map.ncd music_player_v4.ngd music_player_v4.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_v4_map.ncd music_player_v4.ncd music_player_v4.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player_v4.twx music_player_v4.ncd -o music_player_v4.twr music_player_v4.pcf -ucf nexys.ucf 
+bitgen -intstyle ise -f music_player_v4.ut music_player_v4.ncd 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys.ucf -p xc3s400-ft256-4 "music_player_v4.ngc" music_player_v4.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -detail -ir off -pr off -c 100 -o music_player_v4_map.ncd music_player_v4.ngd music_player_v4.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_v4_map.ncd music_player_v4.ncd music_player_v4.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player_v4.twx music_player_v4.ncd -o music_player_v4.twr music_player_v4.pcf -ucf nexys.ucf 
+bitgen -intstyle ise -f music_player_v4.ut music_player_v4.ncd 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys.ucf -p xc3s400-ft256-4 "music_player_v4.ngc" music_player_v4.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -detail -ir off -pr off -c 100 -o music_player_v4_map.ncd music_player_v4.ngd music_player_v4.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_v4_map.ncd music_player_v4.ncd music_player_v4.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player_v4.twx music_player_v4.ncd -o music_player_v4.twr music_player_v4.pcf -ucf nexys.ucf 
+bitgen -intstyle ise -f music_player_v4.ut music_player_v4.ncd 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys.ucf -p xc3s400-ft256-4 "music_player_v4.ngc" music_player_v4.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -detail -ir off -pr off -c 100 -o music_player_v4_map.ncd music_player_v4.ngd music_player_v4.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_v4_map.ncd music_player_v4.ncd music_player_v4.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player_v4.twx music_player_v4.ncd -o music_player_v4.twr music_player_v4.pcf -ucf nexys.ucf 
+bitgen -intstyle ise -f music_player_v4.ut music_player_v4.ncd 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys.ucf -p xc3s400-ft256-4 "music_player_v4.ngc" music_player_v4.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -detail -ir off -pr off -c 100 -o music_player_v4_map.ncd music_player_v4.ngd music_player_v4.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_v4_map.ncd music_player_v4.ncd music_player_v4.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player_v4.twx music_player_v4.ncd -o music_player_v4.twr music_player_v4.pcf -ucf nexys.ucf 
+bitgen -intstyle ise -f music_player_v4.ut music_player_v4.ncd 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys.ucf -p xc3s400-ft256-4 "music_player_v4.ngc" music_player_v4.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -detail -ir off -pr off -c 100 -o music_player_v4_map.ncd music_player_v4.ngd music_player_v4.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_v4_map.ncd music_player_v4.ncd music_player_v4.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player_v4.twx music_player_v4.ncd -o music_player_v4.twr music_player_v4.pcf -ucf nexys.ucf 
+bitgen -intstyle ise -f music_player_v4.ut music_player_v4.ncd 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v4/music_player_v4.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys.ucf -p xc3s400-ft256-4 "music_player_v4.ngc" music_player_v4.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -detail -ir off -pr off -c 100 -o music_player_v4_map.ncd music_player_v4.ngd music_player_v4.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_v4_map.ncd music_player_v4.ncd music_player_v4.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player_v4.twx music_player_v4.ncd -o music_player_v4.twr music_player_v4.pcf -ucf nexys.ucf 
+bitgen -intstyle ise -f music_player_v4.ut music_player_v4.ncd 
