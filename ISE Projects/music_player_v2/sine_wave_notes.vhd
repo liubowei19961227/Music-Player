@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 library work;
 use work.constants.all;
 
-entity sine_wave_notes is
+entity music_player_v2 is
 	port(
 		clk : in std_logic;
 		btn : in std_logic_vector(3 downto 0);
@@ -13,9 +13,9 @@ entity sine_wave_notes is
 		led : out std_logic_vector(7 downto 0);
 		s : out std_logic
 	);
-end sine_wave_notes;
+end music_player_v2;
 
-architecture behavioral of sine_wave_notes is
+architecture behavioral of music_player_v2 is
 
 	signal note : natural range 0 to num_notes;
 	signal note_cc : natural range 0 to max_note_cc;

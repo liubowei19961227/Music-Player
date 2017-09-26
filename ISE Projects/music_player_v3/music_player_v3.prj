@@ -1,0 +1,4 @@
+vhdl work "constants.vhd"
+vhdl work "note_player.vhd"
+vhdl work "note_length_counter.vhd"
+vhdl work "sine_wave_notes.vhd"

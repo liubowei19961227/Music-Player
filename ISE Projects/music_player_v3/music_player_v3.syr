@@ -1,0 +1,607 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> WARNING:Xst:1583 - You are using an internal switch '-use_new_parser'.
+WARNING:Xst:3152 - You have chosen to run a version of XST which is not the default solution
+   for the specified device family. You are free to use it in order to take
+   advantage of its enhanced HDL parsing/elaboration capabilities. However,
+   please be aware that you may be impacted by  language support differences.
+   This version may also result in circuit performance and device utilization
+   differences for your particular design. You can always revert back to the
+   default XST solution by setting the "use_new_parser" option to value "no" 
+   on the XST command line or in the XST process properties panel.
+Reading design: music_player_v3.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "music_player_v3.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "music_player_v3"
+Output Format                      : NGC
+Target Device                      : xc3s400-4-ft256
+
+---- Source Options
+Use New Parser                     : yes
+Top Module Name                    : music_player_v3
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Ryan\OneDrive - UNSW\Documents\2017 Semester 2\COMP3601 - Desgin Project A\Git Repositry\ISE Projects\music_player_v3\constants.vhd" into library work
+Parsing package <constants>.
+Parsing VHDL file "C:\Users\Ryan\OneDrive - UNSW\Documents\2017 Semester 2\COMP3601 - Desgin Project A\Git Repositry\ISE Projects\music_player_v3\note_player.vhd" into library work
+Parsing entity <note_player>.
+Parsing architecture <Behavioral> of entity <note_player>.
+Parsing VHDL file "C:\Users\Ryan\OneDrive - UNSW\Documents\2017 Semester 2\COMP3601 - Desgin Project A\Git Repositry\ISE Projects\music_player_v3\note_length_counter.vhd" into library work
+Parsing entity <note_length_counter>.
+Parsing architecture <Behavioral> of entity <note_length_counter>.
+Parsing VHDL file "C:\Users\Ryan\OneDrive - UNSW\Documents\2017 Semester 2\COMP3601 - Desgin Project A\Git Repositry\ISE Projects\music_player_v3\sine_wave_notes.vhd" into library work
+Parsing entity <music_player_v3>.
+Parsing architecture <behavioral> of entity <music_player_v3>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <music_player_v3> (architecture <behavioral>) from library <work>.
+
+Elaborating entity <note_length_counter> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <note_player> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <music_player_v3>.
+    Related source file is "C:\Users\Ryan\OneDrive - UNSW\Documents\2017 Semester 2\COMP3601 - Desgin Project A\Git Repositry\ISE Projects\music_player_v3\sine_wave_notes.vhd".
+    Found 6-bit register for signal <music_index>.
+    Found 1-bit register for signal <second_pulse>.
+    Found 4-bit register for signal <note>.
+    Found 2-bit register for signal <octave>.
+    Found 7-bit register for signal <note_length_in_twelfths>.
+    Found 22-bit register for signal <twelfth_cc>.
+    Found 3-bit adder for signal <n0048> created at line 62.
+    Found 6-bit adder for signal <music_index[5]_GND_5_o_add_6_OUT> created at line 79.
+    Found 20x3-bit multiplier for signal <n0036> created at line 63.
+    Found 64x6-bit Read Only RAM for signal <_n0133>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Multiplier(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  42 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <music_player_v3> synthesized.
+
+Synthesizing Unit <note_length_counter>.
+    Related source file is "C:\Users\Ryan\OneDrive - UNSW\Documents\2017 Semester 2\COMP3601 - Desgin Project A\Git Repositry\ISE Projects\music_player_v3\note_length_counter.vhd".
+    Found 1-bit register for signal <is_new_note>.
+    Found 1-bit register for signal <is_mute>.
+    Found 28-bit register for signal <note_length_partial>.
+    Found 29-bit subtractor for signal <GND_6_o_GND_6_o_sub_7_OUT> created at line 48.
+    Found 28-bit adder for signal <n0045[27:0]> created at line 33.
+    Found 29-bit adder for signal <n0036> created at line 33.
+    Found 28-bit adder for signal <note_length_partial[27]_GND_6_o_add_8_OUT> created at line 52.
+    Found 22x7-bit multiplier for signal <n0023> created at line 29.
+    Found 28-bit comparator greater for signal <articulation_cc[27]_note_length_partial[27]_LessThan_6_o> created at line 43
+    Found 29-bit comparator lessequal for signal <n0011> created at line 48
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred  30 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <note_length_counter> synthesized.
+
+Synthesizing Unit <note_player>.
+    Related source file is "C:\Users\Ryan\OneDrive - UNSW\Documents\2017 Semester 2\COMP3601 - Desgin Project A\Git Repositry\ISE Projects\music_player_v3\note_player.vhd".
+    Found 1-bit register for signal <square_wave>.
+    Found 17-bit register for signal <note_pitch_partial>.
+    Found 19-bit subtractor for signal <GND_8_o_GND_8_o_sub_5_OUT> created at line 34.
+    Found 17-bit adder for signal <note_pitch_partial[16]_GND_8_o_add_6_OUT> created at line 38.
+    Found 14x4-bit multiplier for signal <note[3]_octave_mult[3]_MuLt_3_OUT> created at line 34.
+    Found 19-bit comparator greater for signal <n0007> created at line 34
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  18 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <note_player> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 64x6-bit single-port Read Only RAM                    : 1
+# Multipliers                                          : 3
+ 14x4-bit multiplier                                   : 1
+ 20x3-bit multiplier                                   : 1
+ 22x7-bit multiplier                                   : 1
+# Adders/Subtractors                                   : 8
+ 17-bit adder                                          : 1
+ 19-bit subtractor                                     : 1
+ 28-bit adder                                          : 2
+ 29-bit adder                                          : 1
+ 29-bit subtractor                                     : 1
+ 3-bit adder                                           : 1
+ 6-bit adder                                           : 1
+# Registers                                            : 11
+ 1-bit register                                        : 4
+ 17-bit register                                       : 1
+ 2-bit register                                        : 1
+ 22-bit register                                       : 1
+ 28-bit register                                       : 1
+ 4-bit register                                        : 1
+ 6-bit register                                        : 1
+ 7-bit register                                        : 1
+# Comparators                                          : 3
+ 19-bit comparator greater                             : 1
+ 28-bit comparator greater                             : 1
+ 29-bit comparator lessequal                           : 1
+# Multiplexers                                         : 6
+ 17-bit 2-to-1 multiplexer                             : 1
+ 28-bit 2-to-1 multiplexer                             : 1
+ 29-bit 2-to-1 multiplexer                             : 2
+ 6-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1426 - The value init of the FF/Latch note_length_in_twelfths_2 hinder the constant cleaning in the block music_player_v3.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch note_length_in_twelfths_3 hinder the constant cleaning in the block music_player_v3.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <note_length_in_twelfths_0> has a constant value of 0 in block <music_player_v3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <note_length_in_twelfths_1> has a constant value of 0 in block <music_player_v3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <note_length_in_twelfths_4> has a constant value of 0 in block <music_player_v3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <note_length_in_twelfths_5> has a constant value of 0 in block <music_player_v3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <note_length_in_twelfths_6> has a constant value of 0 in block <music_player_v3>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <music_player_v3>.
+	Found pipelined multiplier on signal <n0036>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0133> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 6-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <music_index[5]_music_index[5]_mux_8_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_n0036 by adding 1 register level(s).
+Unit <music_player_v3> synthesized (advanced).
+
+Synthesizing (advanced) Unit <note_length_counter>.
+The following registers are absorbed into counter <note_length_partial>: 1 register on signal <note_length_partial>.
+Unit <note_length_counter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <note_player>.
+The following registers are absorbed into counter <note_pitch_partial>: 1 register on signal <note_pitch_partial>.
+Unit <note_player> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 64x6-bit single-port distributed Read Only RAM        : 1
+# Multipliers                                          : 3
+ 14x4-bit multiplier                                   : 1
+ 20x3-bit registered multiplier                        : 1
+ 22x7-bit multiplier                                   : 1
+# Adders/Subtractors                                   : 6
+ 19-bit subtractor                                     : 1
+ 28-bit adder                                          : 1
+ 29-bit adder                                          : 1
+ 29-bit subtractor                                     : 1
+ 3-bit adder                                           : 1
+ 6-bit adder                                           : 1
+# Counters                                             : 2
+ 17-bit up counter                                     : 1
+ 28-bit up counter                                     : 1
+# Registers                                            : 23
+ Flip-Flops                                            : 23
+# Comparators                                          : 3
+ 19-bit comparator greater                             : 1
+ 28-bit comparator greater                             : 1
+ 29-bit comparator lessequal                           : 1
+# Multiplexers                                         : 4
+ 29-bit 2-to-1 multiplexer                             : 2
+ 6-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch note_length_in_twelfths_3 hinder the constant cleaning in the block music_player_v3.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch note_length_in_twelfths_2 hinder the constant cleaning in the block music_player_v3.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <note_length_in_twelfths_0> has a constant value of 0 in block <music_player_v3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <note_length_in_twelfths_1> has a constant value of 0 in block <music_player_v3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <note_length_in_twelfths_4> has a constant value of 0 in block <music_player_v3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <note_length_in_twelfths_5> has a constant value of 0 in block <music_player_v3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <note_length_in_twelfths_6> has a constant value of 0 in block <music_player_v3>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <note_length_in_twelfths_2> in Unit <music_player_v3> is equivalent to the following FF/Latch, which will be removed : <note_length_in_twelfths_3> 
+
+Optimizing unit <music_player_v3> ...
+
+Optimizing unit <note_length_counter> ...
+
+Optimizing unit <note_player> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block music_player_v3, actual ratio is 5.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 84
+ Flip-Flops                                            : 84
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : music_player_v3.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 753
+#      GND                         : 1
+#      INV                         : 54
+#      LUT1                        : 10
+#      LUT2                        : 109
+#      LUT3                        : 79
+#      LUT4                        : 99
+#      LUT4_D                      : 11
+#      MUXCY                       : 229
+#      MUXF5                       : 3
+#      VCC                         : 1
+#      XORCY                       : 157
+# FlipFlops/Latches                : 84
+#      FD                          : 22
+#      FDE                         : 3
+#      FDR                         : 53
+#      FDRE                        : 4
+#      FDSE                        : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 21
+#      IBUF                        : 12
+#      OBUF                        : 9
+# MULTs                            : 4
+#      MULT18X18                   : 4
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400ft256-4 
+
+ Number of Slices:                      191  out of   3584     5%  
+ Number of Slice Flip Flops:             84  out of   7168     1%  
+ Number of 4 input LUTs:                362  out of   7168     5%  
+ Number of IOs:                          22
+ Number of bonded IOBs:                  22  out of    173    12%  
+ Number of MULT18X18s:                    4  out of     16    25%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 84    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 20.375ns (Maximum Frequency: 49.081MHz)
+   Minimum input arrival time before clock: 9.430ns
+   Maximum output required time after clock: 7.241ns
+   Maximum combinational path delay: 7.266ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 20.375ns (frequency: 49.081MHz)
+  Total number of paths / destination ports: 7657872 / 85
+-------------------------------------------------------------------------
+Delay:               20.375ns (Levels of Logic = 44)
+  Source:            note_length_in_twelfths_2 (FF)
+  Destination:       x_note_length_counter/note_length_partial_27 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: note_length_in_twelfths_2 to x_note_length_counter/note_length_partial_27
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.720   0.917  note_length_in_twelfths_2 (note_length_in_twelfths_2)
+     MULT18X18:B2->P20     1   4.072   0.996  x_note_length_counter/Mmult_n0023_submult_0 (x_note_length_counter/Mmult_n0023_submult_0_20)
+     LUT2:I1->O            1   0.551   0.000  x_note_length_counter/Mmult_n0023_Madd_lut<20> (x_note_length_counter/Mmult_n0023_Madd_lut<20>)
+     MUXCY:S->O            1   0.500   0.000  x_note_length_counter/Mmult_n0023_Madd_cy<20> (x_note_length_counter/Mmult_n0023_Madd_cy<20>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mmult_n0023_Madd_cy<21> (x_note_length_counter/Mmult_n0023_Madd_cy<21>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mmult_n0023_Madd_cy<22> (x_note_length_counter/Mmult_n0023_Madd_cy<22>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mmult_n0023_Madd_cy<23> (x_note_length_counter/Mmult_n0023_Madd_cy<23>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mmult_n0023_Madd_cy<24> (x_note_length_counter/Mmult_n0023_Madd_cy<24>)
+     XORCY:CI->O           8   0.904   1.083  x_note_length_counter/Mmult_n0023_Madd_xor<25> (x_note_length_counter/n0023<25>)
+     INV:I->O              1   0.551   0.000  x_note_length_counter/Msub_GND_6_o_GND_6_o_sub_7_OUT_lut<25>_INV_0 (x_note_length_counter/Msub_GND_6_o_GND_6_o_sub_7_OUT_lut<25>)
+     MUXCY:S->O            1   0.500   0.000  x_note_length_counter/Msub_GND_6_o_GND_6_o_sub_7_OUT_cy<25> (x_note_length_counter/Msub_GND_6_o_GND_6_o_sub_7_OUT_cy<25>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Msub_GND_6_o_GND_6_o_sub_7_OUT_cy<26> (x_note_length_counter/Msub_GND_6_o_GND_6_o_sub_7_OUT_cy<26>)
+     XORCY:CI->O           1   0.904   0.996  x_note_length_counter/Msub_GND_6_o_GND_6_o_sub_7_OUT_xor<27> (x_note_length_counter/GND_6_o_GND_6_o_sub_7_OUT<27>)
+     LUT2:I1->O            1   0.551   0.000  x_note_length_counter/Mcompar_GND_6_o_GND_6_o_LessThan_8_o_lut<27> (x_note_length_counter/Mcompar_GND_6_o_GND_6_o_LessThan_8_o_lut<27>)
+     MUXCY:S->O            1   0.500   0.000  x_note_length_counter/Mcompar_GND_6_o_GND_6_o_LessThan_8_o_cy<27> (x_note_length_counter/Mcompar_GND_6_o_GND_6_o_LessThan_8_o_cy<27>)
+     MUXCY:CI->O          30   0.281   1.842  x_note_length_counter/Mcompar_GND_6_o_GND_6_o_LessThan_8_o_cy<28> (x_note_length_counter/GND_6_o_GND_6_o_LessThan_8_o)
+     INV:I->O              1   0.551   0.801  x_note_length_counter/GND_6_o_GND_6_o_LessThan_8_o_inv1_INV_0 (x_note_length_counter/GND_6_o_GND_6_o_LessThan_8_o_inv)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcount_note_length_partial_cy<0> (x_note_length_counter/Mcount_note_length_partial_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcount_note_length_partial_cy<1> (x_note_length_counter/Mcount_note_length_partial_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcount_note_length_partial_cy<2> (x_note_length_counter/Mcount_note_length_partial_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcount_note_length_partial_cy<3> (x_note_length_counter/Mcount_note_length_partial_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcount_note_length_partial_cy<4> (x_note_length_counter/Mcount_note_length_partial_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcount_note_length_partial_cy<5> (x_note_length_counter/Mcount_note_length_partial_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcount_note_length_partial_cy<6> (x_note_length_counter/Mcount_note_length_partial_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcount_note_length_partial_cy<7> (x_note_length_counter/Mcount_note_length_partial_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcount_note_length_partial_cy<8> (x_note_length_counter/Mcount_note_length_partial_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcount_note_length_partial_cy<9> (x_note_length_counter/Mcount_note_length_partial_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcount_note_length_partial_cy<10> (x_note_length_counter/Mcount_note_length_partial_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcount_note_length_partial_cy<11> (x_note_length_counter/Mcount_note_length_partial_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcount_note_length_partial_cy<12> (x_note_length_counter/Mcount_note_length_partial_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcount_note_length_partial_cy<13> (x_note_length_counter/Mcount_note_length_partial_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcount_note_length_partial_cy<14> (x_note_length_counter/Mcount_note_length_partial_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcount_note_length_partial_cy<15> (x_note_length_counter/Mcount_note_length_partial_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcount_note_length_partial_cy<16> (x_note_length_counter/Mcount_note_length_partial_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcount_note_length_partial_cy<17> (x_note_length_counter/Mcount_note_length_partial_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcount_note_length_partial_cy<18> (x_note_length_counter/Mcount_note_length_partial_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcount_note_length_partial_cy<19> (x_note_length_counter/Mcount_note_length_partial_cy<19>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcount_note_length_partial_cy<20> (x_note_length_counter/Mcount_note_length_partial_cy<20>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcount_note_length_partial_cy<21> (x_note_length_counter/Mcount_note_length_partial_cy<21>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcount_note_length_partial_cy<22> (x_note_length_counter/Mcount_note_length_partial_cy<22>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcount_note_length_partial_cy<23> (x_note_length_counter/Mcount_note_length_partial_cy<23>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcount_note_length_partial_cy<24> (x_note_length_counter/Mcount_note_length_partial_cy<24>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcount_note_length_partial_cy<25> (x_note_length_counter/Mcount_note_length_partial_cy<25>)
+     MUXCY:CI->O           0   0.064   0.000  x_note_length_counter/Mcount_note_length_partial_cy<26> (x_note_length_counter/Mcount_note_length_partial_cy<26>)
+     XORCY:CI->O           1   0.904   0.000  x_note_length_counter/Mcount_note_length_partial_xor<27> (x_note_length_counter/Mcount_note_length_partial27)
+     FDR:D                     0.203          x_note_length_counter/note_length_partial_27
+    ----------------------------------------
+    Total                     20.375ns (13.740ns logic, 6.635ns route)
+                                       (67.4% logic, 32.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 413 / 89
+-------------------------------------------------------------------------
+Offset:              9.430ns (Levels of Logic = 4)
+  Source:            sw<1> (PAD)
+  Destination:       Mmult_n0036_2 (FF)
+  Destination Clock: clk rising
+
+  Data Path: sw<1> to Mmult_n0036_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   0.821   1.256  sw_1_IBUF (Madd_n0048_lut<1>)
+     LUT2:I0->O            1   0.551   0.801  Madd_n0048_cy<1>11 (Madd_n0048_cy<1>)
+     MULT18X18:B2->P19     3   4.001   1.246  Mmult_n0036_submult_0 (Mmult_n0036_submult_0_19)
+     LUT2:I0->O            1   0.551   0.000  Mmult_n0036_Madd_lut<19>1 (Mmult_n0036_Madd_19)
+     FD:D                      0.203          Mmult_n0036_2
+    ----------------------------------------
+    Total                      9.430ns (6.127ns logic, 3.303ns route)
+                                       (65.0% logic, 35.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              7.241ns (Levels of Logic = 1)
+  Source:            second_pulse (FF)
+  Destination:       led<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: second_pulse to led<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.720   0.877  second_pulse (second_pulse)
+     OBUF:I->O                 5.644          led_7_OBUF (led<7>)
+    ----------------------------------------
+    Total                      7.241ns (6.364ns logic, 0.877ns route)
+                                       (87.9% logic, 12.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Delay:               7.266ns (Levels of Logic = 2)
+  Source:            sw<5> (PAD)
+  Destination:       led<6> (PAD)
+
+  Data Path: sw<5> to led<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.821   0.801  sw_5_IBUF (led_6_OBUF)
+     OBUF:I->O                 5.644          led_6_OBUF (led<6>)
+    ----------------------------------------
+    Total                      7.266ns (6.465ns logic, 0.801ns route)
+                                       (89.0% logic, 11.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   20.375|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.72 secs
+ 
+WARNING:Xst:3152 - You have chosen to run a version of XST which is not the default solution
+   for the specified device family. You are free to use it in order to take
+   advantage of its enhanced HDL parsing/elaboration capabilities. However,
+   please be aware that you may be impacted by  language support differences.
+   This version may also result in circuit performance and device utilization
+   differences for your particular design. You can always revert back to the
+   default XST solution by setting the "use_new_parser" option to value "no" 
+   on the XST command line or in the XST process properties panel.
+--> 
+
+Total memory usage is 221336 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   17 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+
