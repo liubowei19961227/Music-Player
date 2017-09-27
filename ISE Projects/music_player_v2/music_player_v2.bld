@@ -29,10 +29,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 156620 kilobytes
+Total memory usage is 156748 kilobytes
 
 Writing NGD file "music_player_v2.ngd" ...
 Total REAL time to NGDBUILD completion:  4 sec
-Total CPU time to NGDBUILD completion:   3 sec
+Total CPU time to NGDBUILD completion:   4 sec
 
 Writing NGDBUILD log file "music_player_v2.bld"...

@@ -10,23 +10,23 @@ Target Device  : xc3s400
 Target Package : ft256
 Target Speed   : -4
 Mapper Version : spartan3 -- $Revision: 1.55 $
-Mapped Date    : Tue Sep 26 14:20:15 2017
+Mapped Date    : Wed Sep 27 16:28:44 2017
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    2
+Number of warnings:    0
 Logic Utilization:
-  Number of Slice Flip Flops:            84 out of   7,168    1%
-  Number of 4 input LUTs:               351 out of   7,168    4%
+  Number of Slice Flip Flops:            87 out of   7,168    1%
+  Number of 4 input LUTs:               340 out of   7,168    4%
 Logic Distribution:
-  Number of occupied Slices:            201 out of   3,584    5%
-    Number of Slices containing only related logic:     201 out of     201 100%
-    Number of Slices containing unrelated logic:          0 out of     201   0%
+  Number of occupied Slices:            215 out of   3,584    5%
+    Number of Slices containing only related logic:     215 out of     215 100%
+    Number of Slices containing unrelated logic:          0 out of     215   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         363 out of   7,168    5%
-    Number used as logic:               351
-    Number used as a route-thru:         12
+  Total Number of 4 input LUTs:         393 out of   7,168    5%
+    Number used as logic:               340
+    Number used as a route-thru:         53
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
@@ -35,9 +35,9 @@ Logic Distribution:
   Number of MULT18X18s:                   4 out of      16   25%
   Number of BUFGMUXs:                     1 out of       8   12%
 
-Average Fanout of Non-Clock Nets:                2.37
+Average Fanout of Non-Clock Nets:                2.46
 
-Peak Memory Usage:  231 MB
+Peak Memory Usage:  232 MB
 Total REAL time to MAP completion:  1 secs 
 Total CPU time to MAP completion:   1 secs 
 
@@ -80,14 +80,6 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:Pack:249 - The following adjacent carry multiplexers occupy different
-   slice components.  The resulting carry chain will have suboptimal timing.
-   	x_note_length_counter/Mcompar_GND_6_o_GND_6_o_LessThan_8_o_cy<28>
-   	x_note_length_counter/Mcount_note_length_partial_cy<0>
-WARNING:Pack:249 - The following adjacent carry multiplexers occupy different
-   slice components.  The resulting carry chain will have suboptimal timing.
-   	x_note_player/Mcompar_n0007_cy<18>
-   	x_note_player/Mcount_note_pitch_partial_cy<0>
 
 Section 3 - Informational
 -------------------------
@@ -99,7 +91,7 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 Section 4 - Removed Logic Summary
 ---------------------------------
    2 block(s) optimized away
-  27 Block(s) redundant
+  69 Block(s) redundant
 
 Section 5 - Removed Logic
 -------------------------
@@ -111,31 +103,73 @@ VCC 		XST_VCC
 
 Redundant Block(s):
 TYPE 		BLOCK
-LOCALBUF 		x_note_length_counter/Mmux_n00257_SW0/LUT4_D_BUF
-LOCALBUF 		x_note_length_counter/Mmux_n00258_SW1/LUT4_D_BUF
+LOCALBUF 		x_note_length_counter/Mmux_n00254_SW1/LUT4_D_BUF
+LOCALBUF 		x_note_length_counter/Mmux_n00255_SW0/LUT4_D_BUF
+LOCALBUF 		x_note_length_counter/Mmux_n00256_SW1/LUT4_D_BUF
+LOCALBUF 		x_note_length_counter/Mmux_n00257_SW1/LUT4_D_BUF
+LOCALBUF 		x_note_length_counter/Mmux_n00258_SW0/LUT4_D_BUF
 LOCALBUF 		x_note_length_counter/Mmux_n00259_SW1/LUT4_D_BUF
-LOCALBUF 		x_note_length_counter/Mmux_n002510_SW0/LUT4_D_BUF
-LOCALBUF 		x_note_length_counter/Mmux_n002511_SW1/LUT4_D_BUF
+LOCALBUF 		x_note_length_counter/Mmux_n002510_SW1/LUT4_D_BUF
+LOCALBUF 		x_note_length_counter/Mmux_n002511_SW0/LUT4_D_BUF
 LOCALBUF 		x_note_length_counter/Mmux_n002513_SW1/LUT4_D_BUF
 LOCALBUF 		x_note_length_counter/Mmux_n002514_SW1/LUT4_D_BUF
-LOCALBUF 		x_note_length_counter/Mmux_n002518_SW1/LUT4_D_BUF
-LOCALBUF 		x_note_length_counter/Mmux_n002517_SW1/LUT4_D_BUF
-LOCALBUF 		x_note_length_counter/Mmux_n002516_SW0/LUT4_D_BUF
 LOCALBUF 		x_note_length_counter/Mmux_n002515_SW1/LUT4_D_BUF
+LOCALBUF 		x_note_length_counter/Mmux_n002516_SW0/LUT4_D_BUF
+LOCALBUF 		x_note_length_counter/Mmux_n002517_SW1/LUT4_D_BUF
+LOCALBUF 		x_note_length_counter/Mmux_n002518_SW1/LUT4_D_BUF
 LUT1 		x_note_length_counter/Madd_n0036_cy<26>_rt
 LUT1 		x_note_length_counter/Madd_n0036_cy<25>_rt
 LUT1 		x_note_length_counter/Msub_GND_6_o_GND_6_o_sub_7_OUT_cy<0>_rt
 LUT1 		x_note_length_counter/Madd_n0045[27:0]_cy<26>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<26>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<25>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<24>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<23>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<22>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<21>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<20>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<19>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<18>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<17>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<16>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<15>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<14>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<13>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<12>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<11>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<10>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<9>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<8>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<7>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<6>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<5>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<4>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<3>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<2>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<1>_rt
+LUT1 		x_note_length_counter/Mmult_n0023_Madd_cy<26>_rt
 LUT1 		x_note_length_counter/Mmult_n0023_Madd_cy<25>_rt
 LUT1 		x_note_length_counter/Mmult_n0023_Madd_cy<24>_rt
-LUT1 		x_note_length_counter/Mmult_n0023_Madd_cy<23>_rt
-LUT1 		x_note_length_counter/Mmult_n0023_Madd_cy<22>_rt
-LUT1 		x_note_length_counter/Mmult_n0023_Madd_cy<21>_rt
 LUT1 		x_note_player/Msub_GND_8_o_GND_8_o_sub_5_OUT_cy<0>_rt
-INV 		x_note_player/Mcompar_n0007_cy<18>_inv_INV_0
+LUT1 		x_note_player/Mcount_note_pitch_partial_cy<15>_rt
+LUT1 		x_note_player/Mcount_note_pitch_partial_cy<14>_rt
+LUT1 		x_note_player/Mcount_note_pitch_partial_cy<13>_rt
+LUT1 		x_note_player/Mcount_note_pitch_partial_cy<12>_rt
+LUT1 		x_note_player/Mcount_note_pitch_partial_cy<11>_rt
+LUT1 		x_note_player/Mcount_note_pitch_partial_cy<10>_rt
+LUT1 		x_note_player/Mcount_note_pitch_partial_cy<9>_rt
+LUT1 		x_note_player/Mcount_note_pitch_partial_cy<8>_rt
+LUT1 		x_note_player/Mcount_note_pitch_partial_cy<7>_rt
+LUT1 		x_note_player/Mcount_note_pitch_partial_cy<6>_rt
+LUT1 		x_note_player/Mcount_note_pitch_partial_cy<5>_rt
+LUT1 		x_note_player/Mcount_note_pitch_partial_cy<4>_rt
+LUT1 		x_note_player/Mcount_note_pitch_partial_cy<3>_rt
+LUT1 		x_note_player/Mcount_note_pitch_partial_cy<2>_rt
+LUT1 		x_note_player/Mcount_note_pitch_partial_cy<1>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_xor<27>_rt
+LUT1 		x_note_player/Mcount_note_pitch_partial_xor<16>_rt
 INV 		second_pulse_INV_62_o1_INV_0
 INV 		btn<0>_inv1_INV_0
-INV 		x_note_length_counter/GND_6_o_GND_6_o_LessThan_8_o_inv1_INV_0
 INV 		x_note_player/square_wave_INV_56_o1_INV_0
 MUXCY
 		x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_Less
@@ -217,9 +251,9 @@ Section 13 - Utilization by Hierarchy
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Module                 | Partition | Slices        | Slice Reg     | LUTs          | LUTRAM        | BRAM      | MULT18X18 | BUFG  | DCM   | Full Hierarchical Name                 |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| music_player_v3/       |           | 26/201        | 36/84         | 27/359        | 0/0           | 0/0       | 1/4       | 1/1   | 0/0   | music_player_v3                        |
-| +x_note_length_counter |           | 135/135       | 30/30         | 258/258       | 0/0           | 0/0       | 2/2       | 0/0   | 0/0   | music_player_v3/x_note_length_counter  |
-| +x_note_player         |           | 40/40         | 18/18         | 74/74         | 0/0           | 0/0       | 1/1       | 0/0   | 0/0   | music_player_v3/x_note_player          |
+| music_player_v3/       |           | 39/215        | 39/87         | 53/389        | 0/0           | 0/0       | 1/4       | 1/1   | 0/0   | music_player_v3                        |
+| +x_note_length_counter |           | 137/137       | 30/30         | 264/264       | 0/0           | 0/0       | 2/2       | 0/0   | 0/0   | music_player_v3/x_note_length_counter  |
+| +x_note_player         |           | 39/39         | 18/18         | 72/72         | 0/0           | 0/0       | 1/1       | 0/0   | 0/0   | music_player_v3/x_note_player          |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 * Slices can be packed with basic elements from multiple hierarchies.

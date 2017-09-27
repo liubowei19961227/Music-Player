@@ -60,7 +60,15 @@ begin
 					if down = '1' then
 						duty_cc := 255 - duty_cc;
 					end if;
-					duty_cc := duty_cc * 2;
+					if octave = 0 then
+						duty_cc := duty_cc * 2;
+					elsif octave = 1 then
+						duty_cc := duty_cc + duty_cc/4;
+					elsif octave = 2 then
+						duty_cc := duty_cc;
+					else
+						duty_cc := duty_cc - duty_cc/2;
+					end if;
 					if duty_cc /= 0 then
 						note_pulse <= '1';
 					end if;

@@ -1,0 +1,93 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Sep 27 19:35:03 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "s" LOCATE = SITE "D5" LEVEL 1;
+COMP "clk" LOCATE = SITE "A8" LEVEL 1;
+COMP "btn" LOCATE = SITE "J13" LEVEL 1;
+COMP "sw<0>" LOCATE = SITE "N15" LEVEL 1;
+COMP "sw<1>" LOCATE = SITE "J16" LEVEL 1;
+COMP "sw<2>" LOCATE = SITE "K16" LEVEL 1;
+COMP "sw<3>" LOCATE = SITE "K15" LEVEL 1;
+COMP "sw<4>" LOCATE = SITE "L15" LEVEL 1;
+COMP "sw<5>" LOCATE = SITE "M16" LEVEL 1;
+COMP "sw<6>" LOCATE = SITE "M15" LEVEL 1;
+COMP "sw<7>" LOCATE = SITE "N16" LEVEL 1;
+COMP "led<0>" LOCATE = SITE "L14" LEVEL 1;
+COMP "led<1>" LOCATE = SITE "L13" LEVEL 1;
+COMP "led<2>" LOCATE = SITE "M14" LEVEL 1;
+COMP "led<3>" LOCATE = SITE "L12" LEVEL 1;
+COMP "led<4>" LOCATE = SITE "N14" LEVEL 1;
+COMP "led<5>" LOCATE = SITE "M13" LEVEL 1;
+COMP "led<6>" LOCATE = SITE "P14" LEVEL 1;
+COMP "led<7>" LOCATE = SITE "R16" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+TIMEGRP tnm_clk = BEL "music_pitch_array_value_0" BEL
+        "music_pitch_array_value_1" BEL "music_pitch_array_value_2" BEL
+        "music_pitch_array_value_3" BEL "music_pitch_array_value_4" BEL
+        "music_pitch_array_value_5" BEL "music_index_0" BEL "music_index_1"
+        BEL "music_index_2" BEL "music_index_3" BEL "music_index_4" BEL
+        "music_index_5" BEL "x_note_length_counter/note_length_partial_0" BEL
+        "x_note_length_counter/note_length_partial_27" BEL
+        "x_note_length_counter/note_length_partial_26" BEL
+        "x_note_length_counter/note_length_partial_25" BEL
+        "x_note_length_counter/note_length_partial_24" BEL
+        "x_note_length_counter/note_length_partial_23" BEL
+        "x_note_length_counter/note_length_partial_22" BEL
+        "x_note_length_counter/note_length_partial_20" BEL
+        "x_note_length_counter/note_length_partial_19" BEL
+        "x_note_length_counter/note_length_partial_21" BEL
+        "x_note_length_counter/note_length_partial_18" BEL
+        "x_note_length_counter/note_length_partial_17" BEL
+        "x_note_length_counter/note_length_partial_16" BEL
+        "x_note_length_counter/note_length_partial_15" BEL
+        "x_note_length_counter/note_length_partial_14" BEL
+        "x_note_length_counter/note_length_partial_13" BEL
+        "x_note_length_counter/note_length_partial_11" BEL
+        "x_note_length_counter/note_length_partial_10" BEL
+        "x_note_length_counter/note_length_partial_12" BEL
+        "x_note_length_counter/note_length_partial_9" BEL
+        "x_note_length_counter/note_length_partial_8" BEL
+        "x_note_length_counter/note_length_partial_7" BEL
+        "x_note_length_counter/note_length_partial_6" BEL
+        "x_note_length_counter/note_length_partial_5" BEL
+        "x_note_length_counter/note_length_partial_4" BEL
+        "x_note_length_counter/note_length_partial_2" BEL
+        "x_note_length_counter/note_length_partial_1" BEL
+        "x_note_length_counter/note_length_partial_3" BEL
+        "x_note_length_counter/is_new_note" BEL
+        "x_note_length_counter/is_mute" BEL
+        "x_note_player/sample_rate_partial_0" BEL "x_note_player/index_0" BEL
+        "x_note_player/sample_rate_partial_8" BEL
+        "x_note_player/sample_rate_partial_7" BEL
+        "x_note_player/sample_rate_partial_6" BEL
+        "x_note_player/sample_rate_partial_5" BEL
+        "x_note_player/sample_rate_partial_4" BEL
+        "x_note_player/sample_rate_partial_3" BEL
+        "x_note_player/sample_rate_partial_1" BEL
+        "x_note_player/sample_rate_partial_2" BEL "x_note_player/index_7" BEL
+        "x_note_player/index_5" BEL "x_note_player/index_4" BEL
+        "x_note_player/index_6" BEL "x_note_player/index_3" BEL
+        "x_note_player/index_2" BEL "x_note_player/index_1" BEL
+        "x_note_player/note_pulse" BEL "x_note_player/pwm_pulse" BEL
+        "x_note_player/duty_cc_8" BEL "x_note_player/duty_cc_7" BEL
+        "x_note_player/duty_cc_6" BEL "x_note_player/duty_cc_5" BEL
+        "x_note_player/duty_cc_4" BEL "x_note_player/duty_cc_3" BEL
+        "x_note_player/duty_cc_2" BEL "x_note_player/duty_cc_1" BEL
+        "x_note_player/duty_cc_0" BEL "x_note_player/down" BEL
+        "x_note_player/prev_duty_cc_8" BEL "x_note_player/prev_duty_cc_7" BEL
+        "x_note_player/prev_duty_cc_6" BEL "x_note_player/prev_duty_cc_5" BEL
+        "x_note_player/prev_duty_cc_4" BEL "x_note_player/prev_duty_cc_3" BEL
+        "x_note_player/prev_duty_cc_2" BEL "x_note_player/prev_duty_cc_1" BEL
+        "x_note_player/prev_duty_cc_0" BEL "x_note_player/base_index_10" BEL
+        "x_note_player/base_index_9" BEL "x_note_player/base_index_8" BEL
+        "x_note_player/base_index_7" BEL "x_note_player/base_index_6" BEL
+        "x_note_player/base_index_5" BEL "x_note_player/base_index_4" BEL
+        "x_note_player/base_index_3" BEL "x_note_player/base_index_2" BEL
+        "x_note_player/base_index_1" BEL "x_note_player/base_index_0" BEL
+        "x_note_player/Mram_n0110.A" BEL "clk_BUFGP/BUFG.GCLKMUX" BEL
+        "clk_BUFGP/BUFG";
+ts_clk = PERIOD TIMEGRP "tnm_clk" 25 MHz HIGH 50%;
+SCHEMATIC END;
+

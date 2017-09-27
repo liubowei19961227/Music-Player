@@ -14,3 +14,15 @@ map -intstyle ise -p xc3s400-ft256-4 -cm area -detail -ir off -pr off -c 100 -o 
 par -w -intstyle ise -ol high -t 1 music_player_v3_map.ncd music_player_v3.ncd music_player_v3.pcf 
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player_v3.twx music_player_v3.ncd -o music_player_v3.twr music_player_v3.pcf -ucf nexys.ucf 
 bitgen -intstyle ise -f music_player_v3.ut music_player_v3.ncd 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v3/music_player_v3.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v3/music_player_v3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys.ucf -p xc3s400-ft256-4 "music_player_v3.ngc" music_player_v3.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -detail -ir off -pr off -c 100 -o music_player_v3_map.ncd music_player_v3.ngd music_player_v3.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_v3_map.ncd music_player_v3.ncd music_player_v3.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player_v3.twx music_player_v3.ncd -o music_player_v3.twr music_player_v3.pcf -ucf nexys.ucf 
+bitgen -intstyle ise -f music_player_v3.ut music_player_v3.ncd 
+xst -intstyle ise -ifn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v3/music_player_v3.xst" -ofn "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v3/music_player_v3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys.ucf -p xc3s400-ft256-4 "music_player_v3.ngc" music_player_v3.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -detail -ir off -pr off -c 100 -o music_player_v3_map.ncd music_player_v3.ngd music_player_v3.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_v3_map.ncd music_player_v3.ncd music_player_v3.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player_v3.twx music_player_v3.ncd -o music_player_v3.twr music_player_v3.pcf -ucf nexys.ucf 
+bitgen -intstyle ise -f music_player_v3.ut music_player_v3.ncd 

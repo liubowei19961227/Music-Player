@@ -33,17 +33,17 @@ Package constants is
 
 --  pokemon theme
 
-	constant music_array : music_array_type := (note_c, note_d, note_e, note_f, note_g, note_a, note_b, note_c, note_b, note_a, note_g, note_f, note_e, note_d, note_c, rest, note_c, note_d, note_e, note_f, note_g, note_a, note_b, note_c, note_b, note_a, note_g, note_f, note_e, note_d, note_c, rest, note_c, note_d, note_e, note_f, note_g, note_a, note_b, note_c, note_b, note_a, note_g, note_f, note_e, note_d, note_c, rest, note_c, note_d, note_e, note_f, note_g, note_a, note_b, note_c, note_b, note_a, note_g, note_f, note_e, note_d, note_c, rest);
+--	signal music_array : music_array_type := (note_c, note_d, note_e, note_f, note_g, note_a, note_b, note_c, note_b, note_a, note_g, note_f, note_e, note_d, note_c, rest, note_c, note_d, note_e, note_f, note_g, note_a, note_b, note_c, note_b, note_a, note_g, note_f, note_e, note_d, note_c, rest, note_c, note_d, note_e, note_f, note_g, note_a, note_b, note_c, note_b, note_a, note_g, note_f, note_e, note_d, note_c, rest, note_c, note_d, note_e, note_f, note_g, note_a, note_b, note_c, note_b, note_a, note_g, note_f, note_e, note_d, note_c, rest);
 	
-	constant music_length_array : music_length_array_type := (12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12);
+--	signal music_length_array : music_length_array_type := (12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12);
 
-	constant music_octave_array : music_octave_array_type := (0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 3, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3);
+--	signal music_octave_array : music_octave_array_type := (0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 3, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3);
 
---	signal music_array : music_array_type := (rest, note_e, note_e, note_e, note_e, note_e, note_d, note_b, note_a, note_a, note_e, note_e, note_d, note_c, note_d, rest, rest, note_c, note_f, note_f, note_f, note_e, note_d, note_c, note_c, note_e, note_e, note_d, note_c, note_e, rest, note_e, note_e, note_e, note_e, note_e, note_d, note_b, note_a, note_e, note_e, note_d, note_c, note_d, rest, rest, note_f, note_f, note_f, note_f, note_f, note_e, note_d, note_c, note_c, note_e, note_e, note_e, note_c, note_e, rest, note_e, note_g, note_a);
+	signal music_array : music_array_type := (rest, note_e, note_e, note_e, note_e, note_e, note_d, note_b, note_a, note_a, note_e, note_e, note_d, note_c, note_d, rest, rest, note_c, note_f, note_f, note_f, note_e, note_d, note_c, note_c, note_e, note_e, note_d, note_c, note_e, rest, note_e, note_e, note_e, note_e, note_e, note_d, note_b, note_a, note_e, note_e, note_d, note_c, note_d, rest, rest, note_f, note_f, note_f, note_f, note_f, note_e, note_d, note_c, note_c, note_e, note_e, note_e, note_c, note_e, rest, note_e, note_g, note_a);
 	
---	signal music_length_array : music_length_array_type := (6, 6, 6, 6, 18, 6, 12, 6, 24, 6, 12, 12, 6, 6, 12, 48, 6, 6, 12, 12, 6, 12, 12, 24, 6, 12, 6, 12, 6, 60, 12, 6, 6, 6, 12, 6, 12, 6, 30, 6, 18, 12, 6, 30, 36, 6, 6, 6, 6, 18, 6, 12, 6, 24, 6, 12, 6, 12, 6, 36, 6, 6, 6, 6);
+	signal music_length_array : music_length_array_type := (6, 6, 6, 6, 18, 6, 12, 6, 24, 6, 12, 12, 6, 6, 12, 48, 6, 6, 12, 12, 6, 12, 12, 24, 6, 12, 6, 12, 6, 60, 12, 6, 6, 6, 12, 6, 12, 6, 30, 6, 18, 12, 6, 30, 36, 6, 6, 6, 6, 18, 6, 12, 6, 24, 6, 12, 6, 12, 6, 36, 6, 6, 6, 6);
 	
---	signal music_octave_array : music_octave_array_type := (1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
+	signal music_octave_array : music_octave_array_type := (1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
 	
 	type sin_table_indices_array_type is array (0 to num_notes) of natural range 0 to max_sin_table_index;
 	
