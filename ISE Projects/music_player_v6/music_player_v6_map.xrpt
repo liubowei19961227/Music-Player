@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Map" timeStamp="Wed Sep 27 19:35:04 2017">
+  <application stringID="Map" timeStamp="Wed Sep 27 22:49:18 2017">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -70,16 +70,16 @@
         <item dataType="int" stringID="MAP_NUM_ERRORS" value="0"/>
         <item dataType="int" stringID="MAP_FILTERED_WARNINGS" value="0"/>
         <item dataType="int" stringID="MAP_NUM_WARNINGS" value="0"/>
-        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="237936"/>
-        <item stringID="MAP_TOTAL_REAL_TIME" value="1 secs "/>
+        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="238192"/>
+        <item stringID="MAP_TOTAL_REAL_TIME" value="2 secs "/>
         <item stringID="MAP_TOTAL_CPU_TIME" value="1 secs "/>
       </section>
       <section stringID="MAP_SLICE_REPORTING">
-        <item AVAILABLE="7168" dataType="int" label="Number of Slice Flip Flops" stringID="MAP_NUM_SLICE_FF" value="91"/>
-        <item AVAILABLE="7168" dataType="int" label="Number of 4 input LUTs" stringID="MAP_NUM_4_INPUT_LUT" value="423">
-          <item dataType="int" label="Number of route-thrus" stringID="MAP_NUM_LUT_RT" value="53"/>
+        <item AVAILABLE="7168" dataType="int" label="Number of Slice Flip Flops" stringID="MAP_NUM_SLICE_FF" value="116"/>
+        <item AVAILABLE="7168" dataType="int" label="Number of 4 input LUTs" stringID="MAP_NUM_4_INPUT_LUT" value="438">
+          <item dataType="int" label="Number of route-thrus" stringID="MAP_NUM_LUT_RT" value="37"/>
         </item>
-        <item AVAILABLE="3584" dataType="int" label="Number of occupied Slices" stringID="MAP_OCCUPIED_SLICES" value="222">
+        <item AVAILABLE="3584" dataType="int" label="Number of occupied Slices" stringID="MAP_OCCUPIED_SLICES" value="238">
           <item dataType="int" label="Number of Slices containing unrelated logic" stringID="MAP_NUM_SLICE_UNRELATED" value="0"/>
         </item>
       </section>
@@ -99,7 +99,7 @@
       </section>
       <section stringID="MAP_HARD_IP_REPORTING">
         <item AVAILABLE="16" dataType="int" stringID="MAP_NUM_RAMB16" value="1"/>
-        <item AVAILABLE="16" dataType="int" stringID="MAP_NUM_MULT18X18" value="4"/>
+        <item AVAILABLE="16" dataType="int" stringID="MAP_NUM_MULT18X18" value="5"/>
         <item AVAILABLE="8" dataType="int" label="Number of BUFGMUXs" stringID="MAP_NUM_BUFGMUX" value="1"/>
       </section>
       <section stringID="MAP_MACRO_RPM_REPORTING">
@@ -254,7 +254,7 @@
       </section>
       <section stringID="MAP_RPM_MACROS">
         <section stringID="MAP_SHAPE_SECTION">
-          <item dataType="int" stringID="MAP_NUM_SHAPE" value="17"/>
+          <item dataType="int" stringID="MAP_NUM_SHAPE" value="14"/>
         </section>
       </section>
       <section stringID="MAP_GUIDE_REPORT"/>
@@ -323,18 +323,18 @@
         <item stringID="MAP_INIT_31" value="3936322F2C292623211E1B19171412100E0C0B09080605040302020101000000"/>
         <item stringID="MAP_INIT_32" value="B5B1ADAAA6A29E9A96928E8A86827E7A76726E6A66625E5A56524E4B4743403C"/>
         <item stringID="MAP_INIT_33" value="FEFDFDFCFBFAF9F7F6F4F3F1EFEDEBE9E6E4E1DFDCD9D6D3D0CDCAC6C3C0BCB8"/>
-        <item stringID="MAP_INIT_34" value="0000000000000000000000000000000000000000000000000000000000FFFFFE"/>
-        <item stringID="MAP_INIT_35" value="0000000000000000000000000000000000000000000000000000000000000000"/>
-        <item stringID="MAP_INIT_36" value="0000000000000000000000000000000000000000000000000000000000000000"/>
-        <item stringID="MAP_INIT_37" value="0000000000000000000000000000000000000000000000000000000000000000"/>
-        <item stringID="MAP_INIT_38" value="0000000000000000000000000000000000000000000000000000000000000000"/>
-        <item stringID="MAP_INIT_39" value="0000000000000000000000000000000000000000000000000000000000000000"/>
-        <item stringID="MAP_INIT_3A" value="0000000000000000000000000000000000000000000000000000000000000000"/>
-        <item stringID="MAP_INIT_3B" value="0000000000000000000000000000000000000000000000000000000000000000"/>
-        <item stringID="MAP_INIT_3C" value="0000000000000000000000000000000000000000000000000000000000000000"/>
-        <item stringID="MAP_INIT_3D" value="0000000000000000000000000000000000000000000000000000000000000000"/>
-        <item stringID="MAP_INIT_3E" value="0000000000000000000000000000000000000000000000000000000000000000"/>
-        <item stringID="MAP_INIT_3F" value="0000000000000000000000000000000000000000000000000000000000000000"/>
+        <item stringID="MAP_INIT_34" value="0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE"/>
+        <item stringID="MAP_INIT_35" value="0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE"/>
+        <item stringID="MAP_INIT_36" value="0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE"/>
+        <item stringID="MAP_INIT_37" value="0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE"/>
+        <item stringID="MAP_INIT_38" value="FFFFFFFEFEFDFCFCFBFAF8F7F6F4F3F1EFEDEBE9E7E5E2E0DDDBD8D5D2D0CDC9"/>
+        <item stringID="MAP_INIT_39" value="3936322F2C292623211E1B19171412100E0C0B09080605040302020101000000"/>
+        <item stringID="MAP_INIT_3A" value="B5B1ADAAA6A29E9A96928E8A86827E7A76726E6A66625E5A56524E4B4743403C"/>
+        <item stringID="MAP_INIT_3B" value="FEFDFDFCFBFAF9F7F6F4F3F1EFEDEBE9E6E4E1DFDCD9D6D3D0CDCAC6C3C0BCB8"/>
+        <item stringID="MAP_INIT_3C" value="0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE"/>
+        <item stringID="MAP_INIT_3D" value="0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE"/>
+        <item stringID="MAP_INIT_3E" value="0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE"/>
+        <item stringID="MAP_INIT_3F" value="0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE"/>
         <item stringID="MAP_INIT_A" value="000"/>
         <item stringID="MAP_SRVAL_A" value="000"/>
       </section>
@@ -352,12 +352,12 @@
           <property label="DCM" stringID="MAP_DCM"/>
           <node label="Module Name" stringID="MAP_MODULE" value="music_player_v6">
             <item label="Partition" stringID="MAP_PARTITION" value=""/>
-            <item ACCUMULATED="224" dataType="int" label="Slices" stringID="MAP_SLICES" value="15"/>
-            <item ACCUMULATED="91" dataType="int" label="Slice Reg" stringID="MAP_SLICE_REG" value="12"/>
-            <item ACCUMULATED="422" dataType="int" label="LUTs" stringID="MAP_LUTS" value="27"/>
+            <item ACCUMULATED="239" dataType="int" label="Slices" stringID="MAP_SLICES" value="16"/>
+            <item ACCUMULATED="116" dataType="int" label="Slice Reg" stringID="MAP_SLICE_REG" value="13"/>
+            <item ACCUMULATED="435" dataType="int" label="LUTs" stringID="MAP_LUTS" value="27"/>
             <item ACCUMULATED="0" dataType="int" label="LUTRAM" stringID="MAP_LUTRAM" value="0"/>
             <item ACCUMULATED="1" dataType="int" label="BRAM" stringID="MAP_BRAM" value="0"/>
-            <item ACCUMULATED="4" dataType="int" stringID="MAP_MULT18X18" value="1"/>
+            <item ACCUMULATED="5" dataType="int" stringID="MAP_MULT18X18" value="1"/>
             <item ACCUMULATED="1" dataType="int" label="BUFG" stringID="MAP_BUFG" value="1"/>
             <item ACCUMULATED="0" dataType="int" label="DCM" stringID="MAP_DCM" value="0"/>
             <node label="Module Name" stringID="MAP_MODULE" value="x_note_length_counter">
@@ -373,12 +373,12 @@
             </node>
             <node label="Module Name" stringID="MAP_MODULE" value="x_note_player">
               <item label="Partition" stringID="MAP_PARTITION" value=""/>
-              <item ACCUMULATED="88" dataType="int" label="Slices" stringID="MAP_SLICES" value="88"/>
-              <item ACCUMULATED="49" dataType="int" label="Slice Reg" stringID="MAP_SLICE_REG" value="49"/>
-              <item ACCUMULATED="167" dataType="int" label="LUTs" stringID="MAP_LUTS" value="167"/>
+              <item ACCUMULATED="102" dataType="int" label="Slices" stringID="MAP_SLICES" value="102"/>
+              <item ACCUMULATED="73" dataType="int" label="Slice Reg" stringID="MAP_SLICE_REG" value="73"/>
+              <item ACCUMULATED="180" dataType="int" label="LUTs" stringID="MAP_LUTS" value="180"/>
               <item ACCUMULATED="0" dataType="int" label="LUTRAM" stringID="MAP_LUTRAM" value="0"/>
               <item ACCUMULATED="1" dataType="int" label="BRAM" stringID="MAP_BRAM" value="1"/>
-              <item ACCUMULATED="1" dataType="int" stringID="MAP_MULT18X18" value="1"/>
+              <item ACCUMULATED="2" dataType="int" stringID="MAP_MULT18X18" value="2"/>
               <item ACCUMULATED="0" dataType="int" label="BUFG" stringID="MAP_BUFG" value="0"/>
               <item ACCUMULATED="0" dataType="int" label="DCM" stringID="MAP_DCM" value="0"/>
             </node>

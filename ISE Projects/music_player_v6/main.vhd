@@ -22,6 +22,7 @@ architecture behavioral of music_player_v6 is
 	signal note_length_in_twelfths : natural range 0 to max_note_length_in_twelfths;
 	signal twelfth_cc : natural range 0 to max_twelfth_cc;
 	signal music_pitch_array_value : unsigned(7 downto 0);
+	signal music_length_array_value : unsigned(7 downto 0);
 			
 	signal rst : std_logic;
 	signal is_new_note : std_logic;
@@ -68,7 +69,7 @@ begin
 						music_index := music_index + 1;
 					end if;
 					music_pitch_array_value <= music_pitch_array(music_index);
-					note_length_in_twelfths <= to_integer(music_length_array(music_index));
+					music_length_array_value <= music_length_array(music_index);
 				end if;
 				if is_mute = '1' then
 					music_pitch_array_value <= x"0C";
@@ -77,6 +78,7 @@ begin
 		end if;
 	end process;
 	
+	note_length_in_twelfths <= to_integer(music_length_array_value);
 	note <= to_integer(music_pitch_array_value(3 downto 0));
 	octave <= to_integer(music_pitch_array_value(5 downto 4));
 	

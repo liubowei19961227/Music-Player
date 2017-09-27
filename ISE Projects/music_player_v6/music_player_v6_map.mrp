@@ -10,36 +10,36 @@ Target Device  : xc3s400
 Target Package : ft256
 Target Speed   : -4
 Mapper Version : spartan3 -- $Revision: 1.55 $
-Mapped Date    : Wed Sep 27 19:35:02 2017
+Mapped Date    : Wed Sep 27 22:49:16 2017
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    0
 Logic Utilization:
-  Number of Slice Flip Flops:            91 out of   7,168    1%
-  Number of 4 input LUTs:               370 out of   7,168    5%
+  Number of Slice Flip Flops:           116 out of   7,168    1%
+  Number of 4 input LUTs:               401 out of   7,168    5%
 Logic Distribution:
-  Number of occupied Slices:            222 out of   3,584    6%
-    Number of Slices containing only related logic:     222 out of     222 100%
-    Number of Slices containing unrelated logic:          0 out of     222   0%
+  Number of occupied Slices:            238 out of   3,584    6%
+    Number of Slices containing only related logic:     238 out of     238 100%
+    Number of Slices containing unrelated logic:          0 out of     238   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         423 out of   7,168    5%
-    Number used as logic:               370
-    Number used as a route-thru:         53
+  Total Number of 4 input LUTs:         438 out of   7,168    6%
+    Number used as logic:               401
+    Number used as a route-thru:         37
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
   Number of bonded IOBs:                 19 out of     173   10%
   Number of RAMB16s:                      1 out of      16    6%
-  Number of MULT18X18s:                   4 out of      16   25%
+  Number of MULT18X18s:                   5 out of      16   31%
   Number of BUFGMUXs:                     1 out of       8   12%
 
-Average Fanout of Non-Clock Nets:                2.73
+Average Fanout of Non-Clock Nets:                2.82
 
-Peak Memory Usage:  232 MB
-Total REAL time to MAP completion:  1 secs 
+Peak Memory Usage:  233 MB
+Total REAL time to MAP completion:  2 secs 
 Total CPU time to MAP completion:   1 secs 
 
 NOTES:
@@ -92,7 +92,7 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 Section 4 - Removed Logic Summary
 ---------------------------------
    2 block(s) optimized away
-  62 Block(s) redundant
+  46 Block(s) redundant
 
 Section 5 - Removed Logic
 -------------------------
@@ -104,18 +104,14 @@ VCC 		XST_VCC
 
 Redundant Block(s):
 TYPE 		BLOCK
-LOCALBUF 		x_note_player/Madd_index[7]_GND_8_o_add_2_OUT_xor<3>111/LUT3_D_BUF
-LOCALBUF 		x_note_player/PWR_8_o_sample_rate_partial[8]_equal_2_o<8>2/LUT4_D_BUF
-LOCALBUF 		x_note_player/PWR_8_o_sample_rate_partial[8]_equal_2_o<8>4/LUT2_L_BUF
-LOCALBUF
-		x_note_player/Mmux_GND_8_o_sin_table_array_value[8]_mux_25_OUT11_SW0/LUT2_L_BU
-F
-LOCALBUF 		x_note_player/Mmux_down_down_MUX_2198_o1_SW0/LUT4_D_BUF
-LOCALBUF 		x_note_player/Mmux_pwm_pulse_down_MUX_2200_o131_SW0/LUT4_L_BUF
-LOCALBUF 		x_note_player/Mmux_pwm_pulse_down_MUX_2200_o11_SW0/LUT3_D_BUF
-LOCALBUF 		x_note_player/Mmux_pwm_pulse_down_MUX_2200_o1321/LUT4_D_BUF
-LOCALBUF 		x_note_player/Mmux_pwm_pulse_down_MUX_2200_o16_SW1/LUT4_D_BUF
-LOCALBUF 		x_note_player/Mmux_pwm_pulse_down_MUX_2200_o1313_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		x_note_player/Madd_index[7]_GND_8_o_add_20_OUT_cy<3>11/LUT4_D_BUF
+LOCALBUF 		x_note_player/Madd_index[7]_GND_8_o_add_20_OUT_cy<5>11_SW0/LUT2_L_BUF
+LOCALBUF 		x_note_player/Madd_n0134_cy<0>11/LUT3_D_BUF
+LOCALBUF 		x_note_player/Msub_GND_8_o_GND_8_o_sub_13_OUT<7:0>_cy<1>11/LUT4_D_BUF
+LOCALBUF 		x_note_player/Madd_n0134_cy<4>11/LUT4_D_BUF
+LOCALBUF 		x_note_player/Madd_n0134_cy<2>11/LUT4_D_BUF
+LOCALBUF 		x_note_player/Msub_GND_8_o_GND_8_o_sub_13_OUT<7:0>_cy<4>11/LUT4_D_BUF
+LOCALBUF 		x_note_player/Msub_GND_8_o_GND_8_o_sub_13_OUT<7:0>_cy<3>11/LUT4_D_BUF
 LUT1 		x_note_length_counter/Madd_n0039_cy<26>_rt
 LUT1 		x_note_length_counter/Madd_n0039_cy<25>_rt
 LUT1 		x_note_length_counter/Msub_GND_6_o_GND_6_o_sub_8_OUT_cy<0>_rt
@@ -149,24 +145,10 @@ LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<1>_rt
 LUT1 		x_note_length_counter/Mmult_n0026_Madd_cy<26>_rt
 LUT1 		x_note_length_counter/Mmult_n0026_Madd_cy<25>_rt
 LUT1 		x_note_length_counter/Mmult_n0026_Madd_cy<24>_rt
-LUT1 		x_note_player/Mcount_sample_rate_partial_cy<7>_rt
-LUT1 		x_note_player/Mcount_sample_rate_partial_cy<6>_rt
-LUT1 		x_note_player/Mcount_sample_rate_partial_cy<5>_rt
-LUT1 		x_note_player/Mcount_sample_rate_partial_cy<4>_rt
-LUT1 		x_note_player/Mcount_sample_rate_partial_cy<3>_rt
-LUT1 		x_note_player/Mcount_sample_rate_partial_cy<2>_rt
-LUT1 		x_note_player/Mcount_sample_rate_partial_cy<1>_rt
-LUT1 		x_note_player/Mcount_index_cy<6>_rt
-LUT1 		x_note_player/Mcount_index_cy<5>_rt
-LUT1 		x_note_player/Mcount_index_cy<4>_rt
-LUT1 		x_note_player/Mcount_index_cy<3>_rt
-LUT1 		x_note_player/Mcount_index_cy<2>_rt
-LUT1 		x_note_player/Mcount_index_cy<1>_rt
+LUT1 		x_note_player/Madd_n0138_cy<11>_rt
 LUT1 		x_note_length_counter/Mcount_note_length_partial_xor<27>_rt
-LUT1 		x_note_player/Mcount_sample_rate_partial_xor<8>_rt
-LUT1 		x_note_player/Mcount_index_xor<7>_rt
-LUT1 		x_note_player/Mmux_down_down_MUX_2195_o1921_cy_rt
 INV 		Mcount_music_index1_INV_0
+INV 		x_note_player/Mmux_sample_rate_partial[8]_GND_8_o_mux_39_OUT11_INV_0
 INV 		x_note_player/rst_inv1_INV_0
 
 Section 6 - IOB Properties
@@ -232,7 +214,7 @@ DISABLE_ATTR:LOW
 
 
 
-RAMB16 "x_note_player/Mram_n0110":
+RAMB16 "x_note_player/Mram_GND_8_o_X_7_o_wide_mux_31_OUT":
 INITP_00 = 0000000000000000000000000000000000000000000000000000000000000000
 INITP_01 = 0000000000000000000000000000000000000000000000000000000000000000
 INITP_02 = 0000000000000000000000000000000000000000000000000000000000000000
@@ -293,18 +275,18 @@ INIT_30 = FFFFFFFEFEFDFCFCFBFAF8F7F6F4F3F1EFEDEBE9E7E5E2E0DDDBD8D5D2D0CDC9
 INIT_31 = 3936322F2C292623211E1B19171412100E0C0B09080605040302020101000000
 INIT_32 = B5B1ADAAA6A29E9A96928E8A86827E7A76726E6A66625E5A56524E4B4743403C
 INIT_33 = FEFDFDFCFBFAF9F7F6F4F3F1EFEDEBE9E6E4E1DFDCD9D6D3D0CDCAC6C3C0BCB8
-INIT_34 = 0000000000000000000000000000000000000000000000000000000000FFFFFE
-INIT_35 = 0000000000000000000000000000000000000000000000000000000000000000
-INIT_36 = 0000000000000000000000000000000000000000000000000000000000000000
-INIT_37 = 0000000000000000000000000000000000000000000000000000000000000000
-INIT_38 = 0000000000000000000000000000000000000000000000000000000000000000
-INIT_39 = 0000000000000000000000000000000000000000000000000000000000000000
-INIT_3a = 0000000000000000000000000000000000000000000000000000000000000000
-INIT_3b = 0000000000000000000000000000000000000000000000000000000000000000
-INIT_3c = 0000000000000000000000000000000000000000000000000000000000000000
-INIT_3d = 0000000000000000000000000000000000000000000000000000000000000000
-INIT_3e = 0000000000000000000000000000000000000000000000000000000000000000
-INIT_3f = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_34 = 0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE
+INIT_35 = 0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE
+INIT_36 = 0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE
+INIT_37 = 0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE
+INIT_38 = FFFFFFFEFEFDFCFCFBFAF8F7F6F4F3F1EFEDEBE9E7E5E2E0DDDBD8D5D2D0CDC9
+INIT_39 = 3936322F2C292623211E1B19171412100E0C0B09080605040302020101000000
+INIT_3a = B5B1ADAAA6A29E9A96928E8A86827E7A76726E6A66625E5A56524E4B4743403C
+INIT_3b = FEFDFDFCFBFAF9F7F6F4F3F1EFEDEBE9E6E4E1DFDCD9D6D3D0CDCAC6C3C0BCB8
+INIT_3c = 0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE
+INIT_3d = 0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE
+INIT_3e = 0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE
+INIT_3f = 0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE
 PORTA_ATTR:2048X9
 WRITEMODEA:WRITE_FIRST
 INIT_A = 000
@@ -321,9 +303,9 @@ Section 13 - Utilization by Hierarchy
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Module                 | Partition | Slices        | Slice Reg     | LUTs          | LUTRAM        | BRAM      | MULT18X18 | BUFG  | DCM   | Full Hierarchical Name                 |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| music_player_v6/       |           | 15/224        | 12/91         | 27/422        | 0/0           | 0/1       | 1/4       | 1/1   | 0/0   | music_player_v6                        |
+| music_player_v6/       |           | 16/239        | 13/116        | 27/435        | 0/0           | 0/1       | 1/5       | 1/1   | 0/0   | music_player_v6                        |
 | +x_note_length_counter |           | 121/121       | 30/30         | 228/228       | 0/0           | 0/0       | 2/2       | 0/0   | 0/0   | music_player_v6/x_note_length_counter  |
-| +x_note_player         |           | 88/88         | 49/49         | 167/167       | 0/0           | 1/1       | 1/1       | 0/0   | 0/0   | music_player_v6/x_note_player          |
+| +x_note_player         |           | 102/102       | 73/73         | 180/180       | 0/0           | 1/1       | 2/2       | 0/0   | 0/0   | music_player_v6/x_note_player          |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 * Slices can be packed with basic elements from multiple hierarchies.
