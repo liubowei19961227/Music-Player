@@ -1,0 +1,12 @@
+EN large_number_7seg NULL "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory/large_number_7seg.vhd" sub00/vhpl08 1506052520
+EN flash_mem_cntl NULL "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory/flash_mem_cntl.vhd" sub00/vhpl06 1506052522
+AR flash_memory behavioral "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory/flash_memory.vhd" sub00/vhpl01 1506052517
+EN flash_memory NULL "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory/flash_memory.vhd" sub00/vhpl00 1506052516
+AR bin_to_dec behavioral "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory/bin_to_dec.vhd" sub00/vhpl03 1506052515
+EN seven_seg_display NULL "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory/seven_seg_display.vhd" sub00/vhpl04 1506052518
+EN flash_memory_component NULL "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory/flash_memory_component.vhd" sub00/vhpl10 1506052524
+AR flash_memory_component behavioral "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory/flash_memory_component.vhd" sub00/vhpl11 1506052525
+AR flash_mem_cntl behavioral "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory/flash_mem_cntl.vhd" sub00/vhpl07 1506052523
+AR large_number_7seg behavioral "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory/large_number_7seg.vhd" sub00/vhpl09 1506052521
+AR seven_seg_display behavioral "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory/seven_seg_display.vhd" sub00/vhpl05 1506052519
+EN bin_to_dec NULL "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory/bin_to_dec.vhd" sub00/vhpl02 1506052514

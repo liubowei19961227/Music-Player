@@ -1,0 +1,29 @@
+
+NET "LED<0>" LOC = "L14";
+NET "LED<1>" LOC = "L13";
+NET "LED<2>" LOC = "M14";
+#NET "LED<3>" LOC = "L12";
+#NET "LED<4>" LOC = "N14";
+#NET "LED<5>" LOC = "M13";
+#NET "LED<6>" LOC = "P14";
+#NET "LED<7>" LOC = "R16";
+
+NET "CLK" LOC = "A8";
+NET "trigger" LOC = "R13";
+NET "echo" LOC = "T13";
+
+
+
+NET "HEX<0>"  LOC = "F13" ;
+NET "HEX<1>"  LOC = "E13" ;
+NET "HEX<2>"  LOC = "G15" ;
+NET "HEX<3>"  LOC = "H13" ;
+NET "HEX<4>"  LOC = "J14" ;
+NET "HEX<5>"  LOC = "E14" ;
+NET "HEX<6>"  LOC = "G16" ;
+#NET "HEX<7>"  LOC = "H14" ;
+# Anode pins for 7 seg
+NET "AN<0>" LOC = "G14";
+NET "AN<1>" LOC = "G12";
+NET "AN<2>" LOC = "G13";
+NET "AN<3>" LOC = "F12";

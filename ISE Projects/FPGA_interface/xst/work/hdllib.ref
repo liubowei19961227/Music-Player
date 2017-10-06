@@ -1,0 +1,12 @@
+AR block_ram behavioral "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/block_ram.vhd" sub00/vhpl05 1507261697
+EN block_ram NULL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/block_ram.vhd" sub00/vhpl04 1507261696
+AR bin_to_dec behavioral "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/bin_to_dec.vhd" sub00/vhpl09 1507261691
+EN seven_seg_display NULL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/seven_seg_display.vhd" sub00/vhpl10 1507261698
+AR music_player behavioral "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/music_player.vhd" sub00/vhpl07 1507261701
+AR epp_interface behavioral "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/EPP_interface.vhd" sub00/vhpl03 1507261695
+EN epp_interface NULL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/EPP_interface.vhd" sub00/vhpl02 1507261694
+EN dpimref NULL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/dpimref.vhd" sub00/vhpl00 1507261692
+AR dpimref behavioral "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/dpimref.vhd" sub00/vhpl01 1507261693
+AR seven_seg_display behavioral "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/seven_seg_display.vhd" sub00/vhpl11 1507261699
+EN music_player NULL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/music_player.vhd" sub00/vhpl06 1507261700
+EN bin_to_dec NULL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/bin_to_dec.vhd" sub00/vhpl08 1507261690

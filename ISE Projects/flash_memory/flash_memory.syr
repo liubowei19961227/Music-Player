@@ -1,0 +1,462 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Reading design: flash_memory.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "flash_memory.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "flash_memory"
+Output Format                      : NGC
+Target Device                      : xc3s400-4-ft256
+
+---- Source Options
+Top Module Name                    : flash_memory
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory/flash_memory.vhd" in Library work.
+Entity <flash_memory> compiled.
+Entity <flash_memory> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <flash_memory> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <flash_memory> in library <work> (Architecture <behavioral>).
+Entity <flash_memory> analyzed. Unit <flash_memory> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <flash_memory>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory/flash_memory.vhd".
+INFO:Xst:1799 - State write_delay_extend_state is never reached in FSM <current_state>.
+INFO:Xst:1799 - State wait_state is never reached in FSM <current_state>.
+    Found finite state machine <FSM_0> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 11                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Power Up State     | rst_state                                      |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit tristate buffer for signal <data>.
+    Found 22-bit register for signal <addr>.
+    Found 1-bit register for signal <CE>.
+    Found 1-bit register for signal <OE>.
+    Found 1-bit register for signal <WE>.
+    Found 1-bit register for signal <read_complete>.
+    Found 1-bit register for signal <write_complete>.
+    Found 32-bit register for signal <delay_counter>.
+    Found 32-bit adder for signal <delay_counter$share0000> created at line 116.
+    Found 32-bit register for signal <delay_extend_counter>.
+    Found 32-bit adder for signal <delay_extend_counter$addsub0000> created at line 174.
+    Found 16-bit register for signal <Mtridata_data> created at line 148.
+    Found 1-bit register for signal <Mtrien_data> created at line 148.
+    Found 16-bit register for signal <read_data_sig>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred 124 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  16 Tristate(s).
+Unit <flash_memory> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 32-bit adder                                          : 2
+# Registers                                            : 11
+ 1-bit register                                        : 6
+ 16-bit register                                       : 2
+ 22-bit register                                       : 1
+ 32-bit register                                       : 2
+# Tristates                                            : 1
+ 16-bit tristate buffer                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <current_state/FSM> on signal <current_state[1:7]> with one-hot encoding.
+--------------------------------------
+ State                    | Encoding
+--------------------------------------
+ rst_state                | 0000001
+ write_rst_state          | 0000100
+ write_state              | 0001000
+ write_delay_state        | 0010000
+ write_delay_extend_state | unreached
+ read_rst_state           | 0000010
+ read_state               | 0100000
+ read_delay_state         | 1000000
+ wait_state               | unreached
+--------------------------------------
+WARNING:Xst:1710 - FF/Latch <write_complete> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Registers                                            : 124
+ Flip-Flops                                            : 124
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <delay_extend_counter_31> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_30> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_29> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_28> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_27> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_26> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_25> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_24> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_23> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_22> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_21> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_20> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_19> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_18> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_17> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_16> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_complete> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_0> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_1> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_2> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_3> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_4> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_5> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_6> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_7> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_8> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_9> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_10> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_11> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_12> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_13> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_14> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delay_extend_counter_15> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <flash_memory> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block flash_memory, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 98
+ Flip-Flops                                            : 98
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : flash_memory.ngr
+Top Level Output File Name         : flash_memory
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 124
+
+Cell Usage :
+# BELS                             : 232
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 31
+#      LUT2                        : 42
+#      LUT2_D                      : 2
+#      LUT3                        : 2
+#      LUT3_D                      : 2
+#      LUT3_L                      : 1
+#      LUT4                        : 75
+#      LUT4_D                      : 3
+#      MUXCY                       : 38
+#      VCC                         : 1
+#      XORCY                       : 32
+# FlipFlops/Latches                : 98
+#      FD                          : 34
+#      FDE                         : 33
+#      FDR                         : 1
+#      FDS                         : 28
+#      FDSE                        : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 123
+#      IBUF                        : 62
+#      IOBUF                       : 16
+#      OBUF                        : 45
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400ft256-4 
+
+ Number of Slices:                       87  out of   3584     2%  
+ Number of Slice Flip Flops:             82  out of   7168     1%  
+ Number of 4 input LUTs:                160  out of   7168     2%  
+ Number of IOs:                         124
+ Number of bonded IOBs:                 124  out of    173    71%  
+    IOB Flip Flops:                      16
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 98    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.719ns (Maximum Frequency: 114.692MHz)
+   Minimum input arrival time before clock: 4.195ns
+   Maximum output required time after clock: 7.844ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.719ns (frequency: 114.692MHz)
+  Total number of paths / destination ports: 6032 / 145
+-------------------------------------------------------------------------
+Delay:               8.719ns (Levels of Logic = 11)
+  Source:            delay_counter_23 (FF)
+  Destination:       delay_counter_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: delay_counter_23 to delay_counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.720   1.246  delay_counter_23 (delay_counter_23)
+     LUT4:I0->O            1   0.551   0.000  current_state_cmp_eq00001_wg_lut<0> (current_state_cmp_eq00001_wg_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  current_state_cmp_eq00001_wg_cy<0> (current_state_cmp_eq00001_wg_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  current_state_cmp_eq00001_wg_cy<1> (current_state_cmp_eq00001_wg_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  current_state_cmp_eq00001_wg_cy<2> (current_state_cmp_eq00001_wg_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  current_state_cmp_eq00001_wg_cy<3> (current_state_cmp_eq00001_wg_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  current_state_cmp_eq00001_wg_cy<4> (current_state_cmp_eq00001_wg_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  current_state_cmp_eq00001_wg_cy<5> (current_state_cmp_eq00001_wg_cy<5>)
+     MUXCY:CI->O           4   0.303   0.943  current_state_cmp_eq00001_wg_cy<6> (current_state_cmp_eq00001_wg_cy<6>)
+     LUT4:I3->O            3   0.551   0.975  current_state_cmp_eq0000 (current_state_cmp_eq0000)
+     LUT4:I2->O           16   0.551   1.305  delay_counter_mux0000<0>21 (N3)
+     LUT4:I2->O            1   0.551   0.000  delay_counter_mux0000<1>1 (delay_counter_mux0000<1>)
+     FD:D                      0.203          delay_counter_1
+    ----------------------------------------
+    Total                      8.719ns (4.250ns logic, 4.469ns route)
+                                       (48.7% logic, 51.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 81 / 80
+-------------------------------------------------------------------------
+Offset:              4.195ns (Levels of Logic = 2)
+  Source:            write_address<0> (PAD)
+  Destination:       addr_1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: write_address<0> to addr_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.821   0.996  write_address_0_IBUF (write_address_0_IBUF)
+     LUT4:I1->O            1   0.551   0.801  addr_mux0000<1>_SW0 (N37)
+     FDS:S                     1.026          addr_1
+    ----------------------------------------
+    Total                      4.195ns (2.398ns logic, 1.797ns route)
+                                       (57.2% logic, 42.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 74 / 58
+-------------------------------------------------------------------------
+Offset:              7.844ns (Levels of Logic = 1)
+  Source:            Mtrien_data (FF)
+  Destination:       data<15> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: Mtrien_data to data<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             16   0.720   1.237  Mtrien_data (Mtrien_data)
+     IOBUF:T->IO               5.887          data_15_IOBUF (data<15>)
+    ----------------------------------------
+    Total                      7.844ns (6.607ns logic, 1.237ns route)
+                                       (84.2% logic, 15.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.40 secs
+ 
+--> 
+
+Total memory usage is 205524 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   34 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+
