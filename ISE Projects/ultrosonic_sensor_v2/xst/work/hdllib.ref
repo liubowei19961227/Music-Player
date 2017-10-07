@@ -1,0 +1,6 @@
+AR ultrasonic_sensor behavioral "//vmware-host/shared folders/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.vhd" sub00/vhpl01 1507306357
+EN ultrasonic_sensor NULL "//vmware-host/shared folders/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.vhd" sub00/vhpl00 1507306356
+AR bin_to_dec behavioral "//vmware-host/shared folders/Desktop/fpga_connection/ultrosonic_sensor_v2/bin_to_dec.vhd" sub00/vhpl03 1507306353
+EN seven_seg_display NULL "//vmware-host/shared folders/Desktop/fpga_connection/ultrosonic_sensor_v2/seven_seg_display.vhd" sub00/vhpl04 1507306354
+AR seven_seg_display behavioral "//vmware-host/shared folders/Desktop/fpga_connection/ultrosonic_sensor_v2/seven_seg_display.vhd" sub00/vhpl05 1507306355
+EN bin_to_dec NULL "//vmware-host/shared folders/Desktop/fpga_connection/ultrosonic_sensor_v2/bin_to_dec.vhd" sub00/vhpl02 1507306352

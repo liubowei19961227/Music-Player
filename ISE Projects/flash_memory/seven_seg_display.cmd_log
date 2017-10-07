@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory/seven_seg_display.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory/seven_seg_display.syr" 

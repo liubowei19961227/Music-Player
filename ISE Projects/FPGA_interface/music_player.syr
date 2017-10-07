@@ -1,0 +1,632 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Reading design: music_player.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "music_player.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "music_player"
+Output Format                      : NGC
+Target Device                      : xc3s400-4-ft256
+
+---- Source Options
+Top Module Name                    : music_player
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/bin_to_dec.vhd" in Library work.
+Architecture behavioral of Entity bin_to_dec is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/dpimref.vhd" in Library work.
+Architecture behavioral of Entity dpimref is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/EPP_interface.vhd" in Library work.
+WARNING:HDLParsers:3530 - Time stamp of file "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/EPP_interface.vhd" is newer than current system time.
+Entity <epp_interface> compiled.
+Entity <epp_interface> (Architecture <behavioral>) compiled.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/block_ram.vhd" in Library work.
+Entity <block_ram> compiled.
+Entity <block_ram> (Architecture <behavioral>) compiled.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/seven_seg_display.vhd" in Library work.
+Architecture behavioral of Entity seven_seg_display is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/music_player.vhd" in Library work.
+Architecture behavioral of Entity music_player is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <music_player> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <EPP_interface> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <block_ram> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <seven_seg_display> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <dpimref> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <bin_to_dec> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <music_player> in library <work> (Architecture <behavioral>).
+Entity <music_player> analyzed. Unit <music_player> generated.
+
+Analyzing Entity <EPP_interface> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <rst_round_counter> in unit <EPP_interface> has a constant value of 1 during circuit operation. The register is replaced by logic.
+Entity <EPP_interface> analyzed. Unit <EPP_interface> generated.
+
+Analyzing Entity <dpimref> in library <work> (Architecture <behavioral>).
+Entity <dpimref> analyzed. Unit <dpimref> generated.
+
+Analyzing Entity <block_ram> in library <work> (Architecture <behavioral>).
+INFO:Xst:1432 - Contents of array <ram> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ram> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ram> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ram> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+Entity <block_ram> analyzed. Unit <block_ram> generated.
+
+Analyzing Entity <seven_seg_display> in library <work> (Architecture <behavioral>).
+Entity <seven_seg_display> analyzed. Unit <seven_seg_display> generated.
+
+Analyzing Entity <bin_to_dec> in library <work> (Architecture <behavioral>).
+Entity <bin_to_dec> analyzed. Unit <bin_to_dec> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <block_ram>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/block_ram.vhd".
+WARNING:Xst:647 - Input <address<31:10>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:1439 - HDL ADVISOR - You may have used signed signal(s) to address this RAM. If that is the case, negative values being out of range, sign bits were ignored. As a result only the first half of the RAM is actually accessed. Please check your source code.
+    Found 513x16-bit single-port RAM <Mram_ram> for signal <ram>.
+    Found 16-bit register for signal <data_o>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  16 D-type flip-flop(s).
+Unit <block_ram> synthesized.
+
+
+Synthesizing Unit <dpimref>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/dpimref.vhd".
+    Register <regData1> equivalent to <data_output> has been removed
+    Found finite state machine <FSM_0> for signal <stEppCur>.
+    -----------------------------------------------------------------------
+    | States             | 9                                              |
+    | Transitions        | 17                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 8                                              |
+    | Clock              | clkMain                   (rising_edge)        |
+    | Power Up State     | 00000000                                       |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit tristate buffer for signal <DB>.
+    Found 1-bit register for signal <ready>.
+    Found 8-bit register for signal <data_output>.
+    Found 8-bit register for signal <regData0>.
+    Found 8-bit register for signal <regData2>.
+    Found 8-bit register for signal <regData3>.
+    Found 8-bit register for signal <regData4>.
+    Found 8-bit register for signal <regData5>.
+    Found 8-bit register for signal <regData6>.
+    Found 8-bit register for signal <regData7>.
+    Found 4-bit register for signal <regEppAdr>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  69 D-type flip-flop(s).
+	inferred   8 Tristate(s).
+Unit <dpimref> synthesized.
+
+
+Synthesizing Unit <bin_to_dec>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/bin_to_dec.vhd".
+    Found 16x7-bit ROM for signal <inv_outseg>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <bin_to_dec> synthesized.
+
+
+Synthesizing Unit <EPP_interface>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/EPP_interface.vhd".
+WARNING:Xst:646 - Signal <rst_round_counter> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <data_ready>.
+    Found 8-bit up counter for signal <debug_counter>.
+    Found 8-bit register for signal <higher_data>.
+    Found 8-bit register for signal <lower_data>.
+    Found 16-bit register for signal <ram_address>.
+    Found 16-bit up counter for signal <ram_address_counter>.
+    Found 2-bit up counter for signal <round_counter>.
+    Summary:
+	inferred   3 Counter(s).
+	inferred  33 D-type flip-flop(s).
+Unit <EPP_interface> synthesized.
+
+
+Synthesizing Unit <seven_seg_display>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/seven_seg_display.vhd".
+    Found 4-bit 4-to-1 multiplexer for signal <binary>.
+    Found 32-bit up counter for signal <counter>.
+    Found 2-bit up counter for signal <digit>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   4 Multiplexer(s).
+Unit <seven_seg_display> synthesized.
+
+
+Synthesizing Unit <music_player>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/music_player.vhd".
+WARNING:Xst:647 - Input <btn<3:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <ram_address_int<15:10>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_1> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 10                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | rest_state                                     |
+    | Power Up State     | rest_state                                     |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <b_we>.
+    Found 10-bit register for signal <bram_address>.
+    Found 16-bit register for signal <bram_data_in>.
+    Found 8-bit register for signal <display_state>.
+    Found 32-bit up counter for signal <download_counter>.
+    Found 32-bit comparator greatequal for signal <download_finished$cmp_ge0000> created at line 142.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred  35 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <music_player> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 513x16-bit single-port RAM                            : 1
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Counters                                             : 5
+ 16-bit up counter                                     : 1
+ 2-bit up counter                                      : 2
+ 32-bit up counter                                     : 2
+# Registers                                            : 19
+ 1-bit register                                        : 3
+ 10-bit register                                       : 1
+ 16-bit register                                       : 3
+ 4-bit register                                        : 1
+ 8-bit register                                        : 11
+# Comparators                                          : 1
+ 32-bit comparator greatequal                          : 1
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+# Tristates                                            : 1
+ 8-bit tristate buffer                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <current_state/FSM> on signal <current_state[1:2]> with user encoding.
+----------------------------------
+ State                | Encoding
+----------------------------------
+ rest_state           | 00
+ download_state       | 01
+ debug_download_state | 10
+----------------------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <download_from_epp/EPP/stEppCur/FSM> on signal <stEppCur[1:4]> with gray encoding.
+----------------------
+ State    | Encoding
+----------------------
+ 00000000 | 0000
+ 00010100 | 0001
+ 00110010 | 0011
+ 01011000 | 0010
+ 01110010 | 0110
+ 00100001 | 0111
+ 01000011 | 0101
+ 01100001 | 0100
+ 10000011 | 1100
+----------------------
+WARNING:Xst:1710 - FF/Latch <display_state_2> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_state_3> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_state_4> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_state_5> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_state_6> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_state_7> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <ram_address_10> of sequential type is unconnected in block <download_from_epp>.
+WARNING:Xst:2677 - Node <ram_address_11> of sequential type is unconnected in block <download_from_epp>.
+WARNING:Xst:2677 - Node <ram_address_12> of sequential type is unconnected in block <download_from_epp>.
+WARNING:Xst:2677 - Node <ram_address_13> of sequential type is unconnected in block <download_from_epp>.
+WARNING:Xst:2677 - Node <ram_address_14> of sequential type is unconnected in block <download_from_epp>.
+WARNING:Xst:2677 - Node <ram_address_15> of sequential type is unconnected in block <download_from_epp>.
+
+Synthesizing (advanced) Unit <music_player>.
+INFO:Xst:3226 - The RAM <ram_management/Mram_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <ram_management/data_o>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 513-word x 16-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <b_we>          | high     |
+    |     addrA          | connected to signal <bram_address>  |          |
+    |     diA            | connected to signal <bram_data_in>  |          |
+    |     doA            | connected to signal <bram_data_out> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <music_player> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 513x16-bit single-port block RAM                      : 1
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Counters                                             : 5
+ 16-bit up counter                                     : 1
+ 2-bit up counter                                      : 2
+ 32-bit up counter                                     : 2
+# Registers                                            : 143
+ Flip-Flops                                            : 143
+# Comparators                                          : 1
+ 32-bit comparator greatequal                          : 1
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <display_state_2> in Unit <music_player> is equivalent to the following 5 FFs/Latches, which will be removed : <display_state_3> <display_state_4> <display_state_5> <display_state_6> <display_state_7> 
+WARNING:Xst:1710 - FF/Latch <display_state_2> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <download_from_epp/ram_address_15> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <download_from_epp/ram_address_14> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <download_from_epp/ram_address_13> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <download_from_epp/ram_address_12> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <download_from_epp/ram_address_11> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <download_from_epp/ram_address_10> of sequential type is unconnected in block <music_player>.
+
+Optimizing unit <music_player> ...
+
+Optimizing unit <seven_seg_display> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block music_player, actual ratio is 4.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 215
+ Flip-Flops                                            : 215
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : music_player.ngr
+Top Level Output File Name         : music_player
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 44
+
+Cell Usage :
+# BELS                             : 439
+#      GND                         : 2
+#      INV                         : 7
+#      LUT1                        : 78
+#      LUT2                        : 11
+#      LUT3                        : 18
+#      LUT4                        : 110
+#      LUT4_D                      : 1
+#      LUT4_L                      : 5
+#      MUXCY                       : 94
+#      MUXF5                       : 32
+#      VCC                         : 1
+#      XORCY                       : 80
+# FlipFlops/Latches                : 215
+#      FD                          : 3
+#      FDE                         : 125
+#      FDR                         : 35
+#      FDRE                        : 50
+#      FDRS                        : 1
+#      FDS                         : 1
+# RAMS                             : 1
+#      RAMB16                      : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 41
+#      IBUF                        : 13
+#      IOBUF                       : 8
+#      OBUF                        : 20
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400ft256-4 
+
+ Number of Slices:                      160  out of   3584     4%  
+ Number of Slice Flip Flops:            215  out of   7168     2%  
+ Number of 4 input LUTs:                230  out of   7168     3%  
+ Number of IOs:                          44
+ Number of bonded IOBs:                  42  out of    173    24%  
+ Number of BRAMs:                         1  out of     16     6%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 216   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.490ns (Maximum Frequency: 117.784MHz)
+   Minimum input arrival time before clock: 5.656ns
+   Maximum output required time after clock: 13.309ns
+   Maximum combinational path delay: 12.578ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.490ns (frequency: 117.784MHz)
+  Total number of paths / destination ports: 4424 / 419
+-------------------------------------------------------------------------
+Delay:               8.490ns (Levels of Logic = 3)
+  Source:            download_counter_4 (FF)
+  Destination:       download_counter_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: download_counter_4 to download_counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.720   1.246  download_counter_4 (download_counter_4)
+     LUT4:I0->O            1   0.551   0.996  download_counter_or000024 (download_counter_or000024)
+     LUT4:I1->O            1   0.551   0.996  download_counter_or000075 (download_counter_or000075)
+     LUT3:I1->O           32   0.551   1.853  download_counter_or0000189 (download_counter_or0000)
+     FDRE:R                    1.026          download_counter_0
+    ----------------------------------------
+    Total                      8.490ns (3.399ns logic, 5.091ns route)
+                                       (40.0% logic, 60.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 176 / 163
+-------------------------------------------------------------------------
+Offset:              5.656ns (Levels of Logic = 2)
+  Source:            btn<0> (PAD)
+  Destination:       download_counter_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: btn<0> to download_counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   0.821   1.405  btn_0_IBUF (btn_0_IBUF)
+     LUT3:I0->O           32   0.551   1.853  download_counter_or0000189 (download_counter_or0000)
+     FDRE:R                    1.026          download_counter_0
+    ----------------------------------------
+    Total                      5.656ns (2.398ns logic, 3.258ns route)
+                                       (42.4% logic, 57.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 288 / 22
+-------------------------------------------------------------------------
+Offset:              13.309ns (Levels of Logic = 5)
+  Source:            download_from_epp/EPP/regEppAdr_2 (FF)
+  Destination:       PDB<2> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: download_from_epp/EPP/regEppAdr_2 to PDB<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             39   0.720   2.088  download_from_epp/EPP/regEppAdr_2 (download_from_epp/EPP/regEppAdr_2)
+     LUT3:I1->O            2   0.551   1.216  download_from_epp/EPP/busEppOut<2>134 (download_from_epp/EPP/busEppOut<2>134)
+     LUT4:I0->O            1   0.551   0.000  download_from_epp/EPP/busEppOut<2>139_F (N137)
+     MUXF5:I0->O           1   0.360   0.827  download_from_epp/EPP/busEppOut<2>139 (download_from_epp/EPP/busEppOut<2>139)
+     LUT4:I3->O            1   0.551   0.801  download_from_epp/EPP/busEppOut<2>153 (download_from_epp/EPP/busEppOut<2>)
+     IOBUF:I->IO               5.644          PDB_2_IOBUF (PDB<2>)
+    ----------------------------------------
+    Total                     13.309ns (8.377ns logic, 4.932ns route)
+                                       (62.9% logic, 37.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 22 / 8
+-------------------------------------------------------------------------
+Delay:               12.578ns (Levels of Logic = 6)
+  Source:            EPPASTB (PAD)
+  Destination:       PDB<2> (PAD)
+
+  Data Path: EPPASTB to PDB<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            15   0.821   1.256  EPPASTB_IBUF (EPPASTB_IBUF)
+     LUT3:I2->O            2   0.551   1.216  download_from_epp/EPP/busEppOut<2>134 (download_from_epp/EPP/busEppOut<2>134)
+     LUT4:I0->O            1   0.551   0.000  download_from_epp/EPP/busEppOut<2>139_F (N137)
+     MUXF5:I0->O           1   0.360   0.827  download_from_epp/EPP/busEppOut<2>139 (download_from_epp/EPP/busEppOut<2>139)
+     LUT4:I3->O            1   0.551   0.801  download_from_epp/EPP/busEppOut<2>153 (download_from_epp/EPP/busEppOut<2>)
+     IOBUF:I->IO               5.644          PDB_2_IOBUF (PDB<2>)
+    ----------------------------------------
+    Total                     12.578ns (8.478ns logic, 4.100ns route)
+                                       (67.4% logic, 32.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.79 secs
+ 
+--> 
+
+Total memory usage is 209112 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   24 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+

@@ -1,0 +1,6 @@
+vhdl work "\\vmware-host\shared folders\Desktop\fpga_connection\flash_memory\bin_to_dec.vhd"
+vhdl work "\\vmware-host\shared folders\Desktop\fpga_connection\flash_memory\seven_seg_display.vhd"
+vhdl work "\\vmware-host\shared folders\Desktop\fpga_connection\flash_memory\flash_memory.vhd"
+vhdl work "\\vmware-host\shared folders\Desktop\fpga_connection\flash_memory\large_number_7seg.vhd"
+vhdl work "\\vmware-host\shared folders\Desktop\fpga_connection\flash_memory\flash_mem_cntl.vhd"
+vhdl work "\\vmware-host\shared folders\Desktop\fpga_connection\flash_memory\flash_memory_component.vhd"

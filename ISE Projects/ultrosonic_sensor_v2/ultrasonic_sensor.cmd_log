@@ -1,0 +1,109 @@
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.xst" -ofn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.xst" -ofn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.xst" -ofn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.xst" -ofn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_interface_debug.ucf -p xc3s400-ft256-4 ultrasonic_sensor.ngc ultrasonic_sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o ultrasonic_sensor_map.ncd ultrasonic_sensor.ngd ultrasonic_sensor.pcf 
+par -w -intstyle ise -ol high -t 1 ultrasonic_sensor_map.ncd ultrasonic_sensor.ncd ultrasonic_sensor.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ultrasonic_sensor.twx ultrasonic_sensor.ncd -o ultrasonic_sensor.twr ultrasonic_sensor.pcf -ucf fpga_interface_debug.ucf 
+bitgen -intstyle ise -f ultrasonic_sensor.ut ultrasonic_sensor.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_interface_debug.ucf -p xc3s400-ft256-4 ultrasonic_sensor.ngc ultrasonic_sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o ultrasonic_sensor_map.ncd ultrasonic_sensor.ngd ultrasonic_sensor.pcf 
+par -w -intstyle ise -ol high -t 1 ultrasonic_sensor_map.ncd ultrasonic_sensor.ncd ultrasonic_sensor.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ultrasonic_sensor.twx ultrasonic_sensor.ncd -o ultrasonic_sensor.twr ultrasonic_sensor.pcf -ucf fpga_interface_debug.ucf 
+bitgen -intstyle ise -f ultrasonic_sensor.ut ultrasonic_sensor.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.xst" -ofn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.xst" -ofn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.xst" -ofn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_interface_debug.ucf -p xc3s400-ft256-4 ultrasonic_sensor.ngc ultrasonic_sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o ultrasonic_sensor_map.ncd ultrasonic_sensor.ngd ultrasonic_sensor.pcf 
+par -w -intstyle ise -ol high -t 1 ultrasonic_sensor_map.ncd ultrasonic_sensor.ncd ultrasonic_sensor.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ultrasonic_sensor.twx ultrasonic_sensor.ncd -o ultrasonic_sensor.twr ultrasonic_sensor.pcf -ucf fpga_interface_debug.ucf 
+bitgen -intstyle ise -f ultrasonic_sensor.ut ultrasonic_sensor.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.xst" -ofn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.xst" -ofn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.xst" -ofn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_interface_debug.ucf -p xc3s400-ft256-4 ultrasonic_sensor.ngc ultrasonic_sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o ultrasonic_sensor_map.ncd ultrasonic_sensor.ngd ultrasonic_sensor.pcf 
+par -w -intstyle ise -ol high -t 1 ultrasonic_sensor_map.ncd ultrasonic_sensor.ncd ultrasonic_sensor.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ultrasonic_sensor.twx ultrasonic_sensor.ncd -o ultrasonic_sensor.twr ultrasonic_sensor.pcf -ucf fpga_interface_debug.ucf 
+bitgen -intstyle ise -f ultrasonic_sensor.ut ultrasonic_sensor.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.xst" -ofn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_interface_debug.ucf -p xc3s400-ft256-4 ultrasonic_sensor.ngc ultrasonic_sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o ultrasonic_sensor_map.ncd ultrasonic_sensor.ngd ultrasonic_sensor.pcf 
+par -w -intstyle ise -ol high -t 1 ultrasonic_sensor_map.ncd ultrasonic_sensor.ncd ultrasonic_sensor.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ultrasonic_sensor.twx ultrasonic_sensor.ncd -o ultrasonic_sensor.twr ultrasonic_sensor.pcf -ucf fpga_interface_debug.ucf 
+bitgen -intstyle ise -f ultrasonic_sensor.ut ultrasonic_sensor.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.xst" -ofn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_interface_debug.ucf -p xc3s400-ft256-4 ultrasonic_sensor.ngc ultrasonic_sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o ultrasonic_sensor_map.ncd ultrasonic_sensor.ngd ultrasonic_sensor.pcf 
+par -w -intstyle ise -ol high -t 1 ultrasonic_sensor_map.ncd ultrasonic_sensor.ncd ultrasonic_sensor.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ultrasonic_sensor.twx ultrasonic_sensor.ncd -o ultrasonic_sensor.twr ultrasonic_sensor.pcf -ucf fpga_interface_debug.ucf 
+bitgen -intstyle ise -f ultrasonic_sensor.ut ultrasonic_sensor.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.xst" -ofn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_interface_debug.ucf -p xc3s400-ft256-4 ultrasonic_sensor.ngc ultrasonic_sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o ultrasonic_sensor_map.ncd ultrasonic_sensor.ngd ultrasonic_sensor.pcf 
+par -w -intstyle ise -ol high -t 1 ultrasonic_sensor_map.ncd ultrasonic_sensor.ncd ultrasonic_sensor.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ultrasonic_sensor.twx ultrasonic_sensor.ncd -o ultrasonic_sensor.twr ultrasonic_sensor.pcf -ucf fpga_interface_debug.ucf 
+bitgen -intstyle ise -f ultrasonic_sensor.ut ultrasonic_sensor.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.xst" -ofn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_interface_debug.ucf -p xc3s400-ft256-4 ultrasonic_sensor.ngc ultrasonic_sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o ultrasonic_sensor_map.ncd ultrasonic_sensor.ngd ultrasonic_sensor.pcf 
+par -w -intstyle ise -ol high -t 1 ultrasonic_sensor_map.ncd ultrasonic_sensor.ncd ultrasonic_sensor.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ultrasonic_sensor.twx ultrasonic_sensor.ncd -o ultrasonic_sensor.twr ultrasonic_sensor.pcf -ucf fpga_interface_debug.ucf 
+bitgen -intstyle ise -f ultrasonic_sensor.ut ultrasonic_sensor.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.xst" -ofn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_interface_debug.ucf -p xc3s400-ft256-4 ultrasonic_sensor.ngc ultrasonic_sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o ultrasonic_sensor_map.ncd ultrasonic_sensor.ngd ultrasonic_sensor.pcf 
+par -w -intstyle ise -ol high -t 1 ultrasonic_sensor_map.ncd ultrasonic_sensor.ncd ultrasonic_sensor.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ultrasonic_sensor.twx ultrasonic_sensor.ncd -o ultrasonic_sensor.twr ultrasonic_sensor.pcf -ucf fpga_interface_debug.ucf 
+bitgen -intstyle ise -f ultrasonic_sensor.ut ultrasonic_sensor.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.xst" -ofn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.xst" -ofn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_interface_debug.ucf -p xc3s400-ft256-4 ultrasonic_sensor.ngc ultrasonic_sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o ultrasonic_sensor_map.ncd ultrasonic_sensor.ngd ultrasonic_sensor.pcf 
+par -w -intstyle ise -ol high -t 1 ultrasonic_sensor_map.ncd ultrasonic_sensor.ncd ultrasonic_sensor.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ultrasonic_sensor.twx ultrasonic_sensor.ncd -o ultrasonic_sensor.twr ultrasonic_sensor.pcf -ucf fpga_interface_debug.ucf 
+bitgen -intstyle ise -f ultrasonic_sensor.ut ultrasonic_sensor.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.xst" -ofn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_interface_debug.ucf -p xc3s400-ft256-4 ultrasonic_sensor.ngc ultrasonic_sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o ultrasonic_sensor_map.ncd ultrasonic_sensor.ngd ultrasonic_sensor.pcf 
+par -w -intstyle ise -ol high -t 1 ultrasonic_sensor_map.ncd ultrasonic_sensor.ncd ultrasonic_sensor.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ultrasonic_sensor.twx ultrasonic_sensor.ncd -o ultrasonic_sensor.twr ultrasonic_sensor.pcf -ucf fpga_interface_debug.ucf 
+bitgen -intstyle ise -f ultrasonic_sensor.ut ultrasonic_sensor.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.xst" -ofn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_interface_debug.ucf -p xc3s400-ft256-4 ultrasonic_sensor.ngc ultrasonic_sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o ultrasonic_sensor_map.ncd ultrasonic_sensor.ngd ultrasonic_sensor.pcf 
+par -w -intstyle ise -ol high -t 1 ultrasonic_sensor_map.ncd ultrasonic_sensor.ncd ultrasonic_sensor.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ultrasonic_sensor.twx ultrasonic_sensor.ncd -o ultrasonic_sensor.twr ultrasonic_sensor.pcf -ucf fpga_interface_debug.ucf 
+bitgen -intstyle ise -f ultrasonic_sensor.ut ultrasonic_sensor.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.xst" -ofn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_interface_debug.ucf -p xc3s400-ft256-4 ultrasonic_sensor.ngc ultrasonic_sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o ultrasonic_sensor_map.ncd ultrasonic_sensor.ngd ultrasonic_sensor.pcf 
+par -w -intstyle ise -ol high -t 1 ultrasonic_sensor_map.ncd ultrasonic_sensor.ncd ultrasonic_sensor.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ultrasonic_sensor.twx ultrasonic_sensor.ncd -o ultrasonic_sensor.twr ultrasonic_sensor.pcf -ucf fpga_interface_debug.ucf 
+bitgen -intstyle ise -f ultrasonic_sensor.ut ultrasonic_sensor.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.xst" -ofn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_interface_debug.ucf -p xc3s400-ft256-4 ultrasonic_sensor.ngc ultrasonic_sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o ultrasonic_sensor_map.ncd ultrasonic_sensor.ngd ultrasonic_sensor.pcf 
+par -w -intstyle ise -ol high -t 1 ultrasonic_sensor_map.ncd ultrasonic_sensor.ncd ultrasonic_sensor.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ultrasonic_sensor.twx ultrasonic_sensor.ncd -o ultrasonic_sensor.twr ultrasonic_sensor.pcf -ucf fpga_interface_debug.ucf 
+bitgen -intstyle ise -f ultrasonic_sensor.ut ultrasonic_sensor.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.xst" -ofn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_interface_debug.ucf -p xc3s400-ft256-4 ultrasonic_sensor.ngc ultrasonic_sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o ultrasonic_sensor_map.ncd ultrasonic_sensor.ngd ultrasonic_sensor.pcf 
+par -w -intstyle ise -ol high -t 1 ultrasonic_sensor_map.ncd ultrasonic_sensor.ncd ultrasonic_sensor.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ultrasonic_sensor.twx ultrasonic_sensor.ncd -o ultrasonic_sensor.twr ultrasonic_sensor.pcf -ucf fpga_interface_debug.ucf 
+bitgen -intstyle ise -f ultrasonic_sensor.ut ultrasonic_sensor.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.xst" -ofn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_interface_debug.ucf -p xc3s400-ft256-4 ultrasonic_sensor.ngc ultrasonic_sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o ultrasonic_sensor_map.ncd ultrasonic_sensor.ngd ultrasonic_sensor.pcf 
+par -w -intstyle ise -ol high -t 1 ultrasonic_sensor_map.ncd ultrasonic_sensor.ncd ultrasonic_sensor.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ultrasonic_sensor.twx ultrasonic_sensor.ncd -o ultrasonic_sensor.twr ultrasonic_sensor.pcf -ucf fpga_interface_debug.ucf 
+bitgen -intstyle ise -f ultrasonic_sensor.ut ultrasonic_sensor.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.xst" -ofn "Z:/Desktop/fpga_connection/ultrosonic_sensor_v2/ultrasonic_sensor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_interface_debug.ucf -p xc3s400-ft256-4 ultrasonic_sensor.ngc ultrasonic_sensor.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o ultrasonic_sensor_map.ncd ultrasonic_sensor.ngd ultrasonic_sensor.pcf 
+par -w -intstyle ise -ol high -t 1 ultrasonic_sensor_map.ncd ultrasonic_sensor.ncd ultrasonic_sensor.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ultrasonic_sensor.twx ultrasonic_sensor.ncd -o ultrasonic_sensor.twr ultrasonic_sensor.pcf -ucf fpga_interface_debug.ucf 
+bitgen -intstyle ise -f ultrasonic_sensor.ut ultrasonic_sensor.ncd 
