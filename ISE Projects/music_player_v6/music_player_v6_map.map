@@ -10,7 +10,7 @@ Target Device  : xc3s400
 Target Package : ft256
 Target Speed   : -4
 Mapper Version : spartan3 -- $Revision: 1.55 $
-Mapped Date    : Wed Sep 27 22:49:16 2017
+Mapped Date    : Fri Oct 06 14:06:30 2017
 
 Mapping design into LUTs...
 Running directed packing...
@@ -25,15 +25,15 @@ Design Summary:
 Number of errors:      0
 Number of warnings:    0
 Logic Utilization:
-  Number of Slice Flip Flops:           116 out of   7,168    1%
-  Number of 4 input LUTs:               401 out of   7,168    5%
+  Number of Slice Flip Flops:           117 out of   7,168    1%
+  Number of 4 input LUTs:               399 out of   7,168    5%
 Logic Distribution:
-  Number of occupied Slices:            238 out of   3,584    6%
-    Number of Slices containing only related logic:     238 out of     238 100%
-    Number of Slices containing unrelated logic:          0 out of     238   0%
+  Number of occupied Slices:            236 out of   3,584    6%
+    Number of Slices containing only related logic:     236 out of     236 100%
+    Number of Slices containing unrelated logic:          0 out of     236   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         438 out of   7,168    6%
-    Number used as logic:               401
+  Total Number of 4 input LUTs:         436 out of   7,168    6%
+    Number used as logic:               399
     Number used as a route-thru:         37
 
   The Slice Logic Distribution report is not meaningful if the design is
@@ -44,10 +44,10 @@ Logic Distribution:
   Number of MULT18X18s:                   5 out of      16   31%
   Number of BUFGMUXs:                     1 out of       8   12%
 
-Average Fanout of Non-Clock Nets:                2.82
+Average Fanout of Non-Clock Nets:                2.80
 
 Peak Memory Usage:  233 MB
-Total REAL time to MAP completion:  2 secs 
+Total REAL time to MAP completion:  1 secs 
 Total CPU time to MAP completion:   1 secs 
 
 NOTES:

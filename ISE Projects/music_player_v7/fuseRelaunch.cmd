@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v7/testbench_isim_beh.exe" -prj "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v7/testbench_beh.prj" "work.testbench" 

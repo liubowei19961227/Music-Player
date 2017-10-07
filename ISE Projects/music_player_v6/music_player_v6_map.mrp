@@ -10,22 +10,22 @@ Target Device  : xc3s400
 Target Package : ft256
 Target Speed   : -4
 Mapper Version : spartan3 -- $Revision: 1.55 $
-Mapped Date    : Wed Sep 27 22:49:16 2017
+Mapped Date    : Fri Oct 06 14:06:30 2017
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    0
 Logic Utilization:
-  Number of Slice Flip Flops:           116 out of   7,168    1%
-  Number of 4 input LUTs:               401 out of   7,168    5%
+  Number of Slice Flip Flops:           117 out of   7,168    1%
+  Number of 4 input LUTs:               399 out of   7,168    5%
 Logic Distribution:
-  Number of occupied Slices:            238 out of   3,584    6%
-    Number of Slices containing only related logic:     238 out of     238 100%
-    Number of Slices containing unrelated logic:          0 out of     238   0%
+  Number of occupied Slices:            236 out of   3,584    6%
+    Number of Slices containing only related logic:     236 out of     236 100%
+    Number of Slices containing unrelated logic:          0 out of     236   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         438 out of   7,168    6%
-    Number used as logic:               401
+  Total Number of 4 input LUTs:         436 out of   7,168    6%
+    Number used as logic:               399
     Number used as a route-thru:         37
 
   The Slice Logic Distribution report is not meaningful if the design is
@@ -36,10 +36,10 @@ Logic Distribution:
   Number of MULT18X18s:                   5 out of      16   31%
   Number of BUFGMUXs:                     1 out of       8   12%
 
-Average Fanout of Non-Clock Nets:                2.82
+Average Fanout of Non-Clock Nets:                2.80
 
 Peak Memory Usage:  233 MB
-Total REAL time to MAP completion:  2 secs 
+Total REAL time to MAP completion:  1 secs 
 Total CPU time to MAP completion:   1 secs 
 
 NOTES:
@@ -92,7 +92,7 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 Section 4 - Removed Logic Summary
 ---------------------------------
    2 block(s) optimized away
-  46 Block(s) redundant
+  48 Block(s) redundant
 
 Section 5 - Removed Logic
 -------------------------
@@ -104,14 +104,17 @@ VCC 		XST_VCC
 
 Redundant Block(s):
 TYPE 		BLOCK
-LOCALBUF 		x_note_player/Madd_index[7]_GND_8_o_add_20_OUT_cy<3>11/LUT4_D_BUF
-LOCALBUF 		x_note_player/Madd_index[7]_GND_8_o_add_20_OUT_cy<5>11_SW0/LUT2_L_BUF
-LOCALBUF 		x_note_player/Madd_n0134_cy<0>11/LUT3_D_BUF
-LOCALBUF 		x_note_player/Msub_GND_8_o_GND_8_o_sub_13_OUT<7:0>_cy<1>11/LUT4_D_BUF
-LOCALBUF 		x_note_player/Madd_n0134_cy<4>11/LUT4_D_BUF
-LOCALBUF 		x_note_player/Madd_n0134_cy<2>11/LUT4_D_BUF
-LOCALBUF 		x_note_player/Msub_GND_8_o_GND_8_o_sub_13_OUT<7:0>_cy<4>11/LUT4_D_BUF
-LOCALBUF 		x_note_player/Msub_GND_8_o_GND_8_o_sub_13_OUT<7:0>_cy<3>11/LUT4_D_BUF
+LOCALBUF 		x_note_player/Madd_index[7]_GND_8_o_add_18_OUT_cy<3>11/LUT4_D_BUF
+LOCALBUF 		x_note_player/Madd_index[7]_GND_8_o_add_18_OUT_cy<5>11_SW0/LUT2_L_BUF
+LOCALBUF 		x_note_player/Madd_n0131_cy<0>11/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mmux_down_down_MUX_2210_o1116/LUT4_L_BUF
+LOCALBUF
+		x_note_player/GND_8_o_sin_table_array_value[7]_mux_14_OUT<5>15/LUT3_L_BUF
+LOCALBUF 		x_note_player/Madd_n0131_cy<5>11/LUT4_D_BUF
+LOCALBUF 		x_note_player/Madd_n0131_cy<3>11/LUT4_D_BUF
+LOCALBUF 		x_note_player/Madd_n0131_cy<1>11/LUT4_D_BUF
+LOCALBUF 		x_note_player/Msub_GND_8_o_GND_8_o_sub_12_OUT<7:0>_cy<6>11/LUT4_L_BUF
+LOCALBUF 		x_note_player/Msub_GND_8_o_GND_8_o_sub_12_OUT<7:0>_cy<5>11/LUT4_D_BUF
 LUT1 		x_note_length_counter/Madd_n0039_cy<26>_rt
 LUT1 		x_note_length_counter/Madd_n0039_cy<25>_rt
 LUT1 		x_note_length_counter/Msub_GND_6_o_GND_6_o_sub_8_OUT_cy<0>_rt
@@ -145,10 +148,10 @@ LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<1>_rt
 LUT1 		x_note_length_counter/Mmult_n0026_Madd_cy<26>_rt
 LUT1 		x_note_length_counter/Mmult_n0026_Madd_cy<25>_rt
 LUT1 		x_note_length_counter/Mmult_n0026_Madd_cy<24>_rt
-LUT1 		x_note_player/Madd_n0138_cy<11>_rt
+LUT1 		x_note_player/Madd_n0135_cy<11>_rt
 LUT1 		x_note_length_counter/Mcount_note_length_partial_xor<27>_rt
 INV 		Mcount_music_index1_INV_0
-INV 		x_note_player/Mmux_sample_rate_partial[8]_GND_8_o_mux_39_OUT11_INV_0
+INV 		x_note_player/Mmux_sample_rate_partial[8]_GND_8_o_mux_37_OUT11_INV_0
 INV 		x_note_player/rst_inv1_INV_0
 
 Section 6 - IOB Properties
@@ -214,7 +217,7 @@ DISABLE_ATTR:LOW
 
 
 
-RAMB16 "x_note_player/Mram_GND_8_o_X_7_o_wide_mux_31_OUT":
+RAMB16 "x_note_player/Mram_GND_8_o_X_7_o_wide_mux_29_OUT":
 INITP_00 = 0000000000000000000000000000000000000000000000000000000000000000
 INITP_01 = 0000000000000000000000000000000000000000000000000000000000000000
 INITP_02 = 0000000000000000000000000000000000000000000000000000000000000000
@@ -303,9 +306,9 @@ Section 13 - Utilization by Hierarchy
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Module                 | Partition | Slices        | Slice Reg     | LUTs          | LUTRAM        | BRAM      | MULT18X18 | BUFG  | DCM   | Full Hierarchical Name                 |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| music_player_v6/       |           | 16/239        | 13/116        | 27/435        | 0/0           | 0/1       | 1/5       | 1/1   | 0/0   | music_player_v6                        |
+| music_player_v6/       |           | 17/238        | 14/117        | 27/433        | 0/0           | 0/1       | 1/5       | 1/1   | 0/0   | music_player_v6                        |
 | +x_note_length_counter |           | 121/121       | 30/30         | 228/228       | 0/0           | 0/0       | 2/2       | 0/0   | 0/0   | music_player_v6/x_note_length_counter  |
-| +x_note_player         |           | 102/102       | 73/73         | 180/180       | 0/0           | 1/1       | 2/2       | 0/0   | 0/0   | music_player_v6/x_note_player          |
+| +x_note_player         |           | 100/100       | 73/73         | 178/178       | 0/0           | 1/1       | 2/2       | 0/0   | 0/0   | music_player_v6/x_note_player          |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 * Slices can be packed with basic elements from multiple hierarchies.

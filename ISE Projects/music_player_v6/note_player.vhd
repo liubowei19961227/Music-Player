@@ -47,7 +47,7 @@ begin
 				sin_table_indices_array_value_a <= sin_table_indices_array(note);
 				sin_table_indices_array_value_b <= sin_table_indices_array(note + 1);
 				if sample_rate_partial <= 0 then
-					if base_index = max_sin_table_index - 1 then -- rest
+					if overflow_index = max_sin_table_index then -- rest
 						duty_cc := 0;
 					else
 						duty_cc := sin_table_array_value;

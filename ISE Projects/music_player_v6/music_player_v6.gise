@@ -100,11 +100,13 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1506516549" xil_pn:in_ck="3225413162655495322" xil_pn:name="TRANEXT_xstsynthesize_spartan3" xil_pn:prop_ck="-5787421789598805929" xil_pn:start_ts="1506516539">
+    <transform xil_pn:end_ts="1507259184" xil_pn:in_ck="3225413162655495322" xil_pn:name="TRANEXT_xstsynthesize_spartan3" xil_pn:prop_ck="-5787421789598805929" xil_pn:start_ts="1507259175">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="music_player_v6.lso"/>
@@ -122,18 +124,22 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1506516555" xil_pn:in_ck="-6260995235063054879" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-6609164568491424267" xil_pn:start_ts="1506516549">
+    <transform xil_pn:end_ts="1507259189" xil_pn:in_ck="-6260995235063054879" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-6609164568491424267" xil_pn:start_ts="1507259184">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="music_player_v6.bld"/>
       <outfile xil_pn:name="music_player_v6.ngd"/>
       <outfile xil_pn:name="music_player_v6_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1506516560" xil_pn:in_ck="-6260948823578652926" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="7820468606556919023" xil_pn:start_ts="1506516555">
+    <transform xil_pn:end_ts="1507259193" xil_pn:in_ck="-6260948823578652926" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="7820468606556919023" xil_pn:start_ts="1507259189">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="music_player_v6.pcf"/>
       <outfile xil_pn:name="music_player_v6_map.map"/>
@@ -144,9 +150,10 @@
       <outfile xil_pn:name="music_player_v6_summary.xml"/>
       <outfile xil_pn:name="music_player_v6_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1506516574" xil_pn:in_ck="4614003388656062907" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="8251173951899154272" xil_pn:start_ts="1506516560">
+    <transform xil_pn:end_ts="1507259206" xil_pn:in_ck="4614003388656062907" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="8251173951899154272" xil_pn:start_ts="1507259193">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
       <outfile xil_pn:name="music_player_v6.ncd"/>
       <outfile xil_pn:name="music_player_v6.pad"/>
@@ -158,9 +165,10 @@
       <outfile xil_pn:name="music_player_v6_pad.txt"/>
       <outfile xil_pn:name="music_player_v6_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1506516584" xil_pn:in_ck="4075747586174011291" xil_pn:name="TRANEXT_bitFile_spartan3" xil_pn:prop_ck="4510053192889081886" xil_pn:start_ts="1506516574">
+    <transform xil_pn:end_ts="1507259216" xil_pn:in_ck="4075747586174011291" xil_pn:name="TRANEXT_bitFile_spartan3" xil_pn:prop_ck="4510053192889081886" xil_pn:start_ts="1507259206">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="music_player_v6.bgn"/>
       <outfile xil_pn:name="music_player_v6.bit"/>
@@ -170,9 +178,10 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1506516574" xil_pn:in_ck="-6267075139519710722" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1506516570">
+    <transform xil_pn:end_ts="1507259206" xil_pn:in_ck="-6267075139519710722" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1507259202">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
       <outfile xil_pn:name="music_player_v6.twr"/>
       <outfile xil_pn:name="music_player_v6.twx"/>

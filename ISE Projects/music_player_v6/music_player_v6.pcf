@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed Sep 27 22:49:18 2017
+// Written by: Map P.20131013 on Fri Oct 06 14:06:31 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -111,8 +111,8 @@ TIMEGRP tnm_clk = BEL "music_pitch_array_value_0" BEL
         "x_note_player/sin_table_indices_array_value_a_2" BEL
         "x_note_player/sin_table_indices_array_value_a_1" BEL
         "x_note_player/sin_table_indices_array_value_a_0" BEL
-        "music_pitch_array_value_4_1" BEL
-        "x_note_player/Mram_GND_8_o_X_7_o_wide_mux_31_OUT.A" BEL
+        "music_pitch_array_value_4_1" BEL "music_pitch_array_value_5_1" BEL
+        "x_note_player/Mram_GND_8_o_X_7_o_wide_mux_29_OUT.A" BEL
         "clk_BUFGP/BUFG.GCLKMUX" BEL "clk_BUFGP/BUFG";
 ts_clk = PERIOD TIMEGRP "tnm_clk" 25 MHz HIGH 50%;
 SCHEMATIC END;
