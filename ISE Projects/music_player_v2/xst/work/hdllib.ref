@@ -1,7 +1,0 @@
-EN note_length_counter NULL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v2/note_length_counter.vhd" sub00/vhpl01 1504846152
-PH constants NULL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v2/constants.vhd" sub00/vhpl00 1504846151
-AR sine_wave_notes behavioral "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v2/sine_wave_notes.vhd" sub00/vhpl06 1504846157
-AR note_length_counter behavioral "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v2/note_length_counter.vhd" sub00/vhpl02 1504846153
-EN sine_wave_notes NULL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v2/sine_wave_notes.vhd" sub00/vhpl05 1504846156
-AR note_player behavioral "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v2/note_player.vhd" sub00/vhpl04 1504846155
-EN note_player NULL "C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v2/note_player.vhd" sub00/vhpl03 1504846154

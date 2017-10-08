@@ -1,0 +1,761 @@
+Release 14.7 Map P.20131013 (nt)
+Xilinx Mapping Report File for Design 'music_player_v2'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s400-ft256-4 -cm area -detail -ir off
+-pr off -c 100 -o music_player_v2_map.ncd music_player_v2.ngd
+music_player_v2.pcf 
+Target Device  : xc3s400
+Target Package : ft256
+Target Speed   : -4
+Mapper Version : spartan3 -- $Revision: 1.55 $
+Mapped Date    : Wed Sep 27 16:21:37 2017
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    0
+Logic Utilization:
+  Number of Slice Flip Flops:           116 out of   7,168    1%
+  Number of 4 input LUTs:             1,902 out of   7,168   26%
+Logic Distribution:
+  Number of occupied Slices:          1,109 out of   3,584   30%
+    Number of Slices containing only related logic:   1,109 out of   1,109 100%
+    Number of Slices containing unrelated logic:          0 out of   1,109   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       1,953 out of   7,168   27%
+    Number used as logic:             1,902
+    Number used as a route-thru:         51
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 22 out of     173   12%
+  Number of MULT18X18s:                   4 out of      16   25%
+  Number of BUFGMUXs:                     1 out of       8   12%
+
+Average Fanout of Non-Clock Nets:                4.10
+
+Peak Memory Usage:  239 MB
+Total REAL time to MAP completion:  4 secs 
+Total CPU time to MAP completion:   3 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   2 block(s) optimized away
+ 563 Block(s) redundant
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+Redundant Block(s):
+TYPE 		BLOCK
+LOCALBUF 		x_note_player/Mram__n221010251/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010181/LUT3_D_BUF
+LOCALBUF 		x_note_player/Madd_index[7]_GND_8_o_add_2_OUT_cy<3>11/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011261/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014391/LUT2_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012792/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012441/LUT2_D_BUF
+LOCALBUF 		x_note_player/n0067<8>61/LUT3_L_BUF
+LOCALBUF 		x_note_player/n0067<8>17/LUT3_L_BUF
+LOCALBUF 		x_note_player/n0067<8>81/LUT3_L_BUF
+LOCALBUF 		x_note_player/n0067<8>71/LUT3_L_BUF
+LOCALBUF 		x_note_player/n0067<8>51/LUT3_L_BUF
+LOCALBUF 		x_note_player/n0067<8>31/LUT3_L_BUF
+LOCALBUF 		x_note_player/n0067<8>21/LUT3_L_BUF
+LOCALBUF 		x_note_player/n0067<8>1/LUT3_L_BUF
+LOCALBUF 		x_note_player/Mram__n2210118621/LUT2_D_BUF
+LOCALBUF 		x_note_player/Mram__n2210149311/LUT2_L_BUF
+LOCALBUF 		x_note_player/Mram__n2210132411/LUT2_D_BUF
+LOCALBUF 		x_note_player/Mram__n2210113621/LUT2_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010461/LUT2_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010291/LUT2_D_BUF
+LOCALBUF 		x_note_player/n0067<7>3/LUT4_L_BUF
+LOCALBUF 		x_note_player/n0067<8>125/LUT2_L_BUF
+LOCALBUF 		x_note_player/n0067<7>1/LUT4_L_BUF
+LOCALBUF 		x_note_player/n0067<10>11/LUT4_D_BUF
+LOCALBUF 		x_note_player/n0067<10>41/LUT4_D_BUF
+LOCALBUF 		x_note_player/N18118/LUT4_L_BUF
+LOCALBUF 		x_note_player/N18146/LUT4_D_BUF
+LOCALBUF 		x_note_player/N16186/LUT4_L_BUF
+LOCALBUF 		x_note_player/N161242/LUT4_L_BUF
+LOCALBUF 		x_note_player/n0067<7>5/LUT4_L_BUF
+LOCALBUF 		x_note_player/N17158/LUT4_L_BUF
+LOCALBUF 		x_note_player/N17240/LUT3_L_BUF
+LOCALBUF 		x_note_player/N17911/LUT4_D_BUF
+LOCALBUF 		x_note_player/GND_8_o_GND_8_o_mux_25_OUT<5>54/LUT4_L_BUF
+LOCALBUF 		x_note_player/GND_8_o_GND_8_o_mux_25_OUT<5>119/LUT4_D_BUF
+LOCALBUF 		x_note_player/N16254_SW0/LUT4_L_BUF
+LOCALBUF 		x_note_player/n0067<8>145/LUT4_L_BUF
+LOCALBUF 		x_note_player/n0067<10>214/LUT4_D_BUF
+LOCALBUF 		x_note_player/N161068/LUT4_D_BUF
+LOCALBUF 		x_note_player/N17939/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010451/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010321/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010331/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010361/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014261/LUT4_D_BUF
+LOCALBUF 		x_note_player/Madd_n0102_cy<0>11/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011432/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101095111/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n2210136921/LUT3_L_BUF
+LOCALBUF 		x_note_player/Mram__n2210124511/LUT3_L_BUF
+LOCALBUF 		x_note_player/Mram__n2210132531/LUT4_D_BUF
+LOCALBUF 		x_note_player/N16786/LUT3_D_BUF
+LOCALBUF 		x_note_player/N16265/LUT4_L_BUF
+LOCALBUF 		x_note_player/Mram__n2210100311/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010511/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014641/LUT4_L_BUF
+LOCALBUF 		x_note_player/N16488/LUT4_L_BUF
+LOCALBUF 		x_note_player/Mram__n22101194/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101125/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101163/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101298/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101383/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101209/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101397/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013111/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015051/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101161/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n2210102/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011951/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011991/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012031/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011351/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011331/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011341/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011371/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012041/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012021/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014811/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011482/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011551/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015551/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015541/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015491/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013141/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013131/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010033/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014251/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013311/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014831/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014161/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101151/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013041/LUT4_D_BUF
+LOCALBUF 		x_note_player/n0067<8>110_SW0/LUT4_L_BUF
+LOCALBUF 		x_note_player/Mram__n221013341/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013301/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013921/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014111/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101412/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013321/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013941/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012651/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012781/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012541/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015311/LUT4_D_BUF
+LOCALBUF 		x_note_player/N17524_SW0/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101111/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011971/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013711/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013001/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013061/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015151/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013551/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013801/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101123/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013021/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101071/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010811/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n2210115111/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010341/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011401/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011512/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010971/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012881/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012931/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012941/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013381/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013401/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013281/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013431/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012551/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012562/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014311/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012771/LUT4_D_BUF
+LOCALBUF 		x_note_player/Madd_index[7]_GND_8_o_add_2_OUT_cy<5>11_SW0/LUT2_L_BUF
+LOCALBUF 		x_note_player/Mram__n221014281/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015351/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011701/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n2210148111/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010661/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012581/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012111/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011681/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101061/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014951/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014921/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011410/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013051/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015441/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013411/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011711/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015161/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015851_193/LUT4_L_BUF
+LOCALBUF 		x_note_player/N17189/LUT4_L_BUF
+LOCALBUF 		x_note_player/N1858/LUT4_L_BUF
+LOCALBUF 		x_note_player/n0067<6>1101/LUT4_D_BUF
+LOCALBUF 		x_note_player/N1884/LUT4_L_BUF
+LOCALBUF 		x_note_player/N18510_SW0/LUT4_D_BUF
+LOCALBUF 		x_note_player/N16371_SW0/LUT3_L_BUF
+LOCALBUF 		x_note_player/Mram__n2210127229/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101290/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n2210103/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101186/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101115/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101121/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101208/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012001/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101173/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101175/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014171/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101245/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101369/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101351/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101398/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101342/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101264/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101375/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101379/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101008/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010041/LUT4_D_BUF
+LOCALBUF 		x_note_player/N1666_SW1/LUT4_L_BUF
+LOCALBUF 		x_note_player/Mram__n22101361/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101237/LUT4_D_BUF
+LOCALBUF 		x_note_player/n0067<6>191_SW2/LUT4_L_BUF
+LOCALBUF 		x_note_player/Mram__n221010501/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101196/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011841/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011981/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012061/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011381/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011871/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014611/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011542/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011471/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011451/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011521/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011742/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011502/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014101/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011561/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011491/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011611/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014761/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014741/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014731/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013151/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012421/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013011/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012851/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012461/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101231/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013101/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012821/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012811/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015211/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015201/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013931/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013991/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013841/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013251/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013271/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013861/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014081/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013901/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013231/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014031/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013881/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012761/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012731/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014511/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014981/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014461/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014301/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014411/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014371/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010021/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011281/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013761/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013601/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010201/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010091/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010281_SW0/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015281/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101002/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011851/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012691/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014561/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014601/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011651/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012631/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014331/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012961/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012481/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013091/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012831/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013771/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014061/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014071/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012751/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013641/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010431/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013191/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012911/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013462/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010052/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101221/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013911/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011271/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015421/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015371/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013071/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010481/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014851/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010651/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010001/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010221/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010681/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010601/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012612/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014151/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013531/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n2210144321/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011891/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011391/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011531/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015361/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014701/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014521/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014211/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012411/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101171/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013031/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013471/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010101/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014482/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010191/LUT4_D_BUF
+LOCALBUF 		x_note_player/N17836_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		x_note_player/N18182/LUT4_L_BUF
+LOCALBUF 		x_note_player/Mram__n22101499/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101368/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101370/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101146/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101210/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012011/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011811/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011781/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101142/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101249/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n2210108/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012971/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101271/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015002/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101357/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013652/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101359/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013561/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101374/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015231/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011791/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011161/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012071/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011901/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011671/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011601/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011571/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013451/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014771/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014781/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013242/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013181/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012872/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012471/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013081/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012991/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013521/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014041/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013951/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012501/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014501/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014271/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014421/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015081/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013581/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010231/LUT4_D_BUF
+LOCALBUF 		x_note_player/N18182_SW0/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011691/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011641/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012671/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015071/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010061/LUT4_D_BUF
+LOCALBUF 		x_note_player/N18410_SW0_SW1/LUT4_L_BUF
+LOCALBUF 		x_note_player/N161127/LUT4_L_BUF
+LOCALBUF 		x_note_player/Madd_n0102_cy<3>11/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014691/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013351/LUT4_D_BUF
+LOCALBUF 		x_note_player/N161100_SW1/LUT4_L_BUF
+LOCALBUF 		x_note_player/Mmux_GND_8_o_GND_8_o_mux_14_OUT1101_SW0/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mmux_GND_8_o_GND_8_o_mux_17_OUT21_SW0/LUT4_L_BUF
+LOCALBUF 		x_note_player/Mram__n221010621/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015031/LUT4_D_BUF
+LOCALBUF 		x_note_player/N18539/LUT4_D_BUF
+LOCALBUF 		x_note_player/Madd_n0102_cy<5>11/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010161/LUT4_D_BUF
+LOCALBUF 		x_note_player/N16971/LUT4_L_BUF
+LOCALBUF 		x_note_player/N161001_SW0/LUT2_L_BUF
+LOCALBUF 		x_note_player/Mram__n221010451_SW0/LUT2_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010951112_SW1/LUT4_L_BUF
+LOCALBUF 		x_note_player/N16450_SW1/LUT2_L_BUF
+LOCALBUF 		x_note_player/Mram__n22101122/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101183/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011411/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014011/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015021/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013871/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101177/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101136/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101193/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011921/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014591/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101284/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101295/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101286/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n2210113/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101289/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101349/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101348/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101280/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101270/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012521/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101259/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101257/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014932/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015011/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101487/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014881/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013671/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011443/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011801/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101091/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013501/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101494/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012531/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014322/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013661/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010111/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010151/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011322/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011761/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012511/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014962/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014471/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014841/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010132/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012181_12_f5_11_SW2/LUT2_L_BUF
+LOCALBUF 		x_note_player/SF1021/LUT4_L_BUF
+LOCALBUF 		x_note_player/Mram__n221012381_SW0/LUT4_L_BUF
+LOCALBUF 		x_note_player/Mram__n22101262_SW1/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012921_SW0/LUT4_L_BUF
+LOCALBUF 		x_note_player/Mram__n221013891_SW0/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015061_SW0/LUT4_L_BUF
+LOCALBUF 		x_note_player/Mram__n22101182_SW0/LUT4_L_BUF
+LOCALBUF 		x_note_player/N161139_SW0/LUT4_L_BUF
+LOCALBUF 		x_note_player/GND_8_o_GND_8_o_mux_25_OUT<1>40_SW1/LUT3_L_BUF
+LOCALBUF 		x_note_player/Mmux_GND_8_o_GND_8_o_mux_17_OUT51_SW0/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014491/LUT4_D_BUF
+LOCALBUF 		x_note_player/N17740_SW1/LUT4_L_BUF
+LOCALBUF 		x_note_player/N17151_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		x_note_player/N16989_SW1/LUT3_D_BUF
+LOCALBUF 		x_note_player/N17366_SW0/LUT4_L_BUF
+LOCALBUF 		x_note_player/N16610_SW0/LUT3_L_BUF
+LOCALBUF 		x_note_player/Mram__n221011121411_SW1/LUT3_D_BUF
+LOCALBUF 		x_note_player/n0067<8>181/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015851_13_f5_42_SW0/LUT2_L_BUF
+LOCALBUF 		x_note_player/N16796_SW0/LUT2_D_BUF
+LOCALBUF 		x_note_player/N18324/LUT4_D_BUF
+LOCALBUF 		x_note_player/N1829_SW0_SW0_SW2/LUT4_L_BUF
+LOCALBUF 		x_note_player/Madd_n0102_lut<5>1_SW0/LUT2_D_BUF
+LOCALBUF 		x_note_player/Madd_n0102_cy<5>11_SW1/LUT4_L_BUF
+LOCALBUF 		x_note_player/Mram__n2210101311/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101021211/LUT3_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015851_13_f5_41_SW0/LUT4_L_BUF
+LOCALBUF 		x_note_player/Mram__n221014231_11_f5_42_SW1/LUT2_D_BUF
+LOCALBUF 		x_note_player/N17762/LUT4_L_BUF
+LOCALBUF 		x_note_player/N17429/LUT4_L_BUF
+LOCALBUF 		x_note_player/N17698_SW0/LUT4_L_BUF
+LOCALBUF 		x_note_player/Mram__n221012181_13_f5_11_SW1/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012181_12_f5_12_SW1/LUT3_L_BUF
+LOCALBUF 		x_note_player/Mram__n221012181_9_f51_SW0/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012181_12_f5_62_SW0/LUT4_D_BUF
+LOCALBUF 		x_note_player/N16636/LUT4_L_BUF
+LOCALBUF 		x_note_player/_n012525_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		x_note_player/Mram__n221012181_11_f5_02_SW1/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012181_11_f5_11_SW1/LUT4_L_BUF
+LOCALBUF 		x_note_player/Mram__n221012181_12_f5_51_SW2/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012181_12_f5_42_SW2/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015161_20_SW0/LUT4_L_BUF
+LOCALBUF 		x_note_player/N161289_SW1/LUT4_L_BUF
+LOCALBUF 		x_note_player/N161242_SW2/LUT4_L_BUF
+LOCALBUF 		x_note_player/N17295/LUT4_L_BUF
+LOCALBUF 		x_note_player/N161171_SW0_SW0_SW0/LUT4_L_BUF
+LOCALBUF 		x_note_player/Mram__n2210107011321_SW1/LUT2_L_BUF
+LOCALBUF 		x_note_player/N161242_SW0_SW0/LUT3_L_BUF
+LOCALBUF 		x_note_player/Mram__n221015121/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012381/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101262/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101274/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014901/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101182/LUT4_D_BUF
+LOCALBUF 		x_note_player/n0067<8>115/LUT4_L_BUF
+LOCALBUF 		x_note_player/Mram__n221011181/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015531/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012681/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013891/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014401/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014431/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014091/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013541/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101197/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013781/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013391/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013361/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013851/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221014131/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013121/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221010211/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n22101213/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n2210102122/LUT4_D_BUF
+LOCALBUF 		x_note_player/Madd_n0102_lut<2>1/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mmux_GND_8_o_GND_8_o_mux_17_OUT31/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mmux_GND_8_o_GND_8_o_mux_17_OUT41/LUT4_D_BUF
+LOCALBUF 		x_note_player/N17390_SW0/LUT4_L_BUF
+LOCALBUF 		x_note_player/N17131_SW0_SW1/LUT4_L_BUF
+LOCALBUF 		x_note_player/Mram__n221011821/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221013961/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221015061/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012121/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221012921/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n2210104/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mram__n221011911/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mmux_GND_8_o_GND_8_o_mux_17_OUT181/LUT3_D_BUF
+LOCALBUF 		x_note_player/N17393_SW1_SW0/LUT4_L_BUF
+LOCALBUF 		x_note_player/N16721_SW0_G_SW0/LUT3_L_BUF
+LOCALBUF 		x_note_player/Mram__n221014181/LUT4_L_BUF
+LOCALBUF 		x_note_player/N161200_G_SW0/LUT4_L_BUF
+LUT1 		x_note_length_counter/Madd_n0036_cy<26>_rt
+LUT1 		x_note_length_counter/Madd_n0036_cy<25>_rt
+LUT1 		x_note_length_counter/Msub_GND_6_o_GND_6_o_sub_7_OUT_cy<0>_rt
+LUT1 		x_note_length_counter/Madd_n0045[27:0]_cy<26>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<26>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<25>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<24>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<23>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<22>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<21>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<20>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<19>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<18>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<17>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<16>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<15>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<14>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<13>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<12>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<11>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<10>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<9>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<8>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<7>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<6>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<5>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<4>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<3>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<2>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<1>_rt
+LUT1 		x_note_length_counter/Mmult_n0023_Madd_cy<26>_rt
+LUT1 		x_note_length_counter/Mmult_n0023_Madd_cy<25>_rt
+LUT1 		x_note_length_counter/Mmult_n0023_Madd_cy<24>_rt
+LUT1 		x_note_player/Mcount_sample_rate_partial_cy<7>_rt
+LUT1 		x_note_player/Mcount_sample_rate_partial_cy<6>_rt
+LUT1 		x_note_player/Mcount_sample_rate_partial_cy<5>_rt
+LUT1 		x_note_player/Mcount_sample_rate_partial_cy<4>_rt
+LUT1 		x_note_player/Mcount_sample_rate_partial_cy<3>_rt
+LUT1 		x_note_player/Mcount_sample_rate_partial_cy<2>_rt
+LUT1 		x_note_player/Mcount_sample_rate_partial_cy<1>_rt
+LUT1 		x_note_player/Mcount_index_cy<6>_rt
+LUT1 		x_note_player/Mcount_index_cy<5>_rt
+LUT1 		x_note_player/Mcount_index_cy<4>_rt
+LUT1 		x_note_player/Mcount_index_cy<3>_rt
+LUT1 		x_note_player/Mcount_index_cy<2>_rt
+LUT1 		x_note_player/Mcount_index_cy<1>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_xor<27>_rt
+LUT1 		x_note_player/Mcount_sample_rate_partial_xor<8>_rt
+LUT1 		x_note_player/Mcount_index_xor<7>_rt
+INV
+		x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_Less
+Than_6_o_cy<27>_inv_INV_0
+INV 		second_pulse_INV_57_o1_INV_0
+INV 		btn<0>_inv1_INV_0
+INV 		x_note_player/Mram__n221013371_INV_0
+INV 		x_note_player/Mram__n221011301_INV_0
+INV 		x_note_player/Mram__n221010171_INV_0
+INV 		x_note_player/Mram__n22101101_INV_0
+INV
+		x_note_player/Mcompar_GND_8_o_prev_duty_cc[8]_LessThan_7_o_cy<8>_inv1_INV_0
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| btn<0>                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| btn<1>                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| btn<2>                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| btn<3>                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| clk                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| led<0>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<1>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<2>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<3>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<4>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<5>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<6>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<7>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| s                                  | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sw<0>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<1>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<2>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<3>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<4>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<5>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<6>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<7>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+BUFGMUX "clk_BUFGP/BUFG":
+DISABLE_ATTR:LOW
+
+
+
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module                 | Partition | Slices        | Slice Reg     | LUTs          | LUTRAM        | BRAM      | MULT18X18 | BUFG  | DCM   | Full Hierarchical Name                 |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| music_player_v2/       |           | 39/1111       | 39/116        | 53/1948       | 0/0           | 0/0       | 1/4       | 1/1   | 0/0   | music_player_v2                        |
+| +x_note_length_counter |           | 135/135       | 30/30         | 259/259       | 0/0           | 0/0       | 2/2       | 0/0   | 0/0   | music_player_v2/x_note_length_counter  |
+| +x_note_player         |           | 937/937       | 47/47         | 1636/1636     | 0/0           | 0/0       | 1/1       | 0/0   | 0/0   | music_player_v2/x_note_player          |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Slices can be packed with basic elements from multiple hierarchies.
+  Therefore, a slice will be counted in every hierarchical module
+  that each of its packed basic elements belong to.
+** For each column, there are two numbers reported <A>/<B>.
+   <A> is the number of elements that belong to that specific hierarchical module.
+   <B> is the total number of elements from that hierarchical module and any lower level
+   hierarchical modules below.
+*** The LUTRAM column counts all LUTs used as memory including RAM, ROM, and shift registers.

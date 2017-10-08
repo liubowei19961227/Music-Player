@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 library work;
 use work.constants.all;
 
-entity sine_wave_notes is
+entity music_player_v2 is
 	port(
 		clk : in std_logic;
 		btn : in std_logic_vector(3 downto 0);
@@ -13,14 +13,15 @@ entity sine_wave_notes is
 		led : out std_logic_vector(7 downto 0);
 		s : out std_logic
 	);
-end sine_wave_notes;
+end music_player_v2;
 
-architecture behavioral of sine_wave_notes is
+architecture behavioral of music_player_v2 is
 
-	signal note_cc : natural range min_note_cc to max_note_cc;
-	
-	signal note_length_in_twelfths : natural range min_note_length_in_twelfths to max_note_length_in_twelfths ;
-	signal twelfth_cc : natural range min_twelfth_cc to max_twelfth_cc;
+	signal note : natural range 0 to num_notes;
+	signal note_cc : natural range 0 to max_note_cc;
+	signal octave : natural range 0 to max_octave;
+	signal note_length_in_twelfths : natural range 0 to max_note_length_in_twelfths ;
+	signal twelfth_cc : natural range 0 to max_twelfth_cc;
 	
 	signal rst : std_logic;
 	signal is_new_note : std_logic;
@@ -43,8 +44,9 @@ begin
 	x_note_player : entity work.note_player port map ( 	
 		rst => rst,
 		clk => clk,
-		note_pitch_cc => note_cc,
-		note_pitch_pulse => note_pitch_pulse
+		note => note,
+		octave => octave,
+		note_pulse => note_pitch_pulse
 	);
 	
 	led(7) <= second_pulse;
@@ -64,7 +66,6 @@ begin
 
 	process (clk)
 		variable music_index : natural range 0 to music_length - 1;
-		variable note : natural range 0 to num_notes - 1;
 	begin
 		if rising_edge(clk) then
 			if rst = '1' then
@@ -79,12 +80,12 @@ begin
 					end if;
 					second_pulse <= not second_pulse;
 				end if;
-				note := music_array(music_index);
 				if is_mute = '1' then
-					note_cc <= 0;
+					note <= rest;
 				else
-					note_cc <= note_cc_array(note) * music_octave_array(music_index);
+					note <= music_array(music_index);
 				end if;
+					octave <= music_octave_array(music_index);
 				note_length_in_twelfths <= music_length_array(music_index);
 			end if;
 		end if;

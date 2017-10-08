@@ -1,0 +1,5 @@
+vhdl work "constants.vhd"
+vhdl work "note_player.vhd"
+vhdl work "note_length_counter.vhd"
+vhdl work "main.vhd"
+vhdl work "testbench.vhw"

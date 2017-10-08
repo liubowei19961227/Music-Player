@@ -1,0 +1,1015 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.33 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.33 secs
+ 
+--> Reading design: flash_memory_component.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "flash_memory_component.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "flash_memory_component"
+Output Format                      : NGC
+Target Device                      : xc3s400-4-ft256
+
+---- Source Options
+Top Module Name                    : flash_memory_component
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : Yes
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Move First FlipFlop Stage          : YES
+Move Last FlipFlop Stage           : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : True
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 2
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory/bin_to_dec.vhd" in Library work.
+Architecture behavioral of Entity bin_to_dec is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory/flash_memory.vhd" in Library work.
+Architecture behavioral of Entity flash_memory is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory/seven_seg_display.vhd" in Library work.
+Architecture behavioral of Entity seven_seg_display is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory/large_number_7seg.vhd" in Library work.
+Architecture behavioral of Entity large_number_7seg is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory/flash_mem_cntl.vhd" in Library work.
+Architecture behavioral of Entity flash_mem_cntl is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory/flash_memory_component.vhd" in Library work.
+Entity <flash_memory_component> compiled.
+Entity <flash_memory_component> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <flash_memory_component> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <large_number_7seg> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <flash_mem_cntl> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <seven_seg_display> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <flash_memory> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <bin_to_dec> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <flash_memory_component> in library <work> (Architecture <behavioral>).
+INFO:Xst:1432 - Contents of array <ramB> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ramB> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+Entity <flash_memory_component> analyzed. Unit <flash_memory_component> generated.
+
+Analyzing Entity <large_number_7seg> in library <work> (Architecture <behavioral>).
+Entity <large_number_7seg> analyzed. Unit <large_number_7seg> generated.
+
+Analyzing Entity <seven_seg_display> in library <work> (Architecture <behavioral>).
+Entity <seven_seg_display> analyzed. Unit <seven_seg_display> generated.
+
+Analyzing Entity <bin_to_dec> in library <work> (Architecture <behavioral>).
+Entity <bin_to_dec> analyzed. Unit <bin_to_dec> generated.
+
+Analyzing Entity <flash_mem_cntl> in library <work> (Architecture <behavioral>).
+Entity <flash_mem_cntl> analyzed. Unit <flash_mem_cntl> generated.
+
+Analyzing Entity <flash_memory> in library <work> (Architecture <behavioral>).
+Entity <flash_memory> analyzed. Unit <flash_memory> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <bin_to_dec>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory/bin_to_dec.vhd".
+    Found 16x7-bit ROM for signal <inv_outseg>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <bin_to_dec> synthesized.
+
+
+Synthesizing Unit <flash_memory>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory/flash_memory.vhd".
+WARNING:Xst:646 - Signal <write_data_sig> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <write_address_sig> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <read_address_sig> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+INFO:Xst:1799 - State write_rst_state is never reached in FSM <current_state>.
+INFO:Xst:1799 - State read_rst_state is never reached in FSM <current_state>.
+    Found finite state machine <FSM_0> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 10                                             |
+    | Transitions        | 17                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 19                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Power Up State     | rst_state                                      |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 22-bit register for signal <addr>.
+    Found 1-bit register for signal <read_complete>.
+    Found 1-bit register for signal <OE>.
+    Found 1-bit register for signal <WE>.
+    Found 1-bit register for signal <write_complete>.
+    Found 16-bit tristate buffer for signal <data>.
+    Found 32-bit register for signal <delay_counter>.
+    Found 32-bit adder for signal <delay_counter$addsub0000>.
+    Found 32-bit register for signal <delay_extend_counter>.
+    Found 32-bit adder for signal <delay_extend_counter$share0000> created at line 115.
+    Found 16-bit register for signal <Mtridata_data> created at line 122.
+    Found 1-bit register for signal <Mtrien_data> created at line 122.
+    Found 16-bit register for signal <read_data_sig>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred 123 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  16 Tristate(s).
+Unit <flash_memory> synthesized.
+
+
+Synthesizing Unit <flash_mem_cntl>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory/flash_mem_cntl.vhd".
+WARNING:Xst:1305 - Output <cntl_debug> is never assigned. Tied to value 0000000000000000.
+WARNING:Xst:1780 - Signal <flash_st_complete> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <flash_read_st> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <delete_address_sig> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000000010.
+WARNING:Xst:1780 - Signal <debug_counter> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_1> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 13                                             |
+    | Transitions        | 26                                             |
+    | Inputs             | 7                                              |
+    | Outputs            | 14                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | rst_state                                      |
+    | Power Up State     | rst_state                                      |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <cntl_read_complete>.
+    Found 16-bit register for signal <cntl_read_data>.
+    Found 1-bit register for signal <cntl_write_complete>.
+    Found 1-bit register for signal <cntl_delete_complete>.
+    Found 1-bit register for signal <flash_direction>.
+    Found 22-bit register for signal <flash_read_address>.
+    Found 1-bit register for signal <flash_rest>.
+    Found 22-bit register for signal <flash_write_address>.
+    Found 16-bit register for signal <flash_write_data>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  81 D-type flip-flop(s).
+Unit <flash_mem_cntl> synthesized.
+
+
+Synthesizing Unit <seven_seg_display>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory/seven_seg_display.vhd".
+    Found 4-bit 4-to-1 multiplexer for signal <binary>.
+    Found 32-bit up counter for signal <counter>.
+    Found 2-bit up counter for signal <digit>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   4 Multiplexer(s).
+Unit <seven_seg_display> synthesized.
+
+
+Synthesizing Unit <large_number_7seg>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory/large_number_7seg.vhd".
+    Found 18-bit comparator greatequal for signal <decimal_part$cmp_ge0000> created at line 150.
+    Found 18-bit comparator greatequal for signal <decimal_part$cmp_ge0001> created at line 152.
+    Found 18-bit comparator greatequal for signal <decimal_part$cmp_ge0002> created at line 155.
+    Found 18-bit comparator greatequal for signal <decimal_part$cmp_ge0003> created at line 158.
+    Found 18-bit comparator greatequal for signal <decimal_part$cmp_ge0004> created at line 161.
+    Found 18-bit comparator greatequal for signal <decimal_part$cmp_ge0005> created at line 164.
+    Found 18-bit comparator greatequal for signal <decimal_part$cmp_ge0006> created at line 167.
+    Found 18-bit comparator greatequal for signal <decimal_part$cmp_ge0007> created at line 170.
+    Found 18-bit comparator greatequal for signal <decimal_part$cmp_ge0008> created at line 173.
+    Found 19-bit subtractor for signal <decimal_part$share0000> created at line 150.
+    Found 17-bit subtractor for signal <hundred_part$share0000> created at line 73.
+    Found 17-bit comparator greatequal for signal <ten_part$cmp_ge0000> created at line 110.
+    Found 17-bit comparator greatequal for signal <ten_part$cmp_ge0001> created at line 112.
+    Found 17-bit comparator greatequal for signal <ten_part$cmp_ge0002> created at line 115.
+    Found 17-bit comparator greatequal for signal <ten_part$cmp_ge0003> created at line 118.
+    Found 17-bit comparator greatequal for signal <ten_part$cmp_ge0004> created at line 121.
+    Found 17-bit comparator greatequal for signal <ten_part$cmp_ge0005> created at line 124.
+    Found 17-bit comparator greatequal for signal <ten_part$cmp_ge0006> created at line 127.
+    Found 17-bit comparator greatequal for signal <ten_part$cmp_ge0007> created at line 130.
+    Found 17-bit comparator greatequal for signal <ten_part$cmp_ge0008> created at line 133.
+    Found 18-bit subtractor for signal <ten_part$share0000> created at line 110.
+    Found 16-bit comparator greatequal for signal <thousand_bit$cmp_ge0000> created at line 73.
+    Found 16-bit comparator greatequal for signal <thousand_bit$cmp_ge0001> created at line 75.
+    Found 16-bit comparator greatequal for signal <thousand_bit$cmp_ge0002> created at line 78.
+    Found 16-bit comparator greatequal for signal <thousand_bit$cmp_ge0003> created at line 81.
+    Found 16-bit comparator greatequal for signal <thousand_bit$cmp_ge0004> created at line 84.
+    Found 16-bit comparator greatequal for signal <thousand_bit$cmp_ge0005> created at line 87.
+    Found 16-bit comparator greatequal for signal <thousand_bit$cmp_ge0006> created at line 90.
+    Found 16-bit comparator greatequal for signal <thousand_bit$cmp_ge0007> created at line 93.
+    Found 16-bit comparator greatequal for signal <thousand_bit$cmp_ge0008> created at line 96.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  27 Comparator(s).
+Unit <large_number_7seg> synthesized.
+
+
+Synthesizing Unit <flash_memory_component>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory/flash_memory_component.vhd".
+WARNING:Xst:646 - Signal <write_data_sig> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <write_address_sig> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <read_data> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <read_counter> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <read_address_sig> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1781 - Signal <ramA> is used but never assigned. Tied to default value.
+WARNING:Xst:1780 - Signal <flash_debug> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <f_delete> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <display_addr<31:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <delete_complete_sig> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <debug> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 256x16-bit dual-port RAM <Mram_ramB> for signal <ramB>.
+    Found finite state machine <FSM_2> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Power Up State     | rst_state                                      |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 256x16-bit ROM for signal <$varindex0000> created at line 195.
+    Found 8-bit register for signal <debug_state>.
+    Found 1-bit register for signal <f_read>.
+    Found 1-bit register for signal <f_write>.
+    Found 8-bit comparator greatequal for signal <finish_read$cmp_ge0000> created at line 140.
+    Found 8-bit comparator greatequal for signal <finish_write$cmp_ge0000> created at line 138.
+    Found 8-bit up counter for signal <ramB_addr>.
+    Found 22-bit register for signal <read_address>.
+    Found 1-bit register for signal <rest>.
+    Found 22-bit register for signal <write_address>.
+    Found 8-bit up counter for signal <write_counter>.
+    Found 16-bit register for signal <write_data>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 RAM(s).
+	inferred   1 ROM(s).
+	inferred   2 Counter(s).
+	inferred  71 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <flash_memory_component> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 256x16-bit dual-port RAM                              : 1
+# ROMs                                                 : 2
+ 16x7-bit ROM                                          : 1
+ 256x16-bit ROM                                        : 1
+# Adders/Subtractors                                   : 5
+ 17-bit subtractor                                     : 1
+ 18-bit subtractor                                     : 1
+ 19-bit subtractor                                     : 1
+ 32-bit adder                                          : 2
+# Counters                                             : 4
+ 2-bit up counter                                      : 1
+ 32-bit up counter                                     : 1
+ 8-bit up counter                                      : 2
+# Registers                                            : 26
+ 1-bit register                                        : 13
+ 16-bit register                                       : 5
+ 22-bit register                                       : 5
+ 32-bit register                                       : 2
+ 8-bit register                                        : 1
+# Comparators                                          : 29
+ 16-bit comparator greatequal                          : 9
+ 17-bit comparator greatequal                          : 9
+ 18-bit comparator greatequal                          : 9
+ 8-bit comparator greatequal                           : 2
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+# Tristates                                            : 1
+ 16-bit tristate buffer                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <current_state/FSM> on signal <current_state[1:2]> with gray encoding.
+--------------------------
+ State        | Encoding
+--------------------------
+ rst_state    | 00
+ write_state  | 01
+ read_state   | 11
+ finish_state | 10
+--------------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <flash_mem_debug/current_state/FSM> on signal <current_state[1:13]> with one-hot encoding.
+------------------------------------------
+ State                   | Encoding
+------------------------------------------
+ rst_state               | 0000000000001
+ write_wrt_command_state | 0000000000010
+ write_wrt_data_state    | 0000010000000
+ write_polling_state     | 0000100000000
+ write_complete_state    | 0001000000000
+ read_command_state      | 0000000000100
+ read_state              | 0000000010000
+ read_complete_state     | 0000000100000
+ delete_statea           | 0000000001000
+ delete_stateb           | 0010000000000
+ delete_polling_state    | 0100000000000
+ delete_complete_state   | 1000000000000
+ wait_state              | 0000001000000
+------------------------------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <flash_mem_debug/basic_flash_opertations/current_state/FSM> on signal <current_state[1:10]> with one-hot encoding.
+----------------------------------------
+ State                    | Encoding
+----------------------------------------
+ rst_state                | 0000000001
+ write_rst_state          | unreached
+ write_state              | 0000000100
+ write_delay_state        | 0000001000
+ write_delay_extend_state | 0000010000
+ write_complete_state     | 0000100000
+ read_rst_state           | unreached
+ read_state               | 0000000010
+ read_delay_state         | 0010000000
+ read_delay_state_extend  | 0100000000
+ read_complete_state      | 1000000000
+ wait_state               | 0001000000
+----------------------------------------
+WARNING:Xst:1710 - FF/Latch <flash_write_address_13> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_write_address_14> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_write_address_15> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_write_address_16> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_write_address_17> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_write_address_18> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_write_address_19> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_write_address_20> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_write_address_21> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_read_address_8> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_read_address_9> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_read_address_10> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_read_address_11> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_read_address_12> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_read_address_13> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_read_address_14> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_read_address_15> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_read_address_16> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_read_address_17> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_read_address_18> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_read_address_19> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_read_address_20> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_read_address_21> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_9> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_10> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_11> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_12> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_13> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_14> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_15> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_16> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_17> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_18> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_19> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_write_address_12> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_write_address_11> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_write_address_10> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_write_address_9> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <flash_write_address_8> (without init value) has a constant value of 0 in block <flash_mem_debug>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd10> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd3> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd2> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd1> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_22> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_21> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_20> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_address_8> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_address_9> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_address_10> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_address_11> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_address_12> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_address_13> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_address_14> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_address_15> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_address_16> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_address_17> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_address_18> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_address_19> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_address_20> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <read_address_21> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_address_21> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_address_20> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_address_19> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_address_18> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_address_17> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_address_16> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_address_15> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_address_14> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_address_13> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_address_12> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_address_11> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_address_10> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_address_9> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_address_8> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <write_address<21:8>> (without init value) have a constant value of 0 in block <flash_memory_component>.
+WARNING:Xst:2404 -  FFs/Latches <read_address<21:8>> (without init value) have a constant value of 0 in block <flash_memory_component>.
+
+Synthesizing (advanced) Unit <flash_memory_component>.
+INFO:Xst:3044 - The ROM <Mrom__varindex0000> will be implemented as a read-only BLOCK RAM, absorbing the register: <write_data>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ramB> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <read_complete_sig> | high     |
+    |     addrA          | connected to signal <ramB_addr>     |          |
+    |     diA            | connected to signal <read_data_sig> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     addrB          | connected to signal <sw>            |          |
+    |     doB            | connected to signal <display_content> |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3225 - The RAM <Mrom__varindex0000> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <current_state_cmp_eq0000> | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <write_counter> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <write_data>    |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <flash_memory_component> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 3
+# RAMs                                                 : 2
+ 256x16-bit dual-port distributed RAM                  : 1
+ 256x16-bit single-port block RAM                      : 1
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 5
+ 17-bit subtractor                                     : 1
+ 18-bit subtractor                                     : 1
+ 19-bit subtractor                                     : 1
+ 32-bit adder                                          : 2
+# Counters                                             : 4
+ 2-bit up counter                                      : 1
+ 32-bit up counter                                     : 1
+ 8-bit up counter                                      : 2
+# Registers                                            : 231
+ Flip-Flops                                            : 231
+# Comparators                                          : 29
+ 16-bit comparator greatequal                          : 9
+ 17-bit comparator greatequal                          : 9
+ 18-bit comparator greatequal                          : 9
+ 8-bit comparator greatequal                           : 2
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <flash_read_address_8> in Unit <flash_mem_cntl> is equivalent to the following 13 FFs/Latches, which will be removed : <flash_read_address_9> <flash_read_address_10> <flash_read_address_11> <flash_read_address_12> <flash_read_address_13> <flash_read_address_14> <flash_read_address_15> <flash_read_address_16> <flash_read_address_17> <flash_read_address_18> <flash_read_address_19> <flash_read_address_20> <flash_read_address_21> 
+WARNING:Xst:1710 - FF/Latch <flash_write_address_8> (without init value) has a constant value of 0 in block <flash_mem_cntl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_9> (without init value) has a constant value of 0 in block <flash_mem_cntl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_10> (without init value) has a constant value of 0 in block <flash_mem_cntl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_11> (without init value) has a constant value of 0 in block <flash_mem_cntl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_12> (without init value) has a constant value of 0 in block <flash_mem_cntl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_13> (without init value) has a constant value of 0 in block <flash_mem_cntl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_14> (without init value) has a constant value of 0 in block <flash_mem_cntl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_15> (without init value) has a constant value of 0 in block <flash_mem_cntl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_16> (without init value) has a constant value of 0 in block <flash_mem_cntl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_17> (without init value) has a constant value of 0 in block <flash_mem_cntl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_18> (without init value) has a constant value of 0 in block <flash_mem_cntl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_19> (without init value) has a constant value of 0 in block <flash_mem_cntl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_20> (without init value) has a constant value of 0 in block <flash_mem_cntl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_21> (without init value) has a constant value of 0 in block <flash_mem_cntl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_8> (without init value) has a constant value of 0 in block <flash_mem_cntl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <flash_mem_debug/current_state_FSM_FFd2> has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <flash_mem_debug/current_state_FSM_FFd3> has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <flash_mem_debug/current_state_FSM_FFd10> has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_mem_debug/basic_flash_opertations/addr_22> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_mem_debug/basic_flash_opertations/addr_21> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_mem_debug/basic_flash_opertations/addr_20> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_mem_debug/basic_flash_opertations/addr_19> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_mem_debug/basic_flash_opertations/addr_18> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_mem_debug/basic_flash_opertations/addr_17> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_mem_debug/basic_flash_opertations/addr_16> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_mem_debug/basic_flash_opertations/addr_15> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_mem_debug/basic_flash_opertations/addr_14> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_mem_debug/basic_flash_opertations/addr_13> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_mem_debug/basic_flash_opertations/addr_12> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_mem_debug/basic_flash_opertations/addr_11> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_mem_debug/basic_flash_opertations/addr_10> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_mem_debug/basic_flash_opertations/addr_9> (without init value) has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <flash_mem_debug/cntl_delete_complete> of sequential type is unconnected in block <flash_memory_component>.
+WARNING:Xst:1293 - FF/Latch <flash_mem_debug/current_state_FSM_FFd1> has a constant value of 0 in block <flash_memory_component>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <flash_memory_component> ...
+
+Optimizing unit <seven_seg_display> ...
+
+Optimizing unit <large_number_7seg> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block flash_memory_component, actual ratio is 12.
+Replicating register flash_mem_debug/basic_flash_opertations/OE to handle IOB=TRUE attribute
+Replicating register flash_mem_debug/basic_flash_opertations/WE to handle IOB=TRUE attribute
+Replicating register flash_mem_debug/basic_flash_opertations/Mtrien_data to handle IOB=TRUE attribute
+Replicating register flash_mem_debug/basic_flash_opertations/addr_8 to handle IOB=TRUE attribute
+Replicating register flash_mem_debug/basic_flash_opertations/addr_7 to handle IOB=TRUE attribute
+Replicating register flash_mem_debug/basic_flash_opertations/addr_6 to handle IOB=TRUE attribute
+Replicating register flash_mem_debug/basic_flash_opertations/addr_5 to handle IOB=TRUE attribute
+Replicating register flash_mem_debug/basic_flash_opertations/addr_4 to handle IOB=TRUE attribute
+Replicating register flash_mem_debug/basic_flash_opertations/addr_3 to handle IOB=TRUE attribute
+Replicating register flash_mem_debug/basic_flash_opertations/addr_2 to handle IOB=TRUE attribute
+Replicating register flash_mem_debug/basic_flash_opertations/addr_1 to handle IOB=TRUE attribute
+Replicating register debug_state_7 to handle IOB=TRUE attribute
+Replicating register debug_state_6 to handle IOB=TRUE attribute
+Replicating register debug_state_5 to handle IOB=TRUE attribute
+Replicating register debug_state_4 to handle IOB=TRUE attribute
+Replicating register debug_state_3 to handle IOB=TRUE attribute
+Replicating register debug_state_2 to handle IOB=TRUE attribute
+Replicating register debug_state_0 to handle IOB=TRUE attribute
+
+FlipFlop ramB_addr_0 has been replicated 1 time(s)
+FlipFlop ramB_addr_1 has been replicated 1 time(s)
+FlipFlop ramB_addr_2 has been replicated 1 time(s)
+FlipFlop ramB_addr_3 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 295
+ Flip-Flops                                            : 295
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : flash_memory_component.ngr
+Top Level Output File Name         : flash_memory_component
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 73
+
+Cell Usage :
+# BELS                             : 1518
+#      GND                         : 2
+#      INV                         : 22
+#      LUT1                        : 129
+#      LUT2                        : 80
+#      LUT2_L                      : 1
+#      LUT3                        : 265
+#      LUT3_D                      : 1
+#      LUT3_L                      : 11
+#      LUT4                        : 322
+#      LUT4_D                      : 9
+#      LUT4_L                      : 3
+#      MUXCY                       : 366
+#      MUXF5                       : 98
+#      MUXF6                       : 32
+#      MUXF7                       : 16
+#      VCC                         : 1
+#      XORCY                       : 160
+# FlipFlops/Latches                : 295
+#      FD                          : 69
+#      FDE                         : 140
+#      FDR                         : 40
+#      FDRE                        : 1
+#      FDRS                        : 13
+#      FDS                         : 28
+#      FDSE                        : 4
+# RAMS                             : 257
+#      RAM16X1D                    : 256
+#      RAMB16                      : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 72
+#      IBUF                        : 10
+#      IOBUF                       : 16
+#      OBUF                        : 46
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400ft256-4 
+
+ Number of Slices:                      456  out of   3584    12%  
+ Number of Slice Flip Flops:            229  out of   7168     3%  
+ Number of 4 input LUTs:               1355  out of   7168    18%  
+    Number used as logic:               843
+    Number used as RAMs:                512
+ Number of IOs:                          73
+ Number of bonded IOBs:                  73  out of    173    42%  
+    IOB Flip Flops:                      66
+ Number of BRAMs:                         1  out of     16     6%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 552   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.643ns (Maximum Frequency: 115.701MHz)
+   Minimum input arrival time before clock: 4.922ns
+   Maximum output required time after clock: 55.137ns
+   Maximum combinational path delay: 57.861ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.643ns (frequency: 115.701MHz)
+  Total number of paths / destination ports: 13635 / 2027
+-------------------------------------------------------------------------
+Delay:               8.643ns (Levels of Logic = 11)
+  Source:            flash_mem_debug/basic_flash_opertations/delay_counter_8 (FF)
+  Destination:       flash_mem_debug/basic_flash_opertations/Mtrien_data_1 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: flash_mem_debug/basic_flash_opertations/delay_counter_8 to flash_mem_debug/basic_flash_opertations/Mtrien_data_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.720   1.246  flash_mem_debug/basic_flash_opertations/delay_counter_8 (flash_mem_debug/basic_flash_opertations/delay_counter_8)
+     LUT4:I0->O            1   0.551   0.000  flash_mem_debug/basic_flash_opertations/current_state_cmp_eq0000_wg_lut<0> (flash_mem_debug/basic_flash_opertations/current_state_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  flash_mem_debug/basic_flash_opertations/current_state_cmp_eq0000_wg_cy<0> (flash_mem_debug/basic_flash_opertations/current_state_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  flash_mem_debug/basic_flash_opertations/current_state_cmp_eq0000_wg_cy<1> (flash_mem_debug/basic_flash_opertations/current_state_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  flash_mem_debug/basic_flash_opertations/current_state_cmp_eq0000_wg_cy<2> (flash_mem_debug/basic_flash_opertations/current_state_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  flash_mem_debug/basic_flash_opertations/current_state_cmp_eq0000_wg_cy<3> (flash_mem_debug/basic_flash_opertations/current_state_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  flash_mem_debug/basic_flash_opertations/current_state_cmp_eq0000_wg_cy<4> (flash_mem_debug/basic_flash_opertations/current_state_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  flash_mem_debug/basic_flash_opertations/current_state_cmp_eq0000_wg_cy<5> (flash_mem_debug/basic_flash_opertations/current_state_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  flash_mem_debug/basic_flash_opertations/current_state_cmp_eq0000_wg_cy<6> (flash_mem_debug/basic_flash_opertations/current_state_cmp_eq0000_wg_cy<6>)
+     MUXCY:CI->O           8   0.281   1.151  flash_mem_debug/basic_flash_opertations/current_state_cmp_eq0000_wg_cy<7> (flash_mem_debug/basic_flash_opertations/current_state_cmp_eq0000)
+     LUT4_D:I2->O          1   0.551   0.869  flash_mem_debug/basic_flash_opertations/Mtridata_data_or000144 (flash_mem_debug/basic_flash_opertations/Mtridata_data_or0001)
+     LUT3:I2->O           16   0.551   1.237  flash_mem_debug/basic_flash_opertations/Mtrien_data_not00011 (flash_mem_debug/basic_flash_opertations/Mtrien_data_not0001)
+     FDE:CE                    0.602          flash_mem_debug/basic_flash_opertations/Mtrien_data_1
+    ----------------------------------------
+    Total                      8.643ns (4.140ns logic, 4.503ns route)
+                                       (47.9% logic, 52.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1105 / 1105
+-------------------------------------------------------------------------
+Offset:              4.922ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       flash_mem_debug/flash_write_address_7 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to flash_mem_debug/flash_write_address_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   0.821   1.118  rst_IBUF (rst_IBUF)
+     INV:I->O             28   0.551   1.830  flash_mem_debug/rst_inv1_INV_0 (flash_mem_debug/rst_inv)
+     FDE:CE                    0.602          flash_mem_debug/flash_direction
+    ----------------------------------------
+    Total                      4.922ns (1.974ns logic, 2.948ns route)
+                                       (40.1% logic, 59.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 2959800599534 / 45
+-------------------------------------------------------------------------
+Offset:              55.137ns (Levels of Logic = 66)
+  Source:            Mram_ramB177 (RAM)
+  Destination:       hex<1> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: Mram_ramB177 to hex<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAM16X1D:WCLK->DPO    1   1.784   0.996  Mram_ramB177 (N371)
+     LUT3:I1->O            1   0.551   0.000  inst_LPM_MUX11_8 (inst_LPM_MUX11_8)
+     MUXF5:I0->O           1   0.360   0.000  inst_LPM_MUX11_6_f5 (inst_LPM_MUX11_6_f5)
+     MUXF6:I0->O           1   0.342   0.000  inst_LPM_MUX11_4_f6 (inst_LPM_MUX11_4_f6)
+     MUXF7:I0->O          12   0.342   1.457  inst_LPM_MUX11_2_f7 (display_content<11>)
+     LUT4:I0->O            1   0.551   0.996  display/thousand_bit_cmp_ge0001210 (display/thousand_bit_cmp_ge0001210)
+     LUT4:I1->O            1   0.551   0.827  display/thousand_bit_cmp_ge0001219_SW0 (N140)
+     LUT4:I3->O            9   0.551   1.319  display/thousand_bit_cmp_ge0001219 (display/thousand_bit_cmp_ge0001)
+     LUT2:I1->O            4   0.551   1.112  display/thousand_bit<3>1 (display/thousand_bit<3>)
+     LUT4:I1->O            2   0.551   1.072  display/thousand_bit<1> (display/thousand_bit<1>)
+     LUT2:I1->O            1   0.551   0.000  display/Msub_hundred_part_share0000_lut<4> (display/Msub_hundred_part_share0000_lut<4>)
+     MUXCY:S->O            1   0.500   0.000  display/Msub_hundred_part_share0000_cy<4> (display/Msub_hundred_part_share0000_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_hundred_part_share0000_cy<5> (display/Msub_hundred_part_share0000_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_hundred_part_share0000_cy<6> (display/Msub_hundred_part_share0000_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_hundred_part_share0000_cy<7> (display/Msub_hundred_part_share0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_hundred_part_share0000_cy<8> (display/Msub_hundred_part_share0000_cy<8>)
+     XORCY:CI->O           2   0.904   0.945  display/Msub_hundred_part_share0000_xor<9> (display/hundred_part_share0000<9>)
+     LUT3:I2->O           11   0.551   1.483  display/hundred_part<9>1 (display/hundred_part<9>)
+     LUT4:I0->O            1   0.551   0.000  display/Mcompar_ten_part_cmp_ge0000_lut<4>2 (display/Mcompar_ten_part_cmp_ge0000_lut<4>2)
+     MUXCY:S->O            1   0.500   0.000  display/Mcompar_ten_part_cmp_ge0000_cy<4>_3 (display/Mcompar_ten_part_cmp_ge0000_cy<4>4)
+     MUXCY:CI->O           1   0.064   0.000  display/Mcompar_ten_part_cmp_ge0000_cy<5>_3 (display/Mcompar_ten_part_cmp_ge0000_cy<5>2)
+     MUXCY:CI->O           7   0.303   1.405  display/Mcompar_ten_part_cmp_ge0000_cy<6>_1 (display/ten_part_cmp_ge0004)
+     LUT2:I0->O            2   0.551   0.903  display/ten_part_mux0008<10>111 (display/N37)
+     LUT4:I3->O            1   0.551   0.869  display/ten_part_mux0008<10>_SW0 (N891)
+     LUT4:I2->O            1   0.551   0.869  display/Msub_ten_part_share0000_lut<7>_SW0 (N166)
+     LUT4:I2->O            1   0.551   0.000  display/Msub_ten_part_share0000_lut<7> (display/Msub_ten_part_share0000_lut<7>)
+     MUXCY:S->O            1   0.500   0.000  display/Msub_ten_part_share0000_cy<7> (display/Msub_ten_part_share0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_ten_part_share0000_cy<8> (display/Msub_ten_part_share0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_ten_part_share0000_cy<9> (display/Msub_ten_part_share0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_ten_part_share0000_cy<10> (display/Msub_ten_part_share0000_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_ten_part_share0000_cy<11> (display/Msub_ten_part_share0000_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_ten_part_share0000_cy<12> (display/Msub_ten_part_share0000_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_ten_part_share0000_cy<13> (display/Msub_ten_part_share0000_cy<13>)
+     XORCY:CI->O           2   0.904   0.903  display/Msub_ten_part_share0000_xor<14> (display/ten_part_share0000<14>)
+     LUT4:I3->O           10   0.551   1.473  display/ten_part<14>1 (display/ten_part<14>)
+     LUT3:I0->O            1   0.551   0.000  display/Mcompar_decimal_part_cmp_ge0000_lut<5>4 (display/Mcompar_decimal_part_cmp_ge0000_lut<5>4)
+     MUXCY:S->O            1   0.500   0.000  display/Mcompar_decimal_part_cmp_ge0000_cy<5>_3 (display/Mcompar_decimal_part_cmp_ge0000_cy<5>4)
+     MUXCY:CI->O           9   0.303   1.463  display/Mcompar_decimal_part_cmp_ge0000_cy<6>_3 (display/decimal_part_cmp_ge0005)
+     LUT3:I0->O            1   0.551   0.000  display/decimal_part_mux0008<17>152 (display/decimal_part_mux0008<17>152)
+     MUXF5:I0->O           1   0.360   0.996  display/decimal_part_mux0008<17>15_f5 (display/decimal_part_mux0008<17>15)
+     LUT4:I1->O            1   0.551   0.996  display/decimal_part_mux0008<17>43 (display/decimal_part_mux0008<17>)
+     LUT2:I1->O            1   0.551   0.000  display/Msub_decimal_part_share0000_lut<1> (display/Msub_decimal_part_share0000_lut<1>)
+     MUXCY:S->O            1   0.500   0.000  display/Msub_decimal_part_share0000_cy<1> (display/Msub_decimal_part_share0000_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<2> (display/Msub_decimal_part_share0000_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<3> (display/Msub_decimal_part_share0000_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<4> (display/Msub_decimal_part_share0000_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<5> (display/Msub_decimal_part_share0000_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<6> (display/Msub_decimal_part_share0000_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<7> (display/Msub_decimal_part_share0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<8> (display/Msub_decimal_part_share0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<9> (display/Msub_decimal_part_share0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<10> (display/Msub_decimal_part_share0000_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<11> (display/Msub_decimal_part_share0000_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<12> (display/Msub_decimal_part_share0000_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<13> (display/Msub_decimal_part_share0000_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<14> (display/Msub_decimal_part_share0000_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<15> (display/Msub_decimal_part_share0000_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<16> (display/Msub_decimal_part_share0000_cy<16>)
+     MUXCY:CI->O           0   0.064   0.000  display/Msub_decimal_part_share0000_cy<17> (display/Msub_decimal_part_share0000_cy<17>)
+     XORCY:CI->O           1   0.904   0.996  display/Msub_decimal_part_share0000_xor<18> (display/decimal_part_share0000<18>)
+     LUT3:I1->O            1   0.551   0.000  display/digit_bit<0>2_wg_lut<14> (display/digit_bit<0>2_wg_lut<14>)
+     MUXCY:S->O            4   0.739   1.256  display/digit_bit<0>2_wg_cy<14> (display/digit_bit<0>2_wg_cy<14>)
+     LUT4:I0->O            1   0.551   0.996  display/digit_bit<0> (display/digit_bit<0>)
+     LUT3:I1->O            1   0.551   0.000  display/display/Mmux_binary_4 (display/display/Mmux_binary_4)
+     MUXF5:I0->O           7   0.360   1.405  display/display/Mmux_binary_2_f5 (display/display/binary<0>)
+     LUT4:I0->O            1   0.551   0.801  display/display/binary_to_decimal/out_seg<1>1 (hex_1_OBUF)
+     OBUF:I->O                 5.644          hex_1_OBUF (hex<1>)
+    ----------------------------------------
+    Total                     55.137ns (29.599ns logic, 25.538ns route)
+                                       (53.7% logic, 46.3% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 14614015459498 / 7
+-------------------------------------------------------------------------
+Delay:               57.861ns (Levels of Logic = 68)
+  Source:            sw<2> (PAD)
+  Destination:       hex<1> (PAD)
+
+  Data Path: sw<2> to hex<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           256   0.821   3.136  sw_2_IBUF (sw_2_IBUF)
+     RAM16X1D:DPRA2->DPO    1   0.551   0.996  Mram_ramB179 (N375)
+     LUT3:I1->O            1   0.551   0.000  inst_LPM_MUX11_72 (inst_LPM_MUX11_72)
+     MUXF5:I1->O           1   0.360   0.000  inst_LPM_MUX11_6_f5 (inst_LPM_MUX11_6_f5)
+     MUXF6:I0->O           1   0.342   0.000  inst_LPM_MUX11_4_f6 (inst_LPM_MUX11_4_f6)
+     MUXF7:I0->O          12   0.342   1.457  inst_LPM_MUX11_2_f7 (display_content<11>)
+     LUT4:I0->O            1   0.551   0.996  display/thousand_bit_cmp_ge0001210 (display/thousand_bit_cmp_ge0001210)
+     LUT4:I1->O            1   0.551   0.827  display/thousand_bit_cmp_ge0001219_SW0 (N140)
+     LUT4:I3->O            9   0.551   1.319  display/thousand_bit_cmp_ge0001219 (display/thousand_bit_cmp_ge0001)
+     LUT2:I1->O            4   0.551   1.112  display/thousand_bit<3>1 (display/thousand_bit<3>)
+     LUT4:I1->O            2   0.551   1.072  display/thousand_bit<1> (display/thousand_bit<1>)
+     LUT2:I1->O            1   0.551   0.000  display/Msub_hundred_part_share0000_lut<4> (display/Msub_hundred_part_share0000_lut<4>)
+     MUXCY:S->O            1   0.500   0.000  display/Msub_hundred_part_share0000_cy<4> (display/Msub_hundred_part_share0000_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_hundred_part_share0000_cy<5> (display/Msub_hundred_part_share0000_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_hundred_part_share0000_cy<6> (display/Msub_hundred_part_share0000_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_hundred_part_share0000_cy<7> (display/Msub_hundred_part_share0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_hundred_part_share0000_cy<8> (display/Msub_hundred_part_share0000_cy<8>)
+     XORCY:CI->O           2   0.904   0.945  display/Msub_hundred_part_share0000_xor<9> (display/hundred_part_share0000<9>)
+     LUT3:I2->O           11   0.551   1.483  display/hundred_part<9>1 (display/hundred_part<9>)
+     LUT4:I0->O            1   0.551   0.000  display/Mcompar_ten_part_cmp_ge0000_lut<4>2 (display/Mcompar_ten_part_cmp_ge0000_lut<4>2)
+     MUXCY:S->O            1   0.500   0.000  display/Mcompar_ten_part_cmp_ge0000_cy<4>_3 (display/Mcompar_ten_part_cmp_ge0000_cy<4>4)
+     MUXCY:CI->O           1   0.064   0.000  display/Mcompar_ten_part_cmp_ge0000_cy<5>_3 (display/Mcompar_ten_part_cmp_ge0000_cy<5>2)
+     MUXCY:CI->O           7   0.303   1.405  display/Mcompar_ten_part_cmp_ge0000_cy<6>_1 (display/ten_part_cmp_ge0004)
+     LUT2:I0->O            2   0.551   0.903  display/ten_part_mux0008<10>111 (display/N37)
+     LUT4:I3->O            1   0.551   0.869  display/ten_part_mux0008<10>_SW0 (N891)
+     LUT4:I2->O            1   0.551   0.869  display/Msub_ten_part_share0000_lut<7>_SW0 (N166)
+     LUT4:I2->O            1   0.551   0.000  display/Msub_ten_part_share0000_lut<7> (display/Msub_ten_part_share0000_lut<7>)
+     MUXCY:S->O            1   0.500   0.000  display/Msub_ten_part_share0000_cy<7> (display/Msub_ten_part_share0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_ten_part_share0000_cy<8> (display/Msub_ten_part_share0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_ten_part_share0000_cy<9> (display/Msub_ten_part_share0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_ten_part_share0000_cy<10> (display/Msub_ten_part_share0000_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_ten_part_share0000_cy<11> (display/Msub_ten_part_share0000_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_ten_part_share0000_cy<12> (display/Msub_ten_part_share0000_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_ten_part_share0000_cy<13> (display/Msub_ten_part_share0000_cy<13>)
+     XORCY:CI->O           2   0.904   0.903  display/Msub_ten_part_share0000_xor<14> (display/ten_part_share0000<14>)
+     LUT4:I3->O           10   0.551   1.473  display/ten_part<14>1 (display/ten_part<14>)
+     LUT3:I0->O            1   0.551   0.000  display/Mcompar_decimal_part_cmp_ge0000_lut<5>4 (display/Mcompar_decimal_part_cmp_ge0000_lut<5>4)
+     MUXCY:S->O            1   0.500   0.000  display/Mcompar_decimal_part_cmp_ge0000_cy<5>_3 (display/Mcompar_decimal_part_cmp_ge0000_cy<5>4)
+     MUXCY:CI->O           9   0.303   1.463  display/Mcompar_decimal_part_cmp_ge0000_cy<6>_3 (display/decimal_part_cmp_ge0005)
+     LUT3:I0->O            1   0.551   0.000  display/decimal_part_mux0008<17>152 (display/decimal_part_mux0008<17>152)
+     MUXF5:I0->O           1   0.360   0.996  display/decimal_part_mux0008<17>15_f5 (display/decimal_part_mux0008<17>15)
+     LUT4:I1->O            1   0.551   0.996  display/decimal_part_mux0008<17>43 (display/decimal_part_mux0008<17>)
+     LUT2:I1->O            1   0.551   0.000  display/Msub_decimal_part_share0000_lut<1> (display/Msub_decimal_part_share0000_lut<1>)
+     MUXCY:S->O            1   0.500   0.000  display/Msub_decimal_part_share0000_cy<1> (display/Msub_decimal_part_share0000_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<2> (display/Msub_decimal_part_share0000_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<3> (display/Msub_decimal_part_share0000_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<4> (display/Msub_decimal_part_share0000_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<5> (display/Msub_decimal_part_share0000_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<6> (display/Msub_decimal_part_share0000_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<7> (display/Msub_decimal_part_share0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<8> (display/Msub_decimal_part_share0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<9> (display/Msub_decimal_part_share0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<10> (display/Msub_decimal_part_share0000_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<11> (display/Msub_decimal_part_share0000_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<12> (display/Msub_decimal_part_share0000_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<13> (display/Msub_decimal_part_share0000_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<14> (display/Msub_decimal_part_share0000_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<15> (display/Msub_decimal_part_share0000_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  display/Msub_decimal_part_share0000_cy<16> (display/Msub_decimal_part_share0000_cy<16>)
+     MUXCY:CI->O           0   0.064   0.000  display/Msub_decimal_part_share0000_cy<17> (display/Msub_decimal_part_share0000_cy<17>)
+     XORCY:CI->O           1   0.904   0.996  display/Msub_decimal_part_share0000_xor<18> (display/decimal_part_share0000<18>)
+     LUT3:I1->O            1   0.551   0.000  display/digit_bit<0>2_wg_lut<14> (display/digit_bit<0>2_wg_lut<14>)
+     MUXCY:S->O            4   0.739   1.256  display/digit_bit<0>2_wg_cy<14> (display/digit_bit<0>2_wg_cy<14>)
+     LUT4:I0->O            1   0.551   0.996  display/digit_bit<0> (display/digit_bit<0>)
+     LUT3:I1->O            1   0.551   0.000  display/display/Mmux_binary_4 (display/display/Mmux_binary_4)
+     MUXF5:I0->O           7   0.360   1.405  display/display/Mmux_binary_2_f5 (display/display/binary<0>)
+     LUT4:I0->O            1   0.551   0.801  display/display/binary_to_decimal/out_seg<1>1 (hex_1_OBUF)
+     OBUF:I->O                 5.644          hex_1_OBUF (hex<1>)
+    ----------------------------------------
+    Total                     57.861ns (29.187ns logic, 28.674ns route)
+                                       (50.4% logic, 49.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 10.48 secs
+ 
+--> 
+
+Total memory usage is 220376 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  129 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
+

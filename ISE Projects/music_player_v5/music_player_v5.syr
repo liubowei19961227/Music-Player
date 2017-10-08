@@ -1,0 +1,1288 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> WARNING:Xst:1583 - You are using an internal switch '-use_new_parser'.
+WARNING:Xst:3152 - You have chosen to run a version of XST which is not the default solution
+   for the specified device family. You are free to use it in order to take
+   advantage of its enhanced HDL parsing/elaboration capabilities. However,
+   please be aware that you may be impacted by  language support differences.
+   This version may also result in circuit performance and device utilization
+   differences for your particular design. You can always revert back to the
+   default XST solution by setting the "use_new_parser" option to value "no" 
+   on the XST command line or in the XST process properties panel.
+Reading design: music_player_v5.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "music_player_v5.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "music_player_v5"
+Output Format                      : NGC
+Target Device                      : xc3s400-4-ft256
+
+---- Source Options
+Use New Parser                     : yes
+Top Module Name                    : music_player_v5
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Ryan\OneDrive - UNSW\Documents\2017 Semester 2\COMP3601 - Desgin Project A\Git Repositry\ISE Projects\music_player_v5\constants.vhd" into library work
+Parsing package <constants>.
+Parsing VHDL file "C:\Users\Ryan\OneDrive - UNSW\Documents\2017 Semester 2\COMP3601 - Desgin Project A\Git Repositry\ISE Projects\music_player_v5\note_player.vhd" into library work
+Parsing entity <note_player>.
+Parsing architecture <behavioral> of entity <note_player>.
+Parsing VHDL file "C:\Users\Ryan\OneDrive - UNSW\Documents\2017 Semester 2\COMP3601 - Desgin Project A\Git Repositry\ISE Projects\music_player_v5\note_length_counter.vhd" into library work
+Parsing entity <note_length_counter>.
+Parsing architecture <Behavioral> of entity <note_length_counter>.
+Parsing VHDL file "C:\Users\Ryan\OneDrive - UNSW\Documents\2017 Semester 2\COMP3601 - Desgin Project A\Git Repositry\ISE Projects\music_player_v5\main.vhd" into library work
+Parsing entity <music_player_v5>.
+Parsing architecture <behavioral> of entity <music_player_v5>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <music_player_v5> (architecture <behavioral>) from library <work>.
+
+Elaborating entity <note_length_counter> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <note_player> (architecture <behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <music_player_v5>.
+    Related source file is "C:\Users\Ryan\OneDrive - UNSW\Documents\2017 Semester 2\COMP3601 - Desgin Project A\Git Repositry\ISE Projects\music_player_v5\main.vhd".
+WARNING:Xst:37 - Detected unknown constraint/property " package_net". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property " package_net". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:2999 - Signal 'music_pitch_array', unconnected in block 'music_player_v5', is tied to its initial value.
+WARNING:Xst:2999 - Signal 'music_length_array', unconnected in block 'music_player_v5', is tied to its initial value.
+    Found 64x8-bit single-port Read Only RAM <Mram_music_pitch_array> for signal <music_pitch_array>.
+    Found 64x8-bit single-port Read Only RAM <Mram_music_length_array> for signal <music_length_array>.
+    Found 6-bit register for signal <music_index>.
+    Found 1-bit register for signal <second_pulse>.
+    Found 8-bit register for signal <music_pitch_array_value>.
+    Found 7-bit register for signal <note_length_in_twelfths>.
+    Found 22-bit register for signal <twelfth_cc>.
+    Found 8-bit adder for signal <n0037> created at line 63.
+    Found 6-bit adder for signal <music_index[5]_GND_5_o_add_6_OUT> created at line 79.
+    Found 20x2-bit multiplier for signal <PWR_5_o_sw[7]_MuLt_3_OUT> created at line 64.
+    Summary:
+	inferred   2 RAM(s).
+	inferred   1 Multiplier(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  44 D-type flip-flop(s).
+Unit <music_player_v5> synthesized.
+
+Synthesizing Unit <note_length_counter>.
+    Related source file is "C:\Users\Ryan\OneDrive - UNSW\Documents\2017 Semester 2\COMP3601 - Desgin Project A\Git Repositry\ISE Projects\music_player_v5\note_length_counter.vhd".
+    Found 1-bit register for signal <is_new_note>.
+    Found 1-bit register for signal <is_mute>.
+    Found 28-bit register for signal <note_length_partial>.
+    Found 29-bit subtractor for signal <GND_6_o_GND_6_o_sub_7_OUT> created at line 48.
+    Found 28-bit adder for signal <n0045[27:0]> created at line 33.
+    Found 29-bit adder for signal <n0036> created at line 33.
+    Found 28-bit adder for signal <note_length_partial[27]_GND_6_o_add_8_OUT> created at line 52.
+    Found 22x7-bit multiplier for signal <n0023> created at line 29.
+    Found 28-bit comparator greater for signal <articulation_cc[27]_note_length_partial[27]_LessThan_6_o> created at line 43
+    Found 29-bit comparator greater for signal <n0011> created at line 48
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred  30 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <note_length_counter> synthesized.
+
+Synthesizing Unit <note_player>.
+    Related source file is "C:\Users\Ryan\OneDrive - UNSW\Documents\2017 Semester 2\COMP3601 - Desgin Project A\Git Repositry\ISE Projects\music_player_v5\note_player.vhd".
+    Found 8-bit register for signal <sample_rate_partial>.
+    Found 16-bit register for signal <note_cc_array_value>.
+    Found 1-bit register for signal <square_wave>.
+    Found 20-bit register for signal <note_cc>.
+    Found 8-bit register for signal <duty_cc>.
+    Found 1-bit register for signal <note_pulse>.
+    Found 20-bit register for signal <note_pitch_partial>.
+    Found 3-bit subtractor for signal <GND_8_o_GND_8_o_sub_3_OUT> created at line 42.
+    Found 3-bit subtractor for signal <n0078> created at line 42.
+    Found 20-bit adder for signal <note_pitch_partial[19]_GND_8_o_add_7_OUT> created at line 47.
+    Found 8-bit adder for signal <sample_rate_partial[7]_GND_8_o_add_19_OUT> created at line 63.
+    Found 20-bit subtractor for signal <GND_8_o_GND_8_o_sub_5_OUT<19:0>> created at line 43.
+    Found 20-bit subtractor for signal <GND_8_o_GND_8_o_sub_7_OUT<19:0>> created at line 44.
+    Found 20-bit subtractor for signal <GND_8_o_GND_8_o_sub_9_OUT<19:0>> created at line 49.
+    Found 20-bit shifter logical left for signal <n0080> created at line 42
+    Found 8x20-bit multiplier for signal <PWR_8_o_note_pitch_partial[19]_MuLt_15_OUT> created at line 56.
+    Found 20-bit shifter logical right for signal <n0079> created at line 42
+    Found 16x16-bit Read Only RAM for signal <note[3]_X_7_o_wide_mux_0_OUT>
+    Found 20-bit comparator equal for signal <note_pitch_partial[19]_GND_8_o_equal_6_o> created at line 43
+    Found 8-bit comparator greater for signal <n0016> created at line 52
+    Found 8-bit comparator equal for signal <sample_rate_partial[7]_duty_cc[7]_equal_24_o> created at line 65
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Multiplier(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred  74 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred   6 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
+Unit <note_player> synthesized.
+
+Synthesizing Unit <div_28u_20u>.
+    Related source file is "".
+    Found 48-bit adder for signal <n2281> created at line 0.
+    Found 48-bit adder for signal <GND_10_o_b[19]_add_1_OUT> created at line 0.
+    Found 47-bit adder for signal <n2285> created at line 0.
+    Found 47-bit adder for signal <GND_10_o_b[19]_add_3_OUT> created at line 0.
+    Found 46-bit adder for signal <n2289> created at line 0.
+    Found 46-bit adder for signal <GND_10_o_b[19]_add_5_OUT> created at line 0.
+    Found 45-bit adder for signal <n2293> created at line 0.
+    Found 45-bit adder for signal <GND_10_o_b[19]_add_7_OUT> created at line 0.
+    Found 44-bit adder for signal <n2297> created at line 0.
+    Found 44-bit adder for signal <GND_10_o_b[19]_add_9_OUT> created at line 0.
+    Found 43-bit adder for signal <n2301> created at line 0.
+    Found 43-bit adder for signal <GND_10_o_b[19]_add_11_OUT> created at line 0.
+    Found 42-bit adder for signal <n2305> created at line 0.
+    Found 42-bit adder for signal <GND_10_o_b[19]_add_13_OUT> created at line 0.
+    Found 41-bit adder for signal <n2309> created at line 0.
+    Found 41-bit adder for signal <GND_10_o_b[19]_add_15_OUT> created at line 0.
+    Found 40-bit adder for signal <n2313> created at line 0.
+    Found 40-bit adder for signal <GND_10_o_b[19]_add_17_OUT> created at line 0.
+    Found 39-bit adder for signal <n2317> created at line 0.
+    Found 39-bit adder for signal <GND_10_o_b[19]_add_19_OUT> created at line 0.
+    Found 38-bit adder for signal <n2321> created at line 0.
+    Found 38-bit adder for signal <GND_10_o_b[19]_add_21_OUT> created at line 0.
+    Found 37-bit adder for signal <n2325> created at line 0.
+    Found 37-bit adder for signal <GND_10_o_b[19]_add_23_OUT> created at line 0.
+    Found 36-bit adder for signal <n2329> created at line 0.
+    Found 36-bit adder for signal <GND_10_o_b[19]_add_25_OUT> created at line 0.
+    Found 35-bit adder for signal <n2333> created at line 0.
+    Found 35-bit adder for signal <GND_10_o_b[19]_add_27_OUT> created at line 0.
+    Found 34-bit adder for signal <n2337> created at line 0.
+    Found 34-bit adder for signal <GND_10_o_b[19]_add_29_OUT> created at line 0.
+    Found 33-bit adder for signal <n2341> created at line 0.
+    Found 33-bit adder for signal <GND_10_o_b[19]_add_31_OUT> created at line 0.
+    Found 32-bit adder for signal <n2345> created at line 0.
+    Found 32-bit adder for signal <GND_10_o_b[19]_add_33_OUT> created at line 0.
+    Found 31-bit adder for signal <n2349> created at line 0.
+    Found 31-bit adder for signal <GND_10_o_b[19]_add_35_OUT> created at line 0.
+    Found 30-bit adder for signal <n2353> created at line 0.
+    Found 30-bit adder for signal <GND_10_o_b[19]_add_37_OUT> created at line 0.
+    Found 29-bit adder for signal <n2357> created at line 0.
+    Found 29-bit adder for signal <GND_10_o_b[19]_add_39_OUT> created at line 0.
+    Found 28-bit adder for signal <n2361> created at line 0.
+    Found 28-bit adder for signal <a[27]_b[19]_add_41_OUT> created at line 0.
+    Found 28-bit adder for signal <n2365> created at line 0.
+    Found 28-bit adder for signal <a[27]_GND_10_o_add_43_OUT> created at line 0.
+    Found 28-bit adder for signal <n2369> created at line 0.
+    Found 28-bit adder for signal <a[27]_GND_10_o_add_45_OUT> created at line 0.
+    Found 28-bit adder for signal <n2373> created at line 0.
+    Found 28-bit adder for signal <a[27]_GND_10_o_add_47_OUT> created at line 0.
+    Found 28-bit adder for signal <n2377> created at line 0.
+    Found 28-bit adder for signal <a[27]_GND_10_o_add_49_OUT> created at line 0.
+    Found 28-bit adder for signal <n2381> created at line 0.
+    Found 28-bit adder for signal <a[27]_GND_10_o_add_51_OUT[27:0]> created at line 0.
+    Found 28-bit adder for signal <n2385> created at line 0.
+    Found 28-bit adder for signal <a[27]_GND_10_o_add_53_OUT[27:0]> created at line 0.
+    Found 28-bit adder for signal <n2389> created at line 0.
+    Found 28-bit adder for signal <a[27]_GND_10_o_add_55_OUT[27:0]> created at line 0.
+    Found 48-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 47-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 46-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 45-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 44-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 43-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 42-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 41-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 40-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 39-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 38-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 37-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 36-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 35-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 34-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 33-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 30-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 29-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 28-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 28-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Found 28-bit comparator lessequal for signal <BUS_0023> created at line 0
+    Found 28-bit comparator lessequal for signal <BUS_0024> created at line 0
+    Found 28-bit comparator lessequal for signal <BUS_0025> created at line 0
+    Found 28-bit comparator lessequal for signal <BUS_0026> created at line 0
+    Found 28-bit comparator lessequal for signal <BUS_0027> created at line 0
+    Found 28-bit comparator lessequal for signal <BUS_0028> created at line 0
+    Found 28-bit comparator lessequal for signal <BUS_0029> created at line 0
+    Summary:
+	inferred  56 Adder/Subtractor(s).
+	inferred  29 Comparator(s).
+	inferred 703 Multiplexer(s).
+Unit <div_28u_20u> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 16x16-bit single-port Read Only RAM                   : 1
+ 64x8-bit single-port Read Only RAM                    : 2
+# Multipliers                                          : 3
+ 20x2-bit multiplier                                   : 1
+ 20x8-bit multiplier                                   : 1
+ 22x7-bit multiplier                                   : 1
+# Adders/Subtractors                                   : 67
+ 20-bit addsub                                         : 1
+ 20-bit subtractor                                     : 1
+ 28-bit adder                                          : 18
+ 29-bit adder                                          : 3
+ 29-bit subtractor                                     : 1
+ 3-bit subtractor                                      : 2
+ 30-bit adder                                          : 2
+ 31-bit adder                                          : 2
+ 32-bit adder                                          : 2
+ 33-bit adder                                          : 2
+ 34-bit adder                                          : 2
+ 35-bit adder                                          : 2
+ 36-bit adder                                          : 2
+ 37-bit adder                                          : 2
+ 38-bit adder                                          : 2
+ 39-bit adder                                          : 2
+ 40-bit adder                                          : 2
+ 41-bit adder                                          : 2
+ 42-bit adder                                          : 2
+ 43-bit adder                                          : 2
+ 44-bit adder                                          : 2
+ 45-bit adder                                          : 2
+ 46-bit adder                                          : 2
+ 47-bit adder                                          : 2
+ 48-bit adder                                          : 2
+ 6-bit adder                                           : 1
+ 8-bit adder                                           : 2
+# Registers                                            : 15
+ 1-bit register                                        : 5
+ 16-bit register                                       : 1
+ 20-bit register                                       : 2
+ 22-bit register                                       : 1
+ 28-bit register                                       : 1
+ 6-bit register                                        : 1
+ 7-bit register                                        : 1
+ 8-bit register                                        : 3
+# Comparators                                          : 34
+ 20-bit comparator equal                               : 1
+ 28-bit comparator greater                             : 1
+ 28-bit comparator lessequal                           : 9
+ 29-bit comparator greater                             : 1
+ 29-bit comparator lessequal                           : 1
+ 30-bit comparator lessequal                           : 1
+ 31-bit comparator lessequal                           : 1
+ 32-bit comparator lessequal                           : 1
+ 33-bit comparator lessequal                           : 1
+ 34-bit comparator lessequal                           : 1
+ 35-bit comparator lessequal                           : 1
+ 36-bit comparator lessequal                           : 1
+ 37-bit comparator lessequal                           : 1
+ 38-bit comparator lessequal                           : 1
+ 39-bit comparator lessequal                           : 1
+ 40-bit comparator lessequal                           : 1
+ 41-bit comparator lessequal                           : 1
+ 42-bit comparator lessequal                           : 1
+ 43-bit comparator lessequal                           : 1
+ 44-bit comparator lessequal                           : 1
+ 45-bit comparator lessequal                           : 1
+ 46-bit comparator lessequal                           : 1
+ 47-bit comparator lessequal                           : 1
+ 48-bit comparator lessequal                           : 1
+ 8-bit comparator equal                                : 1
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 711
+ 1-bit 2-to-1 multiplexer                              : 701
+ 20-bit 2-to-1 multiplexer                             : 4
+ 28-bit 2-to-1 multiplexer                             : 3
+ 29-bit 2-to-1 multiplexer                             : 2
+ 8-bit 2-to-1 multiplexer                              : 1
+# Logic shifters                                       : 2
+ 20-bit shifter logical left                           : 1
+ 20-bit shifter logical right                          : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <music_pitch_array_value_6> of sequential type is unconnected in block <music_player_v5>.
+WARNING:Xst:2677 - Node <music_pitch_array_value_7> of sequential type is unconnected in block <music_player_v5>.
+
+Synthesizing (advanced) Unit <music_player_v5>.
+The following registers are absorbed into counter <music_index>: 1 register on signal <music_index>.
+	Found pipelined multiplier on signal <PWR_5_o_sw[7]_MuLt_3_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+INFO:Xst:3231 - The small RAM <Mram_music_length_array> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <music_index>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_music_pitch_array> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <music_index>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_PWR_5_o_sw[7]_MuLt_3_OUT by adding 1 register level(s).
+Unit <music_player_v5> synthesized (advanced).
+
+Synthesizing (advanced) Unit <note_length_counter>.
+The following registers are absorbed into counter <note_length_partial>: 1 register on signal <note_length_partial>.
+Unit <note_length_counter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <note_player>.
+The following registers are absorbed into counter <sample_rate_partial>: 1 register on signal <sample_rate_partial>.
+INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <music_pitch_array_value> prevents it from being combined with the RAM <Mram_note[3]_X_7_o_wide_mux_0_OUT> for implementation as read-only block RAM.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 16-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <note>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_note[3]_X_7_o_wide_mux_0_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+Unit <note_player> synthesized (advanced).
+WARNING:Xst:2677 - Node <music_pitch_array_value_6> of sequential type is unconnected in block <music_player_v5>.
+WARNING:Xst:2677 - Node <music_pitch_array_value_7> of sequential type is unconnected in block <music_player_v5>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 16x16-bit single-port distributed Read Only RAM       : 1
+ 64x8-bit single-port distributed Read Only RAM        : 2
+# Multipliers                                          : 3
+ 20x2-bit registered multiplier                        : 1
+ 20x8-bit multiplier                                   : 1
+ 22x7-bit multiplier                                   : 1
+# Adders/Subtractors                                   : 36
+ 2-bit adder                                           : 1
+ 20-bit addsub                                         : 1
+ 20-bit subtractor                                     : 1
+ 28-bit adder                                          : 1
+ 28-bit adder carry in                                 : 28
+ 29-bit adder                                          : 1
+ 29-bit subtractor                                     : 1
+ 3-bit subtractor                                      : 2
+# Counters                                             : 3
+ 28-bit up counter                                     : 1
+ 6-bit up counter                                      : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 82
+ Flip-Flops                                            : 82
+# Comparators                                          : 34
+ 20-bit comparator equal                               : 1
+ 28-bit comparator greater                             : 1
+ 28-bit comparator lessequal                           : 9
+ 29-bit comparator greater                             : 1
+ 29-bit comparator lessequal                           : 1
+ 30-bit comparator lessequal                           : 1
+ 31-bit comparator lessequal                           : 1
+ 32-bit comparator lessequal                           : 1
+ 33-bit comparator lessequal                           : 1
+ 34-bit comparator lessequal                           : 1
+ 35-bit comparator lessequal                           : 1
+ 36-bit comparator lessequal                           : 1
+ 37-bit comparator lessequal                           : 1
+ 38-bit comparator lessequal                           : 1
+ 39-bit comparator lessequal                           : 1
+ 40-bit comparator lessequal                           : 1
+ 41-bit comparator lessequal                           : 1
+ 42-bit comparator lessequal                           : 1
+ 43-bit comparator lessequal                           : 1
+ 44-bit comparator lessequal                           : 1
+ 45-bit comparator lessequal                           : 1
+ 46-bit comparator lessequal                           : 1
+ 47-bit comparator lessequal                           : 1
+ 48-bit comparator lessequal                           : 1
+ 8-bit comparator equal                                : 1
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 710
+ 1-bit 2-to-1 multiplexer                              : 701
+ 20-bit 2-to-1 multiplexer                             : 4
+ 28-bit 2-to-1 multiplexer                             : 3
+ 29-bit 2-to-1 multiplexer                             : 2
+# Logic shifters                                       : 2
+ 20-bit shifter logical left                           : 1
+ 20-bit shifter logical right                          : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <note_cc_array_value_14> (without init value) has a constant value of 0 in block <note_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_cc_array_value_15> (without init value) has a constant value of 0 in block <note_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <note_cc_17> (without init value) has a constant value of 0 in block <note_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_cc_18> (without init value) has a constant value of 0 in block <note_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_cc_19> (without init value) has a constant value of 0 in block <note_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <note_length_in_twelfths_0> (without init value) has a constant value of 0 in block <music_player_v5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_length_in_twelfths_1> (without init value) has a constant value of 0 in block <music_player_v5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_length_in_twelfths_2> (without init value) has a constant value of 1 in block <music_player_v5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_length_in_twelfths_3> (without init value) has a constant value of 1 in block <music_player_v5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_length_in_twelfths_4> (without init value) has a constant value of 0 in block <music_player_v5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_length_in_twelfths_5> (without init value) has a constant value of 0 in block <music_player_v5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <note_length_in_twelfths_6> (without init value) has a constant value of 0 in block <music_player_v5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_PWR_5_o_sw[7]_MuLt_3_OUT_21> (without init value) has a constant value of 0 in block <music_player_v5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_PWR_5_o_sw[7]_MuLt_3_OUT_20> (without init value) has a constant value of 0 in block <music_player_v5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_PWR_5_o_sw[7]_MuLt_3_OUT_19> (without init value) has a constant value of 0 in block <music_player_v5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_PWR_5_o_sw[7]_MuLt_3_OUT_8> (without init value) has a constant value of 0 in block <music_player_v5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_PWR_5_o_sw[7]_MuLt_3_OUT_7> (without init value) has a constant value of 0 in block <music_player_v5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_PWR_5_o_sw[7]_MuLt_3_OUT_0> (without init value) has a constant value of 0 in block <music_player_v5>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <Mmult_PWR_5_o_sw[7]_MuLt_3_OUT_15> in Unit <music_player_v5> is equivalent to the following FF/Latch, which will be removed : <Mmult_PWR_5_o_sw[7]_MuLt_3_OUT_5> 
+INFO:Xst:2261 - The FF/Latch <Mmult_PWR_5_o_sw[7]_MuLt_3_OUT_14> in Unit <music_player_v5> is equivalent to the following FF/Latch, which will be removed : <Mmult_PWR_5_o_sw[7]_MuLt_3_OUT_4> 
+INFO:Xst:2261 - The FF/Latch <Mmult_PWR_5_o_sw[7]_MuLt_3_OUT_17> in Unit <music_player_v5> is equivalent to the following 2 FFs/Latches, which will be removed : <Mmult_PWR_5_o_sw[7]_MuLt_3_OUT_9> <Mmult_PWR_5_o_sw[7]_MuLt_3_OUT_1> 
+INFO:Xst:2261 - The FF/Latch <Mmult_PWR_5_o_sw[7]_MuLt_3_OUT_18> in Unit <music_player_v5> is equivalent to the following 4 FFs/Latches, which will be removed : <Mmult_PWR_5_o_sw[7]_MuLt_3_OUT_16> <Mmult_PWR_5_o_sw[7]_MuLt_3_OUT_10> <Mmult_PWR_5_o_sw[7]_MuLt_3_OUT_6> <Mmult_PWR_5_o_sw[7]_MuLt_3_OUT_2> 
+
+Optimizing unit <music_player_v5> ...
+INFO:Xst:2261 - The FF/Latch <Mmult_PWR_5_o_sw[7]_MuLt_3_OUT_11> in Unit <music_player_v5> is equivalent to the following FF/Latch, which will be removed : <Mmult_PWR_5_o_sw[7]_MuLt_3_OUT_3> 
+INFO:Xst:2261 - The FF/Latch <Mmult_PWR_5_o_sw[7]_MuLt_3_OUT_14> in Unit <music_player_v5> is equivalent to the following FF/Latch, which will be removed : <Mmult_PWR_5_o_sw[7]_MuLt_3_OUT_12> 
+
+Optimizing unit <note_length_counter> ...
+
+Optimizing unit <note_player> ...
+
+Optimizing unit <div_28u_20u> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block music_player_v5, actual ratio is 25.
+FlipFlop x_note_player/note_cc_0 has been replicated 1 time(s)
+FlipFlop x_note_player/note_cc_1 has been replicated 1 time(s)
+FlipFlop x_note_player/note_cc_10 has been replicated 1 time(s)
+FlipFlop x_note_player/note_cc_11 has been replicated 1 time(s)
+FlipFlop x_note_player/note_cc_12 has been replicated 1 time(s)
+FlipFlop x_note_player/note_cc_13 has been replicated 1 time(s)
+FlipFlop x_note_player/note_cc_14 has been replicated 1 time(s)
+FlipFlop x_note_player/note_cc_15 has been replicated 1 time(s)
+FlipFlop x_note_player/note_cc_16 has been replicated 1 time(s)
+FlipFlop x_note_player/note_cc_2 has been replicated 1 time(s)
+FlipFlop x_note_player/note_cc_3 has been replicated 1 time(s)
+FlipFlop x_note_player/note_cc_4 has been replicated 1 time(s)
+FlipFlop x_note_player/note_cc_5 has been replicated 1 time(s)
+FlipFlop x_note_player/note_cc_6 has been replicated 1 time(s)
+FlipFlop x_note_player/note_cc_7 has been replicated 1 time(s)
+FlipFlop x_note_player/note_cc_8 has been replicated 1 time(s)
+FlipFlop x_note_player/note_cc_9 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 135
+ Flip-Flops                                            : 135
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : music_player_v5.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 3363
+#      GND                         : 1
+#      INV                         : 70
+#      LUT1                        : 44
+#      LUT2                        : 142
+#      LUT2_D                      : 1
+#      LUT2_L                      : 2
+#      LUT3                        : 632
+#      LUT3_D                      : 7
+#      LUT4                        : 846
+#      LUT4_D                      : 5
+#      LUT4_L                      : 3
+#      MUXCY                       : 1033
+#      MUXF5                       : 25
+#      MUXF6                       : 1
+#      VCC                         : 1
+#      XORCY                       : 550
+# FlipFlops/Latches                : 135
+#      FD                          : 6
+#      FDE                         : 34
+#      FDR                         : 71
+#      FDRE                        : 21
+#      FDRS                        : 2
+#      FDRSE                       : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 21
+#      IBUF                        : 12
+#      OBUF                        : 9
+# MULTs                            : 4
+#      MULT18X18                   : 4
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400ft256-4 
+
+ Number of Slices:                      931  out of   3584    25%  
+ Number of Slice Flip Flops:            135  out of   7168     1%  
+ Number of 4 input LUTs:               1752  out of   7168    24%  
+ Number of IOs:                          22
+ Number of bonded IOBs:                  22  out of    173    12%  
+ Number of MULT18X18s:                    4  out of     16    25%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 135   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 155.169ns (Maximum Frequency: 6.445MHz)
+   Minimum input arrival time before clock: 10.564ns
+   Maximum output required time after clock: 7.241ns
+   Maximum combinational path delay: 7.266ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 155.169ns (frequency: 6.445MHz)
+  Total number of paths / destination ports: 6611903284929513200000000000000000000000000 / 237
+-------------------------------------------------------------------------
+Delay:               155.169ns (Levels of Logic = 444)
+  Source:            x_note_player/note_pitch_partial_16 (FF)
+  Destination:       x_note_player/duty_cc_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: x_note_player/note_pitch_partial_16 to x_note_player/duty_cc_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              5   0.720   0.921  x_note_player/note_pitch_partial_16 (x_note_player/note_pitch_partial_16)
+     MULT18X18:A16->P24    1   4.355   0.996  x_note_player/Mmult_PWR_8_o_note_pitch_partial[19]_MuLt_15_OUT_submult_0 (x_note_player/Mmult_PWR_8_o_note_pitch_partial[19]_MuLt_15_OUT_submult_0_24)
+     LUT2:I1->O            1   0.551   0.000  x_note_player/Mmult_PWR_8_o_note_pitch_partial[19]_MuLt_15_OUT_Madd_lut<24> (x_note_player/Mmult_PWR_8_o_note_pitch_partial[19]_MuLt_15_OUT_Madd_lut<24>)
+     MUXCY:S->O            1   0.500   0.000  x_note_player/Mmult_PWR_8_o_note_pitch_partial[19]_MuLt_15_OUT_Madd_cy<24> (x_note_player/Mmult_PWR_8_o_note_pitch_partial[19]_MuLt_15_OUT_Madd_cy<24>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/Mmult_PWR_8_o_note_pitch_partial[19]_MuLt_15_OUT_Madd_cy<25> (x_note_player/Mmult_PWR_8_o_note_pitch_partial[19]_MuLt_15_OUT_Madd_cy<25>)
+     MUXCY:CI->O           0   0.064   0.000  x_note_player/Mmult_PWR_8_o_note_pitch_partial[19]_MuLt_15_OUT_Madd_cy<26> (x_note_player/Mmult_PWR_8_o_note_pitch_partial[19]_MuLt_15_OUT_Madd_cy<26>)
+     XORCY:CI->O           3   0.904   1.102  x_note_player/Mmult_PWR_8_o_note_pitch_partial[19]_MuLt_15_OUT_Madd_xor<27> (x_note_player/PWR_8_o_note_pitch_partial[19]_MuLt_15_OUT<27>)
+     LUT2:I1->O            1   0.551   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<27>_lut<0> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<27>_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<27>_cy<0> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<27>_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<27>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<27>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<27>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<27>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<27>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<27>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<27>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<27>_cy<4>)
+     MUXCY:CI->O           2   0.303   0.945  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<27>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/o<27>)
+     LUT3:I2->O            3   0.551   0.907  x_note_player/PWR_8_o_note_cc[19]_div_16/Mmux_a[0]_GND_10_o_MUX_423_o1191 (x_note_player/PWR_8_o_note_cc[19]_div_16/a[27]_GND_10_o_MUX_396_o)
+     MUXCY:DI->O           1   0.889   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<26>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<26>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<26>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<26>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<26>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<26>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<26>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<26>_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<26>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<26>_cy<5>)
+     MUXCY:CI->O          11   0.303   1.212  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<26>_cy<6> (x_note_player/PWR_8_o_note_cc[19]_div_16/o<26>)
+     LUT3:I2->O            3   0.551   0.907  x_note_player/PWR_8_o_note_cc[19]_div_16/Mmux_a[0]_GND_10_o_MUX_515_o1181 (x_note_player/PWR_8_o_note_cc[19]_div_16/a[26]_GND_10_o_MUX_489_o)
+     MUXCY:DI->O           1   0.889   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<25>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<25>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<25>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<25>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<25>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<25>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<25>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<25>_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<25>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<25>_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<25>_cy<6> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<25>_cy<6>)
+     MUXCY:CI->O          16   0.303   1.305  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<25>_cy<7> (x_note_player/PWR_8_o_note_cc[19]_div_16/o<25>)
+     LUT3:I2->O            2   0.551   0.877  x_note_player/PWR_8_o_note_cc[19]_div_16/Mmux_a[0]_GND_10_o_MUX_605_o1171 (x_note_player/PWR_8_o_note_cc[19]_div_16/a[25]_GND_10_o_MUX_580_o)
+     MUXCY:DI->O           1   0.889   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<24>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<24>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<24>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<24>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<24>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<24>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<24>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<24>_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<24>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<24>_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<24>_cy<6> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<24>_cy<6>)
+     MUXCY:CI->O          12   0.303   1.186  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<24>_cy<7> (x_note_player/PWR_8_o_note_cc[19]_div_16/o<24>)
+     LUT3:I2->O            4   0.551   0.917  x_note_player/PWR_8_o_note_cc[19]_div_16/Mmux_a[0]_GND_10_o_MUX_693_o1161 (x_note_player/PWR_8_o_note_cc[19]_div_16/a[24]_GND_10_o_MUX_669_o)
+     MUXCY:DI->O           1   0.889   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<23>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<23>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<23>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<23>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<23>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<23>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<23>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<23>_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<23>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<23>_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<23>_cy<6> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<23>_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<23>_cy<7> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<23>_cy<7>)
+     MUXCY:CI->O          18   0.303   1.485  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<23>_cy<8> (x_note_player/PWR_8_o_note_cc[19]_div_16/o<23>)
+     LUT3:I2->O            3   0.551   0.907  x_note_player/PWR_8_o_note_cc[19]_div_16/Mmux_a[0]_GND_10_o_MUX_779_o1151 (x_note_player/PWR_8_o_note_cc[19]_div_16/a[23]_GND_10_o_MUX_756_o)
+     MUXCY:DI->O           1   0.889   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<22>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<22>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<22>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<22>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<22>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<22>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<22>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<22>_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<22>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<22>_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<22>_cy<6> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<22>_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<22>_cy<7> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<22>_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<22>_cy<8> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<22>_cy<8>)
+     MUXCY:CI->O          21   0.303   1.583  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<22>_cy<9> (x_note_player/PWR_8_o_note_cc[19]_div_16/o<22>)
+     LUT3:I2->O            3   0.551   0.907  x_note_player/PWR_8_o_note_cc[19]_div_16/Mmux_a[0]_GND_10_o_MUX_863_o1141 (x_note_player/PWR_8_o_note_cc[19]_div_16/a[22]_GND_10_o_MUX_841_o)
+     MUXCY:DI->O           1   0.889   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<21>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<21>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<21>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<21>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<21>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<21>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<21>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<21>_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<21>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<21>_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<21>_cy<6> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<21>_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<21>_cy<7> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<21>_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<21>_cy<8> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<21>_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<21>_cy<9> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<21>_cy<9>)
+     MUXCY:CI->O          24   0.303   1.865  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<21>_cy<10> (x_note_player/PWR_8_o_note_cc[19]_div_16/o<21>)
+     LUT3:I2->O            3   0.551   0.907  x_note_player/PWR_8_o_note_cc[19]_div_16/Mmux_a[0]_GND_10_o_MUX_945_o1131 (x_note_player/PWR_8_o_note_cc[19]_div_16/a[21]_GND_10_o_MUX_924_o)
+     MUXCY:DI->O           1   0.889   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<20>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<20>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<20>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<20>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<20>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<20>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<20>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<20>_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<20>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<20>_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<20>_cy<6> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<20>_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<20>_cy<7> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<20>_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<20>_cy<8> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<20>_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<20>_cy<9> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<20>_cy<9>)
+     MUXCY:CI->O          27   0.303   1.892  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<20>_cy<10> (x_note_player/PWR_8_o_note_cc[19]_div_16/o<20>)
+     LUT3:I2->O            3   0.551   0.907  x_note_player/PWR_8_o_note_cc[19]_div_16/Mmux_a[0]_GND_10_o_MUX_1025_o1121 (x_note_player/PWR_8_o_note_cc[19]_div_16/a[20]_GND_10_o_MUX_1005_o)
+     MUXCY:DI->O           1   0.889   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<19>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<19>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<19>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<19>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<19>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<19>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<19>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<19>_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<19>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<19>_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<19>_cy<6> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<19>_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<19>_cy<7> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<19>_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<19>_cy<8> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<19>_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<19>_cy<9> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<19>_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<19>_cy<10> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<19>_cy<10>)
+     MUXCY:CI->O          30   0.303   1.910  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<19>_cy<11> (x_note_player/PWR_8_o_note_cc[19]_div_16/o<19>)
+     LUT3:I2->O            3   0.551   0.907  x_note_player/PWR_8_o_note_cc[19]_div_16/Mmux_a[0]_GND_10_o_MUX_1103_o1101 (x_note_player/PWR_8_o_note_cc[19]_div_16/a[19]_GND_10_o_MUX_1084_o)
+     MUXCY:DI->O           1   0.889   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<18>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<18>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<18>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<18>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<18>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<18>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<18>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<18>_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<18>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<18>_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<18>_cy<6> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<18>_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<18>_cy<7> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<18>_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<18>_cy<8> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<18>_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<18>_cy<9> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<18>_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<18>_cy<10> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<18>_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<18>_cy<11> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<18>_cy<11>)
+     MUXCY:CI->O          33   0.303   1.927  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<18>_cy<12> (x_note_player/PWR_8_o_note_cc[19]_div_16/o<18>)
+     LUT3:I2->O            3   0.551   0.907  x_note_player/PWR_8_o_note_cc[19]_div_16/Mmux_a[0]_GND_10_o_MUX_1179_o191 (x_note_player/PWR_8_o_note_cc[19]_div_16/a[18]_GND_10_o_MUX_1161_o)
+     MUXCY:DI->O           1   0.889   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<17>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<17>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<17>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<17>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<17>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<17>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<17>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<17>_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<17>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<17>_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<17>_cy<6> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<17>_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<17>_cy<7> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<17>_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<17>_cy<8> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<17>_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<17>_cy<9> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<17>_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<17>_cy<10> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<17>_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<17>_cy<11> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<17>_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<17>_cy<12> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<17>_cy<12>)
+     MUXCY:CI->O          36   0.303   1.944  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<17>_cy<13> (x_note_player/PWR_8_o_note_cc[19]_div_16/o<17>)
+     LUT3:I2->O            3   0.551   0.907  x_note_player/PWR_8_o_note_cc[19]_div_16/Mmux_a[0]_GND_10_o_MUX_1253_o181 (x_note_player/PWR_8_o_note_cc[19]_div_16/a[17]_GND_10_o_MUX_1236_o)
+     MUXCY:DI->O           1   0.889   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<16>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<16>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<16>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<16>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<16>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<16>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<16>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<16>_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<16>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<16>_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<16>_cy<6> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<16>_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<16>_cy<7> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<16>_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<16>_cy<8> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<16>_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<16>_cy<9> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<16>_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<16>_cy<10> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<16>_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<16>_cy<11> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<16>_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<16>_cy<12> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<16>_cy<12>)
+     MUXCY:CI->O          39   0.303   1.961  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<16>_cy<13> (x_note_player/PWR_8_o_note_cc[19]_div_16/o<16>)
+     LUT3:I2->O            3   0.551   0.907  x_note_player/PWR_8_o_note_cc[19]_div_16/Mmux_a[0]_GND_10_o_MUX_1325_o171 (x_note_player/PWR_8_o_note_cc[19]_div_16/a[16]_GND_10_o_MUX_1309_o)
+     MUXCY:DI->O           1   0.889   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<15>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<15>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<15>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<15>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<15>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<15>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<15>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<15>_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<15>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<15>_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<15>_cy<6> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<15>_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<15>_cy<7> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<15>_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<15>_cy<8> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<15>_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<15>_cy<9> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<15>_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<15>_cy<10> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<15>_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<15>_cy<11> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<15>_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<15>_cy<12> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<15>_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<15>_cy<13> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<15>_cy<13>)
+     MUXCY:CI->O          42   0.303   1.978  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<15>_cy<14> (x_note_player/PWR_8_o_note_cc[19]_div_16/o<15>)
+     LUT3:I2->O            3   0.551   0.907  x_note_player/PWR_8_o_note_cc[19]_div_16/Mmux_a[0]_GND_10_o_MUX_1395_o161 (x_note_player/PWR_8_o_note_cc[19]_div_16/a[15]_GND_10_o_MUX_1380_o)
+     MUXCY:DI->O           1   0.889   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<6> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<7> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<8> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<9> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<10> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<11> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<12> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<13> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<14> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<14>)
+     MUXCY:CI->O          45   0.303   1.996  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<14>_cy<15> (x_note_player/PWR_8_o_note_cc[19]_div_16/o<14>)
+     LUT3:I2->O            3   0.551   0.907  x_note_player/PWR_8_o_note_cc[19]_div_16/Mmux_a[0]_GND_10_o_MUX_1463_o151 (x_note_player/PWR_8_o_note_cc[19]_div_16/a[14]_GND_10_o_MUX_1449_o)
+     MUXCY:DI->O           1   0.889   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<6> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<7> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<8> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<9> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<10> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<11> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<12> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<13> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<14> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<15> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<15>)
+     MUXCY:CI->O          48   0.303   2.013  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<13>_cy<16> (x_note_player/PWR_8_o_note_cc[19]_div_16/o<13>)
+     LUT3:I2->O            3   0.551   0.907  x_note_player/PWR_8_o_note_cc[19]_div_16/Mmux_a[0]_GND_10_o_MUX_1529_o141 (x_note_player/PWR_8_o_note_cc[19]_div_16/a[13]_GND_10_o_MUX_1516_o)
+     MUXCY:DI->O           1   0.889   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<6> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<7> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<8> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<9> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<10> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<11> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<12> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<13> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<14> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<15> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<15>)
+     MUXCY:CI->O          51   0.303   2.030  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<12>_cy<16> (x_note_player/PWR_8_o_note_cc[19]_div_16/o<12>)
+     LUT3:I2->O            3   0.551   0.907  x_note_player/PWR_8_o_note_cc[19]_div_16/Mmux_a[0]_GND_10_o_MUX_1593_o131 (x_note_player/PWR_8_o_note_cc[19]_div_16/a[12]_GND_10_o_MUX_1581_o)
+     MUXCY:DI->O           1   0.889   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<6> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<7> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<8> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<9> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<10> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<11> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<12> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<13> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<14> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<15> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<16> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<16>)
+     MUXCY:CI->O          54   0.303   2.047  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<11>_cy<17> (x_note_player/PWR_8_o_note_cc[19]_div_16/o<11>)
+     LUT3:I2->O            3   0.551   0.907  x_note_player/PWR_8_o_note_cc[19]_div_16/Mmux_a[0]_GND_10_o_MUX_1655_o121 (x_note_player/PWR_8_o_note_cc[19]_div_16/a[11]_GND_10_o_MUX_1644_o)
+     MUXCY:DI->O           1   0.889   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<6> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<7> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<8> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<9> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<10> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<11> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<12> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<13> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<14> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<15> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<16> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<17> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<17>)
+     MUXCY:CI->O          57   0.303   2.064  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<10>_cy<18> (x_note_player/PWR_8_o_note_cc[19]_div_16/o<10>)
+     LUT3:I2->O            3   0.551   0.907  x_note_player/PWR_8_o_note_cc[19]_div_16/Mmux_a[0]_GND_10_o_MUX_1715_o111 (x_note_player/PWR_8_o_note_cc[19]_div_16/a[10]_GND_10_o_MUX_1705_o)
+     MUXCY:DI->O           1   0.889   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<6> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<7> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<8> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<9> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<10> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<11> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<12> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<13> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<14> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<15> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<16> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<17> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<18> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<18>)
+     MUXCY:CI->O          61   0.303   2.087  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<9>_cy<19> (x_note_player/PWR_8_o_note_cc[19]_div_16/o<9>)
+     LUT3:I2->O            3   0.551   0.907  x_note_player/PWR_8_o_note_cc[19]_div_16/Mmux_a[0]_GND_10_o_MUX_1744_o1271 (x_note_player/PWR_8_o_note_cc[19]_div_16/a[9]_GND_10_o_MUX_1735_o)
+     MUXCY:DI->O           1   0.889   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<6> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<7> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<8> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<9> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<10> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<11> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<12> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<13> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<14> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<15> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<16> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<17> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<18> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<18>)
+     MUXCY:CI->O          64   0.303   2.104  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<8>_cy<19> (x_note_player/PWR_8_o_note_cc[19]_div_16/o<8>)
+     LUT3:I2->O            3   0.551   0.907  x_note_player/PWR_8_o_note_cc[19]_div_16/Mmux_a[0]_a[27]_MUX_1772_o1261 (x_note_player/PWR_8_o_note_cc[19]_div_16/a[8]_a[27]_MUX_1764_o)
+     MUXCY:DI->O           1   0.889   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<6> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<7> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<8> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<9> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<10> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<11> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<12> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<13> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<14> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<15> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<16> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<17> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<18> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<19> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<19>)
+     MUXCY:CI->O          67   0.281   2.122  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<7>_cy<20> (x_note_player/n0062<7>)
+     LUT3:I2->O            3   0.551   0.907  x_note_player/PWR_8_o_note_cc[19]_div_16/Mmux_a[0]_a[27]_MUX_1800_o1251 (x_note_player/PWR_8_o_note_cc[19]_div_16/a[7]_a[27]_MUX_1793_o)
+     MUXCY:DI->O           1   0.889   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<6> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<7> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<8> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<9> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<10> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<11> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<12> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<13> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<14> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<15> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<16> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<17> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<18> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<19> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<19>)
+     MUXCY:CI->O          69   0.281   2.133  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<6>_cy<20> (x_note_player/n0062<6>)
+     LUT3:I2->O            3   0.551   0.907  x_note_player/PWR_8_o_note_cc[19]_div_16/Mmux_a[0]_a[27]_MUX_1828_o1241 (x_note_player/PWR_8_o_note_cc[19]_div_16/a[6]_a[27]_MUX_1822_o)
+     MUXCY:DI->O           1   0.889   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<6> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<7> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<8> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<9> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<10> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<11> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<12> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<13> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<14> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<15> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<16> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<17> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<18> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<19> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<19>)
+     MUXCY:CI->O          72   0.281   2.150  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<5>_cy<20> (x_note_player/n0062<5>)
+     LUT3:I2->O            3   0.551   0.907  x_note_player/PWR_8_o_note_cc[19]_div_16/Mmux_a[0]_a[27]_MUX_1856_o1231 (x_note_player/PWR_8_o_note_cc[19]_div_16/a[5]_a[27]_MUX_1851_o)
+     MUXCY:DI->O           1   0.889   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<6> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<7> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<8> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<9> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<10> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<11> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<12> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<13> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<14> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<15> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<16> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<17> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<18> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<19> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<19>)
+     MUXCY:CI->O          75   0.281   2.167  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<4>_cy<20> (x_note_player/n0062<4>)
+     LUT3:I2->O            3   0.551   0.907  x_note_player/PWR_8_o_note_cc[19]_div_16/Mmux_a[0]_a[27]_MUX_1884_o1221 (x_note_player/PWR_8_o_note_cc[19]_div_16/a[4]_a[27]_MUX_1880_o)
+     MUXCY:DI->O           1   0.889   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<6> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<7> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<8> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<9> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<10> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<11> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<12> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<13> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<14> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<15> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<16> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<17> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<18> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<19> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<19>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<20> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<20>)
+     MUXCY:CI->O          77   0.281   2.179  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<3>_cy<21> (x_note_player/n0062<3>)
+     LUT3:I2->O            2   0.551   0.877  x_note_player/PWR_8_o_note_cc[19]_div_16/Mmux_n2383221 (x_note_player/PWR_8_o_note_cc[19]_div_16/n2383<3>)
+     MUXCY:DI->O           1   0.889   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<6> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<7> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<8> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<9> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<10> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<11> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<12> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<13> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<14> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<15> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<16> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<17> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<18> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<19> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<19>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<20> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<20>)
+     MUXCY:CI->O          69   0.281   2.133  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<2>_cy<21> (x_note_player/n0062<2>)
+     LUT3:I2->O            2   0.551   0.877  x_note_player/PWR_8_o_note_cc[19]_div_16/Mmux_n2387211 (x_note_player/PWR_8_o_note_cc[19]_div_16/n2387<2>)
+     MUXCY:DI->O           1   0.889   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<6> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<7> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<8> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<9> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<10> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<11> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<12> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<13> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<14> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<15> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<16> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<17> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<18> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<19> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<19>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<20> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<20>)
+     MUXCY:CI->O          41   0.281   1.973  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<1>_cy<21> (x_note_player/n0062<1>)
+     LUT3:I2->O            0   0.551   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mmux_n2274121 (x_note_player/PWR_8_o_note_cc[19]_div_16/n2274<1>)
+     MUXCY:DI->O           1   0.889   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<1> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<2> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<3> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<4> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<5> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<6> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<7> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<8> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<9> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<10> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<11> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<12> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<13> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<14> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<15> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<16> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<17> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<18> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<19> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<19>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<20> (x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<20>)
+     MUXCY:CI->O           1   0.281   0.000  x_note_player/PWR_8_o_note_cc[19]_div_16/Mcompar_o<0>_cy<21> (x_note_player/n0062<0>)
+     FDRE:D                    0.203          x_note_player/duty_cc_0
+    ----------------------------------------
+    Total                    155.169ns (78.256ns logic, 76.913ns route)
+                                       (50.4% logic, 49.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 372 / 152
+-------------------------------------------------------------------------
+Offset:              10.564ns (Levels of Logic = 33)
+  Source:            sw<7> (PAD)
+  Destination:       x_note_length_counter/is_mute (FF)
+  Destination Clock: clk rising
+
+  Data Path: sw<7> to x_note_length_counter/is_mute
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            54   0.821   2.318  sw_7_IBUF (sw_7_IBUF)
+     LUT4:I0->O            1   0.551   0.000  x_note_length_counter/Mmux_n00251_F (N370)
+     MUXF5:I0->O           1   0.360   1.140  x_note_length_counter/Mmux_n00251 (x_note_length_counter/n0025<0>)
+     LUT2:I0->O            1   0.551   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_lut<0> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<0> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<1> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<2> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<3> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<4> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<5> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<6> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<7> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<8> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<9> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<10> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<11> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<12> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<13> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<14> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<15> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<16> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<17> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<18> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<19> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<19>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<20> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<20>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<21> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<21>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<22> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<22>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<23> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<23>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<24> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<24>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<25> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<25>)
+     MUXCY:CI->O           1   0.064   0.000  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<26> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<26>)
+     MUXCY:CI->O           1   0.303   0.801  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<27> (x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<27>)
+     INV:I->O              1   0.551   0.801  x_note_length_counter/Mcompar_articulation_cc[27]_note_length_partial[27]_LessThan_6_o_cy<27>_inv_INV_0 (x_note_length_counter/articulation_cc[27]_note_length_partial[27]_LessThan_6_o)
+     FDR:D                     0.203          x_note_length_counter/is_mute
+    ----------------------------------------
+    Total                     10.564ns (5.504ns logic, 5.060ns route)
+                                       (52.1% logic, 47.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              7.241ns (Levels of Logic = 1)
+  Source:            second_pulse (FF)
+  Destination:       led<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: second_pulse to led<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.720   0.877  second_pulse (second_pulse)
+     OBUF:I->O                 5.644          led_7_OBUF (led<7>)
+    ----------------------------------------
+    Total                      7.241ns (6.364ns logic, 0.877ns route)
+                                       (87.9% logic, 12.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Delay:               7.266ns (Levels of Logic = 2)
+  Source:            sw<5> (PAD)
+  Destination:       led<6> (PAD)
+
+  Data Path: sw<5> to led<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.821   0.801  sw_5_IBUF (led_6_OBUF)
+     OBUF:I->O                 5.644          led_6_OBUF (led<6>)
+    ----------------------------------------
+    Total                      7.266ns (6.465ns logic, 0.801ns route)
+                                       (89.0% logic, 11.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |  155.169|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 14.91 secs
+ 
+WARNING:Xst:3152 - You have chosen to run a version of XST which is not the default solution
+   for the specified device family. You are free to use it in order to take
+   advantage of its enhanced HDL parsing/elaboration capabilities. However,
+   please be aware that you may be impacted by  language support differences.
+   This version may also result in circuit performance and device utilization
+   differences for your particular design. You can always revert back to the
+   default XST solution by setting the "use_new_parser" option to value "no" 
+   on the XST command line or in the XST process properties panel.
+--> 
+
+Total memory usage is 230552 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   29 (   0 filtered)
+Number of infos    :   12 (   0 filtered)
+

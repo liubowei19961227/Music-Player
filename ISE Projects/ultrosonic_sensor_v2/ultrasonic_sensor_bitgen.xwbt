@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=Z:\Desktop\fpga_connection\ultrosonic_sensor_v2\ultrasonic_sensor.ncd
+OUTFILE=Z:\Desktop\fpga_connection\ultrosonic_sensor_v2\ultrasonic_sensor.bit
+FAMILY=Spartan3
+PART=xc3s400-4ft256
+WORKINGDIR=Z:\Desktop\fpga_connection\ultrosonic_sensor_v2
+LICENSE=WebPack
+USER_INFO=211378374_0_0_031
