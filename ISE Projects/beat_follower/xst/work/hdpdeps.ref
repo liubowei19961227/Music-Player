@@ -1,0 +1,46 @@
+V3 23
+FL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/beat_follower.vhd" 2017/10/09.08:38:06 P.20131013
+EN work/beat_follower 1507498700 \
+      FL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/beat_follower.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/beat_follower/Behavioral 1507498701 \
+      FL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/beat_follower.vhd" \
+      EN work/beat_follower 1507498700 CP bpm_counter
+FL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/bin_to_dec.vhd" 2017/09/13.20:46:24 P.20131013
+EN work/bin_to_dec 1507498692 \
+      FL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/bin_to_dec.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/bin_to_dec/Behavioral 1507498693 \
+      FL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/bin_to_dec.vhd" \
+      EN work/bin_to_dec 1507498692
+FL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/bpm_counter.vhd" 2017/10/09.07:53:37 P.20131013
+EN work/bpm_counter 1507498698 \
+      FL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/bpm_counter.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/bpm_counter/Behavioral 1507498699 \
+      FL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/bpm_counter.vhd" \
+      EN work/bpm_counter 1507498698 CP large_number_7seg
+FL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/large_number_7seg.vhd" 2017/09/13.20:46:24 P.20131013
+EN work/large_number_7seg 1507498696 \
+      FL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/large_number_7seg.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/large_number_7seg/Behavioral 1507498697 \
+      FL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/large_number_7seg.vhd" \
+      EN work/large_number_7seg 1507498696 CP seven_seg_display
+FL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/multiplier.vhd" 2017/10/07.14:55:46 P.20131013
+EN work/multiplier 1507352661 \
+      FL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/multiplier.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/multiplier/multiplier_a 1507352662 \
+      FL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/multiplier.vhd" \
+      EN work/multiplier 1507352661
+FL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/seven_seg_display.vhd" 2017/09/13.20:46:24 P.20131013
+EN work/seven_seg_display 1507498694 \
+      FL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/seven_seg_display.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/seven_seg_display/Behavioral 1507498695 \
+      FL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/seven_seg_display.vhd" \
+      EN work/seven_seg_display 1507498694 CP bin_to_dec
+FL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" 2017/10/07.10:54:44 P.20131013

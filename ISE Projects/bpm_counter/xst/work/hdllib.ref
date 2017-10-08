@@ -1,0 +1,8 @@
+AR bpm_counter behavioral "C:/Users/Isabel/Documents/Music-Player/ISE Projects/bpm_counter/bpm_counter.vhd" sub00/vhpl07 1507424354
+EN large_number_7seg NULL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/bpm_counter/large_number_7seg.vhd" sub00/vhpl04 1507424351
+AR bin_to_dec behavioral "C:/Users/Isabel/Documents/Music-Player/ISE Projects/bpm_counter/bin_to_dec.vhd" sub00/vhpl01 1507424348
+EN seven_seg_display NULL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/bpm_counter/seven_seg_display.vhd" sub00/vhpl02 1507424349
+AR large_number_7seg behavioral "C:/Users/Isabel/Documents/Music-Player/ISE Projects/bpm_counter/large_number_7seg.vhd" sub00/vhpl05 1507424352
+EN bpm_counter NULL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/bpm_counter/bpm_counter.vhd" sub00/vhpl06 1507424353
+AR seven_seg_display behavioral "C:/Users/Isabel/Documents/Music-Player/ISE Projects/bpm_counter/seven_seg_display.vhd" sub00/vhpl03 1507424350
+EN bin_to_dec NULL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/bpm_counter/bin_to_dec.vhd" sub00/vhpl00 1507424347

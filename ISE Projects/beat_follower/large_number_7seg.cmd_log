@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/large_number_7seg.xst" -ofn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/large_number_7seg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ultrasonic_sensor.ucf -uc us_constraints.ucf -p xc3s400-ft256-4 "large_number_7seg.ngc" large_number_7seg.ngd  

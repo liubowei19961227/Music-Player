@@ -1,0 +1,150 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 1.28 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 1.29 secs
+ 
+--> Reading design: ultrasonic_sensor.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ultrasonic_sensor.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ultrasonic_sensor"
+Output Format                      : NGC
+Target Device                      : xc3s400-4-ft256
+
+---- Source Options
+Top Module Name                    : ultrasonic_sensor
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" in Library work.
+ERROR:HDLParsers:3011 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 38. End Identifier ultrasonic_sensor does not match declaration, beat_follower.
+ERROR:HDLParsers:3010 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 40. Entity ultrasonic_sensor does not exist.
+ERROR:HDLParsers:3312 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 42. Undefined symbol 'STD_LOGIC_VECTOR'.
+ERROR:HDLParsers:1209 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 42. STD_LOGIC_VECTOR: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 45. Undefined symbol 'STD_LOGIC'.
+ERROR:HDLParsers:1209 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 45. STD_LOGIC: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 52. Undefined symbol 'clk'.
+ERROR:HDLParsers:1209 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 52. clk: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 54. Undefined symbol 'rising_edge'.
+ERROR:HDLParsers:1209 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 54. rising_edge: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 56. Undefined symbol 'waiting'.
+ERROR:HDLParsers:1209 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 56. waiting: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 58. Undefined symbol 'count'.
+ERROR:HDLParsers:1209 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 58. count: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 60. Undefined symbol 'trigger'.
+ERROR:HDLParsers:1209 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 64. trigger: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 68. Undefined symbol 'echo_last'.
+ERROR:HDLParsers:1209 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 68. echo_last: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 68. Undefined symbol 'echo_synced'.
+ERROR:HDLParsers:1209 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 68. echo_synced: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 71. Undefined symbol 'centimeters'.
+ERROR:HDLParsers:3312 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 75. Undefined symbol 'number'.
+ERROR:HDLParsers:1209 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 75. centimeters: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 94. Undefined symbol 'echo_unsynced'.
+ERROR:HDLParsers:1209 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 94. echo_unsynced: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 95. Undefined symbol 'echo'.
+ERROR:HDLParsers:1209 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 95. echo: Undefined symbol (last report in this block)
+WARNING:HDLParsers:1406 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 52. No sensitivity list and no wait in the process
+ERROR:HDLParsers:3312 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 102. Undefined symbol 'number'.
+ERROR:HDLParsers:1209 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 102. number: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 105. Undefined symbol 'led'.
+ERROR:HDLParsers:1209 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 105. led: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 106. Undefined symbol 'waiting'.
+WARNING:HDLParsers:1406 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.vhd" Line 102. No sensitivity list and no wait in the process
+WARNING:HDLParsers:3481 - Library work has no units. Did not save reference file "xst/work/hdllib.ref" for it.
+--> 
+
+Total memory usage is 234504 kilobytes
+
+Number of errors   :   32 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

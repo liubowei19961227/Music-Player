@@ -1,0 +1,19 @@
+xst -intstyle ise -ifn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/bpm_counter/bpm_counter.xst" -ofn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/bpm_counter/bpm_counter.syr" 
+xst -intstyle ise -ifn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/bpm_counter/bpm_counter.xst" -ofn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/bpm_counter/bpm_counter.syr" 
+xst -intstyle ise -ifn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/bpm_counter/bpm_counter.xst" -ofn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/bpm_counter/bpm_counter.syr" 
+xst -intstyle ise -ifn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/bpm_counter/bpm_counter.xst" -ofn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/bpm_counter/bpm_counter.syr" 
+xst -intstyle ise -ifn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/bpm_counter/bpm_counter.xst" -ofn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/bpm_counter/bpm_counter.syr" 
+xst -intstyle ise -ifn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/bpm_counter/bpm_counter.xst" -ofn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/bpm_counter/bpm_counter.syr" 
+xst -intstyle ise -ifn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/bpm_counter/bpm_counter.xst" -ofn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/bpm_counter/bpm_counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc us_constraints.ucf -p xc3s400-ft256-4 "bpm_counter.ngc" bpm_counter.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc us_constraints.ucf -p xc3s400-ft256-4 "bpm_counter.ngc" bpm_counter.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o bpm_counter_map.ncd bpm_counter.ngd bpm_counter.pcf 
+par -w -intstyle ise -ol high -t 1 bpm_counter_map.ncd bpm_counter.ncd bpm_counter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml bpm_counter.twx bpm_counter.ncd -o bpm_counter.twr bpm_counter.pcf -ucf us_constraints.ucf 
+netgen -intstyle ise -ar Structure -tm bpm_counter -w -dir netgen/synthesis -ofmt vhdl -sim bpm_counter.ngc bpm_counter_synthesis.vhd 
+xst -intstyle ise -ifn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/bpm_counter/bpm_counter.xst" -ofn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/bpm_counter/bpm_counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc us_constraints.ucf -p xc3s400-ft256-4 "bpm_counter.ngc" bpm_counter.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o bpm_counter_map.ncd bpm_counter.ngd bpm_counter.pcf 
+par -w -intstyle ise -ol high -t 1 bpm_counter_map.ncd bpm_counter.ncd bpm_counter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml bpm_counter.twx bpm_counter.ncd -o bpm_counter.twr bpm_counter.pcf -ucf us_constraints.ucf 
+netgen -intstyle ise -ar Structure -tm bpm_counter -w -dir netgen/synthesis -ofmt vhdl -sim bpm_counter.ngc bpm_counter_synthesis.vhd 

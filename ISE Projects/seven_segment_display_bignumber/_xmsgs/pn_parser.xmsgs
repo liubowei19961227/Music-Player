@@ -8,16 +8,16 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/Desktop/seven_segment_display_bignumber/bin_to_dec.vhd&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Isabel/Documents/Music-Player/ISE Projects/seven_segment_display_bignumber/bin_to_dec.vhd&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/Desktop/seven_segment_display_bignumber/large_number_7seg.vhd&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Isabel/Documents/Music-Player/ISE Projects/seven_segment_display_bignumber/large_number_7seg.vhd&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/Desktop/seven_segment_display_bignumber/seven_seg_display.vhd&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Isabel/Documents/Music-Player/ISE Projects/seven_segment_display_bignumber/seven_seg_display.vhd&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;Z:/Desktop/seven_segment_display_bignumber/test_largenum_display.vhd&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Isabel/Documents/Music-Player/ISE Projects/seven_segment_display_bignumber/test_largenum_display.vhd&quot; into library work</arg>
 </msg>
 
 </messages>

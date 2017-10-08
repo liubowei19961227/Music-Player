@@ -1,0 +1,4 @@
+vhdl work "bin_to_dec.vhd"
+vhdl work "seven_seg_display.vhd"
+vhdl work "large_number_7seg.vhd"
+vhdl work "bpm_counter.vhd"

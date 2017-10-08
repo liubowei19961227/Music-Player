@@ -1,0 +1,5 @@
+vhdl work "C:\Users\Isabel\Documents\Music-Player\ISE Projects\beat_follower\bin_to_dec.vhd"
+vhdl work "C:\Users\Isabel\Documents\Music-Player\ISE Projects\beat_follower\seven_seg_display.vhd"
+vhdl work "C:\Users\Isabel\Documents\Music-Player\ISE Projects\beat_follower\large_number_7seg.vhd"
+vhdl work "C:\Users\Isabel\Documents\Music-Player\ISE Projects\beat_follower\bpm_counter.vhd"
+vhdl work "C:\Users\Isabel\Documents\Music-Player\ISE Projects\beat_follower\beat_follower.vhd"
