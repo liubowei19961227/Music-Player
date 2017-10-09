@@ -2,6 +2,7 @@ body {
     background-color: #eeeeee;
     text-align:center;
     font-family: Arial, Helvetica, sans-serif;
+    font-size:16px;
 }
 
 h1 {
@@ -18,10 +19,24 @@ button {
     display: inline-block;
     font-size: 16px;
     margin: 20px;
+    cursor: pointer;
+}
+
+input {
+    width: 50px;
+    height: 10px;
+    font-size: 16px;
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    padding: 8px;
+    margin-top: -10px;
+    border: 1px solid #000;
 }
 
 div#svgNotesContainer {
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
     width: 90vw;
     margin: auto;
 }
@@ -29,7 +44,18 @@ div#svgNotesContainer {
 .DA-Keyboardcontainer {
     font: 16px Lucida Sans, Trebuchet MS, Tahoma, sans-serif;
     color: #000;
-    padding: 20px;
+    padding: 20px 20px 0px 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 90vw;
+    margin: auto;
+}
+
+.DA-Keyboardcontainerinner {
+    font: 16px Lucida Sans, Trebuchet MS, Tahoma, sans-serif;
+    color: #000;
+    margin:auto;
+    width:970px;
 }
 
 ul.DA-PianoKeyboard {
@@ -159,13 +185,14 @@ ul.DA-PianoKeyboard li:last-of-type {
 
 #DA-NoteSelection {
     display: inline-block;
-    margin-left: 50px;
     height: 40px;
+    cursor: pointer;
 }
 
 .DA-NoteClefSelection input[type=radio] {
     display: none;
-    margin: 0px
+    margin: 0px;
+    cursor: pointer;
 }
 
 .DA-NoteClefSelection input[type=radio] + label {
@@ -179,9 +206,11 @@ ul.DA-PianoKeyboard li:last-of-type {
     border: 2px solid #000;
     border-radius: 2px;
     margin-left: -6px; /* There is some margin, which I don't know where it comes from... */
+    cursor: pointer;
 }
 
 .DA-NoteClefSelection input[type=radio]:checked + label {
     background: #666666;
     color: #eeeeee;
+    cursor: pointer;
 }

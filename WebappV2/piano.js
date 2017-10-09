@@ -142,7 +142,8 @@ function htmlForKeyboardWithOctaves(numberOfOctaves, startOctave, showLabels, wi
     var currentOctave = _startOctave
 
     var keyhoardHTML = '\
-        <ul class="DA-PianoKeyboard">\n'
+        <ul class="DA-PianoKeyboard">\n\
+            <li class="whiteKey"><p style="margin-top:62px">R<br />e<br />s<br />t</p></li>\n'
     for (var i = 0; i < _displayedOctaves; i++) {
         if (showLabels) {
             keyhoardHTML += '\
@@ -174,10 +175,12 @@ function htmlForKeyboardWithOctaves(numberOfOctaves, startOctave, showLabels, wi
         currentOctave++
     }
     keyhoardHTML += '\
+            <li class="whiteKey"><p style="margin-top:62px">R<br />e<br />s<br />t</p></li>\n\
         </ul>\n'
 
     var html = '\
-        <div class="DA-Keyboardcontainer">'
+        <div class="DA-Keyboardcontainer">\
+        <div class="DA-Keyboardcontainerinner">'
     if (withShiftButtons) {
         html += '\
             <button type="button" id="lowerOctave" onclick="lowerOctave()">˂</button>\n'
@@ -187,7 +190,8 @@ function htmlForKeyboardWithOctaves(numberOfOctaves, startOctave, showLabels, wi
         html +=  keyhoardHTML
     }
     html += '\
-        </div>'
+        </div>\
+        <div>'
 
 
     if (withNoteSelection) {
@@ -276,14 +280,20 @@ function bindKeysToFunction(callback) {
 
     $(".DA-PianoKeyboard li").click(function () {
         var indexOfKey = $(this).index()
-
+        console.log(indexOfKey)
         var noteDuration = 4;
         var selectedRadioBox = $("#DA-NoteSelection input[type='radio']:checked")
         if (selectedRadioBox.length > 0) {
             noteDuration = selectedRadioBox.val();
         }
 
-        var paeNote = paeCodeForKeyAtIndex(indexOfKey, _startOctave, noteDuration)
+        var paeNote = ""
+
+        if (indexOfKey == 0 || indexOfKey == 69) { //rest
+            paeNote = noteDuration + "-"
+        } else {
+            paeNote = paeCodeForKeyAtIndex(indexOfKey - 1, _startOctave, noteDuration)
+        }
         callback(this, paeNote)
     })
 
