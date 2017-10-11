@@ -125,12 +125,10 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1507498708" xil_pn:in_ck="-850979564627464884" xil_pn:name="TRANEXT_xstsynthesize_spartan3" xil_pn:prop_ck="-3211888711210806044" xil_pn:start_ts="1507498689">
+    <transform xil_pn:end_ts="1507712387" xil_pn:in_ck="-6642833613710254123" xil_pn:name="TRANEXT_xstsynthesize_spartan3" xil_pn:prop_ck="-3211888711210806044" xil_pn:start_ts="1507712341">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="beat_follower.lso"/>
@@ -150,18 +148,21 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1507498715" xil_pn:in_ck="9028459978908935693" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="6072316987530979138" xil_pn:start_ts="1507498708">
+    <transform xil_pn:end_ts="1507711942" xil_pn:in_ck="9028459978908935693" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="6072316987530979138" xil_pn:start_ts="1507711928">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="beat_follower.bld"/>
       <outfile xil_pn:name="beat_follower.ngd"/>
       <outfile xil_pn:name="beat_follower_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1507498722" xil_pn:in_ck="-3012428360931542848" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="6918683465102363066" xil_pn:start_ts="1507498715">
+    <transform xil_pn:end_ts="1507711954" xil_pn:in_ck="-3012428360931542848" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="6918683465102363066" xil_pn:start_ts="1507711942">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="beat_follower.pcf"/>
       <outfile xil_pn:name="beat_follower_map.map"/>
@@ -172,9 +173,10 @@
       <outfile xil_pn:name="beat_follower_summary.xml"/>
       <outfile xil_pn:name="beat_follower_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1507498793" xil_pn:in_ck="-6833856913079174215" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="8251173951899154272" xil_pn:start_ts="1507498722">
+    <transform xil_pn:end_ts="1507712190" xil_pn:in_ck="-6833856913079174215" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="8251173951899154272" xil_pn:start_ts="1507711954">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
       <outfile xil_pn:name="beat_follower.ncd"/>
       <outfile xil_pn:name="beat_follower.pad"/>
@@ -186,9 +188,14 @@
       <outfile xil_pn:name="beat_follower_pad.txt"/>
       <outfile xil_pn:name="beat_follower_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1507498814" xil_pn:in_ck="-7287975001132697336" xil_pn:name="TRANEXT_bitFile_spartan3" xil_pn:prop_ck="-2672950586390118423" xil_pn:start_ts="1507498802">
+    <transform xil_pn:end_ts="1507706916" xil_pn:in_ck="-7287975001132697336" xil_pn:name="TRANEXT_bitFile_spartan3" xil_pn:prop_ck="-2672950586390118423" xil_pn:start_ts="1507706894">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="beat_follower.bgn"/>
       <outfile xil_pn:name="beat_follower.bit"/>
@@ -198,9 +205,12 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1507498793" xil_pn:in_ck="1239564143849907388" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1507498789">
-      <status xil_pn:value="SuccessfullyRun"/>
+    <transform xil_pn:end_ts="1507706848" xil_pn:in_ck="1239564143849907388" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1507706839">
+      <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
       <outfile xil_pn:name="beat_follower.twr"/>
       <outfile xil_pn:name="beat_follower.twx"/>

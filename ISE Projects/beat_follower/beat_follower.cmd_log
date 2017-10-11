@@ -390,3 +390,26 @@ map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o beat_fol
 par -w -intstyle ise -ol high -t 1 beat_follower_map.ncd beat_follower.ncd beat_follower.pcf 
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml beat_follower.twx beat_follower.ncd -o beat_follower.twr beat_follower.pcf -ucf ultrasonic_sensor.ucf -ucf us_constraints.ucf 
 bitgen -intstyle ise -f beat_follower.ut beat_follower.ncd 
+xst -intstyle ise -ifn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/beat_follower.xst" -ofn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/beat_follower.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ultrasonic_sensor.ucf -uc us_constraints.ucf -p xc3s400-ft256-4 "beat_follower.ngc" beat_follower.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o beat_follower_map.ncd beat_follower.ngd beat_follower.pcf 
+par -w -intstyle ise -ol high -t 1 beat_follower_map.ncd beat_follower.ncd beat_follower.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml beat_follower.twx beat_follower.ncd -o beat_follower.twr beat_follower.pcf -ucf ultrasonic_sensor.ucf -ucf us_constraints.ucf 
+bitgen -intstyle ise -f beat_follower.ut beat_follower.ncd 
+xst -intstyle ise -ifn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/beat_follower.xst" -ofn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/beat_follower.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ultrasonic_sensor.ucf -uc us_constraints.ucf -p xc3s400-ft256-4 "beat_follower.ngc" beat_follower.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o beat_follower_map.ncd beat_follower.ngd beat_follower.pcf 
+par -w -intstyle ise -ol high -t 1 beat_follower_map.ncd beat_follower.ncd beat_follower.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml beat_follower.twx beat_follower.ncd -o beat_follower.twr beat_follower.pcf -ucf ultrasonic_sensor.ucf -ucf us_constraints.ucf 
+bitgen -intstyle ise -f beat_follower.ut beat_follower.ncd 
+xst -intstyle ise -ifn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/beat_follower.xst" -ofn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/beat_follower.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ultrasonic_sensor.ucf -uc us_constraints.ucf -p xc3s400-ft256-4 "beat_follower.ngc" beat_follower.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o beat_follower_map.ncd beat_follower.ngd beat_follower.pcf 
+par -w -intstyle ise -ol high -t 1 beat_follower_map.ncd beat_follower.ncd beat_follower.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml beat_follower.twx beat_follower.ncd -o beat_follower.twr beat_follower.pcf -ucf ultrasonic_sensor.ucf -ucf us_constraints.ucf 
+bitgen -intstyle ise -f beat_follower.ut beat_follower.ncd 
+xst -intstyle ise -ifn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/beat_follower.xst" -ofn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/beat_follower.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc us_constraints.ucf -uc ultrasonic_sensor.ucf -p xc3s400-ft256-4 "beat_follower.ngc" beat_follower.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o beat_follower_map.ncd beat_follower.ngd beat_follower.pcf 
+par -w -intstyle ise -ol high -t 1 beat_follower_map.ncd beat_follower.ncd beat_follower.pcf 
+xst -intstyle ise -ifn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/beat_follower.xst" -ofn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/beat_follower.syr" 

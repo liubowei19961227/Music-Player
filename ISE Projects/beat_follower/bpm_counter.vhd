@@ -58,59 +58,61 @@ architecture Behavioral of bpm_counter is
 
 BEGIN
 
-	PROCESS(clk, Resetn)
+	PROCESS(clk)
 	BEGIN
-		IF Resetn = '1' THEN
-			bpm <= Default;
-		ELSIF (clk'EVENT AND clk = '1') THEN
-			IF average_clockcs < 1000000 THEN
+		IF (rising_edge(clk)) THEN
+			IF Resetn = '1' THEN
 				bpm <= Default;
-			ELSIF average_clockcs < 1020408 THEN
-				bpm <= 250;
-			ELSIF average_clockcs < 1063830 THEN
-				bpm <= 240;
-			ELSIF average_clockcs < 1111111 THEN
-				bpm <= 230;
-			ELSIF average_clockcs < 1162791 THEN
-				bpm <= 220;
-			ELSIF average_clockcs < 1219512 THEN
-				bpm <= 210;
-			ELSIF average_clockcs < 1282051 THEN
-				bpm <= 200;
-			ELSIF average_clockcs < 1351351 THEN
-				bpm <= 190;
-			ELSIF average_clockcs < 1428571 THEN
-				bpm <= 180;
-			ELSIF average_clockcs < 1515152 THEN
-				bpm <= 170;
-			ELSIF average_clockcs < 1612903 THEN
-				bpm <= 160;
-			ELSIF average_clockcs < 1724138 THEN
-				bpm <= 150;
-			ELSIF average_clockcs < 1851851 THEN
-				bpm <= 140;
-			ELSIF average_clockcs < 2000000 THEN
-				bpm <= 130;
-			ELSIF average_clockcs < 2173913 THEN
-				bpm <= 120;
-			ELSIF average_clockcs < 2380952 THEN
-				bpm <= 110;
-			ELSIF average_clockcs < 2631579 THEN
-				bpm <= 100;
-			ELSIF average_clockcs < 2941176 THEN
-				bpm <= 90;
-			ELSIF average_clockcs < 3333333 THEN
-				bpm <= 80;
-			ELSIF average_clockcs < 3846154 THEN
-				bpm <= 70;
-			ELSIF average_clockcs < 4545455 THEN
-				bpm <= 60;
-			ELSIF average_clockcs < 5555556 THEN
-				bpm <= 50;
-			ELSIF average_clockcs < 7142857 THEN
-				bpm <= 40;
 			ELSE
-				bpm <= Default;
+				IF average_clockcs < 500000 THEN
+					bpm <= Default;
+				ELSIF average_clockcs < 510204 THEN
+					bpm <= 250;
+				ELSIF average_clockcs < 531915 THEN
+					bpm <= 240;
+				ELSIF average_clockcs < 555556 THEN
+					bpm <= 230;
+				ELSIF average_clockcs < 581395 THEN
+					bpm <= 220;
+				ELSIF average_clockcs < 609756 THEN
+					bpm <= 210;
+				ELSIF average_clockcs < 641026 THEN
+					bpm <= 200;
+				ELSIF average_clockcs < 675676 THEN
+					bpm <= 190;
+				ELSIF average_clockcs < 714286 THEN
+					bpm <= 180;
+				ELSIF average_clockcs < 757576 THEN
+					bpm <= 170;
+				ELSIF average_clockcs < 806452 THEN
+					bpm <= 160;
+				ELSIF average_clockcs < 862069 THEN
+					bpm <= 150;
+				ELSIF average_clockcs < 925926 THEN
+					bpm <= 140;
+				ELSIF average_clockcs < 1000000 THEN
+					bpm <= 130;
+				ELSIF average_clockcs < 1086957 THEN
+					bpm <= 120;
+				ELSIF average_clockcs < 1190476 THEN
+					bpm <= 110;
+				ELSIF average_clockcs < 1315790 THEN
+					bpm <= 100;
+				ELSIF average_clockcs < 1470588 THEN
+					bpm <= 90;
+				ELSIF average_clockcs < 1666667 THEN
+					bpm <= 80;
+				ELSIF average_clockcs < 1923077 THEN
+					bpm <= 70;
+				ELSIF average_clockcs < 2272728 THEN
+					bpm <= 60;
+				ELSIF average_clockcs < 2777778 THEN
+					bpm <= 50;
+				ELSIF average_clockcs < 3571429 THEN
+					bpm <= 40;
+				ELSE
+					bpm <= Default;
+				END IF;
 			END IF;
 		END IF;
 	END PROCESS;

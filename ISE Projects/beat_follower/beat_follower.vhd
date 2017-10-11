@@ -29,6 +29,7 @@ USE ieee.numeric_std.all;
 -- any Xilinx primitives in this code.
 --library UNISIM;
 --use UNISIM.VComponents.all;
+--clock should be 25 MHz
 
 ENTITY beat_follower IS
 	PORT ( clk, echo, Resetn : IN  STD_LOGIC;
@@ -74,87 +75,89 @@ ARCHITECTURE Behavioral OF beat_follower IS
 	
 BEGIN
 
-	FSM: PROCESS (clk, Resetn)
+	FSM: PROCESS (clk)
 	BEGIN
-		IF Resetn = '1' THEN
-			count <= (OTHERS => '0');
-			ledtemp <= '0';
-			y <= send_trigger;
-			retemp <= '0';
-			brtemp <= '0';
-			beat_seen <= '0';
-			beat_store <= '0';
-			distance <= (OTHERS => '0');
-		ELSIF clk'EVENT AND clk = '1' THEN
-			CASE y IS
-				WHEN send_trigger =>
-					sttemp <= '1';
-					ledtemp  <= '0';
-					beat_counter <= beat_counter + 1;
-					IF count = 500 THEN
-						trigger <= '0';
-						count <= (OTHERS => '0');
-						y <= wait_for_echo;
-						sttemp <= '0';
-					ELSE
-						trigger <= '1';
-						count <= count + 1;
-					END IF;
-					
-				WHEN wait_for_echo =>
-					retemp <= '1';
-					beat_counter <= beat_counter + 1;
-					
-					IF echo = '1' THEN
-						-- rising edge
-						y <= echo_count;
-						distance <= (OTHERS => '0');
-						retemp <= '0';
-						
-					ELSIF count > 3000000 THEN
-						-- timeout
-						y <= send_trigger;
-						retemp <= '0';
-						count <= (OTHERS => '0');
-						
-					ELSE
-						count <= count + 1;
-					END IF;
-				
-				WHEN echo_count =>
-				
-					count <= count + 1;
-					distance <= distance + 1;
-					beat_counter <= beat_counter + 1;
-					
-					IF echo = '0' AND distance < 116000 THEN
-						ledtemp <= '1';
-						
-						IF beat_seen = '1' THEN
-							beat_store <= '1';
+		IF rising_edge(clk) THEN
+			IF Resetn = '1' THEN
+				count <= (OTHERS => '0');
+				ledtemp <= '0';
+				y <= send_trigger;
+				retemp <= '0';
+				brtemp <= '0';
+				beat_seen <= '0';
+				beat_store <= '0';
+				distance <= (OTHERS => '0');
+			ELSE
+				CASE y IS
+					WHEN send_trigger =>
+						sttemp <= '1';
+						ledtemp  <= '0';
+						beat_counter <= beat_counter + 1;
+						IF count = 250 THEN
+							trigger <= '0';
+							count <= (OTHERS => '0');
+							y <= wait_for_echo;
+							sttemp <= '0';
+						ELSE
+							trigger <= '1';
+							count <= count + 1;
 						END IF;
-						count <= (OTHERS => '0');
-						y <= beat_registered;
-					ELSIF count > 3000000 THEN
-						y <= send_trigger;
-						count <= (OTHERS => '0');
-					END IF;
 						
+					WHEN wait_for_echo =>
+						retemp <= '1';
+						beat_counter <= beat_counter + 1;
 						
-				WHEN beat_registered =>
-					beat_seen <= '1';
-					beat_store <= '0';
-					brtemp <= '1';
-					ledtemp <= '0';
-					IF count > 10000000 THEN
-						beat_counter <= "000000100110001001011010000000";
-						y <= send_trigger;
-						brtemp <= '0';
-						count <= (OTHERS => '0');
-					ELSE
+						IF echo = '1' THEN
+							-- rising edge
+							y <= echo_count;
+							distance <= (OTHERS => '0');
+							retemp <= '0';
+							
+						ELSIF count > 1500000 THEN
+							-- timeout
+							y <= send_trigger;
+							retemp <= '0';
+							count <= (OTHERS => '0');
+							
+						ELSE
+							count <= count + 1;
+						END IF;
+					
+					WHEN echo_count =>
+					
 						count <= count + 1;
-					END IF;
-			END CASE;
+						distance <= distance + 1;
+						beat_counter <= beat_counter + 1;
+						
+						IF echo = '0' AND distance < 58000 THEN
+							ledtemp <= '1';
+							
+							IF beat_seen = '1' THEN
+								beat_store <= '1';
+							END IF;
+							count <= (OTHERS => '0');
+							y <= beat_registered;
+						ELSIF count > 1500000 THEN
+							y <= send_trigger;
+							count <= (OTHERS => '0');
+						END IF;
+							
+							
+					WHEN beat_registered =>
+						beat_seen <= '1';
+						beat_store <= '0';
+						brtemp <= '1';
+						ledtemp <= '0';
+						IF count > 5000000 THEN
+							beat_counter <= "000000010011000100101101000000";
+							y <= send_trigger;
+							brtemp <= '0';
+							count <= (OTHERS => '0');
+						ELSE
+							count <= count + 1;
+						END IF;
+				END CASE;
+			END IF;
 		END IF;
 	
 	END PROCESS;
@@ -179,10 +182,10 @@ BEGIN
 	BEGIN 
 		
 		IF Resetn = '1' THEN
-			beat_array0 <= ("000010111110101111000010000000", "000010111110101111000010000000", "000010111110101111000010000000", "000010111110101111000010000000");
+			beat_array0 <= ("000001011111010111100001000000", "000001011111010111100001000000", "000001011111010111100001000000", "000001011111010111100001000000");
 		ELSIF clk'EVENT AND clk='1' THEN
 			IF beat_store = '1' THEN
-				IF ((beat_counter > 12000000) AND (beat_counter < 75000000)) THEN
+				IF ((beat_counter > 6000000) AND (beat_counter < 37500000)) THEN
 					beat_array0(3 DOWNTO 1) <= beat_array0(2 DOWNTO 0);
 					beat_array0(0) <= std_logic_vector(beat_counter);
 				END IF;

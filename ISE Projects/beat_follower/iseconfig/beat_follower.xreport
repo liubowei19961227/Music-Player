@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-10-08T12:03:57</DateModified>
+  <DateModified>2017-10-11T19:49:08</DateModified>
   <ModuleName>beat_follower</ModuleName>
-  <SummaryTimeStamp>2017-10-08T11:05:58</SummaryTimeStamp>
+  <SummaryTimeStamp>2017-10-11T18:28:36</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/iseconfig/beat_follower.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower\</ImplementationReportsDirectory>
   <DateInitialized>2017-10-06T17:35:21</DateInitialized>

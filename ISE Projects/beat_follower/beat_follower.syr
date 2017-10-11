@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.23 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.25 secs
  
 --> Reading design: beat_follower.prj
 
@@ -111,10 +111,10 @@ Architecture behavioral of Entity seven_seg_display is up to date.
 Compiling vhdl file "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/large_number_7seg.vhd" in Library work.
 Architecture behavioral of Entity large_number_7seg is up to date.
 Compiling vhdl file "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/bpm_counter.vhd" in Library work.
-Architecture behavioral of Entity bpm_counter is up to date.
+Entity <bpm_counter> compiled.
+Entity <bpm_counter> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/beat_follower.vhd" in Library work.
-Entity <beat_follower> compiled.
-Entity <beat_follower> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity beat_follower is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -134,12 +134,10 @@ Analyzing hierarchy for entity <bin_to_dec> in library <work> (architecture <beh
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <beat_follower> in library <work> (Architecture <behavioral>).
-INFO:Xst:1739 - HDL ADVISOR - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/beat_follower.vhd" line 36: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+INFO:Xst:1739 - HDL ADVISOR - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/beat_follower.vhd" line 37: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
 Entity <beat_follower> analyzed. Unit <beat_follower> generated.
 
 Analyzing Entity <bpm_counter> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/bpm_counter.vhd" line 61: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <Default>
 Entity <bpm_counter> analyzed. Unit <bpm_counter> generated.
 
 Analyzing Entity <large_number_7seg> in library <work> (Architecture <behavioral>).
@@ -218,30 +216,31 @@ Unit <large_number_7seg> synthesized.
 Synthesizing Unit <bpm_counter>.
     Related source file is "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/bpm_counter.vhd".
     Found 9-bit register for signal <bpm>.
-    Found 31-bit comparator less for signal <bpm$cmp_lt0000> created at line 66.
-    Found 31-bit comparator less for signal <bpm$cmp_lt0001> created at line 67.
-    Found 31-bit comparator less for signal <bpm$cmp_lt0002> created at line 69.
-    Found 31-bit comparator less for signal <bpm$cmp_lt0003> created at line 71.
-    Found 31-bit comparator less for signal <bpm$cmp_lt0004> created at line 73.
-    Found 31-bit comparator less for signal <bpm$cmp_lt0005> created at line 75.
-    Found 31-bit comparator less for signal <bpm$cmp_lt0006> created at line 77.
-    Found 31-bit comparator less for signal <bpm$cmp_lt0007> created at line 79.
-    Found 31-bit comparator less for signal <bpm$cmp_lt0008> created at line 81.
-    Found 31-bit comparator less for signal <bpm$cmp_lt0009> created at line 83.
-    Found 31-bit comparator less for signal <bpm$cmp_lt0010> created at line 85.
-    Found 31-bit comparator less for signal <bpm$cmp_lt0011> created at line 87.
-    Found 31-bit comparator less for signal <bpm$cmp_lt0012> created at line 89.
-    Found 31-bit comparator less for signal <bpm$cmp_lt0013> created at line 91.
-    Found 31-bit comparator less for signal <bpm$cmp_lt0014> created at line 93.
-    Found 31-bit comparator less for signal <bpm$cmp_lt0015> created at line 95.
-    Found 31-bit comparator less for signal <bpm$cmp_lt0016> created at line 97.
-    Found 31-bit comparator less for signal <bpm$cmp_lt0017> created at line 99.
-    Found 31-bit comparator less for signal <bpm$cmp_lt0018> created at line 101.
-    Found 31-bit comparator less for signal <bpm$cmp_lt0019> created at line 103.
-    Found 31-bit comparator less for signal <bpm$cmp_lt0020> created at line 105.
-    Found 31-bit comparator less for signal <bpm$cmp_lt0021> created at line 107.
-    Found 31-bit comparator less for signal <bpm$cmp_lt0022> created at line 109.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0000> created at line 67.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0001> created at line 68.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0002> created at line 70.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0003> created at line 72.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0004> created at line 74.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0005> created at line 76.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0006> created at line 78.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0007> created at line 80.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0008> created at line 82.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0009> created at line 84.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0010> created at line 86.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0011> created at line 88.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0012> created at line 90.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0013> created at line 92.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0014> created at line 94.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0015> created at line 96.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0016> created at line 98.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0017> created at line 100.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0018> created at line 102.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0019> created at line 104.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0020> created at line 106.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0021> created at line 108.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0022> created at line 110.
     Summary:
+	inferred   9 D-type flip-flop(s).
 	inferred  23 Comparator(s).
 Unit <bpm_counter> synthesized.
 
@@ -255,10 +254,10 @@ WARNING:Xst:646 - Signal <sum<15:0>> is assigned but never used. This unconnecte
     | States             | 4                                              |
     | Transitions        | 12                                             |
     | Inputs             | 5                                              |
-    | Outputs            | 4                                              |
+    | Outputs            | 5                                              |
     | Clock              | clk                       (rising_edge)        |
     | Reset              | Resetn                    (positive)           |
-    | Reset type         | asynchronous                                   |
+    | Reset type         | synchronous                                    |
     | Reset State        | send_trigger                                   |
     | Power Up State     | send_trigger                                   |
     | Encoding           | automatic                                      |
@@ -267,27 +266,27 @@ WARNING:Xst:646 - Signal <sum<15:0>> is assigned but never used. This unconnecte
     Found 1-bit register for signal <trigger>.
     Found 1-bit register for signal <led>.
     Found 120-bit register for signal <beat_array0>.
-    Found 31-bit comparator greatequal for signal <beat_array0_0$cmp_ge0000> created at line 185.
-    Found 31-bit comparator lessequal for signal <beat_array0_0$cmp_le0000> created at line 185.
+    Found 31-bit comparator greatequal for signal <beat_array0_0$cmp_ge0000> created at line 188.
+    Found 31-bit comparator lessequal for signal <beat_array0_0$cmp_le0000> created at line 188.
     Found 30-bit register for signal <beat_counter>.
     Found 30-bit adder for signal <beat_counter$addsub0000>.
     Found 1-bit register for signal <beat_seen>.
     Found 1-bit register for signal <beat_store>.
     Found 1-bit register for signal <brtemp>.
     Found 30-bit register for signal <count>.
-    Found 30-bit adder for signal <count$add0000> created at line 121.
+    Found 30-bit adder for signal <count$add0000> created at line 123.
     Found 30-bit register for signal <distance>.
-    Found 30-bit adder for signal <distance$addsub0000> created at line 127.
+    Found 30-bit adder for signal <distance$addsub0000> created at line 129.
     Found 1-bit register for signal <ledtemp>.
     Found 1-bit register for signal <retemp>.
     Found 1-bit register for signal <sttemp>.
     Found 30x30-bit multiplier for signal <sum>.
-    Found 30-bit adder for signal <sum$addsub0000> created at line 193.
-    Found 30-bit adder for signal <sum$addsub0001> created at line 193.
-    Found 30-bit adder for signal <sum$addsub0002> created at line 193.
-    Found 31-bit comparator greater for signal <y$cmp_gt0000> created at line 112.
-    Found 31-bit comparator greater for signal <y$cmp_gt0001> created at line 149.
-    Found 31-bit comparator less for signal <y$cmp_lt0000> created at line 130.
+    Found 30-bit adder for signal <sum$addsub0000> created at line 196.
+    Found 30-bit adder for signal <sum$addsub0001> created at line 196.
+    Found 30-bit adder for signal <sum$addsub0002> created at line 196.
+    Found 31-bit comparator greater for signal <y$cmp_gt0000> created at line 114.
+    Found 31-bit comparator greater for signal <y$cmp_gt0001> created at line 151.
+    Found 31-bit comparator less for signal <y$cmp_lt0000> created at line 132.
     Summary:
 	inferred   1 Finite State Machine(s).
 	inferred  98 D-type flip-flop(s).
@@ -345,8 +344,8 @@ Optimizing FSM <y/FSM> on signal <y[1:2]> with gray encoding.
  echo_count      | 11
  beat_registered | 10
 -----------------------------
-WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <bpm>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <8> has a constant value of 0 in block <bpm>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <bpm_0> in Unit <display_bpm> is equivalent to the following FF/Latch, which will be removed : <bpm_8> 
+WARNING:Xst:1293 - FF/Latch <bpm_0> has a constant value of 0 in block <display_bpm>. This FF/Latch will be trimmed during the optimization process.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -383,9 +382,9 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1293 - FF/Latch <bpm_0> has a constant value of 0 in block <bpm_counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bpm_8> has a constant value of 0 in block <bpm_counter>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <sttemp> in Unit <beat_follower> is equivalent to the following FF/Latch, which will be removed : <trigger> 
-INFO:Xst:2261 - The FF/Latch <0> in Unit <LPM_DFF_1> is equivalent to the following FF/Latch, which will be removed : <8> 
-WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <LPM_DFF_1>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <beat_follower> ...
 
@@ -435,29 +434,29 @@ Design Statistics
 # IOs                              : 49
 
 Cell Usage :
-# BELS                             : 1933
+# BELS                             : 1924
 #      GND                         : 1
-#      INV                         : 112
-#      LUT1                        : 223
-#      LUT2                        : 156
-#      LUT2_L                      : 4
-#      LUT3                        : 138
+#      INV                         : 106
+#      LUT1                        : 222
+#      LUT2                        : 162
+#      LUT2_L                      : 1
+#      LUT3                        : 140
+#      LUT3_D                      : 1
 #      LUT3_L                      : 4
-#      LUT4                        : 316
-#      LUT4_D                      : 1
-#      LUT4_L                      : 15
-#      MUXCY                       : 713
-#      MUXF5                       : 9
+#      LUT4                        : 318
+#      LUT4_L                      : 9
+#      MUXCY                       : 708
+#      MUXF5                       : 11
 #      VCC                         : 1
 #      XORCY                       : 240
 # FlipFlops/Latches                : 260
-#      FDC                         : 67
-#      FDCE                        : 75
+#      FDCE                        : 72
 #      FDE                         : 33
-#      FDP                         : 4
 #      FDPE                        : 48
-#      FDR                         : 32
-#      FDRE                        : 1
+#      FDR                         : 94
+#      FDRE                        : 4
+#      FDRS                        : 5
+#      FDS                         : 4
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 48
@@ -472,9 +471,9 @@ Device utilization summary:
 
 Selected Device : 3s400ft256-4 
 
- Number of Slices:                      536  out of   3584    14%  
+ Number of Slices:                      526  out of   3584    14%  
  Number of Slice Flip Flops:            260  out of   7168     3%  
- Number of 4 input LUTs:                969  out of   7168    13%  
+ Number of 4 input LUTs:                963  out of   7168    13%  
  Number of IOs:                          49
  Number of bonded IOBs:                  49  out of    173    28%  
  Number of MULT18X18s:                    2  out of     16    12%  
@@ -509,16 +508,16 @@ Asynchronous Control Signals Information:
 -----------------------------------+------------------------+-------+
 Control Signal                     | Buffer(FF name)        | Load  |
 -----------------------------------+------------------------+-------+
-Resetn                             | IBUF                   | 194   |
+Resetn                             | IBUF                   | 120   |
 -----------------------------------+------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 27.174ns (Maximum Frequency: 36.800MHz)
-   Minimum input arrival time before clock: 6.614ns
-   Maximum output required time after clock: 34.561ns
+   Minimum period: 27.090ns (Maximum Frequency: 36.914MHz)
+   Minimum input arrival time before clock: 7.811ns
+   Maximum output required time after clock: 35.047ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -527,16 +526,16 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 27.174ns (frequency: 36.800MHz)
-  Total number of paths / destination ports: 3258909057 / 418
+  Clock period: 27.090ns (frequency: 36.914MHz)
+  Total number of paths / destination ports: 3127259324 / 430
 -------------------------------------------------------------------------
-Delay:               27.174ns (Levels of Logic = 40)
+Delay:               27.090ns (Levels of Logic = 39)
   Source:            beat_array0_3_1 (FF)
-  Destination:       display_bpm/bpm_1 (FF)
+  Destination:       display_bpm/bpm_2 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: beat_array0_3_1 to display_bpm/bpm_1
+  Data Path: beat_array0_3_1 to display_bpm/bpm_2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
@@ -571,46 +570,46 @@ Delay:               27.174ns (Levels of Logic = 40)
      MUXCY:CI->O           1   0.064   0.000  Mmult_sum_Madd_cy<33> (Mmult_sum_Madd_cy<33>)
      MUXCY:CI->O           1   0.064   0.000  Mmult_sum_Madd_cy<34> (Mmult_sum_Madd_cy<34>)
      MUXCY:CI->O           1   0.064   0.000  Mmult_sum_Madd_cy<35> (Mmult_sum_Madd_cy<35>)
-     MUXCY:CI->O           1   0.064   0.000  Mmult_sum_Madd_cy<36> (Mmult_sum_Madd_cy<36>)
-     XORCY:CI->O          24   0.904   2.136  Mmult_sum_Madd_xor<37> (twelfth_of_beat_21_OBUF)
-     LUT4:I0->O            1   0.551   0.000  display_bpm/Mcompar_bpm_cmp_lt0000_lut<10> (display_bpm/Mcompar_bpm_cmp_lt0000_lut<10>)
-     MUXCY:S->O            1   0.500   0.000  display_bpm/Mcompar_bpm_cmp_lt0000_cy<10> (display_bpm/Mcompar_bpm_cmp_lt0000_cy<10>)
-     MUXCY:CI->O           1   0.064   0.000  display_bpm/Mcompar_bpm_cmp_lt0000_cy<11> (display_bpm/Mcompar_bpm_cmp_lt0000_cy<11>)
-     MUXCY:CI->O          10   0.303   1.473  display_bpm/Mcompar_bpm_cmp_lt0000_cy<12> (display_bpm/Mcompar_bpm_cmp_lt0000_cy<12>)
-     LUT2_L:I0->LO         1   0.551   0.126  display_bpm/bpm_mux0023<7>213_SW1_SW0 (N76)
-     LUT4:I3->O            2   0.551   0.903  display_bpm/bpm_mux0023<7>213_SW1 (N53)
-     LUT4:I3->O            1   0.551   0.827  display_bpm/bpm_mux0023<7>265_SW2 (N99)
-     LUT4:I3->O            1   0.551   0.000  display_bpm/bpm_mux0023<7>265 (display_bpm/bpm_mux0023<7>)
-     FDC:D                     0.203          display_bpm/bpm_1
+     XORCY:CI->O          24   0.904   2.136  Mmult_sum_Madd_xor<36> (twelfth_of_beat_20_OBUF)
+     LUT2:I0->O            1   0.551   0.000  display_bpm/Mcompar_bpm_cmp_lt0001_lut<11>16 (display_bpm/Mcompar_bpm_cmp_lt0001_lut<11>16)
+     MUXCY:S->O            1   0.500   0.000  display_bpm/Mcompar_bpm_cmp_lt0001_cy<11>_15 (display_bpm/Mcompar_bpm_cmp_lt0001_cy<11>16)
+     MUXCY:CI->O           1   0.064   0.000  display_bpm/Mcompar_bpm_cmp_lt0001_cy<12>_10 (display_bpm/Mcompar_bpm_cmp_lt0001_cy<12>11)
+     MUXCY:CI->O           2   0.303   1.216  display_bpm/Mcompar_bpm_cmp_lt0001_cy<13>_7 (display_bpm/Mcompar_bpm_cmp_lt0001_cy<13>8)
+     LUT4:I0->O            1   0.551   1.140  display_bpm/bpm_mux0024<6>112 (display_bpm/bpm_mux0024<6>112)
+     LUT4:I0->O            1   0.551   0.827  display_bpm/bpm_mux0024<6>139 (display_bpm/bpm_mux0024<6>139)
+     LUT4_L:I3->LO         1   0.551   0.126  display_bpm/bpm_mux0024<6>168 (display_bpm/bpm_mux0024<6>168)
+     LUT4:I3->O            1   0.551   0.000  display_bpm/bpm_mux0024<6>11371 (display_bpm/bpm_mux0024<6>1137)
+     FDS:D                     0.203          display_bpm/bpm_2
     ----------------------------------------
-    Total                     27.174ns (16.873ns logic, 10.301ns route)
-                                       (62.1% logic, 37.9% route)
+    Total                     27.090ns (16.809ns logic, 10.281ns route)
+                                       (62.0% logic, 38.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 128 / 97
+  Total number of paths / destination ports: 203 / 173
 -------------------------------------------------------------------------
-Offset:              6.614ns (Levels of Logic = 2)
+Offset:              7.811ns (Levels of Logic = 3)
   Source:            Resetn (PAD)
-  Destination:       beat_counter_0 (FF)
+  Destination:       display_bpm/bpm_5 (FF)
   Destination Clock: clk rising
 
-  Data Path: Resetn to beat_counter_0
+  Data Path: Resetn to display_bpm/bpm_5
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           197   0.821   2.798  Resetn_IBUF (Resetn_IBUF)
-     INV:I->O             30   0.551   1.842  Resetn_inv1_INV_0 (Resetn_inv)
-     FDE:CE                    0.602          beat_counter_0
+     IBUF:I->O           193   0.821   3.114  Resetn_IBUF (Resetn_IBUF)
+     LUT2:I0->O            5   0.551   0.947  display_bpm/bpm_mux0024<4>131 (display_bpm/N15)
+     LUT4:I3->O            1   0.551   0.801  display_bpm/bpm_mux0024<3>15 (display_bpm/bpm_mux0024<3>15)
+     FDS:S                     1.026          display_bpm/bpm_5
     ----------------------------------------
-    Total                      6.614ns (1.974ns logic, 4.640ns route)
-                                       (29.8% logic, 70.2% route)
+    Total                      7.811ns (2.949ns logic, 4.862ns route)
+                                       (37.8% logic, 62.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 31167021 / 46
+  Total number of paths / destination ports: 31794193 / 46
 -------------------------------------------------------------------------
-Offset:              34.561ns (Levels of Logic = 50)
+Offset:              35.047ns (Levels of Logic = 53)
   Source:            display_bpm/bpm_3 (FF)
   Destination:       hex<6> (PAD)
   Source Clock:      clk rising
@@ -619,7 +618,7 @@ Offset:              34.561ns (Levels of Logic = 50)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDP:C->Q              8   0.720   1.422  display_bpm/bpm_3 (display_bpm/bpm_3)
+     FDS:C->Q              8   0.720   1.422  display_bpm/bpm_3 (display_bpm/bpm_3)
      LUT1:I0->O            1   0.551   0.000  display_bpm/displayvalue/Mcompar_ten_part_cmp_ge0000_cy<0>_6_rt (display_bpm/displayvalue/Mcompar_ten_part_cmp_ge0000_cy<0>_6_rt)
      MUXCY:S->O            1   0.500   0.000  display_bpm/displayvalue/Mcompar_ten_part_cmp_ge0000_cy<0>_6 (display_bpm/displayvalue/Mcompar_ten_part_cmp_ge0000_cy<0>7)
      MUXCY:CI->O           1   0.064   0.000  display_bpm/displayvalue/Mcompar_ten_part_cmp_ge0000_cy<1>_6 (display_bpm/displayvalue/Mcompar_ten_part_cmp_ge0000_cy<1>7)
@@ -637,16 +636,19 @@ Offset:              34.561ns (Levels of Logic = 50)
      MUXCY:CI->O           1   0.064   0.000  display_bpm/displayvalue/Msub_ten_part_share0000_cy<8> (display_bpm/displayvalue/Msub_ten_part_share0000_cy<8>)
      MUXCY:CI->O           1   0.064   0.000  display_bpm/displayvalue/Msub_ten_part_share0000_cy<9> (display_bpm/displayvalue/Msub_ten_part_share0000_cy<9>)
      MUXCY:CI->O           1   0.064   0.000  display_bpm/displayvalue/Msub_ten_part_share0000_cy<10> (display_bpm/displayvalue/Msub_ten_part_share0000_cy<10>)
-     XORCY:CI->O           3   0.904   1.102  display_bpm/displayvalue/Msub_ten_part_share0000_xor<11> (display_bpm/displayvalue/ten_part_share0000<11>)
-     LUT3:I1->O            9   0.551   1.463  display_bpm/displayvalue/ten_part<11>1 (display_bpm/displayvalue/ten_part<11>)
-     LUT4:I0->O            1   0.551   0.000  display_bpm/displayvalue/Mcompar_decimal_part_cmp_ge0000_lut<6> (display_bpm/displayvalue/Mcompar_decimal_part_cmp_ge0000_lut<6>)
-     MUXCY:S->O            1   0.500   0.000  display_bpm/displayvalue/Mcompar_decimal_part_cmp_ge0000_cy<6> (display_bpm/displayvalue/Mcompar_decimal_part_cmp_ge0000_cy<6>)
-     MUXCY:CI->O           1   0.064   0.000  display_bpm/displayvalue/Mcompar_decimal_part_cmp_ge0000_cy<7> (display_bpm/displayvalue/Mcompar_decimal_part_cmp_ge0000_cy<7>)
-     MUXCY:CI->O           9   0.303   1.463  display_bpm/displayvalue/Mcompar_decimal_part_cmp_ge0000_cy<8> (display_bpm/displayvalue/decimal_part_cmp_ge0000)
-     LUT2:I0->O            2   0.551   1.072  display_bpm/displayvalue/ten_bit<3>1 (display_bpm/displayvalue/ten_bit<3>)
-     LUT4:I1->O            2   0.551   0.945  display_bpm/displayvalue/ten_bit<1> (display_bpm/displayvalue/ten_bit<1>)
-     LUT4:I2->O            1   0.551   0.000  display_bpm/displayvalue/Msub_decimal_part_share0000_lut<2> (display_bpm/displayvalue/Msub_decimal_part_share0000_lut<2>)
-     MUXCY:S->O            1   0.500   0.000  display_bpm/displayvalue/Msub_decimal_part_share0000_cy<2> (display_bpm/displayvalue/Msub_decimal_part_share0000_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  display_bpm/displayvalue/Msub_ten_part_share0000_cy<11> (display_bpm/displayvalue/Msub_ten_part_share0000_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  display_bpm/displayvalue/Msub_ten_part_share0000_cy<12> (display_bpm/displayvalue/Msub_ten_part_share0000_cy<12>)
+     XORCY:CI->O           3   0.904   1.102  display_bpm/displayvalue/Msub_ten_part_share0000_xor<13> (display_bpm/displayvalue/ten_part_share0000<13>)
+     LUT3:I1->O            9   0.551   1.463  display_bpm/displayvalue/ten_part<13>1 (display_bpm/displayvalue/ten_part<13>)
+     LUT4:I0->O            1   0.551   0.000  display_bpm/displayvalue/Mcompar_decimal_part_cmp_ge0000_lut<3>6 (display_bpm/displayvalue/Mcompar_decimal_part_cmp_ge0000_lut<3>6)
+     MUXCY:S->O            1   0.500   0.000  display_bpm/displayvalue/Mcompar_decimal_part_cmp_ge0000_cy<3>_5 (display_bpm/displayvalue/Mcompar_decimal_part_cmp_ge0000_cy<3>6)
+     MUXCY:CI->O           6   0.303   1.342  display_bpm/displayvalue/Mcompar_decimal_part_cmp_ge0000_cy<4>_5 (display_bpm/displayvalue/decimal_part_cmp_ge0006)
+     LUT4:I0->O            1   0.551   0.000  display_bpm/displayvalue/decimal_part_mux0008<17>151 (display_bpm/displayvalue/decimal_part_mux0008<17>151)
+     MUXF5:I1->O           1   0.360   1.140  display_bpm/displayvalue/decimal_part_mux0008<17>15_f5 (display_bpm/displayvalue/decimal_part_mux0008<17>15)
+     LUT4:I0->O            1   0.551   0.996  display_bpm/displayvalue/decimal_part_mux0008<17>43 (display_bpm/displayvalue/decimal_part_mux0008<17>)
+     LUT2:I1->O            1   0.551   0.000  display_bpm/displayvalue/Msub_decimal_part_share0000_lut<1> (display_bpm/displayvalue/Msub_decimal_part_share0000_lut<1>)
+     MUXCY:S->O            1   0.500   0.000  display_bpm/displayvalue/Msub_decimal_part_share0000_cy<1> (display_bpm/displayvalue/Msub_decimal_part_share0000_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  display_bpm/displayvalue/Msub_decimal_part_share0000_cy<2> (display_bpm/displayvalue/Msub_decimal_part_share0000_cy<2>)
      MUXCY:CI->O           1   0.064   0.000  display_bpm/displayvalue/Msub_decimal_part_share0000_cy<3> (display_bpm/displayvalue/Msub_decimal_part_share0000_cy<3>)
      MUXCY:CI->O           1   0.064   0.000  display_bpm/displayvalue/Msub_decimal_part_share0000_cy<4> (display_bpm/displayvalue/Msub_decimal_part_share0000_cy<4>)
      MUXCY:CI->O           1   0.064   0.000  display_bpm/displayvalue/Msub_decimal_part_share0000_cy<5> (display_bpm/displayvalue/Msub_decimal_part_share0000_cy<5>)
@@ -663,28 +665,28 @@ Offset:              34.561ns (Levels of Logic = 50)
      MUXCY:CI->O           1   0.064   0.000  display_bpm/displayvalue/Msub_decimal_part_share0000_cy<16> (display_bpm/displayvalue/Msub_decimal_part_share0000_cy<16>)
      MUXCY:CI->O           0   0.064   0.000  display_bpm/displayvalue/Msub_decimal_part_share0000_cy<17> (display_bpm/displayvalue/Msub_decimal_part_share0000_cy<17>)
      XORCY:CI->O           1   0.904   0.996  display_bpm/displayvalue/Msub_decimal_part_share0000_xor<18> (display_bpm/displayvalue/decimal_part_share0000<18>)
-     LUT3:I1->O            1   0.551   0.000  display_bpm/displayvalue/digit_bit<0>1_wg_lut<14> (display_bpm/displayvalue/digit_bit<0>1_wg_lut<14>)
-     MUXCY:S->O            3   0.739   0.975  display_bpm/displayvalue/digit_bit<0>1_wg_cy<14> (display_bpm/displayvalue/digit_bit<0>1_wg_cy<14>)
+     LUT3:I1->O            1   0.551   0.000  display_bpm/displayvalue/digit_bit_cmp_eq00011_wg_lut<14> (display_bpm/displayvalue/digit_bit_cmp_eq00011_wg_lut<14>)
+     MUXCY:S->O            3   0.739   0.975  display_bpm/displayvalue/digit_bit_cmp_eq00011_wg_cy<14> (display_bpm/displayvalue/digit_bit_cmp_eq00011_wg_cy<14>)
      LUT3:I2->O            1   0.551   0.996  display_bpm/displayvalue/digit_bit<1>1 (display_bpm/displayvalue/digit_bit<1>)
      LUT3:I1->O            1   0.551   0.000  display_bpm/displayvalue/display/Mmux_binary_41 (display_bpm/displayvalue/display/Mmux_binary_41)
      MUXF5:I0->O           7   0.360   1.405  display_bpm/displayvalue/display/Mmux_binary_2_f5_0 (display_bpm/displayvalue/display/binary<1>)
      LUT4:I0->O            1   0.551   0.801  display_bpm/displayvalue/display/binary_to_decimal/out_seg<2>1 (hex_2_OBUF)
      OBUF:I->O                 5.644          hex_2_OBUF (hex<2>)
     ----------------------------------------
-    Total                     34.561ns (19.730ns logic, 14.831ns route)
-                                       (57.1% logic, 42.9% route)
+    Total                     35.047ns (20.218ns logic, 14.829ns route)
+                                       (57.7% logic, 42.3% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 15.00 secs
-Total CPU time to Xst completion: 14.72 secs
+Total REAL time to Xst completion: 38.00 secs
+Total CPU time to Xst completion: 38.47 secs
  
 --> 
 
-Total memory usage is 255220 kilobytes
+Total memory usage is 271092 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    6 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
 Number of infos    :    4 (   0 filtered)
 
