@@ -49,6 +49,9 @@ NET "BTN<1>" LOC = "K14";
 NET "BTN<2>" LOC = "K13";
 NET "BTN<3>" LOC = "k12";
 
+
+NET "S" LOC = "D5";
+
 #NET "JA<1>" LOC = "T14";
 #NET "JA<2>" LOC = "R13";
 #NET "JA<3>" LOC = "T13";

@@ -114,7 +114,7 @@ end process;
 increment_ram_address: process(clk)
 begin
 	if rising_edge(clk) then
-		if rst = '1' or to_integer(unsigned(ram_address_counter)) = 4 then
+		if rst = '1' or to_integer(unsigned(ram_address_counter)) = 200 then
 			ram_address_counter <= (others => '0');
 			--debug_counter <= "00000000";
 		elsif round_counter = 2 then

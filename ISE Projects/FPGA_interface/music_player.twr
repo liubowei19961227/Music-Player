@@ -45,27 +45,20 @@ Setup/Hold to clock clk
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-EPPASTB     |    2.838(R)|    0.425(R)|clk_BUFGP         |   0.000|
-EPPWRITE    |    1.743(R)|    0.081(R)|clk_BUFGP         |   0.000|
-EppDSTB     |    2.959(R)|    0.533(R)|clk_BUFGP         |   0.000|
-PDB<0>      |    1.455(R)|    0.886(R)|clk_BUFGP         |   0.000|
-PDB<1>      |    1.055(R)|    1.212(R)|clk_BUFGP         |   0.000|
-PDB<2>      |    1.200(R)|    1.155(R)|clk_BUFGP         |   0.000|
-PDB<3>      |    1.370(R)|    1.235(R)|clk_BUFGP         |   0.000|
-PDB<4>      |    1.453(R)|    0.889(R)|clk_BUFGP         |   0.000|
-PDB<5>      |    1.362(R)|    1.212(R)|clk_BUFGP         |   0.000|
-PDB<6>      |    1.789(R)|    0.594(R)|clk_BUFGP         |   0.000|
-PDB<7>      |    1.694(R)|    0.681(R)|clk_BUFGP         |   0.000|
-btn<0>      |    5.493(R)|    0.885(R)|clk_BUFGP         |   0.000|
-btn<1>      |    2.187(R)|   -0.280(R)|clk_BUFGP         |   0.000|
-sw<0>       |    2.812(R)|   -0.664(R)|clk_BUFGP         |   0.000|
-sw<1>       |    1.834(R)|    0.014(R)|clk_BUFGP         |   0.000|
-sw<2>       |    1.885(R)|    0.077(R)|clk_BUFGP         |   0.000|
-sw<3>       |    1.487(R)|    0.291(R)|clk_BUFGP         |   0.000|
-sw<4>       |    1.847(R)|    0.004(R)|clk_BUFGP         |   0.000|
-sw<5>       |    1.662(R)|    0.224(R)|clk_BUFGP         |   0.000|
-sw<6>       |    2.182(R)|   -0.260(R)|clk_BUFGP         |   0.000|
-sw<7>       |    2.152(R)|   -0.241(R)|clk_BUFGP         |   0.000|
+EPPASTB     |    2.813(R)|    0.687(R)|clk_BUFGP         |   0.000|
+EPPWRITE    |    1.449(R)|    0.789(R)|clk_BUFGP         |   0.000|
+EppDSTB     |    1.138(R)|    1.060(R)|clk_BUFGP         |   0.000|
+PDB<0>      |    1.800(R)|    1.191(R)|clk_BUFGP         |   0.000|
+PDB<1>      |    1.520(R)|    1.210(R)|clk_BUFGP         |   0.000|
+PDB<2>      |    1.101(R)|    1.167(R)|clk_BUFGP         |   0.000|
+PDB<3>      |    1.399(R)|    1.233(R)|clk_BUFGP         |   0.000|
+PDB<4>      |    1.557(R)|    0.882(R)|clk_BUFGP         |   0.000|
+PDB<5>      |    1.486(R)|    0.922(R)|clk_BUFGP         |   0.000|
+PDB<6>      |    1.466(R)|    1.160(R)|clk_BUFGP         |   0.000|
+PDB<7>      |    1.718(R)|    0.915(R)|clk_BUFGP         |   0.000|
+btn<0>      |    9.406(R)|    0.571(R)|clk_BUFGP         |   0.000|
+btn<1>      |    1.504(R)|    0.974(R)|clk_BUFGP         |   0.000|
+btn<2>      |    0.555(R)|    1.025(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -73,28 +66,29 @@ Clock clk to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-AN<0>       |   11.560(R)|clk_BUFGP         |   0.000|
-AN<1>       |   11.454(R)|clk_BUFGP         |   0.000|
-AN<2>       |   11.965(R)|clk_BUFGP         |   0.000|
-AN<3>       |   12.562(R)|clk_BUFGP         |   0.000|
-EppWAIT     |   12.186(R)|clk_BUFGP         |   0.000|
+AN<0>       |   10.788(R)|clk_BUFGP         |   0.000|
+AN<1>       |   10.298(R)|clk_BUFGP         |   0.000|
+AN<2>       |   10.594(R)|clk_BUFGP         |   0.000|
+AN<3>       |   11.097(R)|clk_BUFGP         |   0.000|
+EppWAIT     |   10.354(R)|clk_BUFGP         |   0.000|
 LED<0>      |    8.401(R)|clk_BUFGP         |   0.000|
-LED<1>      |    9.154(R)|clk_BUFGP         |   0.000|
-PDB<0>      |   13.032(R)|clk_BUFGP         |   0.000|
-PDB<1>      |   13.381(R)|clk_BUFGP         |   0.000|
-PDB<2>      |   14.167(R)|clk_BUFGP         |   0.000|
-PDB<3>      |   12.303(R)|clk_BUFGP         |   0.000|
-PDB<4>      |   13.691(R)|clk_BUFGP         |   0.000|
-PDB<5>      |   12.447(R)|clk_BUFGP         |   0.000|
-PDB<6>      |   13.341(R)|clk_BUFGP         |   0.000|
-PDB<7>      |   13.239(R)|clk_BUFGP         |   0.000|
-hex<0>      |   16.032(R)|clk_BUFGP         |   0.000|
-hex<1>      |   16.336(R)|clk_BUFGP         |   0.000|
-hex<2>      |   16.212(R)|clk_BUFGP         |   0.000|
-hex<3>      |   15.148(R)|clk_BUFGP         |   0.000|
-hex<4>      |   15.553(R)|clk_BUFGP         |   0.000|
-hex<5>      |   16.990(R)|clk_BUFGP         |   0.000|
-hex<6>      |   15.364(R)|clk_BUFGP         |   0.000|
+LED<2>      |    9.119(R)|clk_BUFGP         |   0.000|
+PDB<0>      |   13.577(R)|clk_BUFGP         |   0.000|
+PDB<1>      |   14.182(R)|clk_BUFGP         |   0.000|
+PDB<2>      |   13.563(R)|clk_BUFGP         |   0.000|
+PDB<3>      |   12.032(R)|clk_BUFGP         |   0.000|
+PDB<4>      |   13.144(R)|clk_BUFGP         |   0.000|
+PDB<5>      |   13.006(R)|clk_BUFGP         |   0.000|
+PDB<6>      |   12.395(R)|clk_BUFGP         |   0.000|
+PDB<7>      |   12.622(R)|clk_BUFGP         |   0.000|
+hex<0>      |   15.925(R)|clk_BUFGP         |   0.000|
+hex<1>      |   15.848(R)|clk_BUFGP         |   0.000|
+hex<2>      |   15.661(R)|clk_BUFGP         |   0.000|
+hex<3>      |   14.842(R)|clk_BUFGP         |   0.000|
+hex<4>      |   16.076(R)|clk_BUFGP         |   0.000|
+hex<5>      |   15.901(R)|clk_BUFGP         |   0.000|
+hex<6>      |   14.813(R)|clk_BUFGP         |   0.000|
+s           |    9.220(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -102,33 +96,33 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    6.508|         |         |         |
+clk            |   17.432|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-EPPASTB        |PDB<0>         |   11.131|
-EPPASTB        |PDB<1>         |   11.743|
-EPPASTB        |PDB<2>         |   13.090|
-EPPASTB        |PDB<3>         |    9.080|
-EPPASTB        |PDB<4>         |    9.432|
-EPPASTB        |PDB<5>         |    7.986|
-EPPASTB        |PDB<6>         |    8.599|
-EPPASTB        |PDB<7>         |    8.147|
-EPPWRITE       |PDB<0>         |    9.902|
-EPPWRITE       |PDB<1>         |   10.253|
-EPPWRITE       |PDB<2>         |   10.244|
-EPPWRITE       |PDB<3>         |    9.370|
-EPPWRITE       |PDB<4>         |    8.999|
-EPPWRITE       |PDB<5>         |    8.965|
-EPPWRITE       |PDB<6>         |    9.369|
-EPPWRITE       |PDB<7>         |    8.999|
+EPPASTB        |PDB<0>         |   12.356|
+EPPASTB        |PDB<1>         |   12.310|
+EPPASTB        |PDB<2>         |   12.222|
+EPPASTB        |PDB<3>         |    8.799|
+EPPASTB        |PDB<4>         |   10.078|
+EPPASTB        |PDB<5>         |    9.628|
+EPPASTB        |PDB<6>         |    9.318|
+EPPASTB        |PDB<7>         |    9.335|
+EPPWRITE       |PDB<0>         |   10.219|
+EPPWRITE       |PDB<1>         |   10.012|
+EPPWRITE       |PDB<2>         |   10.557|
+EPPWRITE       |PDB<3>         |    9.552|
+EPPWRITE       |PDB<4>         |    9.680|
+EPPWRITE       |PDB<5>         |    9.552|
+EPPWRITE       |PDB<6>         |    9.211|
+EPPWRITE       |PDB<7>         |    9.686|
 ---------------+---------------+---------+
 
 
-Analysis completed Fri Oct 06 14:48:37 2017 
+Analysis completed Thu Oct 12 03:30:18 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:

@@ -49,7 +49,7 @@ architecture Behavioral of block_ram is
 
 --define ram as an array
 type ram_type is array(0 to 512) of std_logic_vector(15 downto 0);
-signal ram: ram_type := (others => (others => '0'));
+signal ram: ram_type := (others => "0000110000001100");
 
 
 begin

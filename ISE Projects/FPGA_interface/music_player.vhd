@@ -29,6 +29,12 @@ use IEEE.NUMERIC_STD.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+
+
+use work.constants.all;
+
+
+
 entity music_player is
 port( clk: in std_logic;
 	   sw: in std_logic_vector(7 downto 0);
@@ -40,7 +46,7 @@ port( clk: in std_logic;
 		EppWAIT: out std_logic;
 		LED: out std_logic_vector(7 downto 0);
 		AN: out std_logic_vector(3 downto 0);
-		--s: out std_logic;
+		s: out std_logic;
 		hex: out std_logic_vector(6 downto 0)
 );
 end music_player;
@@ -105,15 +111,46 @@ signal bram_data_out: std_logic_vector(15 downto 0);
 
 
 --signals
-signal rst,download_btn: std_logic;
+signal rst,download_btn,play_btn: std_logic;
 
 --state machine
-type state_type is (rest_state, download_state,debug_download_state);
+type state_type is (rest_state, download_state,debug_download_state,play_music_state);
 signal current_state: state_type;
 signal download_finished: std_logic;
 signal download_counter : integer;
 
 
+
+
+-----------------------------------------music player
+
+component music_player_v7 is
+port(
+	clk : in std_logic;
+	rst : in std_logic;
+	enable: in std_logic;
+	--sw : in std_logic_vector(7 downto 0);
+	is_slurred: in std_logic;
+	is_staccato: in std_logic;
+	is_square: in std_logic;
+	twelfth_cc: in integer;
+	music_pitch: in unsigned(7 downto 0);
+	music_length: in unsigned(7 downto 0);
+	music_counter: out natural; 
+	s : out std_logic
+);
+end component;
+
+signal enable_music_player: std_logic;
+signal is_slurred: std_logic;
+signal is_staccato:std_logic;
+signal is_square:std_logic;
+signal twelfth_cc: integer;
+signal music_pitch: unsigned(7 downto 0);
+signal music_length: unsigned(7 downto 0);
+signal music_counter:integer;
+
+-------------------------------------------------------
 
 
 
@@ -131,6 +168,7 @@ begin
 ----btn
 rst <= btn(0);
 download_btn <= btn(1);
+play_btn <= btn(2);
 
 
 
@@ -139,14 +177,14 @@ download_from_epp: epp_interface port map(clk,rst,PDB,EppASTB, EppDSTB,EppWRITE,
 ram_data <= epp_download_data(15 downto 0);
 ram_address <= epp_download_data(31 downto 16);
 ram_address_int <= to_integer(unsigned(epp_download_data(31 downto 16)));
-download_finished <= '1' when download_counter >= 4 else '0';
+download_finished <= '1' when download_counter >= 200 else '0';
 
 led <= display_state;
 
 update_download_counter: process(clk)
 begin
 	if rising_edge(clk) then
-		if rst = '1' or download_counter = 4 then
+		if rst = '1' or download_counter = 200 then
 			download_counter <= 0;
 		else
 			if epp_data_valid = '1' then
@@ -168,7 +206,7 @@ ram_management: block_ram port map(clk,bram_address,b_we,bram_data_in,bram_data_
 display_ram: seven_seg_display port map(clk,bram_data_out(3 downto 0),bram_data_out(7 downto 4),bram_data_out(11 downto 8),bram_data_out(15 downto 12),an,hex);
 
 
-
+play_music: music_player_v7 port map(clk,rst,enable_music_player,is_slurred,is_staccato,is_square,twelfth_cc,music_pitch,music_length,music_counter,s);
 
 FSM: process(clk)
 begin
@@ -184,6 +222,10 @@ begin
 					display_state<= "00000000";
 					if download_btn = '1' then
 						current_state <= download_state;
+					elsif play_btn = '1' then
+						current_state <= play_music_state;
+					else
+						current_state <= current_state;
 					end if;
 					
 					
@@ -197,7 +239,8 @@ begin
 					bram_address <= ram_address_int;
 					
 					if(download_finished = '1') then
-						current_state <= debug_download_state;
+						b_we <= '0';
+						current_state <= rest_state;
 					end if;
 				
 				
@@ -205,6 +248,18 @@ begin
 					display_state <= "00000010";
 					b_we <= '0';
 					bram_address <= to_integer(unsigned(sw));
+					
+				when play_music_state=>
+					display_state <= "00000100";
+					is_slurred <= '0';
+					is_staccato <= '0';
+					is_square <= '0';
+					twelfth_cc <= 800000;
+					enable_music_player <= '1';
+					bram_address <= music_counter + 1; --ignore the first word now
+					music_length <= unsigned(bram_data_out(15 downto 8));
+					music_pitch <= unsigned(bram_data_out(7 downto 0));
+					
 					
 					
 		
