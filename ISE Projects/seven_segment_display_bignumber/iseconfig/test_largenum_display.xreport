@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-09-13T19:07:34</DateModified>
+  <DateModified>2017-09-16T14:55:48</DateModified>
   <ModuleName>test_largenum_display</ModuleName>
   <SummaryTimeStamp>2017-09-05T15:57:24</SummaryTimeStamp>
-  <SavedFilePath>Z:/Desktop/seven_segment_display_bignumber/iseconfig/test_largenum_display.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>Z:/Desktop/seven_segment_display_bignumber\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/Isabel/Documents/Music-Player/ISE Projects/seven_segment_display_bignumber/iseconfig/test_largenum_display.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Isabel/Documents/Music-Player/ISE Projects/seven_segment_display_bignumber\</ImplementationReportsDirectory>
   <DateInitialized>2017-09-05T15:55:01</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

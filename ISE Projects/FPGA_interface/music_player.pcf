@@ -1,8 +1,9 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri Oct 06 14:48:24 2017
+// Written by: Map P.20131013 on Thu Oct 12 03:30:04 2017
 //! **************************************************************************
 
 SCHEMATIC START;
+COMP "s" LOCATE = SITE "D5" LEVEL 1;
 COMP "clk" LOCATE = SITE "A8" LEVEL 1;
 COMP "EppDSTB" LOCATE = SITE "P7" LEVEL 1;
 COMP "EppWAIT" LOCATE = SITE "N5" LEVEL 1;

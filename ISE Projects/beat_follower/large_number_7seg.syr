@@ -1,0 +1,520 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Reading design: large_number_7seg.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "large_number_7seg.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "large_number_7seg"
+Output Format                      : NGC
+Target Device                      : xc3s400-4-ft256
+
+---- Source Options
+Top Module Name                    : large_number_7seg
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/bin_to_dec.vhd" in Library work.
+Entity <bin_to_dec> compiled.
+Entity <bin_to_dec> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/seven_seg_display.vhd" in Library work.
+Entity <seven_seg_display> compiled.
+Entity <seven_seg_display> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/large_number_7seg.vhd" in Library work.
+Entity <large_number_7seg> compiled.
+Entity <large_number_7seg> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <large_number_7seg> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <seven_seg_display> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <bin_to_dec> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <large_number_7seg> in library <work> (Architecture <Behavioral>).
+Entity <large_number_7seg> analyzed. Unit <large_number_7seg> generated.
+
+Analyzing Entity <seven_seg_display> in library <work> (Architecture <Behavioral>).
+Entity <seven_seg_display> analyzed. Unit <seven_seg_display> generated.
+
+Analyzing Entity <bin_to_dec> in library <work> (Architecture <Behavioral>).
+Entity <bin_to_dec> analyzed. Unit <bin_to_dec> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <bin_to_dec>.
+    Related source file is "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/bin_to_dec.vhd".
+    Found 16x7-bit ROM for signal <inv_outseg>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <bin_to_dec> synthesized.
+
+
+Synthesizing Unit <seven_seg_display>.
+    Related source file is "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/seven_seg_display.vhd".
+    Found 4-bit 4-to-1 multiplexer for signal <binary>.
+    Found 32-bit up counter for signal <counter>.
+    Found 2-bit up counter for signal <digit>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   4 Multiplexer(s).
+Unit <seven_seg_display> synthesized.
+
+
+Synthesizing Unit <large_number_7seg>.
+    Related source file is "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/large_number_7seg.vhd".
+    Found 18-bit comparator greatequal for signal <decimal_part$cmp_ge0000> created at line 150.
+    Found 18-bit comparator greatequal for signal <decimal_part$cmp_ge0001> created at line 152.
+    Found 18-bit comparator greatequal for signal <decimal_part$cmp_ge0002> created at line 155.
+    Found 18-bit comparator greatequal for signal <decimal_part$cmp_ge0003> created at line 158.
+    Found 18-bit comparator greatequal for signal <decimal_part$cmp_ge0004> created at line 161.
+    Found 18-bit comparator greatequal for signal <decimal_part$cmp_ge0005> created at line 164.
+    Found 18-bit comparator greatequal for signal <decimal_part$cmp_ge0006> created at line 167.
+    Found 18-bit comparator greatequal for signal <decimal_part$cmp_ge0007> created at line 170.
+    Found 18-bit comparator greatequal for signal <decimal_part$cmp_ge0008> created at line 173.
+    Found 19-bit subtractor for signal <decimal_part$share0000> created at line 150.
+    Found 17-bit subtractor for signal <hundred_part$share0000> created at line 73.
+    Found 17-bit comparator greatequal for signal <ten_part$cmp_ge0000> created at line 110.
+    Found 17-bit comparator greatequal for signal <ten_part$cmp_ge0001> created at line 112.
+    Found 17-bit comparator greatequal for signal <ten_part$cmp_ge0002> created at line 115.
+    Found 17-bit comparator greatequal for signal <ten_part$cmp_ge0003> created at line 118.
+    Found 17-bit comparator greatequal for signal <ten_part$cmp_ge0004> created at line 121.
+    Found 17-bit comparator greatequal for signal <ten_part$cmp_ge0005> created at line 124.
+    Found 17-bit comparator greatequal for signal <ten_part$cmp_ge0006> created at line 127.
+    Found 17-bit comparator greatequal for signal <ten_part$cmp_ge0007> created at line 130.
+    Found 17-bit comparator greatequal for signal <ten_part$cmp_ge0008> created at line 133.
+    Found 18-bit subtractor for signal <ten_part$share0000> created at line 110.
+    Found 16-bit comparator greatequal for signal <thousand_bit$cmp_ge0000> created at line 73.
+    Found 16-bit comparator greatequal for signal <thousand_bit$cmp_ge0001> created at line 75.
+    Found 16-bit comparator greatequal for signal <thousand_bit$cmp_ge0002> created at line 78.
+    Found 16-bit comparator greatequal for signal <thousand_bit$cmp_ge0003> created at line 81.
+    Found 16-bit comparator greatequal for signal <thousand_bit$cmp_ge0004> created at line 84.
+    Found 16-bit comparator greatequal for signal <thousand_bit$cmp_ge0005> created at line 87.
+    Found 16-bit comparator greatequal for signal <thousand_bit$cmp_ge0006> created at line 90.
+    Found 16-bit comparator greatequal for signal <thousand_bit$cmp_ge0007> created at line 93.
+    Found 16-bit comparator greatequal for signal <thousand_bit$cmp_ge0008> created at line 96.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  27 Comparator(s).
+Unit <large_number_7seg> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 3
+ 17-bit subtractor                                     : 1
+ 18-bit subtractor                                     : 1
+ 19-bit subtractor                                     : 1
+# Counters                                             : 2
+ 2-bit up counter                                      : 1
+ 32-bit up counter                                     : 1
+# Comparators                                          : 27
+ 16-bit comparator greatequal                          : 9
+ 17-bit comparator greatequal                          : 9
+ 18-bit comparator greatequal                          : 9
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 3
+ 17-bit subtractor                                     : 1
+ 18-bit subtractor                                     : 1
+ 19-bit subtractor                                     : 1
+# Counters                                             : 2
+ 2-bit up counter                                      : 1
+ 32-bit up counter                                     : 1
+# Comparators                                          : 27
+ 16-bit comparator greatequal                          : 9
+ 17-bit comparator greatequal                          : 9
+ 18-bit comparator greatequal                          : 9
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <large_number_7seg> ...
+
+Optimizing unit <seven_seg_display> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block large_number_7seg, actual ratio is 6.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 34
+ Flip-Flops                                            : 34
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : large_number_7seg.ngr
+Top Level Output File Name         : large_number_7seg
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 28
+
+Cell Usage :
+# BELS                             : 755
+#      GND                         : 1
+#      INV                         : 16
+#      LUT1                        : 53
+#      LUT2                        : 50
+#      LUT3                        : 83
+#      LUT4                        : 190
+#      MUXCY                       : 274
+#      MUXF5                       : 7
+#      VCC                         : 1
+#      XORCY                       : 80
+# FlipFlops/Latches                : 34
+#      FDE                         : 2
+#      FDR                         : 32
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 27
+#      IBUF                        : 16
+#      OBUF                        : 11
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400ft256-4 
+
+ Number of Slices:                      211  out of   3584     5%  
+ Number of Slice Flip Flops:             34  out of   7168     0%  
+ Number of 4 input LUTs:                392  out of   7168     5%  
+ Number of IOs:                          28
+ Number of bonded IOBs:                  28  out of    173    16%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 34    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.543ns (Maximum Frequency: 152.845MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 11.558ns
+   Maximum combinational path delay: 52.200ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.543ns (frequency: 152.845MHz)
+  Total number of paths / destination ports: 1619 / 68
+-------------------------------------------------------------------------
+Delay:               6.543ns (Levels of Logic = 9)
+  Source:            display/counter_8 (FF)
+  Destination:       display/counter_31 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: display/counter_8 to display/counter_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.720   1.216  display/counter_8 (display/counter_8)
+     LUT4:I0->O            1   0.551   0.000  display/digit_cmp_eq0000_wg_lut<0> (display/digit_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  display/digit_cmp_eq0000_wg_cy<0> (display/digit_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  display/digit_cmp_eq0000_wg_cy<1> (display/digit_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  display/digit_cmp_eq0000_wg_cy<2> (display/digit_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  display/digit_cmp_eq0000_wg_cy<3> (display/digit_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  display/digit_cmp_eq0000_wg_cy<4> (display/digit_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  display/digit_cmp_eq0000_wg_cy<5> (display/digit_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  display/digit_cmp_eq0000_wg_cy<6> (display/digit_cmp_eq0000_wg_cy<6>)
+     MUXCY:CI->O          34   0.281   1.865  display/digit_cmp_eq0000_wg_cy<7> (display/digit_cmp_eq0000)
+     FDR:R                     1.026          display/counter_0
+    ----------------------------------------
+    Total                      6.543ns (3.462ns logic, 3.081ns route)
+                                       (52.9% logic, 47.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 92 / 11
+-------------------------------------------------------------------------
+Offset:              11.558ns (Levels of Logic = 4)
+  Source:            display/digit_0 (FF)
+  Destination:       hex<6> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: display/digit_0 to hex<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             14   0.720   1.526  display/digit_0 (display/digit_0)
+     LUT3:I0->O            1   0.551   0.000  display/Mmux_binary_3 (display/Mmux_binary_3)
+     MUXF5:I1->O           7   0.360   1.405  display/Mmux_binary_2_f5 (display/binary<0>)
+     LUT4:I0->O            1   0.551   0.801  display/binary_to_decimal/out_seg<1>1 (hex_1_OBUF)
+     OBUF:I->O                 5.644          hex_1_OBUF (hex<1>)
+    ----------------------------------------
+    Total                     11.558ns (7.826ns logic, 3.732ns route)
+                                       (67.7% logic, 32.3% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 206601947594 / 7
+-------------------------------------------------------------------------
+Delay:               52.200ns (Levels of Logic = 64)
+  Source:            number<6> (PAD)
+  Destination:       hex<1> (PAD)
+
+  Data Path: number<6> to hex<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   0.821   1.457  number_6_IBUF (number_6_IBUF)
+     LUT2:I0->O            1   0.551   0.996  thousand_bit_cmp_ge000110 (thousand_bit_cmp_ge000110)
+     LUT4:I1->O            5   0.551   0.989  thousand_bit_cmp_ge0001116 (thousand_bit_cmp_ge00012)
+     LUT3:I2->O           18   0.551   1.756  thousand_bit_cmp_ge000121 (thousand_bit_cmp_ge0001)
+     LUT4:I0->O            2   0.551   1.216  thousand_bit<0>11 (N22)
+     LUT4:I0->O            1   0.551   0.996  hundred_part_mux0008<13>1 (hundred_part_mux0008<13>)
+     LUT2:I1->O            1   0.551   0.000  Msub_hundred_part_share0000_lut<3> (Msub_hundred_part_share0000_lut<3>)
+     MUXCY:S->O            1   0.500   0.000  Msub_hundred_part_share0000_cy<3> (Msub_hundred_part_share0000_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_hundred_part_share0000_cy<4> (Msub_hundred_part_share0000_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_hundred_part_share0000_cy<5> (Msub_hundred_part_share0000_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_hundred_part_share0000_cy<6> (Msub_hundred_part_share0000_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_hundred_part_share0000_cy<7> (Msub_hundred_part_share0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_hundred_part_share0000_cy<8> (Msub_hundred_part_share0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_hundred_part_share0000_cy<9> (Msub_hundred_part_share0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_hundred_part_share0000_cy<10> (Msub_hundred_part_share0000_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_hundred_part_share0000_cy<11> (Msub_hundred_part_share0000_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_hundred_part_share0000_cy<12> (Msub_hundred_part_share0000_cy<12>)
+     XORCY:CI->O           2   0.904   1.216  Msub_hundred_part_share0000_xor<13> (hundred_part_share0000<13>)
+     LUT4:I0->O           11   0.551   1.339  hundred_part<13>1 (hundred_part<13>)
+     LUT4:I1->O            1   0.551   0.000  Mcompar_ten_part_cmp_ge0000_lut<5>4 (Mcompar_ten_part_cmp_ge0000_lut<5>4)
+     MUXCY:S->O            1   0.500   0.000  Mcompar_ten_part_cmp_ge0000_cy<5>_3 (Mcompar_ten_part_cmp_ge0000_cy<5>2)
+     MUXCY:CI->O           6   0.303   1.342  Mcompar_ten_part_cmp_ge0000_cy<6>_1 (ten_part_cmp_ge0004)
+     LUT2:I0->O            3   0.551   0.933  ten_part<10>121 (N33)
+     LUT4:I3->O            1   0.551   0.869  ten_part_mux0008<10>_SW0 (N60)
+     LUT4:I2->O            1   0.551   0.996  ten_part_mux0008<10> (ten_part_mux0008<10>)
+     LUT2:I1->O            1   0.551   0.000  Msub_ten_part_share0000_lut<7> (Msub_ten_part_share0000_lut<7>)
+     MUXCY:S->O            1   0.500   0.000  Msub_ten_part_share0000_cy<7> (Msub_ten_part_share0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_ten_part_share0000_cy<8> (Msub_ten_part_share0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_ten_part_share0000_cy<9> (Msub_ten_part_share0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_ten_part_share0000_cy<10> (Msub_ten_part_share0000_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_ten_part_share0000_cy<11> (Msub_ten_part_share0000_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_ten_part_share0000_cy<12> (Msub_ten_part_share0000_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_ten_part_share0000_cy<13> (Msub_ten_part_share0000_cy<13>)
+     XORCY:CI->O           2   0.904   1.072  Msub_ten_part_share0000_xor<14> (ten_part_share0000<14>)
+     LUT4:I1->O           10   0.551   1.473  ten_part<14>1 (ten_part<14>)
+     LUT3:I0->O            1   0.551   0.000  Mcompar_decimal_part_cmp_ge0000_lut<5>4 (Mcompar_decimal_part_cmp_ge0000_lut<5>4)
+     MUXCY:S->O            1   0.500   0.000  Mcompar_decimal_part_cmp_ge0000_cy<5>_3 (Mcompar_decimal_part_cmp_ge0000_cy<5>4)
+     MUXCY:CI->O           8   0.303   1.422  Mcompar_decimal_part_cmp_ge0000_cy<6>_3 (decimal_part_cmp_ge0005)
+     LUT4:I0->O            1   0.551   1.140  decimal_part_mux0008<15>11 (decimal_part_mux0008<15>11)
+     LUT4:I0->O            1   0.551   0.869  Msub_decimal_part_share0000_lut<3>_SW0 (N72)
+     LUT4:I2->O            1   0.551   0.000  Msub_decimal_part_share0000_lut<3> (Msub_decimal_part_share0000_lut<3>)
+     MUXCY:S->O            1   0.500   0.000  Msub_decimal_part_share0000_cy<3> (Msub_decimal_part_share0000_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_decimal_part_share0000_cy<4> (Msub_decimal_part_share0000_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_decimal_part_share0000_cy<5> (Msub_decimal_part_share0000_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_decimal_part_share0000_cy<6> (Msub_decimal_part_share0000_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_decimal_part_share0000_cy<7> (Msub_decimal_part_share0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_decimal_part_share0000_cy<8> (Msub_decimal_part_share0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_decimal_part_share0000_cy<9> (Msub_decimal_part_share0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_decimal_part_share0000_cy<10> (Msub_decimal_part_share0000_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_decimal_part_share0000_cy<11> (Msub_decimal_part_share0000_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_decimal_part_share0000_cy<12> (Msub_decimal_part_share0000_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_decimal_part_share0000_cy<13> (Msub_decimal_part_share0000_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_decimal_part_share0000_cy<14> (Msub_decimal_part_share0000_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_decimal_part_share0000_cy<15> (Msub_decimal_part_share0000_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  Msub_decimal_part_share0000_cy<16> (Msub_decimal_part_share0000_cy<16>)
+     MUXCY:CI->O           0   0.064   0.000  Msub_decimal_part_share0000_cy<17> (Msub_decimal_part_share0000_cy<17>)
+     XORCY:CI->O           1   0.904   0.996  Msub_decimal_part_share0000_xor<18> (decimal_part_share0000<18>)
+     LUT3:I1->O            1   0.551   0.000  digit_bit<0>1_wg_lut<14> (digit_bit<0>1_wg_lut<14>)
+     MUXCY:S->O            4   0.739   1.112  digit_bit<0>1_wg_cy<14> (digit_bit<0>1_wg_cy<14>)
+     LUT4:I1->O            1   0.551   0.996  digit_bit<0> (digit_bit<0>)
+     LUT3:I1->O            1   0.551   0.000  display/Mmux_binary_4 (display/Mmux_binary_4)
+     MUXF5:I0->O           7   0.360   1.405  display/Mmux_binary_2_f5 (display/binary<0>)
+     LUT4:I0->O            1   0.551   0.801  display/binary_to_decimal/out_seg<1>1 (hex_1_OBUF)
+     OBUF:I->O                 5.644          hex_1_OBUF (hex<1>)
+    ----------------------------------------
+    Total                     52.200ns (26.809ns logic, 25.391ns route)
+                                       (51.4% logic, 48.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.58 secs
+ 
+--> 
+
+Total memory usage is 231220 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

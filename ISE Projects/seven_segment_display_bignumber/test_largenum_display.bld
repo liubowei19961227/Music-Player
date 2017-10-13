@@ -2,15 +2,14 @@ Release 14.7 ngdbuild P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe -intstyle
-ise -dd _ngo -nt timestamp -uc large_7seg.ucf -p xc3s400-ft256-4
-test_largenum_display.ngc test_largenum_display.ngd
+ise -dd _ngo -nt timestamp -i -p xc3s400-ft256-4 test_largenum_display.ngc
+test_largenum_display.ngd
 
-Reading NGO file
-"Z:/Desktop/seven_segment_display_bignumber/test_largenum_display.ngc" ...
+Reading NGO file "C:/Users/Isabel/Documents/Music-Player/ISE
+Projects/seven_segment_display_bignumber/test_largenum_display.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
-Annotating constraints to design from ucf file "large_7seg.ucf" ...
 Resolving constraint associations...
 Checking Constraint Associations...
 Done...
@@ -28,10 +27,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 118208 kilobytes
+Total memory usage is 139076 kilobytes
 
 Writing NGD file "test_largenum_display.ngd" ...
-Total REAL time to NGDBUILD completion:  2 sec
-Total CPU time to NGDBUILD completion:   2 sec
+Total REAL time to NGDBUILD completion:  4 sec
+Total CPU time to NGDBUILD completion:   4 sec
 
 Writing NGDBUILD log file "test_largenum_display.bld"...

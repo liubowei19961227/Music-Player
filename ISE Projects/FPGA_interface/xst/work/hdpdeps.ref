@@ -1,45 +1,75 @@
-V3 23
+V3 37
 FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/bin_to_dec.vhd" 2017/08/16.17:24:35 P.20131013
-EN work/bin_to_dec 1507261690 \
+EN work/bin_to_dec 1507739395 \
       FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/bin_to_dec.vhd" \
       PB ieee/std_logic_1164 1381692176
-AR work/bin_to_dec/Behavioral 1507261691 \
+AR work/bin_to_dec/Behavioral 1507739396 \
       FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/bin_to_dec.vhd" \
-      EN work/bin_to_dec 1507261690
-FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/block_ram.vhd" 2017/10/06.14:34:05 P.20131013
-EN work/block_ram 1507261696 \
+      EN work/bin_to_dec 1507739395
+FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/block_ram.vhd" 2017/10/11.23:37:39 P.20131013
+EN work/block_ram 1507739401 \
       FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/block_ram.vhd" \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/block_ram/Behavioral 1507261697 \
+AR work/block_ram/Behavioral 1507739402 \
       FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/block_ram.vhd" \
-      EN work/block_ram 1507261696
+      EN work/block_ram 1507739401
+FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/constants.vhd" 2017/10/12.00:45:32 P.20131013
+PH work/constants 1507739390 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/constants.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
 FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/dpimref.vhd" 2017/08/20.22:30:54 P.20131013
-EN work/dpimref 1507261692 \
+EN work/dpimref 1507739397 \
       FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/dpimref.vhd" \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/dpimref/Behavioral 1507261693 \
+AR work/dpimref/Behavioral 1507739398 \
       FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/dpimref.vhd" \
-      EN work/dpimref 1507261692
-FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/EPP_interface.vhd" 2017/10/06.14:48:14 P.20131013
-EN work/EPP_interface 1507261694 \
+      EN work/dpimref 1507739397
+FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/EPP_interface.vhd" 2017/10/11.23:20:43 P.20131013
+EN work/EPP_interface 1507739399 \
       FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/EPP_interface.vhd" \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/EPP_interface/Behavioral 1507261695 \
+AR work/EPP_interface/Behavioral 1507739400 \
       FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/EPP_interface.vhd" \
-      EN work/EPP_interface 1507261694 CP dpimref
-FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/music_player.vhd" 2017/10/06.14:16:39 P.20131013
-EN work/music_player 1507261700 \
+      EN work/EPP_interface 1507739399 CP dpimref
+FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/main.vhd" 2017/10/12.02:46:40 P.20131013
+EN work/music_player_v7 1507739405 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/main.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PH work/constants 1507739390
+AR work/music_player_v7/behavioral 1507739406 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/main.vhd" \
+      EN work/music_player_v7 1507739405 CP work/note_length_counter \
+      CP work/note_player
+FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/music_player.vhd" 2017/10/12.03:29:30 P.20131013
+EN work/music_player 1507739407 \
       FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/music_player.vhd" \
-      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/music_player/Behavioral 1507261701 \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PH work/constants 1507739390
+AR work/music_player/Behavioral 1507739408 \
       FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/music_player.vhd" \
-      EN work/music_player 1507261700 CP epp_interface CP block_ram \
-      CP seven_seg_display
+      EN work/music_player 1507739407 CP epp_interface CP block_ram \
+      CP seven_seg_display CP music_player_v7
+FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/note_length_counter.vhd" 2017/10/11.16:55:12 P.20131013
+EN work/note_length_counter 1507739391 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/note_length_counter.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PH work/constants 1507739390
+AR work/note_length_counter/Behavioral 1507739392 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/note_length_counter.vhd" \
+      EN work/note_length_counter 1507739391
+FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/note_player.vhd" 2017/10/11.16:55:12 P.20131013
+EN work/note_player 1507739393 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/note_player.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PH work/constants 1507739390
+AR work/note_player/Behavioral 1507739394 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/note_player.vhd" \
+      EN work/note_player 1507739393
 FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/seven_seg_display.vhd" 2017/08/16.19:55:16 P.20131013
-EN work/seven_seg_display 1507261698 \
+EN work/seven_seg_display 1507739403 \
       FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/seven_seg_display.vhd" \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/seven_seg_display/Behavioral 1507261699 \
+AR work/seven_seg_display/Behavioral 1507739404 \
       FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/seven_seg_display.vhd" \
-      EN work/seven_seg_display 1507261698 CP bin_to_dec
+      EN work/seven_seg_display 1507739403 CP bin_to_dec

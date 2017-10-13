@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.xst" -ofn "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/ultrasonic_sensor.syr" 

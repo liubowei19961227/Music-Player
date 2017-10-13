@@ -1,0 +1,12 @@
+AR bpm_counter behavioral "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/bpm_counter.vhd" sub00/vhpl11 1507712355
+EN large_number_7seg NULL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/large_number_7seg.vhd" sub00/vhpl06 1507712352
+AR bin_to_dec behavioral "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/bin_to_dec.vhd" sub00/vhpl03 1507712349
+EN multiplier NULL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/multiplier.vhd" sub00/vhpl08 1507352661
+EN seven_seg_display NULL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/seven_seg_display.vhd" sub00/vhpl04 1507712350
+EN beat_follower NULL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/beat_follower.vhd" sub00/vhpl00 1507712356
+AR multiplier multiplier_a "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/multiplier.vhd" sub00/vhpl09 1507352662
+AR beat_follower behavioral "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/beat_follower.vhd" sub00/vhpl01 1507712357
+AR large_number_7seg behavioral "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/large_number_7seg.vhd" sub00/vhpl07 1507712353
+EN bpm_counter NULL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/bpm_counter.vhd" sub00/vhpl10 1507712354
+AR seven_seg_display behavioral "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/seven_seg_display.vhd" sub00/vhpl05 1507712351
+EN bin_to_dec NULL "C:/Users/Isabel/Documents/Music-Player/ISE Projects/beat_follower/bin_to_dec.vhd" sub00/vhpl02 1507712348
