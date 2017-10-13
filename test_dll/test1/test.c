@@ -7,7 +7,7 @@
 #define cchDevNameMax 28
 #define REPS 5
 #define size 500
-
+#define BUFF_SIZE 1024
 
 int data_amount = 500;
 
@@ -36,27 +36,27 @@ void reset_music_array(void) {
 
 
 int read_file(void) {
-	FILE *myfile = fopen("C:\\Users\\liubowei\\Desktop\\test_input.txt","r");
+	FILE *myfile = fopen("test_input.txt","r");
 	if (myfile == NULL) {
 		printf("file is NULL\n");
 		return -1;
 	}
-	char line[9];
+	char line[BUFF_SIZE];
 	unsigned int v1 = 0x00;
 	unsigned int v2 = 0x00;
-	unsigned int temp_v1;
 	long temp_pointer;
 	for (int i = 0; i < 2; i++) {
 		temp_pointer = ftell(myfile);
-		if (fgets(line, 9, myfile) != NULL) {
-			if (!strcmp(line, "normal\n"))
+		if (fgets(line, BUFF_SIZE, myfile) != NULL) {
+			if (line[0] == '%') {
+				i--;
+			} else if (line[0] == 'n' && line[1] == 'o' && line[2] == 'r' && line[3] == 'm' && line[4] == 'a' && line[5] == 'l') {
 				v2 = 0x00;
-			else if (!strcmp(line, "staccato\n"))
+			} else if (line[0] == 's' && line[1] == 't' && line[2] == 'a' && line[3] == 'c' && line[4] == 'c' && line[5] == 'a' && line[6] == 't' && line[7] == 'o') {
 				v2 = 0x01;
-			else if (!strcmp(line, "slurred\n"))
+			} else if (line[0] == 's' && line[1] == 'l' && line[2] == 'u' && line[3] == 'r' && line[4] == 'r' && line[5] == 'e' && line[6] == 'd') {
 				v2 = 0x02;
-			else if (sscanf(line, "bpm %d", &v1) == 1)
-			{
+			} else if (sscanf(line, "bpm %d", &v1)) {
 			}
 			else {
 				fseek(myfile, temp_pointer, 0);
@@ -73,14 +73,13 @@ int read_file(void) {
 	
 	char note_pitch[5];
 	char note_length[3];
-	while (fgets(line, 9, myfile) != NULL) {
-		memset(note_pitch, 0, 4);
-		memset(note_length, 0, 3);
-		sscanf(line, "%s %s", note_pitch, note_length);
-		switch (note_pitch[0]) {
-			case '%': {
-				break;
-			} case 'r': {
+	while (fgets(line, BUFF_SIZE, myfile) != NULL) {
+		if (line[0] != '%') {
+			memset(note_pitch, 0, 4);
+			memset(note_length, 0, 3);
+			sscanf(line, "%s %s", note_pitch, note_length);
+			switch (note_pitch[0]) {
+			case 'r': {
 				v1 = 0x0C;
 			} case 'c': {
 				if (note_pitch[2] == '#')
@@ -132,53 +131,53 @@ int read_file(void) {
 				break;
 			} default: {
 				printf("Invalid music file");
-				abort();
+				return 1;
 				break;
 			}
 
-		}
-		switch (note_pitch[1]) {
+			}
+			switch (note_pitch[1]) {
 			case '3': v1 |= 0x00; break;
 			case '4': v1 |= 0x10; break;
 			case '5': v1 |= 0x20; break;
 			case '6': v1 |= 0x30; break;
-			default: printf("Invalid music file"); abort(); break;
-		}
+			default: printf("Invalid music file"); return 1; break;
+			}
 
-		if (note_length[0] == 's' && note_length[1] == 'q')
-			v2 = 0x03;
-		else if (note_length[0] == 't')
-			v2 = 0x04;
-		else if (note_length[0] == 'q')
-			v2 = 0x06;
-		else if (note_length[0] == 'd' && note_length[1] == 'q')
-			v2 = 0x09;
-		else if (note_length[0] == 'c')
-			v2 = 0x0C;
-		else if (note_length[0] == 'd' && note_length[1] == 'c')
-			v2 = 0x12;
-		else if (note_length[0] == 'm')
-			v2 = 0x18;
-		else if (note_length[0] == 'd' && note_length[1] == 'm')
-			v2 = 0x24;
-		else if (note_length[0] == 's' && note_length[1] == 'b')
-			v2 = 0x30;
-		else if (note_length[0] == 'b')
-			v2 = 0x60;
-		else {
-			printf("Invalid music file");
-			abort();
+			if (note_length[0] == 's' && note_length[1] == 'q')
+				v2 = 0x03;
+			else if (note_length[0] == 't')
+				v2 = 0x04;
+			else if (note_length[0] == 'q')
+				v2 = 0x06;
+			else if (note_length[0] == 'd' && note_length[1] == 'q')
+				v2 = 0x09;
+			else if (note_length[0] == 'c')
+				v2 = 0x0C;
+			else if (note_length[0] == 'd' && note_length[1] == 'c')
+				v2 = 0x12;
+			else if (note_length[0] == 'm')
+				v2 = 0x18;
+			else if (note_length[0] == 'd' && note_length[1] == 'm')
+				v2 = 0x24;
+			else if (note_length[0] == 's' && note_length[1] == 'b')
+				v2 = 0x30;
+			else if (note_length[0] == 'b')
+				v2 = 0x60;
+			else {
+				printf("Invalid music file");
+				return 1;
+			}
+			music_array[counter] = v1;
+			music_array[counter + 1] = v2;
+			counter = counter + 2;
+			printf("%2x %2x\n", v1, v2);
 		}
-		music_array[counter] = v1;
-		music_array[counter + 1] = v2;
-		counter = counter + 2;
-		printf("%2x %2x\n", v1, v2);
 	}
-
 	fclose(myfile);
 
 	for(int i = 0; i < size; i++){
-		printf("music_array[%i] is %u\n",i,music_array[i]);
+		//printf("music_array[%i] is %u\n",i,music_array[i]);
 	}
 	return 1;
 }
