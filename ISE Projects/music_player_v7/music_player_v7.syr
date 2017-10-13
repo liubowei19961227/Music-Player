@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> WARNING:Xst:1583 - You are using an internal switch '-use_new_parser'.
 WARNING:Xst:3152 - You have chosen to run a version of XST which is not the default solution
@@ -156,9 +156,9 @@ WARNING:Xst:2999 - Signal 'music_length_array', unconnected in block 'music_play
     Found 8-bit register for signal <music_pitch_array_value>.
     Found 8-bit register for signal <music_length_array_value>.
     Found 6-bit register for signal <main_loop.music_index>.
-    Found 3-bit adder for signal <n0044> created at line 56.
-    Found 6-bit adder for signal <main_loop.music_index[5]_GND_5_o_add_4_OUT> created at line 71.
-    Found 20x3-bit multiplier for signal <n0028> created at line 56.
+    Found 3-bit adder for signal <n0044> created at line 55.
+    Found 6-bit adder for signal <main_loop.music_index[5]_GND_5_o_add_4_OUT> created at line 70.
+    Found 20x3-bit multiplier for signal <n0028> created at line 55.
     Summary:
 	inferred   2 RAM(s).
 	inferred   1 Multiplier(s).
@@ -189,7 +189,6 @@ Unit <note_length_counter> synthesized.
 
 Synthesizing Unit <note_player>.
     Related source file is "C:\Users\Ryan\OneDrive - UNSW\Documents\2017 Semester 2\COMP3601 - Desgin Project A\Git Repositry\ISE Projects\music_player_v7\note_player.vhd".
-WARNING:Xst:647 - Input <is_square> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 9-bit register for signal <duty_cc>.
     Found 1-bit register for signal <pwm_pulse>.
     Found 3-bit register for signal <state>.
@@ -214,22 +213,22 @@ WARNING:Xst:647 - Input <is_square> is never used. This port will be preserved a
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 9-bit adder for signal <n0147> created at line 35.
-    Found 13-bit adder for signal <n0092> created at line 35.
-    Found 4-bit adder for signal <note[3]_GND_8_o_add_6_OUT> created at line 52.
-    Found 9-bit adder for signal <duty_cc[8]_GND_8_o_add_46_OUT> created at line 100.
-    Found 9-bit adder for signal <sample_rate_partial[8]_GND_8_o_add_54_OUT> created at line 122.
-    Found 8-bit subtractor for signal <GND_8_o_GND_8_o_sub_21_OUT<7:0>> created at line 87.
-    Found 9-bit subtractor for signal <GND_8_o_GND_8_o_sub_48_OUT<8:0>> created at line 102.
-    Found 9x4-bit multiplier for signal <n0160> created at line 35.
+    Found 9-bit adder for signal <n0147> created at line 34.
+    Found 13-bit adder for signal <n0092> created at line 34.
+    Found 4-bit adder for signal <note[3]_GND_8_o_add_6_OUT> created at line 51.
+    Found 9-bit adder for signal <duty_cc[8]_GND_8_o_add_46_OUT> created at line 99.
+    Found 9-bit adder for signal <sample_rate_partial[8]_GND_8_o_add_54_OUT> created at line 121.
+    Found 8-bit subtractor for signal <GND_8_o_GND_8_o_sub_21_OUT<7:0>> created at line 86.
+    Found 9-bit subtractor for signal <GND_8_o_GND_8_o_sub_48_OUT<8:0>> created at line 101.
+    Found 9x4-bit multiplier for signal <n0160> created at line 34.
     Found 16x11-bit Read Only RAM for signal <note[3]_X_7_o_wide_mux_5_OUT>
     Found 16x11-bit Read Only RAM for signal <note[3]_X_7_o_wide_mux_7_OUT>
     Found 4x4-bit Read Only RAM for signal <octave[1]_PWR_8_o_wide_mux_8_OUT>
     Found 2048x8-bit Read Only RAM for signal <next_sin_table_array_index[10]_X_7_o_wide_mux_51_OUT>
-    Found 9-bit 7-to-1 multiplexer for signal <n0164> created at line 50.
-    Found 9-bit comparator greater for signal <n0003> created at line 49
-    Found 11-bit comparator greater for signal <n0019> created at line 88
-    Found 9-bit comparator equal for signal <duty_cc[8]_sample_rate_partial[8]_equal_53_o> created at line 116
+    Found 9-bit 7-to-1 multiplexer for signal <n0164> created at line 49.
+    Found 9-bit comparator greater for signal <n0003> created at line 48
+    Found 11-bit comparator greater for signal <n0019> created at line 87
+    Found 9-bit comparator equal for signal <duty_cc[8]_sample_rate_partial[8]_equal_53_o> created at line 115
     Summary:
 	inferred   4 RAM(s).
 	inferred   1 Multiplier(s).
@@ -699,8 +698,8 @@ clk            |   15.001|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.30 secs
+Total REAL time to Xst completion: 26.00 secs
+Total CPU time to Xst completion: 26.36 secs
  
 WARNING:Xst:3152 - You have chosen to run a version of XST which is not the default solution
    for the specified device family. You are free to use it in order to take
@@ -712,9 +711,9 @@ WARNING:Xst:3152 - You have chosen to run a version of XST which is not the defa
    on the XST command line or in the XST process properties panel.
 --> 
 
-Total memory usage is 227800 kilobytes
+Total memory usage is 227736 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   21 (   0 filtered)
+Number of warnings :   20 (   0 filtered)
 Number of infos    :    6 (   0 filtered)
 

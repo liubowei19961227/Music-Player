@@ -11,7 +11,6 @@ entity note_player is
 		clk : in std_logic;
 		note : in natural range 0 to num_notes;
 		octave : in natural range 0 to max_octave;
-		is_square : in std_logic;
 		note_pulse : out std_logic
 	);
 end note_player;

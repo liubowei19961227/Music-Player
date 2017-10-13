@@ -46,7 +46,6 @@ begin
 		clk => clk,
 		note => note,
 		octave => octave,
-		is_square => sw(2),
 		note_pulse => note_pitch_pulse
 	);
 	

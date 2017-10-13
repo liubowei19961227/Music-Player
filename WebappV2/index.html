@@ -54,7 +54,7 @@
 
             //delete last input
             function saveFile() {
-                var text = "bmp " + document.getElementById("bmpInput").value + "\n"
+                var text = document.getElementById("articulationInput").value + "\n" + "bmp " + document.getElementById("bpmInput").value + "\n"
                 for (var x = 0; x < plaineEasieCodes.length; x++) {
                     var paeNote = plaineEasieCodes[x]
                     var i = 0
@@ -147,7 +147,13 @@
     <h1>Music Creator and Downloader</h1>
     <div id="keyboardContainer"></div><!-- this will hold the keyboard -->
     <br />
-    Default BMP: <input type="number" id="bmpInput" value="80">
+    Articulation: <select id = "articulationInput">
+        <option value="normal">Normal</option>
+        <option value="slurred">Slurred</option>
+        <option value="staccato">Staccato</option>
+    </select>
+    <br />
+    Default BPM: <input type="number" id="bpmInput" value="80">
     <br />
     <button id="backspaceButton">Undo</button>
     <button id="clearButton">Clear</button>
