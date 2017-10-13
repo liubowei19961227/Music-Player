@@ -37,7 +37,7 @@ use work.constants.all;
 
 entity music_player is
 port( clk: in std_logic;
-	   sw: in std_logic_vector(1 downto 0);
+	   sw: in std_logic_vector(2 downto 0);
 		btn: in std_logic_vector(3 downto 0);
 		PDB: inout std_logic_vector(7 downto 0);
 		EPPASTB: in std_logic;
@@ -56,6 +56,9 @@ port( clk: in std_logic;
 		WE: out std_logic;
 		ST: in std_logic;
 		VPEN: out std_logic;
+		
+		echo: in std_logic;
+		trigger: out std_logic;
 		
 		hex: out std_logic_vector(6 downto 0)
 );
@@ -122,6 +125,7 @@ signal bram_data_out: std_logic_vector(15 downto 0);
 
 --signals
 signal rst,download_btn,play_btn,delete_btn: std_logic;
+signal bpm_mode: std_logic;
 signal select_song: std_logic_vector(1 downto 0);
 
 --state machine
@@ -176,11 +180,34 @@ signal music_counter:integer;
 signal staccato_sig: std_logic;
 signal slurred_sig: std_logic;
 
-signal bpm_sig_int: integer;
+signal default_bpm: integer;
 signal base_bpm: integer := 625000;
+
+signal default_bpm_input: std_logic_vector(15 downto 0);
+
+signal lcd_bpm_display: std_logic_vector(15 downto 0);
 
 -------------------------------------------------------
 
+
+------------------------------------------ultrasonic sensor
+
+component beat_follower IS
+	PORT ( clk, echo, Resetn : IN  STD_LOGIC;
+          trigger : OUT  STD_LOGIC;
+			 twelfth_of_beat : OUT STD_LOGIC_VECTOR(29 DOWNTO 0);
+			 bpm: out integer
+	);
+END component;
+
+
+signal dynamic_bpm: std_logic_vector(29 downto 0);
+signal us_bpm_display: integer;
+
+signal us_bpm_display_sig: std_logic_vector(15 downto 0);
+
+
+---------------------------------------------------------
 
 
 
@@ -248,6 +275,7 @@ download_btn <= btn(1);
 play_btn <= btn(2);
 delete_btn <= btn(3);
 select_song <= sw(1 downto 0);
+bpm_mode <= sw(2);
 
 
 
@@ -321,6 +349,10 @@ display_ram: seven_seg_display port map(clk,bram_data_out(3 downto 0),bram_data_
 
 play_music: music_player_v7 port map(clk,rst,enable_music_player,is_slurred,is_staccato,is_square,twelfth_cc,music_pitch,music_length,music_counter,s);
 
+
+
+baton:beat_follower port map(clk,echo,rst,trigger,dynamic_bpm,us_bpm_display);
+us_bpm_display_sig <= std_logic_vector(to_unsigned(us_bpm_display,16));
 
 flash_mem: flash_mem_cntl port map(clk,rst,f_rest,f_write,f_read,f_delete,delete_address,write_data,write_address,read_address,data,addr,
 CE,RP,OE,WE,ST,VPEN,read_data,read_complete,write_complete,delete_complete);
@@ -420,7 +452,7 @@ begin
 					f_delete <= '0';
 					f_read <= '1';
 					read_address <= block0;
-					if (read_complete <= '1') then
+					if (read_complete = '1') then
 						if (read_data = "1111111111111111") then
 							f_rest <= '1';
 							f_write <= '0';
@@ -442,13 +474,15 @@ begin
 				
 				
 				when read_block1_state =>
-				
+					
+					--display_state <= "11111111";
+					
 					f_rest <= '0';
 					f_write <= '0';
 					f_delete <= '0';
 					f_read <= '1';
 					read_address <= block1;
-					if (read_complete <= '1') then
+					if (read_complete = '1') then
 						if (read_data = "1111111111111111") then
 							f_rest <= '1';
 							f_write <= '0';
@@ -457,12 +491,14 @@ begin
 							flash_base_address <= block1;
 							flash_base_address_int <= 65536;
 							current_state <= load_flash_addr_state;
+							display_state <= "11001100";
 						else
 							f_rest <= '1';
 							f_write <= '0';
 							f_read <= '0';
 							f_delete <= '0';
 							current_state <= read_block2_state;
+							display_state <= "00110011";
 						end if;
 					else
 						current_state <= read_block1_state;
@@ -475,7 +511,7 @@ begin
 					f_delete <= '0';
 					f_read <= '1';
 					read_address <= block2;
-					if (read_complete <= '1') then
+					if (read_complete = '1') then
 						if (read_data = "1111111111111111") then
 							f_rest <= '1';
 							f_write <= '0';
@@ -501,7 +537,7 @@ begin
 					f_delete <= '0';
 					f_read <= '1';
 					read_address <= block3;
-					if (read_complete <= '1') then
+					if (read_complete = '1') then
 						if (read_data = "1111111111111111") then
 							f_rest <= '1';
 							f_write <= '0';
@@ -526,6 +562,14 @@ begin
 				
 				
 				when load_flash_addr_state =>
+				
+					
+					if flash_base_address_int = 65536 then
+						display_state <= "11111111";
+					else
+						display_state <= "11111000";
+					end if;
+					
 					delete_address <= flash_base_address;
 					f_rest <= '0';
 					f_read <= '0';
@@ -646,19 +690,28 @@ begin
 					end if;
 					
 					
-					bpm_sig_int <= base_bpm + to_integer(unsigned(bram_data_out(7 downto 0)));
-					
+					default_bpm <= base_bpm + to_integer(unsigned(bram_data_out(7 downto 0)));
+					default_bpm_input <= "00000000" & bram_data_out(7 downto 0);
 					
 						
 					
 					
 				
 				when play_music_state=>
+				
+					
+					if(bpm_mode = '0') then
+						twelfth_cc <= default_bpm;
+						lcd_bpm_display <= default_bpm_input;
+					elsif(bpm_mode = '1') then
+						twelfth_cc <= to_integer(unsigned(dynamic_bpm));
+						lcd_bpm_display <= us_bpm_display_sig;
+					end if;
+					
 					display_state <= "00000100";
 					is_slurred <= slurred_sig;
 					is_staccato <= staccato_sig;
 					is_square <= '0';
-					twelfth_cc <= bpm_sig_int;
 					enable_music_player <= '1';
 					bram_address <= music_counter + 1; --ignore the first word now
 					music_length <= unsigned(bram_data_out(15 downto 8));

@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Fri Oct 13 02:29:26 2017
+Fri Oct 13 19:10:00 2017
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -179,7 +179,7 @@ Pinout by Pin Number:
 |K13       |btn<2>     |IOB      |IO_L24P_3          |INPUT    |LVCMOS25*  |3             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |K14       |btn<1>     |IOB      |IO_L24N_3          |INPUT    |LVCMOS25*  |3             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |K15       |           |DIFFS    |IO                 |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
-|K16       |           |DIFFM    |IO_L40P_3          |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
+|K16       |sw<2>      |IOB      |IO_L40P_3          |INPUT    |LVCMOS25*  |3             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |L1        |           |         |VCCAUX             |         |           |              |          |         |           |         |2.5      |          |           |                |
 |L2        |           |DIFFM    |IO_L22P_6          |UNUSED   |           |6             |          |         |           |         |         |          |           |                |
 |L3        |addr<3>    |IOB      |IO_L22N_6          |OUTPUT   |LVCMOS25*  |6             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
@@ -256,7 +256,7 @@ Pinout by Pin Number:
 |R10       |PDB<7>     |IOB      |IO_L30P_4/D3       |BIDIR    |LVCMOS25*  |4             |12        |SLOW     |NONE**     |NONE     |         |LOCATED   |NO         |NONE            |
 |R11       |           |DIFFM    |IO_L28P_4          |UNUSED   |           |4             |          |         |           |         |         |          |           |                |
 |R12       |           |DIFFM    |IO_L25P_4          |UNUSED   |           |4             |          |         |           |         |         |          |           |                |
-|R13       |           |DIFFS    |IO_L01N_4/VRP_4    |UNUSED   |           |4             |          |         |           |         |         |          |           |                |
+|R13       |echo       |IOB      |IO_L01N_4/VRP_4    |INPUT    |LVCMOS25*  |4             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |R14       |           |         |DONE               |         |           |              |          |         |           |         |         |          |           |                |
 |R15       |           |         |GND                |         |           |              |          |         |           |         |         |          |           |                |
 |R16       |LED<7>     |IOB      |IO_L01P_3/VRN_3    |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
@@ -273,7 +273,7 @@ Pinout by Pin Number:
 |T11       |           |         |VCCAUX             |         |           |              |          |         |           |         |2.5      |          |           |                |
 |T12       |           |IOB      |IO                 |UNUSED   |           |4             |          |         |           |         |         |          |           |                |
 |T13       |           |DIFFM    |IO_L01P_4/VRN_4    |UNUSED   |           |4             |          |         |           |         |         |          |           |                |
-|T14       |           |DIFFS    |IO                 |UNUSED   |           |4             |          |         |           |         |         |          |           |                |
+|T14       |trigger    |IOB      |IO                 |OUTPUT   |LVCMOS25*  |4             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
 |T15       |           |         |CCLK               |         |           |              |          |         |           |         |         |          |           |                |
 |T16       |           |         |GND                |         |           |              |          |         |           |         |         |          |           |                |
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

@@ -14,7 +14,7 @@ NET "PDB<7>" LOC = "R10";
 
 NET "SW<0>" LOC = "N15";
 NET "SW<1>" LOC = "J16";
-#NET "SW<2>" LOC = "K16";
+NET "SW<2>" LOC = "K16";
 #NET "SW<3>" LOC = "K15";
 #NET "SW<4>" LOC = "L15";
 #NET "SW<5>" LOC = "M16";
@@ -51,6 +51,9 @@ NET "BTN<3>" LOC = "k12";
 
 
 NET "S" LOC = "D5";
+
+NET "trigger" LOC = "T14";
+NET "echo"  LOC = "R13";
 
 #NET "JA<1>" LOC = "T14";
 #NET "JA<2>" LOC = "R13";
