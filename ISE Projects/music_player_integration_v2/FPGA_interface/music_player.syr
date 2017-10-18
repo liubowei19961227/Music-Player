@@ -1,0 +1,1405 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Reading design: music_player.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "music_player.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "music_player"
+Output Format                      : NGC
+Target Device                      : xc3s400-4-ft256
+
+---- Source Options
+Top Module Name                    : music_player
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/constants.vhd" in Library work.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/flash_memory.vhd" in Library work.
+Architecture behavioral of Entity flash_memory is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/bpm_counter.vhd" in Library work.
+Architecture behavioral of Entity bpm_counter is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/note_length_counter.vhd" in Library work.
+Architecture behavioral of Entity note_length_counter is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/note_player.vhd" in Library work.
+Architecture behavioral of Entity note_player is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/bin_to_dec.vhd" in Library work.
+Architecture behavioral of Entity bin_to_dec is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/dpimref.vhd" in Library work.
+Architecture behavioral of Entity dpimref is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/EPP_interface.vhd" in Library work.
+Architecture behavioral of Entity epp_interface is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/block_ram.vhd" in Library work.
+Architecture behavioral of Entity block_ram is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/seven_seg_display.vhd" in Library work.
+Architecture behavioral of Entity seven_seg_display is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/main.vhd" in Library work.
+Architecture behavioral of Entity music_player_v7 is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/beat_follower.vhd" in Library work.
+Architecture behavioral of Entity beat_follower is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/flash_mem_cntl.vhd" in Library work.
+Architecture behavioral of Entity flash_mem_cntl is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/music_player.vhd" in Library work.
+WARNING:HDLParsers:3530 - Time stamp of file "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/music_player.vhd" is newer than current system time.
+Entity <music_player> compiled.
+Entity <music_player> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <music_player> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <EPP_interface> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <block_ram> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <seven_seg_display> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <music_player_v7> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <beat_follower> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <flash_mem_cntl> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <dpimref> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <bin_to_dec> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <note_length_counter> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <note_player> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <bpm_counter> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <flash_memory> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <music_player> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <is_square> in unit <music_player> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <music_player> analyzed. Unit <music_player> generated.
+
+Analyzing Entity <EPP_interface> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <rst_round_counter> in unit <EPP_interface> has a constant value of 1 during circuit operation. The register is replaced by logic.
+Entity <EPP_interface> analyzed. Unit <EPP_interface> generated.
+
+Analyzing Entity <dpimref> in library <work> (Architecture <behavioral>).
+Entity <dpimref> analyzed. Unit <dpimref> generated.
+
+Analyzing Entity <block_ram> in library <work> (Architecture <behavioral>).
+INFO:Xst:1432 - Contents of array <ram> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ram> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ram> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ram> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+Entity <block_ram> analyzed. Unit <block_ram> generated.
+
+Analyzing Entity <seven_seg_display> in library <work> (Architecture <behavioral>).
+Entity <seven_seg_display> analyzed. Unit <seven_seg_display> generated.
+
+Analyzing Entity <bin_to_dec> in library <work> (Architecture <behavioral>).
+Entity <bin_to_dec> analyzed. Unit <bin_to_dec> generated.
+
+Analyzing Entity <music_player_v7> in library <work> (Architecture <behavioral>).
+Entity <music_player_v7> analyzed. Unit <music_player_v7> generated.
+
+Analyzing Entity <note_length_counter> in library <work> (Architecture <Behavioral>).
+Entity <note_length_counter> analyzed. Unit <note_length_counter> generated.
+
+Analyzing Entity <note_player> in library <work> (Architecture <Behavioral>).
+Entity <note_player> analyzed. Unit <note_player> generated.
+
+Analyzing Entity <beat_follower> in library <work> (Architecture <behavioral>).
+Entity <beat_follower> analyzed. Unit <beat_follower> generated.
+
+Analyzing Entity <bpm_counter> in library <work> (Architecture <behavioral>).
+Entity <bpm_counter> analyzed. Unit <bpm_counter> generated.
+
+Analyzing Entity <flash_mem_cntl> in library <work> (Architecture <behavioral>).
+Entity <flash_mem_cntl> analyzed. Unit <flash_mem_cntl> generated.
+
+Analyzing Entity <flash_memory> in library <work> (Architecture <behavioral>).
+Entity <flash_memory> analyzed. Unit <flash_memory> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <block_ram>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/block_ram.vhd".
+WARNING:Xst:647 - Input <address<31:11>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:1439 - HDL ADVISOR - You may have used signed signal(s) to address this RAM. If that is the case, negative values being out of range, sign bits were ignored. As a result only the first half of the RAM is actually accessed. Please check your source code.
+    Found 1025x16-bit single-port RAM <Mram_ram> for signal <ram>.
+    Found 16-bit register for signal <data_o>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  16 D-type flip-flop(s).
+Unit <block_ram> synthesized.
+
+
+Synthesizing Unit <dpimref>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/dpimref.vhd".
+    Register <regData1> equivalent to <data_output> has been removed
+    Found finite state machine <FSM_0> for signal <stEppCur>.
+    -----------------------------------------------------------------------
+    | States             | 9                                              |
+    | Transitions        | 17                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 8                                              |
+    | Clock              | clkMain                   (rising_edge)        |
+    | Power Up State     | 00000000                                       |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit tristate buffer for signal <DB>.
+    Found 1-bit register for signal <ready>.
+    Found 8-bit register for signal <data_output>.
+    Found 8-bit register for signal <regData0>.
+    Found 8-bit register for signal <regData2>.
+    Found 8-bit register for signal <regData3>.
+    Found 8-bit register for signal <regData4>.
+    Found 8-bit register for signal <regData5>.
+    Found 8-bit register for signal <regData6>.
+    Found 8-bit register for signal <regData7>.
+    Found 4-bit register for signal <regEppAdr>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  69 D-type flip-flop(s).
+	inferred   8 Tristate(s).
+Unit <dpimref> synthesized.
+
+
+Synthesizing Unit <bin_to_dec>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/bin_to_dec.vhd".
+    Found 16x7-bit ROM for signal <inv_outseg>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <bin_to_dec> synthesized.
+
+
+Synthesizing Unit <note_length_counter>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/note_length_counter.vhd".
+WARNING:Xst:643 - "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/note_length_counter.vhd" line 29: The result of a 22x7-bit multiplication is partially used. Only the 28 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 1-bit register for signal <is_new_note>.
+    Found 1-bit register for signal <is_mute>.
+    Found 28-bit adder for signal <articulation_cc$addsub0000> created at line 31.
+    Found 28-bit adder for signal <articulation_cc$addsub0001> created at line 31.
+    Found 28-bit comparator equal for signal <is_mute$cmp_eq0000> created at line 45.
+    Found 22x7-bit multiplier for signal <note_length_cc$mult0000> created at line 29.
+    Found 28-bit up counter for signal <note_length_partial>.
+    Found 29-bit subtractor for signal <note_length_partial$addsub0000> created at line 52.
+    Found 29-bit comparator greatequal for signal <note_length_partial$cmp_ge0000> created at line 52.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
+	inferred   2 Comparator(s).
+Unit <note_length_counter> synthesized.
+
+
+Synthesizing Unit <note_player>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/note_player.vhd".
+WARNING:Xst:647 - Input <is_square> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1701x8-bit ROM for signal <sin_table_array_value$rom0000> created at line 113.
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Clock enable       | state$cmp_le0000          (positive)           |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | up_0                                           |
+    | Power Up State     | up_0                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+WARNING:Xst:643 - "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/note_player.vhd" line 35: The result of a 9x4-bit multiplication is partially used. Only the 12 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 13x22-bit ROM for signal <note$rom0000>.
+    Found 1-bit register for signal <note_pulse>.
+    Found 11-bit register for signal <base_index>.
+    Found 9-bit register for signal <duty_cc>.
+    Found 9-bit addsub for signal <duty_cc$addsub0000>.
+    Found 8-bit adder for signal <duty_cc$sub0000> created at line 87.
+    Found 8-bit register for signal <index>.
+    Found 8-bit adder for signal <index$addsub0000> created at line 92.
+    Found 4-bit register for signal <index_mult>.
+    Found 1-of-4 decoder for signal <index_mult$mux0001> created at line 53.
+    Found 11-bit adder for signal <next_sin_table_array_index>.
+    Found 8-bit adder carry out for signal <next_sin_table_array_index$addsub0001> created at line 35.
+    Found 9x4-bit multiplier for signal <next_sin_table_array_index$mult0000> created at line 35.
+    Found 11-bit register for signal <overflow_index>.
+    Found 1-bit register for signal <pwm_pulse>.
+    Found 9-bit comparator equal for signal <pwm_pulse$cmp_eq0000> created at line 116.
+    Found 9-bit up counter for signal <sample_rate_partial>.
+    Found 8-bit register for signal <sin_table_array_value>.
+    Found 9-bit comparator greater for signal <sin_table_array_value$cmp_gt0000> created at line 49.
+    Found 11-bit comparator greatequal for signal <state$cmp_ge0000> created at line 76.
+    Found 9-bit comparator lessequal for signal <state$cmp_le0000> created at line 49.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 ROM(s).
+	inferred   1 Counter(s).
+	inferred  53 D-type flip-flop(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
+	inferred   4 Comparator(s).
+	inferred   1 Decoder(s).
+Unit <note_player> synthesized.
+
+
+Synthesizing Unit <bpm_counter>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/bpm_counter.vhd".
+    Found 32-bit register for signal <bpm>.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0000> created at line 59.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0001> created at line 60.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0002> created at line 62.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0003> created at line 64.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0004> created at line 66.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0005> created at line 68.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0006> created at line 70.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0007> created at line 72.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0008> created at line 74.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0009> created at line 76.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0010> created at line 78.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0011> created at line 80.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0012> created at line 82.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0013> created at line 84.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0014> created at line 86.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0015> created at line 88.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0016> created at line 90.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0017> created at line 92.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0018> created at line 94.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0019> created at line 96.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0020> created at line 98.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0021> created at line 100.
+    Found 31-bit comparator less for signal <bpm$cmp_lt0022> created at line 102.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+	inferred  23 Comparator(s).
+Unit <bpm_counter> synthesized.
+
+
+Synthesizing Unit <flash_memory>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/flash_memory.vhd".
+WARNING:Xst:646 - Signal <write_data_sig> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <write_address_sig> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <read_address_sig> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+INFO:Xst:1799 - State write_rst_state is never reached in FSM <current_state>.
+INFO:Xst:1799 - State read_rst_state is never reached in FSM <current_state>.
+    Found finite state machine <FSM_2> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 10                                             |
+    | Transitions        | 17                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 19                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Power Up State     | rst_state                                      |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 22-bit register for signal <addr>.
+    Found 1-bit register for signal <read_complete>.
+    Found 1-bit register for signal <OE>.
+    Found 1-bit register for signal <WE>.
+    Found 1-bit register for signal <write_complete>.
+    Found 16-bit tristate buffer for signal <data>.
+    Found 32-bit register for signal <delay_counter>.
+    Found 32-bit adder for signal <delay_counter$addsub0000>.
+    Found 32-bit register for signal <delay_extend_counter>.
+    Found 32-bit adder for signal <delay_extend_counter$share0000> created at line 115.
+    Found 16-bit register for signal <Mtridata_data> created at line 122.
+    Found 1-bit register for signal <Mtrien_data> created at line 122.
+    Found 16-bit register for signal <read_data_sig>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred 123 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  16 Tristate(s).
+Unit <flash_memory> synthesized.
+
+
+Synthesizing Unit <EPP_interface>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/EPP_interface.vhd".
+WARNING:Xst:646 - Signal <rst_round_counter> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <data_ready>.
+    Found 8-bit up counter for signal <debug_counter>.
+    Found 8-bit register for signal <higher_data>.
+    Found 8-bit register for signal <lower_data>.
+    Found 16-bit register for signal <ram_address>.
+    Found 16-bit up counter for signal <ram_address_counter>.
+    Found 2-bit up counter for signal <round_counter>.
+    Summary:
+	inferred   3 Counter(s).
+	inferred  33 D-type flip-flop(s).
+Unit <EPP_interface> synthesized.
+
+
+Synthesizing Unit <seven_seg_display>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/seven_seg_display.vhd".
+    Found 4-bit 4-to-1 multiplexer for signal <binary>.
+    Found 32-bit up counter for signal <counter>.
+    Found 2-bit up counter for signal <digit>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   4 Multiplexer(s).
+Unit <seven_seg_display> synthesized.
+
+
+Synthesizing Unit <music_player_v7>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/main.vhd".
+WARNING:Xst:647 - Input <twelfth_cc<31:22>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <music_pitch_array_value<7:6>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <music_length_array_value<7>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 10-bit up counter for signal <music_index>.
+    Found 8-bit register for signal <music_length_array_value>.
+    Found 8-bit register for signal <music_pitch_array_value>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  16 D-type flip-flop(s).
+Unit <music_player_v7> synthesized.
+
+
+Synthesizing Unit <beat_follower>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/beat_follower.vhd".
+WARNING:Xst:646 - Signal <sum<59:46>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sum<15:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ledtemp> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_3> for signal <y>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 12                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | Resetn                    (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | send_trigger                                   |
+    | Power Up State     | send_trigger                                   |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <trigger>.
+    Found 120-bit register for signal <beat_array0>.
+    Found 31-bit comparator greatequal for signal <beat_array0_0$cmp_ge0000> created at line 170.
+    Found 31-bit comparator lessequal for signal <beat_array0_0$cmp_le0000> created at line 170.
+    Found 30-bit register for signal <beat_counter>.
+    Found 30-bit adder for signal <beat_counter$addsub0000>.
+    Found 1-bit register for signal <beat_seen>.
+    Found 1-bit register for signal <beat_store>.
+    Found 30-bit register for signal <count>.
+    Found 30-bit adder for signal <count$add0000> created at line 111.
+    Found 30-bit register for signal <distance>.
+    Found 30-bit adder for signal <distance$addsub0000> created at line 117.
+    Found 30x30-bit multiplier for signal <sum>.
+    Found 30-bit adder for signal <sum$addsub0000> created at line 178.
+    Found 30-bit adder for signal <sum$addsub0001> created at line 178.
+    Found 30-bit adder for signal <sum$addsub0002> created at line 178.
+    Found 31-bit comparator greater for signal <y$cmp_gt0000> created at line 103.
+    Found 31-bit comparator greater for signal <y$cmp_gt0001> created at line 138.
+    Found 31-bit comparator less for signal <y$cmp_lt0000> created at line 120.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  93 D-type flip-flop(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
+	inferred   5 Comparator(s).
+Unit <beat_follower> synthesized.
+
+
+Synthesizing Unit <flash_mem_cntl>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/flash_mem_cntl.vhd".
+WARNING:Xst:1780 - Signal <flash_st_complete> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <flash_read_st> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <debug_counter> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_4> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 13                                             |
+    | Transitions        | 26                                             |
+    | Inputs             | 7                                              |
+    | Outputs            | 14                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | rst_state                                      |
+    | Power Up State     | rst_state                                      |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <cntl_read_complete>.
+    Found 16-bit register for signal <cntl_read_data>.
+    Found 1-bit register for signal <cntl_write_complete>.
+    Found 1-bit register for signal <cntl_delete_complete>.
+    Found 1-bit register for signal <flash_direction>.
+    Found 22-bit register for signal <flash_read_address>.
+    Found 1-bit register for signal <flash_rest>.
+    Found 22-bit register for signal <flash_write_address>.
+    Found 16-bit register for signal <flash_write_data>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  81 D-type flip-flop(s).
+Unit <flash_mem_cntl> synthesized.
+
+
+Synthesizing Unit <music_player>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/music_player.vhd".
+WARNING:Xst:646 - Signal <us_bpm_display<31:16>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ram_address_int<15:11>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <lcd_bpm_display> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <block3_int> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <block2_int> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <block1_int<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <block0_int> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <base_bpm> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000010011000100101101000.
+INFO:Xst:1799 - State debug_delete_state is never reached in FSM <current_state>.
+INFO:Xst:1799 - State debug_write_flash_state is never reached in FSM <current_state>.
+INFO:Xst:1799 - State debug_download_state is never reached in FSM <current_state>.
+INFO:Xst:1799 - State debug_download_flash_state is never reached in FSM <current_state>.
+    Found finite state machine <FSM_5> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 27                                             |
+    | Transitions        | 66                                             |
+    | Inputs             | 9                                              |
+    | Outputs            | 30                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | rest_state                                     |
+    | Power Up State     | rest_state                                     |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <b_we>.
+    Found 11-bit register for signal <bram_address>.
+    Found 10-bit adder carry out for signal <bram_address$addsub0001> created at line 1153.
+    Found 16-bit register for signal <bram_data_in>.
+    Found 32-bit register for signal <default_bpm>.
+    Found 32-bit adder for signal <default_bpm$add0000> created at line 1129.
+    Found 22-bit register for signal <delete_address>.
+    Found 8-bit register for signal <display_state>.
+    Found 32-bit up counter for signal <download_counter>.
+    Found 32-bit comparator greatequal for signal <download_finished$cmp_ge0000> created at line 348.
+    Found 1-bit register for signal <enable_music_player>.
+    Found 1-bit register for signal <f_delete>.
+    Found 1-bit register for signal <f_read>.
+    Found 1-bit register for signal <f_rest>.
+    Found 1-bit register for signal <f_write>.
+    Found 22-bit register for signal <flash_base_address>.
+    Found 32-bit register for signal <flash_base_address_int>.
+    Found 32-bit up counter for signal <flash_download_counter>.
+    Found 32-bit comparator greatequal for signal <flash_download_finished$cmp_ge0000> created at line 352.
+    Found 32-bit up counter for signal <flash_write_counter>.
+    Found 32-bit comparator greatequal for signal <flash_write_finished$cmp_ge0000> created at line 350.
+    Found 1-bit register for signal <is_slurred>.
+    Found 1-bit register for signal <is_staccato>.
+    Found 8-bit register for signal <music_length>.
+    Found 8-bit register for signal <music_pitch>.
+    Found 22-bit register for signal <read_address>.
+    Found 22-bit adder for signal <read_address$addsub0000> created at line 1085.
+    Found 1-bit register for signal <slurred_sig>.
+    Found 1-bit register for signal <staccato_sig>.
+    Found 32-bit register for signal <twelfth_cc>.
+    Found 22-bit register for signal <write_address>.
+    Found 22-bit adder for signal <write_address$add0000> created at line 996.
+    Found 16-bit register for signal <write_data>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   3 Counter(s).
+	inferred 261 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+Unit <music_player> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 1025x16-bit single-port RAM                           : 1
+# ROMs                                                 : 3
+ 13x22-bit ROM                                         : 1
+ 16x7-bit ROM                                          : 1
+ 1701x8-bit ROM                                        : 1
+# Multipliers                                          : 3
+ 22x7-bit multiplier                                   : 1
+ 30x30-bit multiplier                                  : 1
+ 9x4-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 20
+ 10-bit adder carry out                                : 1
+ 11-bit adder                                          : 1
+ 22-bit adder                                          : 2
+ 28-bit adder                                          : 2
+ 29-bit subtractor                                     : 1
+ 30-bit adder                                          : 6
+ 32-bit adder                                          : 3
+ 8-bit adder                                           : 2
+ 8-bit adder carry out                                 : 1
+ 9-bit addsub                                          : 1
+# Counters                                             : 10
+ 10-bit up counter                                     : 1
+ 16-bit up counter                                     : 1
+ 2-bit up counter                                      : 2
+ 28-bit up counter                                     : 1
+ 32-bit up counter                                     : 4
+ 9-bit up counter                                      : 1
+# Registers                                            : 80
+ 1-bit register                                        : 29
+ 11-bit register                                       : 3
+ 16-bit register                                       : 8
+ 22-bit register                                       : 7
+ 30-bit register                                       : 7
+ 32-bit register                                       : 6
+ 4-bit register                                        : 2
+ 8-bit register                                        : 17
+ 9-bit register                                        : 1
+# Comparators                                          : 37
+ 11-bit comparator greatequal                          : 1
+ 28-bit comparator equal                               : 1
+ 29-bit comparator greatequal                          : 1
+ 31-bit comparator greatequal                          : 1
+ 31-bit comparator greater                             : 2
+ 31-bit comparator less                                : 24
+ 31-bit comparator lessequal                           : 1
+ 32-bit comparator greatequal                          : 3
+ 9-bit comparator equal                                : 1
+ 9-bit comparator greater                              : 1
+ 9-bit comparator lessequal                            : 1
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+# Tristates                                            : 2
+ 16-bit tristate buffer                                : 1
+ 8-bit tristate buffer                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_5> for best encoding.
+Optimizing FSM <current_state/FSM> on signal <current_state[1:27]> with one-hot encoding.
+-----------------------------------------------------------
+ State                      | Encoding
+-----------------------------------------------------------
+ rest_state                 | 000000000000000000000000001
+ download_state             | 000000000000000000000000010
+ debug_download_state       | unreached
+ read_block0_state          | 000000000000000000000100000
+ read_block1_state          | 000000000000000000010000000
+ read_block2_state          | 000000000000000000100000000
+ read_block3_state          | 000000000000000001000000000
+ read_block4_state          | 000000000000000010000000000
+ read_block5_state          | 000000000000000100000000000
+ read_block6_state          | 000000000000001000000000000
+ read_block7_state          | 000000000000010000000000000
+ read_block8_state          | 000000000000100000000000000
+ read_block9_state          | 000000000001000000000000000
+ read_block10_state         | 000000000010000000000000000
+ read_block11_state         | 000000000100000000000000000
+ read_block12_state         | 000000001000000000000000000
+ read_block13_state         | 000000010000000000000000000
+ read_block14_state         | 000000100000000000000000000
+ read_block15_state         | 000001000000000000000000000
+ load_flash_addr_state      | 000000000000000000001000000
+ write_flash_memory_state   | 000010000000000000000000000
+ debug_write_flash_state    | unreached
+ load_play_addr_state       | 000000000000000000000000100
+ download_flash_state       | 000100000000000000000000000
+ debug_download_flash_state | unreached
+ read_music_metadata_statea | 001000000000000000000000000
+ read_music_metadata_stateb | 010000000000000000000000000
+ play_music_state           | 100000000000000000000000000
+ load_delete_addr_state     | 000000000000000000000001000
+ delete_state               | 000000000000000000000010000
+ debug_delete_state         | unreached
+-----------------------------------------------------------
+Analyzing FSM <FSM_4> for best encoding.
+Optimizing FSM <flash_mem/current_state/FSM> on signal <current_state[1:13]> with one-hot encoding.
+------------------------------------------
+ State                   | Encoding
+------------------------------------------
+ rst_state               | 0000000000001
+ write_wrt_command_state | 0000000000010
+ write_wrt_data_state    | 0000010000000
+ write_polling_state     | 0000100000000
+ write_complete_state    | 0001000000000
+ read_command_state      | 0000000000100
+ read_state              | 0000000010000
+ read_complete_state     | 0000000100000
+ delete_statea           | 0000000001000
+ delete_stateb           | 0010000000000
+ delete_polling_state    | 0100000000000
+ delete_complete_state   | 1000000000000
+ wait_state              | 0000001000000
+------------------------------------------
+Analyzing FSM <FSM_3> for best encoding.
+Optimizing FSM <baton/y/FSM> on signal <y[1:2]> with gray encoding.
+-----------------------------
+ State           | Encoding
+-----------------------------
+ send_trigger    | 00
+ wait_for_echo   | 01
+ echo_count      | 11
+ beat_registered | 10
+-----------------------------
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <flash_mem/basic_flash_opertations/current_state/FSM> on signal <current_state[1:10]> with one-hot encoding.
+----------------------------------------
+ State                    | Encoding
+----------------------------------------
+ rst_state                | 0000000001
+ write_rst_state          | unreached
+ write_state              | 0000000100
+ write_delay_state        | 0000001000
+ write_delay_extend_state | 0000010000
+ write_complete_state     | 0000100000
+ read_rst_state           | unreached
+ read_state               | 0000000010
+ read_delay_state         | 0010000000
+ read_delay_state_extend  | 0100000000
+ read_complete_state      | 1000000000
+ wait_state               | 0001000000
+----------------------------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <play_music/x_note_player/state/FSM> on signal <state[1:5]> with one-hot encoding.
+--------------------
+ State  | Encoding
+--------------------
+ up_0   | 00001
+ up_1   | 00010
+ up_2   | 00100
+ down_0 | 01000
+ down_1 | 10000
+--------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <download_from_epp/EPP/stEppCur/FSM> on signal <stEppCur[1:4]> with gray encoding.
+----------------------
+ State    | Encoding
+----------------------
+ 00000000 | 0000
+ 00010100 | 0001
+ 00110010 | 0011
+ 01011000 | 0010
+ 01110010 | 0110
+ 00100001 | 0111
+ 01000011 | 0101
+ 01100001 | 0100
+ 10000011 | 1100
+----------------------
+WARNING:Xst:1290 - Hierarchical block <display_bpm> is unconnected in block <baton>.
+   It will be removed from the design.
+WARNING:Xst:1710 - FF/Latch <delete_address_4> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_5> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_6> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_7> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_8> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_9> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_10> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_11> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_12> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_13> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_14> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_15> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_20> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_21> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_0> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_1> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_2> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_3> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_4> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_5> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_6> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_7> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_8> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_9> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_10> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_11> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_12> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_13> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_14> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_15> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_20> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_21> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_0> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_1> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_2> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_3> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_4> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_5> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_6> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_7> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_8> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_9> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_10> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_11> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_12> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_13> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_14> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_15> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_20> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_21> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_22> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_23> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_24> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_25> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_26> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_27> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_28> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_29> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_30> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_31> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_0> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_1> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_2> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_3> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <ram_address_11> of sequential type is unconnected in block <download_from_epp>.
+WARNING:Xst:2677 - Node <ram_address_12> of sequential type is unconnected in block <download_from_epp>.
+WARNING:Xst:2677 - Node <ram_address_13> of sequential type is unconnected in block <download_from_epp>.
+WARNING:Xst:2677 - Node <ram_address_14> of sequential type is unconnected in block <download_from_epp>.
+WARNING:Xst:2677 - Node <ram_address_15> of sequential type is unconnected in block <download_from_epp>.
+WARNING:Xst:2677 - Node <music_pitch_array_value_6> of sequential type is unconnected in block <play_music>.
+WARNING:Xst:2677 - Node <music_pitch_array_value_7> of sequential type is unconnected in block <play_music>.
+WARNING:Xst:2677 - Node <music_length_array_value_7> of sequential type is unconnected in block <play_music>.
+WARNING:Xst:2677 - Node <twelfth_cc_22> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <twelfth_cc_23> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <twelfth_cc_24> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <twelfth_cc_25> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <twelfth_cc_26> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <twelfth_cc_27> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <twelfth_cc_28> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <twelfth_cc_29> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <twelfth_cc_30> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <twelfth_cc_31> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <music_pitch_6> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <music_pitch_7> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <music_length_7> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <default_bpm_22> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <default_bpm_23> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <default_bpm_24> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <default_bpm_25> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <default_bpm_26> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <default_bpm_27> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <default_bpm_28> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <default_bpm_29> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <default_bpm_30> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <default_bpm_31> of sequential type is unconnected in block <music_player>.
+
+Synthesizing (advanced) Unit <music_player>.
+INFO:Xst:3226 - The RAM <ram_management/Mram_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <ram_management/data_o>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1025-word x 16-bit                  |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <b_we>          | high     |
+    |     addrA          | connected to signal <bram_address>  |          |
+    |     diA            | connected to signal <bram_data_in>  |          |
+    |     doA            | connected to signal <bram_data_out> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <music_player> synthesized (advanced).
+
+Synthesizing (advanced) Unit <note_player>.
+INFO:Xst:3044 - The ROM <Mrom_sin_table_array_value_rom0000> will be implemented as a read-only BLOCK RAM, absorbing the register: <sin_table_array_value>.
+INFO:Xst:3225 - The RAM <Mrom_sin_table_array_value_rom0000> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1701-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <sin_table_array_value_not0001> | high     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <next_sin_table_array_index> |          |
+    |     diA            | connected to internal node          |          |
+    |     doA            | connected to signal <sin_table_array_value> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <note_player> synthesized (advanced).
+WARNING:Xst:2677 - Node <music_length_array_value_7> of sequential type is unconnected in block <music_player_v7>.
+WARNING:Xst:2677 - Node <music_pitch_array_value_6> of sequential type is unconnected in block <music_player_v7>.
+WARNING:Xst:2677 - Node <music_pitch_array_value_7> of sequential type is unconnected in block <music_player_v7>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 1025x16-bit single-port block RAM                     : 1
+ 1701x8-bit single-port block RAM                      : 1
+# ROMs                                                 : 2
+ 13x22-bit ROM                                         : 1
+ 16x7-bit ROM                                          : 1
+# Multipliers                                          : 3
+ 22x7-bit multiplier                                   : 1
+ 30x30-bit multiplier                                  : 1
+ 9x4-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 20
+ 10-bit adder carry out                                : 1
+ 11-bit adder                                          : 1
+ 22-bit adder                                          : 2
+ 28-bit adder                                          : 2
+ 29-bit subtractor                                     : 1
+ 30-bit adder                                          : 6
+ 32-bit adder                                          : 3
+ 8-bit adder                                           : 2
+ 8-bit adder carry out                                 : 1
+ 9-bit addsub                                          : 1
+# Counters                                             : 10
+ 10-bit up counter                                     : 1
+ 16-bit up counter                                     : 1
+ 2-bit up counter                                      : 2
+ 28-bit up counter                                     : 1
+ 32-bit up counter                                     : 4
+ 9-bit up counter                                      : 1
+# Registers                                            : 933
+ Flip-Flops                                            : 933
+# Comparators                                          : 37
+ 11-bit comparator greatequal                          : 1
+ 28-bit comparator equal                               : 1
+ 29-bit comparator greatequal                          : 1
+ 31-bit comparator greatequal                          : 1
+ 31-bit comparator greater                             : 2
+ 31-bit comparator less                                : 24
+ 31-bit comparator lessequal                           : 1
+ 32-bit comparator greatequal                          : 3
+ 9-bit comparator equal                                : 1
+ 9-bit comparator greater                              : 1
+ 9-bit comparator lessequal                            : 1
+# Multiplexers                                         : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <bpm_31> (without init value) has a constant value of 0 in block <bpm_counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bpm_30> (without init value) has a constant value of 0 in block <bpm_counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bpm_29> (without init value) has a constant value of 0 in block <bpm_counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bpm_28> (without init value) has a constant value of 0 in block <bpm_counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bpm_27> (without init value) has a constant value of 0 in block <bpm_counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bpm_26> (without init value) has a constant value of 0 in block <bpm_counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bpm_25> (without init value) has a constant value of 0 in block <bpm_counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bpm_24> (without init value) has a constant value of 0 in block <bpm_counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bpm_23> (without init value) has a constant value of 0 in block <bpm_counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bpm_22> (without init value) has a constant value of 0 in block <bpm_counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bpm_21> (without init value) has a constant value of 0 in block <bpm_counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bpm_20> (without init value) has a constant value of 0 in block <bpm_counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bpm_19> (without init value) has a constant value of 0 in block <bpm_counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bpm_18> (without init value) has a constant value of 0 in block <bpm_counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bpm_17> (without init value) has a constant value of 0 in block <bpm_counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bpm_16> (without init value) has a constant value of 0 in block <bpm_counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bpm_15> (without init value) has a constant value of 0 in block <bpm_counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bpm_14> (without init value) has a constant value of 0 in block <bpm_counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bpm_13> (without init value) has a constant value of 0 in block <bpm_counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bpm_12> (without init value) has a constant value of 0 in block <bpm_counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bpm_11> (without init value) has a constant value of 0 in block <bpm_counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bpm_10> (without init value) has a constant value of 0 in block <bpm_counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bpm_9> (without init value) has a constant value of 0 in block <bpm_counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bpm_8> (without init value) has a constant value of 0 in block <bpm_counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bpm_0> (without init value) has a constant value of 0 in block <bpm_counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <delete_address_4> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_5> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_6> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_7> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_8> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_9> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_10> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_11> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_12> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_13> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_14> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_15> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_20> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_21> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_0> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_1> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_2> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_3> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_4> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_5> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_6> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_7> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_8> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_9> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_10> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_11> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_12> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_13> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_14> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_15> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_20> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_21> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_0> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_1> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_2> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_3> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_4> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_5> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_6> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_7> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_8> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_9> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_10> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_11> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_12> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_13> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_14> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_15> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_20> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_21> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_22> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_23> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_24> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_25> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_26> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_27> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_28> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_29> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_30> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_base_address_int_31> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_0> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_1> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_2> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <delete_address_3> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <default_bpm_31> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <default_bpm_30> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <default_bpm_29> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <default_bpm_28> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <default_bpm_27> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <default_bpm_26> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <default_bpm_25> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <default_bpm_24> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <default_bpm_23> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <default_bpm_22> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <default_bpm_21> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <default_bpm_20> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <default_bpm_19> (without init value) has a constant value of 1 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <default_bpm_18> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <default_bpm_17> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <default_bpm_16> (without init value) has a constant value of 1 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <default_bpm_15> (without init value) has a constant value of 1 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <default_bpm_14> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <default_bpm_13> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <default_bpm_12> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <default_bpm_11> (without init value) has a constant value of 1 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <default_bpm_10> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <twelfth_cc_31> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <twelfth_cc_30> (without init value) has a constant value of 0 in block <music_player>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <download_from_epp/ram_address_15> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <download_from_epp/ram_address_14> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <download_from_epp/ram_address_13> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <download_from_epp/ram_address_12> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <download_from_epp/ram_address_11> of sequential type is unconnected in block <music_player>.
+
+Optimizing unit <music_player> ...
+
+Optimizing unit <note_length_counter> ...
+
+Optimizing unit <note_player> ...
+
+Optimizing unit <bpm_counter> ...
+
+Optimizing unit <seven_seg_display> ...
+
+Optimizing unit <music_player_v7> ...
+
+Optimizing unit <beat_follower> ...
+WARNING:Xst:2677 - Node <twelfth_cc_22> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <twelfth_cc_23> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <twelfth_cc_24> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <twelfth_cc_25> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <twelfth_cc_26> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <twelfth_cc_27> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <twelfth_cc_28> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <twelfth_cc_29> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <music_pitch_6> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <music_pitch_7> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <music_length_7> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <baton/display_bpm/bpm_1> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <baton/display_bpm/bpm_2> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <baton/display_bpm/bpm_3> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <baton/display_bpm/bpm_4> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <baton/display_bpm/bpm_5> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <baton/display_bpm/bpm_6> of sequential type is unconnected in block <music_player>.
+WARNING:Xst:2677 - Node <baton/display_bpm/bpm_7> of sequential type is unconnected in block <music_player>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block music_player, actual ratio is 28.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 992
+ Flip-Flops                                            : 992
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : music_player.ngr
+Top Level Output File Name         : music_player
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 91
+
+Cell Usage :
+# BELS                             : 3033
+#      GND                         : 4
+#      INV                         : 63
+#      LUT1                        : 359
+#      LUT2                        : 247
+#      LUT2_D                      : 1
+#      LUT3                        : 245
+#      LUT3_D                      : 3
+#      LUT3_L                      : 5
+#      LUT4                        : 834
+#      LUT4_D                      : 3
+#      LUT4_L                      : 28
+#      MUXCY                       : 675
+#      MUXF5                       : 52
+#      VCC                         : 1
+#      XORCY                       : 513
+# FlipFlops/Latches                : 992
+#      FD                          : 71
+#      FDCE                        : 72
+#      FDE                         : 431
+#      FDPE                        : 48
+#      FDR                         : 167
+#      FDRE                        : 159
+#      FDRS                        : 4
+#      FDRSE                       : 2
+#      FDS                         : 30
+#      FDSE                        : 8
+# RAMS                             : 3
+#      RAMB16                      : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 87
+#      IBUF                        : 14
+#      IOBUF                       : 24
+#      OBUF                        : 49
+# MULTs                            : 5
+#      MULT18X18                   : 5
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400ft256-4 
+
+ Number of Slices:                      993  out of   3584    27%  
+ Number of Slice Flip Flops:            992  out of   7168    13%  
+ Number of 4 input LUTs:               1788  out of   7168    24%  
+ Number of IOs:                          91
+ Number of bonded IOBs:                  88  out of    173    50%  
+ Number of BRAMs:                         3  out of     16    18%  
+ Number of MULT18X18s:                    5  out of     16    31%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 995   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+btn<0>                             | IBUF                   | 120   |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 19.634ns (Maximum Frequency: 50.932MHz)
+   Minimum input arrival time before clock: 9.053ns
+   Maximum output required time after clock: 14.856ns
+   Maximum combinational path delay: 9.703ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 19.634ns (frequency: 50.932MHz)
+  Total number of paths / destination ports: 11817005 / 1714
+-------------------------------------------------------------------------
+Delay:               19.634ns (Levels of Logic = 33)
+  Source:            baton/beat_array0_3_1 (FF)
+  Destination:       twelfth_cc_21 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: baton/beat_array0_3_1 to twelfth_cc_21
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.720   1.216  baton/beat_array0_3_1 (baton/beat_array0_3_1)
+     LUT3:I0->O            1   0.551   0.827  baton/Madd_sum_addsub0001C281 (baton/Madd_sum_addsub0001C)
+     LUT4:I3->O            1   0.551   0.000  baton/Madd_sum_addsub0001_Madd_lut<2> (baton/Madd_sum_addsub0001_Madd_lut<2>)
+     MUXCY:S->O            1   0.500   0.000  baton/Madd_sum_addsub0001_Madd_cy<2> (baton/Madd_sum_addsub0001_Madd_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  baton/Madd_sum_addsub0001_Madd_cy<3> (baton/Madd_sum_addsub0001_Madd_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  baton/Madd_sum_addsub0001_Madd_cy<4> (baton/Madd_sum_addsub0001_Madd_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  baton/Madd_sum_addsub0001_Madd_cy<5> (baton/Madd_sum_addsub0001_Madd_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  baton/Madd_sum_addsub0001_Madd_cy<6> (baton/Madd_sum_addsub0001_Madd_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  baton/Madd_sum_addsub0001_Madd_cy<7> (baton/Madd_sum_addsub0001_Madd_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  baton/Madd_sum_addsub0001_Madd_cy<8> (baton/Madd_sum_addsub0001_Madd_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  baton/Madd_sum_addsub0001_Madd_cy<9> (baton/Madd_sum_addsub0001_Madd_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  baton/Madd_sum_addsub0001_Madd_cy<10> (baton/Madd_sum_addsub0001_Madd_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  baton/Madd_sum_addsub0001_Madd_cy<11> (baton/Madd_sum_addsub0001_Madd_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  baton/Madd_sum_addsub0001_Madd_cy<12> (baton/Madd_sum_addsub0001_Madd_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  baton/Madd_sum_addsub0001_Madd_cy<13> (baton/Madd_sum_addsub0001_Madd_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  baton/Madd_sum_addsub0001_Madd_cy<14> (baton/Madd_sum_addsub0001_Madd_cy<14>)
+     XORCY:CI->O           1   0.904   0.996  baton/Madd_sum_addsub0001_Madd_xor<15> (baton/sum_addsub0001<15>)
+     LUT2:I1->O            1   0.551   0.000  baton/Madd_sum_addsub0002_lut<15> (baton/Madd_sum_addsub0002_lut<15>)
+     MUXCY:S->O            1   0.500   0.000  baton/Madd_sum_addsub0002_cy<15> (baton/Madd_sum_addsub0002_cy<15>)
+     XORCY:CI->O           1   0.904   0.801  baton/Madd_sum_addsub0002_xor<16> (baton/sum_addsub0002<16>)
+     MULT18X18:A16->P27    1   4.568   0.996  baton/Mmult_sum_submult_0 (baton/Mmult_sum_submult_0_27)
+     LUT2:I1->O            1   0.551   0.000  baton/Mmult_sum_Madd_lut<27> (baton/Mmult_sum_Madd_lut<27>)
+     MUXCY:S->O            1   0.500   0.000  baton/Mmult_sum_Madd_cy<27> (baton/Mmult_sum_Madd_cy<27>)
+     MUXCY:CI->O           1   0.064   0.000  baton/Mmult_sum_Madd_cy<28> (baton/Mmult_sum_Madd_cy<28>)
+     MUXCY:CI->O           1   0.064   0.000  baton/Mmult_sum_Madd_cy<29> (baton/Mmult_sum_Madd_cy<29>)
+     MUXCY:CI->O           1   0.064   0.000  baton/Mmult_sum_Madd_cy<30> (baton/Mmult_sum_Madd_cy<30>)
+     MUXCY:CI->O           1   0.064   0.000  baton/Mmult_sum_Madd_cy<31> (baton/Mmult_sum_Madd_cy<31>)
+     MUXCY:CI->O           1   0.064   0.000  baton/Mmult_sum_Madd_cy<32> (baton/Mmult_sum_Madd_cy<32>)
+     MUXCY:CI->O           1   0.064   0.000  baton/Mmult_sum_Madd_cy<33> (baton/Mmult_sum_Madd_cy<33>)
+     MUXCY:CI->O           1   0.064   0.000  baton/Mmult_sum_Madd_cy<34> (baton/Mmult_sum_Madd_cy<34>)
+     MUXCY:CI->O           1   0.064   0.000  baton/Mmult_sum_Madd_cy<35> (baton/Mmult_sum_Madd_cy<35>)
+     MUXCY:CI->O           0   0.064   0.000  baton/Mmult_sum_Madd_cy<36> (baton/Mmult_sum_Madd_cy<36>)
+     XORCY:CI->O           1   0.904   0.996  baton/Mmult_sum_Madd_xor<37> (dynamic_bpm<21>)
+     LUT2:I1->O            1   0.551   0.000  twelfth_cc_mux0000<21>1 (twelfth_cc_mux0000<21>)
+     FDE:D                     0.203          twelfth_cc_21
+    ----------------------------------------
+    Total                     19.634ns (13.802ns logic, 5.832ns route)
+                                       (70.3% logic, 29.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 854 / 799
+-------------------------------------------------------------------------
+Offset:              9.053ns (Levels of Logic = 3)
+  Source:            btn<0> (PAD)
+  Destination:       play_music/x_note_player/base_index_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: btn<0> to play_music/x_note_player/base_index_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           279   0.821   3.607  btn_0_IBUF (btn_0_IBUF)
+     LUT3:I0->O            3   0.551   1.102  play_music/x_note_player/base_index_not000111 (play_music/x_note_player/sin_table_array_value_not0001)
+     LUT2:I1->O           26   0.551   1.819  play_music/x_note_player/base_index_not00011 (play_music/x_note_player/base_index_not0001)
+     FDE:CE                    0.602          play_music/x_note_player/base_index_0
+    ----------------------------------------
+    Total                      9.053ns (2.525ns logic, 6.528ns route)
+                                       (27.9% logic, 72.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 430 / 70
+-------------------------------------------------------------------------
+Offset:              14.856ns (Levels of Logic = 5)
+  Source:            download_from_epp/EPP/regEppAdr_1 (FF)
+  Destination:       PDB<1> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: download_from_epp/EPP/regEppAdr_1 to PDB<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             24   0.720   2.136  download_from_epp/EPP/regEppAdr_1 (download_from_epp/EPP/regEppAdr_1)
+     LUT3:I0->O            6   0.551   1.342  download_from_epp/EPP/busEppData_cmp_eq00041 (download_from_epp/EPP/busEppData_cmp_eq0004)
+     LUT4:I0->O            1   0.551   1.140  download_from_epp/EPP/busEppOut<1>21 (download_from_epp/EPP/busEppOut<1>21)
+     LUT4:I0->O            1   0.551   0.869  download_from_epp/EPP/busEppOut<1>60_SW0 (N393)
+     LUT4:I2->O            1   0.551   0.801  download_from_epp/EPP/busEppOut<1>60 (download_from_epp/EPP/busEppOut<1>)
+     IOBUF:I->IO               5.644          PDB_1_IOBUF (PDB<1>)
+    ----------------------------------------
+    Total                     14.856ns (8.568ns logic, 6.288ns route)
+                                       (57.7% logic, 42.3% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 18 / 8
+-------------------------------------------------------------------------
+Delay:               9.703ns (Levels of Logic = 4)
+  Source:            EPPASTB (PAD)
+  Destination:       PDB<3> (PAD)
+
+  Data Path: EPPASTB to PDB<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            14   0.821   1.526  EPPASTB_IBUF (EPPASTB_IBUF)
+     LUT4:I0->O            1   0.551   0.000  download_from_epp/EPP/busEppOut<3>831 (download_from_epp/EPP/busEppOut<3>83)
+     MUXF5:I1->O           1   0.360   0.801  download_from_epp/EPP/busEppOut<3>83_f5 (download_from_epp/EPP/busEppOut<3>)
+     IOBUF:I->IO               5.644          PDB_3_IOBUF (PDB<3>)
+    ----------------------------------------
+    Total                      9.703ns (7.376ns logic, 2.327ns route)
+                                       (76.0% logic, 24.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 14.99 secs
+ 
+--> 
+
+Total memory usage is 234904 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  261 (   0 filtered)
+Number of infos    :   17 (   0 filtered)
+
