@@ -1,0 +1,396 @@
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.xst" -ofn "Z:/Desktop/fpga_connection/FPGA_interface/music_player.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpga_connection_pin_assignment.ucf -p xc3s400-ft256-4 music_player.ngc music_player.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o music_player_map.ncd music_player.ngd music_player.pcf 
+par -w -intstyle ise -ol high -t 1 music_player_map.ncd music_player.ncd music_player.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr music_player.pcf -ucf fpga_connection_pin_assignment.ucf 
+bitgen -intstyle ise -f music_player.ut music_player.ncd 
