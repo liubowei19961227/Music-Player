@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Ryan\OneDrive - UNSW\Documents\2017 Semester 2\COMP3601 - Desgin Project A\Git Repositry\ISE Projects\music_player_v6\music_player_v5.ncd
+OUTFILE=C:\Users\Ryan\OneDrive - UNSW\Documents\2017 Semester 2\COMP3601 - Desgin Project A\Git Repositry\ISE Projects\music_player_v6\music_player_v5.bit
+FAMILY=Spartan3
+PART=xc3s400-4ft256
+WORKINGDIR=C:\Users\Ryan\OneDrive - UNSW\Documents\2017 Semester 2\COMP3601 - Desgin Project A\Git Repositry\ISE Projects\music_player_v6
+LICENSE=WebPack
+USER_INFO=211322493_0_0_855

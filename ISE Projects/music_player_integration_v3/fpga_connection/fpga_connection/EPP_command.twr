@@ -1,0 +1,746 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml EPP_command.twx EPP_command.ncd -o EPP_command.twr
+EPP_command.pcf
+
+Design file:              EPP_command.ncd
+Physical constraint file: EPP_command.pcf
+Device,package,speed:     xc3s400,ft256,-4 (PRODUCTION 1.39 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: ts_clk = PERIOD TIMEGRP "tnm_clk" 25 MHz HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 326724 paths analyzed, 4738 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  24.476ns.
+--------------------------------------------------------------------------------
+
+Paths for end point debug_music/note_length_counter_0/is_mute (SLICE_X8Y23.SR), 105625 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     15.524ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               debug_music/note_length_in_twelfths_3 (FF)
+  Destination:          debug_music/note_length_counter_0/is_mute (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      24.476ns (Levels of Logic = 12)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: debug_music/note_length_in_twelfths_3 to debug_music/note_length_counter_0/is_mute
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y36.XQ       Tcko                  0.720   debug_music/note_length_in_twelfths<3>
+                                                       debug_music/note_length_in_twelfths_3
+    MULT18X18_X0Y3.B3    net (fanout=2)        1.883   debug_music/note_length_in_twelfths<3>
+    MULT18X18_X0Y3.P17   Tmult                 3.860   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_submult_0
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_submult_0
+    SLICE_X5Y30.F2       net (fanout=1)        1.702   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_submult_0_17
+    SLICE_X5Y30.COUT     Topcyf                1.027   debug_music/note_length_counter_0/note_length_cc<17>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_lut<17>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<17>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<18>
+    SLICE_X5Y31.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<18>
+    SLICE_X5Y31.COUT     Tbyp                  0.128   debug_music/note_length_counter_0/note_length_cc<19>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<19>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<20>
+    SLICE_X5Y32.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<20>
+    SLICE_X5Y32.COUT     Tbyp                  0.128   debug_music/note_length_counter_0/note_length_cc<21>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<21>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<22>
+    SLICE_X5Y33.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<22>
+    SLICE_X5Y33.Y        Tciny                 0.923   debug_music/note_length_counter_0/note_length_cc<23>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<23>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_xor<24>
+    SLICE_X5Y37.F3       net (fanout=12)       2.031   debug_music/note_length_counter_0/note_length_cc<24>
+    SLICE_X5Y37.X        Tilo                  0.551   debug_music/note_length_counter_0/Madd_articulation_cc_addsub0001C21
+                                                       debug_music/note_length_counter_0/Madd_articulation_cc_addsub0001C211
+    SLICE_X4Y35.BY       net (fanout=1)        0.613   debug_music/note_length_counter_0/Madd_articulation_cc_addsub0001C21
+    SLICE_X4Y35.COUT     Tbycy                 0.895   debug_music/note_length_counter_0/articulation_cc_addsub0001<22>
+                                                       debug_music/note_length_counter_0/Madd_articulation_cc_addsub0001_Madd_cy<23>
+    SLICE_X4Y36.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Madd_articulation_cc_addsub0001_Madd_cy<23>
+    SLICE_X4Y36.COUT     Tbyp                  0.120   debug_music/note_length_counter_0/articulation_cc_addsub0001<24>
+                                                       debug_music/note_length_counter_0/Madd_articulation_cc_addsub0001_Madd_cy<24>
+                                                       debug_music/note_length_counter_0/Madd_articulation_cc_addsub0001_Madd_cy<25>
+    SLICE_X4Y37.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Madd_articulation_cc_addsub0001_Madd_cy<25>
+    SLICE_X4Y37.X        Tcinx                 0.904   debug_music/note_length_counter_0/articulation_cc_addsub0001<26>
+                                                       debug_music/note_length_counter_0/Madd_articulation_cc_addsub0001_Madd_xor<26>
+    SLICE_X7Y37.G1       net (fanout=2)        0.686   debug_music/note_length_counter_0/articulation_cc_addsub0001<26>
+    SLICE_X7Y37.Y        Tilo                  0.551   N165
+                                                       debug_music/note_length_counter_0/articulation_cc<26>1
+    SLICE_X6Y35.BX       net (fanout=1)        2.163   debug_music/note_length_counter_0/articulation_cc<26>
+    SLICE_X6Y35.COUT     Tbxcy                 0.906   debug_music/note_length_counter_0/is_mute_cmp_le0000
+                                                       debug_music/note_length_counter_0/Mcompar_is_mute_cmp_le0000_cy<26>
+                                                       debug_music/note_length_counter_0/Mcompar_is_mute_cmp_le0000_cy<27>
+    SLICE_X9Y22.G2       net (fanout=1)        1.710   debug_music/note_length_counter_0/is_mute_cmp_le0000
+    SLICE_X9Y22.Y        Tilo                  0.551   debug_music/note_length_counter_0/is_mute_or0000
+                                                       debug_music/note_length_counter_0/is_mute_or00001
+    SLICE_X8Y23.SR       net (fanout=1)        1.398   debug_music/note_length_counter_0/is_mute_or0000
+    SLICE_X8Y23.CLK      Tsrck                 1.026   debug_music/note_length_counter_0/is_mute
+                                                       debug_music/note_length_counter_0/is_mute
+    -------------------------------------------------  ---------------------------
+    Total                                     24.476ns (12.290ns logic, 12.186ns route)
+                                                       (50.2% logic, 49.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.587ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               debug_music/note_length_in_twelfths_3 (FF)
+  Destination:          debug_music/note_length_counter_0/is_mute (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      24.413ns (Levels of Logic = 9)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: debug_music/note_length_in_twelfths_3 to debug_music/note_length_counter_0/is_mute
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y36.XQ       Tcko                  0.720   debug_music/note_length_in_twelfths<3>
+                                                       debug_music/note_length_in_twelfths_3
+    MULT18X18_X0Y3.B3    net (fanout=2)        1.883   debug_music/note_length_in_twelfths<3>
+    MULT18X18_X0Y3.P23   Tmult                 4.285   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_submult_0
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_submult_0
+    SLICE_X5Y33.F1       net (fanout=1)        1.815   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_submult_0_23
+    SLICE_X5Y33.Y        Topy                  1.605   debug_music/note_length_counter_0/note_length_cc<23>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_lut<23>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<23>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_xor<24>
+    SLICE_X5Y37.F3       net (fanout=12)       2.031   debug_music/note_length_counter_0/note_length_cc<24>
+    SLICE_X5Y37.X        Tilo                  0.551   debug_music/note_length_counter_0/Madd_articulation_cc_addsub0001C21
+                                                       debug_music/note_length_counter_0/Madd_articulation_cc_addsub0001C211
+    SLICE_X4Y35.BY       net (fanout=1)        0.613   debug_music/note_length_counter_0/Madd_articulation_cc_addsub0001C21
+    SLICE_X4Y35.COUT     Tbycy                 0.895   debug_music/note_length_counter_0/articulation_cc_addsub0001<22>
+                                                       debug_music/note_length_counter_0/Madd_articulation_cc_addsub0001_Madd_cy<23>
+    SLICE_X4Y36.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Madd_articulation_cc_addsub0001_Madd_cy<23>
+    SLICE_X4Y36.COUT     Tbyp                  0.120   debug_music/note_length_counter_0/articulation_cc_addsub0001<24>
+                                                       debug_music/note_length_counter_0/Madd_articulation_cc_addsub0001_Madd_cy<24>
+                                                       debug_music/note_length_counter_0/Madd_articulation_cc_addsub0001_Madd_cy<25>
+    SLICE_X4Y37.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Madd_articulation_cc_addsub0001_Madd_cy<25>
+    SLICE_X4Y37.X        Tcinx                 0.904   debug_music/note_length_counter_0/articulation_cc_addsub0001<26>
+                                                       debug_music/note_length_counter_0/Madd_articulation_cc_addsub0001_Madd_xor<26>
+    SLICE_X7Y37.G1       net (fanout=2)        0.686   debug_music/note_length_counter_0/articulation_cc_addsub0001<26>
+    SLICE_X7Y37.Y        Tilo                  0.551   N165
+                                                       debug_music/note_length_counter_0/articulation_cc<26>1
+    SLICE_X6Y35.BX       net (fanout=1)        2.163   debug_music/note_length_counter_0/articulation_cc<26>
+    SLICE_X6Y35.COUT     Tbxcy                 0.906   debug_music/note_length_counter_0/is_mute_cmp_le0000
+                                                       debug_music/note_length_counter_0/Mcompar_is_mute_cmp_le0000_cy<26>
+                                                       debug_music/note_length_counter_0/Mcompar_is_mute_cmp_le0000_cy<27>
+    SLICE_X9Y22.G2       net (fanout=1)        1.710   debug_music/note_length_counter_0/is_mute_cmp_le0000
+    SLICE_X9Y22.Y        Tilo                  0.551   debug_music/note_length_counter_0/is_mute_or0000
+                                                       debug_music/note_length_counter_0/is_mute_or00001
+    SLICE_X8Y23.SR       net (fanout=1)        1.398   debug_music/note_length_counter_0/is_mute_or0000
+    SLICE_X8Y23.CLK      Tsrck                 1.026   debug_music/note_length_counter_0/is_mute
+                                                       debug_music/note_length_counter_0/is_mute
+    -------------------------------------------------  ---------------------------
+    Total                                     24.413ns (12.114ns logic, 12.299ns route)
+                                                       (49.6% logic, 50.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.594ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               debug_music/note_length_in_twelfths_2 (FF)
+  Destination:          debug_music/note_length_counter_0/is_mute (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      24.406ns (Levels of Logic = 12)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: debug_music/note_length_in_twelfths_2 to debug_music/note_length_counter_0/is_mute
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y36.YQ       Tcko                  0.720   debug_music/note_length_in_twelfths<3>
+                                                       debug_music/note_length_in_twelfths_2
+    MULT18X18_X0Y3.B2    net (fanout=2)        1.813   debug_music/note_length_in_twelfths<2>
+    MULT18X18_X0Y3.P17   Tmult                 3.860   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_submult_0
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_submult_0
+    SLICE_X5Y30.F2       net (fanout=1)        1.702   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_submult_0_17
+    SLICE_X5Y30.COUT     Topcyf                1.027   debug_music/note_length_counter_0/note_length_cc<17>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_lut<17>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<17>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<18>
+    SLICE_X5Y31.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<18>
+    SLICE_X5Y31.COUT     Tbyp                  0.128   debug_music/note_length_counter_0/note_length_cc<19>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<19>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<20>
+    SLICE_X5Y32.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<20>
+    SLICE_X5Y32.COUT     Tbyp                  0.128   debug_music/note_length_counter_0/note_length_cc<21>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<21>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<22>
+    SLICE_X5Y33.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<22>
+    SLICE_X5Y33.Y        Tciny                 0.923   debug_music/note_length_counter_0/note_length_cc<23>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<23>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_xor<24>
+    SLICE_X5Y37.F3       net (fanout=12)       2.031   debug_music/note_length_counter_0/note_length_cc<24>
+    SLICE_X5Y37.X        Tilo                  0.551   debug_music/note_length_counter_0/Madd_articulation_cc_addsub0001C21
+                                                       debug_music/note_length_counter_0/Madd_articulation_cc_addsub0001C211
+    SLICE_X4Y35.BY       net (fanout=1)        0.613   debug_music/note_length_counter_0/Madd_articulation_cc_addsub0001C21
+    SLICE_X4Y35.COUT     Tbycy                 0.895   debug_music/note_length_counter_0/articulation_cc_addsub0001<22>
+                                                       debug_music/note_length_counter_0/Madd_articulation_cc_addsub0001_Madd_cy<23>
+    SLICE_X4Y36.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Madd_articulation_cc_addsub0001_Madd_cy<23>
+    SLICE_X4Y36.COUT     Tbyp                  0.120   debug_music/note_length_counter_0/articulation_cc_addsub0001<24>
+                                                       debug_music/note_length_counter_0/Madd_articulation_cc_addsub0001_Madd_cy<24>
+                                                       debug_music/note_length_counter_0/Madd_articulation_cc_addsub0001_Madd_cy<25>
+    SLICE_X4Y37.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Madd_articulation_cc_addsub0001_Madd_cy<25>
+    SLICE_X4Y37.X        Tcinx                 0.904   debug_music/note_length_counter_0/articulation_cc_addsub0001<26>
+                                                       debug_music/note_length_counter_0/Madd_articulation_cc_addsub0001_Madd_xor<26>
+    SLICE_X7Y37.G1       net (fanout=2)        0.686   debug_music/note_length_counter_0/articulation_cc_addsub0001<26>
+    SLICE_X7Y37.Y        Tilo                  0.551   N165
+                                                       debug_music/note_length_counter_0/articulation_cc<26>1
+    SLICE_X6Y35.BX       net (fanout=1)        2.163   debug_music/note_length_counter_0/articulation_cc<26>
+    SLICE_X6Y35.COUT     Tbxcy                 0.906   debug_music/note_length_counter_0/is_mute_cmp_le0000
+                                                       debug_music/note_length_counter_0/Mcompar_is_mute_cmp_le0000_cy<26>
+                                                       debug_music/note_length_counter_0/Mcompar_is_mute_cmp_le0000_cy<27>
+    SLICE_X9Y22.G2       net (fanout=1)        1.710   debug_music/note_length_counter_0/is_mute_cmp_le0000
+    SLICE_X9Y22.Y        Tilo                  0.551   debug_music/note_length_counter_0/is_mute_or0000
+                                                       debug_music/note_length_counter_0/is_mute_or00001
+    SLICE_X8Y23.SR       net (fanout=1)        1.398   debug_music/note_length_counter_0/is_mute_or0000
+    SLICE_X8Y23.CLK      Tsrck                 1.026   debug_music/note_length_counter_0/is_mute
+                                                       debug_music/note_length_counter_0/is_mute
+    -------------------------------------------------  ---------------------------
+    Total                                     24.406ns (12.290ns logic, 12.116ns route)
+                                                       (50.4% logic, 49.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point debug_music/note_length_counter_0/note_length_partial_20 (SLICE_X2Y30.SR), 6181 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     17.514ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               debug_music/note_length_in_twelfths_3 (FF)
+  Destination:          debug_music/note_length_counter_0/note_length_partial_20 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      22.486ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: debug_music/note_length_in_twelfths_3 to debug_music/note_length_counter_0/note_length_partial_20
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y36.XQ       Tcko                  0.720   debug_music/note_length_in_twelfths<3>
+                                                       debug_music/note_length_in_twelfths_3
+    MULT18X18_X0Y3.B3    net (fanout=2)        1.883   debug_music/note_length_in_twelfths<3>
+    MULT18X18_X0Y3.P17   Tmult                 3.860   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_submult_0
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_submult_0
+    SLICE_X5Y30.F2       net (fanout=1)        1.702   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_submult_0_17
+    SLICE_X5Y30.COUT     Topcyf                1.027   debug_music/note_length_counter_0/note_length_cc<17>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_lut<17>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<17>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<18>
+    SLICE_X5Y31.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<18>
+    SLICE_X5Y31.COUT     Tbyp                  0.128   debug_music/note_length_counter_0/note_length_cc<19>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<19>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<20>
+    SLICE_X5Y32.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<20>
+    SLICE_X5Y32.X        Tcinx                 0.904   debug_music/note_length_counter_0/note_length_cc<21>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_xor<21>
+    SLICE_X0Y28.G2       net (fanout=12)       1.430   debug_music/note_length_counter_0/note_length_cc<21>
+    SLICE_X0Y28.COUT     Topcyg                1.096   debug_music/note_length_counter_0/is_new_note_sub0000<20>
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_lut<21>_INV_0
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<21>
+    SLICE_X0Y29.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<21>
+    SLICE_X0Y29.COUT     Tbyp                  0.120   debug_music/note_length_counter_0/is_new_note_sub0000<22>
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<22>
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<23>
+    SLICE_X0Y30.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<23>
+    SLICE_X0Y30.Y        Tciny                 0.923   debug_music/note_length_counter_0/is_new_note_sub0000<24>
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<24>
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_xor<25>
+    SLICE_X1Y30.G1       net (fanout=1)        0.340   debug_music/note_length_counter_0/is_new_note_sub0000<25>
+    SLICE_X1Y30.COUT     Topcyg                1.039   debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<25>
+                                                       debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_lut<25>
+                                                       debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<25>
+    SLICE_X1Y31.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<25>
+    SLICE_X1Y31.COUT     Tbyp                  0.128   debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<27>
+                                                       debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<26>
+                                                       debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<27>
+    SLICE_X2Y9.F3        net (fanout=2)        2.814   debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<27>
+    SLICE_X2Y9.X         Tilo                  0.608   debug_music/note_length_counter_0/note_length_partial_or0000
+                                                       debug_music/note_length_counter_0/note_length_partial_or00001
+    SLICE_X2Y30.SR       net (fanout=14)       2.738   debug_music/note_length_counter_0/note_length_partial_or0000
+    SLICE_X2Y30.CLK      Tsrck                 1.026   debug_music/note_length_counter_0/note_length_partial<20>
+                                                       debug_music/note_length_counter_0/note_length_partial_20
+    -------------------------------------------------  ---------------------------
+    Total                                     22.486ns (11.579ns logic, 10.907ns route)
+                                                       (51.5% logic, 48.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     17.531ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               debug_music/note_length_in_twelfths_3 (FF)
+  Destination:          debug_music/note_length_counter_0/note_length_partial_20 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      22.469ns (Levels of Logic = 7)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: debug_music/note_length_in_twelfths_3 to debug_music/note_length_counter_0/note_length_partial_20
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y36.XQ       Tcko                  0.720   debug_music/note_length_in_twelfths<3>
+                                                       debug_music/note_length_in_twelfths_3
+    MULT18X18_X0Y3.B3    net (fanout=2)        1.883   debug_music/note_length_in_twelfths<3>
+    MULT18X18_X0Y3.P23   Tmult                 4.285   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_submult_0
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_submult_0
+    SLICE_X5Y33.F1       net (fanout=1)        1.815   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_submult_0_23
+    SLICE_X5Y33.COUT     Topcyf                1.027   debug_music/note_length_counter_0/note_length_cc<23>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_lut<23>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<23>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<24>
+    SLICE_X5Y34.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<24>
+    SLICE_X5Y34.X        Tcinx                 0.904   debug_music/note_length_counter_0/note_length_cc<25>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_xor<25>
+    SLICE_X0Y30.G2       net (fanout=12)       1.448   debug_music/note_length_counter_0/note_length_cc<25>
+    SLICE_X0Y30.COUT     Topcyg                1.096   debug_music/note_length_counter_0/is_new_note_sub0000<24>
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_lut<25>_INV_0
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<25>
+    SLICE_X0Y31.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<25>
+    SLICE_X0Y31.Y        Tciny                 0.923   debug_music/note_length_counter_0/is_new_note_sub0000<26>
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<26>
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_xor<27>
+    SLICE_X1Y31.G2       net (fanout=1)        0.143   debug_music/note_length_counter_0/is_new_note_sub0000<27>
+    SLICE_X1Y31.COUT     Topcyg                1.039   debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<27>
+                                                       debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_lut<27>
+                                                       debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<27>
+    SLICE_X2Y9.F3        net (fanout=2)        2.814   debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<27>
+    SLICE_X2Y9.X         Tilo                  0.608   debug_music/note_length_counter_0/note_length_partial_or0000
+                                                       debug_music/note_length_counter_0/note_length_partial_or00001
+    SLICE_X2Y30.SR       net (fanout=14)       2.738   debug_music/note_length_counter_0/note_length_partial_or0000
+    SLICE_X2Y30.CLK      Tsrck                 1.026   debug_music/note_length_counter_0/note_length_partial<20>
+                                                       debug_music/note_length_counter_0/note_length_partial_20
+    -------------------------------------------------  ---------------------------
+    Total                                     22.469ns (11.628ns logic, 10.841ns route)
+                                                       (51.8% logic, 48.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     17.584ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               debug_music/note_length_in_twelfths_2 (FF)
+  Destination:          debug_music/note_length_counter_0/note_length_partial_20 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      22.416ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: debug_music/note_length_in_twelfths_2 to debug_music/note_length_counter_0/note_length_partial_20
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y36.YQ       Tcko                  0.720   debug_music/note_length_in_twelfths<3>
+                                                       debug_music/note_length_in_twelfths_2
+    MULT18X18_X0Y3.B2    net (fanout=2)        1.813   debug_music/note_length_in_twelfths<2>
+    MULT18X18_X0Y3.P17   Tmult                 3.860   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_submult_0
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_submult_0
+    SLICE_X5Y30.F2       net (fanout=1)        1.702   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_submult_0_17
+    SLICE_X5Y30.COUT     Topcyf                1.027   debug_music/note_length_counter_0/note_length_cc<17>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_lut<17>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<17>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<18>
+    SLICE_X5Y31.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<18>
+    SLICE_X5Y31.COUT     Tbyp                  0.128   debug_music/note_length_counter_0/note_length_cc<19>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<19>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<20>
+    SLICE_X5Y32.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<20>
+    SLICE_X5Y32.X        Tcinx                 0.904   debug_music/note_length_counter_0/note_length_cc<21>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_xor<21>
+    SLICE_X0Y28.G2       net (fanout=12)       1.430   debug_music/note_length_counter_0/note_length_cc<21>
+    SLICE_X0Y28.COUT     Topcyg                1.096   debug_music/note_length_counter_0/is_new_note_sub0000<20>
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_lut<21>_INV_0
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<21>
+    SLICE_X0Y29.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<21>
+    SLICE_X0Y29.COUT     Tbyp                  0.120   debug_music/note_length_counter_0/is_new_note_sub0000<22>
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<22>
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<23>
+    SLICE_X0Y30.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<23>
+    SLICE_X0Y30.Y        Tciny                 0.923   debug_music/note_length_counter_0/is_new_note_sub0000<24>
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<24>
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_xor<25>
+    SLICE_X1Y30.G1       net (fanout=1)        0.340   debug_music/note_length_counter_0/is_new_note_sub0000<25>
+    SLICE_X1Y30.COUT     Topcyg                1.039   debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<25>
+                                                       debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_lut<25>
+                                                       debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<25>
+    SLICE_X1Y31.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<25>
+    SLICE_X1Y31.COUT     Tbyp                  0.128   debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<27>
+                                                       debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<26>
+                                                       debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<27>
+    SLICE_X2Y9.F3        net (fanout=2)        2.814   debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<27>
+    SLICE_X2Y9.X         Tilo                  0.608   debug_music/note_length_counter_0/note_length_partial_or0000
+                                                       debug_music/note_length_counter_0/note_length_partial_or00001
+    SLICE_X2Y30.SR       net (fanout=14)       2.738   debug_music/note_length_counter_0/note_length_partial_or0000
+    SLICE_X2Y30.CLK      Tsrck                 1.026   debug_music/note_length_counter_0/note_length_partial<20>
+                                                       debug_music/note_length_counter_0/note_length_partial_20
+    -------------------------------------------------  ---------------------------
+    Total                                     22.416ns (11.579ns logic, 10.837ns route)
+                                                       (51.7% logic, 48.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point debug_music/note_length_counter_0/note_length_partial_21 (SLICE_X2Y30.SR), 6181 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     17.514ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               debug_music/note_length_in_twelfths_3 (FF)
+  Destination:          debug_music/note_length_counter_0/note_length_partial_21 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      22.486ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: debug_music/note_length_in_twelfths_3 to debug_music/note_length_counter_0/note_length_partial_21
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y36.XQ       Tcko                  0.720   debug_music/note_length_in_twelfths<3>
+                                                       debug_music/note_length_in_twelfths_3
+    MULT18X18_X0Y3.B3    net (fanout=2)        1.883   debug_music/note_length_in_twelfths<3>
+    MULT18X18_X0Y3.P17   Tmult                 3.860   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_submult_0
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_submult_0
+    SLICE_X5Y30.F2       net (fanout=1)        1.702   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_submult_0_17
+    SLICE_X5Y30.COUT     Topcyf                1.027   debug_music/note_length_counter_0/note_length_cc<17>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_lut<17>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<17>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<18>
+    SLICE_X5Y31.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<18>
+    SLICE_X5Y31.COUT     Tbyp                  0.128   debug_music/note_length_counter_0/note_length_cc<19>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<19>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<20>
+    SLICE_X5Y32.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<20>
+    SLICE_X5Y32.X        Tcinx                 0.904   debug_music/note_length_counter_0/note_length_cc<21>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_xor<21>
+    SLICE_X0Y28.G2       net (fanout=12)       1.430   debug_music/note_length_counter_0/note_length_cc<21>
+    SLICE_X0Y28.COUT     Topcyg                1.096   debug_music/note_length_counter_0/is_new_note_sub0000<20>
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_lut<21>_INV_0
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<21>
+    SLICE_X0Y29.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<21>
+    SLICE_X0Y29.COUT     Tbyp                  0.120   debug_music/note_length_counter_0/is_new_note_sub0000<22>
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<22>
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<23>
+    SLICE_X0Y30.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<23>
+    SLICE_X0Y30.Y        Tciny                 0.923   debug_music/note_length_counter_0/is_new_note_sub0000<24>
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<24>
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_xor<25>
+    SLICE_X1Y30.G1       net (fanout=1)        0.340   debug_music/note_length_counter_0/is_new_note_sub0000<25>
+    SLICE_X1Y30.COUT     Topcyg                1.039   debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<25>
+                                                       debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_lut<25>
+                                                       debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<25>
+    SLICE_X1Y31.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<25>
+    SLICE_X1Y31.COUT     Tbyp                  0.128   debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<27>
+                                                       debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<26>
+                                                       debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<27>
+    SLICE_X2Y9.F3        net (fanout=2)        2.814   debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<27>
+    SLICE_X2Y9.X         Tilo                  0.608   debug_music/note_length_counter_0/note_length_partial_or0000
+                                                       debug_music/note_length_counter_0/note_length_partial_or00001
+    SLICE_X2Y30.SR       net (fanout=14)       2.738   debug_music/note_length_counter_0/note_length_partial_or0000
+    SLICE_X2Y30.CLK      Tsrck                 1.026   debug_music/note_length_counter_0/note_length_partial<20>
+                                                       debug_music/note_length_counter_0/note_length_partial_21
+    -------------------------------------------------  ---------------------------
+    Total                                     22.486ns (11.579ns logic, 10.907ns route)
+                                                       (51.5% logic, 48.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     17.531ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               debug_music/note_length_in_twelfths_3 (FF)
+  Destination:          debug_music/note_length_counter_0/note_length_partial_21 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      22.469ns (Levels of Logic = 7)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: debug_music/note_length_in_twelfths_3 to debug_music/note_length_counter_0/note_length_partial_21
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y36.XQ       Tcko                  0.720   debug_music/note_length_in_twelfths<3>
+                                                       debug_music/note_length_in_twelfths_3
+    MULT18X18_X0Y3.B3    net (fanout=2)        1.883   debug_music/note_length_in_twelfths<3>
+    MULT18X18_X0Y3.P23   Tmult                 4.285   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_submult_0
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_submult_0
+    SLICE_X5Y33.F1       net (fanout=1)        1.815   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_submult_0_23
+    SLICE_X5Y33.COUT     Topcyf                1.027   debug_music/note_length_counter_0/note_length_cc<23>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_lut<23>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<23>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<24>
+    SLICE_X5Y34.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<24>
+    SLICE_X5Y34.X        Tcinx                 0.904   debug_music/note_length_counter_0/note_length_cc<25>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_xor<25>
+    SLICE_X0Y30.G2       net (fanout=12)       1.448   debug_music/note_length_counter_0/note_length_cc<25>
+    SLICE_X0Y30.COUT     Topcyg                1.096   debug_music/note_length_counter_0/is_new_note_sub0000<24>
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_lut<25>_INV_0
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<25>
+    SLICE_X0Y31.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<25>
+    SLICE_X0Y31.Y        Tciny                 0.923   debug_music/note_length_counter_0/is_new_note_sub0000<26>
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<26>
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_xor<27>
+    SLICE_X1Y31.G2       net (fanout=1)        0.143   debug_music/note_length_counter_0/is_new_note_sub0000<27>
+    SLICE_X1Y31.COUT     Topcyg                1.039   debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<27>
+                                                       debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_lut<27>
+                                                       debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<27>
+    SLICE_X2Y9.F3        net (fanout=2)        2.814   debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<27>
+    SLICE_X2Y9.X         Tilo                  0.608   debug_music/note_length_counter_0/note_length_partial_or0000
+                                                       debug_music/note_length_counter_0/note_length_partial_or00001
+    SLICE_X2Y30.SR       net (fanout=14)       2.738   debug_music/note_length_counter_0/note_length_partial_or0000
+    SLICE_X2Y30.CLK      Tsrck                 1.026   debug_music/note_length_counter_0/note_length_partial<20>
+                                                       debug_music/note_length_counter_0/note_length_partial_21
+    -------------------------------------------------  ---------------------------
+    Total                                     22.469ns (11.628ns logic, 10.841ns route)
+                                                       (51.8% logic, 48.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     17.584ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               debug_music/note_length_in_twelfths_2 (FF)
+  Destination:          debug_music/note_length_counter_0/note_length_partial_21 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      22.416ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: debug_music/note_length_in_twelfths_2 to debug_music/note_length_counter_0/note_length_partial_21
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y36.YQ       Tcko                  0.720   debug_music/note_length_in_twelfths<3>
+                                                       debug_music/note_length_in_twelfths_2
+    MULT18X18_X0Y3.B2    net (fanout=2)        1.813   debug_music/note_length_in_twelfths<2>
+    MULT18X18_X0Y3.P17   Tmult                 3.860   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_submult_0
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_submult_0
+    SLICE_X5Y30.F2       net (fanout=1)        1.702   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_submult_0_17
+    SLICE_X5Y30.COUT     Topcyf                1.027   debug_music/note_length_counter_0/note_length_cc<17>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_lut<17>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<17>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<18>
+    SLICE_X5Y31.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<18>
+    SLICE_X5Y31.COUT     Tbyp                  0.128   debug_music/note_length_counter_0/note_length_cc<19>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<19>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<20>
+    SLICE_X5Y32.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_cy<20>
+    SLICE_X5Y32.X        Tcinx                 0.904   debug_music/note_length_counter_0/note_length_cc<21>
+                                                       debug_music/note_length_counter_0/Mmult_note_length_cc_mult0000_Madd_xor<21>
+    SLICE_X0Y28.G2       net (fanout=12)       1.430   debug_music/note_length_counter_0/note_length_cc<21>
+    SLICE_X0Y28.COUT     Topcyg                1.096   debug_music/note_length_counter_0/is_new_note_sub0000<20>
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_lut<21>_INV_0
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<21>
+    SLICE_X0Y29.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<21>
+    SLICE_X0Y29.COUT     Tbyp                  0.120   debug_music/note_length_counter_0/is_new_note_sub0000<22>
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<22>
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<23>
+    SLICE_X0Y30.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<23>
+    SLICE_X0Y30.Y        Tciny                 0.923   debug_music/note_length_counter_0/is_new_note_sub0000<24>
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_cy<24>
+                                                       debug_music/note_length_counter_0/Msub_is_new_note_sub0000_xor<25>
+    SLICE_X1Y30.G1       net (fanout=1)        0.340   debug_music/note_length_counter_0/is_new_note_sub0000<25>
+    SLICE_X1Y30.COUT     Topcyg                1.039   debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<25>
+                                                       debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_lut<25>
+                                                       debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<25>
+    SLICE_X1Y31.CIN      net (fanout=1)        0.000   debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<25>
+    SLICE_X1Y31.COUT     Tbyp                  0.128   debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<27>
+                                                       debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<26>
+                                                       debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<27>
+    SLICE_X2Y9.F3        net (fanout=2)        2.814   debug_music/note_length_counter_0/Mcompar_is_new_note_cmp_lt0000_cy<27>
+    SLICE_X2Y9.X         Tilo                  0.608   debug_music/note_length_counter_0/note_length_partial_or0000
+                                                       debug_music/note_length_counter_0/note_length_partial_or00001
+    SLICE_X2Y30.SR       net (fanout=14)       2.738   debug_music/note_length_counter_0/note_length_partial_or0000
+    SLICE_X2Y30.CLK      Tsrck                 1.026   debug_music/note_length_counter_0/note_length_partial<20>
+                                                       debug_music/note_length_counter_0/note_length_partial_21
+    -------------------------------------------------  ---------------------------
+    Total                                     22.416ns (11.579ns logic, 10.837ns route)
+                                                       (51.7% logic, 48.3% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: ts_clk = PERIOD TIMEGRP "tnm_clk" 25 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point download_from_epp/Address_register/output_1 (SLICE_X35Y31.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.806ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               download_from_epp/ram_addr_counter_1 (FF)
+  Destination:          download_from_epp/Address_register/output_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.806ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 40.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: download_from_epp/ram_addr_counter_1 to download_from_epp/Address_register/output_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X34Y30.YQ      Tcko                  0.576   download_from_epp/ram_addr_counter<0>
+                                                       download_from_epp/ram_addr_counter_1
+    SLICE_X35Y31.BX      net (fanout=2)        0.513   download_from_epp/ram_addr_counter<1>
+    SLICE_X35Y31.CLK     Tckdi       (-Th)     0.283   download_from_epp/Address_register/output<1>
+                                                       download_from_epp/Address_register/output_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.806ns (0.293ns logic, 0.513ns route)
+                                                       (36.4% logic, 63.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point download_from_epp/Address_register/output_5 (SLICE_X35Y33.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.806ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               download_from_epp/ram_addr_counter_5 (FF)
+  Destination:          download_from_epp/Address_register/output_5 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.806ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 40.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: download_from_epp/ram_addr_counter_5 to download_from_epp/Address_register/output_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X34Y32.YQ      Tcko                  0.576   download_from_epp/ram_addr_counter<4>
+                                                       download_from_epp/ram_addr_counter_5
+    SLICE_X35Y33.BX      net (fanout=2)        0.513   download_from_epp/ram_addr_counter<5>
+    SLICE_X35Y33.CLK     Tckdi       (-Th)     0.283   download_from_epp/Address_register/output<5>
+                                                       download_from_epp/Address_register/output_5
+    -------------------------------------------------  ---------------------------
+    Total                                      0.806ns (0.293ns logic, 0.513ns route)
+                                                       (36.4% logic, 63.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point download_from_epp/Data_register/output_1 (SLICE_X51Y2.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.824ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               download_from_epp/EPP/data_output_1 (FF)
+  Destination:          download_from_epp/Data_register/output_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.824ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 40.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: download_from_epp/EPP/data_output_1 to download_from_epp/Data_register/output_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X49Y2.XQ       Tcko                  0.576   download_from_epp/EPP/data_output<1>
+                                                       download_from_epp/EPP/data_output_1
+    SLICE_X51Y2.BX       net (fanout=2)        0.531   download_from_epp/EPP/data_output<1>
+    SLICE_X51Y2.CLK      Tckdi       (-Th)     0.283   download_from_epp/Data_register/output<1>
+                                                       download_from_epp/Data_register/output_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.824ns (0.293ns logic, 0.531ns route)
+                                                       (35.6% logic, 64.4% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: ts_clk = PERIOD TIMEGRP "tnm_clk" 25 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 38.428ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 40.000ns
+  Low pulse: 20.000ns
+  Low pulse limit: 0.786ns (Tcl)
+  Physical resource: ram_part/ram_159_1/CLK
+  Logical resource: ram_part/ram_159_1/CK
+  Location pin: SLICE_X18Y14.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 38.428ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 40.000ns
+  High pulse: 20.000ns
+  High pulse limit: 0.786ns (Tch)
+  Physical resource: ram_part/ram_159_1/CLK
+  Logical resource: ram_part/ram_159_1/CK
+  Location pin: SLICE_X18Y14.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 38.428ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 40.000ns
+  Low pulse: 20.000ns
+  Low pulse limit: 0.786ns (Tcl)
+  Physical resource: ram_part/ram_159_1/CLK
+  Logical resource: ram_part/ram_159_0/CK
+  Location pin: SLICE_X18Y14.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   24.476|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 326724 paths, 0 nets, and 20738 connections
+
+Design statistics:
+   Minimum period:  24.476ns{1}   (Maximum frequency:  40.856MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Fri Sep 22 16:15:33 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 144 MB
+
+
+

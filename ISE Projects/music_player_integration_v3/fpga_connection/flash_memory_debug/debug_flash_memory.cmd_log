@@ -1,0 +1,507 @@
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 debug_flash_memory.ngc debug_flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o debug_flash_memory_map.ncd debug_flash_memory.ngd debug_flash_memory.pcf 
+par -w -intstyle ise -pl high -rl high -xe n -t 1 debug_flash_memory_map.ncd debug_flash_memory.ncd debug_flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml debug_flash_memory.twx debug_flash_memory.ncd -o debug_flash_memory.twr debug_flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f debug_flash_memory.ut debug_flash_memory.ncd 

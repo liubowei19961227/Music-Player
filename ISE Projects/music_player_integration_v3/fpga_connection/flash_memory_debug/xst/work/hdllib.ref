@@ -1,0 +1,4 @@
+EN debug_flash_memory NULL "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.vhd" sub00/vhpl02 1505702885
+AR flash_memory behavioral "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory_debug/flash_memory.vhd" sub00/vhpl01 1505702884
+EN flash_memory NULL "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory_debug/flash_memory.vhd" sub00/vhpl00 1505702883
+AR debug_flash_memory behavioral "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.vhd" sub00/vhpl03 1505702886

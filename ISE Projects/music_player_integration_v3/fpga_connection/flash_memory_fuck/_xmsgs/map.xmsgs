@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="MapLib" num="562" delta="old" >No environment variables are currently set.
+</msg>
+
+<msg type="info" file="LIT" num="244" delta="old" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
+</msg>
+
+<msg type="warning" file="Pack" num="1542" delta="old" >The register <arg fmt="%s" index="1">read_data_sig_0</arg> has the property IOB=TRUE, but was not packed into the output side of an I/O component. <arg fmt="%z" index="2">The register symbol read_data_sig_0 has loads outside the I/O component.
+The register symbol read_data_sig_0 has loads outside the I/O component.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1542" delta="old" >The register <arg fmt="%s" index="1">read_data_sig_1</arg> has the property IOB=TRUE, but was not packed into the output side of an I/O component. <arg fmt="%z" index="2">The register symbol read_data_sig_1 has loads outside the I/O component.
+The register symbol read_data_sig_1 has loads outside the I/O component.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1542" delta="old" >The register <arg fmt="%s" index="1">read_data_sig_2</arg> has the property IOB=TRUE, but was not packed into the output side of an I/O component. <arg fmt="%z" index="2">The register symbol read_data_sig_2 has loads outside the I/O component.
+The register symbol read_data_sig_2 has loads outside the I/O component.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1542" delta="old" >The register <arg fmt="%s" index="1">read_data_sig_3</arg> has the property IOB=TRUE, but was not packed into the output side of an I/O component. <arg fmt="%z" index="2">The register symbol read_data_sig_3 has loads outside the I/O component.
+The register symbol read_data_sig_3 has loads outside the I/O component.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1542" delta="old" >The register <arg fmt="%s" index="1">read_data_sig_4</arg> has the property IOB=TRUE, but was not packed into the output side of an I/O component. <arg fmt="%z" index="2">The register symbol read_data_sig_4 has loads outside the I/O component.
+The register symbol read_data_sig_4 has loads outside the I/O component.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1542" delta="new" >The register <arg fmt="%s" index="1">read_data_sig_5</arg> has the property IOB=TRUE, but was not packed into the output side of an I/O component. <arg fmt="%z" index="2">The register symbol read_data_sig_5 has loads outside the I/O component.
+The register symbol read_data_sig_5 has loads outside the I/O component.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1542" delta="old" >The register <arg fmt="%s" index="1">read_data_sig_6</arg> has the property IOB=TRUE, but was not packed into the output side of an I/O component. <arg fmt="%z" index="2">The register symbol read_data_sig_6 has loads outside the I/O component.
+The register symbol read_data_sig_6 has loads outside the I/O component.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1542" delta="old" >The register <arg fmt="%s" index="1">read_data_sig_7</arg> has the property IOB=TRUE, but was not packed into the output side of an I/O component. <arg fmt="%z" index="2">The register symbol read_data_sig_7 has loads outside the I/O component.
+The register symbol read_data_sig_7 has loads outside the I/O component.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1542" delta="old" >The register <arg fmt="%s" index="1">read_data_sig_0</arg> has the property IOB=TRUE, but was not packed into the output side of an I/O component. <arg fmt="%z" index="2">The register symbol read_data_sig_0 has loads outside the I/O component.
+The register symbol read_data_sig_0 has loads outside the I/O component.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1542" delta="old" >The register <arg fmt="%s" index="1">read_data_sig_1</arg> has the property IOB=TRUE, but was not packed into the output side of an I/O component. <arg fmt="%z" index="2">The register symbol read_data_sig_1 has loads outside the I/O component.
+The register symbol read_data_sig_1 has loads outside the I/O component.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1542" delta="old" >The register <arg fmt="%s" index="1">read_data_sig_2</arg> has the property IOB=TRUE, but was not packed into the output side of an I/O component. <arg fmt="%z" index="2">The register symbol read_data_sig_2 has loads outside the I/O component.
+The register symbol read_data_sig_2 has loads outside the I/O component.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1542" delta="old" >The register <arg fmt="%s" index="1">read_data_sig_3</arg> has the property IOB=TRUE, but was not packed into the output side of an I/O component. <arg fmt="%z" index="2">The register symbol read_data_sig_3 has loads outside the I/O component.
+The register symbol read_data_sig_3 has loads outside the I/O component.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1542" delta="old" >The register <arg fmt="%s" index="1">read_data_sig_4</arg> has the property IOB=TRUE, but was not packed into the output side of an I/O component. <arg fmt="%z" index="2">The register symbol read_data_sig_4 has loads outside the I/O component.
+The register symbol read_data_sig_4 has loads outside the I/O component.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1542" delta="new" >The register <arg fmt="%s" index="1">read_data_sig_5</arg> has the property IOB=TRUE, but was not packed into the output side of an I/O component. <arg fmt="%z" index="2">The register symbol read_data_sig_5 has loads outside the I/O component.
+The register symbol read_data_sig_5 has loads outside the I/O component.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1542" delta="old" >The register <arg fmt="%s" index="1">read_data_sig_6</arg> has the property IOB=TRUE, but was not packed into the output side of an I/O component. <arg fmt="%z" index="2">The register symbol read_data_sig_6 has loads outside the I/O component.
+The register symbol read_data_sig_6 has loads outside the I/O component.</arg>
+</msg>
+
+<msg type="warning" file="Pack" num="1542" delta="old" >The register <arg fmt="%s" index="1">read_data_sig_7</arg> has the property IOB=TRUE, but was not packed into the output side of an I/O component. <arg fmt="%z" index="2">The register symbol read_data_sig_7 has loads outside the I/O component.
+The register symbol read_data_sig_7 has loads outside the I/O component.</arg>
+</msg>
+
+</messages>
+

@@ -1,0 +1,2 @@
+vhdl work "flash_memory.vhd"
+vhdl work "debug_flash_memory.vhd"

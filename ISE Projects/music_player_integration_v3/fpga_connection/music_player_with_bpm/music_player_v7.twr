@@ -1,0 +1,1543 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml music_player_v7.twx music_player_v7.ncd -o
+music_player_v7.twr music_player_v7.pcf -ucf nexys.ucf
+
+Design file:              music_player_v7.ncd
+Physical constraint file: music_player_v7.pcf
+Device,package,speed:     xc3s400,ft256,-4 (PRODUCTION 1.39 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: ts_clk = PERIOD TIMEGRP "tnm_clk" 25 MHz HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 1785445655737 paths analyzed, 1239 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  39.966ns.
+--------------------------------------------------------------------------------
+
+Paths for end point x_note_length_counter/is_mute (SLICE_X12Y38.BY), 91918607512 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.034ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               bpm/beat_array0_3_9 (FF)
+  Destination:          x_note_length_counter/is_mute (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      39.947ns (Levels of Logic = 24)
+  Clock Path Skew:      -0.019ns (0.435 - 0.454)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: bpm/beat_array0_3_9 to x_note_length_counter/is_mute
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y7.XQ        Tcko                  0.720   bpm/beat_array0_3<9>
+                                                       bpm/beat_array0_3_9
+    SLICE_X5Y6.G2        net (fanout=1)        1.580   bpm/beat_array0_3<9>
+    SLICE_X5Y6.COUT      Topcyg                1.039   bpm/ADDERTREE_INTERNAL_Madd_8
+                                                       bpm/ADDERTREE_INTERNAL_Madd_lut<9>
+                                                       bpm/ADDERTREE_INTERNAL_Madd_cy<9>
+    SLICE_X5Y7.CIN       net (fanout=1)        0.000   bpm/ADDERTREE_INTERNAL_Madd_cy<9>
+    SLICE_X5Y7.COUT      Tbyp                  0.128   bpm/ADDERTREE_INTERNAL_Madd_10
+                                                       bpm/ADDERTREE_INTERNAL_Madd_cy<10>
+                                                       bpm/ADDERTREE_INTERNAL_Madd_cy<11>
+    SLICE_X5Y8.CIN       net (fanout=1)        0.000   bpm/ADDERTREE_INTERNAL_Madd_cy<11>
+    SLICE_X5Y8.X         Tcinx                 0.904   bpm/ADDERTREE_INTERNAL_Madd_12
+                                                       bpm/ADDERTREE_INTERNAL_Madd_xor<12>
+    SLICE_X4Y8.F2        net (fanout=1)        1.546   bpm/ADDERTREE_INTERNAL_Madd_12
+    SLICE_X4Y8.COUT      Topcyf                1.084   bpm/ADDERTREE_INTERNAL_Madd_122
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_lut<12>
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_cy<12>
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_cy<13>
+    SLICE_X4Y9.CIN       net (fanout=1)        0.000   bpm/ADDERTREE_INTERNAL_Madd2_cy<13>
+    SLICE_X4Y9.Y         Tciny                 0.923   bpm/ADDERTREE_INTERNAL_Madd_142
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_cy<14>
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_xor<15>
+    MULT18X18_X0Y1.A15   net (fanout=1)        1.272   bpm/ADDERTREE_INTERNAL_Madd_152
+    MULT18X18_X0Y1.P20   Tmult                 4.072   bpm/Mmult_sum<40:0>_submult_0
+                                                       bpm/Mmult_sum<40:0>_submult_0
+    SLICE_X2Y17.G2       net (fanout=1)        1.761   bpm/Mmult_sum<40:0>_submult_0_20
+    SLICE_X2Y17.COUT     Topcyg                1.096   slv_twelfth<3>
+                                                       bpm/Mmult_sum<40:0>_Madd_lut<20>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<20>
+    SLICE_X2Y18.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<20>
+    SLICE_X2Y18.COUT     Tbyp                  0.120   slv_twelfth<5>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<21>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<22>
+    SLICE_X2Y19.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<22>
+    SLICE_X2Y19.COUT     Tbyp                  0.120   slv_twelfth<7>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<23>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<24>
+    SLICE_X2Y20.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<24>
+    SLICE_X2Y20.COUT     Tbyp                  0.120   slv_twelfth<9>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<25>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<26>
+    SLICE_X2Y21.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<26>
+    SLICE_X2Y21.X        Tcinx                 0.904   slv_twelfth<11>
+                                                       bpm/Mmult_sum<40:0>_Madd_xor<27>
+    MULT18X18_X0Y3.A11   net (fanout=24)       1.870   slv_twelfth<11>
+    MULT18X18_X0Y3.P17   Tmult                 3.860   x_note_length_counter/Mmult_note_length_cc_submult_0
+                                                       x_note_length_counter/Mmult_note_length_cc_submult_0
+    SLICE_X5Y30.F1       net (fanout=1)        1.815   x_note_length_counter/Mmult_note_length_cc_submult_0_17
+    SLICE_X5Y30.COUT     Topcyf                1.027   x_note_length_counter/note_length_cc<17>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_lut<17>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<17>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<18>
+    SLICE_X5Y31.CIN      net (fanout=1)        0.000   x_note_length_counter/Mmult_note_length_cc_Madd_cy<18>
+    SLICE_X5Y31.X        Tcinx                 0.904   x_note_length_counter/note_length_cc<19>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_xor<19>
+    SLICE_X4Y32.G4       net (fanout=8)        0.435   x_note_length_counter/note_length_cc<19>
+    SLICE_X4Y32.COUT     Topcyg                1.096   x_note_length_counter/n0047[28:0]<16>
+                                                       x_note_length_counter/Madd_n0047[28:0]_lut<17>
+                                                       x_note_length_counter/Madd_n0047[28:0]_cy<17>
+    SLICE_X4Y33.CIN      net (fanout=1)        0.000   x_note_length_counter/Madd_n0047[28:0]_cy<17>
+    SLICE_X4Y33.X        Tcinx                 0.904   x_note_length_counter/n0047[28:0]<18>
+                                                       x_note_length_counter/Madd_n0047[28:0]_xor<18>
+    SLICE_X6Y35.F2       net (fanout=1)        1.705   x_note_length_counter/n0047[28:0]<18>
+    SLICE_X6Y35.COUT     Topcyf                1.084   x_note_length_counter/n0039<18>
+                                                       x_note_length_counter/Madd_n0039_lut<18>
+                                                       x_note_length_counter/Madd_n0039_cy<18>
+                                                       x_note_length_counter/Madd_n0039_cy<19>
+    SLICE_X6Y36.CIN      net (fanout=1)        0.000   x_note_length_counter/Madd_n0039_cy<19>
+    SLICE_X6Y36.COUT     Tbyp                  0.120   x_note_length_counter/n0039<20>
+                                                       x_note_length_counter/Madd_n0039_cy<20>
+                                                       x_note_length_counter/Madd_n0039_cy<21>
+    SLICE_X6Y37.CIN      net (fanout=1)        0.000   x_note_length_counter/Madd_n0039_cy<21>
+    SLICE_X6Y37.COUT     Tbyp                  0.120   x_note_length_counter/n0039<22>
+                                                       x_note_length_counter/Madd_n0039_cy<22>
+                                                       x_note_length_counter/Madd_n0039_cy<23>
+    SLICE_X6Y38.CIN      net (fanout=1)        0.000   x_note_length_counter/Madd_n0039_cy<23>
+    SLICE_X6Y38.Y        Tciny                 0.923   x_note_length_counter/n0039<24>
+                                                       x_note_length_counter/Madd_n0039_cy<24>
+                                                       x_note_length_counter/Madd_n0039_xor<25>
+    SLICE_X5Y38.F2       net (fanout=1)        0.568   x_note_length_counter/n0039<25>
+    SLICE_X5Y38.X        Tilo                  0.551   x_note_length_counter/n0028<25>
+                                                       x_note_length_counter/Mmux_n002818
+    SLICE_X9Y39.F3       net (fanout=1)        0.733   x_note_length_counter/n0028<25>
+    SLICE_X9Y39.COUT     Topcyf                1.027   x_note_length_counter/Mcompar_articulation_cc[28]_note_length_partial[28]_equal_7_o_cy<13>
+                                                       x_note_length_counter/Mcompar_articulation_cc[28]_note_length_partial[28]_equal_7_o_lut<12>
+                                                       x_note_length_counter/Mcompar_articulation_cc[28]_note_length_partial[28]_equal_7_o_cy<12>
+                                                       x_note_length_counter/Mcompar_articulation_cc[28]_note_length_partial[28]_equal_7_o_cy<13>
+    SLICE_X9Y40.CIN      net (fanout=1)        0.000   x_note_length_counter/Mcompar_articulation_cc[28]_note_length_partial[28]_equal_7_o_cy<13>
+    SLICE_X9Y40.XB       Tcinxb                0.320   N146
+                                                       x_note_length_counter/Mcompar_articulation_cc[28]_note_length_partial[28]_equal_7_o_cy<14>
+    SLICE_X12Y39.G3      net (fanout=1)        1.067   x_note_length_counter/Mcompar_articulation_cc[28]_note_length_partial[28]_equal_7_o_cy<14>1
+    SLICE_X12Y39.Y       Tilo                  0.608   x_note_length_counter/_n0083
+                                                       x_note_length_counter/_n00831_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy
+    SLICE_X12Y38.BY      net (fanout=1)        0.652   x_note_length_counter/_n0083
+    SLICE_X12Y38.CLK     Tsrck                 1.169   x_note_length_counter/is_mute
+                                                       x_note_length_counter/is_mute
+    -------------------------------------------------  ---------------------------
+    Total                                     39.947ns (24.943ns logic, 15.004ns route)
+                                                       (62.4% logic, 37.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.037ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               bpm/beat_array0_3_9 (FF)
+  Destination:          x_note_length_counter/is_mute (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      39.944ns (Levels of Logic = 25)
+  Clock Path Skew:      -0.019ns (0.435 - 0.454)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: bpm/beat_array0_3_9 to x_note_length_counter/is_mute
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y7.XQ        Tcko                  0.720   bpm/beat_array0_3<9>
+                                                       bpm/beat_array0_3_9
+    SLICE_X5Y6.G2        net (fanout=1)        1.580   bpm/beat_array0_3<9>
+    SLICE_X5Y6.COUT      Topcyg                1.039   bpm/ADDERTREE_INTERNAL_Madd_8
+                                                       bpm/ADDERTREE_INTERNAL_Madd_lut<9>
+                                                       bpm/ADDERTREE_INTERNAL_Madd_cy<9>
+    SLICE_X5Y7.CIN       net (fanout=1)        0.000   bpm/ADDERTREE_INTERNAL_Madd_cy<9>
+    SLICE_X5Y7.COUT      Tbyp                  0.128   bpm/ADDERTREE_INTERNAL_Madd_10
+                                                       bpm/ADDERTREE_INTERNAL_Madd_cy<10>
+                                                       bpm/ADDERTREE_INTERNAL_Madd_cy<11>
+    SLICE_X5Y8.CIN       net (fanout=1)        0.000   bpm/ADDERTREE_INTERNAL_Madd_cy<11>
+    SLICE_X5Y8.X         Tcinx                 0.904   bpm/ADDERTREE_INTERNAL_Madd_12
+                                                       bpm/ADDERTREE_INTERNAL_Madd_xor<12>
+    SLICE_X4Y8.F2        net (fanout=1)        1.546   bpm/ADDERTREE_INTERNAL_Madd_12
+    SLICE_X4Y8.COUT      Topcyf                1.084   bpm/ADDERTREE_INTERNAL_Madd_122
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_lut<12>
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_cy<12>
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_cy<13>
+    SLICE_X4Y9.CIN       net (fanout=1)        0.000   bpm/ADDERTREE_INTERNAL_Madd2_cy<13>
+    SLICE_X4Y9.Y         Tciny                 0.923   bpm/ADDERTREE_INTERNAL_Madd_142
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_cy<14>
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_xor<15>
+    MULT18X18_X0Y1.A15   net (fanout=1)        1.272   bpm/ADDERTREE_INTERNAL_Madd_152
+    MULT18X18_X0Y1.P20   Tmult                 4.072   bpm/Mmult_sum<40:0>_submult_0
+                                                       bpm/Mmult_sum<40:0>_submult_0
+    SLICE_X2Y17.G2       net (fanout=1)        1.761   bpm/Mmult_sum<40:0>_submult_0_20
+    SLICE_X2Y17.COUT     Topcyg                1.096   slv_twelfth<3>
+                                                       bpm/Mmult_sum<40:0>_Madd_lut<20>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<20>
+    SLICE_X2Y18.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<20>
+    SLICE_X2Y18.COUT     Tbyp                  0.120   slv_twelfth<5>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<21>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<22>
+    SLICE_X2Y19.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<22>
+    SLICE_X2Y19.COUT     Tbyp                  0.120   slv_twelfth<7>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<23>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<24>
+    SLICE_X2Y20.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<24>
+    SLICE_X2Y20.COUT     Tbyp                  0.120   slv_twelfth<9>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<25>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<26>
+    SLICE_X2Y21.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<26>
+    SLICE_X2Y21.COUT     Tbyp                  0.120   slv_twelfth<11>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<27>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<28>
+    SLICE_X2Y22.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<28>
+    SLICE_X2Y22.Y        Tciny                 0.923   slv_twelfth<13>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<29>
+                                                       bpm/Mmult_sum<40:0>_Madd_xor<30>
+    MULT18X18_X0Y3.A14   net (fanout=24)       1.728   slv_twelfth<14>
+    MULT18X18_X0Y3.P17   Tmult                 3.860   x_note_length_counter/Mmult_note_length_cc_submult_0
+                                                       x_note_length_counter/Mmult_note_length_cc_submult_0
+    SLICE_X5Y30.F1       net (fanout=1)        1.815   x_note_length_counter/Mmult_note_length_cc_submult_0_17
+    SLICE_X5Y30.COUT     Topcyf                1.027   x_note_length_counter/note_length_cc<17>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_lut<17>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<17>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<18>
+    SLICE_X5Y31.CIN      net (fanout=1)        0.000   x_note_length_counter/Mmult_note_length_cc_Madd_cy<18>
+    SLICE_X5Y31.X        Tcinx                 0.904   x_note_length_counter/note_length_cc<19>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_xor<19>
+    SLICE_X4Y32.G4       net (fanout=8)        0.435   x_note_length_counter/note_length_cc<19>
+    SLICE_X4Y32.COUT     Topcyg                1.096   x_note_length_counter/n0047[28:0]<16>
+                                                       x_note_length_counter/Madd_n0047[28:0]_lut<17>
+                                                       x_note_length_counter/Madd_n0047[28:0]_cy<17>
+    SLICE_X4Y33.CIN      net (fanout=1)        0.000   x_note_length_counter/Madd_n0047[28:0]_cy<17>
+    SLICE_X4Y33.X        Tcinx                 0.904   x_note_length_counter/n0047[28:0]<18>
+                                                       x_note_length_counter/Madd_n0047[28:0]_xor<18>
+    SLICE_X6Y35.F2       net (fanout=1)        1.705   x_note_length_counter/n0047[28:0]<18>
+    SLICE_X6Y35.COUT     Topcyf                1.084   x_note_length_counter/n0039<18>
+                                                       x_note_length_counter/Madd_n0039_lut<18>
+                                                       x_note_length_counter/Madd_n0039_cy<18>
+                                                       x_note_length_counter/Madd_n0039_cy<19>
+    SLICE_X6Y36.CIN      net (fanout=1)        0.000   x_note_length_counter/Madd_n0039_cy<19>
+    SLICE_X6Y36.COUT     Tbyp                  0.120   x_note_length_counter/n0039<20>
+                                                       x_note_length_counter/Madd_n0039_cy<20>
+                                                       x_note_length_counter/Madd_n0039_cy<21>
+    SLICE_X6Y37.CIN      net (fanout=1)        0.000   x_note_length_counter/Madd_n0039_cy<21>
+    SLICE_X6Y37.COUT     Tbyp                  0.120   x_note_length_counter/n0039<22>
+                                                       x_note_length_counter/Madd_n0039_cy<22>
+                                                       x_note_length_counter/Madd_n0039_cy<23>
+    SLICE_X6Y38.CIN      net (fanout=1)        0.000   x_note_length_counter/Madd_n0039_cy<23>
+    SLICE_X6Y38.Y        Tciny                 0.923   x_note_length_counter/n0039<24>
+                                                       x_note_length_counter/Madd_n0039_cy<24>
+                                                       x_note_length_counter/Madd_n0039_xor<25>
+    SLICE_X5Y38.F2       net (fanout=1)        0.568   x_note_length_counter/n0039<25>
+    SLICE_X5Y38.X        Tilo                  0.551   x_note_length_counter/n0028<25>
+                                                       x_note_length_counter/Mmux_n002818
+    SLICE_X9Y39.F3       net (fanout=1)        0.733   x_note_length_counter/n0028<25>
+    SLICE_X9Y39.COUT     Topcyf                1.027   x_note_length_counter/Mcompar_articulation_cc[28]_note_length_partial[28]_equal_7_o_cy<13>
+                                                       x_note_length_counter/Mcompar_articulation_cc[28]_note_length_partial[28]_equal_7_o_lut<12>
+                                                       x_note_length_counter/Mcompar_articulation_cc[28]_note_length_partial[28]_equal_7_o_cy<12>
+                                                       x_note_length_counter/Mcompar_articulation_cc[28]_note_length_partial[28]_equal_7_o_cy<13>
+    SLICE_X9Y40.CIN      net (fanout=1)        0.000   x_note_length_counter/Mcompar_articulation_cc[28]_note_length_partial[28]_equal_7_o_cy<13>
+    SLICE_X9Y40.XB       Tcinxb                0.320   N146
+                                                       x_note_length_counter/Mcompar_articulation_cc[28]_note_length_partial[28]_equal_7_o_cy<14>
+    SLICE_X12Y39.G3      net (fanout=1)        1.067   x_note_length_counter/Mcompar_articulation_cc[28]_note_length_partial[28]_equal_7_o_cy<14>1
+    SLICE_X12Y39.Y       Tilo                  0.608   x_note_length_counter/_n0083
+                                                       x_note_length_counter/_n00831_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy
+    SLICE_X12Y38.BY      net (fanout=1)        0.652   x_note_length_counter/_n0083
+    SLICE_X12Y38.CLK     Tsrck                 1.169   x_note_length_counter/is_mute
+                                                       x_note_length_counter/is_mute
+    -------------------------------------------------  ---------------------------
+    Total                                     39.944ns (25.082ns logic, 14.862ns route)
+                                                       (62.8% logic, 37.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.089ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               bpm/beat_array0_3_9 (FF)
+  Destination:          x_note_length_counter/is_mute (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      39.892ns (Levels of Logic = 25)
+  Clock Path Skew:      -0.019ns (0.435 - 0.454)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: bpm/beat_array0_3_9 to x_note_length_counter/is_mute
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y7.XQ        Tcko                  0.720   bpm/beat_array0_3<9>
+                                                       bpm/beat_array0_3_9
+    SLICE_X5Y6.G2        net (fanout=1)        1.580   bpm/beat_array0_3<9>
+    SLICE_X5Y6.COUT      Topcyg                1.039   bpm/ADDERTREE_INTERNAL_Madd_8
+                                                       bpm/ADDERTREE_INTERNAL_Madd_lut<9>
+                                                       bpm/ADDERTREE_INTERNAL_Madd_cy<9>
+    SLICE_X5Y7.CIN       net (fanout=1)        0.000   bpm/ADDERTREE_INTERNAL_Madd_cy<9>
+    SLICE_X5Y7.COUT      Tbyp                  0.128   bpm/ADDERTREE_INTERNAL_Madd_10
+                                                       bpm/ADDERTREE_INTERNAL_Madd_cy<10>
+                                                       bpm/ADDERTREE_INTERNAL_Madd_cy<11>
+    SLICE_X5Y8.CIN       net (fanout=1)        0.000   bpm/ADDERTREE_INTERNAL_Madd_cy<11>
+    SLICE_X5Y8.X         Tcinx                 0.904   bpm/ADDERTREE_INTERNAL_Madd_12
+                                                       bpm/ADDERTREE_INTERNAL_Madd_xor<12>
+    SLICE_X4Y8.F2        net (fanout=1)        1.546   bpm/ADDERTREE_INTERNAL_Madd_12
+    SLICE_X4Y8.COUT      Topcyf                1.084   bpm/ADDERTREE_INTERNAL_Madd_122
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_lut<12>
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_cy<12>
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_cy<13>
+    SLICE_X4Y9.CIN       net (fanout=1)        0.000   bpm/ADDERTREE_INTERNAL_Madd2_cy<13>
+    SLICE_X4Y9.Y         Tciny                 0.923   bpm/ADDERTREE_INTERNAL_Madd_142
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_cy<14>
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_xor<15>
+    MULT18X18_X0Y1.A15   net (fanout=1)        1.272   bpm/ADDERTREE_INTERNAL_Madd_152
+    MULT18X18_X0Y1.P20   Tmult                 4.072   bpm/Mmult_sum<40:0>_submult_0
+                                                       bpm/Mmult_sum<40:0>_submult_0
+    SLICE_X2Y17.G2       net (fanout=1)        1.761   bpm/Mmult_sum<40:0>_submult_0_20
+    SLICE_X2Y17.COUT     Topcyg                1.096   slv_twelfth<3>
+                                                       bpm/Mmult_sum<40:0>_Madd_lut<20>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<20>
+    SLICE_X2Y18.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<20>
+    SLICE_X2Y18.COUT     Tbyp                  0.120   slv_twelfth<5>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<21>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<22>
+    SLICE_X2Y19.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<22>
+    SLICE_X2Y19.COUT     Tbyp                  0.120   slv_twelfth<7>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<23>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<24>
+    SLICE_X2Y20.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<24>
+    SLICE_X2Y20.COUT     Tbyp                  0.120   slv_twelfth<9>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<25>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<26>
+    SLICE_X2Y21.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<26>
+    SLICE_X2Y21.COUT     Tbyp                  0.120   slv_twelfth<11>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<27>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<28>
+    SLICE_X2Y22.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<28>
+    SLICE_X2Y22.X        Tcinx                 0.904   slv_twelfth<13>
+                                                       bpm/Mmult_sum<40:0>_Madd_xor<29>
+    MULT18X18_X0Y3.A13   net (fanout=24)       1.695   slv_twelfth<13>
+    MULT18X18_X0Y3.P17   Tmult                 3.860   x_note_length_counter/Mmult_note_length_cc_submult_0
+                                                       x_note_length_counter/Mmult_note_length_cc_submult_0
+    SLICE_X5Y30.F1       net (fanout=1)        1.815   x_note_length_counter/Mmult_note_length_cc_submult_0_17
+    SLICE_X5Y30.COUT     Topcyf                1.027   x_note_length_counter/note_length_cc<17>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_lut<17>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<17>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<18>
+    SLICE_X5Y31.CIN      net (fanout=1)        0.000   x_note_length_counter/Mmult_note_length_cc_Madd_cy<18>
+    SLICE_X5Y31.X        Tcinx                 0.904   x_note_length_counter/note_length_cc<19>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_xor<19>
+    SLICE_X4Y32.G4       net (fanout=8)        0.435   x_note_length_counter/note_length_cc<19>
+    SLICE_X4Y32.COUT     Topcyg                1.096   x_note_length_counter/n0047[28:0]<16>
+                                                       x_note_length_counter/Madd_n0047[28:0]_lut<17>
+                                                       x_note_length_counter/Madd_n0047[28:0]_cy<17>
+    SLICE_X4Y33.CIN      net (fanout=1)        0.000   x_note_length_counter/Madd_n0047[28:0]_cy<17>
+    SLICE_X4Y33.X        Tcinx                 0.904   x_note_length_counter/n0047[28:0]<18>
+                                                       x_note_length_counter/Madd_n0047[28:0]_xor<18>
+    SLICE_X6Y35.F2       net (fanout=1)        1.705   x_note_length_counter/n0047[28:0]<18>
+    SLICE_X6Y35.COUT     Topcyf                1.084   x_note_length_counter/n0039<18>
+                                                       x_note_length_counter/Madd_n0039_lut<18>
+                                                       x_note_length_counter/Madd_n0039_cy<18>
+                                                       x_note_length_counter/Madd_n0039_cy<19>
+    SLICE_X6Y36.CIN      net (fanout=1)        0.000   x_note_length_counter/Madd_n0039_cy<19>
+    SLICE_X6Y36.COUT     Tbyp                  0.120   x_note_length_counter/n0039<20>
+                                                       x_note_length_counter/Madd_n0039_cy<20>
+                                                       x_note_length_counter/Madd_n0039_cy<21>
+    SLICE_X6Y37.CIN      net (fanout=1)        0.000   x_note_length_counter/Madd_n0039_cy<21>
+    SLICE_X6Y37.COUT     Tbyp                  0.120   x_note_length_counter/n0039<22>
+                                                       x_note_length_counter/Madd_n0039_cy<22>
+                                                       x_note_length_counter/Madd_n0039_cy<23>
+    SLICE_X6Y38.CIN      net (fanout=1)        0.000   x_note_length_counter/Madd_n0039_cy<23>
+    SLICE_X6Y38.Y        Tciny                 0.923   x_note_length_counter/n0039<24>
+                                                       x_note_length_counter/Madd_n0039_cy<24>
+                                                       x_note_length_counter/Madd_n0039_xor<25>
+    SLICE_X5Y38.F2       net (fanout=1)        0.568   x_note_length_counter/n0039<25>
+    SLICE_X5Y38.X        Tilo                  0.551   x_note_length_counter/n0028<25>
+                                                       x_note_length_counter/Mmux_n002818
+    SLICE_X9Y39.F3       net (fanout=1)        0.733   x_note_length_counter/n0028<25>
+    SLICE_X9Y39.COUT     Topcyf                1.027   x_note_length_counter/Mcompar_articulation_cc[28]_note_length_partial[28]_equal_7_o_cy<13>
+                                                       x_note_length_counter/Mcompar_articulation_cc[28]_note_length_partial[28]_equal_7_o_lut<12>
+                                                       x_note_length_counter/Mcompar_articulation_cc[28]_note_length_partial[28]_equal_7_o_cy<12>
+                                                       x_note_length_counter/Mcompar_articulation_cc[28]_note_length_partial[28]_equal_7_o_cy<13>
+    SLICE_X9Y40.CIN      net (fanout=1)        0.000   x_note_length_counter/Mcompar_articulation_cc[28]_note_length_partial[28]_equal_7_o_cy<13>
+    SLICE_X9Y40.XB       Tcinxb                0.320   N146
+                                                       x_note_length_counter/Mcompar_articulation_cc[28]_note_length_partial[28]_equal_7_o_cy<14>
+    SLICE_X12Y39.G3      net (fanout=1)        1.067   x_note_length_counter/Mcompar_articulation_cc[28]_note_length_partial[28]_equal_7_o_cy<14>1
+    SLICE_X12Y39.Y       Tilo                  0.608   x_note_length_counter/_n0083
+                                                       x_note_length_counter/_n00831_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy_cy
+    SLICE_X12Y38.BY      net (fanout=1)        0.652   x_note_length_counter/_n0083
+    SLICE_X12Y38.CLK     Tsrck                 1.169   x_note_length_counter/is_mute
+                                                       x_note_length_counter/is_mute
+    -------------------------------------------------  ---------------------------
+    Total                                     39.892ns (25.063ns logic, 14.829ns route)
+                                                       (62.8% logic, 37.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point x_note_length_counter/note_length_partial_28 (SLICE_X10Y50.CIN), 105764651607 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     2.439ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               bpm/beat_array0_3_9 (FF)
+  Destination:          x_note_length_counter/note_length_partial_28 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      37.561ns (Levels of Logic = 36)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: bpm/beat_array0_3_9 to x_note_length_counter/note_length_partial_28
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y7.XQ        Tcko                  0.720   bpm/beat_array0_3<9>
+                                                       bpm/beat_array0_3_9
+    SLICE_X5Y6.G2        net (fanout=1)        1.580   bpm/beat_array0_3<9>
+    SLICE_X5Y6.COUT      Topcyg                1.039   bpm/ADDERTREE_INTERNAL_Madd_8
+                                                       bpm/ADDERTREE_INTERNAL_Madd_lut<9>
+                                                       bpm/ADDERTREE_INTERNAL_Madd_cy<9>
+    SLICE_X5Y7.CIN       net (fanout=1)        0.000   bpm/ADDERTREE_INTERNAL_Madd_cy<9>
+    SLICE_X5Y7.COUT      Tbyp                  0.128   bpm/ADDERTREE_INTERNAL_Madd_10
+                                                       bpm/ADDERTREE_INTERNAL_Madd_cy<10>
+                                                       bpm/ADDERTREE_INTERNAL_Madd_cy<11>
+    SLICE_X5Y8.CIN       net (fanout=1)        0.000   bpm/ADDERTREE_INTERNAL_Madd_cy<11>
+    SLICE_X5Y8.X         Tcinx                 0.904   bpm/ADDERTREE_INTERNAL_Madd_12
+                                                       bpm/ADDERTREE_INTERNAL_Madd_xor<12>
+    SLICE_X4Y8.F2        net (fanout=1)        1.546   bpm/ADDERTREE_INTERNAL_Madd_12
+    SLICE_X4Y8.COUT      Topcyf                1.084   bpm/ADDERTREE_INTERNAL_Madd_122
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_lut<12>
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_cy<12>
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_cy<13>
+    SLICE_X4Y9.CIN       net (fanout=1)        0.000   bpm/ADDERTREE_INTERNAL_Madd2_cy<13>
+    SLICE_X4Y9.Y         Tciny                 0.923   bpm/ADDERTREE_INTERNAL_Madd_142
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_cy<14>
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_xor<15>
+    MULT18X18_X0Y1.A15   net (fanout=1)        1.272   bpm/ADDERTREE_INTERNAL_Madd_152
+    MULT18X18_X0Y1.P20   Tmult                 4.072   bpm/Mmult_sum<40:0>_submult_0
+                                                       bpm/Mmult_sum<40:0>_submult_0
+    SLICE_X2Y17.G2       net (fanout=1)        1.761   bpm/Mmult_sum<40:0>_submult_0_20
+    SLICE_X2Y17.COUT     Topcyg                1.096   slv_twelfth<3>
+                                                       bpm/Mmult_sum<40:0>_Madd_lut<20>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<20>
+    SLICE_X2Y18.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<20>
+    SLICE_X2Y18.COUT     Tbyp                  0.120   slv_twelfth<5>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<21>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<22>
+    SLICE_X2Y19.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<22>
+    SLICE_X2Y19.COUT     Tbyp                  0.120   slv_twelfth<7>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<23>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<24>
+    SLICE_X2Y20.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<24>
+    SLICE_X2Y20.COUT     Tbyp                  0.120   slv_twelfth<9>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<25>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<26>
+    SLICE_X2Y21.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<26>
+    SLICE_X2Y21.X        Tcinx                 0.904   slv_twelfth<11>
+                                                       bpm/Mmult_sum<40:0>_Madd_xor<27>
+    MULT18X18_X0Y3.A11   net (fanout=24)       1.870   slv_twelfth<11>
+    MULT18X18_X0Y3.P17   Tmult                 3.860   x_note_length_counter/Mmult_note_length_cc_submult_0
+                                                       x_note_length_counter/Mmult_note_length_cc_submult_0
+    SLICE_X5Y30.F1       net (fanout=1)        1.815   x_note_length_counter/Mmult_note_length_cc_submult_0_17
+    SLICE_X5Y30.COUT     Topcyf                1.027   x_note_length_counter/note_length_cc<17>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_lut<17>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<17>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<18>
+    SLICE_X5Y31.CIN      net (fanout=1)        0.000   x_note_length_counter/Mmult_note_length_cc_Madd_cy<18>
+    SLICE_X5Y31.COUT     Tbyp                  0.128   x_note_length_counter/note_length_cc<19>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<19>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<20>
+    SLICE_X5Y32.CIN      net (fanout=1)        0.000   x_note_length_counter/Mmult_note_length_cc_Madd_cy<20>
+    SLICE_X5Y32.X        Tcinx                 0.904   x_note_length_counter/note_length_cc<21>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_xor<21>
+    SLICE_X7Y36.G3       net (fanout=8)        1.156   x_note_length_counter/note_length_cc<21>
+    SLICE_X7Y36.COUT     Topcyg                1.039   x_note_length_counter/GND_36_o_GND_36_o_sub_8_OUT<20>
+                                                       x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_lut<21>_INV_0
+                                                       x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_cy<21>
+    SLICE_X7Y37.CIN      net (fanout=1)        0.000   x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_cy<21>
+    SLICE_X7Y37.Y        Tciny                 0.923   x_note_length_counter/GND_36_o_GND_36_o_sub_8_OUT<22>
+                                                       x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_cy<22>
+                                                       x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_xor<23>
+    SLICE_X8Y35.G3       net (fanout=1)        1.094   x_note_length_counter/GND_36_o_GND_36_o_sub_8_OUT<23>
+    SLICE_X8Y35.COUT     Topcyg                1.096   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<23>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_lut<23>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<23>
+    SLICE_X8Y36.CIN      net (fanout=1)        0.000   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<23>
+    SLICE_X8Y36.COUT     Tbyp                  0.120   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<25>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<24>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<25>
+    SLICE_X8Y37.CIN      net (fanout=1)        0.000   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<25>
+    SLICE_X8Y37.COUT     Tbyp                  0.120   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<27>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<26>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<27>
+    SLICE_X8Y38.CIN      net (fanout=1)        0.000   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<27>
+    SLICE_X8Y38.COUT     Tbyp                  0.120   x_note_length_counter/GND_36_o_GND_36_o_LessThan_9_o
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<28>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<29>
+    SLICE_X10Y36.BX      net (fanout=30)       1.509   x_note_length_counter/GND_36_o_GND_36_o_LessThan_9_o
+    SLICE_X10Y36.COUT    Tbxcy                 0.845   x_note_length_counter/note_length_partial<0>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<0>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<1>
+    SLICE_X10Y37.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<1>
+    SLICE_X10Y37.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<2>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<2>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<3>
+    SLICE_X10Y38.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<3>
+    SLICE_X10Y38.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<4>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<4>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<5>
+    SLICE_X10Y39.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<5>
+    SLICE_X10Y39.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<6>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<6>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<7>
+    SLICE_X10Y40.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<7>
+    SLICE_X10Y40.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<8>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<8>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<9>
+    SLICE_X10Y41.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<9>
+    SLICE_X10Y41.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<10>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<10>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<11>
+    SLICE_X10Y42.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<11>
+    SLICE_X10Y42.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<12>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<12>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<13>
+    SLICE_X10Y43.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<13>
+    SLICE_X10Y43.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<14>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<14>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<15>
+    SLICE_X10Y44.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<15>
+    SLICE_X10Y44.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<16>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<16>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<17>
+    SLICE_X10Y45.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<17>
+    SLICE_X10Y45.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<18>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<18>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<19>
+    SLICE_X10Y46.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<19>
+    SLICE_X10Y46.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<20>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<20>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<21>
+    SLICE_X10Y47.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<21>
+    SLICE_X10Y47.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<22>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<22>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<23>
+    SLICE_X10Y48.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<23>
+    SLICE_X10Y48.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<24>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<24>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<25>
+    SLICE_X10Y49.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<25>
+    SLICE_X10Y49.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<26>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<26>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<27>
+    SLICE_X10Y50.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<27>
+    SLICE_X10Y50.CLK     Tcinck                0.986   x_note_length_counter/note_length_partial<28>
+                                                       x_note_length_counter/Mcount_note_length_partial_xor<28>
+                                                       x_note_length_counter/note_length_partial_28
+    -------------------------------------------------  ---------------------------
+    Total                                     37.561ns (23.958ns logic, 13.603ns route)
+                                                       (63.8% logic, 36.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.442ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               bpm/beat_array0_3_9 (FF)
+  Destination:          x_note_length_counter/note_length_partial_28 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      37.558ns (Levels of Logic = 37)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: bpm/beat_array0_3_9 to x_note_length_counter/note_length_partial_28
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y7.XQ        Tcko                  0.720   bpm/beat_array0_3<9>
+                                                       bpm/beat_array0_3_9
+    SLICE_X5Y6.G2        net (fanout=1)        1.580   bpm/beat_array0_3<9>
+    SLICE_X5Y6.COUT      Topcyg                1.039   bpm/ADDERTREE_INTERNAL_Madd_8
+                                                       bpm/ADDERTREE_INTERNAL_Madd_lut<9>
+                                                       bpm/ADDERTREE_INTERNAL_Madd_cy<9>
+    SLICE_X5Y7.CIN       net (fanout=1)        0.000   bpm/ADDERTREE_INTERNAL_Madd_cy<9>
+    SLICE_X5Y7.COUT      Tbyp                  0.128   bpm/ADDERTREE_INTERNAL_Madd_10
+                                                       bpm/ADDERTREE_INTERNAL_Madd_cy<10>
+                                                       bpm/ADDERTREE_INTERNAL_Madd_cy<11>
+    SLICE_X5Y8.CIN       net (fanout=1)        0.000   bpm/ADDERTREE_INTERNAL_Madd_cy<11>
+    SLICE_X5Y8.X         Tcinx                 0.904   bpm/ADDERTREE_INTERNAL_Madd_12
+                                                       bpm/ADDERTREE_INTERNAL_Madd_xor<12>
+    SLICE_X4Y8.F2        net (fanout=1)        1.546   bpm/ADDERTREE_INTERNAL_Madd_12
+    SLICE_X4Y8.COUT      Topcyf                1.084   bpm/ADDERTREE_INTERNAL_Madd_122
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_lut<12>
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_cy<12>
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_cy<13>
+    SLICE_X4Y9.CIN       net (fanout=1)        0.000   bpm/ADDERTREE_INTERNAL_Madd2_cy<13>
+    SLICE_X4Y9.Y         Tciny                 0.923   bpm/ADDERTREE_INTERNAL_Madd_142
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_cy<14>
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_xor<15>
+    MULT18X18_X0Y1.A15   net (fanout=1)        1.272   bpm/ADDERTREE_INTERNAL_Madd_152
+    MULT18X18_X0Y1.P20   Tmult                 4.072   bpm/Mmult_sum<40:0>_submult_0
+                                                       bpm/Mmult_sum<40:0>_submult_0
+    SLICE_X2Y17.G2       net (fanout=1)        1.761   bpm/Mmult_sum<40:0>_submult_0_20
+    SLICE_X2Y17.COUT     Topcyg                1.096   slv_twelfth<3>
+                                                       bpm/Mmult_sum<40:0>_Madd_lut<20>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<20>
+    SLICE_X2Y18.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<20>
+    SLICE_X2Y18.COUT     Tbyp                  0.120   slv_twelfth<5>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<21>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<22>
+    SLICE_X2Y19.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<22>
+    SLICE_X2Y19.COUT     Tbyp                  0.120   slv_twelfth<7>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<23>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<24>
+    SLICE_X2Y20.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<24>
+    SLICE_X2Y20.COUT     Tbyp                  0.120   slv_twelfth<9>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<25>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<26>
+    SLICE_X2Y21.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<26>
+    SLICE_X2Y21.COUT     Tbyp                  0.120   slv_twelfth<11>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<27>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<28>
+    SLICE_X2Y22.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<28>
+    SLICE_X2Y22.Y        Tciny                 0.923   slv_twelfth<13>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<29>
+                                                       bpm/Mmult_sum<40:0>_Madd_xor<30>
+    MULT18X18_X0Y3.A14   net (fanout=24)       1.728   slv_twelfth<14>
+    MULT18X18_X0Y3.P17   Tmult                 3.860   x_note_length_counter/Mmult_note_length_cc_submult_0
+                                                       x_note_length_counter/Mmult_note_length_cc_submult_0
+    SLICE_X5Y30.F1       net (fanout=1)        1.815   x_note_length_counter/Mmult_note_length_cc_submult_0_17
+    SLICE_X5Y30.COUT     Topcyf                1.027   x_note_length_counter/note_length_cc<17>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_lut<17>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<17>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<18>
+    SLICE_X5Y31.CIN      net (fanout=1)        0.000   x_note_length_counter/Mmult_note_length_cc_Madd_cy<18>
+    SLICE_X5Y31.COUT     Tbyp                  0.128   x_note_length_counter/note_length_cc<19>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<19>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<20>
+    SLICE_X5Y32.CIN      net (fanout=1)        0.000   x_note_length_counter/Mmult_note_length_cc_Madd_cy<20>
+    SLICE_X5Y32.X        Tcinx                 0.904   x_note_length_counter/note_length_cc<21>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_xor<21>
+    SLICE_X7Y36.G3       net (fanout=8)        1.156   x_note_length_counter/note_length_cc<21>
+    SLICE_X7Y36.COUT     Topcyg                1.039   x_note_length_counter/GND_36_o_GND_36_o_sub_8_OUT<20>
+                                                       x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_lut<21>_INV_0
+                                                       x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_cy<21>
+    SLICE_X7Y37.CIN      net (fanout=1)        0.000   x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_cy<21>
+    SLICE_X7Y37.Y        Tciny                 0.923   x_note_length_counter/GND_36_o_GND_36_o_sub_8_OUT<22>
+                                                       x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_cy<22>
+                                                       x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_xor<23>
+    SLICE_X8Y35.G3       net (fanout=1)        1.094   x_note_length_counter/GND_36_o_GND_36_o_sub_8_OUT<23>
+    SLICE_X8Y35.COUT     Topcyg                1.096   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<23>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_lut<23>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<23>
+    SLICE_X8Y36.CIN      net (fanout=1)        0.000   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<23>
+    SLICE_X8Y36.COUT     Tbyp                  0.120   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<25>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<24>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<25>
+    SLICE_X8Y37.CIN      net (fanout=1)        0.000   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<25>
+    SLICE_X8Y37.COUT     Tbyp                  0.120   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<27>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<26>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<27>
+    SLICE_X8Y38.CIN      net (fanout=1)        0.000   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<27>
+    SLICE_X8Y38.COUT     Tbyp                  0.120   x_note_length_counter/GND_36_o_GND_36_o_LessThan_9_o
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<28>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<29>
+    SLICE_X10Y36.BX      net (fanout=30)       1.509   x_note_length_counter/GND_36_o_GND_36_o_LessThan_9_o
+    SLICE_X10Y36.COUT    Tbxcy                 0.845   x_note_length_counter/note_length_partial<0>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<0>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<1>
+    SLICE_X10Y37.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<1>
+    SLICE_X10Y37.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<2>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<2>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<3>
+    SLICE_X10Y38.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<3>
+    SLICE_X10Y38.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<4>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<4>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<5>
+    SLICE_X10Y39.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<5>
+    SLICE_X10Y39.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<6>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<6>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<7>
+    SLICE_X10Y40.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<7>
+    SLICE_X10Y40.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<8>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<8>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<9>
+    SLICE_X10Y41.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<9>
+    SLICE_X10Y41.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<10>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<10>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<11>
+    SLICE_X10Y42.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<11>
+    SLICE_X10Y42.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<12>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<12>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<13>
+    SLICE_X10Y43.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<13>
+    SLICE_X10Y43.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<14>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<14>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<15>
+    SLICE_X10Y44.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<15>
+    SLICE_X10Y44.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<16>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<16>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<17>
+    SLICE_X10Y45.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<17>
+    SLICE_X10Y45.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<18>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<18>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<19>
+    SLICE_X10Y46.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<19>
+    SLICE_X10Y46.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<20>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<20>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<21>
+    SLICE_X10Y47.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<21>
+    SLICE_X10Y47.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<22>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<22>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<23>
+    SLICE_X10Y48.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<23>
+    SLICE_X10Y48.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<24>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<24>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<25>
+    SLICE_X10Y49.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<25>
+    SLICE_X10Y49.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<26>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<26>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<27>
+    SLICE_X10Y50.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<27>
+    SLICE_X10Y50.CLK     Tcinck                0.986   x_note_length_counter/note_length_partial<28>
+                                                       x_note_length_counter/Mcount_note_length_partial_xor<28>
+                                                       x_note_length_counter/note_length_partial_28
+    -------------------------------------------------  ---------------------------
+    Total                                     37.558ns (24.097ns logic, 13.461ns route)
+                                                       (64.2% logic, 35.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.494ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               bpm/beat_array0_3_9 (FF)
+  Destination:          x_note_length_counter/note_length_partial_28 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      37.506ns (Levels of Logic = 37)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: bpm/beat_array0_3_9 to x_note_length_counter/note_length_partial_28
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y7.XQ        Tcko                  0.720   bpm/beat_array0_3<9>
+                                                       bpm/beat_array0_3_9
+    SLICE_X5Y6.G2        net (fanout=1)        1.580   bpm/beat_array0_3<9>
+    SLICE_X5Y6.COUT      Topcyg                1.039   bpm/ADDERTREE_INTERNAL_Madd_8
+                                                       bpm/ADDERTREE_INTERNAL_Madd_lut<9>
+                                                       bpm/ADDERTREE_INTERNAL_Madd_cy<9>
+    SLICE_X5Y7.CIN       net (fanout=1)        0.000   bpm/ADDERTREE_INTERNAL_Madd_cy<9>
+    SLICE_X5Y7.COUT      Tbyp                  0.128   bpm/ADDERTREE_INTERNAL_Madd_10
+                                                       bpm/ADDERTREE_INTERNAL_Madd_cy<10>
+                                                       bpm/ADDERTREE_INTERNAL_Madd_cy<11>
+    SLICE_X5Y8.CIN       net (fanout=1)        0.000   bpm/ADDERTREE_INTERNAL_Madd_cy<11>
+    SLICE_X5Y8.X         Tcinx                 0.904   bpm/ADDERTREE_INTERNAL_Madd_12
+                                                       bpm/ADDERTREE_INTERNAL_Madd_xor<12>
+    SLICE_X4Y8.F2        net (fanout=1)        1.546   bpm/ADDERTREE_INTERNAL_Madd_12
+    SLICE_X4Y8.COUT      Topcyf                1.084   bpm/ADDERTREE_INTERNAL_Madd_122
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_lut<12>
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_cy<12>
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_cy<13>
+    SLICE_X4Y9.CIN       net (fanout=1)        0.000   bpm/ADDERTREE_INTERNAL_Madd2_cy<13>
+    SLICE_X4Y9.Y         Tciny                 0.923   bpm/ADDERTREE_INTERNAL_Madd_142
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_cy<14>
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_xor<15>
+    MULT18X18_X0Y1.A15   net (fanout=1)        1.272   bpm/ADDERTREE_INTERNAL_Madd_152
+    MULT18X18_X0Y1.P20   Tmult                 4.072   bpm/Mmult_sum<40:0>_submult_0
+                                                       bpm/Mmult_sum<40:0>_submult_0
+    SLICE_X2Y17.G2       net (fanout=1)        1.761   bpm/Mmult_sum<40:0>_submult_0_20
+    SLICE_X2Y17.COUT     Topcyg                1.096   slv_twelfth<3>
+                                                       bpm/Mmult_sum<40:0>_Madd_lut<20>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<20>
+    SLICE_X2Y18.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<20>
+    SLICE_X2Y18.COUT     Tbyp                  0.120   slv_twelfth<5>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<21>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<22>
+    SLICE_X2Y19.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<22>
+    SLICE_X2Y19.COUT     Tbyp                  0.120   slv_twelfth<7>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<23>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<24>
+    SLICE_X2Y20.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<24>
+    SLICE_X2Y20.COUT     Tbyp                  0.120   slv_twelfth<9>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<25>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<26>
+    SLICE_X2Y21.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<26>
+    SLICE_X2Y21.COUT     Tbyp                  0.120   slv_twelfth<11>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<27>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<28>
+    SLICE_X2Y22.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<28>
+    SLICE_X2Y22.X        Tcinx                 0.904   slv_twelfth<13>
+                                                       bpm/Mmult_sum<40:0>_Madd_xor<29>
+    MULT18X18_X0Y3.A13   net (fanout=24)       1.695   slv_twelfth<13>
+    MULT18X18_X0Y3.P17   Tmult                 3.860   x_note_length_counter/Mmult_note_length_cc_submult_0
+                                                       x_note_length_counter/Mmult_note_length_cc_submult_0
+    SLICE_X5Y30.F1       net (fanout=1)        1.815   x_note_length_counter/Mmult_note_length_cc_submult_0_17
+    SLICE_X5Y30.COUT     Topcyf                1.027   x_note_length_counter/note_length_cc<17>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_lut<17>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<17>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<18>
+    SLICE_X5Y31.CIN      net (fanout=1)        0.000   x_note_length_counter/Mmult_note_length_cc_Madd_cy<18>
+    SLICE_X5Y31.COUT     Tbyp                  0.128   x_note_length_counter/note_length_cc<19>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<19>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<20>
+    SLICE_X5Y32.CIN      net (fanout=1)        0.000   x_note_length_counter/Mmult_note_length_cc_Madd_cy<20>
+    SLICE_X5Y32.X        Tcinx                 0.904   x_note_length_counter/note_length_cc<21>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_xor<21>
+    SLICE_X7Y36.G3       net (fanout=8)        1.156   x_note_length_counter/note_length_cc<21>
+    SLICE_X7Y36.COUT     Topcyg                1.039   x_note_length_counter/GND_36_o_GND_36_o_sub_8_OUT<20>
+                                                       x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_lut<21>_INV_0
+                                                       x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_cy<21>
+    SLICE_X7Y37.CIN      net (fanout=1)        0.000   x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_cy<21>
+    SLICE_X7Y37.Y        Tciny                 0.923   x_note_length_counter/GND_36_o_GND_36_o_sub_8_OUT<22>
+                                                       x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_cy<22>
+                                                       x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_xor<23>
+    SLICE_X8Y35.G3       net (fanout=1)        1.094   x_note_length_counter/GND_36_o_GND_36_o_sub_8_OUT<23>
+    SLICE_X8Y35.COUT     Topcyg                1.096   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<23>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_lut<23>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<23>
+    SLICE_X8Y36.CIN      net (fanout=1)        0.000   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<23>
+    SLICE_X8Y36.COUT     Tbyp                  0.120   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<25>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<24>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<25>
+    SLICE_X8Y37.CIN      net (fanout=1)        0.000   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<25>
+    SLICE_X8Y37.COUT     Tbyp                  0.120   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<27>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<26>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<27>
+    SLICE_X8Y38.CIN      net (fanout=1)        0.000   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<27>
+    SLICE_X8Y38.COUT     Tbyp                  0.120   x_note_length_counter/GND_36_o_GND_36_o_LessThan_9_o
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<28>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<29>
+    SLICE_X10Y36.BX      net (fanout=30)       1.509   x_note_length_counter/GND_36_o_GND_36_o_LessThan_9_o
+    SLICE_X10Y36.COUT    Tbxcy                 0.845   x_note_length_counter/note_length_partial<0>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<0>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<1>
+    SLICE_X10Y37.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<1>
+    SLICE_X10Y37.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<2>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<2>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<3>
+    SLICE_X10Y38.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<3>
+    SLICE_X10Y38.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<4>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<4>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<5>
+    SLICE_X10Y39.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<5>
+    SLICE_X10Y39.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<6>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<6>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<7>
+    SLICE_X10Y40.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<7>
+    SLICE_X10Y40.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<8>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<8>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<9>
+    SLICE_X10Y41.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<9>
+    SLICE_X10Y41.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<10>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<10>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<11>
+    SLICE_X10Y42.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<11>
+    SLICE_X10Y42.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<12>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<12>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<13>
+    SLICE_X10Y43.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<13>
+    SLICE_X10Y43.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<14>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<14>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<15>
+    SLICE_X10Y44.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<15>
+    SLICE_X10Y44.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<16>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<16>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<17>
+    SLICE_X10Y45.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<17>
+    SLICE_X10Y45.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<18>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<18>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<19>
+    SLICE_X10Y46.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<19>
+    SLICE_X10Y46.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<20>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<20>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<21>
+    SLICE_X10Y47.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<21>
+    SLICE_X10Y47.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<22>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<22>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<23>
+    SLICE_X10Y48.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<23>
+    SLICE_X10Y48.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<24>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<24>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<25>
+    SLICE_X10Y49.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<25>
+    SLICE_X10Y49.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<26>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<26>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<27>
+    SLICE_X10Y50.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<27>
+    SLICE_X10Y50.CLK     Tcinck                0.986   x_note_length_counter/note_length_partial<28>
+                                                       x_note_length_counter/Mcount_note_length_partial_xor<28>
+                                                       x_note_length_counter/note_length_partial_28
+    -------------------------------------------------  ---------------------------
+    Total                                     37.506ns (24.078ns logic, 13.428ns route)
+                                                       (64.2% logic, 35.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point x_note_length_counter/note_length_partial_27 (SLICE_X10Y49.CIN), 98470537703 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     2.540ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               bpm/beat_array0_3_9 (FF)
+  Destination:          x_note_length_counter/note_length_partial_27 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      37.460ns (Levels of Logic = 35)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: bpm/beat_array0_3_9 to x_note_length_counter/note_length_partial_27
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y7.XQ        Tcko                  0.720   bpm/beat_array0_3<9>
+                                                       bpm/beat_array0_3_9
+    SLICE_X5Y6.G2        net (fanout=1)        1.580   bpm/beat_array0_3<9>
+    SLICE_X5Y6.COUT      Topcyg                1.039   bpm/ADDERTREE_INTERNAL_Madd_8
+                                                       bpm/ADDERTREE_INTERNAL_Madd_lut<9>
+                                                       bpm/ADDERTREE_INTERNAL_Madd_cy<9>
+    SLICE_X5Y7.CIN       net (fanout=1)        0.000   bpm/ADDERTREE_INTERNAL_Madd_cy<9>
+    SLICE_X5Y7.COUT      Tbyp                  0.128   bpm/ADDERTREE_INTERNAL_Madd_10
+                                                       bpm/ADDERTREE_INTERNAL_Madd_cy<10>
+                                                       bpm/ADDERTREE_INTERNAL_Madd_cy<11>
+    SLICE_X5Y8.CIN       net (fanout=1)        0.000   bpm/ADDERTREE_INTERNAL_Madd_cy<11>
+    SLICE_X5Y8.X         Tcinx                 0.904   bpm/ADDERTREE_INTERNAL_Madd_12
+                                                       bpm/ADDERTREE_INTERNAL_Madd_xor<12>
+    SLICE_X4Y8.F2        net (fanout=1)        1.546   bpm/ADDERTREE_INTERNAL_Madd_12
+    SLICE_X4Y8.COUT      Topcyf                1.084   bpm/ADDERTREE_INTERNAL_Madd_122
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_lut<12>
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_cy<12>
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_cy<13>
+    SLICE_X4Y9.CIN       net (fanout=1)        0.000   bpm/ADDERTREE_INTERNAL_Madd2_cy<13>
+    SLICE_X4Y9.Y         Tciny                 0.923   bpm/ADDERTREE_INTERNAL_Madd_142
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_cy<14>
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_xor<15>
+    MULT18X18_X0Y1.A15   net (fanout=1)        1.272   bpm/ADDERTREE_INTERNAL_Madd_152
+    MULT18X18_X0Y1.P20   Tmult                 4.072   bpm/Mmult_sum<40:0>_submult_0
+                                                       bpm/Mmult_sum<40:0>_submult_0
+    SLICE_X2Y17.G2       net (fanout=1)        1.761   bpm/Mmult_sum<40:0>_submult_0_20
+    SLICE_X2Y17.COUT     Topcyg                1.096   slv_twelfth<3>
+                                                       bpm/Mmult_sum<40:0>_Madd_lut<20>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<20>
+    SLICE_X2Y18.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<20>
+    SLICE_X2Y18.COUT     Tbyp                  0.120   slv_twelfth<5>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<21>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<22>
+    SLICE_X2Y19.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<22>
+    SLICE_X2Y19.COUT     Tbyp                  0.120   slv_twelfth<7>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<23>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<24>
+    SLICE_X2Y20.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<24>
+    SLICE_X2Y20.COUT     Tbyp                  0.120   slv_twelfth<9>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<25>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<26>
+    SLICE_X2Y21.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<26>
+    SLICE_X2Y21.X        Tcinx                 0.904   slv_twelfth<11>
+                                                       bpm/Mmult_sum<40:0>_Madd_xor<27>
+    MULT18X18_X0Y3.A11   net (fanout=24)       1.870   slv_twelfth<11>
+    MULT18X18_X0Y3.P17   Tmult                 3.860   x_note_length_counter/Mmult_note_length_cc_submult_0
+                                                       x_note_length_counter/Mmult_note_length_cc_submult_0
+    SLICE_X5Y30.F1       net (fanout=1)        1.815   x_note_length_counter/Mmult_note_length_cc_submult_0_17
+    SLICE_X5Y30.COUT     Topcyf                1.027   x_note_length_counter/note_length_cc<17>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_lut<17>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<17>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<18>
+    SLICE_X5Y31.CIN      net (fanout=1)        0.000   x_note_length_counter/Mmult_note_length_cc_Madd_cy<18>
+    SLICE_X5Y31.COUT     Tbyp                  0.128   x_note_length_counter/note_length_cc<19>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<19>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<20>
+    SLICE_X5Y32.CIN      net (fanout=1)        0.000   x_note_length_counter/Mmult_note_length_cc_Madd_cy<20>
+    SLICE_X5Y32.X        Tcinx                 0.904   x_note_length_counter/note_length_cc<21>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_xor<21>
+    SLICE_X7Y36.G3       net (fanout=8)        1.156   x_note_length_counter/note_length_cc<21>
+    SLICE_X7Y36.COUT     Topcyg                1.039   x_note_length_counter/GND_36_o_GND_36_o_sub_8_OUT<20>
+                                                       x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_lut<21>_INV_0
+                                                       x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_cy<21>
+    SLICE_X7Y37.CIN      net (fanout=1)        0.000   x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_cy<21>
+    SLICE_X7Y37.Y        Tciny                 0.923   x_note_length_counter/GND_36_o_GND_36_o_sub_8_OUT<22>
+                                                       x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_cy<22>
+                                                       x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_xor<23>
+    SLICE_X8Y35.G3       net (fanout=1)        1.094   x_note_length_counter/GND_36_o_GND_36_o_sub_8_OUT<23>
+    SLICE_X8Y35.COUT     Topcyg                1.096   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<23>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_lut<23>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<23>
+    SLICE_X8Y36.CIN      net (fanout=1)        0.000   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<23>
+    SLICE_X8Y36.COUT     Tbyp                  0.120   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<25>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<24>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<25>
+    SLICE_X8Y37.CIN      net (fanout=1)        0.000   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<25>
+    SLICE_X8Y37.COUT     Tbyp                  0.120   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<27>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<26>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<27>
+    SLICE_X8Y38.CIN      net (fanout=1)        0.000   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<27>
+    SLICE_X8Y38.COUT     Tbyp                  0.120   x_note_length_counter/GND_36_o_GND_36_o_LessThan_9_o
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<28>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<29>
+    SLICE_X10Y36.BX      net (fanout=30)       1.509   x_note_length_counter/GND_36_o_GND_36_o_LessThan_9_o
+    SLICE_X10Y36.COUT    Tbxcy                 0.845   x_note_length_counter/note_length_partial<0>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<0>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<1>
+    SLICE_X10Y37.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<1>
+    SLICE_X10Y37.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<2>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<2>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<3>
+    SLICE_X10Y38.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<3>
+    SLICE_X10Y38.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<4>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<4>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<5>
+    SLICE_X10Y39.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<5>
+    SLICE_X10Y39.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<6>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<6>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<7>
+    SLICE_X10Y40.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<7>
+    SLICE_X10Y40.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<8>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<8>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<9>
+    SLICE_X10Y41.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<9>
+    SLICE_X10Y41.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<10>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<10>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<11>
+    SLICE_X10Y42.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<11>
+    SLICE_X10Y42.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<12>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<12>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<13>
+    SLICE_X10Y43.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<13>
+    SLICE_X10Y43.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<14>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<14>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<15>
+    SLICE_X10Y44.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<15>
+    SLICE_X10Y44.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<16>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<16>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<17>
+    SLICE_X10Y45.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<17>
+    SLICE_X10Y45.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<18>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<18>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<19>
+    SLICE_X10Y46.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<19>
+    SLICE_X10Y46.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<20>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<20>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<21>
+    SLICE_X10Y47.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<21>
+    SLICE_X10Y47.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<22>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<22>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<23>
+    SLICE_X10Y48.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<23>
+    SLICE_X10Y48.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<24>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<24>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<25>
+    SLICE_X10Y49.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<25>
+    SLICE_X10Y49.CLK     Tcinck                1.005   x_note_length_counter/note_length_partial<26>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<26>
+                                                       x_note_length_counter/Mcount_note_length_partial_xor<27>
+                                                       x_note_length_counter/note_length_partial_27
+    -------------------------------------------------  ---------------------------
+    Total                                     37.460ns (23.857ns logic, 13.603ns route)
+                                                       (63.7% logic, 36.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.543ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               bpm/beat_array0_3_9 (FF)
+  Destination:          x_note_length_counter/note_length_partial_27 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      37.457ns (Levels of Logic = 36)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: bpm/beat_array0_3_9 to x_note_length_counter/note_length_partial_27
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y7.XQ        Tcko                  0.720   bpm/beat_array0_3<9>
+                                                       bpm/beat_array0_3_9
+    SLICE_X5Y6.G2        net (fanout=1)        1.580   bpm/beat_array0_3<9>
+    SLICE_X5Y6.COUT      Topcyg                1.039   bpm/ADDERTREE_INTERNAL_Madd_8
+                                                       bpm/ADDERTREE_INTERNAL_Madd_lut<9>
+                                                       bpm/ADDERTREE_INTERNAL_Madd_cy<9>
+    SLICE_X5Y7.CIN       net (fanout=1)        0.000   bpm/ADDERTREE_INTERNAL_Madd_cy<9>
+    SLICE_X5Y7.COUT      Tbyp                  0.128   bpm/ADDERTREE_INTERNAL_Madd_10
+                                                       bpm/ADDERTREE_INTERNAL_Madd_cy<10>
+                                                       bpm/ADDERTREE_INTERNAL_Madd_cy<11>
+    SLICE_X5Y8.CIN       net (fanout=1)        0.000   bpm/ADDERTREE_INTERNAL_Madd_cy<11>
+    SLICE_X5Y8.X         Tcinx                 0.904   bpm/ADDERTREE_INTERNAL_Madd_12
+                                                       bpm/ADDERTREE_INTERNAL_Madd_xor<12>
+    SLICE_X4Y8.F2        net (fanout=1)        1.546   bpm/ADDERTREE_INTERNAL_Madd_12
+    SLICE_X4Y8.COUT      Topcyf                1.084   bpm/ADDERTREE_INTERNAL_Madd_122
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_lut<12>
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_cy<12>
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_cy<13>
+    SLICE_X4Y9.CIN       net (fanout=1)        0.000   bpm/ADDERTREE_INTERNAL_Madd2_cy<13>
+    SLICE_X4Y9.Y         Tciny                 0.923   bpm/ADDERTREE_INTERNAL_Madd_142
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_cy<14>
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_xor<15>
+    MULT18X18_X0Y1.A15   net (fanout=1)        1.272   bpm/ADDERTREE_INTERNAL_Madd_152
+    MULT18X18_X0Y1.P20   Tmult                 4.072   bpm/Mmult_sum<40:0>_submult_0
+                                                       bpm/Mmult_sum<40:0>_submult_0
+    SLICE_X2Y17.G2       net (fanout=1)        1.761   bpm/Mmult_sum<40:0>_submult_0_20
+    SLICE_X2Y17.COUT     Topcyg                1.096   slv_twelfth<3>
+                                                       bpm/Mmult_sum<40:0>_Madd_lut<20>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<20>
+    SLICE_X2Y18.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<20>
+    SLICE_X2Y18.COUT     Tbyp                  0.120   slv_twelfth<5>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<21>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<22>
+    SLICE_X2Y19.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<22>
+    SLICE_X2Y19.COUT     Tbyp                  0.120   slv_twelfth<7>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<23>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<24>
+    SLICE_X2Y20.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<24>
+    SLICE_X2Y20.COUT     Tbyp                  0.120   slv_twelfth<9>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<25>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<26>
+    SLICE_X2Y21.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<26>
+    SLICE_X2Y21.COUT     Tbyp                  0.120   slv_twelfth<11>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<27>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<28>
+    SLICE_X2Y22.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<28>
+    SLICE_X2Y22.Y        Tciny                 0.923   slv_twelfth<13>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<29>
+                                                       bpm/Mmult_sum<40:0>_Madd_xor<30>
+    MULT18X18_X0Y3.A14   net (fanout=24)       1.728   slv_twelfth<14>
+    MULT18X18_X0Y3.P17   Tmult                 3.860   x_note_length_counter/Mmult_note_length_cc_submult_0
+                                                       x_note_length_counter/Mmult_note_length_cc_submult_0
+    SLICE_X5Y30.F1       net (fanout=1)        1.815   x_note_length_counter/Mmult_note_length_cc_submult_0_17
+    SLICE_X5Y30.COUT     Topcyf                1.027   x_note_length_counter/note_length_cc<17>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_lut<17>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<17>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<18>
+    SLICE_X5Y31.CIN      net (fanout=1)        0.000   x_note_length_counter/Mmult_note_length_cc_Madd_cy<18>
+    SLICE_X5Y31.COUT     Tbyp                  0.128   x_note_length_counter/note_length_cc<19>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<19>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<20>
+    SLICE_X5Y32.CIN      net (fanout=1)        0.000   x_note_length_counter/Mmult_note_length_cc_Madd_cy<20>
+    SLICE_X5Y32.X        Tcinx                 0.904   x_note_length_counter/note_length_cc<21>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_xor<21>
+    SLICE_X7Y36.G3       net (fanout=8)        1.156   x_note_length_counter/note_length_cc<21>
+    SLICE_X7Y36.COUT     Topcyg                1.039   x_note_length_counter/GND_36_o_GND_36_o_sub_8_OUT<20>
+                                                       x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_lut<21>_INV_0
+                                                       x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_cy<21>
+    SLICE_X7Y37.CIN      net (fanout=1)        0.000   x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_cy<21>
+    SLICE_X7Y37.Y        Tciny                 0.923   x_note_length_counter/GND_36_o_GND_36_o_sub_8_OUT<22>
+                                                       x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_cy<22>
+                                                       x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_xor<23>
+    SLICE_X8Y35.G3       net (fanout=1)        1.094   x_note_length_counter/GND_36_o_GND_36_o_sub_8_OUT<23>
+    SLICE_X8Y35.COUT     Topcyg                1.096   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<23>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_lut<23>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<23>
+    SLICE_X8Y36.CIN      net (fanout=1)        0.000   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<23>
+    SLICE_X8Y36.COUT     Tbyp                  0.120   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<25>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<24>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<25>
+    SLICE_X8Y37.CIN      net (fanout=1)        0.000   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<25>
+    SLICE_X8Y37.COUT     Tbyp                  0.120   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<27>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<26>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<27>
+    SLICE_X8Y38.CIN      net (fanout=1)        0.000   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<27>
+    SLICE_X8Y38.COUT     Tbyp                  0.120   x_note_length_counter/GND_36_o_GND_36_o_LessThan_9_o
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<28>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<29>
+    SLICE_X10Y36.BX      net (fanout=30)       1.509   x_note_length_counter/GND_36_o_GND_36_o_LessThan_9_o
+    SLICE_X10Y36.COUT    Tbxcy                 0.845   x_note_length_counter/note_length_partial<0>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<0>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<1>
+    SLICE_X10Y37.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<1>
+    SLICE_X10Y37.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<2>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<2>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<3>
+    SLICE_X10Y38.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<3>
+    SLICE_X10Y38.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<4>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<4>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<5>
+    SLICE_X10Y39.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<5>
+    SLICE_X10Y39.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<6>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<6>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<7>
+    SLICE_X10Y40.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<7>
+    SLICE_X10Y40.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<8>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<8>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<9>
+    SLICE_X10Y41.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<9>
+    SLICE_X10Y41.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<10>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<10>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<11>
+    SLICE_X10Y42.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<11>
+    SLICE_X10Y42.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<12>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<12>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<13>
+    SLICE_X10Y43.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<13>
+    SLICE_X10Y43.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<14>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<14>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<15>
+    SLICE_X10Y44.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<15>
+    SLICE_X10Y44.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<16>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<16>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<17>
+    SLICE_X10Y45.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<17>
+    SLICE_X10Y45.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<18>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<18>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<19>
+    SLICE_X10Y46.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<19>
+    SLICE_X10Y46.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<20>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<20>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<21>
+    SLICE_X10Y47.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<21>
+    SLICE_X10Y47.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<22>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<22>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<23>
+    SLICE_X10Y48.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<23>
+    SLICE_X10Y48.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<24>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<24>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<25>
+    SLICE_X10Y49.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<25>
+    SLICE_X10Y49.CLK     Tcinck                1.005   x_note_length_counter/note_length_partial<26>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<26>
+                                                       x_note_length_counter/Mcount_note_length_partial_xor<27>
+                                                       x_note_length_counter/note_length_partial_27
+    -------------------------------------------------  ---------------------------
+    Total                                     37.457ns (23.996ns logic, 13.461ns route)
+                                                       (64.1% logic, 35.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.595ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               bpm/beat_array0_3_9 (FF)
+  Destination:          x_note_length_counter/note_length_partial_27 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      37.405ns (Levels of Logic = 36)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: bpm/beat_array0_3_9 to x_note_length_counter/note_length_partial_27
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y7.XQ        Tcko                  0.720   bpm/beat_array0_3<9>
+                                                       bpm/beat_array0_3_9
+    SLICE_X5Y6.G2        net (fanout=1)        1.580   bpm/beat_array0_3<9>
+    SLICE_X5Y6.COUT      Topcyg                1.039   bpm/ADDERTREE_INTERNAL_Madd_8
+                                                       bpm/ADDERTREE_INTERNAL_Madd_lut<9>
+                                                       bpm/ADDERTREE_INTERNAL_Madd_cy<9>
+    SLICE_X5Y7.CIN       net (fanout=1)        0.000   bpm/ADDERTREE_INTERNAL_Madd_cy<9>
+    SLICE_X5Y7.COUT      Tbyp                  0.128   bpm/ADDERTREE_INTERNAL_Madd_10
+                                                       bpm/ADDERTREE_INTERNAL_Madd_cy<10>
+                                                       bpm/ADDERTREE_INTERNAL_Madd_cy<11>
+    SLICE_X5Y8.CIN       net (fanout=1)        0.000   bpm/ADDERTREE_INTERNAL_Madd_cy<11>
+    SLICE_X5Y8.X         Tcinx                 0.904   bpm/ADDERTREE_INTERNAL_Madd_12
+                                                       bpm/ADDERTREE_INTERNAL_Madd_xor<12>
+    SLICE_X4Y8.F2        net (fanout=1)        1.546   bpm/ADDERTREE_INTERNAL_Madd_12
+    SLICE_X4Y8.COUT      Topcyf                1.084   bpm/ADDERTREE_INTERNAL_Madd_122
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_lut<12>
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_cy<12>
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_cy<13>
+    SLICE_X4Y9.CIN       net (fanout=1)        0.000   bpm/ADDERTREE_INTERNAL_Madd2_cy<13>
+    SLICE_X4Y9.Y         Tciny                 0.923   bpm/ADDERTREE_INTERNAL_Madd_142
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_cy<14>
+                                                       bpm/ADDERTREE_INTERNAL_Madd2_xor<15>
+    MULT18X18_X0Y1.A15   net (fanout=1)        1.272   bpm/ADDERTREE_INTERNAL_Madd_152
+    MULT18X18_X0Y1.P20   Tmult                 4.072   bpm/Mmult_sum<40:0>_submult_0
+                                                       bpm/Mmult_sum<40:0>_submult_0
+    SLICE_X2Y17.G2       net (fanout=1)        1.761   bpm/Mmult_sum<40:0>_submult_0_20
+    SLICE_X2Y17.COUT     Topcyg                1.096   slv_twelfth<3>
+                                                       bpm/Mmult_sum<40:0>_Madd_lut<20>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<20>
+    SLICE_X2Y18.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<20>
+    SLICE_X2Y18.COUT     Tbyp                  0.120   slv_twelfth<5>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<21>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<22>
+    SLICE_X2Y19.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<22>
+    SLICE_X2Y19.COUT     Tbyp                  0.120   slv_twelfth<7>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<23>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<24>
+    SLICE_X2Y20.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<24>
+    SLICE_X2Y20.COUT     Tbyp                  0.120   slv_twelfth<9>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<25>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<26>
+    SLICE_X2Y21.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<26>
+    SLICE_X2Y21.COUT     Tbyp                  0.120   slv_twelfth<11>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<27>
+                                                       bpm/Mmult_sum<40:0>_Madd_cy<28>
+    SLICE_X2Y22.CIN      net (fanout=1)        0.000   bpm/Mmult_sum<40:0>_Madd_cy<28>
+    SLICE_X2Y22.X        Tcinx                 0.904   slv_twelfth<13>
+                                                       bpm/Mmult_sum<40:0>_Madd_xor<29>
+    MULT18X18_X0Y3.A13   net (fanout=24)       1.695   slv_twelfth<13>
+    MULT18X18_X0Y3.P17   Tmult                 3.860   x_note_length_counter/Mmult_note_length_cc_submult_0
+                                                       x_note_length_counter/Mmult_note_length_cc_submult_0
+    SLICE_X5Y30.F1       net (fanout=1)        1.815   x_note_length_counter/Mmult_note_length_cc_submult_0_17
+    SLICE_X5Y30.COUT     Topcyf                1.027   x_note_length_counter/note_length_cc<17>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_lut<17>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<17>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<18>
+    SLICE_X5Y31.CIN      net (fanout=1)        0.000   x_note_length_counter/Mmult_note_length_cc_Madd_cy<18>
+    SLICE_X5Y31.COUT     Tbyp                  0.128   x_note_length_counter/note_length_cc<19>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<19>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_cy<20>
+    SLICE_X5Y32.CIN      net (fanout=1)        0.000   x_note_length_counter/Mmult_note_length_cc_Madd_cy<20>
+    SLICE_X5Y32.X        Tcinx                 0.904   x_note_length_counter/note_length_cc<21>
+                                                       x_note_length_counter/Mmult_note_length_cc_Madd_xor<21>
+    SLICE_X7Y36.G3       net (fanout=8)        1.156   x_note_length_counter/note_length_cc<21>
+    SLICE_X7Y36.COUT     Topcyg                1.039   x_note_length_counter/GND_36_o_GND_36_o_sub_8_OUT<20>
+                                                       x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_lut<21>_INV_0
+                                                       x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_cy<21>
+    SLICE_X7Y37.CIN      net (fanout=1)        0.000   x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_cy<21>
+    SLICE_X7Y37.Y        Tciny                 0.923   x_note_length_counter/GND_36_o_GND_36_o_sub_8_OUT<22>
+                                                       x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_cy<22>
+                                                       x_note_length_counter/Msub_GND_36_o_GND_36_o_sub_8_OUT_xor<23>
+    SLICE_X8Y35.G3       net (fanout=1)        1.094   x_note_length_counter/GND_36_o_GND_36_o_sub_8_OUT<23>
+    SLICE_X8Y35.COUT     Topcyg                1.096   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<23>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_lut<23>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<23>
+    SLICE_X8Y36.CIN      net (fanout=1)        0.000   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<23>
+    SLICE_X8Y36.COUT     Tbyp                  0.120   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<25>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<24>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<25>
+    SLICE_X8Y37.CIN      net (fanout=1)        0.000   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<25>
+    SLICE_X8Y37.COUT     Tbyp                  0.120   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<27>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<26>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<27>
+    SLICE_X8Y38.CIN      net (fanout=1)        0.000   x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<27>
+    SLICE_X8Y38.COUT     Tbyp                  0.120   x_note_length_counter/GND_36_o_GND_36_o_LessThan_9_o
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<28>
+                                                       x_note_length_counter/Mcompar_GND_36_o_GND_36_o_LessThan_9_o_cy<29>
+    SLICE_X10Y36.BX      net (fanout=30)       1.509   x_note_length_counter/GND_36_o_GND_36_o_LessThan_9_o
+    SLICE_X10Y36.COUT    Tbxcy                 0.845   x_note_length_counter/note_length_partial<0>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<0>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<1>
+    SLICE_X10Y37.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<1>
+    SLICE_X10Y37.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<2>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<2>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<3>
+    SLICE_X10Y38.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<3>
+    SLICE_X10Y38.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<4>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<4>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<5>
+    SLICE_X10Y39.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<5>
+    SLICE_X10Y39.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<6>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<6>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<7>
+    SLICE_X10Y40.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<7>
+    SLICE_X10Y40.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<8>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<8>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<9>
+    SLICE_X10Y41.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<9>
+    SLICE_X10Y41.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<10>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<10>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<11>
+    SLICE_X10Y42.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<11>
+    SLICE_X10Y42.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<12>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<12>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<13>
+    SLICE_X10Y43.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<13>
+    SLICE_X10Y43.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<14>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<14>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<15>
+    SLICE_X10Y44.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<15>
+    SLICE_X10Y44.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<16>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<16>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<17>
+    SLICE_X10Y45.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<17>
+    SLICE_X10Y45.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<18>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<18>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<19>
+    SLICE_X10Y46.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<19>
+    SLICE_X10Y46.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<20>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<20>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<21>
+    SLICE_X10Y47.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<21>
+    SLICE_X10Y47.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<22>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<22>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<23>
+    SLICE_X10Y48.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<23>
+    SLICE_X10Y48.COUT    Tbyp                  0.120   x_note_length_counter/note_length_partial<24>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<24>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<25>
+    SLICE_X10Y49.CIN     net (fanout=1)        0.000   x_note_length_counter/Mcount_note_length_partial_cy<25>
+    SLICE_X10Y49.CLK     Tcinck                1.005   x_note_length_counter/note_length_partial<26>
+                                                       x_note_length_counter/Mcount_note_length_partial_cy<26>
+                                                       x_note_length_counter/Mcount_note_length_partial_xor<27>
+                                                       x_note_length_counter/note_length_partial_27
+    -------------------------------------------------  ---------------------------
+    Total                                     37.405ns (23.977ns logic, 13.428ns route)
+                                                       (64.1% logic, 35.9% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: ts_clk = PERIOD TIMEGRP "tnm_clk" 25 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point bpm/beat_array0_3_1 (SLICE_X7Y4.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.798ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               bpm/beat_array0_2_1 (FF)
+  Destination:          bpm/beat_array0_3_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.798ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 40.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: bpm/beat_array0_2_1 to bpm/beat_array0_3_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y3.XQ        Tcko                  0.576   bpm/beat_array0_2<1>
+                                                       bpm/beat_array0_2_1
+    SLICE_X7Y4.BX        net (fanout=2)        0.505   bpm/beat_array0_2<1>
+    SLICE_X7Y4.CLK       Tckdi       (-Th)     0.283   bpm/beat_array0_3<1>
+                                                       bpm/beat_array0_3_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.798ns (0.293ns logic, 0.505ns route)
+                                                       (36.7% logic, 63.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point bpm/beat_array0_2_29 (SLICE_X6Y17.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.806ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               bpm/beat_array0_1_29 (FF)
+  Destination:          bpm/beat_array0_2_29 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.806ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 40.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: bpm/beat_array0_1_29 to bpm/beat_array0_2_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y16.XQ       Tcko                  0.576   bpm/beat_array0_1<29>
+                                                       bpm/beat_array0_1_29
+    SLICE_X6Y17.BX       net (fanout=2)        0.513   bpm/beat_array0_1<29>
+    SLICE_X6Y17.CLK      Tckdi       (-Th)     0.283   bpm/beat_array0_2<29>
+                                                       bpm/beat_array0_2_29
+    -------------------------------------------------  ---------------------------
+    Total                                      0.806ns (0.293ns logic, 0.513ns route)
+                                                       (36.4% logic, 63.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point bpm/beat_array0_3_27 (SLICE_X8Y15.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.809ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               bpm/beat_array0_2_27 (FF)
+  Destination:          bpm/beat_array0_3_27 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.809ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 40.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: bpm/beat_array0_2_27 to bpm/beat_array0_3_27
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X8Y14.XQ       Tcko                  0.576   bpm/beat_array0_2<27>
+                                                       bpm/beat_array0_2_27
+    SLICE_X8Y15.BX       net (fanout=2)        0.516   bpm/beat_array0_2<27>
+    SLICE_X8Y15.CLK      Tckdi       (-Th)     0.283   bpm/beat_array0_3<27>
+                                                       bpm/beat_array0_3_27
+    -------------------------------------------------  ---------------------------
+    Total                                      0.809ns (0.293ns logic, 0.516ns route)
+                                                       (36.2% logic, 63.8% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: ts_clk = PERIOD TIMEGRP "tnm_clk" 25 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 37.268ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 40.000ns
+  Low pulse: 20.000ns
+  Low pulse limit: 1.366ns (Tbpwl)
+  Physical resource: x_note_player/Mram_next_sin_table_array_index[10]_X_14_o_wide_mux_51_OUT/CLKA
+  Logical resource: x_note_player/Mram_next_sin_table_array_index[10]_X_14_o_wide_mux_51_OUT.A/CLKA
+  Location pin: RAMB16_X0Y0.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 37.268ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 40.000ns
+  High pulse: 20.000ns
+  High pulse limit: 1.366ns (Tbpwh)
+  Physical resource: x_note_player/Mram_next_sin_table_array_index[10]_X_14_o_wide_mux_51_OUT/CLKA
+  Logical resource: x_note_player/Mram_next_sin_table_array_index[10]_X_14_o_wide_mux_51_OUT.A/CLKA
+  Location pin: RAMB16_X0Y0.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 37.268ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 2.732ns (366.032MHz) (Tbp)
+  Physical resource: x_note_player/Mram_next_sin_table_array_index[10]_X_14_o_wide_mux_51_OUT/CLKA
+  Logical resource: x_note_player/Mram_next_sin_table_array_index[10]_X_14_o_wide_mux_51_OUT.A/CLKA
+  Location pin: RAMB16_X0Y0.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   39.966|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 1785445655737 paths, 0 nets, and 3784 connections
+
+Design statistics:
+   Minimum period:  39.966ns{1}   (Maximum frequency:  25.021MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Fri Oct 13 17:34:40 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 120 MB
+
+
+

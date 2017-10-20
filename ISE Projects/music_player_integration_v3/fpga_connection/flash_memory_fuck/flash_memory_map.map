@@ -1,0 +1,134 @@
+Release 14.7 Map P.20131013 (nt)
+Xilinx Map Application Log File for Design 'flash_memory'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off
+-c 100 -o flash_memory_map.ncd flash_memory.ngd flash_memory.pcf 
+Target Device  : xc3s400
+Target Package : ft256
+Target Speed   : -4
+Mapper Version : spartan3 -- $Revision: 1.55 $
+Mapped Date    : Sat Sep 16 22:47:09 2017
+
+Mapping design into LUTs...
+Running directed packing...
+WARNING:Pack:1542 - The register read_data_sig_0 has the property IOB=TRUE, but
+   was not packed into the output side of an I/O component. The register symbol
+   read_data_sig_0 has loads outside the I/O component.
+   The register symbol read_data_sig_0 has loads outside the I/O component.
+WARNING:Pack:1542 - The register read_data_sig_1 has the property IOB=TRUE, but
+   was not packed into the output side of an I/O component. The register symbol
+   read_data_sig_1 has loads outside the I/O component.
+   The register symbol read_data_sig_1 has loads outside the I/O component.
+WARNING:Pack:1542 - The register read_data_sig_2 has the property IOB=TRUE, but
+   was not packed into the output side of an I/O component. The register symbol
+   read_data_sig_2 has loads outside the I/O component.
+   The register symbol read_data_sig_2 has loads outside the I/O component.
+WARNING:Pack:1542 - The register read_data_sig_3 has the property IOB=TRUE, but
+   was not packed into the output side of an I/O component. The register symbol
+   read_data_sig_3 has loads outside the I/O component.
+   The register symbol read_data_sig_3 has loads outside the I/O component.
+WARNING:Pack:1542 - The register read_data_sig_4 has the property IOB=TRUE, but
+   was not packed into the output side of an I/O component. The register symbol
+   read_data_sig_4 has loads outside the I/O component.
+   The register symbol read_data_sig_4 has loads outside the I/O component.
+WARNING:Pack:1542 - The register read_data_sig_5 has the property IOB=TRUE, but
+   was not packed into the output side of an I/O component. The register symbol
+   read_data_sig_5 has loads outside the I/O component.
+   The register symbol read_data_sig_5 has loads outside the I/O component.
+WARNING:Pack:1542 - The register read_data_sig_6 has the property IOB=TRUE, but
+   was not packed into the output side of an I/O component. The register symbol
+   read_data_sig_6 has loads outside the I/O component.
+   The register symbol read_data_sig_6 has loads outside the I/O component.
+WARNING:Pack:1542 - The register read_data_sig_7 has the property IOB=TRUE, but
+   was not packed into the output side of an I/O component. The register symbol
+   read_data_sig_7 has loads outside the I/O component.
+   The register symbol read_data_sig_7 has loads outside the I/O component.
+WARNING:Pack:1542 - The register read_data_sig_0 has the property IOB=TRUE, but
+   was not packed into the output side of an I/O component. The register symbol
+   read_data_sig_0 has loads outside the I/O component.
+   The register symbol read_data_sig_0 has loads outside the I/O component.
+WARNING:Pack:1542 - The register read_data_sig_1 has the property IOB=TRUE, but
+   was not packed into the output side of an I/O component. The register symbol
+   read_data_sig_1 has loads outside the I/O component.
+   The register symbol read_data_sig_1 has loads outside the I/O component.
+WARNING:Pack:1542 - The register read_data_sig_2 has the property IOB=TRUE, but
+   was not packed into the output side of an I/O component. The register symbol
+   read_data_sig_2 has loads outside the I/O component.
+   The register symbol read_data_sig_2 has loads outside the I/O component.
+WARNING:Pack:1542 - The register read_data_sig_3 has the property IOB=TRUE, but
+   was not packed into the output side of an I/O component. The register symbol
+   read_data_sig_3 has loads outside the I/O component.
+   The register symbol read_data_sig_3 has loads outside the I/O component.
+WARNING:Pack:1542 - The register read_data_sig_4 has the property IOB=TRUE, but
+   was not packed into the output side of an I/O component. The register symbol
+   read_data_sig_4 has loads outside the I/O component.
+   The register symbol read_data_sig_4 has loads outside the I/O component.
+WARNING:Pack:1542 - The register read_data_sig_5 has the property IOB=TRUE, but
+   was not packed into the output side of an I/O component. The register symbol
+   read_data_sig_5 has loads outside the I/O component.
+   The register symbol read_data_sig_5 has loads outside the I/O component.
+WARNING:Pack:1542 - The register read_data_sig_6 has the property IOB=TRUE, but
+   was not packed into the output side of an I/O component. The register symbol
+   read_data_sig_6 has loads outside the I/O component.
+   The register symbol read_data_sig_6 has loads outside the I/O component.
+WARNING:Pack:1542 - The register read_data_sig_7 has the property IOB=TRUE, but
+   was not packed into the output side of an I/O component. The register symbol
+   read_data_sig_7 has loads outside the I/O component.
+   The register symbol read_data_sig_7 has loads outside the I/O component.
+Running delay-based LUT packing...
+Running related packing...
+Updating timing models...
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:   16
+Logic Utilization:
+  Number of Slice Flip Flops:            77 out of   7,168    1%
+  Number of 4 input LUTs:               108 out of   7,168    1%
+Logic Distribution:
+  Number of occupied Slices:             91 out of   3,584    2%
+    Number of Slices containing only related logic:      91 out of      91 100%
+    Number of Slices containing unrelated logic:          0 out of      91   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:         170 out of   7,168    2%
+    Number used as logic:               108
+    Number used as a route-thru:         62
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 70 out of     173   40%
+    IOB Flip Flops:                      16
+  Number of BUFGMUXs:                     1 out of       8   12%
+
+Average Fanout of Non-Clock Nets:                2.67
+
+Peak Memory Usage:  188 MB
+Total REAL time to MAP completion:  1 secs 
+Total CPU time to MAP completion:   0 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "flash_memory_map.mrp" for details.

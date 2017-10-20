@@ -1,0 +1,69 @@
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_fuck/flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_fuck/flash_memory.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_fuck/flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_fuck/flash_memory.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_fuck/flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_fuck/flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 flash_memory.ngc flash_memory.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 flash_memory.ngc flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o flash_memory_map.ncd flash_memory.ngd flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 flash_memory_map.ncd flash_memory.ncd flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml flash_memory.twx flash_memory.ncd -o flash_memory.twr flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f flash_memory.ut flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_fuck/flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_fuck/flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 flash_memory.ngc flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o flash_memory_map.ncd flash_memory.ngd flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 flash_memory_map.ncd flash_memory.ncd flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml flash_memory.twx flash_memory.ncd -o flash_memory.twr flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f flash_memory.ut flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_fuck/flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_fuck/flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 flash_memory.ngc flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o flash_memory_map.ncd flash_memory.ngd flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 flash_memory_map.ncd flash_memory.ncd flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml flash_memory.twx flash_memory.ncd -o flash_memory.twr flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f flash_memory.ut flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_fuck/flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_fuck/flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 flash_memory.ngc flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o flash_memory_map.ncd flash_memory.ngd flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 flash_memory_map.ncd flash_memory.ncd flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml flash_memory.twx flash_memory.ncd -o flash_memory.twr flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f flash_memory.ut flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_fuck/flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_fuck/flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 flash_memory.ngc flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o flash_memory_map.ncd flash_memory.ngd flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 flash_memory_map.ncd flash_memory.ncd flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml flash_memory.twx flash_memory.ncd -o flash_memory.twr flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f flash_memory.ut flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_fuck/flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_fuck/flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 flash_memory.ngc flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o flash_memory_map.ncd flash_memory.ngd flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 flash_memory_map.ncd flash_memory.ncd flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml flash_memory.twx flash_memory.ncd -o flash_memory.twr flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f flash_memory.ut flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_fuck/flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_fuck/flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 flash_memory.ngc flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o flash_memory_map.ncd flash_memory.ngd flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 flash_memory_map.ncd flash_memory.ncd flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml flash_memory.twx flash_memory.ncd -o flash_memory.twr flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f flash_memory.ut flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_fuck/flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_fuck/flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 flash_memory.ngc flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o flash_memory_map.ncd flash_memory.ngd flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 flash_memory_map.ncd flash_memory.ncd flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml flash_memory.twx flash_memory.ncd -o flash_memory.twr flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f flash_memory.ut flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_fuck/flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_fuck/flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 flash_memory.ngc flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o flash_memory_map.ncd flash_memory.ngd flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 flash_memory_map.ncd flash_memory.ncd flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml flash_memory.twx flash_memory.ncd -o flash_memory.twr flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f flash_memory.ut flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_fuck/flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_fuck/flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 flash_memory.ngc flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o flash_memory_map.ncd flash_memory.ngd flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 flash_memory_map.ncd flash_memory.ncd flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml flash_memory.twx flash_memory.ncd -o flash_memory.twr flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f flash_memory.ut flash_memory.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/flash_memory_fuck/flash_memory.xst" -ofn "Z:/Desktop/fpga_connection/flash_memory_fuck/flash_memory.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash_memory.ucf -p xc3s400-ft256-4 flash_memory.ngc flash_memory.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o flash_memory_map.ncd flash_memory.ngd flash_memory.pcf 
+par -w -intstyle ise -ol high -t 1 flash_memory_map.ncd flash_memory.ncd flash_memory.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml flash_memory.twx flash_memory.ncd -o flash_memory.twr flash_memory.pcf -ucf flash_memory.ucf 
+bitgen -intstyle ise -f flash_memory.ut flash_memory.ncd 

@@ -1,0 +1,5 @@
+set -tmpdir "Z:/Desktop/fpga_connection/fpga_connection/xst/projnav.tmp"
+set -xsthdpdir "Z:/Desktop/fpga_connection/fpga_connection/xst"
+elaborate
+-ifn BRAM.prj
+-ifmt mixed

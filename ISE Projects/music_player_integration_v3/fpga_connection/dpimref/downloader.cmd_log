@@ -1,0 +1,24 @@
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/dpimref/downloader.xst" -ofn "Z:/Desktop/fpga_connection/dpimref/downloader.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/dpimref/downloader.xst" -ofn "Z:/Desktop/fpga_connection/dpimref/downloader.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/pin_assignment.ucf -p xc3s400-ft256-4 downloader.ngc downloader.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o downloader_map.ncd downloader.ngd downloader.pcf 
+par -w -intstyle ise -ol high -t 1 downloader_map.ncd downloader.ncd downloader.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml downloader.twx downloader.ncd -o downloader.twr downloader.pcf 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/dpimref/downloader.xst" -ofn "Z:/Desktop/fpga_connection/dpimref/downloader.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/pin_assignment.ucf -p xc3s400-ft256-4 downloader.ngc downloader.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o downloader_map.ncd downloader.ngd downloader.pcf 
+par -w -intstyle ise -ol high -t 1 downloader_map.ncd downloader.ncd downloader.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml downloader.twx downloader.ncd -o downloader.twr downloader.pcf 
+bitgen -intstyle ise -f downloader.ut downloader.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/dpimref/downloader.xst" -ofn "Z:/Desktop/fpga_connection/dpimref/downloader.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/pin_assignment.ucf -p xc3s400-ft256-4 downloader.ngc downloader.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o downloader_map.ncd downloader.ngd downloader.pcf 
+par -w -intstyle ise -ol high -t 1 downloader_map.ncd downloader.ncd downloader.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml downloader.twx downloader.ncd -o downloader.twr downloader.pcf 
+bitgen -intstyle ise -f downloader.ut downloader.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/dpimref/downloader.xst" -ofn "Z:/Desktop/fpga_connection/dpimref/downloader.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/pin_assignment.ucf -p xc3s400-ft256-4 downloader.ngc downloader.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o downloader_map.ncd downloader.ngd downloader.pcf 
+par -w -intstyle ise -ol high -t 1 downloader_map.ncd downloader.ncd downloader.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml downloader.twx downloader.ncd -o downloader.twr downloader.pcf 
+bitgen -intstyle ise -f downloader.ut downloader.ncd 

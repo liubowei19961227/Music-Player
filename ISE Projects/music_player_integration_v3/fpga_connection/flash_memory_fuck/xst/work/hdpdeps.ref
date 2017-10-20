@@ -1,0 +1,8 @@
+V3 3
+FL "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory_fuck/flash_memory.vhd" 2017/09/16.22:46:55 P.20131013
+EN work/flash_memory 1505566019 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory_fuck/flash_memory.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/flash_memory/Behavioral 1505566020 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory_fuck/flash_memory.vhd" \
+      EN work/flash_memory 1505566019

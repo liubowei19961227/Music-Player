@@ -1,0 +1,3 @@
+vhdl work "\\vmware-host\shared folders\Desktop\fpga_connection\ultrasonic_sensor\bin_to_dec.vhd"
+vhdl work "\\vmware-host\shared folders\Desktop\fpga_connection\ultrasonic_sensor\seven_seg_display.vhd"
+vhdl work "\\vmware-host\shared folders\Desktop\fpga_connection\ultrasonic_sensor\ultrasonic_sensor.vhd"

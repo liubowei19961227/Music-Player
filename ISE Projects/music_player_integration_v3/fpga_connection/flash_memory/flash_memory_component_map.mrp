@@ -1,0 +1,1137 @@
+Release 14.7 Map P.20131013 (nt)
+Xilinx Mapping Report File for Design 'flash_memory_component'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s400-ft256-4 -timing -logic_opt off -ol
+high -xe n -t 1 -register_duplication off -cm area -ir off -pr b -power off -o
+flash_memory_component_map.ncd flash_memory_component.ngd
+flash_memory_component.pcf 
+Target Device  : xc3s400
+Target Package : ft256
+Target Speed   : -4
+Mapper Version : spartan3 -- $Revision: 1.55 $
+Mapped Date    : Thu Oct 19 00:03:53 2017
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:  264
+Logic Utilization:
+  Number of Slice Flip Flops:           264 out of   7,168    3%
+  Number of 4 input LUTs:             1,272 out of   7,168   17%
+Logic Distribution:
+  Number of occupied Slices:            799 out of   3,584   22%
+    Number of Slices containing only related logic:     799 out of     799 100%
+    Number of Slices containing unrelated logic:          0 out of     799   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       1,401 out of   7,168   19%
+    Number used as logic:               760
+    Number used as a route-thru:        129
+    Number used for Dual Port RAMs:     512
+      (Two LUTs used per Dual Port RAM)
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 75 out of     173   43%
+    IOB Flip Flops:                      66
+  Number of RAMB16s:                      1 out of      16    6%
+  Number of BUFGMUXs:                     1 out of       8   12%
+
+Average Fanout of Non-Clock Nets:                4.63
+
+Peak Memory Usage:  213 MB
+Total REAL time to MAP completion:  8 secs 
+Total CPU time to MAP completion:   7 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Pack:2780 - The register "flash_mem_debug/cntl_read_data_0" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/cntl_read_data_1" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/cntl_read_data_2" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/cntl_read_data_3" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/cntl_read_data_4" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/cntl_read_data_5" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/cntl_read_data_6" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/cntl_read_data_7" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/cntl_read_data_8" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/cntl_read_data_9" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_address_0_BRB1"
+   has the property IOB=TRUE, but it did not join an IO component because it is
+   not connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_address_0_BRB3"
+   has the property IOB=TRUE, but it did not join an IO component because it is
+   not connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_address_1_BRB1"
+   has the property IOB=TRUE, but it did not join an IO component because it is
+   not connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_address_1_BRB3"
+   has the property IOB=TRUE, but it did not join an IO component because it is
+   not connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_address_2_BRB1"
+   has the property IOB=TRUE, but it did not join an IO component because it is
+   not connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_address_2_BRB3"
+   has the property IOB=TRUE, but it did not join an IO component because it is
+   not connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_address_3_BRB1"
+   has the property IOB=TRUE, but it did not join an IO component because it is
+   not connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_address_3_BRB3"
+   has the property IOB=TRUE, but it did not join an IO component because it is
+   not connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_address_4_BRB1"
+   has the property IOB=TRUE, but it did not join an IO component because it is
+   not connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_address_4_BRB3"
+   has the property IOB=TRUE, but it did not join an IO component because it is
+   not connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_address_5_BRB1"
+   has the property IOB=TRUE, but it did not join an IO component because it is
+   not connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_address_5_BRB3"
+   has the property IOB=TRUE, but it did not join an IO component because it is
+   not connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_address_6_BRB1"
+   has the property IOB=TRUE, but it did not join an IO component because it is
+   not connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_address_6_BRB3"
+   has the property IOB=TRUE, but it did not join an IO component because it is
+   not connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_address_7_BRB0"
+   has the property IOB=TRUE, but it did not join an IO component because it is
+   not connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_address_7_BRB1"
+   has the property IOB=TRUE, but it did not join an IO component because it is
+   not connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_address_7_BRB2"
+   has the property IOB=TRUE, but it did not join an IO component because it is
+   not connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_address_7_BRB3"
+   has the property IOB=TRUE, but it did not join an IO component because it is
+   not connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/current_state_FSM_FFd1" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/current_state_FSM_FFd2" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/current_state_FSM_FFd3" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/current_state_FSM_FFd4" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/current_state_FSM_FFd5" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/current_state_FSM_FFd6" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/current_state_FSM_FFd7" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/current_state_FSM_FFd8" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/current_state_FSM_FFd9" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "write_address_0" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "write_address_1" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "write_address_2" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "write_address_3" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "write_address_4" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "write_address_5" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "write_address_6" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "write_address_7" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "rest" has the property IOB=TRUE, but it did
+   not join an IO component because it is not connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/current_state_FSM_FFd10" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/current_state_FSM_FFd11" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/current_state_FSM_FFd12" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/current_state_FSM_FFd13" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "display/display/digit_0" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/digit_1" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/write_complete" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_direction" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/current_state_FSM_FFd10" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_data_10" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_data_11" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_data_12" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_data_13" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_data_14" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_data_15" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "f_write" has the property IOB=TRUE, but it did
+   not join an IO component because it is not connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_10" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_11" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_20" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_12" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_21" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_13" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_22" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_14" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_23" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_15" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_24" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_16" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_25" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_17" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_26" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_18" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_27" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_19" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_28" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/cntl_delete_complete" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_read_address_0" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_read_address_1" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_read_address_2" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_read_address_3" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_read_address_4" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_read_address_5" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_read_address_6" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_read_address_7" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_0" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_1" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_2" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_3" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_4" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_5" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_6" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_7" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_8" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_9" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "write_counter_0" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "write_counter_1" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "write_counter_2" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "write_counter_3" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "write_counter_4" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "write_counter_5" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "write_counter_6" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "write_counter_7" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_rest" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "ramB_addr_0" has the property IOB=TRUE, but it
+   did not join an IO component because it is not connected to any IO element.
+WARNING:Pack:2780 - The register "ramB_addr_1" has the property IOB=TRUE, but it
+   did not join an IO component because it is not connected to any IO element.
+WARNING:Pack:2780 - The register "ramB_addr_2" has the property IOB=TRUE, but it
+   did not join an IO component because it is not connected to any IO element.
+WARNING:Pack:2780 - The register "ramB_addr_3" has the property IOB=TRUE, but it
+   did not join an IO component because it is not connected to any IO element.
+WARNING:Pack:2780 - The register "ramB_addr_4" has the property IOB=TRUE, but it
+   did not join an IO component because it is not connected to any IO element.
+WARNING:Pack:2780 - The register "ramB_addr_5" has the property IOB=TRUE, but it
+   did not join an IO component because it is not connected to any IO element.
+WARNING:Pack:2780 - The register "ramB_addr_6" has the property IOB=TRUE, but it
+   did not join an IO component because it is not connected to any IO element.
+WARNING:Pack:2780 - The register "ramB_addr_7" has the property IOB=TRUE, but it
+   did not join an IO component because it is not connected to any IO element.
+WARNING:Pack:2780 - The register "f_delete" has the property IOB=TRUE, but it
+   did not join an IO component because it is not connected to any IO element.
+WARNING:Pack:2780 - The register "debug_state_0_1" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "debug_state_1_1" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "debug_state_2_1" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "debug_state_3_1" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "debug_state_4_1" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "debug_state_5_1" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "debug_state_6_1" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "debug_state_7_1" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "f_read" has the property IOB=TRUE, but it did
+   not join an IO component because it is not connected to any IO element.
+WARNING:Pack:2780 - The register "current_state_FSM_FFd1" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "current_state_FSM_FFd2" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "current_state_FSM_FFd3" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "current_state_FSM_FFd4" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "current_state_FSM_FFd5" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/cntl_read_complete" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "read_address_0" has the property IOB=TRUE, but
+   it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "read_address_1" has the property IOB=TRUE, but
+   it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "read_address_2" has the property IOB=TRUE, but
+   it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "read_address_3" has the property IOB=TRUE, but
+   it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "read_address_4" has the property IOB=TRUE, but
+   it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "read_address_5" has the property IOB=TRUE, but
+   it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "read_address_6" has the property IOB=TRUE, but
+   it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "read_address_7" has the property IOB=TRUE, but
+   it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "display/display/counter_10" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_11" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_20" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_12" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_21" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_13" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_30" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_22" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_14" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_31" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_23" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_15" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_24" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_16" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_25" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_17" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_26" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_18" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_27" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_19" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_28" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_29" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/read_complete" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_30_BRB0" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_30_BRB2" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_31_BRB0" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_31_BRB1" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_31_BRB2" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_31_BRB3" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/current_state_FSM_FFd1" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/current_state_FSM_FFd2" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/current_state_FSM_FFd3" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/current_state_FSM_FFd4" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/current_state_FSM_FFd5" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/current_state_FSM_FFd6" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/current_state_FSM_FFd7" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/current_state_FSM_FFd8" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/current_state_FSM_FFd9" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_29_BRB0" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_29_BRB2" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/cntl_read_data_10" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/cntl_read_data_11" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/cntl_read_data_12" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/cntl_read_data_13" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/cntl_read_data_14" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/cntl_read_data_15" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_data_8" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_data_9" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/basic_flash_opertations/OE_1"
+   has the property IOB=TRUE, but it did not join an IO component because it is
+   not connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/cntl_write_complete" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/basic_flash_opertations/WE_1"
+   has the property IOB=TRUE, but it did not join an IO component because it is
+   not connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_0" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_1" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_2" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_3" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_4" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_5" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_6" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_7" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_8" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_counter_9" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_data_0_BRB1" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_data_0_BRB3" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_data_1_BRB1" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_data_1_BRB3" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_data_2_BRB1" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_data_2_BRB3" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_data_3_BRB1" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_data_3_BRB3" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_data_4_BRB1" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_data_4_BRB3" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_10" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_11" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_20" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_12" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_21" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_13" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_30" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_22" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_14" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_31" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_23" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_15" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_data_5_BRB1" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_24" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_16" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_25" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_17" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_data_5_BRB3" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_26" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_18" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_27" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_19" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_28" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/delay_extend_counter_29" has the
+   property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_data_6_BRB1" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_data_6_BRB2" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_data_6_BRB3" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_data_7_BRB1" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_data_7_BRB2" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register "flash_mem_debug/flash_write_data_7_BRB3" has
+   the property IOB=TRUE, but it did not join an IO component because it is not
+   connected to any IO element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/addr_1_1" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/addr_2_1" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/addr_3_1" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/addr_4_1" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/addr_5_1" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/addr_6_1" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/addr_7_1" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register
+   "flash_mem_debug/basic_flash_opertations/addr_8_1" has the property IOB=TRUE,
+   but it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "ramB_addr_0_1" has the property IOB=TRUE, but
+   it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "ramB_addr_1_1" has the property IOB=TRUE, but
+   it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "ramB_addr_2_1" has the property IOB=TRUE, but
+   it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "ramB_addr_3_1" has the property IOB=TRUE, but
+   it did not join an IO component because it is not connected to any IO
+   element.
+WARNING:Pack:2780 - The register "display/display/counter_0" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_1" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_2" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_3" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_4" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_5" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_6" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_7" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_8" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+WARNING:Pack:2780 - The register "display/display/counter_9" has the property
+   IOB=TRUE, but it did not join an IO component because it is not connected to
+   any IO element.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network Mram_ramB2/SPO has no load.
+INFO:LIT:395 - The above info message is repeated 255 more times for the
+   following (max. 5 shown):
+   Mram_ramB1/SPO,
+   Mram_ramB3/SPO,
+   Mram_ramB4/SPO,
+   Mram_ramB5/SPO,
+   Mram_ramB6/SPO
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   2 block(s) optimized away
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| CE                                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| OE                                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          |          |
+| RP                                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| ST                                 | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| VPEN                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| WE                                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          |          |
+| addr<1>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          |          |
+| addr<2>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          |          |
+| addr<3>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          |          |
+| addr<4>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          |          |
+| addr<5>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          |          |
+| addr<6>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          |          |
+| addr<7>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          |          |
+| addr<8>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          |          |
+| addr<9>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| addr<10>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| addr<11>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| addr<12>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| addr<13>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| addr<14>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| addr<15>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| addr<16>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| addr<17>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| addr<18>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| addr<19>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| addr<20>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| addr<21>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| addr<22>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| an<0>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| an<1>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| an<2>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| an<3>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| btn<1>                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| btn<2>                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| clk                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| data<0>                            | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+|                                    |                  |           |                      |       |          |      | ENFF1        |          |          |
+| data<1>                            | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+|                                    |                  |           |                      |       |          |      | ENFF1        |          |          |
+| data<2>                            | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+|                                    |                  |           |                      |       |          |      | ENFF1        |          |          |
+| data<3>                            | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+|                                    |                  |           |                      |       |          |      | ENFF1        |          |          |
+| data<4>                            | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+|                                    |                  |           |                      |       |          |      | ENFF1        |          |          |
+| data<5>                            | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+|                                    |                  |           |                      |       |          |      | ENFF1        |          |          |
+| data<6>                            | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+|                                    |                  |           |                      |       |          |      | ENFF1        |          |          |
+| data<7>                            | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+|                                    |                  |           |                      |       |          |      | ENFF1        |          |          |
+| data<8>                            | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+|                                    |                  |           |                      |       |          |      | ENFF1        |          |          |
+| data<9>                            | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+|                                    |                  |           |                      |       |          |      | ENFF1        |          |          |
+| data<10>                           | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+|                                    |                  |           |                      |       |          |      | ENFF1        |          |          |
+| data<11>                           | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+|                                    |                  |           |                      |       |          |      | ENFF1        |          |          |
+| data<12>                           | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+|                                    |                  |           |                      |       |          |      | ENFF1        |          |          |
+| data<13>                           | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+|                                    |                  |           |                      |       |          |      | ENFF1        |          |          |
+| data<14>                           | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+|                                    |                  |           |                      |       |          |      | ENFF1        |          |          |
+| data<15>                           | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+|                                    |                  |           |                      |       |          |      | ENFF1        |          |          |
+| hex<0>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| hex<1>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| hex<2>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| hex<3>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| hex<4>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| hex<5>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| hex<6>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<0>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          |          |
+| led<1>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          |          |
+| led<2>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          |          |
+| led<3>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          |          |
+| led<4>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          |          |
+| led<5>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          |          |
+| led<6>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          |          |
+| led<7>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          |          |
+| rst                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<0>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<1>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<2>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<3>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<4>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<5>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<6>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<7>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLParsers" num="3530" delta="new" >Time stamp of file &quot;<arg fmt="%s" index="1">//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/BRAM.vhd</arg>&quot; is newer than current system time.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">address&lt;15:8&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">read_address&lt;15:8&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="738" delta="new" >HDL ADVISOR - <arg fmt="%d" index="1">2048</arg> flip-flops were inferred for signal &lt;<arg fmt="%s" index="2">ram</arg>&gt;. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+</msg>
+
+<msg type="warning" file="Xst" num="643" delta="old" >&quot;<arg fmt="%s" index="1">//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/note_length_counter.vhd</arg>&quot; line <arg fmt="%d" index="2">29</arg>: The result of a <arg fmt="%d" index="3">22</arg>x<arg fmt="%d" index="4">7</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">28</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">reset_ready</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">data_output_debug_sig</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">sw&lt;5:2&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">note_len_input&lt;7&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">note_input&lt;7:4&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="643" delta="old" >&quot;<arg fmt="%s" index="1">//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/sine_wave_notes.vhd</arg>&quot; line <arg fmt="%d" index="2">125</arg>: The result of a <arg fmt="%d" index="3">14</arg>x<arg fmt="%d" index="4">8</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">17</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+</msg>
+
+<msg type="warning" file="Xst" num="643" delta="old" >&quot;<arg fmt="%s" index="1">//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/sine_wave_notes.vhd</arg>&quot; line <arg fmt="%d" index="2">100</arg>: The result of a <arg fmt="%d" index="3">3</arg>x<arg fmt="%d" index="4">20</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">22</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">ram_data_output_valid</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">music_counter_sig&lt;7:4&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">mult</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00000000000000000000000000000011</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">debug_state</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">debug_ram</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="643" delta="old" >&quot;<arg fmt="%s" index="1">//vmware-host/shared folders/Desktop/fpga_connection/fpga_connection/EPP_command.vhd</arg>&quot; line <arg fmt="%d" index="2">318</arg>: The result of a <arg fmt="%d" index="3">5</arg>x<arg fmt="%d" index="4">32</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">16</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+</msg>
+
+<msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">output_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Address_register</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">output_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Address_register</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">output_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Address_register</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">output_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Address_register</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">output_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Address_register</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">output_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Address_register</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">output_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Address_register</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">output_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Address_register</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_output2_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ram_part</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ram_read_address_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">ram_read_address_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">ram_read_address_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">ram_read_address_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">ram_read_address_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">ram_read_address_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">ram_read_address_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">ram_read_address_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">Mmult_music_index_mult_mult0001</arg> by adding <arg fmt="%d" index="2">1</arg> register level(s).
+</msg>
+
+<msg type="info" file="Xst" num="3034" delta="old" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Mrom__mux0000</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">download_from_epp/ram_addr_counter_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">download_from_epp/ram_addr_counter_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">download_from_epp/ram_addr_counter_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">download_from_epp/ram_addr_counter_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">download_from_epp/ram_addr_counter_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">download_from_epp/ram_addr_counter_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">download_from_epp/ram_addr_counter_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">download_from_epp/ram_addr_counter_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">ram_part/data_output2_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">ram_part/data_output_valid</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">download_from_epp/Address_register/output_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">download_from_epp/Address_register/output_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">download_from_epp/Address_register/output_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">download_from_epp/Address_register/output_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">download_from_epp/Address_register/output_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">download_from_epp/Address_register/output_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">download_from_epp/Address_register/output_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">download_from_epp/Address_register/output_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">EPP_command</arg>&gt;.
+</msg>
+
+</messages>
+

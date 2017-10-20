@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLParsers" num="3530" delta="old" >Time stamp of file &quot;<arg fmt="%s" index="1">//vmware-host/shared folders/Desktop/fpga_connection/ultrasonic_sensor/ultrasonic_sensor.vhd</arg>&quot; is newer than current system time.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">echo_unsynced</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">ultrasonic_sensor</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;led&gt; </arg>
+</msg>
+
+</messages>
+

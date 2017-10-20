@@ -1,0 +1,8 @@
+V3 3
+FL "//vmware-host/shared folders/Desktop/fpga_connection/test_button/test_button.vhd" 2017/10/01.13:42:52 P.20131013
+EN work/test_button 1506825769 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/test_button/test_button.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/test_button/Behavioral 1506825770 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/test_button/test_button.vhd" \
+      EN work/test_button 1506825769

@@ -1,0 +1,3 @@
+vhdl work "eight_bit_register.vhd"
+vhdl work "../../Adept/samples/depp/DeppDemo/logic/dpimref.vhd"
+vhdl work "fpga_download.vhd"

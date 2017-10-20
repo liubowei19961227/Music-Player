@@ -1,0 +1,8 @@
+Release 14.7 Drc P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Sat Sep 16 22:47:22 2017
+
+drc -z flash_memory.ncd flash_memory.pcf
+
+DRC detected 0 errors and 0 warnings.

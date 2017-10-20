@@ -1,0 +1,318 @@
+Release 14.7 Map P.20131013 (nt)
+Xilinx Mapping Report File for Design 'music_player_v6'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s400-ft256-4 -cm area -detail -ir off
+-pr off -c 100 -o music_player_v6_map.ncd music_player_v6.ngd
+music_player_v6.pcf 
+Target Device  : xc3s400
+Target Package : ft256
+Target Speed   : -4
+Mapper Version : spartan3 -- $Revision: 1.55 $
+Mapped Date    : Wed Sep 27 22:49:16 2017
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    0
+Logic Utilization:
+  Number of Slice Flip Flops:           116 out of   7,168    1%
+  Number of 4 input LUTs:               401 out of   7,168    5%
+Logic Distribution:
+  Number of occupied Slices:            238 out of   3,584    6%
+    Number of Slices containing only related logic:     238 out of     238 100%
+    Number of Slices containing unrelated logic:          0 out of     238   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:         438 out of   7,168    6%
+    Number used as logic:               401
+    Number used as a route-thru:         37
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 19 out of     173   10%
+  Number of RAMB16s:                      1 out of      16    6%
+  Number of MULT18X18s:                   5 out of      16   31%
+  Number of BUFGMUXs:                     1 out of       8   12%
+
+Average Fanout of Non-Clock Nets:                2.82
+
+Peak Memory Usage:  233 MB
+Total REAL time to MAP completion:  2 secs 
+Total CPU time to MAP completion:   1 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   2 block(s) optimized away
+  46 Block(s) redundant
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+Redundant Block(s):
+TYPE 		BLOCK
+LOCALBUF 		x_note_player/Madd_index[7]_GND_8_o_add_20_OUT_cy<3>11/LUT4_D_BUF
+LOCALBUF 		x_note_player/Madd_index[7]_GND_8_o_add_20_OUT_cy<5>11_SW0/LUT2_L_BUF
+LOCALBUF 		x_note_player/Madd_n0134_cy<0>11/LUT3_D_BUF
+LOCALBUF 		x_note_player/Msub_GND_8_o_GND_8_o_sub_13_OUT<7:0>_cy<1>11/LUT4_D_BUF
+LOCALBUF 		x_note_player/Madd_n0134_cy<4>11/LUT4_D_BUF
+LOCALBUF 		x_note_player/Madd_n0134_cy<2>11/LUT4_D_BUF
+LOCALBUF 		x_note_player/Msub_GND_8_o_GND_8_o_sub_13_OUT<7:0>_cy<4>11/LUT4_D_BUF
+LOCALBUF 		x_note_player/Msub_GND_8_o_GND_8_o_sub_13_OUT<7:0>_cy<3>11/LUT4_D_BUF
+LUT1 		x_note_length_counter/Madd_n0039_cy<26>_rt
+LUT1 		x_note_length_counter/Madd_n0039_cy<25>_rt
+LUT1 		x_note_length_counter/Msub_GND_6_o_GND_6_o_sub_8_OUT_cy<0>_rt
+LUT1 		x_note_length_counter/Madd_n0048[27:0]_cy<26>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<26>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<25>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<24>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<23>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<22>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<21>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<20>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<19>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<18>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<17>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<16>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<15>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<14>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<13>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<12>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<11>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<10>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<9>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<8>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<7>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<6>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<5>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<4>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<3>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<2>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<1>_rt
+LUT1 		x_note_length_counter/Mmult_n0026_Madd_cy<26>_rt
+LUT1 		x_note_length_counter/Mmult_n0026_Madd_cy<25>_rt
+LUT1 		x_note_length_counter/Mmult_n0026_Madd_cy<24>_rt
+LUT1 		x_note_player/Madd_n0138_cy<11>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_xor<27>_rt
+INV 		Mcount_music_index1_INV_0
+INV 		x_note_player/Mmux_sample_rate_partial[8]_GND_8_o_mux_39_OUT11_INV_0
+INV 		x_note_player/rst_inv1_INV_0
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| btn                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| clk                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| led<0>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<1>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<2>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<3>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<4>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<5>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<6>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<7>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| s                                  | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sw<0>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<1>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<2>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<3>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<4>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<5>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<6>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<7>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+BUFGMUX "clk_BUFGP/BUFG":
+DISABLE_ATTR:LOW
+
+
+
+RAMB16 "x_note_player/Mram_GND_8_o_X_7_o_wide_mux_31_OUT":
+INITP_00 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_01 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_02 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_03 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_04 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_05 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_06 = 0000000000000000000000000000000000000000000000000000000000000000
+INITP_07 = 0000000000000000000000000000000000000000000000000000000000000000
+INIT_00 = 11100F0E0D0C0B0A090908070606050504040303020201010101000000000000
+INIT_01 = 413F3E3C3A38363533312F2E2C2B292726242321201F1D1C1B19181715141312
+INIT_02 = 83817F7D7B78767472706E6C69676563615F5D5B59575553514F4D4B49474543
+INIT_03 = C4C2C0BEBDBBB9B7B5B3B1AFADABA9A7A5A3A19F9D9B98969492908E8C8A8785
+INIT_04 = F1F0EFEEEDECEBEAE9E8E6E5E4E2E1E0DEDDDBDAD8D7D5D3D2D0CECDCBC9C8C6
+INIT_05 = 0000000000FFFFFFFFFFFEFEFEFEFDFDFDFCFCFBFBFAF9F9F8F7F7F6F5F4F3F2
+INIT_06 = 1918171514131211100E0D0C0C0B0A0908070706050504030302020201010101
+INIT_07 = 53514F4C4A48464442403E3C3A39373533312F2E2C2A2927252422211F1E1C1B
+INIT_08 = 9A989694918F8D8B888684827F7D7B797674726F6D6B69666462605E5B595755
+INIT_09 = D9D8D6D5D3D1CFCECCCAC8C6C4C2C0BEBCBAB8B6B4B2B0AEACAAA8A5A3A19F9D
+INIT_0a = FCFCFBFAFAF9F8F8F7F6F5F4F3F2F1F0EFEEEDECEBE9E8E7E5E4E3E1E0DEDDDB
+INIT_0b = 0807070605040403030202010101010000000000FFFFFFFFFFFEFEFEFEFDFDFC
+INIT_0c = 373533312F2D2B2A28262423211F1E1C1B19181715141311100F0E0D0C0B0A09
+INIT_0d = 7F7D7A787673716E6C6A676563605E5C59575552504E4C4A474543413F3D3B39
+INIT_0e = C8C6C4C2C0BDBBB9B7B5B3B0AEACAAA7A5A3A19E9C99979592908E8B89868482
+INIT_0f = F7F6F5F4F3F2F1F0EEEDECEBE9E8E7E5E4E2E1DFDDDCDAD8D7D5D3D1CFCECCCA
+INIT_10 = 04030302020101010000000000FFFFFFFFFFFEFEFEFDFDFDFCFCFBFAFAF9F8F7
+INIT_11 = 2E2C2A2927252321201E1C1B19181615141211100E0D0C0B0A09080706060504
+INIT_12 = 797774726F6D6A676562605E5B595654514F4D4A484644413F3D3B3936343230
+INIT_13 = C7C4C2C0BEBCB9B7B5B2B0AEABA9A7A4A29F9D9A989593908E8B898683817E7C
+INIT_14 = F8F7F6F5F4F3F2F1EFEEEDECEAE9E7E6E4E3E1DFDEDCDAD8D7D5D3D1CFCDCBC9
+INIT_15 = 06060504030302020101010000000000FFFFFFFFFEFEFEFDFDFCFCFBFBFAF9F9
+INIT_16 = 3A383634312F2D2B2927252322201E1C1B191716141312100F0E0C0B0A090807
+INIT_17 = 8D8A8785827F7D7A7775726F6C6A6764625F5D5A575552504D4B484644413F3D
+INIT_18 = D9D8D6D4D1CFCDCBC9C7C4C2C0BDBBB9B6B4B1AFACAAA7A5A29F9D9A98959290
+INIT_19 = FEFEFEFDFDFCFBFBFAF9F8F8F7F6F5F4F2F1F0EFEDECEAE9E7E6E4E3E1DFDDDB
+INIT_1a = 151412110F0E0D0B0A090807060505040303020201010100000000FFFFFFFFFF
+INIT_1b = 5E5B585653504E4B484643413E3C39373532302E2C2A27252321201E1C1A1817
+INIT_1c = B7B5B2AFADAAA7A5A29F9C999794918E8B888683807D7A7774716F6C69666361
+INIT_1d = F5F4F3F1F0EFEDECEAE9E7E5E3E2E0DEDCDAD8D6D4D2CFCDCBC8C6C4C1BFBCBA
+INIT_1e = 070605040403020201010100000000FFFFFFFFFEFEFEFDFDFCFBFBFAF9F8F7F6
+INIT_1f = 4542403D3B383633312E2C2A282523211F1D1B191816141311100E0D0C0A0908
+INIT_20 = A3A19E9B9895928F8C898683807D797673706D6A6764615F5C595653504D4B48
+INIT_21 = EEECEBE9E7E6E4E2E0DEDCDAD8D5D3D1CECCCAC7C4C2BFBDBAB7B5B2AFACA9A6
+INIT_22 = 0403030201010100000000FFFFFFFEFEFEFDFDFCFBFBFAF9F8F7F6F5F4F2F1EF
+INIT_23 = 413E3C393634312F2C2A272523211E1C1A1917151311100E0D0C0A0908070605
+INIT_24 = A5A29E9B9895928F8B8885827F7B7875726F6B6865625F5C595653504D4A4744
+INIT_25 = F1F0EEEDEBE9E7E5E3E1DFDDDBD9D6D4D2CFCDCAC7C5C2BFBCB9B7B4B1AEABA8
+INIT_26 = 0806050504030202010100000000FFFFFFFEFEFEFDFDFCFBFBFAF9F8F6F5F4F3
+INIT_27 = 524E4B4845423F3C393734312E2C29272422201E1B1917151412100E0D0B0A09
+INIT_28 = BBB8B5B2AFACA8A5A29F9B9895918E8A8784807D7976736F6C6965625F5B5855
+INIT_29 = FCFBFAF9F8F7F5F4F3F1F0EEECEAE9E7E4E2E0DEDCD9D7D4D2CFCCCAC7C4C1BE
+INIT_2a = 1A18161412100E0D0B0A0907060504030202010100000000FFFFFFFEFEFEFDFC
+INIT_2b = 7E7A77736F6C6865615E5A5753504D494643403D3A3734312E2B292623211F1C
+INIT_2c = E3E0DEDCD9D6D4D1CECBC8C5C2BFBCB9B6B2AFACA8A5A19E9A9793908C898581
+INIT_2d = 040302010101000000FFFFFFFEFEFDFDFCFBFAF9F8F6F5F4F2F1EFEDEBE9E7E5
+INIT_2e = 514E4A4743403D3A3633302D2A282522201D1B18161412100E0D0B0A08070605
+INIT_2f = C6C3C0BCB9B6B2AFABA7A4A09C9995918D8A86827E7A76736F6B6764605C5855
+INIT_30 = FFFFFFFEFEFDFCFCFBFAF8F7F6F4F3F1EFEDEBE9E7E5E2E0DDDBD8D5D2D0CDC9
+INIT_31 = 3936322F2C292623211E1B19171412100E0C0B09080605040302020101000000
+INIT_32 = B5B1ADAAA6A29E9A96928E8A86827E7A76726E6A66625E5A56524E4B4743403C
+INIT_33 = FEFDFDFCFBFAF9F7F6F4F3F1EFEDEBE9E6E4E1DFDCD9D6D3D0CDCAC6C3C0BCB8
+INIT_34 = 0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE
+INIT_35 = 0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE
+INIT_36 = 0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE
+INIT_37 = 0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE
+INIT_38 = FFFFFFFEFEFDFCFCFBFAF8F7F6F4F3F1EFEDEBE9E7E5E2E0DDDBD8D5D2D0CDC9
+INIT_39 = 3936322F2C292623211E1B19171412100E0C0B09080605040302020101000000
+INIT_3a = B5B1ADAAA6A29E9A96928E8A86827E7A76726E6A66625E5A56524E4B4743403C
+INIT_3b = FEFDFDFCFBFAF9F7F6F4F3F1EFEDEBE9E6E4E1DFDCD9D6D3D0CDCAC6C3C0BCB8
+INIT_3c = 0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE
+INIT_3d = 0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE
+INIT_3e = 0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE
+INIT_3f = 0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE0000000000FFFFFE
+PORTA_ATTR:2048X9
+WRITEMODEA:WRITE_FIRST
+INIT_A = 000
+SRVAL_A = 000
+
+
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module                 | Partition | Slices        | Slice Reg     | LUTs          | LUTRAM        | BRAM      | MULT18X18 | BUFG  | DCM   | Full Hierarchical Name                 |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| music_player_v6/       |           | 16/239        | 13/116        | 27/435        | 0/0           | 0/1       | 1/5       | 1/1   | 0/0   | music_player_v6                        |
+| +x_note_length_counter |           | 121/121       | 30/30         | 228/228       | 0/0           | 0/0       | 2/2       | 0/0   | 0/0   | music_player_v6/x_note_length_counter  |
+| +x_note_player         |           | 102/102       | 73/73         | 180/180       | 0/0           | 1/1       | 2/2       | 0/0   | 0/0   | music_player_v6/x_note_player          |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Slices can be packed with basic elements from multiple hierarchies.
+  Therefore, a slice will be counted in every hierarchical module
+  that each of its packed basic elements belong to.
+** For each column, there are two numbers reported <A>/<B>.
+   <A> is the number of elements that belong to that specific hierarchical module.
+   <B> is the total number of elements from that hierarchical module and any lower level
+   hierarchical modules below.
+*** The LUTRAM column counts all LUTs used as memory including RAM, ROM, and shift registers.

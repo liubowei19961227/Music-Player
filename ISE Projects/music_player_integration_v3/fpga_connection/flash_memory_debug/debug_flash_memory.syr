@@ -1,0 +1,733 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: debug_flash_memory.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "debug_flash_memory.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "debug_flash_memory"
+Output Format                      : NGC
+Target Device                      : xc3s400-4-ft256
+
+---- Source Options
+Top Module Name                    : debug_flash_memory
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : Yes
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Move First FlipFlop Stage          : YES
+Move Last FlipFlop Stage           : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : True
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 2
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory_debug/flash_memory.vhd" in Library work.
+Architecture behavioral of Entity flash_memory is up to date.
+Compiling vhdl file "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.vhd" in Library work.
+WARNING:HDLParsers:3530 - Time stamp of file "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.vhd" is newer than current system time.
+Entity <debug_flash_memory> compiled.
+Entity <debug_flash_memory> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <debug_flash_memory> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <flash_memory> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <debug_flash_memory> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <debug> in unit <debug_flash_memory> has a constant value of 11111111 during circuit operation. The register is replaced by logic.
+Entity <debug_flash_memory> analyzed. Unit <debug_flash_memory> generated.
+
+Analyzing Entity <flash_memory> in library <work> (Architecture <behavioral>).
+Entity <flash_memory> analyzed. Unit <flash_memory> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <flash_memory>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory_debug/flash_memory.vhd".
+WARNING:Xst:646 - Signal <write_data_sig> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <write_address_sig> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <read_address_sig> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+INFO:Xst:1799 - State write_rst_state is never reached in FSM <current_state>.
+INFO:Xst:1799 - State read_rst_state is never reached in FSM <current_state>.
+    Found finite state machine <FSM_0> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 10                                             |
+    | Transitions        | 17                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 19                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Power Up State     | rst_state                                      |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 22-bit register for signal <addr>.
+    Found 1-bit register for signal <read_complete>.
+    Found 1-bit register for signal <OE>.
+    Found 1-bit register for signal <WE>.
+    Found 1-bit register for signal <write_complete>.
+    Found 16-bit tristate buffer for signal <data>.
+    Found 32-bit register for signal <delay_counter>.
+    Found 32-bit adder for signal <delay_counter$addsub0000>.
+    Found 32-bit register for signal <delay_extend_counter>.
+    Found 32-bit adder for signal <delay_extend_counter$share0000> created at line 115.
+    Found 16-bit register for signal <Mtridata_data> created at line 122.
+    Found 1-bit register for signal <Mtrien_data> created at line 122.
+    Found 16-bit register for signal <read_data_sig>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred 123 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  16 Tristate(s).
+Unit <flash_memory> synthesized.
+
+
+Synthesizing Unit <debug_flash_memory>.
+    Related source file is "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.vhd".
+WARNING:Xst:646 - Signal <write_command> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <test_address> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000001000.
+WARNING:Xst:1780 - Signal <sr> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <read_st_reg_command> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <read_data<15:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <debug> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+INFO:Xst:1799 - State basic_test_read_state is never reached in FSM <current_state>.
+INFO:Xst:1799 - State basic_test_write_state is never reached in FSM <current_state>.
+INFO:Xst:1799 - State debug_complete_state is never reached in FSM <current_state>.
+INFO:Xst:1799 - State write_st_state is never reached in FSM <current_state>.
+    Found finite state machine <FSM_1> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 15                                             |
+    | Transitions        | 24                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 15                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | rst_state                                      |
+    | Power Up State     | rst_state                                      |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <flash_direction>.
+    Found 22-bit register for signal <flash_read_address>.
+    Found 1-bit register for signal <flash_rest>.
+    Found 22-bit register for signal <flash_write_address>.
+    Found 16-bit register for signal <flash_write_data>.
+    Found 16-bit register for signal <read_data>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  78 D-type flip-flop(s).
+Unit <debug_flash_memory> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 32-bit adder                                          : 2
+# Registers                                            : 16
+ 1-bit register                                        : 7
+ 16-bit register                                       : 4
+ 22-bit register                                       : 3
+ 32-bit register                                       : 2
+# Tristates                                            : 1
+ 16-bit tristate buffer                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <current_state/FSM> on signal <current_state[1:15]> with one-hot encoding.
+----------------------------------------------
+ State                     | Encoding
+----------------------------------------------
+ rst_state                 | 000000000000001
+ basic_test_write_state    | unreached
+ basic_test_read_state     | unreached
+ debug_complete_state      | unreached
+ test_write_statea         | 000000000000010
+ test_write_stateb         | 000000000000100
+ write_st_state            | unreached
+ write_polling_state       | 000000000001000
+ read_command_statea       | 000000000100000
+ read_command_stateb       | 001000000000000
+ delete_write_commanda     | 000000100000000
+ delete_write_commandb     | 000001000000000
+ delete_polling_state      | 000010000000000
+ delete_complete_state     | 000100000000000
+ test_write_state_complete | 000000000010000
+ test_read_statea          | 000000001000000
+ test_read_statea_complete | 000000010000000
+ test_read_stateb          | 010000000000000
+ test_read_stateb_complete | 100000000000000
+----------------------------------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <basic_flash_opertations/current_state/FSM> on signal <current_state[1:10]> with one-hot encoding.
+----------------------------------------
+ State                    | Encoding
+----------------------------------------
+ rst_state                | 0000000001
+ write_rst_state          | unreached
+ write_state              | 0000000100
+ write_delay_state        | 0000001000
+ write_delay_extend_state | 0000010000
+ write_complete_state     | 0000100000
+ read_rst_state           | unreached
+ read_state               | 0000000010
+ read_delay_state         | 0010000000
+ read_delay_state_extend  | 0100000000
+ read_complete_state      | 1000000000
+ wait_state               | 0001000000
+----------------------------------------
+WARNING:Xst:1710 - FF/Latch <addr_22> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_21> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_20> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_19> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_18> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_17> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_16> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_15> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_14> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_13> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_12> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_11> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_10> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_9> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mtridata_data_8> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mtridata_data_9> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mtridata_data_10> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mtridata_data_11> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mtridata_data_12> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mtridata_data_13> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mtridata_data_14> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mtridata_data_15> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_2> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_3> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_5> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_6> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_7> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_8> (without init value) has a constant value of 0 in block <basic_flash_opertations>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_9> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_8> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_7> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_6> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_5> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_4> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_2> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_1> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_0> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_data_15> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_data_14> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_data_13> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_10> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_11> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_12> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_13> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_14> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_15> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_16> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_17> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_18> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_19> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_20> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_21> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_1> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_2> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_4> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_5> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_6> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_7> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_8> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_9> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_10> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_11> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_12> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_13> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_14> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_15> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_16> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_17> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_18> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_19> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_20> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_21> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_data_8> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_data_9> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_data_10> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_data_11> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_data_12> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <read_data_sig_8> of sequential type is unconnected in block <basic_flash_opertations>.
+WARNING:Xst:2677 - Node <read_data_sig_9> of sequential type is unconnected in block <basic_flash_opertations>.
+WARNING:Xst:2677 - Node <read_data_sig_10> of sequential type is unconnected in block <basic_flash_opertations>.
+WARNING:Xst:2677 - Node <read_data_sig_11> of sequential type is unconnected in block <basic_flash_opertations>.
+WARNING:Xst:2677 - Node <read_data_sig_12> of sequential type is unconnected in block <basic_flash_opertations>.
+WARNING:Xst:2677 - Node <read_data_sig_13> of sequential type is unconnected in block <basic_flash_opertations>.
+WARNING:Xst:2677 - Node <read_data_sig_14> of sequential type is unconnected in block <basic_flash_opertations>.
+WARNING:Xst:2677 - Node <read_data_sig_15> of sequential type is unconnected in block <basic_flash_opertations>.
+WARNING:Xst:2677 - Node <read_data_8> of sequential type is unconnected in block <debug_flash_memory>.
+WARNING:Xst:2677 - Node <read_data_9> of sequential type is unconnected in block <debug_flash_memory>.
+WARNING:Xst:2677 - Node <read_data_10> of sequential type is unconnected in block <debug_flash_memory>.
+WARNING:Xst:2677 - Node <read_data_11> of sequential type is unconnected in block <debug_flash_memory>.
+WARNING:Xst:2677 - Node <read_data_12> of sequential type is unconnected in block <debug_flash_memory>.
+WARNING:Xst:2677 - Node <read_data_13> of sequential type is unconnected in block <debug_flash_memory>.
+WARNING:Xst:2677 - Node <read_data_14> of sequential type is unconnected in block <debug_flash_memory>.
+WARNING:Xst:2677 - Node <read_data_15> of sequential type is unconnected in block <debug_flash_memory>.
+WARNING:Xst:638 - in unit basic_flash_opertations Conflict on KEEP property on signal Mtridata_data<8> and Mtridata_data<9> Mtridata_data<9> signal will be lost.
+WARNING:Xst:638 - in unit basic_flash_opertations Conflict on KEEP property on signal Mtridata_data<8> and Mtridata_data<10> Mtridata_data<10> signal will be lost.
+WARNING:Xst:638 - in unit basic_flash_opertations Conflict on KEEP property on signal Mtridata_data<10> and Mtridata_data<11> Mtridata_data<11> signal will be lost.
+WARNING:Xst:638 - in unit basic_flash_opertations Conflict on KEEP property on signal Mtridata_data<10> and Mtridata_data<12> Mtridata_data<12> signal will be lost.
+WARNING:Xst:638 - in unit basic_flash_opertations Conflict on KEEP property on signal Mtridata_data<10> and Mtridata_data<13> Mtridata_data<13> signal will be lost.
+WARNING:Xst:638 - in unit basic_flash_opertations Conflict on KEEP property on signal Mtridata_data<10> and Mtridata_data<14> Mtridata_data<14> signal will be lost.
+WARNING:Xst:638 - in unit basic_flash_opertations Conflict on KEEP property on signal Mtridata_data<10> and Mtridata_data<15> Mtridata_data<15> signal will be lost.
+WARNING:Xst:2677 - Node <read_data_8> of sequential type is unconnected in block <debug_flash_memory>.
+WARNING:Xst:2677 - Node <read_data_9> of sequential type is unconnected in block <debug_flash_memory>.
+WARNING:Xst:2677 - Node <read_data_10> of sequential type is unconnected in block <debug_flash_memory>.
+WARNING:Xst:2677 - Node <read_data_11> of sequential type is unconnected in block <debug_flash_memory>.
+WARNING:Xst:2677 - Node <read_data_12> of sequential type is unconnected in block <debug_flash_memory>.
+WARNING:Xst:2677 - Node <read_data_13> of sequential type is unconnected in block <debug_flash_memory>.
+WARNING:Xst:2677 - Node <read_data_14> of sequential type is unconnected in block <debug_flash_memory>.
+WARNING:Xst:2677 - Node <read_data_15> of sequential type is unconnected in block <debug_flash_memory>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 2
+# Adders/Subtractors                                   : 2
+ 32-bit adder                                          : 2
+# Registers                                            : 193
+ Flip-Flops                                            : 193
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <flash_write_address_19> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_20> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_21> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_0> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_1> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_2> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_4> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_5> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_6> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_7> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_8> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_9> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_10> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_11> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_12> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_13> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_14> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_15> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_16> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_17> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_18> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_19> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_20> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_read_address_21> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_data_8> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_data_9> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_data_10> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_data_11> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_data_12> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_data_13> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_data_14> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_data_15> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_1> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_2> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_4> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_5> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_6> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_7> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_8> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_9> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_10> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_11> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_12> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_13> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_14> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_15> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_16> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_17> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <flash_write_address_18> (without init value) has a constant value of 0 in block <debug_flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_22> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_21> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_20> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_19> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_18> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_17> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_16> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_15> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_14> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_13> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_12> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_11> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_10> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_9> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_8> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_7> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_6> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_5> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_3> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_2> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_data_15> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_data_14> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_data_13> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_data_12> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_data_11> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_data_10> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_data_9> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_data_8> (without init value) has a constant value of 0 in block <flash_memory>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:638 - in unit flash_memory Conflict on KEEP property on signal Mtridata_data<8> and Mtridata_data<9> Mtridata_data<9> signal will be lost.
+WARNING:Xst:638 - in unit flash_memory Conflict on KEEP property on signal Mtridata_data<8> and Mtridata_data<10> Mtridata_data<10> signal will be lost.
+WARNING:Xst:638 - in unit flash_memory Conflict on KEEP property on signal Mtridata_data<10> and Mtridata_data<11> Mtridata_data<11> signal will be lost.
+WARNING:Xst:638 - in unit flash_memory Conflict on KEEP property on signal Mtridata_data<10> and Mtridata_data<12> Mtridata_data<12> signal will be lost.
+WARNING:Xst:638 - in unit flash_memory Conflict on KEEP property on signal Mtridata_data<10> and Mtridata_data<13> Mtridata_data<13> signal will be lost.
+WARNING:Xst:638 - in unit flash_memory Conflict on KEEP property on signal Mtridata_data<10> and Mtridata_data<14> Mtridata_data<14> signal will be lost.
+WARNING:Xst:638 - in unit flash_memory Conflict on KEEP property on signal Mtridata_data<10> and Mtridata_data<15> Mtridata_data<15> signal will be lost.
+WARNING:Xst:2677 - Node <basic_flash_opertations/read_data_sig_15> of sequential type is unconnected in block <debug_flash_memory>.
+WARNING:Xst:2677 - Node <basic_flash_opertations/read_data_sig_14> of sequential type is unconnected in block <debug_flash_memory>.
+WARNING:Xst:2677 - Node <basic_flash_opertations/read_data_sig_13> of sequential type is unconnected in block <debug_flash_memory>.
+WARNING:Xst:2677 - Node <basic_flash_opertations/read_data_sig_12> of sequential type is unconnected in block <debug_flash_memory>.
+WARNING:Xst:2677 - Node <basic_flash_opertations/read_data_sig_11> of sequential type is unconnected in block <debug_flash_memory>.
+WARNING:Xst:2677 - Node <basic_flash_opertations/read_data_sig_10> of sequential type is unconnected in block <debug_flash_memory>.
+WARNING:Xst:2677 - Node <basic_flash_opertations/read_data_sig_9> of sequential type is unconnected in block <debug_flash_memory>.
+WARNING:Xst:2677 - Node <basic_flash_opertations/read_data_sig_8> of sequential type is unconnected in block <debug_flash_memory>.
+
+Optimizing unit <debug_flash_memory> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block debug_flash_memory, actual ratio is 3.
+
+Pipelining and Register Balancing Report ...
+
+Processing Unit <debug_flash_memory> :
+	Register(s) flash_write_data_6 has(ve) been backward balanced into : flash_write_data_6_BRB0 flash_write_data_6_BRB1 flash_write_data_6_BRB2 flash_write_data_6_BRB3.
+Unit <debug_flash_memory> processed.
+Replicating register basic_flash_opertations/OE to handle IOB=TRUE attribute
+Replicating register basic_flash_opertations/WE to handle IOB=TRUE attribute
+Replicating register basic_flash_opertations/Mtrien_data to handle IOB=TRUE attribute
+Replicating register basic_flash_opertations/addr_4 to handle IOB=TRUE attribute
+Replicating register basic_flash_opertations/addr_1 to handle IOB=TRUE attribute
+Replicating register read_data_7 to handle IOB=TRUE attribute
+Replicating register read_data_6 to handle IOB=TRUE attribute
+Replicating register read_data_5 to handle IOB=TRUE attribute
+Replicating register read_data_4 to handle IOB=TRUE attribute
+Replicating register read_data_3 to handle IOB=TRUE attribute
+Replicating register read_data_2 to handle IOB=TRUE attribute
+Replicating register read_data_1 to handle IOB=TRUE attribute
+Replicating register read_data_0 to handle IOB=TRUE attribute
+
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 163
+ Flip-Flops                                            : 163
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : debug_flash_memory.ngr
+Top Level Output File Name         : debug_flash_memory
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 54
+
+Cell Usage :
+# BELS                             : 380
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 62
+#      LUT2                        : 22
+#      LUT2_L                      : 1
+#      LUT3                        : 13
+#      LUT3_D                      : 2
+#      LUT3_L                      : 2
+#      LUT4                        : 120
+#      LUT4_D                      : 3
+#      LUT4_L                      : 7
+#      MUXCY                       : 78
+#      VCC                         : 1
+#      XORCY                       : 64
+# FlipFlops/Latches                : 163
+#      FD                          : 68
+#      FDE                         : 64
+#      FDR                         : 9
+#      FDRE                        : 2
+#      FDRS                        : 1
+#      FDRSE                       : 4
+#      FDS                         : 12
+#      FDSE                        : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 53
+#      IBUF                        : 2
+#      IOBUF                       : 8
+#      OBUF                        : 35
+#      OBUFT                       : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400ft256-4 
+
+ Number of Slices:                      125  out of   3584     3%  
+ Number of Slice Flip Flops:            119  out of   7168     1%  
+ Number of 4 input LUTs:                236  out of   7168     3%  
+ Number of IOs:                          54
+ Number of bonded IOBs:                  54  out of    173    31%  
+    IOB Flip Flops:                      44
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 163   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 9.093ns (Maximum Frequency: 109.975MHz)
+   Minimum input arrival time before clock: 5.064ns
+   Maximum output required time after clock: 7.408ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 9.093ns (frequency: 109.975MHz)
+  Total number of paths / destination ports: 8410 / 209
+-------------------------------------------------------------------------
+Delay:               9.093ns (Levels of Logic = 11)
+  Source:            basic_flash_opertations/delay_counter_8 (FF)
+  Destination:       basic_flash_opertations/Mtrien_data_1 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: basic_flash_opertations/delay_counter_8 to basic_flash_opertations/Mtrien_data_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.720   1.246  basic_flash_opertations/delay_counter_8 (basic_flash_opertations/delay_counter_8)
+     LUT4:I0->O            1   0.551   0.000  basic_flash_opertations/current_state_cmp_eq0000_wg_lut<0> (basic_flash_opertations/current_state_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  basic_flash_opertations/current_state_cmp_eq0000_wg_cy<0> (basic_flash_opertations/current_state_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  basic_flash_opertations/current_state_cmp_eq0000_wg_cy<1> (basic_flash_opertations/current_state_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  basic_flash_opertations/current_state_cmp_eq0000_wg_cy<2> (basic_flash_opertations/current_state_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  basic_flash_opertations/current_state_cmp_eq0000_wg_cy<3> (basic_flash_opertations/current_state_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  basic_flash_opertations/current_state_cmp_eq0000_wg_cy<4> (basic_flash_opertations/current_state_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  basic_flash_opertations/current_state_cmp_eq0000_wg_cy<5> (basic_flash_opertations/current_state_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  basic_flash_opertations/current_state_cmp_eq0000_wg_cy<6> (basic_flash_opertations/current_state_cmp_eq0000_wg_cy<6>)
+     MUXCY:CI->O           8   0.281   1.151  basic_flash_opertations/current_state_cmp_eq0000_wg_cy<7> (basic_flash_opertations/current_state_cmp_eq0000)
+     LUT4:I2->O            9   0.551   1.319  basic_flash_opertations/Mtridata_data_not000133 (basic_flash_opertations/Mtridata_data_not0001)
+     LUT2:I1->O           16   0.551   1.237  basic_flash_opertations/Mtrien_data_not00011 (basic_flash_opertations/Mtrien_data_not0001)
+     FDE:CE                    0.602          basic_flash_opertations/Mtrien_data_1
+    ----------------------------------------
+    Total                      9.093ns (4.140ns logic, 4.953ns route)
+                                       (45.5% logic, 54.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 57 / 57
+-------------------------------------------------------------------------
+Offset:              5.064ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       flash_direction (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to flash_direction
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            16   0.821   1.237  rst_IBUF (rst_IBUF)
+     INV:I->O             32   0.551   1.853  rst_inv1_INV_0 (rst_inv)
+     FDE:CE                    0.602          flash_direction
+    ----------------------------------------
+    Total                      5.064ns (1.974ns logic, 3.090ns route)
+                                       (39.0% logic, 61.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 36 / 28
+-------------------------------------------------------------------------
+Offset:              7.408ns (Levels of Logic = 1)
+  Source:            basic_flash_opertations/Mtrien_data_1 (FF)
+  Destination:       data<15> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: basic_flash_opertations/Mtrien_data_1 to data<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.720   0.801  basic_flash_opertations/Mtrien_data_1 (basic_flash_opertations/Mtrien_data_1)
+     OBUFT:T->O                5.887          data_15_OBUFT (data<15>)
+    ----------------------------------------
+    Total                      7.408ns (6.607ns logic, 0.801ns route)
+                                       (89.2% logic, 10.8% route)
+
+=========================================================================
+WARNING:Xst:615 - Flip flop associated with net N0 not found, property IOB not attached.
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.74 secs
+ 
+--> 
+
+Total memory usage is 207768 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  211 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+

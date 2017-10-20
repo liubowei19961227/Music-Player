@@ -1,0 +1,168 @@
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 EPP_command.ngc EPP_command.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o EPP_command_map.ncd EPP_command.ngd EPP_command.pcf 
+par -w -intstyle ise -ol high -t 1 EPP_command_map.ncd EPP_command.ncd EPP_command.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml EPP_command.twx EPP_command.ncd -o EPP_command.twr EPP_command.pcf 
+bitgen -intstyle ise -f EPP_command.ut EPP_command.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 EPP_command.ngc EPP_command.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o EPP_command_map.ncd EPP_command.ngd EPP_command.pcf 
+par -w -intstyle ise -ol high -t 1 EPP_command_map.ncd EPP_command.ncd EPP_command.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml EPP_command.twx EPP_command.ncd -o EPP_command.twr EPP_command.pcf 
+bitgen -intstyle ise -f EPP_command.ut EPP_command.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 EPP_command.ngc EPP_command.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o EPP_command_map.ncd EPP_command.ngd EPP_command.pcf 
+par -w -intstyle ise -ol high -t 1 EPP_command_map.ncd EPP_command.ncd EPP_command.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml EPP_command.twx EPP_command.ncd -o EPP_command.twr EPP_command.pcf 
+bitgen -intstyle ise -f EPP_command.ut EPP_command.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 EPP_command.ngc EPP_command.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o EPP_command_map.ncd EPP_command.ngd EPP_command.pcf 
+par -w -intstyle ise -ol high -t 1 EPP_command_map.ncd EPP_command.ncd EPP_command.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml EPP_command.twx EPP_command.ncd -o EPP_command.twr EPP_command.pcf 
+bitgen -intstyle ise -f EPP_command.ut EPP_command.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 EPP_command.ngc EPP_command.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o EPP_command_map.ncd EPP_command.ngd EPP_command.pcf 
+par -w -intstyle ise -ol high -t 1 EPP_command_map.ncd EPP_command.ncd EPP_command.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml EPP_command.twx EPP_command.ncd -o EPP_command.twr EPP_command.pcf 
+bitgen -intstyle ise -f EPP_command.ut EPP_command.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 EPP_command.ngc EPP_command.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o EPP_command_map.ncd EPP_command.ngd EPP_command.pcf 
+par -w -intstyle ise -ol high -t 1 EPP_command_map.ncd EPP_command.ncd EPP_command.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml EPP_command.twx EPP_command.ncd -o EPP_command.twr EPP_command.pcf 
+bitgen -intstyle ise -f EPP_command.ut EPP_command.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 EPP_command.ngc EPP_command.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o EPP_command_map.ncd EPP_command.ngd EPP_command.pcf 
+par -w -intstyle ise -ol high -t 1 EPP_command_map.ncd EPP_command.ncd EPP_command.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml EPP_command.twx EPP_command.ncd -o EPP_command.twr EPP_command.pcf 
+bitgen -intstyle ise -f EPP_command.ut EPP_command.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 EPP_command.ngc EPP_command.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o EPP_command_map.ncd EPP_command.ngd EPP_command.pcf 
+par -w -intstyle ise -ol high -t 1 EPP_command_map.ncd EPP_command.ncd EPP_command.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml EPP_command.twx EPP_command.ncd -o EPP_command.twr EPP_command.pcf 
+bitgen -intstyle ise -f EPP_command.ut EPP_command.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 EPP_command.ngc EPP_command.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o EPP_command_map.ncd EPP_command.ngd EPP_command.pcf 
+par -w -intstyle ise -ol high -t 1 EPP_command_map.ncd EPP_command.ncd EPP_command.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml EPP_command.twx EPP_command.ncd -o EPP_command.twr EPP_command.pcf 
+bitgen -intstyle ise -f EPP_command.ut EPP_command.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 EPP_command.ngc EPP_command.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o EPP_command_map.ncd EPP_command.ngd EPP_command.pcf 
+par -w -intstyle ise -ol high -t 1 EPP_command_map.ncd EPP_command.ncd EPP_command.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml EPP_command.twx EPP_command.ncd -o EPP_command.twr EPP_command.pcf 
+bitgen -intstyle ise -f EPP_command.ut EPP_command.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 EPP_command.ngc EPP_command.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o EPP_command_map.ncd EPP_command.ngd EPP_command.pcf 
+par -w -intstyle ise -ol high -t 1 EPP_command_map.ncd EPP_command.ncd EPP_command.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml EPP_command.twx EPP_command.ncd -o EPP_command.twr EPP_command.pcf 
+bitgen -intstyle ise -f EPP_command.ut EPP_command.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 EPP_command.ngc EPP_command.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o EPP_command_map.ncd EPP_command.ngd EPP_command.pcf 
+par -w -intstyle ise -ol high -t 1 EPP_command_map.ncd EPP_command.ncd EPP_command.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml EPP_command.twx EPP_command.ncd -o EPP_command.twr EPP_command.pcf 
+bitgen -intstyle ise -f EPP_command.ut EPP_command.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 EPP_command.ngc EPP_command.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o EPP_command_map.ncd EPP_command.ngd EPP_command.pcf 
+par -w -intstyle ise -ol high -t 1 EPP_command_map.ncd EPP_command.ncd EPP_command.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml EPP_command.twx EPP_command.ncd -o EPP_command.twr EPP_command.pcf 
+bitgen -intstyle ise -f EPP_command.ut EPP_command.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 EPP_command.ngc EPP_command.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o EPP_command_map.ncd EPP_command.ngd EPP_command.pcf 
+par -w -intstyle ise -ol high -t 1 EPP_command_map.ncd EPP_command.ncd EPP_command.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml EPP_command.twx EPP_command.ncd -o EPP_command.twr EPP_command.pcf 
+bitgen -intstyle ise -f EPP_command.ut EPP_command.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 EPP_command.ngc EPP_command.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o EPP_command_map.ncd EPP_command.ngd EPP_command.pcf 
+par -w -intstyle ise -ol high -t 1 EPP_command_map.ncd EPP_command.ncd EPP_command.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml EPP_command.twx EPP_command.ncd -o EPP_command.twr EPP_command.pcf 
+bitgen -intstyle ise -f EPP_command.ut EPP_command.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 EPP_command.ngc EPP_command.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o EPP_command_map.ncd EPP_command.ngd EPP_command.pcf 
+par -w -intstyle ise -ol high -t 1 EPP_command_map.ncd EPP_command.ncd EPP_command.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml EPP_command.twx EPP_command.ncd -o EPP_command.twr EPP_command.pcf 
+bitgen -intstyle ise -f EPP_command.ut EPP_command.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 EPP_command.ngc EPP_command.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o EPP_command_map.ncd EPP_command.ngd EPP_command.pcf 
+par -w -intstyle ise -ol high -t 1 EPP_command_map.ncd EPP_command.ncd EPP_command.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml EPP_command.twx EPP_command.ncd -o EPP_command.twr EPP_command.pcf 
+bitgen -intstyle ise -f EPP_command.ut EPP_command.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 EPP_command.ngc EPP_command.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o EPP_command_map.ncd EPP_command.ngd EPP_command.pcf 
+par -w -intstyle ise -ol high -t 1 EPP_command_map.ncd EPP_command.ncd EPP_command.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml EPP_command.twx EPP_command.ncd -o EPP_command.twr EPP_command.pcf 
+bitgen -intstyle ise -f EPP_command.ut EPP_command.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 EPP_command.ngc EPP_command.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o EPP_command_map.ncd EPP_command.ngd EPP_command.pcf 
+par -w -intstyle ise -ol high -t 1 EPP_command_map.ncd EPP_command.ncd EPP_command.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml EPP_command.twx EPP_command.ncd -o EPP_command.twr EPP_command.pcf 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 EPP_command.ngc EPP_command.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o EPP_command_map.ncd EPP_command.ngd EPP_command.pcf 
+par -w -intstyle ise -ol high -t 1 EPP_command_map.ncd EPP_command.ncd EPP_command.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml EPP_command.twx EPP_command.ncd -o EPP_command.twr EPP_command.pcf 
+bitgen -intstyle ise -f EPP_command.ut EPP_command.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 EPP_command.ngc EPP_command.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o EPP_command_map.ncd EPP_command.ngd EPP_command.pcf 
+par -w -intstyle ise -ol high -t 1 EPP_command_map.ncd EPP_command.ncd EPP_command.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml EPP_command.twx EPP_command.ncd -o EPP_command.twr EPP_command.pcf 
+bitgen -intstyle ise -f EPP_command.ut EPP_command.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 EPP_command.ngc EPP_command.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o EPP_command_map.ncd EPP_command.ngd EPP_command.pcf 
+par -w -intstyle ise -ol high -t 1 EPP_command_map.ncd EPP_command.ncd EPP_command.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml EPP_command.twx EPP_command.ncd -o EPP_command.twr EPP_command.pcf 
+bitgen -intstyle ise -f EPP_command.ut EPP_command.ncd 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 EPP_command.ngc EPP_command.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o EPP_command_map.ncd EPP_command.ngd EPP_command.pcf 
+xst -intstyle ise -ifn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.xst" -ofn "Z:/Desktop/fpga_connection/fpga_connection/EPP_command.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Z:/Desktop/fpga_connection/downloader.ucf -p xc3s400-ft256-4 EPP_command.ngc EPP_command.ngd  
+map -intstyle ise -p xc3s400-ft256-4 -cm area -ir off -pr off -c 100 -o EPP_command_map.ncd EPP_command.ngd EPP_command.pcf 
+par -w -intstyle ise -ol high -t 1 EPP_command_map.ncd EPP_command.ncd EPP_command.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml EPP_command.twx EPP_command.ncd -o EPP_command.twr EPP_command.pcf 
+bitgen -intstyle ise -f EPP_command.ut EPP_command.ncd 

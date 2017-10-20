@@ -1,0 +1,15 @@
+V3 7
+FL "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.vhd" 2017/09/18.12:48:04 P.20131013
+EN work/debug_flash_memory 1505702885 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/debug_flash_memory/Behavioral 1505702886 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory_debug/debug_flash_memory.vhd" \
+      EN work/debug_flash_memory 1505702885 CP flash_memory
+FL "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory_debug/flash_memory.vhd" 2017/09/18.12:38:34 P.20131013
+EN work/flash_memory 1505702883 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory_debug/flash_memory.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/flash_memory/Behavioral 1505702884 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/flash_memory_debug/flash_memory.vhd" \
+      EN work/flash_memory 1505702883
