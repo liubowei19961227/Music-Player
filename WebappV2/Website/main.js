@@ -119,11 +119,13 @@ function saveFile() {
 }
 
 function transferFile() {
-    var chooser = document.querySelector('#fileDialog')
-    chooser.addEventListener("change", function(evt) {
-      exeLauncher(this.value)
-    }, false)
-    chooser.click();  
+    var chooser = $('#fileDialog')
+    chooser.unbind('change')
+    chooser.change(function(evt) {
+      exeLauncher($(this).val())
+    })
+    chooser.trigger('click')
+    
 }
 
 function exeLauncher(musicFileLocation) {

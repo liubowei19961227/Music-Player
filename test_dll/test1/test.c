@@ -35,8 +35,9 @@ void reset_music_array(void) {
 }
 
 
-int read_file(void) {
-	FILE *myfile = fopen("test_input.txt","r");
+int read_file(char * fileLocation) {
+	FILE *myfile = fopen(fileLocation,"r");
+	printf("reading file: %s\n", fileLocation);
 	if (myfile == NULL) {
 		printf("file is NULL\n");
 		return -1;
@@ -130,7 +131,7 @@ int read_file(void) {
 					v1 = 0x0B;
 				break;
 			} default: {
-				printf("Invalid music file");
+				printf("Invalid music file\n");
 				return 1;
 				break;
 			}
@@ -141,7 +142,7 @@ int read_file(void) {
 			case '4': v1 |= 0x10; break;
 			case '5': v1 |= 0x20; break;
 			case '6': v1 |= 0x30; break;
-			default: printf("Invalid music file"); return 1; break;
+			default: printf("Invalid music file\n"); return 1; break;
 			}
 
 			if (note_length[0] == 's' && note_length[1] == 'q')
@@ -165,7 +166,7 @@ int read_file(void) {
 			else if (note_length[0] == 'b')
 				v2 = 0x60;
 			else {
-				printf("Invalid music file");
+				printf("Invalid music file\n");
 				return 1;
 			}
 			music_array[counter] = v1;
@@ -278,11 +279,14 @@ int main(int argc, char *argv[]) {
 	
 	int success;
 	reset_music_array();
-	success = read_file();
-	if (success == 0) {
-		printf("file reading failed\n");
+	if (argc > 1) {
+		success = read_file(argv[1]);
+		if (success == 0) {
+			printf("file reading failed\n");
+		}
+	} else {
+		printf("no music file specified\n");
 	}
-
 
 
 	/*
@@ -307,6 +311,8 @@ int main(int argc, char *argv[]) {
 
 	printf("successfully send the data\n");
 	*/
+	printf("(temporary) press any to exit\n");
+	getchar();
 	return 0;
 
 
