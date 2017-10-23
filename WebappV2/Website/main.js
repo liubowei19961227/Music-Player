@@ -1,4 +1,5 @@
-require('nw.gui').Window.get().showDevTools()
+// Console for debugging
+// require('nw.gui').Window.get().showDevTools()
 
 $( document ).ready(function() {
     //create piano with 3 octaves, starting at C4 (lowest key)
