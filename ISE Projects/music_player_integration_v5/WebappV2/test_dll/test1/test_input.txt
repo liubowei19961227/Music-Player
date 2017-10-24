@@ -1,0 +1,5 @@
+slurred
+bpm 200
+c3# %sq
+b5 m
+e6b dm
