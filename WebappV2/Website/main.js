@@ -85,9 +85,9 @@ function saveFile() {
             }
         } else if (paeNote.charAt(i) == '8') {
             if (paeNote.charAt(i+1) == '.') {
-                text += "q"
-            } else {
                 text += "dq"
+            } else {
+                text += "q"
             }
         } else if (paeNote.charAt(i) == '4') {
             if (paeNote.charAt(i+1) == '.') {
@@ -123,6 +123,7 @@ function transferFile() {
     chooser.unbind('change')
     chooser.change(function(evt) {
       exeLauncher($(this).val())
+      $(this).val('')
     })
     chooser.trigger('click')
     
