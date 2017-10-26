@@ -1,0 +1,137 @@
+V3 77
+FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/beat_follower.vhd" 2017/10/13.17:23:37 P.20131013
+FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/bin_to_dec.vhd" 2017/08/16.17:24:35 P.20131013
+FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/block_ram.vhd" 2017/10/18.22:29:48 P.20131013
+FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/bpm_conversion.vhd" 2017/10/20.17:26:36 P.20131013
+FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/bpm_counter.vhd" 2017/10/13.17:21:22 P.20131013
+FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/constants.vhd" 2017/10/20.16:37:25 P.20131013
+FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/dpimref.vhd" 2017/08/20.22:30:54 P.20131013
+FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/EPP_interface.vhd" 2017/10/18.22:30:47 P.20131013
+FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/flash_memory.vhd" 2017/10/24.20:47:20 P.20131013
+FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/flash_mem_cntl.vhd" 2017/10/24.21:36:38 P.20131013
+FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/large_number_7seg.vhd" 2017/09/02.02:25:41 P.20131013
+FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/main.vhd" 2017/10/20.20:56:24 P.20131013
+FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/music_player.vhd" 2017/10/25.00:03:51 P.20131013
+FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/note_length_counter.vhd" 2017/10/11.16:55:12 P.20131013
+FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/note_player.vhd" 2017/10/11.16:55:12 P.20131013
+FL "//vmware-host/shared folders/Desktop/fpga_connection/FPGA_interface/seven_seg_display.vhd" 2017/08/16.19:55:16 P.20131013
+FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/beat_follower.vhd" 2017/10/25.19:10:03 P.20131013
+EN work/beat_follower 1508996730 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/beat_follower.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/beat_follower/Behavioral 1508996731 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/beat_follower.vhd" \
+      EN work/beat_follower 1508996730 CP bpm_counter
+FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/bin_to_dec.vhd" 2017/08/16.17:24:35 P.20131013
+EN work/bin_to_dec 1508996706 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/bin_to_dec.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/bin_to_dec/Behavioral 1508996707 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/bin_to_dec.vhd" \
+      EN work/bin_to_dec 1508996706
+FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/block_ram.vhd" 2017/10/18.22:29:48 P.20131013
+EN work/block_ram 1508996724 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/block_ram.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/block_ram/Behavioral 1508996725 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/block_ram.vhd" \
+      EN work/block_ram 1508996724
+FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/bpm_conversion.vhd" 2017/10/20.17:26:36 P.20131013
+EN work/bpm_conversion 1508996720 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/bpm_conversion.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PH work/constants 1508996705
+AR work/bpm_conversion/Behavioral 1508996721 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/bpm_conversion.vhd" \
+      EN work/bpm_conversion 1508996720
+FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/bpm_counter.vhd" 2017/10/25.17:26:23 P.20131013
+EN work/bpm_counter 1508996710 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/bpm_counter.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/NUMERIC_STD 1381692181 PH work/constants 1508996705
+AR work/bpm_counter/Behavioral 1508996711 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/bpm_counter.vhd" \
+      EN work/bpm_counter 1508996710
+FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/constants.vhd" 2017/10/25.17:01:06 P.20131013
+PH work/constants 1508996705 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/constants.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/dpimref.vhd" 2017/08/20.22:30:54 P.20131013
+EN work/dpimref 1508996718 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/dpimref.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/dpimref/Behavioral 1508996719 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/dpimref.vhd" \
+      EN work/dpimref 1508996718
+FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/EPP_interface.vhd" 2017/10/26.16:44:55 P.20131013
+EN work/EPP_interface 1508996722 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/EPP_interface.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/EPP_interface/Behavioral 1508996723 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/EPP_interface.vhd" \
+      EN work/EPP_interface 1508996722 CP dpimref
+FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/flash_memory.vhd" 2017/10/24.20:47:20 P.20131013
+EN work/flash_memory 1508996708 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/flash_memory.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/flash_memory/Behavioral 1508996709 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/flash_memory.vhd" \
+      EN work/flash_memory 1508996708
+FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/flash_mem_cntl.vhd" 2017/10/25.20:44:09 P.20131013
+EN work/flash_mem_cntl 1508996732 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/flash_mem_cntl.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/flash_mem_cntl/Behavioral 1508996733 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/flash_mem_cntl.vhd" \
+      EN work/flash_mem_cntl 1508996732 CP flash_memory
+FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/large_number_7seg.vhd" 2017/09/02.02:25:41 P.20131013
+EN work/large_number_7seg 1508996726 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/large_number_7seg.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/large_number_7seg/Behavioral 1508996727 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/large_number_7seg.vhd" \
+      EN work/large_number_7seg 1508996726 CP seven_seg_display
+FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/main.vhd" 2017/10/25.16:33:56 P.20131013
+EN work/music_player_v7 1508996728 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/main.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PH work/constants 1508996705
+AR work/music_player_v7/behavioral 1508996729 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/main.vhd" \
+      EN work/music_player_v7 1508996728 CP work/note_length_counter \
+      CP work/note_player
+FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/music_player.vhd" 2017/10/25.20:15:16 P.20131013
+EN work/music_player 1508996734 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/music_player.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PH work/constants 1508996705
+AR work/music_player/Behavioral 1508996735 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/music_player.vhd" \
+      EN work/music_player 1508996734 CP bpm_conversion CP epp_interface \
+      CP block_ram CP large_number_7seg CP music_player_v7 CP beat_follower \
+      CP flash_mem_cntl
+FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/note_length_counter.vhd" 2017/10/11.16:55:12 P.20131013
+EN work/note_length_counter 1508996712 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/note_length_counter.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PH work/constants 1508996705
+AR work/note_length_counter/Behavioral 1508996713 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/note_length_counter.vhd" \
+      EN work/note_length_counter 1508996712
+FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/note_player.vhd" 2017/10/11.16:55:12 P.20131013
+EN work/note_player 1508996714 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/note_player.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 \
+      PH work/constants 1508996705
+AR work/note_player/Behavioral 1508996715 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/note_player.vhd" \
+      EN work/note_player 1508996714
+FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/seven_seg_display.vhd" 2017/08/16.19:55:16 P.20131013
+EN work/seven_seg_display 1508996716 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/seven_seg_display.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/seven_seg_display/Behavioral 1508996717 \
+      FL "//vmware-host/shared folders/Desktop/fpga_connection/music_integration_v7/FPGA_interface/seven_seg_display.vhd" \
+      EN work/seven_seg_display 1508996716 CP bin_to_dec

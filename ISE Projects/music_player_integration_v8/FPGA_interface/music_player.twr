@@ -1,0 +1,1162 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml music_player.twx music_player.ncd -o music_player.twr
+music_player.pcf -ucf fpga_connection_pin_assignment.ucf
+
+Design file:              music_player.ncd
+Physical constraint file: music_player.pcf
+Device,package,speed:     xc3s400,ft256,-4 (PRODUCTION 1.39 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: ts_clk = PERIOD TIMEGRP "tnm_clk" 25 MHz HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 3860563420 paths analyzed, 3473 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  30.864ns.
+--------------------------------------------------------------------------------
+
+Paths for end point baton/display_bpm/bpm_1 (SLICE_X15Y11.F4), 292100703 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     9.136ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               baton/beat_array0_1_4 (FF)
+  Destination:          baton/display_bpm/bpm_1 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      30.863ns (Levels of Logic = 24)
+  Clock Path Skew:      -0.001ns (0.454 - 0.455)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: baton/beat_array0_1_4 to baton/display_bpm/bpm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y4.YQ       Tcko                  0.720   baton/beat_array0_1_5
+                                                       baton/beat_array0_1_4
+    SLICE_X31Y5.F1       net (fanout=3)        1.630   baton/beat_array0_1_4
+    SLICE_X31Y5.X        Tilo                  0.551   baton/Madd_sum_addsub0001C3
+                                                       baton/Madd_sum_addsub0001C31
+    SLICE_X30Y2.G1       net (fanout=1)        0.569   baton/Madd_sum_addsub0001C3
+    SLICE_X30Y2.COUT     Topcyg                1.096   baton/sum_addsub0001<4>
+                                                       baton/Madd_sum_addsub0001_Madd_lut<5>
+                                                       baton/Madd_sum_addsub0001_Madd_cy<5>
+    SLICE_X30Y3.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0001_Madd_cy<5>
+    SLICE_X30Y3.X        Tcinx                 0.904   baton/sum_addsub0001<6>
+                                                       baton/Madd_sum_addsub0001_Madd_xor<6>
+    SLICE_X27Y3.F1       net (fanout=1)        1.253   baton/sum_addsub0001<6>
+    SLICE_X27Y3.COUT     Topcyf                1.027   baton/sum_addsub0002<6>
+                                                       baton/Madd_sum_addsub0002_lut<6>
+                                                       baton/Madd_sum_addsub0002_cy<6>
+                                                       baton/Madd_sum_addsub0002_cy<7>
+    SLICE_X27Y4.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<7>
+    SLICE_X27Y4.COUT     Tbyp                  0.128   baton/sum_addsub0002<8>
+                                                       baton/Madd_sum_addsub0002_cy<8>
+                                                       baton/Madd_sum_addsub0002_cy<9>
+    SLICE_X27Y5.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<9>
+    SLICE_X27Y5.COUT     Tbyp                  0.128   baton/sum_addsub0002<10>
+                                                       baton/Madd_sum_addsub0002_cy<10>
+                                                       baton/Madd_sum_addsub0002_cy<11>
+    SLICE_X27Y6.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<11>
+    SLICE_X27Y6.COUT     Tbyp                  0.128   baton/sum_addsub0002<12>
+                                                       baton/Madd_sum_addsub0002_cy<12>
+                                                       baton/Madd_sum_addsub0002_cy<13>
+    SLICE_X27Y7.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<13>
+    SLICE_X27Y7.COUT     Tbyp                  0.128   baton/sum_addsub0002<14>
+                                                       baton/Madd_sum_addsub0002_cy<14>
+                                                       baton/Madd_sum_addsub0002_cy<15>
+    SLICE_X27Y8.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<15>
+    SLICE_X27Y8.X        Tcinx                 0.904   baton/sum_addsub0002<16>
+                                                       baton/Madd_sum_addsub0002_xor<16>
+    MULT18X18_X0Y0.A16   net (fanout=1)        2.292   baton/sum_addsub0002<16>
+    MULT18X18_X0Y0.P23   Tmult                 4.285   baton/Mmult_sum_submult_0
+                                                       baton/Mmult_sum_submult_0
+    SLICE_X5Y5.F1        net (fanout=1)        2.164   baton/Mmult_sum_submult_0_23
+    SLICE_X5Y5.COUT      Topcyf                1.027   dynamic_bpm<7>
+                                                       baton/Mmult_sum_Madd_lut<23>
+                                                       baton/Mmult_sum_Madd_cy<23>
+                                                       baton/Mmult_sum_Madd_cy<24>
+    SLICE_X5Y6.CIN       net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<24>
+    SLICE_X5Y6.COUT      Tbyp                  0.128   dynamic_bpm<9>
+                                                       baton/Mmult_sum_Madd_cy<25>
+                                                       baton/Mmult_sum_Madd_cy<26>
+    SLICE_X5Y7.CIN       net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<26>
+    SLICE_X5Y7.COUT      Tbyp                  0.128   dynamic_bpm<11>
+                                                       baton/Mmult_sum_Madd_cy<27>
+                                                       baton/Mmult_sum_Madd_cy<28>
+    SLICE_X5Y8.CIN       net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<28>
+    SLICE_X5Y8.COUT      Tbyp                  0.128   dynamic_bpm<13>
+                                                       baton/Mmult_sum_Madd_cy<29>
+                                                       baton/Mmult_sum_Madd_cy<30>
+    SLICE_X5Y9.CIN       net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<30>
+    SLICE_X5Y9.COUT      Tbyp                  0.128   dynamic_bpm<15>
+                                                       baton/Mmult_sum_Madd_cy<31>
+                                                       baton/Mmult_sum_Madd_cy<32>
+    SLICE_X5Y10.CIN      net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<32>
+    SLICE_X5Y10.COUT     Tbyp                  0.128   dynamic_bpm<17>
+                                                       baton/Mmult_sum_Madd_cy<33>
+                                                       baton/Mmult_sum_Madd_cy<34>
+    SLICE_X5Y11.CIN      net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<34>
+    SLICE_X5Y11.COUT     Tbyp                  0.128   dynamic_bpm<19>
+                                                       baton/Mmult_sum_Madd_cy<35>
+                                                       baton/Mmult_sum_Madd_cy<36>
+    SLICE_X5Y12.CIN      net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<36>
+    SLICE_X5Y12.COUT     Tbyp                  0.128   dynamic_bpm<21>
+                                                       baton/Mmult_sum_Madd_cy<37>
+                                                       baton/Mmult_sum_Madd_cy<38>
+    SLICE_X5Y13.CIN      net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<38>
+    SLICE_X5Y13.Y        Tciny                 0.923   dynamic_bpm<23>
+                                                       baton/Mmult_sum_Madd_cy<39>
+                                                       baton/Mmult_sum_Madd_xor<40>
+    SLICE_X14Y21.F4      net (fanout=23)       3.844   dynamic_bpm<24>
+    SLICE_X14Y21.COUT    Topcyf                1.084   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<11>9
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_lut<10>51
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<10>_8
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<11>_8
+    SLICE_X16Y15.G1      net (fanout=9)        1.422   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<11>9
+    SLICE_X16Y15.Y       Tilo                  0.608   N466
+                                                       baton/display_bpm/bpm_mux0024<30>1165_SW0_SW0
+    SLICE_X16Y15.F1      net (fanout=1)        0.598   baton/display_bpm/bpm_mux0024<30>1165_SW0_SW0/O
+    SLICE_X16Y15.X       Tilo                  0.608   N466
+                                                       baton/display_bpm/bpm_mux0024<30>1165_SW0
+    SLICE_X15Y11.G3      net (fanout=1)        0.747   N466
+    SLICE_X15Y11.Y       Tilo                  0.551   baton/display_bpm/bpm<1>
+                                                       baton/display_bpm/bpm_mux0024<30>11111_SW0
+    SLICE_X15Y11.F4      net (fanout=1)        0.015   baton/display_bpm/bpm_mux0024<30>11111_SW0/O
+    SLICE_X15Y11.CLK     Tfck                  0.633   baton/display_bpm/bpm<1>
+                                                       baton/display_bpm/bpm_mux0024<30>11233
+                                                       baton/display_bpm/bpm_1
+    -------------------------------------------------  ---------------------------
+    Total                                     30.863ns (16.329ns logic, 14.534ns route)
+                                                       (52.9% logic, 47.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.152ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               baton/beat_array0_1_4 (FF)
+  Destination:          baton/display_bpm/bpm_1 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      30.847ns (Levels of Logic = 24)
+  Clock Path Skew:      -0.001ns (0.454 - 0.455)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: baton/beat_array0_1_4 to baton/display_bpm/bpm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y4.YQ       Tcko                  0.720   baton/beat_array0_1_5
+                                                       baton/beat_array0_1_4
+    SLICE_X31Y5.F1       net (fanout=3)        1.630   baton/beat_array0_1_4
+    SLICE_X31Y5.X        Tilo                  0.551   baton/Madd_sum_addsub0001C3
+                                                       baton/Madd_sum_addsub0001C31
+    SLICE_X30Y2.G1       net (fanout=1)        0.569   baton/Madd_sum_addsub0001C3
+    SLICE_X30Y2.COUT     Topcyg                1.096   baton/sum_addsub0001<4>
+                                                       baton/Madd_sum_addsub0001_Madd_lut<5>
+                                                       baton/Madd_sum_addsub0001_Madd_cy<5>
+    SLICE_X30Y3.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0001_Madd_cy<5>
+    SLICE_X30Y3.COUT     Tbyp                  0.120   baton/sum_addsub0001<6>
+                                                       baton/Madd_sum_addsub0001_Madd_cy<6>
+                                                       baton/Madd_sum_addsub0001_Madd_cy<7>
+    SLICE_X30Y4.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0001_Madd_cy<7>
+    SLICE_X30Y4.COUT     Tbyp                  0.120   baton/sum_addsub0001<8>
+                                                       baton/Madd_sum_addsub0001_Madd_cy<8>
+                                                       baton/Madd_sum_addsub0001_Madd_cy<9>
+    SLICE_X30Y5.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0001_Madd_cy<9>
+    SLICE_X30Y5.X        Tcinx                 0.904   baton/sum_addsub0001<10>
+                                                       baton/Madd_sum_addsub0001_Madd_xor<10>
+    SLICE_X27Y5.F1       net (fanout=1)        1.253   baton/sum_addsub0001<10>
+    SLICE_X27Y5.COUT     Topcyf                1.027   baton/sum_addsub0002<10>
+                                                       baton/Madd_sum_addsub0002_lut<10>
+                                                       baton/Madd_sum_addsub0002_cy<10>
+                                                       baton/Madd_sum_addsub0002_cy<11>
+    SLICE_X27Y6.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<11>
+    SLICE_X27Y6.COUT     Tbyp                  0.128   baton/sum_addsub0002<12>
+                                                       baton/Madd_sum_addsub0002_cy<12>
+                                                       baton/Madd_sum_addsub0002_cy<13>
+    SLICE_X27Y7.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<13>
+    SLICE_X27Y7.COUT     Tbyp                  0.128   baton/sum_addsub0002<14>
+                                                       baton/Madd_sum_addsub0002_cy<14>
+                                                       baton/Madd_sum_addsub0002_cy<15>
+    SLICE_X27Y8.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<15>
+    SLICE_X27Y8.X        Tcinx                 0.904   baton/sum_addsub0002<16>
+                                                       baton/Madd_sum_addsub0002_xor<16>
+    MULT18X18_X0Y0.A16   net (fanout=1)        2.292   baton/sum_addsub0002<16>
+    MULT18X18_X0Y0.P23   Tmult                 4.285   baton/Mmult_sum_submult_0
+                                                       baton/Mmult_sum_submult_0
+    SLICE_X5Y5.F1        net (fanout=1)        2.164   baton/Mmult_sum_submult_0_23
+    SLICE_X5Y5.COUT      Topcyf                1.027   dynamic_bpm<7>
+                                                       baton/Mmult_sum_Madd_lut<23>
+                                                       baton/Mmult_sum_Madd_cy<23>
+                                                       baton/Mmult_sum_Madd_cy<24>
+    SLICE_X5Y6.CIN       net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<24>
+    SLICE_X5Y6.COUT      Tbyp                  0.128   dynamic_bpm<9>
+                                                       baton/Mmult_sum_Madd_cy<25>
+                                                       baton/Mmult_sum_Madd_cy<26>
+    SLICE_X5Y7.CIN       net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<26>
+    SLICE_X5Y7.COUT      Tbyp                  0.128   dynamic_bpm<11>
+                                                       baton/Mmult_sum_Madd_cy<27>
+                                                       baton/Mmult_sum_Madd_cy<28>
+    SLICE_X5Y8.CIN       net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<28>
+    SLICE_X5Y8.COUT      Tbyp                  0.128   dynamic_bpm<13>
+                                                       baton/Mmult_sum_Madd_cy<29>
+                                                       baton/Mmult_sum_Madd_cy<30>
+    SLICE_X5Y9.CIN       net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<30>
+    SLICE_X5Y9.COUT      Tbyp                  0.128   dynamic_bpm<15>
+                                                       baton/Mmult_sum_Madd_cy<31>
+                                                       baton/Mmult_sum_Madd_cy<32>
+    SLICE_X5Y10.CIN      net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<32>
+    SLICE_X5Y10.COUT     Tbyp                  0.128   dynamic_bpm<17>
+                                                       baton/Mmult_sum_Madd_cy<33>
+                                                       baton/Mmult_sum_Madd_cy<34>
+    SLICE_X5Y11.CIN      net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<34>
+    SLICE_X5Y11.COUT     Tbyp                  0.128   dynamic_bpm<19>
+                                                       baton/Mmult_sum_Madd_cy<35>
+                                                       baton/Mmult_sum_Madd_cy<36>
+    SLICE_X5Y12.CIN      net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<36>
+    SLICE_X5Y12.COUT     Tbyp                  0.128   dynamic_bpm<21>
+                                                       baton/Mmult_sum_Madd_cy<37>
+                                                       baton/Mmult_sum_Madd_cy<38>
+    SLICE_X5Y13.CIN      net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<38>
+    SLICE_X5Y13.Y        Tciny                 0.923   dynamic_bpm<23>
+                                                       baton/Mmult_sum_Madd_cy<39>
+                                                       baton/Mmult_sum_Madd_xor<40>
+    SLICE_X14Y21.F4      net (fanout=23)       3.844   dynamic_bpm<24>
+    SLICE_X14Y21.COUT    Topcyf                1.084   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<11>9
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_lut<10>51
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<10>_8
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<11>_8
+    SLICE_X16Y15.G1      net (fanout=9)        1.422   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<11>9
+    SLICE_X16Y15.Y       Tilo                  0.608   N466
+                                                       baton/display_bpm/bpm_mux0024<30>1165_SW0_SW0
+    SLICE_X16Y15.F1      net (fanout=1)        0.598   baton/display_bpm/bpm_mux0024<30>1165_SW0_SW0/O
+    SLICE_X16Y15.X       Tilo                  0.608   N466
+                                                       baton/display_bpm/bpm_mux0024<30>1165_SW0
+    SLICE_X15Y11.G3      net (fanout=1)        0.747   N466
+    SLICE_X15Y11.Y       Tilo                  0.551   baton/display_bpm/bpm<1>
+                                                       baton/display_bpm/bpm_mux0024<30>11111_SW0
+    SLICE_X15Y11.F4      net (fanout=1)        0.015   baton/display_bpm/bpm_mux0024<30>11111_SW0/O
+    SLICE_X15Y11.CLK     Tfck                  0.633   baton/display_bpm/bpm<1>
+                                                       baton/display_bpm/bpm_mux0024<30>11233
+                                                       baton/display_bpm/bpm_1
+    -------------------------------------------------  ---------------------------
+    Total                                     30.847ns (16.313ns logic, 14.534ns route)
+                                                       (52.9% logic, 47.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.161ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               baton/beat_array0_1_4 (FF)
+  Destination:          baton/display_bpm/bpm_1 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      30.838ns (Levels of Logic = 21)
+  Clock Path Skew:      -0.001ns (0.454 - 0.455)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: baton/beat_array0_1_4 to baton/display_bpm/bpm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y4.YQ       Tcko                  0.720   baton/beat_array0_1_5
+                                                       baton/beat_array0_1_4
+    SLICE_X31Y5.F1       net (fanout=3)        1.630   baton/beat_array0_1_4
+    SLICE_X31Y5.X        Tilo                  0.551   baton/Madd_sum_addsub0001C3
+                                                       baton/Madd_sum_addsub0001C31
+    SLICE_X30Y2.G1       net (fanout=1)        0.569   baton/Madd_sum_addsub0001C3
+    SLICE_X30Y2.COUT     Topcyg                1.096   baton/sum_addsub0001<4>
+                                                       baton/Madd_sum_addsub0001_Madd_lut<5>
+                                                       baton/Madd_sum_addsub0001_Madd_cy<5>
+    SLICE_X30Y3.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0001_Madd_cy<5>
+    SLICE_X30Y3.X        Tcinx                 0.904   baton/sum_addsub0001<6>
+                                                       baton/Madd_sum_addsub0001_Madd_xor<6>
+    SLICE_X27Y3.F1       net (fanout=1)        1.253   baton/sum_addsub0001<6>
+    SLICE_X27Y3.COUT     Topcyf                1.027   baton/sum_addsub0002<6>
+                                                       baton/Madd_sum_addsub0002_lut<6>
+                                                       baton/Madd_sum_addsub0002_cy<6>
+                                                       baton/Madd_sum_addsub0002_cy<7>
+    SLICE_X27Y4.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<7>
+    SLICE_X27Y4.COUT     Tbyp                  0.128   baton/sum_addsub0002<8>
+                                                       baton/Madd_sum_addsub0002_cy<8>
+                                                       baton/Madd_sum_addsub0002_cy<9>
+    SLICE_X27Y5.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<9>
+    SLICE_X27Y5.Y        Tciny                 0.923   baton/sum_addsub0002<10>
+                                                       baton/Madd_sum_addsub0002_cy<10>
+                                                       baton/Madd_sum_addsub0002_xor<11>
+    MULT18X18_X0Y0.A11   net (fanout=1)        2.632   baton/sum_addsub0002<11>
+    MULT18X18_X0Y0.P23   Tmult                 4.285   baton/Mmult_sum_submult_0
+                                                       baton/Mmult_sum_submult_0
+    SLICE_X5Y5.F1        net (fanout=1)        2.164   baton/Mmult_sum_submult_0_23
+    SLICE_X5Y5.COUT      Topcyf                1.027   dynamic_bpm<7>
+                                                       baton/Mmult_sum_Madd_lut<23>
+                                                       baton/Mmult_sum_Madd_cy<23>
+                                                       baton/Mmult_sum_Madd_cy<24>
+    SLICE_X5Y6.CIN       net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<24>
+    SLICE_X5Y6.COUT      Tbyp                  0.128   dynamic_bpm<9>
+                                                       baton/Mmult_sum_Madd_cy<25>
+                                                       baton/Mmult_sum_Madd_cy<26>
+    SLICE_X5Y7.CIN       net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<26>
+    SLICE_X5Y7.COUT      Tbyp                  0.128   dynamic_bpm<11>
+                                                       baton/Mmult_sum_Madd_cy<27>
+                                                       baton/Mmult_sum_Madd_cy<28>
+    SLICE_X5Y8.CIN       net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<28>
+    SLICE_X5Y8.COUT      Tbyp                  0.128   dynamic_bpm<13>
+                                                       baton/Mmult_sum_Madd_cy<29>
+                                                       baton/Mmult_sum_Madd_cy<30>
+    SLICE_X5Y9.CIN       net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<30>
+    SLICE_X5Y9.COUT      Tbyp                  0.128   dynamic_bpm<15>
+                                                       baton/Mmult_sum_Madd_cy<31>
+                                                       baton/Mmult_sum_Madd_cy<32>
+    SLICE_X5Y10.CIN      net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<32>
+    SLICE_X5Y10.COUT     Tbyp                  0.128   dynamic_bpm<17>
+                                                       baton/Mmult_sum_Madd_cy<33>
+                                                       baton/Mmult_sum_Madd_cy<34>
+    SLICE_X5Y11.CIN      net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<34>
+    SLICE_X5Y11.COUT     Tbyp                  0.128   dynamic_bpm<19>
+                                                       baton/Mmult_sum_Madd_cy<35>
+                                                       baton/Mmult_sum_Madd_cy<36>
+    SLICE_X5Y12.CIN      net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<36>
+    SLICE_X5Y12.COUT     Tbyp                  0.128   dynamic_bpm<21>
+                                                       baton/Mmult_sum_Madd_cy<37>
+                                                       baton/Mmult_sum_Madd_cy<38>
+    SLICE_X5Y13.CIN      net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<38>
+    SLICE_X5Y13.Y        Tciny                 0.923   dynamic_bpm<23>
+                                                       baton/Mmult_sum_Madd_cy<39>
+                                                       baton/Mmult_sum_Madd_xor<40>
+    SLICE_X14Y21.F4      net (fanout=23)       3.844   dynamic_bpm<24>
+    SLICE_X14Y21.COUT    Topcyf                1.084   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<11>9
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_lut<10>51
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<10>_8
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<11>_8
+    SLICE_X16Y15.G1      net (fanout=9)        1.422   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<11>9
+    SLICE_X16Y15.Y       Tilo                  0.608   N466
+                                                       baton/display_bpm/bpm_mux0024<30>1165_SW0_SW0
+    SLICE_X16Y15.F1      net (fanout=1)        0.598   baton/display_bpm/bpm_mux0024<30>1165_SW0_SW0/O
+    SLICE_X16Y15.X       Tilo                  0.608   N466
+                                                       baton/display_bpm/bpm_mux0024<30>1165_SW0
+    SLICE_X15Y11.G3      net (fanout=1)        0.747   N466
+    SLICE_X15Y11.Y       Tilo                  0.551   baton/display_bpm/bpm<1>
+                                                       baton/display_bpm/bpm_mux0024<30>11111_SW0
+    SLICE_X15Y11.F4      net (fanout=1)        0.015   baton/display_bpm/bpm_mux0024<30>11111_SW0/O
+    SLICE_X15Y11.CLK     Tfck                  0.633   baton/display_bpm/bpm<1>
+                                                       baton/display_bpm/bpm_mux0024<30>11233
+                                                       baton/display_bpm/bpm_1
+    -------------------------------------------------  ---------------------------
+    Total                                     30.838ns (15.964ns logic, 14.874ns route)
+                                                       (51.8% logic, 48.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point baton/display_bpm/bpm_2 (SLICE_X14Y12.F4), 206182174 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     9.654ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               baton/beat_array0_1_4 (FF)
+  Destination:          baton/display_bpm/bpm_2 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      30.345ns (Levels of Logic = 24)
+  Clock Path Skew:      -0.001ns (0.454 - 0.455)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: baton/beat_array0_1_4 to baton/display_bpm/bpm_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y4.YQ       Tcko                  0.720   baton/beat_array0_1_5
+                                                       baton/beat_array0_1_4
+    SLICE_X31Y5.F1       net (fanout=3)        1.630   baton/beat_array0_1_4
+    SLICE_X31Y5.X        Tilo                  0.551   baton/Madd_sum_addsub0001C3
+                                                       baton/Madd_sum_addsub0001C31
+    SLICE_X30Y2.G1       net (fanout=1)        0.569   baton/Madd_sum_addsub0001C3
+    SLICE_X30Y2.COUT     Topcyg                1.096   baton/sum_addsub0001<4>
+                                                       baton/Madd_sum_addsub0001_Madd_lut<5>
+                                                       baton/Madd_sum_addsub0001_Madd_cy<5>
+    SLICE_X30Y3.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0001_Madd_cy<5>
+    SLICE_X30Y3.X        Tcinx                 0.904   baton/sum_addsub0001<6>
+                                                       baton/Madd_sum_addsub0001_Madd_xor<6>
+    SLICE_X27Y3.F1       net (fanout=1)        1.253   baton/sum_addsub0001<6>
+    SLICE_X27Y3.COUT     Topcyf                1.027   baton/sum_addsub0002<6>
+                                                       baton/Madd_sum_addsub0002_lut<6>
+                                                       baton/Madd_sum_addsub0002_cy<6>
+                                                       baton/Madd_sum_addsub0002_cy<7>
+    SLICE_X27Y4.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<7>
+    SLICE_X27Y4.COUT     Tbyp                  0.128   baton/sum_addsub0002<8>
+                                                       baton/Madd_sum_addsub0002_cy<8>
+                                                       baton/Madd_sum_addsub0002_cy<9>
+    SLICE_X27Y5.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<9>
+    SLICE_X27Y5.COUT     Tbyp                  0.128   baton/sum_addsub0002<10>
+                                                       baton/Madd_sum_addsub0002_cy<10>
+                                                       baton/Madd_sum_addsub0002_cy<11>
+    SLICE_X27Y6.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<11>
+    SLICE_X27Y6.COUT     Tbyp                  0.128   baton/sum_addsub0002<12>
+                                                       baton/Madd_sum_addsub0002_cy<12>
+                                                       baton/Madd_sum_addsub0002_cy<13>
+    SLICE_X27Y7.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<13>
+    SLICE_X27Y7.COUT     Tbyp                  0.128   baton/sum_addsub0002<14>
+                                                       baton/Madd_sum_addsub0002_cy<14>
+                                                       baton/Madd_sum_addsub0002_cy<15>
+    SLICE_X27Y8.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<15>
+    SLICE_X27Y8.X        Tcinx                 0.904   baton/sum_addsub0002<16>
+                                                       baton/Madd_sum_addsub0002_xor<16>
+    MULT18X18_X0Y0.A16   net (fanout=1)        2.292   baton/sum_addsub0002<16>
+    MULT18X18_X0Y0.P23   Tmult                 4.285   baton/Mmult_sum_submult_0
+                                                       baton/Mmult_sum_submult_0
+    SLICE_X5Y5.F1        net (fanout=1)        2.164   baton/Mmult_sum_submult_0_23
+    SLICE_X5Y5.COUT      Topcyf                1.027   dynamic_bpm<7>
+                                                       baton/Mmult_sum_Madd_lut<23>
+                                                       baton/Mmult_sum_Madd_cy<23>
+                                                       baton/Mmult_sum_Madd_cy<24>
+    SLICE_X5Y6.CIN       net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<24>
+    SLICE_X5Y6.COUT      Tbyp                  0.128   dynamic_bpm<9>
+                                                       baton/Mmult_sum_Madd_cy<25>
+                                                       baton/Mmult_sum_Madd_cy<26>
+    SLICE_X5Y7.CIN       net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<26>
+    SLICE_X5Y7.COUT      Tbyp                  0.128   dynamic_bpm<11>
+                                                       baton/Mmult_sum_Madd_cy<27>
+                                                       baton/Mmult_sum_Madd_cy<28>
+    SLICE_X5Y8.CIN       net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<28>
+    SLICE_X5Y8.COUT      Tbyp                  0.128   dynamic_bpm<13>
+                                                       baton/Mmult_sum_Madd_cy<29>
+                                                       baton/Mmult_sum_Madd_cy<30>
+    SLICE_X5Y9.CIN       net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<30>
+    SLICE_X5Y9.COUT      Tbyp                  0.128   dynamic_bpm<15>
+                                                       baton/Mmult_sum_Madd_cy<31>
+                                                       baton/Mmult_sum_Madd_cy<32>
+    SLICE_X5Y10.CIN      net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<32>
+    SLICE_X5Y10.COUT     Tbyp                  0.128   dynamic_bpm<17>
+                                                       baton/Mmult_sum_Madd_cy<33>
+                                                       baton/Mmult_sum_Madd_cy<34>
+    SLICE_X5Y11.CIN      net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<34>
+    SLICE_X5Y11.COUT     Tbyp                  0.128   dynamic_bpm<19>
+                                                       baton/Mmult_sum_Madd_cy<35>
+                                                       baton/Mmult_sum_Madd_cy<36>
+    SLICE_X5Y12.CIN      net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<36>
+    SLICE_X5Y12.Y        Tciny                 0.923   dynamic_bpm<21>
+                                                       baton/Mmult_sum_Madd_cy<37>
+                                                       baton/Mmult_sum_Madd_xor<38>
+    SLICE_X0Y7.G1        net (fanout=23)       2.227   dynamic_bpm<22>
+    SLICE_X0Y7.COUT      Topcyg                1.096   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<15>4
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_lut<15>4
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<15>_3
+    SLICE_X0Y8.CIN       net (fanout=1)        0.000   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<15>4
+    SLICE_X0Y8.XB        Tcinxb                0.440   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<16>
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<16>
+    SLICE_X8Y8.F1        net (fanout=3)        1.876   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<16>
+    SLICE_X8Y8.X         Tilo                  0.608   baton/display_bpm/bpm_mux0024<29>1113
+                                                       baton/display_bpm/bpm_mux0024<29>1113
+    SLICE_X10Y9.F2       net (fanout=1)        0.512   baton/display_bpm/bpm_mux0024<29>1113
+    SLICE_X10Y9.X        Tilo                  0.608   N469
+                                                       baton/display_bpm/bpm_mux0024<29>1152_SW0
+    SLICE_X14Y12.G3      net (fanout=1)        1.040   N469
+    SLICE_X14Y12.Y       Tilo                  0.608   baton/display_bpm/bpm<2>
+                                                       baton/display_bpm/bpm_mux0024<29>1152
+    SLICE_X14Y12.F4      net (fanout=1)        0.015   baton/display_bpm/bpm_mux0024<29>1152/O
+    SLICE_X14Y12.CLK     Tfck                  0.690   baton/display_bpm/bpm<2>
+                                                       baton/display_bpm/bpm_mux0024<29>111381
+                                                       baton/display_bpm/bpm_2
+    -------------------------------------------------  ---------------------------
+    Total                                     30.345ns (16.767ns logic, 13.578ns route)
+                                                       (55.3% logic, 44.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.670ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               baton/beat_array0_1_4 (FF)
+  Destination:          baton/display_bpm/bpm_2 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      30.329ns (Levels of Logic = 24)
+  Clock Path Skew:      -0.001ns (0.454 - 0.455)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: baton/beat_array0_1_4 to baton/display_bpm/bpm_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y4.YQ       Tcko                  0.720   baton/beat_array0_1_5
+                                                       baton/beat_array0_1_4
+    SLICE_X31Y5.F1       net (fanout=3)        1.630   baton/beat_array0_1_4
+    SLICE_X31Y5.X        Tilo                  0.551   baton/Madd_sum_addsub0001C3
+                                                       baton/Madd_sum_addsub0001C31
+    SLICE_X30Y2.G1       net (fanout=1)        0.569   baton/Madd_sum_addsub0001C3
+    SLICE_X30Y2.COUT     Topcyg                1.096   baton/sum_addsub0001<4>
+                                                       baton/Madd_sum_addsub0001_Madd_lut<5>
+                                                       baton/Madd_sum_addsub0001_Madd_cy<5>
+    SLICE_X30Y3.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0001_Madd_cy<5>
+    SLICE_X30Y3.COUT     Tbyp                  0.120   baton/sum_addsub0001<6>
+                                                       baton/Madd_sum_addsub0001_Madd_cy<6>
+                                                       baton/Madd_sum_addsub0001_Madd_cy<7>
+    SLICE_X30Y4.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0001_Madd_cy<7>
+    SLICE_X30Y4.COUT     Tbyp                  0.120   baton/sum_addsub0001<8>
+                                                       baton/Madd_sum_addsub0001_Madd_cy<8>
+                                                       baton/Madd_sum_addsub0001_Madd_cy<9>
+    SLICE_X30Y5.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0001_Madd_cy<9>
+    SLICE_X30Y5.X        Tcinx                 0.904   baton/sum_addsub0001<10>
+                                                       baton/Madd_sum_addsub0001_Madd_xor<10>
+    SLICE_X27Y5.F1       net (fanout=1)        1.253   baton/sum_addsub0001<10>
+    SLICE_X27Y5.COUT     Topcyf                1.027   baton/sum_addsub0002<10>
+                                                       baton/Madd_sum_addsub0002_lut<10>
+                                                       baton/Madd_sum_addsub0002_cy<10>
+                                                       baton/Madd_sum_addsub0002_cy<11>
+    SLICE_X27Y6.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<11>
+    SLICE_X27Y6.COUT     Tbyp                  0.128   baton/sum_addsub0002<12>
+                                                       baton/Madd_sum_addsub0002_cy<12>
+                                                       baton/Madd_sum_addsub0002_cy<13>
+    SLICE_X27Y7.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<13>
+    SLICE_X27Y7.COUT     Tbyp                  0.128   baton/sum_addsub0002<14>
+                                                       baton/Madd_sum_addsub0002_cy<14>
+                                                       baton/Madd_sum_addsub0002_cy<15>
+    SLICE_X27Y8.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<15>
+    SLICE_X27Y8.X        Tcinx                 0.904   baton/sum_addsub0002<16>
+                                                       baton/Madd_sum_addsub0002_xor<16>
+    MULT18X18_X0Y0.A16   net (fanout=1)        2.292   baton/sum_addsub0002<16>
+    MULT18X18_X0Y0.P23   Tmult                 4.285   baton/Mmult_sum_submult_0
+                                                       baton/Mmult_sum_submult_0
+    SLICE_X5Y5.F1        net (fanout=1)        2.164   baton/Mmult_sum_submult_0_23
+    SLICE_X5Y5.COUT      Topcyf                1.027   dynamic_bpm<7>
+                                                       baton/Mmult_sum_Madd_lut<23>
+                                                       baton/Mmult_sum_Madd_cy<23>
+                                                       baton/Mmult_sum_Madd_cy<24>
+    SLICE_X5Y6.CIN       net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<24>
+    SLICE_X5Y6.COUT      Tbyp                  0.128   dynamic_bpm<9>
+                                                       baton/Mmult_sum_Madd_cy<25>
+                                                       baton/Mmult_sum_Madd_cy<26>
+    SLICE_X5Y7.CIN       net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<26>
+    SLICE_X5Y7.COUT      Tbyp                  0.128   dynamic_bpm<11>
+                                                       baton/Mmult_sum_Madd_cy<27>
+                                                       baton/Mmult_sum_Madd_cy<28>
+    SLICE_X5Y8.CIN       net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<28>
+    SLICE_X5Y8.COUT      Tbyp                  0.128   dynamic_bpm<13>
+                                                       baton/Mmult_sum_Madd_cy<29>
+                                                       baton/Mmult_sum_Madd_cy<30>
+    SLICE_X5Y9.CIN       net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<30>
+    SLICE_X5Y9.COUT      Tbyp                  0.128   dynamic_bpm<15>
+                                                       baton/Mmult_sum_Madd_cy<31>
+                                                       baton/Mmult_sum_Madd_cy<32>
+    SLICE_X5Y10.CIN      net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<32>
+    SLICE_X5Y10.COUT     Tbyp                  0.128   dynamic_bpm<17>
+                                                       baton/Mmult_sum_Madd_cy<33>
+                                                       baton/Mmult_sum_Madd_cy<34>
+    SLICE_X5Y11.CIN      net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<34>
+    SLICE_X5Y11.COUT     Tbyp                  0.128   dynamic_bpm<19>
+                                                       baton/Mmult_sum_Madd_cy<35>
+                                                       baton/Mmult_sum_Madd_cy<36>
+    SLICE_X5Y12.CIN      net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<36>
+    SLICE_X5Y12.Y        Tciny                 0.923   dynamic_bpm<21>
+                                                       baton/Mmult_sum_Madd_cy<37>
+                                                       baton/Mmult_sum_Madd_xor<38>
+    SLICE_X0Y7.G1        net (fanout=23)       2.227   dynamic_bpm<22>
+    SLICE_X0Y7.COUT      Topcyg                1.096   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<15>4
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_lut<15>4
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<15>_3
+    SLICE_X0Y8.CIN       net (fanout=1)        0.000   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<15>4
+    SLICE_X0Y8.XB        Tcinxb                0.440   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<16>
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<16>
+    SLICE_X8Y8.F1        net (fanout=3)        1.876   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<16>
+    SLICE_X8Y8.X         Tilo                  0.608   baton/display_bpm/bpm_mux0024<29>1113
+                                                       baton/display_bpm/bpm_mux0024<29>1113
+    SLICE_X10Y9.F2       net (fanout=1)        0.512   baton/display_bpm/bpm_mux0024<29>1113
+    SLICE_X10Y9.X        Tilo                  0.608   N469
+                                                       baton/display_bpm/bpm_mux0024<29>1152_SW0
+    SLICE_X14Y12.G3      net (fanout=1)        1.040   N469
+    SLICE_X14Y12.Y       Tilo                  0.608   baton/display_bpm/bpm<2>
+                                                       baton/display_bpm/bpm_mux0024<29>1152
+    SLICE_X14Y12.F4      net (fanout=1)        0.015   baton/display_bpm/bpm_mux0024<29>1152/O
+    SLICE_X14Y12.CLK     Tfck                  0.690   baton/display_bpm/bpm<2>
+                                                       baton/display_bpm/bpm_mux0024<29>111381
+                                                       baton/display_bpm/bpm_2
+    -------------------------------------------------  ---------------------------
+    Total                                     30.329ns (16.751ns logic, 13.578ns route)
+                                                       (55.2% logic, 44.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.679ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               baton/beat_array0_1_4 (FF)
+  Destination:          baton/display_bpm/bpm_2 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      30.320ns (Levels of Logic = 21)
+  Clock Path Skew:      -0.001ns (0.454 - 0.455)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: baton/beat_array0_1_4 to baton/display_bpm/bpm_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y4.YQ       Tcko                  0.720   baton/beat_array0_1_5
+                                                       baton/beat_array0_1_4
+    SLICE_X31Y5.F1       net (fanout=3)        1.630   baton/beat_array0_1_4
+    SLICE_X31Y5.X        Tilo                  0.551   baton/Madd_sum_addsub0001C3
+                                                       baton/Madd_sum_addsub0001C31
+    SLICE_X30Y2.G1       net (fanout=1)        0.569   baton/Madd_sum_addsub0001C3
+    SLICE_X30Y2.COUT     Topcyg                1.096   baton/sum_addsub0001<4>
+                                                       baton/Madd_sum_addsub0001_Madd_lut<5>
+                                                       baton/Madd_sum_addsub0001_Madd_cy<5>
+    SLICE_X30Y3.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0001_Madd_cy<5>
+    SLICE_X30Y3.X        Tcinx                 0.904   baton/sum_addsub0001<6>
+                                                       baton/Madd_sum_addsub0001_Madd_xor<6>
+    SLICE_X27Y3.F1       net (fanout=1)        1.253   baton/sum_addsub0001<6>
+    SLICE_X27Y3.COUT     Topcyf                1.027   baton/sum_addsub0002<6>
+                                                       baton/Madd_sum_addsub0002_lut<6>
+                                                       baton/Madd_sum_addsub0002_cy<6>
+                                                       baton/Madd_sum_addsub0002_cy<7>
+    SLICE_X27Y4.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<7>
+    SLICE_X27Y4.COUT     Tbyp                  0.128   baton/sum_addsub0002<8>
+                                                       baton/Madd_sum_addsub0002_cy<8>
+                                                       baton/Madd_sum_addsub0002_cy<9>
+    SLICE_X27Y5.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<9>
+    SLICE_X27Y5.Y        Tciny                 0.923   baton/sum_addsub0002<10>
+                                                       baton/Madd_sum_addsub0002_cy<10>
+                                                       baton/Madd_sum_addsub0002_xor<11>
+    MULT18X18_X0Y0.A11   net (fanout=1)        2.632   baton/sum_addsub0002<11>
+    MULT18X18_X0Y0.P23   Tmult                 4.285   baton/Mmult_sum_submult_0
+                                                       baton/Mmult_sum_submult_0
+    SLICE_X5Y5.F1        net (fanout=1)        2.164   baton/Mmult_sum_submult_0_23
+    SLICE_X5Y5.COUT      Topcyf                1.027   dynamic_bpm<7>
+                                                       baton/Mmult_sum_Madd_lut<23>
+                                                       baton/Mmult_sum_Madd_cy<23>
+                                                       baton/Mmult_sum_Madd_cy<24>
+    SLICE_X5Y6.CIN       net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<24>
+    SLICE_X5Y6.COUT      Tbyp                  0.128   dynamic_bpm<9>
+                                                       baton/Mmult_sum_Madd_cy<25>
+                                                       baton/Mmult_sum_Madd_cy<26>
+    SLICE_X5Y7.CIN       net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<26>
+    SLICE_X5Y7.COUT      Tbyp                  0.128   dynamic_bpm<11>
+                                                       baton/Mmult_sum_Madd_cy<27>
+                                                       baton/Mmult_sum_Madd_cy<28>
+    SLICE_X5Y8.CIN       net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<28>
+    SLICE_X5Y8.COUT      Tbyp                  0.128   dynamic_bpm<13>
+                                                       baton/Mmult_sum_Madd_cy<29>
+                                                       baton/Mmult_sum_Madd_cy<30>
+    SLICE_X5Y9.CIN       net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<30>
+    SLICE_X5Y9.COUT      Tbyp                  0.128   dynamic_bpm<15>
+                                                       baton/Mmult_sum_Madd_cy<31>
+                                                       baton/Mmult_sum_Madd_cy<32>
+    SLICE_X5Y10.CIN      net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<32>
+    SLICE_X5Y10.COUT     Tbyp                  0.128   dynamic_bpm<17>
+                                                       baton/Mmult_sum_Madd_cy<33>
+                                                       baton/Mmult_sum_Madd_cy<34>
+    SLICE_X5Y11.CIN      net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<34>
+    SLICE_X5Y11.COUT     Tbyp                  0.128   dynamic_bpm<19>
+                                                       baton/Mmult_sum_Madd_cy<35>
+                                                       baton/Mmult_sum_Madd_cy<36>
+    SLICE_X5Y12.CIN      net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<36>
+    SLICE_X5Y12.Y        Tciny                 0.923   dynamic_bpm<21>
+                                                       baton/Mmult_sum_Madd_cy<37>
+                                                       baton/Mmult_sum_Madd_xor<38>
+    SLICE_X0Y7.G1        net (fanout=23)       2.227   dynamic_bpm<22>
+    SLICE_X0Y7.COUT      Topcyg                1.096   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<15>4
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_lut<15>4
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<15>_3
+    SLICE_X0Y8.CIN       net (fanout=1)        0.000   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<15>4
+    SLICE_X0Y8.XB        Tcinxb                0.440   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<16>
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<16>
+    SLICE_X8Y8.F1        net (fanout=3)        1.876   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<16>
+    SLICE_X8Y8.X         Tilo                  0.608   baton/display_bpm/bpm_mux0024<29>1113
+                                                       baton/display_bpm/bpm_mux0024<29>1113
+    SLICE_X10Y9.F2       net (fanout=1)        0.512   baton/display_bpm/bpm_mux0024<29>1113
+    SLICE_X10Y9.X        Tilo                  0.608   N469
+                                                       baton/display_bpm/bpm_mux0024<29>1152_SW0
+    SLICE_X14Y12.G3      net (fanout=1)        1.040   N469
+    SLICE_X14Y12.Y       Tilo                  0.608   baton/display_bpm/bpm<2>
+                                                       baton/display_bpm/bpm_mux0024<29>1152
+    SLICE_X14Y12.F4      net (fanout=1)        0.015   baton/display_bpm/bpm_mux0024<29>1152/O
+    SLICE_X14Y12.CLK     Tfck                  0.690   baton/display_bpm/bpm<2>
+                                                       baton/display_bpm/bpm_mux0024<29>111381
+                                                       baton/display_bpm/bpm_2
+    -------------------------------------------------  ---------------------------
+    Total                                     30.320ns (16.402ns logic, 13.918ns route)
+                                                       (54.1% logic, 45.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point baton/display_bpm/bpm_6 (SLICE_X16Y13.G2), 223358024 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     10.081ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               baton/beat_array0_1_4 (FF)
+  Destination:          baton/display_bpm/bpm_6 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      29.918ns (Levels of Logic = 22)
+  Clock Path Skew:      -0.001ns (0.454 - 0.455)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: baton/beat_array0_1_4 to baton/display_bpm/bpm_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y4.YQ       Tcko                  0.720   baton/beat_array0_1_5
+                                                       baton/beat_array0_1_4
+    SLICE_X31Y5.F1       net (fanout=3)        1.630   baton/beat_array0_1_4
+    SLICE_X31Y5.X        Tilo                  0.551   baton/Madd_sum_addsub0001C3
+                                                       baton/Madd_sum_addsub0001C31
+    SLICE_X30Y2.G1       net (fanout=1)        0.569   baton/Madd_sum_addsub0001C3
+    SLICE_X30Y2.COUT     Topcyg                1.096   baton/sum_addsub0001<4>
+                                                       baton/Madd_sum_addsub0001_Madd_lut<5>
+                                                       baton/Madd_sum_addsub0001_Madd_cy<5>
+    SLICE_X30Y3.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0001_Madd_cy<5>
+    SLICE_X30Y3.X        Tcinx                 0.904   baton/sum_addsub0001<6>
+                                                       baton/Madd_sum_addsub0001_Madd_xor<6>
+    SLICE_X27Y3.F1       net (fanout=1)        1.253   baton/sum_addsub0001<6>
+    SLICE_X27Y3.COUT     Topcyf                1.027   baton/sum_addsub0002<6>
+                                                       baton/Madd_sum_addsub0002_lut<6>
+                                                       baton/Madd_sum_addsub0002_cy<6>
+                                                       baton/Madd_sum_addsub0002_cy<7>
+    SLICE_X27Y4.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<7>
+    SLICE_X27Y4.COUT     Tbyp                  0.128   baton/sum_addsub0002<8>
+                                                       baton/Madd_sum_addsub0002_cy<8>
+                                                       baton/Madd_sum_addsub0002_cy<9>
+    SLICE_X27Y5.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<9>
+    SLICE_X27Y5.COUT     Tbyp                  0.128   baton/sum_addsub0002<10>
+                                                       baton/Madd_sum_addsub0002_cy<10>
+                                                       baton/Madd_sum_addsub0002_cy<11>
+    SLICE_X27Y6.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<11>
+    SLICE_X27Y6.COUT     Tbyp                  0.128   baton/sum_addsub0002<12>
+                                                       baton/Madd_sum_addsub0002_cy<12>
+                                                       baton/Madd_sum_addsub0002_cy<13>
+    SLICE_X27Y7.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<13>
+    SLICE_X27Y7.COUT     Tbyp                  0.128   baton/sum_addsub0002<14>
+                                                       baton/Madd_sum_addsub0002_cy<14>
+                                                       baton/Madd_sum_addsub0002_cy<15>
+    SLICE_X27Y8.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<15>
+    SLICE_X27Y8.X        Tcinx                 0.904   baton/sum_addsub0002<16>
+                                                       baton/Madd_sum_addsub0002_xor<16>
+    MULT18X18_X0Y0.A16   net (fanout=1)        2.292   baton/sum_addsub0002<16>
+    MULT18X18_X0Y0.P17   Tmult                 3.860   baton/Mmult_sum_submult_0
+                                                       baton/Mmult_sum_submult_0
+    SLICE_X5Y2.F2        net (fanout=1)        2.026   baton/Mmult_sum_submult_0_17
+    SLICE_X5Y2.COUT      Topcyf                1.027   dynamic_bpm<1>
+                                                       baton/Mmult_sum_Madd_lut<17>
+                                                       baton/Mmult_sum_Madd_cy<17>
+                                                       baton/Mmult_sum_Madd_cy<18>
+    SLICE_X5Y3.CIN       net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<18>
+    SLICE_X5Y3.Y         Tciny                 0.923   dynamic_bpm<3>
+                                                       baton/Mmult_sum_Madd_cy<19>
+                                                       baton/Mmult_sum_Madd_xor<20>
+    SLICE_X1Y11.G1       net (fanout=22)       2.698   dynamic_bpm<4>
+    SLICE_X1Y11.COUT     Topcyg                1.039   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<3>12
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_lut<3>11_INV_0
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<3>_11
+    SLICE_X1Y12.CIN      net (fanout=1)        0.000   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<3>12
+    SLICE_X1Y12.COUT     Tbyp                  0.128   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<5>12
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<4>_11
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<5>_11
+    SLICE_X1Y13.CIN      net (fanout=1)        0.000   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<5>12
+    SLICE_X1Y13.COUT     Tbyp                  0.128   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<7>12
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<6>_11
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<7>_11
+    SLICE_X1Y14.CIN      net (fanout=1)        0.000   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<7>12
+    SLICE_X1Y14.COUT     Tbyp                  0.128   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<9>12
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<8>_11
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<9>_11
+    SLICE_X1Y15.CIN      net (fanout=1)        0.000   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<9>12
+    SLICE_X1Y15.COUT     Tbyp                  0.128   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<11>10
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<10>_9
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<11>_9
+    SLICE_X1Y16.CIN      net (fanout=1)        0.000   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<11>10
+    SLICE_X1Y16.COUT     Tbyp                  0.128   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<13>4
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<12>_5
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<13>_3
+    SLICE_X1Y17.CIN      net (fanout=1)        0.000   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<13>4
+    SLICE_X1Y17.COUT     Tbyp                  0.128   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<15>1
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<14>_0
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<15>_0
+    SLICE_X11Y11.G2      net (fanout=9)        2.171   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<15>1
+    SLICE_X11Y11.Y       Tilo                  0.551   N490
+                                                       baton/display_bpm/bpm_mux0024<25>1113
+    SLICE_X14Y13.F2      net (fanout=2)        1.512   baton/display_bpm/bpm_mux0024<25>1113
+    SLICE_X14Y13.X       Tilo                  0.608   N512
+                                                       baton/display_bpm/bpm_mux0024<25>1180_SW0
+    SLICE_X16Y13.G2      net (fanout=1)        0.587   N512
+    SLICE_X16Y13.CLK     Tgck                  0.690   baton/display_bpm/bpm<6>
+                                                       baton/display_bpm/bpm_mux0024<25>1180
+                                                       baton/display_bpm/bpm_6
+    -------------------------------------------------  ---------------------------
+    Total                                     29.918ns (15.180ns logic, 14.738ns route)
+                                                       (50.7% logic, 49.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     10.097ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               baton/beat_array0_1_4 (FF)
+  Destination:          baton/display_bpm/bpm_6 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      29.902ns (Levels of Logic = 22)
+  Clock Path Skew:      -0.001ns (0.454 - 0.455)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: baton/beat_array0_1_4 to baton/display_bpm/bpm_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y4.YQ       Tcko                  0.720   baton/beat_array0_1_5
+                                                       baton/beat_array0_1_4
+    SLICE_X31Y5.F1       net (fanout=3)        1.630   baton/beat_array0_1_4
+    SLICE_X31Y5.X        Tilo                  0.551   baton/Madd_sum_addsub0001C3
+                                                       baton/Madd_sum_addsub0001C31
+    SLICE_X30Y2.G1       net (fanout=1)        0.569   baton/Madd_sum_addsub0001C3
+    SLICE_X30Y2.COUT     Topcyg                1.096   baton/sum_addsub0001<4>
+                                                       baton/Madd_sum_addsub0001_Madd_lut<5>
+                                                       baton/Madd_sum_addsub0001_Madd_cy<5>
+    SLICE_X30Y3.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0001_Madd_cy<5>
+    SLICE_X30Y3.COUT     Tbyp                  0.120   baton/sum_addsub0001<6>
+                                                       baton/Madd_sum_addsub0001_Madd_cy<6>
+                                                       baton/Madd_sum_addsub0001_Madd_cy<7>
+    SLICE_X30Y4.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0001_Madd_cy<7>
+    SLICE_X30Y4.COUT     Tbyp                  0.120   baton/sum_addsub0001<8>
+                                                       baton/Madd_sum_addsub0001_Madd_cy<8>
+                                                       baton/Madd_sum_addsub0001_Madd_cy<9>
+    SLICE_X30Y5.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0001_Madd_cy<9>
+    SLICE_X30Y5.X        Tcinx                 0.904   baton/sum_addsub0001<10>
+                                                       baton/Madd_sum_addsub0001_Madd_xor<10>
+    SLICE_X27Y5.F1       net (fanout=1)        1.253   baton/sum_addsub0001<10>
+    SLICE_X27Y5.COUT     Topcyf                1.027   baton/sum_addsub0002<10>
+                                                       baton/Madd_sum_addsub0002_lut<10>
+                                                       baton/Madd_sum_addsub0002_cy<10>
+                                                       baton/Madd_sum_addsub0002_cy<11>
+    SLICE_X27Y6.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<11>
+    SLICE_X27Y6.COUT     Tbyp                  0.128   baton/sum_addsub0002<12>
+                                                       baton/Madd_sum_addsub0002_cy<12>
+                                                       baton/Madd_sum_addsub0002_cy<13>
+    SLICE_X27Y7.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<13>
+    SLICE_X27Y7.COUT     Tbyp                  0.128   baton/sum_addsub0002<14>
+                                                       baton/Madd_sum_addsub0002_cy<14>
+                                                       baton/Madd_sum_addsub0002_cy<15>
+    SLICE_X27Y8.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<15>
+    SLICE_X27Y8.X        Tcinx                 0.904   baton/sum_addsub0002<16>
+                                                       baton/Madd_sum_addsub0002_xor<16>
+    MULT18X18_X0Y0.A16   net (fanout=1)        2.292   baton/sum_addsub0002<16>
+    MULT18X18_X0Y0.P17   Tmult                 3.860   baton/Mmult_sum_submult_0
+                                                       baton/Mmult_sum_submult_0
+    SLICE_X5Y2.F2        net (fanout=1)        2.026   baton/Mmult_sum_submult_0_17
+    SLICE_X5Y2.COUT      Topcyf                1.027   dynamic_bpm<1>
+                                                       baton/Mmult_sum_Madd_lut<17>
+                                                       baton/Mmult_sum_Madd_cy<17>
+                                                       baton/Mmult_sum_Madd_cy<18>
+    SLICE_X5Y3.CIN       net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<18>
+    SLICE_X5Y3.Y         Tciny                 0.923   dynamic_bpm<3>
+                                                       baton/Mmult_sum_Madd_cy<19>
+                                                       baton/Mmult_sum_Madd_xor<20>
+    SLICE_X1Y11.G1       net (fanout=22)       2.698   dynamic_bpm<4>
+    SLICE_X1Y11.COUT     Topcyg                1.039   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<3>12
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_lut<3>11_INV_0
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<3>_11
+    SLICE_X1Y12.CIN      net (fanout=1)        0.000   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<3>12
+    SLICE_X1Y12.COUT     Tbyp                  0.128   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<5>12
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<4>_11
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<5>_11
+    SLICE_X1Y13.CIN      net (fanout=1)        0.000   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<5>12
+    SLICE_X1Y13.COUT     Tbyp                  0.128   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<7>12
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<6>_11
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<7>_11
+    SLICE_X1Y14.CIN      net (fanout=1)        0.000   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<7>12
+    SLICE_X1Y14.COUT     Tbyp                  0.128   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<9>12
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<8>_11
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<9>_11
+    SLICE_X1Y15.CIN      net (fanout=1)        0.000   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<9>12
+    SLICE_X1Y15.COUT     Tbyp                  0.128   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<11>10
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<10>_9
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<11>_9
+    SLICE_X1Y16.CIN      net (fanout=1)        0.000   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<11>10
+    SLICE_X1Y16.COUT     Tbyp                  0.128   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<13>4
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<12>_5
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<13>_3
+    SLICE_X1Y17.CIN      net (fanout=1)        0.000   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<13>4
+    SLICE_X1Y17.COUT     Tbyp                  0.128   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<15>1
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<14>_0
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<15>_0
+    SLICE_X11Y11.G2      net (fanout=9)        2.171   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<15>1
+    SLICE_X11Y11.Y       Tilo                  0.551   N490
+                                                       baton/display_bpm/bpm_mux0024<25>1113
+    SLICE_X14Y13.F2      net (fanout=2)        1.512   baton/display_bpm/bpm_mux0024<25>1113
+    SLICE_X14Y13.X       Tilo                  0.608   N512
+                                                       baton/display_bpm/bpm_mux0024<25>1180_SW0
+    SLICE_X16Y13.G2      net (fanout=1)        0.587   N512
+    SLICE_X16Y13.CLK     Tgck                  0.690   baton/display_bpm/bpm<6>
+                                                       baton/display_bpm/bpm_mux0024<25>1180
+                                                       baton/display_bpm/bpm_6
+    -------------------------------------------------  ---------------------------
+    Total                                     29.902ns (15.164ns logic, 14.738ns route)
+                                                       (50.7% logic, 49.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     10.106ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               baton/beat_array0_1_4 (FF)
+  Destination:          baton/display_bpm/bpm_6 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      29.893ns (Levels of Logic = 19)
+  Clock Path Skew:      -0.001ns (0.454 - 0.455)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: baton/beat_array0_1_4 to baton/display_bpm/bpm_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y4.YQ       Tcko                  0.720   baton/beat_array0_1_5
+                                                       baton/beat_array0_1_4
+    SLICE_X31Y5.F1       net (fanout=3)        1.630   baton/beat_array0_1_4
+    SLICE_X31Y5.X        Tilo                  0.551   baton/Madd_sum_addsub0001C3
+                                                       baton/Madd_sum_addsub0001C31
+    SLICE_X30Y2.G1       net (fanout=1)        0.569   baton/Madd_sum_addsub0001C3
+    SLICE_X30Y2.COUT     Topcyg                1.096   baton/sum_addsub0001<4>
+                                                       baton/Madd_sum_addsub0001_Madd_lut<5>
+                                                       baton/Madd_sum_addsub0001_Madd_cy<5>
+    SLICE_X30Y3.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0001_Madd_cy<5>
+    SLICE_X30Y3.X        Tcinx                 0.904   baton/sum_addsub0001<6>
+                                                       baton/Madd_sum_addsub0001_Madd_xor<6>
+    SLICE_X27Y3.F1       net (fanout=1)        1.253   baton/sum_addsub0001<6>
+    SLICE_X27Y3.COUT     Topcyf                1.027   baton/sum_addsub0002<6>
+                                                       baton/Madd_sum_addsub0002_lut<6>
+                                                       baton/Madd_sum_addsub0002_cy<6>
+                                                       baton/Madd_sum_addsub0002_cy<7>
+    SLICE_X27Y4.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<7>
+    SLICE_X27Y4.COUT     Tbyp                  0.128   baton/sum_addsub0002<8>
+                                                       baton/Madd_sum_addsub0002_cy<8>
+                                                       baton/Madd_sum_addsub0002_cy<9>
+    SLICE_X27Y5.CIN      net (fanout=1)        0.000   baton/Madd_sum_addsub0002_cy<9>
+    SLICE_X27Y5.Y        Tciny                 0.923   baton/sum_addsub0002<10>
+                                                       baton/Madd_sum_addsub0002_cy<10>
+                                                       baton/Madd_sum_addsub0002_xor<11>
+    MULT18X18_X0Y0.A11   net (fanout=1)        2.632   baton/sum_addsub0002<11>
+    MULT18X18_X0Y0.P17   Tmult                 3.860   baton/Mmult_sum_submult_0
+                                                       baton/Mmult_sum_submult_0
+    SLICE_X5Y2.F2        net (fanout=1)        2.026   baton/Mmult_sum_submult_0_17
+    SLICE_X5Y2.COUT      Topcyf                1.027   dynamic_bpm<1>
+                                                       baton/Mmult_sum_Madd_lut<17>
+                                                       baton/Mmult_sum_Madd_cy<17>
+                                                       baton/Mmult_sum_Madd_cy<18>
+    SLICE_X5Y3.CIN       net (fanout=1)        0.000   baton/Mmult_sum_Madd_cy<18>
+    SLICE_X5Y3.Y         Tciny                 0.923   dynamic_bpm<3>
+                                                       baton/Mmult_sum_Madd_cy<19>
+                                                       baton/Mmult_sum_Madd_xor<20>
+    SLICE_X1Y11.G1       net (fanout=22)       2.698   dynamic_bpm<4>
+    SLICE_X1Y11.COUT     Topcyg                1.039   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<3>12
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_lut<3>11_INV_0
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<3>_11
+    SLICE_X1Y12.CIN      net (fanout=1)        0.000   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<3>12
+    SLICE_X1Y12.COUT     Tbyp                  0.128   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<5>12
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<4>_11
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<5>_11
+    SLICE_X1Y13.CIN      net (fanout=1)        0.000   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<5>12
+    SLICE_X1Y13.COUT     Tbyp                  0.128   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<7>12
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<6>_11
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<7>_11
+    SLICE_X1Y14.CIN      net (fanout=1)        0.000   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<7>12
+    SLICE_X1Y14.COUT     Tbyp                  0.128   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<9>12
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<8>_11
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<9>_11
+    SLICE_X1Y15.CIN      net (fanout=1)        0.000   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<9>12
+    SLICE_X1Y15.COUT     Tbyp                  0.128   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<11>10
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<10>_9
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<11>_9
+    SLICE_X1Y16.CIN      net (fanout=1)        0.000   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<11>10
+    SLICE_X1Y16.COUT     Tbyp                  0.128   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<13>4
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<12>_5
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<13>_3
+    SLICE_X1Y17.CIN      net (fanout=1)        0.000   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<13>4
+    SLICE_X1Y17.COUT     Tbyp                  0.128   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<15>1
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<14>_0
+                                                       baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<15>_0
+    SLICE_X11Y11.G2      net (fanout=9)        2.171   baton/display_bpm/Mcompar_bpm_cmp_lt0002_cy<15>1
+    SLICE_X11Y11.Y       Tilo                  0.551   N490
+                                                       baton/display_bpm/bpm_mux0024<25>1113
+    SLICE_X14Y13.F2      net (fanout=2)        1.512   baton/display_bpm/bpm_mux0024<25>1113
+    SLICE_X14Y13.X       Tilo                  0.608   N512
+                                                       baton/display_bpm/bpm_mux0024<25>1180_SW0
+    SLICE_X16Y13.G2      net (fanout=1)        0.587   N512
+    SLICE_X16Y13.CLK     Tgck                  0.690   baton/display_bpm/bpm<6>
+                                                       baton/display_bpm/bpm_mux0024<25>1180
+                                                       baton/display_bpm/bpm_6
+    -------------------------------------------------  ---------------------------
+    Total                                     29.893ns (14.815ns logic, 15.078ns route)
+                                                       (49.6% logic, 50.4% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: ts_clk = PERIOD TIMEGRP "tnm_clk" 25 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point baton/beat_array0_1_29 (SLICE_X29Y14.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.807ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               baton/beat_array0_0_29 (FF)
+  Destination:          baton/beat_array0_1_29 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.827ns (Levels of Logic = 0)
+  Clock Path Skew:      0.020ns (0.315 - 0.295)
+  Source Clock:         clk_BUFGP rising at 40.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: baton/beat_array0_0_29 to baton/beat_array0_1_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y17.XQ      Tcko                  0.576   baton/beat_array0_0_29
+                                                       baton/beat_array0_0_29
+    SLICE_X29Y14.BX      net (fanout=2)        0.534   baton/beat_array0_0_29
+    SLICE_X29Y14.CLK     Tckdi       (-Th)     0.283   baton/beat_array0_1_29
+                                                       baton/beat_array0_1_29
+    -------------------------------------------------  ---------------------------
+    Total                                      0.827ns (0.293ns logic, 0.534ns route)
+                                                       (35.4% logic, 64.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point baton/beat_array0_3_27 (SLICE_X31Y14.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.819ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               baton/beat_array0_2_27 (FF)
+  Destination:          baton/beat_array0_3_27 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.818ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.001ns (0.140 - 0.141)
+  Source Clock:         clk_BUFGP rising at 40.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: baton/beat_array0_2_27 to baton/beat_array0_3_27
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y15.XQ      Tcko                  0.576   baton/beat_array0_2_27
+                                                       baton/beat_array0_2_27
+    SLICE_X31Y14.BX      net (fanout=3)        0.525   baton/beat_array0_2_27
+    SLICE_X31Y14.CLK     Tckdi       (-Th)     0.283   baton/beat_array0_3_27
+                                                       baton/beat_array0_3_27
+    -------------------------------------------------  ---------------------------
+    Total                                      0.818ns (0.293ns logic, 0.525ns route)
+                                                       (35.8% logic, 64.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point baton/beat_array0_3_19 (SLICE_X31Y8.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.819ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               baton/beat_array0_2_19 (FF)
+  Destination:          baton/beat_array0_3_19 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.818ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.001ns (0.140 - 0.141)
+  Source Clock:         clk_BUFGP rising at 40.000ns
+  Destination Clock:    clk_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: baton/beat_array0_2_19 to baton/beat_array0_3_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y11.XQ      Tcko                  0.576   baton/beat_array0_2_19
+                                                       baton/beat_array0_2_19
+    SLICE_X31Y8.BX       net (fanout=3)        0.525   baton/beat_array0_2_19
+    SLICE_X31Y8.CLK      Tckdi       (-Th)     0.283   baton/beat_array0_3_19
+                                                       baton/beat_array0_3_19
+    -------------------------------------------------  ---------------------------
+    Total                                      0.818ns (0.293ns logic, 0.525ns route)
+                                                       (35.8% logic, 64.2% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: ts_clk = PERIOD TIMEGRP "tnm_clk" 25 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 37.268ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 40.000ns
+  Low pulse: 20.000ns
+  Low pulse limit: 1.366ns (Tbpwl)
+  Physical resource: convert_default_bpm/Mrom_twelfth_cc_rom0000/CLKA
+  Logical resource: convert_default_bpm/Mrom_twelfth_cc_rom0000.A/CLKA
+  Location pin: RAMB16_X0Y0.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 37.268ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 40.000ns
+  High pulse: 20.000ns
+  High pulse limit: 1.366ns (Tbpwh)
+  Physical resource: convert_default_bpm/Mrom_twelfth_cc_rom0000/CLKA
+  Logical resource: convert_default_bpm/Mrom_twelfth_cc_rom0000.A/CLKA
+  Location pin: RAMB16_X0Y0.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 37.268ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 2.732ns (366.032MHz) (Tbp)
+  Physical resource: convert_default_bpm/Mrom_twelfth_cc_rom0000/CLKA
+  Logical resource: convert_default_bpm/Mrom_twelfth_cc_rom0000.A/CLKA
+  Location pin: RAMB16_X0Y0.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   30.864|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 3860563420 paths, 0 nets, and 8184 connections
+
+Design statistics:
+   Minimum period:  30.864ns{1}   (Maximum frequency:  32.400MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Thu Oct 26 16:46:24 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 127 MB
+
+
+

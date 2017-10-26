@@ -1,0 +1,201 @@
+
+NET "EPPASTB" LOC = "N8";
+NET "EPPDSTB" LOC = "P7";
+NET "EPPWRITE" LOC = "N7";
+NET "EPPWAIT" LOC = "N5";
+NET "PDB<0>" LOC = "N12";
+NET "PDB<1>" LOC = "P12";
+NET "PDB<2>" LOC = "N11";
+NET "PDB<3>" LOC = "P11";
+NET "PDB<4>" LOC = "N10";
+NET "PDB<5>" LOC = "P10";
+NET "PDB<6>" LOC = "M10";
+NET "PDB<7>" LOC = "R10";
+
+NET "SW<0>" LOC = "N15";
+NET "SW<1>" LOC = "J16";
+NET "SW<2>" LOC = "K16";
+NET "SW<3>" LOC = "K15";
+NET "SW<4>" LOC = "L15";
+NET "SW<5>" LOC = "M16";
+NET "SW<6>" LOC = "M15";
+NET "SW<7>" LOC = "N16";
+
+NET "LED<0>" LOC = "L14";
+NET "LED<1>" LOC = "L13";
+NET "LED<2>" LOC = "M14";
+NET "LED<3>" LOC = "L12";
+NET "LED<4>" LOC = "N14";
+NET "LED<5>" LOC = "M13";
+NET "LED<6>" LOC = "P14";
+NET "LED<7>" LOC = "R16";
+
+NET "HEX<0>"  LOC = "F13" ;
+NET "HEX<1>"  LOC = "E13" ;
+NET "HEX<2>"  LOC = "G15" ;
+NET "HEX<3>"  LOC = "H13" ;
+NET "HEX<4>"  LOC = "J14" ;
+NET "HEX<5>"  LOC = "E14" ;
+NET "HEX<6>"  LOC = "G16" ;
+#NET "HEX<7>"  LOC = "H14" ;
+
+NET "AN<0>" LOC = "G14";
+NET "AN<1>" LOC = "G12";
+NET "AN<2>" LOC = "G13";
+NET "AN<3>" LOC = "F12";
+
+NET "BTN<0>" LOC = "J13";
+NET "BTN<1>" LOC = "K14";
+NET "BTN<2>" LOC = "K13";
+NET "BTN<3>" LOC = "k12";
+
+
+NET "S" LOC = "D5";
+
+NET "trigger" LOC = "T14";
+NET "echo"  LOC = "R13";
+
+#NET "JA<1>" LOC = "T14";
+#NET "JA<2>" LOC = "R13";
+#NET "JA<3>" LOC = "T13";
+#NET "JA<4>" LOC = "R12";
+
+#NET "JB<1>" LOC = "T12";
+#NET "JB<2>" LOC = "R11";
+#NET "JB<3>" LOC = "P8";
+#NET "JB<4>" LOC = "T10";
+#
+#NET "JC<1>" LOC = "D5";
+#NET "JC<2>" LOC = "P9";
+#NET "JC<3>" LOC = "A5";
+#NET "JC<4>" LOC = "A7";
+#
+#NET "JD<1>" LOC = "A9";
+#NET "JD<2>" LOC = "A12";
+#NET "JD<3>" LOC = "C10";
+#NET "JD<4>" LOC = "D12";
+#
+#NET "J8<3>" LOC = "P16";
+#NET "J8<4>" LOC = "P15";
+#NET "J8<5>" LOC = "T7";
+#NET "J8<6>" LOC = "R5";
+#NET "J8<7>" LOC = "N15";
+#NET "J8<8>" LOC = "J16";
+#NET "J8<9>" LOC = "K16";
+#NET "J8<10>" LOC = "K15";
+#NET "J8<11>" LOC = "L15";
+#NET "J8<12>" LOC = "M16";
+#NET "J8<13>" LOC = "M15";
+#NET "J8<14>" LOC = "N16";
+#NET "J8<15>" LOC = "R6";
+#NET "J8<16>" LOC = "R7";
+#
+NET "CLK" LOC = "A8";
+
+NET "clk" TNM_NET = tnm_clk;
+TIMESPEC ts_clk = PERIOD tnm_clk 25MHz;
+
+#memory 
+NET "ADDR<1>" LOC = "J3";
+NET "ADDR<2>" LOC = "K5";
+NET "ADDR<3>" LOC = "L3";
+NET "ADDR<4>" LOC = "J4";
+NET "ADDR<5>" LOC = "K3";
+NET "ADDR<6>" LOC = "H4";
+NET "ADDR<7>" LOC = "K4";
+NET "ADDR<8>" LOC = "G3";
+NET "ADDR<9>" LOC = "E3";
+NET "ADDR<10>" LOC = "F4";
+NET "ADDR<11>" LOC = "F5";
+NET "ADDR<12>" LOC = "N3";
+NET "ADDR<13>" LOC = "L5";
+NET "ADDR<14>" LOC = "M3";
+NET "ADDR<15>" LOC = "F3";
+NET "ADDR<16>" LOC = "L4";
+NET "ADDR<17>" LOC = "G4";
+NET "ADDR<18>" LOC = "H3";
+NET "ADDR<19>" LOC = "G5";
+NET "ADDR<20>" LOC = "D3";
+NET "ADDR<21>" LOC = "M4";
+NET "ADDR<22>" LOC = "A3";
+
+NET "DATA<0>" LOC = "M2";
+NET "DATA<1>" LOC = "M1";
+NET "DATA<2>" LOC = "N2";
+NET "DATA<3>" LOC = "N1";
+NET "DATA<4>" LOC = "P2";
+NET "DATA<5>" LOC = "P1";
+NET "DATA<6>" LOC = "R1";
+NET "DATA<7>" LOC = "R3";
+NET "DATA<8>" LOC = "H1";
+NET "DATA<9>" LOC = "G1";
+NET "DATA<10>" LOC = "G2";
+NET "DATA<11>" LOC = "F2";
+NET "DATA<12>" LOC = "E1";
+NET "DATA<13>" LOC = "D1";
+NET "DATA<14>" LOC = "E2";
+NET "DATA<15>" LOC = "D2";
+
+
+NET "OE" LOC = "K2";
+NET "WE" LOC = "T3";
+
+# -> SRAM
+#NET "MT_ADV" LOC = "B1";
+#NET "MT_CLK" LOC = "C2";
+#NET "MT_UB" LOC = "J2";
+#NET "MT_LB" LOC = "J1";
+NET "vpen" LOC = "K1";   #MT_CF vpen
+#NET "MT_CRE" LOC = "L2";
+#NET "MT_WAIT" LOC = "C1";
+
+# -> Flash
+NET "ST" LOC = "R4"; # st_sts st
+NET "RP" LOC = "T4";  #RP_NUM   rp
+NET "CE" LOC = "E4";  #CE   st_cf
+
+
+#
+#NET FX2_IO<1> LOC = "B4";
+#NET FX2_IO<2> LOC = "A4";
+#NET FX2_IO<3> LOC = "C5";
+#NET FX2_IO<4> LOC = "B5";
+#NET FX2_IO<5> LOC = "E6";
+#NET FX2_IO<6> LOC = "D6";
+#NET FX2_IO<7> LOC = "C6";
+#NET FX2_IO<8> LOC = "B6";
+#NET FX2_IO<9> LOC = "E7";
+#NET FX2_IO<10> LOC = "D7";
+#NET FX2_IO<11> LOC = "C7";
+#NET FX2_IO<12> LOC = "B7";
+#NET FX2_IO<13> LOC = "D8";
+#NET FX2_IO<14> LOC = "C8";
+#NET FX2_IO<15> LOC = "A10";
+#NET FX2_IO<16> LOC = "B10";
+#NET FX2_IO<17> LOC = "D10";
+#NET FX2_IO<18> LOC = "E10";
+#NET FX2_IO<19> LOC = "B11";
+#NET FX2_IO<20> LOC = "C11";
+#NET FX2_IO<21> LOC = "D11";
+#NET FX2_IO<22> LOC = "E11";
+#NET FX2_IO<23> LOC = "B12";
+#NET FX2_IO<24> LOC = "C12";
+#NET FX2_IO<25> LOC = "A13";
+#NET FX2_IO<26> LOC = "B13";
+#NET FX2_IO<27> LOC = "A14";
+#NET FX2_IO<28> LOC = "B14";
+#NET FX2_IO<29> LOC = "B16";
+#NET FX2_IO<30> LOC = "C16";
+#NET FX2_IO<31> LOC = "C15";
+#NET FX2_IO<32> LOC = "D14";
+#NET FX2_IO<33> LOC = "D15";
+#NET FX2_IO<34> LOC = "D16";
+#NET FX2_IO<35> LOC = "E15";
+#NET FX2_IO<36> LOC = "E16";
+#NET FX2_IO<37> LOC = "F14";
+#NET FX2_IO<38> LOC = "F15";
+#NET FX2_IO<39> LOC = "H15";
+#NET "FX2_IO<40>" LOC = "H16";
+#
+#NET FX2_CLKOUT LOC = "D9";
+
