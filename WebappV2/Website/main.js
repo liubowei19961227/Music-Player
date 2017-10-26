@@ -47,7 +47,7 @@ function saveFile() {
     for (var x = 0; x < plaineEasieCodes.length; x++) {
         var paeNote = plaineEasieCodes[x]
         var i = 0
-        if (paeNote.charAt(1) == '-') { //rest
+        if (paeNote.charAt(1) == '-' || paeNote.charAt(2) == '-') { //rest
             text += "rest"
         } else {
             //note letter

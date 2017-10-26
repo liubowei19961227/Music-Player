@@ -1,0 +1,8 @@
+Release 14.7 Drc P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Thu Oct 26 20:40:21 2017
+
+drc -z music_player_v9.ncd music_player_v9.pcf
+
+DRC detected 0 errors and 0 warnings.

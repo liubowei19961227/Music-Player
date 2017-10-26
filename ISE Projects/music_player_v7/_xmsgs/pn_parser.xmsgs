@@ -11,5 +11,14 @@
 <msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v7/constants.vhd&quot; into library work</arg>
 </msg>
 
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v7/main.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v7/note_length_counter.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Ryan/OneDrive - UNSW/Documents/2017 Semester 2/COMP3601 - Desgin Project A/Git Repositry/ISE Projects/music_player_v7/note_player.vhd&quot; into library work</arg>
+</msg>
+
 </messages>
 

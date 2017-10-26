@@ -1,0 +1,407 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'music_player_v9'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s400-ft256-4 -cm area -detail -ir off
+-pr off -c 100 -o music_player_v9_map.ncd music_player_v9.ngd
+music_player_v9.pcf 
+Target Device  : xc3s400
+Target Package : ft256
+Target Speed   : -4
+Mapper Version : spartan3 -- $Revision: 1.55 $
+Mapped Date    : Thu Oct 26 20:39:32 2017
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    0
+Logic Utilization:
+  Number of Slice Flip Flops:           108 out of   7,168    1%
+  Number of 4 input LUTs:               406 out of   7,168    5%
+Logic Distribution:
+  Number of occupied Slices:            240 out of   3,584    6%
+    Number of Slices containing only related logic:     240 out of     240 100%
+    Number of Slices containing unrelated logic:          0 out of     240   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:         457 out of   7,168    6%
+    Number used as logic:               406
+    Number used as a route-thru:         51
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 19 out of     173   10%
+  Number of RAMB16s:                      2 out of      16   12%
+  Number of MULT18X18s:                   4 out of      16   25%
+  Number of BUFGMUXs:                     1 out of       8   12%
+
+Average Fanout of Non-Clock Nets:                2.91
+
+Peak Memory Usage:  280 MB
+Total REAL time to MAP completion:  10 secs 
+Total CPU time to MAP completion:   8 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   2 block(s) optimized away
+  68 Block(s) redundant
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+Redundant Block(s):
+TYPE 		BLOCK
+LOCALBUF 		x_note_player/Mmux_duty_cc[7]_index_mult[3]_mux_48_OUT241/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mmux_duty_cc[7]_index_mult[3]_mux_48_OUT231/LUT4_D_BUF
+LOCALBUF
+		x_note_player/Mmux_duty_cc[7]_index_mult[3]_mux_48_OUT14111/LUT4_D_BUF
+LOCALBUF 		x_note_player/Mmux_duty_cc[7]_GND_8_o_mux_32_OUT111/LUT2_D_BUF
+LOCALBUF 		x_note_player/Madd_n0152_cy<5>11/LUT3_D_BUF
+LOCALBUF 		x_note_player/index_mult<1>21/LUT3_L_BUF
+LOCALBUF
+		x_note_player/Mmux_duty_cc[7]_index_mult[3]_mux_48_OUT21_SW0/LUT3_L_BUF
+LOCALBUF 		x_note_player/Mmux_duty_cc[7]_index_mult[3]_mux_48_OUT103/LUT4_L_BUF
+LOCALBUF 		x_note_player/Mmux_pwm_pulse_GND_8_o_MUX_4268_o129_SW0/LUT4_L_BUF
+LOCALBUF 		x_note_player/Mmux_duty_cc[7]_index_mult[3]_mux_48_OUT276/LUT4_L_BUF
+LOCALBUF 		x_note_player/Mmux_duty_cc[7]_index_mult[3]_mux_48_OUT614/LUT4_L_BUF
+LOCALBUF 		x_note_player/Mmux_duty_cc[7]_index_mult[3]_mux_48_OUT814/LUT4_L_BUF
+LOCALBUF 		x_note_player/Mmux_duty_cc[7]_index_mult[3]_mux_48_OUT413/LUT4_L_BUF
+LOCALBUF 		x_note_player/Mmux_duty_cc[7]_index_mult[3]_mux_48_OUT1217/LUT4_L_BUF
+LOCALBUF 		x_note_player/Madd_n0152_cy<2>1_SW0/LUT3_L_BUF
+LOCALBUF 		x_note_player/Madd_n0152_cy<2>1/LUT4_D_BUF
+LUT1 		x_note_length_counter/Madd_n0039_cy<26>_rt
+LUT1 		x_note_length_counter/Madd_n0039_cy<25>_rt
+LUT1 		x_note_length_counter/Msub_GND_6_o_GND_6_o_sub_8_OUT_cy<0>_rt
+LUT1 		x_note_length_counter/Madd_n0048[27:0]_cy<26>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<26>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<25>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<24>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<23>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<22>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<21>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<20>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<19>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<18>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<17>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<16>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<15>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<14>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<13>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<12>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<11>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<10>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<9>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<8>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<7>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<6>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<5>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<4>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<3>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<2>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_cy<1>_rt
+LUT1 		x_note_length_counter/Mmult_n0026_Madd_cy<26>_rt
+LUT1 		x_note_length_counter/Mmult_n0026_Madd_cy<25>_rt
+LUT1 		x_note_length_counter/Mmult_n0026_Madd_cy<24>_rt
+LUT1 		x_note_player/Madd_n0145_cy<15>_rt
+LUT1 		x_note_player/Madd_n0145_cy<14>_rt
+LUT1 		x_note_player/Madd_n0145_cy<13>_rt
+LUT1 		x_note_player/Madd_n0145_cy<12>_rt
+LUT1 		x_note_player/Madd_n0145_cy<11>_rt
+LUT1 		x_note_player/Madd_n0145_cy<10>_rt
+LUT1 		x_note_player/Madd_n0145_cy<9>_rt
+LUT1 		x_note_player/Madd_n0145_cy<8>_rt
+LUT1 		x_note_player/Madd_n0145_cy<7>_rt
+LUT1 		x_note_player/Madd_n0145_cy<6>_rt
+LUT1 		x_note_player/Madd_n0145_cy<5>_rt
+LUT1 		x_note_player/Madd_n0145_cy<4>_rt
+LUT1 		x_note_player/Madd_n0145_cy<3>_rt
+LUT1 		x_note_player/Madd_n0145_cy<2>_rt
+LUT1 		x_note_player/Madd_n0145_cy<1>_rt
+LUT1 		x_note_length_counter/Mcount_note_length_partial_xor<27>_rt
+INV 		Mcount_main_loop.music_index1_INV_0
+INV 		x_note_player/Mmux_sample_rate_partial[7]_GND_8_o_mux_62_OUT11_INV_0
+INV 		x_note_player/rst_inv1_INV_0
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| btn                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| clk                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| led<0>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<1>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<2>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<3>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<4>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<5>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<6>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<7>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| s                                  | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sw<0>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<1>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<2>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<3>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<4>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<5>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<6>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<7>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+BUFGMUX "clk_BUFGP/BUFG":
+DISABLE_ATTR:LOW
+
+
+
+RAMB16
+"x_note_player/Mram_next_sin_table_array_index[11]_X_7_o_wide_mux_50_OUT1":
+INIT_00 = 2100FFEEDDCCCBBAA99988877666555544443333222221111111100000000000
+INIT_01 = 210FEEDCBA98765543210FFEDCBBA9877654432110FFEDCCBBA9987765544332
+INIT_02 = 43210FEDCB9876543210FEDCB9876543210FEDCBA9876543210FEDCBA9876543
+INIT_03 = 543210FEEDCBA9876543210FEDCBA9876543210FEDCB9876543210FEDCBA8765
+INIT_04 = 21100FFEEDDCCBBA9988766544322100FEDDCBAA987765433210FEEDCBA98876
+INIT_05 = 0000000000FFFFFFFFFFFEEEEEEEDDDDDDCCCCBBBBAAA9998887776655544332
+INIT_06 = A99877655443221100FEEDDCCCBBAA9988877766555544433332222211111111
+INIT_07 = 43210FECBA9876543210FEDCBAA9876543210FFEDCBA9987654432110FEEDCBB
+INIT_08 = CA987654310FEDCBA87654320FEDCBA97654321FEDCBA986543210FEDBA98765
+INIT_09 = A998765543210FEEDCBA9876543210FEDCBA9876543210FEDCBA986543210FED
+INIT_0a = CCCCBBBAAA99988877666554433221100FFEEDCCBBA998776554332100FEDDCB
+INIT_0b = 99887776655544443333222211111110000000000FFFFFFFFFFEEEEEEEDDDDDC
+INIT_0c = 9876543210FEDCBAA98765443210FFEDCCBA9987765543321100FFEDDCCBBAA9
+INIT_0d = 20FEDCA987643210EDCBA87654310FEDCA987654210FEDCBA876543210FEDCBA
+INIT_0e = A9876543210FDCBA987654320FEDCBA97654321FEDCB987654210FECBA986543
+INIT_0f = 77766554433221100FEEDDCBBA99877654432110FEDDCBA98876543210FEEDCB
+INIT_10 = 5444333322221111111000000000FFFFFFFFFEEEEEEEDDDDDCCCCBBBAAA99988
+INIT_11 = 10FEDCBAA98765432110FEDCCBA998766544322100FEEDDCCBBAA99887766655
+INIT_12 = DCA98754320FEDBA97654210FECBA97654310FEDCA987654210FEDCBA9865432
+INIT_13 = A987543210FEDCA987654210FEDBA98754320FEDBA98654310FECBA97653210E
+INIT_14 = 9988776655443322110FFEEDCCBA9987765433210FFEDCBA98776543210FEDCB
+INIT_15 = 8776665544433332222111111000000000FFFFFFFFEEEEEEEDDDDCCCCBBBAAA9
+INIT_16 = EDBA987654310FEDCBA98765432210FEDCBBA98776544322100FEEDCCBBAA998
+INIT_17 = 10EDBA9765321FEDBA9765320FECBA8764321FEDBA97654210FDCBA87654210F
+INIT_18 = CBA9987654310FEDCBA987643210FDCBA97654310FECBA8765321FEDBA986542
+INIT_19 = FFEEEEEEDDDDCCCBBBAAA9988877665544322110FFEDDCBAA987765433210FED
+INIT_1a = 887654432110FFEDDCBBAA99887766555444333222211111100000000FFFFFFF
+INIT_1b = 321FECBA8764320FECBA87653210EDCB987654210FEDCBA9765432110FEDCBA9
+INIT_1c = CBA8765321FEDBA9765320FECB98754210EDBA8764310EDBA9764310FDCA9865
+INIT_1d = 7765544332110FFEDCCBA998765433210FEDCBA987654320FEDCBA87654210FE
+INIT_1e = 998877665544433322221111100000000FFFFFFFFEEEEEEDDDDCCCBBBAA99888
+INIT_1f = B98654210EDCB987643210EDCBA986543210FEDCBA9987654332100FEDDCCBAA
+INIT_20 = 9865321FECB9865320FDCA9764310EDB9865320FDCA9764310FDCA9764320FDC
+INIT_21 = 10FFEDCCBA98776543210FEDCBA986543210EDCBA8764321FEDBA9765320FECB
+INIT_22 = 6554443332221111100000000FFFFFFFEEEEEDDDDCCCBBBAA999887665544322
+INIT_23 = 754210EDCA98654210FDCBA876543210EDCBA998765432110FEEDCCBAA988776
+INIT_24 = B9865320EDBA875320FDBA875320FDBA875320FDBA875320FDCA9764310EDBA8
+INIT_25 = 4332110FEDDCBA9876543210FEDCBA98654320FEDBA9765321FECB9875421FEC
+INIT_26 = A998876655544333222111110000000FFFFFFFEEEEEEDDDCCCBBBAA998876655
+INIT_27 = 865320EDBA875421FECB98754210EDCB987643210FECBA98765443210FEEDCBB
+INIT_28 = 10EDBA875320FDCA875420FDBA865310ECA975420FDB986431FECA975420FDBA
+INIT_29 = DDCCCBBAA9988776554332100FEDCBA9987643210FEDCA98764320FECBA87543
+INIT_2a = FDCBA9876543210FEEDCBBA9987766554433222211110000000FFFFFFFEEEEED
+INIT_2b = 5310ECA87531FECA86531FECA875320EDB9865310EDBA875421FEDBA97653210
+INIT_2c = 7654320FEDCA98654210EDBA875421FECB976421FDCA875310ECA975320ECA97
+INIT_2d = 655443322211111000000FFFFFFEEEEDDDDCCBBAA998876654432110FEDCBA98
+INIT_2e = 87531FECA875320EDBA865320FDCA98654210EDCBA876543210FEEDCBAA98876
+INIT_2f = DB9865310ECB976420FDB976420ECB97531FDBA86420ECA86531FDB975420ECA
+INIT_30 = 000FFFFFFEEEEDDDCCCBBAA9887665443210FEDCBA987654210FDCB98754210E
+INIT_31 = 0ECB976421FECB9865321FEDBA987543210FEDCCBA9887665544332221111000
+INIT_32 = CA87531FDBA86420ECA86420ECA86420ECA86420ECA86420ECA86420EDB97532
+INIT_33 = FFEEEEDDDCCCBBA9987765443210FEDCBA98654310FDCB9865320FDBA865310E
+INIT_34 = 0000000000000FFF0000000000000FFF0000000000000FFF0000000000000FFF
+INIT_35 = 0000000000000FFF0000000000000FFF0000000000000FFF0000000000000FFF
+INIT_36 = 0000000000000FFF0000000000000FFF0000000000000FFF0000000000000FFF
+INIT_37 = 0000000000000FFF0000000000000FFF0000000000000FFF0000000000000FFF
+INIT_38 = 000FFFFFFEEEEDDDCCCBBAA9887665443210FEDCBA987654210FDCB98754210E
+INIT_39 = 0ECB976421FECB9865321FEDBA987543210FEDCCBA9887665544332221111000
+INIT_3a = CA87531FDBA86420ECA86420ECA86420ECA86420ECA86420ECA86420EDB97532
+INIT_3b = FFEEEEDDDCCCBBA9987765443210FEDCBA98654310FDCB9865320FDBA865310E
+INIT_3c = 0000000000000FFF0000000000000FFF0000000000000FFF0000000000000FFF
+INIT_3d = 0000000000000FFF0000000000000FFF0000000000000FFF0000000000000FFF
+INIT_3e = 0000000000000FFF0000000000000FFF0000000000000FFF0000000000000FFF
+INIT_3f = 0000000000000FFF0000000000000FFF0000000000000FFF0000000000000FFF
+PORTA_ATTR:4096X4
+WRITEMODEA:WRITE_FIRST
+INIT_A = 0
+SRVAL_A = 0
+
+
+RAMB16
+"x_note_player/Mram_next_sin_table_array_index[11]_X_7_o_wide_mux_50_OUT2":
+INIT_00 = 1111000000000000000000000000000000000000000000000000000000000000
+INIT_01 = 4443333333333333333332222222222222222222221111111111111111111111
+INIT_02 = 8888877777777777777766666666666666655555555555555554444444444444
+INIT_03 = CCCCCCBBBBBBBBBBBBBBBBBAAAAAAAAAAAAAAAA9999999999999998888888888
+INIT_04 = FFFFFEEEEEEEEEEEEEEEEEEEEEEEEEEEDDDDDDDDDDDDDDDDDDDDCCCCCCCCCCCC
+INIT_05 = 0000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+INIT_06 = 1111111111111111110000000000000000000000000000000000000000000000
+INIT_07 = 5555544444444444444433333333333333333222222222222222222221111111
+INIT_08 = 9999999999988888888888888777777777777776666666666666665555555555
+INIT_09 = DDDDDDDDDDDDDCCCCCCCCCCCCCCCCCBBBBBBBBBBBBBBBBAAAAAAAAAAAAAAA999
+INIT_0a = FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEEEEEEEEEEEEEEEEEEEEEEEEEDDDDDD
+INIT_0b = 00000000000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFF
+INIT_0c = 3333333333222222222222222222111111111111111111111111000000000000
+INIT_0d = 8877777777777777666666666666655555555555555444444444444444333333
+INIT_0e = CCCCCCCCCCCBBBBBBBBBBBBBBAAAAAAAAAAAAAA9999999999999988888888888
+INIT_0f = FFFFFFFFFFFFFFFFFEEEEEEEEEEEEEEEEEEEEEEEDDDDDDDDDDDDDDDDDDCCCCCC
+INIT_10 = 0000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+INIT_11 = 3322222222222222222211111111111111111111110000000000000000000000
+INIT_12 = 7777777777766666666666665555555555555444444444444443333333333333
+INIT_13 = CCCCCCCCCCBBBBBBBBBBBBBBAAAAAAAAAAAAA999999999999988888888888887
+INIT_14 = FFFFFFFFFFFFFFFFFFFEEEEEEEEEEEEEEEEEEEEEEDDDDDDDDDDDDDDDDDDCCCCC
+INIT_15 = 0000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+INIT_16 = 3333333333333222222222222222221111111111111111111110000000000000
+INIT_17 = 9988888888888777777777777666666666666555555555555544444444444443
+INIT_18 = DDDDDDDDDDDDDCCCCCCCCCCCCCCCBBBBBBBBBBBBBAAAAAAAAAAAA99999999999
+INIT_19 = FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEEEEEEEEEEEEEEEEEEEEEDDD
+INIT_1a = 111111111111000000000000000000000000000000000000000000000FFFFFFF
+INIT_1b = 6665555555555554444444444444333333333333322222222222222221111111
+INIT_1c = BBBBBBBBBBAAAAAAAAAAAA999999999999888888888887777777777766666666
+INIT_1d = FFFFFFFFFFFFFEEEEEEEEEEEEEEEEEEEEDDDDDDDDDDDDDDDCCCCCCCCCCCCCCBB
+INIT_1e = 000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+INIT_1f = 4444444443333333333333222222222222221111111111111111111000000000
+INIT_20 = AAAAAAA999999999998888888888877777777776666666666655555555555444
+INIT_21 = FFEEEEEEEEEEEEEEEEEEEDDDDDDDDDDDDDDDCCCCCCCCCCCCBBBBBBBBBBBBAAAA
+INIT_22 = 0000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+INIT_23 = 4444443333333333332222222222222211111111111111111000000000000000
+INIT_24 = AAAAAAAA99999999998888888888777777777766666666665555555555544444
+INIT_25 = FFFFFFFEEEEEEEEEEEEEEEEEDDDDDDDDDDDDDDCCCCCCCCCCCCBBBBBBBBBBBAAA
+INIT_26 = 0000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+INIT_27 = 5555554444444444333333333333222222222222211111111111111110000000
+INIT_28 = CCBBBBBBBBBBAAAAAAAAAA999999999988888888877777777766666666665555
+INIT_29 = FFFFFFFFFFFFFFFFFFFFFFFFFEEEEEEEEEEEEEEEEDDDDDDDDDDDDDCCCCCCCCCC
+INIT_2a = 111111111111111000000000000000000000000000000000000FFFFFFFFFFFFF
+INIT_2b = 8888777777776666666665555555555444444444433333333332222222222222
+INIT_2c = EEEEEEEDDDDDDDDDDDDDCCCCCCCCCCBBBBBBBBBBAAAAAAAAAA99999999988888
+INIT_2d = 000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEEEEEEEE
+INIT_2e = 5555544444444443333333333222222222222111111111111110000000000000
+INIT_2f = CCCCCCCCCBBBBBBBBBAAAAAAAAA9999999988888888877777777666666666555
+INIT_30 = 000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEEEEEEEEEEEEEEEDDDDDDDDDDDDC
+INIT_31 = 4333333333222222222221111111111111100000000000000000000000000000
+INIT_32 = BBBBBBBAAAAAAAAA999999998888888877777777666666665555555544444444
+INIT_33 = FFFFFFFFFFFFFFFFFFFFFFFFFFFFEEEEEEEEEEEEEEDDDDDDDDDDDCCCCCCCCCCB
+INIT_34 = 0000000000000FFF0000000000000FFF0000000000000FFF0000000000000FFF
+INIT_35 = 0000000000000FFF0000000000000FFF0000000000000FFF0000000000000FFF
+INIT_36 = 0000000000000FFF0000000000000FFF0000000000000FFF0000000000000FFF
+INIT_37 = 0000000000000FFF0000000000000FFF0000000000000FFF0000000000000FFF
+INIT_38 = 000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEEEEEEEEEEEEEEEDDDDDDDDDDDDC
+INIT_39 = 4333333333222222222221111111111111100000000000000000000000000000
+INIT_3a = BBBBBBBAAAAAAAAA999999998888888877777777666666665555555544444444
+INIT_3b = FFFFFFFFFFFFFFFFFFFFFFFFFFFFEEEEEEEEEEEEEEDDDDDDDDDDDCCCCCCCCCCB
+INIT_3c = 0000000000000FFF0000000000000FFF0000000000000FFF0000000000000FFF
+INIT_3d = 0000000000000FFF0000000000000FFF0000000000000FFF0000000000000FFF
+INIT_3e = 0000000000000FFF0000000000000FFF0000000000000FFF0000000000000FFF
+INIT_3f = 0000000000000FFF0000000000000FFF0000000000000FFF0000000000000FFF
+PORTA_ATTR:4096X4
+WRITEMODEA:WRITE_FIRST
+INIT_A = 0
+SRVAL_A = 0
+
+
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module                 | Partition | Slices        | Slice Reg     | LUTs          | LUTRAM        | BRAM      | MULT18X18 | BUFG  | DCM   | Full Hierarchical Name                 |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| music_player_v9/       |           | 16/240        | 12/108        | 29/454        | 0/0           | 0/2       | 1/4       | 1/1   | 0/0   | music_player_v9                        |
+| +x_note_length_counter |           | 121/121       | 30/30         | 228/228       | 0/0           | 0/0       | 2/2       | 0/0   | 0/0   | music_player_v9/x_note_length_counter  |
+| +x_note_player         |           | 103/103       | 66/66         | 197/197       | 0/0           | 2/2       | 1/1       | 0/0   | 0/0   | music_player_v9/x_note_player          |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Slices can be packed with basic elements from multiple hierarchies.
+  Therefore, a slice will be counted in every hierarchical module
+  that each of its packed basic elements belong to.
+** For each column, there are two numbers reported <A>/<B>.
+   <A> is the number of elements that belong to that specific hierarchical module.
+   <B> is the total number of elements from that hierarchical module and any lower level
+   hierarchical modules below.
+*** The LUTRAM column counts all LUTs used as memory including RAM, ROM, and shift registers.
