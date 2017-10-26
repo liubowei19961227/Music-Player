@@ -1,0 +1,24 @@
+NET "PDB<0>" LOC = "N12";
+NET "PDB<1>" LOC = "P12";
+NET "PDB<2>" LOC = "N11";
+NET "PDB<3>" LOC = "P11";
+NET "PDB<4>" LOC = "N10";
+NET "PDB<5>" LOC = "P10";
+NET "PDB<6>" LOC = "M10";
+NET "PDB<7>" LOC = "R10";
+
+NET "LED<0>" LOC = "L14";
+NET "LED<1>" LOC = "L13";
+NET "LED<2>" LOC = "M14";
+NET "LED<3>" LOC = "L12";
+NET "LED<4>" LOC = "N14";
+NET "LED<5>" LOC = "M13";
+NET "LED<6>" LOC = "P14";
+NET "LED<7>" LOC = "R16";
+
+NET "EPPASTB" LOC = "N8";
+NET "EPPDSTB" LOC = "P7";
+NET "EPPWRITE" LOC = "N7";
+NET "EPPWAIT" LOC = "N5";
+NET "CLK" LOC = "A8";
+NET "rst" LOC = "J13";
