@@ -8,6 +8,7 @@
 #define REPS 5
 #define size 2048
 #define BUFF_SIZE 1024
+#define MAX 4096
 
 int data_amount = 2048;
 
@@ -29,14 +30,40 @@ void reset_music_array(void) {
 	return;
 }
 
+
 int read_file(char * fileLocation) {
 	int rest_flag;
-	FILE *myfile = fopen(fileLocation,"r");
+	FILE *fp1 = fopen(fileLocation,"r");
+	char str[MAX];
 	printf("Processing music file: %s\n", fileLocation);
-	if (myfile == NULL) {
+	if (fp1 == NULL) {
 		printf("Error: File does not exist\n");
 		return -1;
 	}
+	FILE *fp2 = fopen("temp.txt", "w");
+	if (!fp2) {
+		printf("Unable to open the file to write\n");
+		return 0;
+	}
+
+	/* copy the contents of file 1 to file 2 except all blank lines */
+	while (!feof(fp1)) {
+		fgets(str, MAX, fp1);
+		if (strcmp(str, "\n") == 0) {
+			continue;
+		}
+		for (int i = 0; str[i]; i++) {
+			str[i] = tolower(str[i]);
+		}
+		fputs(str, fp2);
+		strcpy(str, "\0");
+	}
+
+	/* close both the files */
+	fclose(fp1);
+	fclose(fp2);
+
+	FILE *myfile = fopen("temp.txt", "r");
 	char line[BUFF_SIZE];
 	unsigned int v1 = 0x00;
 	unsigned int v2 = 0x00;
@@ -217,6 +244,7 @@ static int PutReg(unsigned char r, unsigned char b) {
 	if (erc == ercNoError) {
 		return 0;
 	}
+	printf("Error: Put register failed\n");
 	return -1;
 }
 
